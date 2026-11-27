@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATH KIDS – EDU KIDZ | Tambah dan Tolak Tahun 1</title>
+    <title>MATH KIDS – EDU KIDZ | Year 1 Addition and Subtraction</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -112,61 +112,61 @@
         <section id="screenAuth" class="max-w-md mx-auto glass-card rounded-3xl p-6 md:p-8 text-center my-6">
             <div class="mb-6">
                 <span class="text-6xl inline-block bounce-gentle">🐻</span>
-                <h2 class="font-kids text-3xl text-pink-600 font-bold mt-2">Selamat Datang!</h2>
-                <p class="text-sm text-slate-600 font-semibold">Sila log masuk untuk mula bermain & mengumpul markah!</p>
+                <h2 class="font-kids text-3xl text-pink-600 font-bold mt-2">Welcome!</h2>
+                <p class="text-sm text-slate-600 font-semibold">Log in to start playing and earn points!</p>
             </div>
 
             <!-- Auth Tabs -->
             <div class="flex bg-slate-100 p-1.5 rounded-2xl mb-6 border-2 border-slate-200">
                 <button id="tabLogin" onclick="app.switchAuthTab('login')" class="flex-1 py-2 rounded-xl font-bold text-sm bg-amber-400 text-white shadow-sm transition">
-                    <i class="fa-solid fa-right-to-bracket mr-1"></i> LOG MASUK
+                    <i class="fa-solid fa-right-to-bracket mr-1"></i> LOG IN
                 </button>
                 <button id="tabRegister" onclick="app.switchAuthTab('register')" class="flex-1 py-2 rounded-xl font-bold text-sm text-slate-600 hover:text-slate-900 transition">
-                    <i class="fa-solid fa-user-plus mr-1"></i> DAFTAR
+                    <i class="fa-solid fa-user-plus mr-1"></i> REGISTER
                 </button>
             </div>
 
             <!-- Login Form -->
             <form id="formLogin" onsubmit="app.handleLogin(event)" class="space-y-4 text-left">
                 <div>
-                    <label class="block text-xs font-black text-slate-600 mb-1">NAMA PENGGUNA</label>
+                    <label class="block text-xs font-black text-slate-600 mb-1">USERNAME</label>
                     <div class="relative">
                         <i class="fa-solid fa-user absolute left-4 top-3.5 text-slate-400"></i>
-                        <input type="text" id="loginUsername" required placeholder="Contoh: ali123" class="w-full pl-11 pr-4 py-3 rounded-2xl border-3 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
+                        <input type="text" id="loginUsername" required placeholder="e.g. ali123" class="w-full pl-11 pr-4 py-3 rounded-2xl border-3 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-black text-slate-600 mb-1">KATA LALUAN</label>
+                    <label class="block text-xs font-black text-slate-600 mb-1">PASSWORD</label>
                     <div class="relative">
                         <i class="fa-solid fa-lock absolute left-4 top-3.5 text-slate-400"></i>
                         <input type="password" id="loginPassword" required placeholder="••••••••" class="w-full pl-11 pr-4 py-3 rounded-2xl border-3 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
                     </div>
                 </div>
                 <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-xl py-3.5 rounded-2xl shadow-lg border-b-4 border-emerald-700 btn-bounce font-bold tracking-wide mt-2">
-                    MASUK SEKARANG <i class="fa-solid fa-circle-arrow-right ml-1"></i>
+                    LOG IN <i class="fa-solid fa-circle-arrow-right ml-1"></i>
                 </button>
             </form>
 
             <!-- Register Form -->
             <form id="formRegister" onsubmit="app.handleRegister(event)" class="space-y-3 text-left hidden">
                 <div>
-                    <label class="block text-xs font-black text-slate-600 mb-1">NAMA MURID</label>
+                    <label class="block text-xs font-black text-slate-600 mb-1">PUPIL NAME</label>
                     <input type="text" id="regFullName" required placeholder="Ali Bin Ahmad" class="w-full px-4 py-2.5 rounded-2xl border-2 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
                 </div>
                 <div>
-                    <label class="block text-xs font-black text-slate-600 mb-1">NAMA PENGGUNA (USERNAME)</label>
+                    <label class="block text-xs font-black text-slate-600 mb-1">USERNAME</label>
                     <input type="text" id="regUsername" required placeholder="ali123" class="w-full px-4 py-2.5 rounded-2xl border-2 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
                 </div>
                 <div>
-                    <label class="block text-xs font-black text-slate-600 mb-1">KATA LALUAN</label>
-                    <input type="password" id="regPassword" required placeholder="Suka-hati123" class="w-full px-4 py-2.5 rounded-2xl border-2 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
+                    <label class="block text-xs font-black text-slate-600 mb-1">PASSWORD</label>
+                    <input type="password" id="regPassword" required placeholder="Choose a password" class="w-full px-4 py-2.5 rounded-2xl border-2 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
                 </div>
                 <div>
-                    <label class="block text-xs font-black text-slate-600 mb-1">PENGESAHAN KATA LALUAN</label>
-                    <input type="password" id="regConfirmPassword" required placeholder="Sama seperti atas" class="w-full px-4 py-2.5 rounded-2xl border-2 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
+                    <label class="block text-xs font-black text-slate-600 mb-1">CONFIRM PASSWORD</label>
+                    <input type="password" id="regConfirmPassword" required placeholder="Re-enter your password" class="w-full px-4 py-2.5 rounded-2xl border-2 border-slate-200 focus:border-amber-400 focus:outline-none font-bold text-slate-700">
                 </div>
                 <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-kids text-xl py-3.5 rounded-2xl shadow-lg border-b-4 border-blue-700 btn-bounce font-bold tracking-wide mt-2">
-                    DAFTAR AKAUN <i class="fa-solid fa-user-check ml-1"></i>
+                    CREATE ACCOUNT <i class="fa-solid fa-user-check ml-1"></i>
                 </button>
             </form>
         </section>
@@ -176,9 +176,9 @@
             <!-- Hero Banner -->
             <div class="glass-card rounded-3xl p-6 md:p-10 relative overflow-hidden bg-gradient-to-r from-amber-100 via-orange-100 to-pink-100">
                 <div class="relative z-10">
-                    <span class="inline-block bg-pink-500 text-white font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm mb-2">Matematik Tahun 1 KPM</span>
+                    <span class="inline-block bg-pink-500 text-white font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm mb-2">KPM Year 1 Mathematics</span>
                     <h2 class="font-kids text-4xl md:text-5xl text-slate-800 font-bold mb-2">MATH KIDS – EDU KIDZ</h2>
-                    <p class="text-lg md:text-xl font-bold text-pink-600">"Jom Belajar Tambah dan Tolak!" 🍎⭐✏️</p>
+                    <p class="text-lg md:text-xl font-bold text-pink-600">"Let’s Learn Addition and Subtraction!" 🍎⭐✏️</p>
                 </div>
             </div>
 
@@ -186,38 +186,38 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <button onclick="app.startDirectGame()" class="glass-card bg-emerald-500 hover:bg-emerald-600 text-white p-6 rounded-3xl shadow-xl border-b-8 border-emerald-700 btn-bounce flex flex-col items-center justify-center gap-2 group">
                     <i class="fa-solid fa-gamepad text-5xl group-hover:scale-110 transition"></i>
-                    <span class="font-kids text-2xl font-bold">MULA BERMAIN</span>
-                    <span class="text-xs bg-emerald-700/50 px-3 py-1 rounded-full">Main Cepat!</span>
+                    <span class="font-kids text-2xl font-bold">START PLAYING</span>
+                    <span class="text-xs bg-emerald-700/50 px-3 py-1 rounded-full">Quick Play!</span>
                 </button>
 
                 <button onclick="app.showScreen('selectTopic')" class="glass-card bg-amber-400 hover:bg-amber-500 text-white p-6 rounded-3xl shadow-xl border-b-8 border-amber-600 btn-bounce flex flex-col items-center justify-center gap-2 group">
                     <i class="fa-solid fa-shapes text-5xl group-hover:scale-110 transition"></i>
-                    <span class="font-kids text-2xl font-bold">PILIH TOPIK</span>
-                    <span class="text-xs bg-amber-600/50 px-3 py-1 rounded-full">5 Topik Utama</span>
+                    <span class="font-kids text-2xl font-bold">CHOOSE A TOPIC</span>
+                    <span class="text-xs bg-amber-600/50 px-3 py-1 rounded-full">5 Topics</span>
                 </button>
 
                 <button onclick="app.showScreen('selectLevel')" class="glass-card bg-purple-500 hover:bg-purple-600 text-white p-6 rounded-3xl shadow-xl border-b-8 border-purple-700 btn-bounce flex flex-col items-center justify-center gap-2 group">
                     <i class="fa-solid fa-layer-group text-5xl group-hover:scale-110 transition"></i>
-                    <span class="font-kids text-2xl font-bold">PILIH TAHAP</span>
-                    <span class="text-xs bg-purple-700/50 px-3 py-1 rounded-full">Mudah / Sederhana / Susah</span>
+                    <span class="font-kids text-2xl font-bold">CHOOSE A LEVEL</span>
+                    <span class="text-xs bg-purple-700/50 px-3 py-1 rounded-full">Easy / Medium / Hard</span>
                 </button>
 
                 <button onclick="app.showScreen('leaderboard')" class="glass-card bg-blue-500 hover:bg-blue-600 text-white p-6 rounded-3xl shadow-xl border-b-8 border-blue-700 btn-bounce flex flex-col items-center justify-center gap-2 group">
                     <i class="fa-solid fa-trophy text-5xl group-hover:scale-110 transition"></i>
                     <span class="font-kids text-2xl font-bold">LEADERBOARD</span>
-                    <span class="text-xs bg-blue-700/50 px-3 py-1 rounded-full">Kedudukan Terbaik</span>
+                    <span class="text-xs bg-blue-700/50 px-3 py-1 rounded-full">Top Scores</span>
                 </button>
 
                 <button onclick="app.showScreen('progress')" class="glass-card bg-pink-500 hover:bg-pink-600 text-white p-6 rounded-3xl shadow-xl border-b-8 border-pink-700 btn-bounce flex flex-col items-center justify-center gap-2 group">
                     <i class="fa-solid fa-chart-line text-5xl group-hover:scale-110 transition"></i>
-                    <span class="font-kids text-2xl font-bold">PROGRESS SAYA</span>
-                    <span class="text-xs bg-pink-700/50 px-3 py-1 rounded-full">Pencapaian Anda</span>
+                    <span class="font-kids text-2xl font-bold">MY PROGRESS</span>
+                    <span class="text-xs bg-pink-700/50 px-3 py-1 rounded-full">Your Achievements</span>
                 </button>
 
                 <button onclick="app.showScreen('profile')" class="glass-card bg-orange-400 hover:bg-orange-500 text-white p-6 rounded-3xl shadow-xl border-b-8 border-orange-600 btn-bounce flex flex-col items-center justify-center gap-2 group">
                     <i class="fa-solid fa-id-card text-5xl group-hover:scale-110 transition"></i>
-                    <span class="font-kids text-2xl font-bold">PROFIL SAYA</span>
-                    <span class="text-xs bg-orange-600/50 px-3 py-1 rounded-full">Akaun & Stats</span>
+                    <span class="font-kids text-2xl font-bold">MY PROFILE</span>
+                    <span class="text-xs bg-orange-600/50 px-3 py-1 rounded-full">Account & Statistics</span>
                 </button>
             </div>
         </section>
@@ -226,9 +226,9 @@
         <section id="screenSelectTopic" class="hidden max-w-4xl mx-auto space-y-6">
             <div class="flex items-center justify-between">
                 <button onclick="app.showScreen('mainMenu')" class="bg-white hover:bg-slate-100 text-slate-700 font-bold px-4 py-2 rounded-2xl shadow border-2 border-slate-200">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> MENU UTAMA
+                    <i class="fa-solid fa-arrow-left mr-1"></i> HOME MENU
                 </button>
-                <h2 class="font-kids text-3xl font-bold text-pink-600">PILIH TOPIK</h2>
+                <h2 class="font-kids text-3xl font-bold text-pink-600">CHOOSE A TOPIC</h2>
                 <div></div>
             </div>
 
@@ -241,9 +241,9 @@
         <section id="screenSelectLevel" class="hidden max-w-3xl mx-auto space-y-6">
             <div class="flex items-center justify-between">
                 <button onclick="app.showScreen('mainMenu')" class="bg-white hover:bg-slate-100 text-slate-700 font-bold px-4 py-2 rounded-2xl shadow border-2 border-slate-200">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> MENU UTAMA
+                    <i class="fa-solid fa-arrow-left mr-1"></i> HOME MENU
                 </button>
-                <h2 class="font-kids text-3xl font-bold text-purple-600">TETAPKAN PERMAINAN</h2>
+                <h2 class="font-kids text-3xl font-bold text-purple-600">GAME SETTINGS</h2>
                 <div></div>
             </div>
 
@@ -251,70 +251,70 @@
                 <!-- Selected Topic Summary -->
                 <div class="bg-amber-100 p-4 rounded-2xl border-2 border-amber-300 flex items-center justify-between">
                     <div>
-                        <span class="text-xs font-bold text-amber-700 uppercase">Topik Dipilih:</span>
-                        <h3 id="confTopicName" class="font-kids text-xl font-bold text-amber-900">Kenali Tambah / Tolak</h3>
+                        <span class="text-xs font-bold text-amber-700 uppercase">Selected Topic:</span>
+                        <h3 id="confTopicName" class="font-kids text-xl font-bold text-amber-900">Introduction to Addition and Subtraction</h3>
                     </div>
                     <button onclick="app.showScreen('selectTopic')" class="text-xs bg-amber-500 hover:bg-amber-600 text-white px-3 py-1.5 rounded-xl font-bold">
-                        Tukar
+                        Change
                     </button>
                 </div>
 
                 <!-- 1. Select Level -->
                 <div>
-                    <label class="block font-kids text-lg text-slate-700 mb-2">1. Pilih Tahap Kesukaran:</label>
+                    <label class="block font-kids text-lg text-slate-700 mb-2">1. Choose a Difficulty Level:</label>
                     <div class="grid grid-cols-3 gap-3">
                         <button onclick="app.setDifficulty('Mudah')" id="lvlBtn_Mudah" class="lvl-btn bg-emerald-100 border-4 border-emerald-400 text-emerald-800 p-3 rounded-2xl font-bold text-center hover:bg-emerald-200">
-                            🟢 MUDAH
+                            🟢 EASY
                         </button>
                         <button onclick="app.setDifficulty('Sederhana')" id="lvlBtn_Sederhana" class="lvl-btn bg-amber-100 border-4 border-amber-400 text-amber-800 p-3 rounded-2xl font-bold text-center hover:bg-amber-200">
-                            🟡 SEDERHANA
+                            🟡 MEDIUM
                         </button>
                         <button onclick="app.setDifficulty('Susah')" id="lvlBtn_Susah" class="lvl-btn bg-pink-100 border-4 border-pink-400 text-pink-800 p-3 rounded-2xl font-bold text-center hover:bg-pink-200">
-                            🔴 SUSAH
+                            🔴 HARD
                         </button>
                     </div>
                 </div>
 
                 <!-- 2. Select Game Mode -->
                 <div>
-                    <label class="block font-kids text-lg text-slate-700 mb-2">2. Pilih Bentuk Soalan:</label>
+                    <label class="block font-kids text-lg text-slate-700 mb-2">2. Choose a Question Format:</label>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm font-bold">
                         <button onclick="app.setMode('Objektif')" id="modeBtn_Objektif" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white hover:bg-slate-50">
-                            🎯 OBJEKTIF
+                            🎯 MULTIPLE CHOICE
                         </button>
                         <button onclick="app.setMode('Isi Kosong')" id="modeBtn_Isi Kosong" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white hover:bg-slate-50">
-                            ✍️ ISI KOSONG
+                            ✍️ FILL IN THE BLANK
                         </button>
                         <button onclick="app.setMode('Drag & Drop')" id="modeBtn_Drag & Drop" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white hover:bg-slate-50">
                             🖐️ DRAG & DROP
                         </button>
                         <button onclick="app.setMode('Padanan')" id="modeBtn_Padanan" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white hover:bg-slate-50">
-                            🧩 PADANAN
+                            🧩 MATCHING
                         </button>
                         <button onclick="app.setMode('Campuran')" id="modeBtn_Campuran" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white hover:bg-slate-50 col-span-2 sm:col-span-1">
-                            🎲 CAMPURAN
+                            🎲 MIXED FORMATS
                         </button>
                     </div>
                 </div>
 
                 <!-- 3. Select Timer -->
                 <div>
-                    <label class="block font-kids text-lg text-slate-700 mb-2">3. Pilih Masa Menjawab Soalan:</label>
+                    <label class="block font-kids text-lg text-slate-700 mb-2">3. Choose the Time per Question:</label>
                     <div class="grid grid-cols-3 gap-3">
                         <button onclick="app.setTimerConfig(30)" id="timerBtn_30" class="timer-btn bg-white border-2 border-slate-200 p-3 rounded-2xl font-bold text-center hover:bg-slate-50">
-                            ⏱️ 30 SAAT
+                            ⏱️ 30 SECONDS
                         </button>
                         <button onclick="app.setTimerConfig(60)" id="timerBtn_60" class="timer-btn bg-white border-2 border-slate-200 p-3 rounded-2xl font-bold text-center hover:bg-slate-50">
-                            ⏱️ 1 MINIT
+                            ⏱️ 1 MINUTE
                         </button>
                         <button onclick="app.setTimerConfig(0)" id="timerBtn_0" class="timer-btn bg-white border-2 border-slate-200 p-3 rounded-2xl font-bold text-center hover:bg-slate-50">
-                            ♾️ TIADA HAD
+                            ♾️ NO TIME LIMIT
                         </button>
                     </div>
                 </div>
 
                 <button onclick="app.launchGameSession()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-2xl py-4 rounded-2xl shadow-lg border-b-4 border-emerald-700 btn-bounce">
-                    MULA MAIN SEKARANG! 🚀
+                    START GAME! 🚀
                 </button>
             </div>
         </section>
@@ -326,20 +326,20 @@
                 <div class="flex items-center gap-2">
                     <span class="text-2xl">⭐</span>
                     <div>
-                        <span class="text-xs text-slate-500 font-bold block leading-none">MARKAH</span>
+                        <span class="text-xs text-slate-500 font-bold block leading-none">SCORE</span>
                         <span id="arenaScore" class="font-kids text-xl font-bold text-amber-600">0 / 100</span>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <span class="text-xs text-slate-500 font-bold block leading-none">SOALAN</span>
+                    <span class="text-xs text-slate-500 font-bold block leading-none">QUESTION</span>
                     <span id="arenaProgress" class="font-kids text-xl font-bold text-blue-600">1 / 20</span>
                 </div>
 
                 <div class="flex items-center gap-2">
                     <span class="text-2xl">⏱️</span>
                     <div>
-                        <span class="text-xs text-slate-500 font-bold block leading-none">MASA</span>
+                        <span class="text-xs text-slate-500 font-bold block leading-none">TIME</span>
                         <span id="arenaTimer" class="font-kids text-xl font-bold text-red-500">30s</span>
                     </div>
                 </div>
@@ -349,8 +349,8 @@
             <div class="glass-card rounded-3xl p-6 relative overflow-hidden space-y-6">
                 <!-- Meta tags -->
                 <div class="flex justify-between items-center text-xs font-bold text-slate-500 border-b pb-3">
-                    <span id="arenaQuestionMeta" class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">ID: T1-M-001 | Aras: Mengingat</span>
-                    <span id="arenaModeMeta" class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Bentuk: Objektif</span>
+                    <span id="arenaQuestionMeta" class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">ID: T1-M-001 | Level: Recall</span>
+                    <span id="arenaModeMeta" class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Format: Multiple choice</span>
                 </div>
 
                 <!-- Main Display / Visual Area -->
@@ -361,7 +361,7 @@
                 <!-- Question Text -->
                 <div class="text-center">
                     <h3 id="arenaQuestionText" class="font-kids text-2xl md:text-3xl text-slate-800 font-bold">
-                        Berapakah jumlah 3 + 2?
+                        What is 3 + 2?
                     </h3>
                 </div>
 
@@ -378,7 +378,7 @@
                 <!-- Next Button (Appears immediately after evaluation) -->
                 <div class="flex justify-end pt-2">
                     <button id="arenaNextBtn" onclick="app.nextQuestion()" class="hidden bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-xl px-8 py-3 rounded-2xl shadow-lg border-b-4 border-emerald-700 btn-bounce">
-                        SOALAN SETERUSNYA <i class="fa-solid fa-arrow-right ml-1"></i>
+                        NEXT QUESTION <i class="fa-solid fa-arrow-right ml-1"></i>
                     </button>
                 </div>
             </div>
@@ -388,44 +388,44 @@
         <section id="screenResult" class="hidden max-w-xl mx-auto glass-card rounded-3xl p-6 md:p-8 text-center space-y-6">
             <div class="space-y-2">
                 <span class="text-7xl block bounce-gentle">🎉</span>
-                <h2 class="font-kids text-4xl text-pink-600 font-bold">TAHNIAH!</h2>
-                <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">PERMAINAN SELESAI!</p>
+                <h2 class="font-kids text-4xl text-pink-600 font-bold">WELL DONE!</h2>
+                <p class="text-sm font-bold text-slate-600 uppercase tracking-wide">GAME COMPLETE!</p>
             </div>
 
             <!-- Result Card -->
             <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-3xl border-4 border-amber-200 space-y-4 shadow-inner">
                 <div class="text-center">
-                    <span class="text-xs font-black text-slate-400 uppercase">JUMLAH MARKAH</span>
+                    <span class="text-xs font-black text-slate-400 uppercase">TOTAL SCORE</span>
                     <div id="resFinalScore" class="font-kids text-5xl text-amber-500 font-bold">85 / 100</div>
                 </div>
 
                 <div class="grid grid-cols-3 gap-2 pt-2 text-center text-sm font-bold border-t border-amber-200">
                     <div>
-                        <span class="text-slate-400 text-xs block">BETUL</span>
+                        <span class="text-slate-400 text-xs block">CORRECT</span>
                         <span id="resCorrectCount" class="text-emerald-600 text-xl font-black">17</span>
                     </div>
                     <div>
-                        <span class="text-slate-400 text-xs block">SALAH</span>
+                        <span class="text-slate-400 text-xs block">INCORRECT</span>
                         <span id="resWrongCount" class="text-pink-600 text-xl font-black">3</span>
                     </div>
                     <div>
-                        <span class="text-slate-400 text-xs block">KETEPATAN</span>
+                        <span class="text-slate-400 text-xs block">ACCURACY</span>
                         <span id="resAccuracy" class="text-blue-600 text-xl font-black">85%</span>
                     </div>
                 </div>
 
                 <div id="resFeedbackText" class="p-3 bg-white rounded-2xl text-sm font-bold text-slate-700 shadow-sm border border-amber-200">
-                    "Hebat! Anda sangat menguasai topik ini!"
+                    "Great work! You’ve mastered this topic!"
                 </div>
             </div>
 
             <!-- Action Buttons -->
             <div class="grid grid-cols-2 gap-3">
                 <button onclick="app.replayGame()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold p-3.5 rounded-2xl border-b-4 border-emerald-700 btn-bounce">
-                    <i class="fa-solid fa-rotate-right mr-1"></i> MAIN LAGI
+                    <i class="fa-solid fa-rotate-right mr-1"></i> PLAY AGAIN
                 </button>
                 <button onclick="app.showScreen('selectTopic')" class="bg-amber-400 hover:bg-amber-500 text-white font-bold p-3.5 rounded-2xl border-b-4 border-amber-600 btn-bounce">
-                    <i class="fa-solid fa-list mr-1"></i> TOPIK LAIN
+                    <i class="fa-solid fa-list mr-1"></i> ANOTHER TOPIC
                 </button>
                 <button onclick="app.showScreen('progress')" class="bg-pink-500 hover:bg-pink-600 text-white font-bold p-3.5 rounded-2xl border-b-4 border-pink-700 btn-bounce">
                     <i class="fa-solid fa-chart-line mr-1"></i> PROGRESS
@@ -440,14 +440,14 @@
         <section id="screenLeaderboard" class="hidden max-w-2xl mx-auto space-y-6">
             <div class="flex items-center justify-between">
                 <button onclick="app.showScreen('mainMenu')" class="bg-white hover:bg-slate-100 text-slate-700 font-bold px-4 py-2 rounded-2xl shadow border-2 border-slate-200">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> MENU UTAMA
+                    <i class="fa-solid fa-arrow-left mr-1"></i> HOME MENU
                 </button>
                 <h2 class="font-kids text-3xl font-bold text-amber-500">🏆 LEADERBOARD</h2>
                 <div></div>
             </div>
 
             <div class="glass-card rounded-3xl p-6 space-y-4">
-                <p class="text-xs text-center font-bold text-slate-500">Kedudukan dikira berdasarkan jumlah skor terkumpul daripada semua sesi permainan.</p>
+                <p class="text-xs text-center font-bold text-slate-500">The leaderboard ranks players by their total score across all games.</p>
 
                 <div id="leaderboardList" class="space-y-3">
                     <!-- Dynamically populated leaderboard rows -->
@@ -455,13 +455,13 @@
             </div>
         </section>
 
-        <!-- SCREEN 8: PROGRESS SAYA -->
+        <!-- SCREEN 8: MY PROGRESS -->
         <section id="screenProgress" class="hidden max-w-3xl mx-auto space-y-6">
             <div class="flex items-center justify-between">
                 <button onclick="app.showScreen('mainMenu')" class="bg-white hover:bg-slate-100 text-slate-700 font-bold px-4 py-2 rounded-2xl shadow border-2 border-slate-200">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> MENU UTAMA
+                    <i class="fa-solid fa-arrow-left mr-1"></i> HOME MENU
                 </button>
-                <h2 class="font-kids text-3xl font-bold text-pink-600">PROGRESS SAYA</h2>
+                <h2 class="font-kids text-3xl font-bold text-pink-600">MY PROGRESS</h2>
                 <div></div>
             </div>
 
@@ -469,26 +469,26 @@
                 <!-- User Summary Stat Grid -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                     <div class="bg-blue-50 p-3 rounded-2xl border border-blue-200">
-                        <span class="text-xs font-bold text-blue-600 block">JUMLAH SOALAN</span>
+                        <span class="text-xs font-bold text-blue-600 block">TOTAL QUESTIONS</span>
                         <span id="progTotalQuestions" class="font-kids text-2xl font-bold text-blue-900">0</span>
                     </div>
                     <div class="bg-emerald-50 p-3 rounded-2xl border border-emerald-200">
-                        <span class="text-xs font-bold text-emerald-600 block">JAWAPAN BETUL</span>
+                        <span class="text-xs font-bold text-emerald-600 block">CORRECT ANSWERS</span>
                         <span id="progTotalCorrect" class="font-kids text-2xl font-bold text-emerald-900">0</span>
                     </div>
                     <div class="bg-amber-50 p-3 rounded-2xl border border-amber-200">
-                        <span class="text-xs font-bold text-amber-600 block">PURATA KETEPATAN</span>
+                        <span class="text-xs font-bold text-amber-600 block">AVERAGE ACCURACY</span>
                         <span id="progAvgAccuracy" class="font-kids text-2xl font-bold text-amber-900">0%</span>
                     </div>
                     <div class="bg-purple-50 p-3 rounded-2xl border border-purple-200">
-                        <span class="text-xs font-bold text-purple-600 block">SKOR TERTINGGI</span>
+                        <span class="text-xs font-bold text-purple-600 block">HIGHEST SCORE</span>
                         <span id="progHighScore" class="font-kids text-2xl font-bold text-purple-900">0</span>
                     </div>
                 </div>
 
                 <!-- Topic Breakdown -->
                 <div class="space-y-4">
-                    <h3 class="font-kids text-xl font-bold text-slate-800">Prestasi Mengikut Topik</h3>
+                    <h3 class="font-kids text-xl font-bold text-slate-800">Progress by Topic</h3>
                     <div id="topicProgressContainer" class="space-y-3">
                         <!-- Progress per topic rendered here -->
                     </div>
@@ -496,7 +496,7 @@
 
                 <div class="text-center pt-2">
                     <button onclick="app.showScreen('selectTopic')" class="bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-xl px-8 py-3 rounded-2xl shadow-lg border-b-4 border-emerald-700 btn-bounce">
-                        SAMBUNG BELAJAR 🚀
+                        KEEP LEARNING 🚀
                     </button>
                 </div>
             </div>
@@ -506,9 +506,9 @@
         <section id="screenProfile" class="hidden max-w-md mx-auto glass-card rounded-3xl p-6 text-center space-y-6">
             <div class="flex items-center justify-between">
                 <button onclick="app.showScreen('mainMenu')" class="bg-white hover:bg-slate-100 text-slate-700 font-bold px-3 py-1.5 rounded-xl shadow border">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> Kembali
+                    <i class="fa-solid fa-arrow-left mr-1"></i> Back
                 </button>
-                <h2 class="font-kids text-2xl font-bold text-orange-500">PROFIL MURID</h2>
+                <h2 class="font-kids text-2xl font-bold text-orange-500">PUPIL PROFILE</h2>
                 <div></div>
             </div>
 
@@ -516,23 +516,23 @@
                 <div class="w-24 h-24 bg-orange-100 rounded-full mx-auto flex items-center justify-center text-5xl border-4 border-orange-300 shadow">
                     🦁
                 </div>
-                <h3 id="profName" class="font-kids text-2xl font-bold text-slate-800">Nama Murid</h3>
+                <h3 id="profName" class="font-kids text-2xl font-bold text-slate-800">Pupil Name</h3>
                 <span id="profUsername" class="text-xs bg-slate-200 text-slate-700 px-3 py-1 rounded-full font-bold">@username</span>
             </div>
 
             <div class="bg-slate-50 p-4 rounded-2xl text-left space-y-2 text-sm font-bold border">
                 <div class="flex justify-between">
-                    <span class="text-slate-500">Akaun Dicipta:</span>
-                    <span class="text-slate-800">Aktif</span>
+                    <span class="text-slate-500">Account Created:</span>
+                    <span class="text-slate-800">Active</span>
                 </div>
                 <div class="flex justify-between">
-                    <span class="text-slate-500">Jumlah Sesi Dijawab:</span>
+                    <span class="text-slate-500">Games Completed:</span>
                     <span id="profSessions" class="text-slate-800">0</span>
                 </div>
             </div>
 
             <button onclick="app.logout()" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-2xl shadow border-b-4 border-pink-700 btn-bounce">
-                <i class="fa-solid fa-right-from-bracket mr-1"></i> LOG KELUAR
+                <i class="fa-solid fa-right-from-bracket mr-1"></i> LOG OUT
             </button>
         </section>
 
@@ -638,11 +638,11 @@
 
             // Topic Configuration Map
             const topics = [
-                { id: 'T1', name: 'Kenali Tambah / Tolak' },
-                { id: 'T2', name: 'Kira Tambah / Tolak Berdasarkan Gambar Rajah' },
-                { id: 'T3', name: 'Lengkapkan Ayat Matematik Berdasarkan Gambar' },
-                { id: 'T4', name: 'Tambah / Tolak Dalam Bentuk Lazim' },
-                { id: 'T5', name: 'Soalan Penyelesaian Masalah' }
+                { id: 'T1', name: 'Introduction to Addition and Subtraction' },
+                { id: 'T2', name: 'Addition and Subtraction Using Diagrams' },
+                { id: 'T3', name: 'Complete Number Sentences Using Pictures' },
+                { id: 'T4', name: 'Column Addition and Subtraction' },
+                { id: 'T5', name: 'Word Problems' }
             ];
 
             const levels = ['Mudah', 'Sederhana', 'Susah'];
@@ -650,14 +650,14 @@
             topics.forEach((top, tIdx) => {
                 levels.forEach((lvl) => {
                     for (let i = 1; i <= 20; i++) {
-                        const qId = `${top.id}-${lvl.charAt(0)}-${String(i).padStart(3, '0')}`;
+                        const qId = `${top.id}-${({Mudah: 'E', Sederhana: 'M', Susah: 'H'})[lvl]}-${String(i).padStart(3, '0')}`;
                         let qObj = {};
 
                         let aras = (i % 3 === 1) ? 'Mengingat' : (i % 3 === 2) ? 'Memahami' : 'Mengaplikasi';
                         let icon = OBJECT_ICONS[(tIdx + i) % OBJECT_ICONS.length];
 
                         if (top.id === 'T1') {
-                            // Topic 1: Kenali Tambah / Tolak
+                            // Topic 1: Introduction to Addition and Subtraction
                             if (lvl === 'Mudah') {
                                 const a = (i % 5) + 1;
                                 const b = (i % 4) + 1;
@@ -666,7 +666,7 @@
                                     const ans = a + b;
                                     qObj = {
                                         id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Objektif',
-                                        soalan: `Selesaikan: ${a} + ${b} = □`,
+                                        soalan: `Work out: ${a} + ${b} = □`,
                                         pilihan: [String(ans), String(ans + 1), String(Math.max(0, ans - 1)), String(ans + 2)],
                                         jawapan: String(ans), markah: 5,
                                         penerangan: `${a} + ${b} = ${ans}`
@@ -676,7 +676,7 @@
                                     const ans = x - a;
                                     qObj = {
                                         id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Objektif',
-                                        soalan: `Selesaikan: ${x} − ${a} = □`,
+                                        soalan: `Work out: ${x} − ${a} = □`,
                                         pilihan: [String(ans), String(ans + 1), String(Math.max(0, ans - 1)), String(ans + 2)],
                                         jawapan: String(ans), markah: 5,
                                         penerangan: `${x} − ${a} = ${ans}`
@@ -687,20 +687,20 @@
                                 const b = i + 2;
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Isi Kosong',
-                                    soalan: `Cari nilai yang hilang: ${a} + □ = ${a + b}`,
+                                    soalan: `Find the missing number: ${a} + □ = ${a + b}`,
                                     pilihan: [String(b), String(b + 1), String(b - 1), String(b + 2)],
                                     jawapan: String(b), markah: 5,
-                                    penerangan: `Nombor yang hilang ialah ${b} kerana ${a} + ${b} = ${a + b}.`
+                                    penerangan: `The missing number is ${b} because ${a} + ${b} = ${a + b}.`
                                 };
                             } else {
                                 const total = 10 + i;
                                 const left = 5 + (i % 3);
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Drag & Drop',
-                                    soalan: `Lengkapkan: ${total} − □ = ${left}`,
+                                    soalan: `Complete: ${total} − □ = ${left}`,
                                     pilihan: [String(total - left), String(total - left + 1), String(total - left - 1), String(total)],
                                     jawapan: String(total - left), markah: 5,
-                                    penerangan: `${total} tolak ${total - left} bersamaan ${left}.`
+                                    penerangan: `${total} minus ${total - left} equals ${left}.`
                                 };
                             }
                         } else if (top.id === 'T2') {
@@ -711,11 +711,11 @@
                                 const ans = count1 + count2;
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Objektif',
-                                    soalan: `Kira jumlah ${icon} di bawah:`,
+                                    soalan: `Count all the ${icon} below.`,
                                     visual: `${icon.repeat(count1)}  +  ${icon.repeat(count2)}`,
                                     pilihan: [String(ans), String(ans - 1), String(ans + 1), String(ans + 2)],
                                     jawapan: String(ans), markah: 5,
-                                    penerangan: `Kira semua ${icon}: ${count1} + ${count2} = ${ans}.`
+                                    penerangan: `Count all the ${icon}: ${count1} + ${count2} = ${ans}.`
                                 };
                             } else if (lvl === 'Sederhana') {
                                 const total = count1 + count2 + 2;
@@ -723,8 +723,8 @@
                                 const ans = total - takeAway;
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Isi Kosong',
-                                    soalan: `Ada ${total} ${icon}. Dibuang ${takeAway} ${icon}. Berapakah baki ${icon}?`,
-                                    visual: `${icon.repeat(total)} ( Tolak ${takeAway} )`,
+                                    soalan: `There are ${total} ${icon}. Take away ${takeAway}. How many are left?`,
+                                    visual: `${icon.repeat(total)} (Take away ${takeAway})`,
                                     pilihan: [String(ans), String(ans + 1), String(ans - 1), String(total)],
                                     jawapan: String(ans), markah: 5,
                                     penerangan: `${total} − ${takeAway} = ${ans}.`
@@ -735,7 +735,7 @@
                                 const ans = a + b;
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Drag & Drop',
-                                    soalan: `Gabungkan dua kumpulan ${icon} ini:`,
+                                    soalan: `Combine these two groups of ${icon}.`,
                                     visual: `Kumpulan A: ${icon.repeat(a)} | Kumpulan B: ${icon.repeat(b)}`,
                                     pilihan: [String(ans), String(ans - 2), String(ans + 1), String(ans - 1)],
                                     jawapan: String(ans), markah: 5,
@@ -749,27 +749,27 @@
                             if (lvl === 'Mudah') {
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Objektif',
-                                    soalan: `Isi petak kosong: ${num1} + ${num2} = □`,
+                                    soalan: `Fill in the box: ${num1} + ${num2} = □`,
                                     visual: `${icon.repeat(num1)} dan ${icon.repeat(num2)}`,
                                     pilihan: [String(num1 + num2), String(num1 + num2 + 1), String(num1 + num2 - 1), String(num1)],
                                     jawapan: String(num1 + num2), markah: 5,
-                                    penerangan: `Ayat matematik yang lengkap: ${num1} + ${num2} = ${num1 + num2}.`
+                                    penerangan: `The completed number sentence: ${num1} + ${num2} = ${num1 + num2}.`
                                 };
                             } else if (lvl === 'Sederhana') {
                                 const total = num1 + num2 + 3;
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Isi Kosong',
-                                    soalan: `Isi tempat kosong: ${total} − □ = ${num1}`,
+                                    soalan: `Fill in the blank: ${total} − □ = ${num1}`,
                                     pilihan: [String(total - num1), String(total - num1 + 1), String(total - num1 - 1), String(num1)],
                                     jawapan: String(total - num1), markah: 5,
-                                    penerangan: `${total} tolak ${total - num1} menjadi ${num1}.`
+                                    penerangan: `${total} minus ${total - num1} equals ${num1}.`
                                 };
                             } else {
                                 const a = 8 + i;
                                 const b = 4 + (i % 3);
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Padanan',
-                                    soalan: `Apakah nilai yang menjadikan ayat matematik ini betul? □ + ${b} = ${a + b}`,
+                                    soalan: `Which number makes this number sentence correct? □ + ${b} = ${a + b}`,
                                     pilihan: [String(a), String(a + 1), String(a - 1), String(b)],
                                     jawapan: String(a), markah: 5,
                                     penerangan: `${a} + ${b} = ${a + b}.`
@@ -783,43 +783,43 @@
                             const ans = isAdd ? n1 + n2 : n1 - n2;
                             qObj = {
                                 id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Objektif',
-                                soalan: `Selesaikan pengiraan bentuk lazim di bawah:`,
+                                soalan: `Use the column method to work out the answer.`,
                                 visualLayout: { n1: n1, op: isAdd ? '+' : '−', n2: n2 },
                                 pilihan: [String(ans), String(ans + 1), String(ans - 1), String(ans + 2)],
                                 jawapan: String(ans), markah: 5,
-                                penerangan: `Pengiraan bentuk lazim: ${n1} ${isAdd ? '+' : '−'} ${n2} = ${ans}.`
+                                penerangan: `Column calculation: ${n1} ${isAdd ? '+' : '−'} ${n2} = ${ans}.`
                             };
                         } else {
                             // Topic 5: Penyelesaian Masalah
                             const names = ['Ali', 'Siti', 'Ahmad', 'Mina', 'Abu', 'Lina', 'Chong', 'Rani'];
                             const name = names[i % names.length];
-                            const item = icon === '🍎' ? 'biji epal' : icon === '✏️' ? 'batang pensel' : icon === '🍬' ? 'biji gula-gula' : 'biji bola';
+                            const item = icon === '🍎' ? 'apples' : icon === '✏️' ? 'pencils' : icon === '🍬' ? 'sweets' : 'balls';
                             const numA = (i % 6) + 3;
                             const numB = (i % 4) + 2;
 
                             if (lvl === 'Mudah') {
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Objektif',
-                                    soalan: `${name} ada ${numA} ${item}. Ibunya memberi lagi ${numB} ${item}. Berapakah jumlah ${item} ${name}?`,
+                                    soalan: `${name} has ${numA} ${item}. Mum gives ${name} ${numB} more. How many ${item} does ${name} have altogether?`,
                                     pilihan: [String(numA + numB), String(numA + numB + 1), String(numA + numB - 1), String(numA)],
                                     jawapan: String(numA + numB), markah: 5,
-                                    penerangan: `Tambah: ${numA} + ${numB} = ${numA + numB}.`
+                                    penerangan: `Add: ${numA} + ${numB} = ${numA + numB}.`
                                 };
                             } else if (lvl === 'Sederhana') {
                                 const total = numA + numB + 2;
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Isi Kosong',
-                                    soalan: `Ada ${total} ${item} di dalam bakul. ${name} mengambil ${numB} ${item}. Berapa yang tinggal?`,
+                                    soalan: `A basket holds ${total} ${item}. ${name} takes ${numB} out. How many are left?`,
                                     pilihan: [String(total - numB), String(total - numB + 1), String(total - numB - 1), String(numB)],
                                     jawapan: String(total - numB), markah: 5,
-                                    penerangan: `Tolak: ${total} − ${numB} = ${total - numB}.`
+                                    penerangan: `Subtract: ${total} − ${numB} = ${total - numB}.`
                                 };
                             } else {
                                 const start = 12 + i;
                                 const give = 4 + (i % 3);
                                 qObj = {
                                     id: qId, topik: top.name, tahap: lvl, aras: aras, jenis: 'Drag & Drop',
-                                    soalan: `${name} mempunyai ${start} ${item}. Dia memberi ${give} ${item} kepada kawan. Berapakah baki ${item} ${name}?`,
+                                    soalan: `${name} has ${start} ${item} and gives ${give} to a friend. How many ${item} does ${name} have left?`,
                                     pilihan: [String(start - give), String(start - give + 1), String(start - give - 1), String(start)],
                                     jawapan: String(start - give), markah: 5,
                                     penerangan: `${start} − ${give} = ${start - give}.`
@@ -838,11 +838,11 @@
         }
 
         const TOPICS_CONFIG = [
-            { id: 'T1', name: 'KENALI TAMBAH / TOLAK', desc: 'Mengenal simbol + dan − serta fakta asas', icon: '➕➖', color: 'bg-emerald-100 border-emerald-300 text-emerald-800' },
-            { id: 'T2', name: 'KIRA TAMBAH / TOLAK BERDASARKAN GAMBAR RAJAH', desc: 'Pengiraan berpandukan objek & gambar', icon: '🍎⭐', color: 'bg-amber-100 border-amber-300 text-amber-800' },
-            { id: 'T3', name: 'LENGKAPKAN AYAT MATEMATIK BERDASARKAN GAMBAR', desc: 'Mencari nombor yang hilang dalam petak', icon: '📝🧩', color: 'bg-purple-100 border-purple-300 text-purple-800' },
-            { id: 'T4', name: 'TAMBAH / TOLAK DALAM BENTUK LAZIM', desc: 'Pengiraan susunan menegak', icon: '📊🔢', color: 'bg-blue-100 border-blue-300 text-blue-800' },
-            { id: 'T5', name: 'SOALAN PENYELESAIAN MASALAH', desc: 'Situasi cerita kehidupan harian', icon: '💡🎒', color: 'bg-pink-100 border-pink-300 text-pink-800' }
+            { id: 'T1', name: 'INTRODUCTION TO ADDITION AND SUBTRACTION', desc: 'Recognise the + and − symbols and learn basic number facts', icon: '➕➖', color: 'bg-emerald-100 border-emerald-300 text-emerald-800' },
+            { id: 'T2', name: 'ADDITION AND SUBTRACTION USING DIAGRAMS', desc: 'Calculate using objects and pictures', icon: '🍎⭐', color: 'bg-amber-100 border-amber-300 text-amber-800' },
+            { id: 'T3', name: 'COMPLETE NUMBER SENTENCES USING PICTURES', desc: 'Find the missing number', icon: '📝🧩', color: 'bg-purple-100 border-purple-300 text-purple-800' },
+            { id: 'T4', name: 'COLUMN ADDITION AND SUBTRACTION', desc: 'Calculate using the column method', icon: '📊🔢', color: 'bg-blue-100 border-blue-300 text-blue-800' },
+            { id: 'T5', name: 'WORD PROBLEMS', desc: 'Solve everyday maths problems', icon: '💡🎒', color: 'bg-pink-100 border-pink-300 text-pink-800' }
         ];
 
         class MathKidsApp {
@@ -929,7 +929,7 @@
                     this.updateUserNavBadge();
                     this.showScreen('mainMenu');
                 } else {
-                    alert('Nama pengguna atau kata laluan tidak tepat. Sila cuba lagi.');
+                    alert('Incorrect username or password. Please try again.');
                 }
             }
 
@@ -941,13 +941,13 @@
                 const cp = document.getElementById('regConfirmPassword').value;
 
                 if (p !== cp) {
-                    alert('Pengesahan kata laluan tidak sama!');
+                    alert('The passwords do not match!');
                     return;
                 }
 
                 const users = this.getUsers();
                 if (users[u]) {
-                    alert('Nama pengguna telah didaftarkan. Sila pilih nama pengguna lain.');
+                    alert('That username is taken. Please choose another.');
                     return;
                 }
 
@@ -1018,7 +1018,7 @@
                 container.innerHTML = TOPICS_CONFIG.map((t) => `
                     <div onclick="app.chooseTopic('${t.id}')" class="glass-card p-5 rounded-3xl border-4 ${t.color} cursor-pointer hover:scale-102 transition shadow-md flex items-center justify-between group">
                         <div class="space-y-1">
-                            <span class="text-xs font-black uppercase tracking-wider text-slate-500">Topik ${t.id}</span>
+                            <span class="text-xs font-black uppercase tracking-wider text-slate-500">Topic ${t.id.slice(1)}</span>
                             <h3 class="font-kids text-xl font-bold leading-tight">${t.name}</h3>
                             <p class="text-xs text-slate-600 font-semibold">${t.desc}</p>
                         </div>
@@ -1116,10 +1116,10 @@
                 // Update HUD
                 document.getElementById('arenaScore').innerText = `${this.currentScore} / 100`;
                 document.getElementById('arenaProgress').innerText = `${this.currentIndex + 1} / ${this.activeQuestions.length}`;
-                document.getElementById('arenaQuestionMeta').innerText = `ID: ${q.id} | Aras: ${q.aras}`;
+                document.getElementById('arenaQuestionMeta').innerText = `ID: ${q.id} | Level: ${({Mengingat: 'Recall', Memahami: 'Understanding', Mengaplikasi: 'Application'})[q.aras]}`;
                 
                 const mode = this.selectedMode === 'Campuran' ? q.jenis : this.selectedMode;
-                document.getElementById('arenaModeMeta').innerText = `Bentuk: ${mode}`;
+                document.getElementById('arenaModeMeta').innerText = `Format: ${({Objektif: 'Multiple choice', 'Isi Kosong': 'Fill in the blank', Padanan: 'Matching'})[mode] || mode}`;
 
                 // Render Visual Zone (Diagram / Vertical Layout)
                 const visZone = document.getElementById('arenaVisualZone');
@@ -1162,11 +1162,11 @@
                 } else if (mode === 'Isi Kosong') {
                     area.innerHTML = `
                         <div class="flex flex-col items-center gap-3">
-                            <label class="text-sm font-bold text-slate-600">Taip jawapan nombor anda dan tekan Enter / 'Hantar':</label>
+                            <label class="text-sm font-bold text-slate-600">Enter your answer and press Enter or select Submit.</label>
                             <div class="flex items-center gap-2">
                                 <input type="number" id="inputFillBlank" onkeydown="if(event.key==='Enter') app.submitFillBlank(this.value)" class="w-40 text-center text-3xl font-black p-3 rounded-2xl border-4 border-blue-300 focus:border-blue-500 focus:outline-none" placeholder="?">
                                 <button onclick="app.submitFillBlank(document.getElementById('inputFillBlank').value)" class="btn-bounce bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold px-5 py-3 rounded-2xl shadow-md border-b-4 border-emerald-700">
-                                    HANTAR <i class="fa-solid fa-paper-plane"></i>
+                                    SUBMIT <i class="fa-solid fa-paper-plane"></i>
                                 </button>
                             </div>
                         </div>
@@ -1176,7 +1176,7 @@
                     area.innerHTML = `
                         <div class="space-y-4 text-center">
                             <div id="dropTargetZone" class="drop-zone p-4 rounded-2xl flex items-center justify-center font-black text-2xl text-blue-700">
-                                Sila seret atau tekan pilihan di bawah
+                                Drag or tap an answer below.
                             </div>
                             <div class="flex flex-wrap justify-center gap-3">
                                 ${opts.map(opt => `
@@ -1207,7 +1207,7 @@
 
                 const nextBtn = document.getElementById('arenaNextBtn');
                 nextBtn.classList.add('hidden');
-                nextBtn.innerHTML = `SOALAN SETERUSNYA <i class="fa-solid fa-arrow-right"></i>`;
+                nextBtn.innerHTML = `NEXT QUESTION <i class="fa-solid fa-arrow-right"></i>`;
                 nextBtn.onclick = () => app.nextQuestion();
 
                 // Start Timer
@@ -1232,7 +1232,7 @@
                 this.userSelectedAnswer = val;
                 const zone = document.getElementById('dropTargetZone');
                 if (zone) {
-                    zone.innerText = `Jawapan dipilih: ${val}`;
+                    zone.innerText = `Selected answer: ${val}`;
                     zone.classList.add('bg-blue-50', 'border-blue-500');
                 }
                 this.submitAnswer();
@@ -1248,7 +1248,7 @@
             startTimer() {
                 clearInterval(this.timerInterval);
                 if (this.timerConfig === 0) {
-                    document.getElementById('arenaTimer').innerText = '♾️ Tiada Had';
+                    document.getElementById('arenaTimer').innerText = '♾️ No time limit';
                     return;
                 }
 
@@ -1274,8 +1274,8 @@
                 const fb = document.getElementById('arenaFeedbackMsg');
                 fb.className = "p-4 rounded-2xl text-center font-bold text-base md:text-lg bg-pink-100 text-pink-800 border-2 border-pink-300 block";
                 fb.innerHTML = `
-                    ⏰ <strong>MASA TAMAT!</strong><br>
-                    Jawapan yang betul ialah: <span class="text-xl underline font-black">${q.jawapan}</span>.<br>
+                    ⏰ <strong>TIME’S UP!</strong><br>
+                    The correct answer is: <span class="text-xl underline font-black">${q.jawapan}</span>.<br>
                     <span class="text-xs text-slate-600">${q.penerangan}</span>
                 `;
 
@@ -1301,7 +1301,7 @@
 
                     fb.className = "p-4 rounded-2xl text-center font-bold text-base md:text-lg bg-emerald-100 text-emerald-800 border-2 border-emerald-300 block animate-bounce";
                     fb.innerHTML = `
-                        🎉 <strong>TAHNIAH! JAWAPAN BETUL!</strong> (+5 Markah)<br>
+                        🎉 <strong>WELL DONE! CORRECT ANSWER!</strong> (+5 points)<br>
                         <span class="text-xs text-emerald-700">${q.penerangan}</span>
                     `;
 
@@ -1311,8 +1311,8 @@
                     this.wrongCount++;
                     fb.className = "p-4 rounded-2xl text-center font-bold text-base md:text-lg bg-pink-100 text-pink-800 border-2 border-pink-300 block";
                     fb.innerHTML = `
-                        🙂 <strong>BELUM TEPAT. CUBA LAGI!</strong><br>
-                        Jawapan yang betul ialah: <span class="text-xl underline font-black">${q.jawapan}</span>.<br>
+                        🙂 <strong>HAVE A LOOK AT THE CORRECT ANSWER.</strong><br>
+                        The correct answer is: <span class="text-xl underline font-black">${q.jawapan}</span>.<br>
                         <span class="text-xs text-slate-600">${q.penerangan}</span>
                     `;
 
@@ -1369,10 +1369,10 @@
                 document.getElementById('resAccuracy').innerText = `${accuracy}%`;
 
                 let feedback = "";
-                if (accuracy >= 90) feedback = "Hebat! Anda sangat menguasai topik ini! 🌟🏆";
-                else if (accuracy >= 70) feedback = "Bagus! Teruskan berlatih untuk capai markah penuh. 👍";
-                else if (accuracy >= 50) feedback = "Usaha yang baik! Cuba lagi untuk dapatkan markah lebih tinggi. 😊";
-                else feedback = "Jangan berputus asa. Mari belajar dan cuba lagi! 💪";
+                if (accuracy >= 90) feedback = "Great work! You’ve mastered this topic! 🌟🏆";
+                else if (accuracy >= 70) feedback = "Good work! Keep practising for a full score. 👍";
+                else if (accuracy >= 50) feedback = "Good effort! Try again to improve your score. 😊";
+                else feedback = "Keep going! Practise and try again. 💪";
 
                 document.getElementById('resFeedbackText').innerText = feedback;
                 this.showScreen('result');
@@ -1388,12 +1388,12 @@
 
                 const container = document.getElementById('leaderboardList');
                 if (list.length === 0) {
-                    container.innerHTML = `<p class="text-center text-slate-400 py-4">Tiada rekod data pemain lagi.</p>`;
+                    container.innerHTML = `<p class="text-center text-slate-400 py-4">No player scores yet.</p>`;
                     return;
                 }
 
                 container.innerHTML = list.map((u, idx) => {
-                    const badge = idx === 0 ? '🥇 Tempat 1' : idx === 1 ? '🥈 Tempat 2' : idx === 2 ? '🥉 Tempat 3' : `#${idx + 1}`;
+                    const badge = idx === 0 ? '🥇 Place 1' : idx === 1 ? '🥈 Place 2' : idx === 2 ? '🥉 Place 3' : `#${idx + 1}`;
                     const bgClass = idx === 0 ? 'bg-amber-100 border-amber-300' : idx === 1 ? 'bg-slate-100 border-slate-300' : idx === 2 ? 'bg-orange-100 border-orange-300' : 'bg-white border-slate-200';
 
                     return `
@@ -1402,12 +1402,12 @@
                                 <span class="font-kids text-lg font-bold px-3 py-1 bg-white/80 rounded-xl shadow-inner">${badge}</span>
                                 <div>
                                     <h4 class="font-bold text-slate-800 leading-tight">${u.fullName}</h4>
-                                    <span class="text-xs text-slate-500">Dijawab: ${u.totalAnswered} soalan</span>
+                                    <span class="text-xs text-slate-500">Questions answered: ${u.totalAnswered}</span>
                                 </div>
                             </div>
                             <div class="text-right">
                                 <span class="font-kids text-xl font-bold text-amber-600 block">${u.totalScore} pts</span>
-                                <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">Skor Tertinggi: ${u.highScore || 0}</span>
+                                <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">Highest Score: ${u.highScore || 0}</span>
                             </div>
                         </div>
                     `;

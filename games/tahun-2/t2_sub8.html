@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edu Kidz - Matematik Tahun 2: Pengurusan Data</title>
+    <title>Edu Kidz - Year 2 Mathematics: Data Management</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome CDN -->
@@ -61,7 +61,7 @@
             
             <div id="user-status-bar" class="hidden flex items-center gap-3">
                 <span id="current-user-name" class="font-bold text-yellow-300 text-sm md:text-base">
-                    <i class="fa-solid fa-user-circle"></i> Murid
+                    <i class="fa-solid fa-user-circle"></i> Pupil
                 </span>
                 <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white text-xs px-3 py-1 rounded-xl shadow transition">
                     <i class="fa-solid fa-right-from-bracket"></i> Keluar
@@ -74,24 +74,24 @@
             <!-- SCREEN 1: LOGIN / REGISTER -->
             <section id="auth-screen" class="space-y-6 text-center max-w-md mx-auto py-6">
                 <div class="space-y-2">
-                    <h1 class="text-3xl font-extrabold text-indigo-900 font-fredoka">Selamat Datang ke Edu Kidz! 🎉</h1>
-                    <p class="text-gray-600 text-sm">Masukkan nama anda untuk mula bermain & kumpul markah dalam Pengurusan Data Tahun 2.</p>
+                    <h1 class="text-3xl font-extrabold text-indigo-900 font-fredoka">Welcome to EDU KIDZ! 🎉</h1>
+                    <p class="text-gray-600 text-sm">Enter your name to play and earn points in Year 2 Data Management.</p>
                 </div>
 
                 <div class="bg-indigo-50 p-6 rounded-2xl border-2 border-indigo-200 space-y-4">
                     <div>
-                        <label class="block text-left text-xs font-bold text-indigo-900 uppercase mb-1">Nama Pemain / Murid</label>
-                        <input type="text" id="player-name-input" placeholder="Contoh: Amir / Sarah" class="w-full px-4 py-3 rounded-xl border-2 border-indigo-300 focus:border-indigo-600 focus:outline-none text-lg font-bold text-indigo-900">
+                        <label class="block text-left text-xs font-bold text-indigo-900 uppercase mb-1">Player Name</label>
+                        <input type="text" id="player-name-input" placeholder="e.g. Amir / Sarah" class="w-full px-4 py-3 rounded-xl border-2 border-indigo-300 focus:border-indigo-600 focus:outline-none text-lg font-bold text-indigo-900">
                     </div>
                     <button onclick="loginUser()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3 text-lg rounded-xl shadow-lg transform active:scale-95 transition">
-                        <i class="fa-solid fa-play"></i> Mula Main Sekarang!
+                        <i class="fa-solid fa-play"></i> Start Playing!
                     </button>
                 </div>
 
                 <!-- Leaderboard Preview -->
                 <div class="mt-8 text-left bg-yellow-50 p-4 rounded-2xl border border-yellow-300">
                     <h3 class="font-bold text-indigo-900 text-sm flex items-center gap-2 mb-2">
-                        <i class="fa-solid fa-trophy text-yellow-500"></i> Carta Kedudukan Pemain
+                        <i class="fa-solid fa-trophy text-yellow-500"></i> Player Leaderboard
                     </h3>
                     <div id="auth-leaderboard" class="text-xs space-y-1 text-gray-700">
                         <!-- Loaded dynamically -->
@@ -103,12 +103,12 @@
             <section id="dashboard-screen" class="hidden space-y-6">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 bg-indigo-50 p-4 rounded-2xl border border-indigo-100">
                     <div>
-                        <h2 class="text-2xl font-bold text-indigo-900 font-fredoka">Hai, <span id="dash-player-name" class="text-emerald-600">Pemain</span>! 👋</h2>
-                        <p class="text-xs text-gray-600">Pilih topik, tahap kesukaran, dan masa menjawab untuk memulakan cabaran!</p>
+                        <h2 class="text-2xl font-bold text-indigo-900 font-fredoka">Hello, <span id="dash-player-name" class="text-emerald-600">Player</span>! 👋</h2>
+                        <p class="text-xs text-gray-600">Choose a topic, difficulty level and time limit to begin.</p>
                     </div>
                     <div class="flex gap-2">
                         <button onclick="showLeaderboardModal()" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-950 font-bold px-4 py-2 rounded-xl shadow text-sm flex items-center gap-2">
-                            <i class="fa-solid fa-trophy"></i> Carta Kedudukan
+                            <i class="fa-solid fa-trophy"></i> Leaderboard
                         </button>
                     </div>
                 </div>
@@ -118,52 +118,52 @@
                     
                     <!-- Topik Selection -->
                     <div class="md:col-span-3 space-y-2">
-                        <label class="block font-bold text-indigo-900 text-sm uppercase"><i class="fa-solid fa-list-check"></i> 1. Pilih Kategori Topik</label>
+                        <label class="block font-bold text-indigo-900 text-sm uppercase"><i class="fa-solid fa-list-check"></i> 1. Choose a Topic</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <button type="button" onclick="selectTopic(1, this)" class="topic-btn active bg-indigo-600 text-white p-4 rounded-2xl text-left border-2 border-indigo-700 shadow card-pop">
-                                <div class="font-bold text-base"><i class="fa-solid fa-square-poll-vertical mr-1"></i> Cara Kumpul Data</div>
-                                <div class="text-xs opacity-90 font-normal">Gundal, Jadual & Piktograf</div>
+                                <div class="font-bold text-base"><i class="fa-solid fa-square-poll-vertical mr-1"></i> Collecting Data</div>
+                                <div class="text-xs opacity-90 font-normal">Tally marks, tables and pictographs</div>
                             </button>
                             <button type="button" onclick="selectTopic(2, this)" class="topic-btn bg-white hover:bg-indigo-50 text-indigo-900 p-4 rounded-2xl text-left border-2 border-indigo-200 shadow card-pop">
-                                <div class="font-bold text-base"><i class="fa-solid fa-chart-column mr-1"></i> Kenali Carta Palang</div>
-                                <div class="text-xs text-gray-500 font-normal">Membaca tajuk, paksi & nilai palang</div>
+                                <div class="font-bold text-base"><i class="fa-solid fa-chart-column mr-1"></i> Reading Bar Charts</div>
+                                <div class="text-xs text-gray-500 font-normal">Read chart titles, axes and bar values</div>
                             </button>
                             <button type="button" onclick="selectTopic(3, this)" class="topic-btn bg-white hover:bg-indigo-50 text-indigo-900 p-4 rounded-2xl text-left border-2 border-indigo-200 shadow card-pop">
-                                <div class="font-bold text-base"><i class="fa-solid fa-pen-to-square mr-1"></i> Lengkapkan Ayat Penyataan</div>
-                                <div class="text-xs text-gray-500 font-normal">Mentafsir maklumat terbanyak/tersedikit</div>
+                                <div class="font-bold text-base"><i class="fa-solid fa-pen-to-square mr-1"></i> Completing Data Statements</div>
+                                <div class="text-xs text-gray-500 font-normal">Interpret the greatest and least values</div>
                             </button>
                             <button type="button" onclick="selectTopic(4, this)" class="topic-btn bg-white hover:bg-indigo-50 text-indigo-900 p-4 rounded-2xl text-left border-2 border-indigo-200 shadow card-pop">
-                                <div class="font-bold text-base"><i class="fa-solid fa-brain mr-1"></i> Penyelesaian Masalah</div>
-                                <div class="text-xs text-gray-500 font-normal">Soalan reka cerita & KBAT Tahun 2</div>
+                                <div class="font-bold text-base"><i class="fa-solid fa-brain mr-1"></i> Word Problems</div>
+                                <div class="text-xs text-gray-500 font-normal">Year 2 reasoning and word problems</div>
                             </button>
                         </div>
                     </div>
 
                     <!-- Difficulty Selection -->
                     <div class="space-y-2">
-                        <label class="block font-bold text-indigo-900 text-sm uppercase"><i class="fa-solid fa-gauge-high"></i> 2. Tahap Kesukaran</label>
+                        <label class="block font-bold text-indigo-900 text-sm uppercase"><i class="fa-solid fa-gauge-high"></i> 2. Difficulty Level</label>
                         <select id="diff-select" class="w-full bg-white border-2 border-indigo-200 rounded-xl p-3 font-bold text-indigo-900 focus:outline-none focus:border-indigo-500">
-                            <option value="all" selected>Semua Tahap (Campuran)</option>
-                            <option value="easy">Mudah (Senang)</option>
-                            <option value="medium">Sederhana</option>
-                            <option value="hard">Sukar (KBAT)</option>
+                            <option value="all" selected>Mixed Difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
                         </select>
                     </div>
 
                     <!-- Timer Selection -->
                     <div class="space-y-2">
-                        <label class="block font-bold text-indigo-900 text-sm uppercase"><i class="fa-solid fa-stopwatch"></i> 3. Masa Menjawab</label>
+                        <label class="block font-bold text-indigo-900 text-sm uppercase"><i class="fa-solid fa-stopwatch"></i> 3. Time per Question</label>
                         <select id="timer-select" class="w-full bg-white border-2 border-indigo-200 rounded-xl p-3 font-bold text-indigo-900 focus:outline-none focus:border-indigo-500">
-                            <option value="30">30 Saat / Soalan</option>
-                            <option value="60" selected>1 Minit / Soalan</option>
-                            <option value="0">Tiada Had Masa</option>
+                            <option value="30">30 Seconds per Question</option>
+                            <option value="60" selected>1 Minute per Question</option>
+                            <option value="0">No Time Limit</option>
                         </select>
                     </div>
 
                     <!-- Start Button -->
                     <div class="flex items-end">
                         <button onclick="startGame()" class="w-full bg-yellow-400 hover:bg-yellow-500 text-indigo-950 font-black text-xl py-3 rounded-xl shadow-lg border-2 border-yellow-500 transform active:scale-95 transition">
-                            <i class="fa-solid fa-rocket mr-1"></i> MULA GAME!
+                            <i class="fa-solid fa-rocket mr-1"></i> START GAME!
                         </button>
                     </div>
 
@@ -176,19 +176,19 @@
                 <!-- Game Header Info -->
                 <div class="flex justify-between items-center bg-indigo-900 text-white p-3 md:p-4 rounded-2xl shadow">
                     <div class="flex items-center gap-3">
-                        <span class="bg-indigo-700 px-3 py-1 rounded-xl text-xs md:text-sm font-bold" id="q-number-badge">Soalan 1 / 20</span>
-                        <span class="bg-emerald-500 px-3 py-1 rounded-xl text-xs md:text-sm font-bold" id="score-badge">Markah: 0</span>
+                        <span class="bg-indigo-700 px-3 py-1 rounded-xl text-xs md:text-sm font-bold" id="q-number-badge">Question 1 / 20</span>
+                        <span class="bg-emerald-500 px-3 py-1 rounded-xl text-xs md:text-sm font-bold" id="score-badge">Score: 0</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <div class="text-xs text-indigo-200 font-bold hidden sm:inline">Masa:</div>
+                        <div class="text-xs text-indigo-200 font-bold hidden sm:inline">Time:</div>
                         <div id="timer-display" class="bg-red-500 px-3 py-1 rounded-xl text-xs md:text-sm font-black tracking-wider">01:00</div>
                     </div>
                 </div>
 
                 <!-- Cognitive & Type Info Badge -->
                 <div class="flex justify-between text-xs text-gray-500 font-semibold px-1">
-                    <span id="cognitive-badge" class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md">Aras: Mengingat</span>
-                    <span id="question-type-badge" class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded-md">Jenis: Objektif</span>
+                    <span id="cognitive-badge" class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md">Skill: Recall</span>
+                    <span id="question-type-badge" class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded-md">Format: Multiple Choice</span>
                 </div>
 
                 <!-- Visual Chart / Graphic Area -->
@@ -198,7 +198,7 @@
 
                 <!-- Question Text -->
                 <div id="question-text-box" class="text-base md:text-lg font-bold text-indigo-950 bg-amber-50 p-4 rounded-2xl border-l-4 border-amber-400">
-                    Sila tunggu, soalan sedang dimuatkan...
+                    Loading questions…
                 </div>
 
                 <!-- Interactive Answer Area -->
@@ -212,7 +212,7 @@
                 <!-- Next Button -->
                 <div class="flex justify-end pt-2">
                     <button id="next-btn" onclick="nextQuestion()" class="hidden bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold px-6 py-3 rounded-xl shadow-lg transition">
-                        Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-1"></i>
+                        Next Question <i class="fa-solid fa-arrow-right ml-1"></i>
                     </button>
                 </div>
             </section>
@@ -221,26 +221,26 @@
             <section id="result-screen" class="hidden text-center space-y-6 py-6">
                 <div class="space-y-2">
                     <div class="text-5xl">🏆</div>
-                    <h2 class="text-3xl font-black text-indigo-900 font-fredoka">Tahniah! Permainan Tamat!</h2>
-                    <p class="text-gray-600 text-sm">Berikut adalah keputusan pencapaian subtopik Data anda:</p>
+                    <h2 class="text-3xl font-black text-indigo-900 font-fredoka">Well Done! Game Complete!</h2>
+                    <p class="text-gray-600 text-sm">Here are your Data Management results.</p>
                 </div>
 
                 <div class="bg-indigo-50 border-2 border-indigo-200 p-6 rounded-3xl max-w-sm mx-auto space-y-3 shadow-inner">
-                    <div class="text-gray-500 font-bold text-xs uppercase">Jumlah Markah</div>
+                    <div class="text-gray-500 font-bold text-xs uppercase">Total Score</div>
                     <div id="final-score" class="text-5xl font-black text-emerald-600">0 / 100</div>
-                    <div id="accuracy-rate" class="text-xs font-bold text-indigo-800">Ketepatan: 0%</div>
+                    <div id="accuracy-rate" class="text-xs font-bold text-indigo-800">Accuracy: 0%</div>
                     <hr class="border-indigo-200">
                     <div id="performance-feedback" class="text-sm font-extrabold text-indigo-900">
-                        Cemerlang! Anda seorang pakar Data!
+                        Excellent! You’re a data expert!
                     </div>
                 </div>
 
                 <div class="flex justify-center gap-3">
                     <button onclick="goToDashboard()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold px-6 py-3 rounded-xl shadow-lg text-sm">
-                        <i class="fa-solid fa-rotate-right"></i> Main Lagi
+                        <i class="fa-solid fa-rotate-right"></i> Play Again
                     </button>
                     <button onclick="showLeaderboardModal()" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-950 font-extrabold px-6 py-3 rounded-xl shadow-lg text-sm">
-                        <i class="fa-solid fa-trophy"></i> Lihat Kedudukan
+                        <i class="fa-solid fa-trophy"></i> View Leaderboard
                     </button>
                 </div>
             </section>
@@ -255,12 +255,12 @@
                 <i class="fa-solid fa-circle-xmark"></i>
             </button>
             <h3 class="text-2xl font-black text-indigo-900 font-fredoka flex items-center gap-2">
-                <i class="fa-solid fa-trophy text-yellow-500"></i> Carta Kedudukan Murid
+                <i class="fa-solid fa-trophy text-yellow-500"></i> Pupil Leaderboard
             </h3>
             <div class="max-h-60 overflow-y-auto space-y-2" id="full-leaderboard-list">
                 <!-- Leaderboard items inserted dynamically -->
             </div>
-            <button onclick="closeLeaderboardModal()" class="w-full bg-indigo-600 text-white font-bold py-2 rounded-xl">Tutup</button>
+            <button onclick="closeLeaderboardModal()" class="w-full bg-indigo-600 text-white font-bold py-2 rounded-xl">Close</button>
         </div>
     </div>
 
@@ -279,128 +279,128 @@
         // Shared 7-item Datasets for consistent, high-variety questions
         const petChart7 = {
             kind: 'barchart',
-            title: 'Haiwan Peliharaan Murid 2 Melati',
+            title: 'Pets Kept by Pupils in Class 2 Melati',
             data: [
-                {label: 'Kucing', val: 14},
-                {label: 'Ikan', val: 8},
-                {label: 'Arnab', val: 10},
-                {label: 'Burung', val: 5},
-                {label: 'Kura-kura', val: 3},
+                {label: 'Cats', val: 14},
+                {label: 'Fish', val: 8},
+                {label: 'Rabbits', val: 10},
+                {label: 'Birds', val: 5},
+                {label: 'Turtles', val: 3},
                 {label: 'Hamster', val: 7},
-                {label: 'Ayam', val: 12}
+                {label: 'Chickens', val: 12}
             ]
         };
 
         const fruitChart7 = {
             kind: 'barchart',
-            title: 'Jualan Buah-Buahan di Kantin (Biji)',
+            title: 'Canteen Fruit Sales (Number of Pieces)',
             data: [
-                {label: 'Epal', val: 18},
-                {label: 'Pisang', val: 24},
-                {label: 'Tembikai', val: 12},
-                {label: 'Mangga', val: 9},
-                {label: 'Durian', val: 6},
-                {label: 'Anggur', val: 15},
-                {label: 'Oren', val: 20}
+                {label: 'Apples', val: 18},
+                {label: 'Bananas', val: 24},
+                {label: 'Watermelons', val: 12},
+                {label: 'Mangoes', val: 9},
+                {label: 'Durians', val: 6},
+                {label: 'Grapes', val: 15},
+                {label: 'Oranges', val: 20}
             ]
         };
 
         // Complete Question Bank Database (Subtopic Data KSSR Semakan Tahun 2)
         const questionBank = {
-            // TOPIK 1: Cara Kumpul Data (20 Soalan Unik)
+            // TOPIK 1: Collecting Data (20 Soalan Unik)
             1: [
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Apakah nilai gundal bagi simbol |||| ?', graphic: { kind: 'tally', count: 4 }, options: ['3', '4', '5', '6'], answer: '4', explain: 'Empat garisan tegak mewakili nombor 4.' },
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Apakah nilai bagi satu kumpulan gundal lengkap 卌 ?', graphic: { kind: 'tally', count: 5 }, options: ['4', '5', '6', '10'], answer: '5', explain: 'Satu kumpulan gundal lengkap dengan garisan melintang mewakili nilai 5.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'easy', question: 'Berapakah bilangan Epal dalam gundal 卌 ||| ?', graphic: { kind: 'tally', count: 8 }, options: ['6', '7', '8', '9'], answer: '8', explain: 'Gundal 5 + 3 garisan tegak = 8.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'easy', question: 'Lihat ikon berikut: 🍎🍎🍎🍎🍎. Taip bilangan epal dalam nombor.', graphic: { kind: 'icons', icon: '🍎', count: 5 }, answer: '5', explain: 'Terdapat 5 biji epal.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'medium', question: 'Jika 1 simbol 🚗 mewakili 2 buah kereta. Berapakah jumlah kereta bagi 3 simbol 🚗🚗🚗?', graphic: { kind: 'pictograph_key', icon: '🚗', count: 3, key: 2 }, options: ['3', '5', '6', '8'], answer: '6', explain: '3 simbol × 2 = 6 buah kereta.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Berapakah nilai gundal 卌 卌 || ?', graphic: { kind: 'tally', count: 12 }, options: ['10', '11', '12', '14'], answer: '12', explain: '5 + 5 + 2 = 12.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Jika 1 simbol ⚽ mewakili 5 orang murid. Berapakah murid bagi 2 simbol ⚽⚽?', graphic: { kind: 'pictograph_key', icon: '⚽', count: 2, key: 5 }, answer: '10', explain: '2 simbol × 5 = 10 orang murid.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'easy', question: 'Manakah antara berikut adalah cara mengumpul data?', options: ['Gundal', 'Pembaris', 'Jam', 'Penimbang'], answer: 'Gundal', explain: 'Gundal, jadual, dan piktograf adalah cara mengumpul data.' },
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Berapakah simbol gundal tegak untuk nombor 3?', options: ['|', '||', '|||', '||||'], answer: '|||', explain: 'Tiga garisan tegak ||| mewakili nombor 3.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Kira jumlah gundal berikut: 卌 卌 卌', graphic: { kind: 'tally', count: 15 }, answer: '15', explain: '5 + 5 + 5 = 15.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'easy', question: 'Apakah nama jadual yang menggunakan garisan untuk membilang data?', options: ['Carta Palang', 'Jadual Gundal', 'Piktograf', 'Peta Minda'], answer: 'Jadual Gundal', explain: 'Jadual gundal menggunakan garisan (tally marks) untuk membilang.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Manakah mewakili gundal bagi nombor 14?', options: ['卌 卌 ||||', '卌 卌 |||', '卌 卌 卌', '卌 ||||'], answer: '卌 卌 ||||', explain: '5 + 5 + 4 = 14.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Jika 1 simbol ⭐️ mewakili 4 mata. Berapakah mata untuk 4 simbol ⭐️⭐️⭐️⭐️?', graphic: { kind: 'pictograph_key', icon: '⭐️', count: 4, key: 4 }, answer: '16', explain: '4 × 4 = 16 mata.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'medium', question: 'Berapakah nilai gundal bagi 卌 | ?', graphic: { kind: 'tally', count: 6 }, options: ['5', '6', '7', '8'], answer: '6', explain: '5 + 1 = 6.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Bilangan kek dijual ialah 9. Manakah bentuk gundal yang betul?', options: ['卌 ||||', '卌 |||', '卌 卌', '|||| ||||'], answer: '卌 ||||', explain: '5 + 4 = 9.' },
-                { type: 'input', cognitive: 'Memahami', diff: 'easy', question: 'Kira jumlah bunga: 🌸🌸🌸🌸🌸🌸🌸🌸. Tulis jawapan dalam angka.', graphic: { kind: 'icons', icon: '🌸', count: 8 }, answer: '8', explain: '8 kuntum bunga.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Dalam piktograf, 2 simbol 🐟 mewakili 10 ekor ikan. Berapakah nilai 1 simbol 🐟?', options: ['2', '4', '5', '10'], answer: '5', explain: '10 ÷ 2 = 5 ekor ikan setiap simbol.' },
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Piktograf ialah perwakilan data yang menggunakan ________.', options: ['Simbol / Gambar', 'Garisan sahaja', 'Nombor sahaja', 'Warna sahaja'], answer: 'Simbol / Gambar', explain: 'Piktograf menggunakan gambar atau simbol untuk mewakili data.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Kira jumlah gundal: 卌 卌 卌 ||', graphic: { kind: 'tally', count: 17 }, answer: '17', explain: '5 + 5 + 5 + 2 = 17.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Ahmad mengumpul 20 biji guli. Berapakah kumpulan gundal lengkap 卌 yang dibentuk?', options: ['2', '3', '4', '5'], answer: '4', explain: '20 ÷ 5 = 4 kumpulan gundal lengkap.' }
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'What number do these tally marks represent: ||||?', graphic: { kind: 'tally', count: 4 }, options: ['3', '4', '5', '6'], answer: '4', explain: 'Four vertical tally marks represent 4.' },
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'What number does one complete tally group 卌 represent?', graphic: { kind: 'tally', count: 5 }, options: ['4', '5', '6', '10'], answer: '5', explain: 'One complete tally group represents 5.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'easy', question: 'How many apples are shown by the tally 卌 |||?', graphic: { kind: 'tally', count: 8 }, options: ['6', '7', '8', '9'], answer: '8', explain: '5 + 3 = 8 apples.' },
+                { type: 'input', cognitive: 'Application', diff: 'easy', question: 'Count the apples: 🍎🍎🍎🍎🍎. Enter the number.', graphic: { kind: 'icons', icon: '🍎', count: 5 }, answer: '5', explain: 'There are 5 apples.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'medium', question: 'Each 🚗 represents 2 cars. How many cars do 🚗🚗🚗 represent?', graphic: { kind: 'pictograph_key', icon: '🚗', count: 3, key: 2 }, options: ['3', '5', '6', '8'], answer: '6', explain: '3 × 2 = 6 cars.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'What number does the tally 卌 卌 || represent?', graphic: { kind: 'tally', count: 12 }, options: ['10', '11', '12', '14'], answer: '12', explain: '5 + 5 + 2 = 12.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'Each ⚽ represents 5 pupils. How many pupils do ⚽⚽ represent?', graphic: { kind: 'pictograph_key', icon: '⚽', count: 2, key: 5 }, answer: '10', explain: '2 × 5 = 10 pupils.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'easy', question: 'Which of these can you use to keep a count when collecting data?', options: ['Tally Marks', 'Ruler', 'Clock', 'Scales'], answer: 'Tally Marks', explain: 'Tally marks let you record each item as you count it.' },
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'Which tally represents 3?', options: ['|', '||', '|||', '||||'], answer: '|||', explain: 'Three vertical tally marks represent 3.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'Count the tally marks: 卌 卌 卌.', graphic: { kind: 'tally', count: 15 }, answer: '15', explain: '5 + 5 + 5 = 15.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'easy', question: 'What do we call a table that uses tally marks to record counts?', options: ['Bar Chart', 'Tally Chart', 'Pictograph', 'Mind Map'], answer: 'Tally Chart', explain: 'A tally chart uses tally marks to record counts.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'hard', question: 'Which tally represents 14?', options: ['卌 卌 ||||', '卌 卌 |||', '卌 卌 卌', '卌 ||||'], answer: '卌 卌 ||||', explain: '5 + 5 + 4 = 14.' },
+                { type: 'input', cognitive: 'Application', diff: 'hard', question: 'Each ⭐️ represents 4 points. How many points do ⭐️⭐️⭐️⭐️ represent?', graphic: { kind: 'pictograph_key', icon: '⭐️', count: 4, key: 4 }, answer: '16', explain: '4 × 4 = 16 points.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'medium', question: 'What number does the tally 卌 | represent?', graphic: { kind: 'tally', count: 6 }, options: ['5', '6', '7', '8'], answer: '6', explain: '5 + 1 = 6.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'A shop sells 9 cakes. Which tally shows 9?', options: ['卌 ||||', '卌 |||', '卌 卌', '|||| ||||'], answer: '卌 ||||', explain: '5 + 4 = 9.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'easy', question: 'Count the flowers: 🌸🌸🌸🌸🌸🌸🌸🌸. Enter the number.', graphic: { kind: 'icons', icon: '🌸', count: 8 }, answer: '8', explain: 'There are 8 flowers.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'In a pictograph, 2 fish symbols represent 10 fish. How many fish does 1 symbol represent?', options: ['2', '4', '5', '10'], answer: '5', explain: '10 ÷ 2 = 5 fish per symbol.' },
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'A pictograph uses ________ to represent data.', options: ['Symbols or Pictures', 'Lines only', 'Numbers only', 'Colours only'], answer: 'Symbols or Pictures', explain: 'A pictograph uses pictures or symbols to represent data.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'Count the tally marks: 卌 卌 卌 ||.', graphic: { kind: 'tally', count: 17 }, answer: '17', explain: '5 + 5 + 5 + 2 = 17.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Ahmad counts 20 marbles. How many complete groups of five tally marks does he make?', options: ['2', '3', '4', '5'], answer: '4', explain: '20 ÷ 5 = 4 complete tally groups.' }
             ],
 
-            // TOPIK 2: Kenali Carta Palang (20 Soalan Unik Menggunakan Carta 7 Item)
+            // TOPIK 2: Reading Bar Charts (20 Soalan Unik Menggunakan Carta 7 Item)
             2: [
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Berdasarkan carta palang, haiwan manakah yang PALING BANYAK dipelihara?', graphic: petChart7, options: ['Kucing', 'Ayam', 'Arnab', 'Ikan'], answer: 'Kucing', explain: 'Palang paling tinggi ialah Kucing dengan nilai 14.' },
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Haiwan manakah yang PALING SEDIKIT dipelihara?', graphic: petChart7, options: ['Burung', 'Hamster', 'Kura-kura', 'Ikan'], answer: 'Kura-kura', explain: 'Palang paling rendah ialah Kura-kura dengan nilai 3.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'easy', question: 'Berapakah bilangan murid yang memelihara AYAM?', graphic: petChart7, options: ['10', '12', '14', '8'], answer: '12', explain: 'Palang Ayam menunjukkan nilai 12.' },
-                { type: 'input', cognitive: 'Memahami', diff: 'easy', question: 'Berapakah bilangan murid yang memelihara ARNAB?', graphic: petChart7, answer: '10', explain: 'Ketinggian palang Arnab ialah 10.' },
-                { type: 'input', cognitive: 'Memahami', diff: 'medium', question: 'Berapakah bilangan murid yang memelihara HAMSTER?', graphic: petChart7, answer: '7', explain: 'Palang Hamster berada pada paras nombor 7.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'medium', question: 'Haiwan manakah yang dipelihara oleh TEPAT 5 orang murid?', graphic: petChart7, options: ['Hamster', 'Burung', 'Kura-kura', 'Ikan'], answer: 'Burung', explain: 'Palang Burung menunjukkan nilai 5.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Berapakah BEZA antara murid memelihara Kucing (14) dan Ikan (8)?', graphic: petChart7, options: ['4', '5', '6', '7'], answer: '6', explain: 'Beza = 14 - 8 = 6 orang.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Berapakah JUMLAH murid yang memelihara Arnab (10) dan Hamster (7)?', graphic: petChart7, options: ['15', '16', '17', '18'], answer: '17', explain: 'Jumlah = 10 + 7 = 17 orang.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Berapakah BEZA antara haiwan terbanyak (Kucing = 14) dan tersedikit (Kura-kura = 3)?', graphic: petChart7, answer: '11', explain: 'Beza = 14 - 3 = 11 orang.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Haiwan manakah yang mempunyai bilangan LEBIH daripada 9 orang murid?', graphic: petChart7, options: ['Burung & Kura-kura', 'Kucing, Ayam & Arnab', 'Hamster & Ikan', 'Ikan & Burung'], answer: 'Kucing, Ayam & Arnab', explain: 'Kucing (14), Ayam (12), dan Arnab (10) semuanya lebih daripada 9.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Pilih susunan haiwan daripada TERBANYAK kepada TERSEDIKIT:', graphic: petChart7, options: ['Kucing, Ayam, Arnab, Ikan, Hamster, Burung, Kura-kura', 'Kura-kura, Burung, Hamster, Ikan, Arnab, Ayam, Kucing', 'Kucing, Arnab, Ayam, Ikan, Hamster, Burung, Kura-kura', 'Ayam, Kucing, Arnab, Ikan, Hamster, Burung, Kura-kura'], answer: 'Kucing, Ayam, Arnab, Ikan, Hamster, Burung, Kura-kura', explain: '14 > 12 > 10 > 8 > 7 > 5 > 3.' },
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Apakah tajuk bagi carta palang haiwan di atas?', graphic: petChart7, options: ['Haiwan Peliharaan Murid 2 Melati', 'Sukan Kegemaran', 'Buah-Buahan Kantin', 'Cara Ke Sekolah'], answer: 'Haiwan Peliharaan Murid 2 Melati', explain: 'Tajuk carta terletak pada bahagian atas carta palang.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'easy', question: 'Berapakah bilangan murid yang memelihara IKAN?', graphic: petChart7, options: ['6', '7', '8', '9'], answer: '8', explain: 'Palang Ikan menunjukkan nilai 8.' },
-                { type: 'input', cognitive: 'Memahami', diff: 'easy', question: 'Berapakah bilangan murid yang memelihara KURA-KURA?', graphic: petChart7, answer: '3', explain: 'Palang Kura-kura bernilai 3.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Berapakah JUMLAH murid yang memelihara Ayam (12) dan Burung (5)?', graphic: petChart7, options: ['15', '16', '17', '18'], answer: '17', explain: '12 + 5 = 17.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Berapakah BEZA antara Ayam (12) dan Hamster (7)?', graphic: petChart7, options: ['3', '4', '5', '6'], answer: '5', explain: '12 - 7 = 5.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Kira JUMLAH KESELURUHAN murid bagi kesemua 7 jenis haiwan peliharaan ini.', graphic: petChart7, answer: '59', explain: '14 + 8 + 10 + 5 + 3 + 7 + 12 = 59 orang murid.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Pernyataan manakah yang BENAR mengenai carta haiwan di atas?', graphic: petChart7, options: ['Hamster lebih banyak daripada Arnab', 'Burung paling sedikit dipelihara', 'Ayam lebih banyak daripada Arnab', 'Ikan sama banyak dengan Kucing'], answer: 'Ayam lebih banyak daripada Arnab', explain: 'Ayam (12) lebih banyak daripada Arnab (10).' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'medium', question: 'Haiwan manakah yang dipelihara KURANG daripada 6 orang murid?', graphic: petChart7, options: ['Burung & Kura-kura', 'Arnab & Ayam', 'Ikan & Hamster', 'Kucing & Ayam'], answer: 'Burung & Kura-kura', explain: 'Burung (5) dan Kura-kura (3) kurang daripada 6.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Jika 2 orang murid membebaskan burung mereka, berapakah baki murid yang memelihara Burung?', graphic: petChart7, options: ['2', '3', '4', '5'], answer: '3', explain: '5 - 2 = 3 orang murid.' }
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'According to the bar chart, which pet is kept by the most pupils?', graphic: petChart7, options: ['Cats', 'Chickens', 'Rabbits', 'Fish'], answer: 'Cats', explain: 'Cats have the tallest bar, at 14.' },
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'Which pet is kept by the fewest pupils?', graphic: petChart7, options: ['Birds', 'Hamster', 'Turtles', 'Fish'], answer: 'Turtles', explain: 'Turtles have the shortest bar, at 3.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'easy', question: 'How many pupils keep chickens?', graphic: petChart7, options: ['10', '12', '14', '8'], answer: '12', explain: 'The bar for chickens shows 12.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'easy', question: 'How many pupils keep rabbits?', graphic: petChart7, answer: '10', explain: 'The bar for rabbits shows 10.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'medium', question: 'How many pupils keep hamsters?', graphic: petChart7, answer: '7', explain: 'The bar for hamsters shows 7.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'medium', question: 'Which pet is kept by exactly 5 pupils?', graphic: petChart7, options: ['Hamster', 'Birds', 'Turtles', 'Fish'], answer: 'Birds', explain: 'The bar for birds shows 5.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'What is the difference between the counts for cats (14) and fish (8)?', graphic: petChart7, options: ['4', '5', '6', '7'], answer: '6', explain: '14 − 8 = 6.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'What is the total of the counts for rabbits (10) and hamsters (7)?', graphic: petChart7, options: ['15', '16', '17', '18'], answer: '17', explain: '10 + 7 = 17.' },
+                { type: 'input', cognitive: 'Application', diff: 'hard', question: 'What is the difference between the highest count (cats, 14) and the lowest count (turtles, 3)?', graphic: petChart7, answer: '11', explain: '14 − 3 = 11.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Which pets are each kept by more than 9 pupils?', graphic: petChart7, options: ['Birds & Turtles', 'Cats, Chickens & Rabbits', 'Hamster & Fish', 'Fish & Birds'], answer: 'Cats, Chickens & Rabbits', explain: 'Cats (14), chickens (12) and rabbits (10) are each above 9.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Order the pets from the greatest count to the smallest.', graphic: petChart7, options: ['Cats, Chickens, Rabbits, Fish, Hamster, Birds, Turtles', 'Turtles, Birds, Hamster, Fish, Rabbits, Chickens, Cats', 'Cats, Rabbits, Chickens, Fish, Hamster, Birds, Turtles', 'Chickens, Cats, Rabbits, Fish, Hamster, Birds, Turtles'], answer: 'Cats, Chickens, Rabbits, Fish, Hamster, Birds, Turtles', explain: '14 > 12 > 10 > 8 > 7 > 5 > 3.' },
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'What is the title of the bar chart?', graphic: petChart7, options: ['Pets Kept by Pupils in Class 2 Melati', 'Favourite Sports', 'Canteen Fruit', 'How Pupils Travel to School'], answer: 'Pets Kept by Pupils in Class 2 Melati', explain: 'The title appears at the top of the chart.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'easy', question: 'How many pupils keep fish?', graphic: petChart7, options: ['6', '7', '8', '9'], answer: '8', explain: 'The bar for fish shows 8.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'easy', question: 'How many pupils keep turtles?', graphic: petChart7, answer: '3', explain: 'The bar for turtles shows 3.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'What is the total of the counts for chickens (12) and birds (5)?', graphic: petChart7, options: ['15', '16', '17', '18'], answer: '17', explain: '12 + 5 = 17.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'What is the difference between the counts for chickens (12) and hamsters (7)?', graphic: petChart7, options: ['3', '4', '5', '6'], answer: '5', explain: '12 − 7 = 5.' },
+                { type: 'input', cognitive: 'Application', diff: 'hard', question: 'Add the counts for all seven types of pet.', graphic: petChart7, answer: '59', explain: '14 + 8 + 10 + 5 + 3 + 7 + 12 = 59.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Which statement about the chart is true?', graphic: petChart7, options: ['More pupils keep hamsters than rabbits', 'Birds are kept by the fewest pupils', 'More pupils keep chickens than rabbits', 'The same number of pupils keep fish and cats'], answer: 'More pupils keep chickens than rabbits', explain: 'More pupils keep chickens (12) than rabbits (10).' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'medium', question: 'Which pets are each kept by fewer than 6 pupils?', graphic: petChart7, options: ['Birds & Turtles', 'Rabbits & Chickens', 'Fish & Hamster', 'Cats & Chickens'], answer: 'Birds & Turtles', explain: 'Birds (5) and turtles (3) are both below 6.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'hard', question: 'Two pupils stop keeping birds. How many pupils still keep birds?', graphic: petChart7, options: ['2', '3', '4', '5'], answer: '3', explain: '5 − 2 = 3 pupils.' }
             ],
 
-            // TOPIK 3: Lengkapkan Ayat Penyataan Berdasarkan Gambar (20 Soalan Unik Menggunakan Carta 7 Buah)
+            // TOPIK 3: Completing Data Statements Berdasarkan Gambar (20 Soalan Unik Menggunakan Carta 7 Buah)
             3: [
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Buah yang PALING BANYAK dijual di kantin ialah ________.', graphic: fruitChart7, options: ['Pisang', 'Oren', 'Epal', 'Tembikai'], answer: 'Pisang', explain: 'Pisang mempunyai jualan tertinggi iaitu 24 biji.' },
-                { type: 'mcq', cognitive: 'Mengingat', diff: 'easy', question: 'Buah yang PALING SEDIKIT dijual ialah ________.', graphic: fruitChart7, options: ['Mangga', 'Durian', 'Anggur', 'Tembikai'], answer: 'Durian', explain: 'Durian paling sedikit dijual iaitu 6 biji.' },
-                { type: 'input', cognitive: 'Memahami', diff: 'easy', question: 'Lengkapkan: Jualan buah Epal ialah ________ biji.', graphic: fruitChart7, answer: '18', explain: 'Palang Epal menunjukkan 18 biji.' },
-                { type: 'input', cognitive: 'Memahami', diff: 'easy', question: 'Lengkapkan: Jualan buah Oren ialah ________ biji.', graphic: fruitChart7, answer: '20', explain: 'Palang Oren menunjukkan 20 biji.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'medium', question: 'Buah Pisang dijual LEBIH BANYAK daripada buah ________.', graphic: fruitChart7, options: ['Kesemua buah lain', 'Tiada buah', 'Epal sahaja', 'Oren sahaja'], answer: 'Kesemua buah lain', explain: 'Pisang (24 biji) adalah yang paling tinggi berbanding semua buah.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Lengkapkan: Beza jualan antara Pisang (24) dan Durian (6) ialah ________ biji.', graphic: fruitChart7, options: ['12', '15', '18', '20'], answer: '18', explain: '24 - 6 = 18 biji.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Lengkapkan: Jumlah jualan Epal (18) dan Anggur (15) ialah ________ biji.', graphic: fruitChart7, answer: '33', explain: '18 + 15 = 33 biji.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'easy', question: 'Lengkapkan: Jualan buah Tembikai ialah ________ biji.', graphic: fruitChart7, options: ['10', '12', '14', '16'], answer: '12', explain: 'Palang Tembikai bernilai 12.' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'medium', question: 'Buah yang dijual TEPAT 9 biji ialah ________.', graphic: fruitChart7, options: ['Mangga', 'Durian', 'Tembikai', 'Anggur'], answer: 'Mangga', explain: 'Palang Mangga menunjukkan nilai 9.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Lengkapkan: Beza jualan Oren (20) dan Mangga (9) ialah ________ biji.', graphic: fruitChart7, answer: '11', explain: '20 - 9 = 11 biji.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Lengkapkan: Dua jenis buah yang jumlah jualannya 30 biji ialah ________.', graphic: fruitChart7, options: ['Epal (18) & Tembikai (12)', 'Pisang (24) & Durian (6)', 'Oren (20) & Mangga (9)', 'Anggur (15) & Mangga (9)'], answer: 'Epal (18) & Tembikai (12)', explain: '18 + 12 = 30 biji.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Lengkapkan ayat: Buah Anggur (15) dijual KURANG daripada buah ________.', graphic: fruitChart7, options: ['Pisang (24), Oren (20) & Epal (18)', 'Durian (6) & Mangga (9)', 'Tembikai (12) sahaja', 'Durian sahaja'], answer: 'Pisang (24), Oren (20) & Epal (18)', explain: 'Pisang (24), Oren (20), dan Epal (18) semuanya lebih daripada Anggur (15).' },
-                { type: 'input', cognitive: 'Memahami', diff: 'easy', question: 'Lengkapkan: Jualan buah Durian ialah ________ biji.', graphic: fruitChart7, answer: '6', explain: 'Durian bernilai 6 biji.' },
-                { type: 'input', cognitive: 'Memahami', diff: 'medium', question: 'Lengkapkan: Jualan buah Anggur ialah ________ biji.', graphic: fruitChart7, answer: '15', explain: 'Anggur bernilai 15 biji.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Lengkapkan: Jumlah jualan Durian (6) dan Mangga (9) ialah ________ biji.', graphic: fruitChart7, options: ['13', '14', '15', '16'], answer: '15', explain: '6 + 9 = 15 biji.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Lengkapkan: Beza jualan Pisang (24) dan Oren (20) ialah ________ biji.', graphic: fruitChart7, options: ['2', '3', '4', '5'], answer: '4', explain: '24 - 20 = 4 biji.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Lengkapkan: Jumlah jualan Tembikai (12), Mangga (9) dan Durian (6) ialah ________ biji.', graphic: fruitChart7, answer: '27', explain: '12 + 9 + 6 = 27 biji.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Pilih penyataan yang TEPAT melengkapkan ayat: "Jualan buah Tembikai (12) adalah ________ daripada Durian (6)."', graphic: fruitChart7, options: ['Dua kali ganda', 'Sama banyak', 'Kurang separuh', 'Tiga kali ganda'], answer: 'Dua kali ganda', explain: '12 ÷ 6 = 2 (dua kali ganda).' },
-                { type: 'mcq', cognitive: 'Memahami', diff: 'easy', question: 'Lengkapkan: Buah kedua paling banyak dijual ialah ________.', graphic: fruitChart7, options: ['Oren', 'Epal', 'Pisang', 'Anggur'], answer: 'Oren', explain: 'Oren (20 biji) berada di tangga kedua selepas Pisang (24 biji).' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Kira JUMLAH KESELURUHAN jualan ketujuh-tujuh jenis buah-buahan tersebut (dalam biji).', graphic: fruitChart7, answer: '104', explain: '18 + 24 + 12 + 9 + 6 + 15 + 20 = 104 biji.' }
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'Which fruit sold the most in the canteen?', graphic: fruitChart7, options: ['Bananas', 'Oranges', 'Apples', 'Watermelons'], answer: 'Bananas', explain: 'Bananas had the highest number of sales, at 24.' },
+                { type: 'mcq', cognitive: 'Recall', diff: 'easy', question: 'Which fruit sold the least?', graphic: fruitChart7, options: ['Mangoes', 'Durians', 'Grapes', 'Watermelons'], answer: 'Durians', explain: 'Durians had the lowest number of sales, at 6.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'easy', question: 'Complete the statement: The canteen sold ________ apples.', graphic: fruitChart7, answer: '18', explain: 'The bar for apples shows 18.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'easy', question: 'Complete the statement: The canteen sold ________ oranges.', graphic: fruitChart7, answer: '20', explain: 'The bar for oranges shows 20.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'medium', question: 'Which option lists all the fruits that sold fewer than bananas?', graphic: fruitChart7, options: ['All other fruits', 'No other fruit', 'Apples only', 'Oranges only'], answer: 'All other fruits', explain: 'Bananas had the highest number of sales, at 24.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'What is the difference between banana sales (24) and durian sales (6)?', graphic: fruitChart7, options: ['12', '15', '18', '20'], answer: '18', explain: '24 − 6 = 18.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'What is the total of apple sales (18) and grape sales (15)?', graphic: fruitChart7, answer: '33', explain: '18 + 15 = 33.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'easy', question: 'Complete the statement: The canteen sold ________ watermelons.', graphic: fruitChart7, options: ['10', '12', '14', '16'], answer: '12', explain: 'The bar for watermelons shows 12.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'medium', question: 'Which fruit sold exactly 9?', graphic: fruitChart7, options: ['Mangoes', 'Durians', 'Watermelons', 'Grapes'], answer: 'Mangoes', explain: 'The bar for mangoes shows 9.' },
+                { type: 'input', cognitive: 'Application', diff: 'hard', question: 'What is the difference between orange sales (20) and mango sales (9)?', graphic: fruitChart7, answer: '11', explain: '20 − 9 = 11.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'The canteen sold 30 apples and watermelons altogether. Which option shows the two counts?', graphic: fruitChart7, options: ['Apples (18) & Watermelons (12)', 'Bananas (24) & mangoes (9)', 'Oranges (20) & Mangoes (9)', 'Grapes (15) & Mangoes (9)'], answer: 'Apples (18) & Watermelons (12)', explain: '18 apples + 12 watermelons = 30 pieces of fruit.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'The canteen sold fewer grapes (15) than which fruits?', graphic: fruitChart7, options: ['Bananas (24), oranges (20) & apples (18)', 'Durians (6) & Mangoes (9)', 'Watermelons (12) only', 'Durians only'], answer: 'Bananas (24), oranges (20) & apples (18)', explain: 'Bananas (24), oranges (20) and apples (18) are all above 15.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'easy', question: 'Complete the statement: The canteen sold ________ durians.', graphic: fruitChart7, answer: '6', explain: 'The bar for durians shows 6.' },
+                { type: 'input', cognitive: 'Understanding', diff: 'medium', question: 'Complete the statement: The canteen sold ________ grapes.', graphic: fruitChart7, answer: '15', explain: 'The bar for grapes shows 15.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'How many durians (6) and mangoes (9) were sold altogether?', graphic: fruitChart7, options: ['13', '14', '15', '16'], answer: '15', explain: '6 + 9 = 15.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'hard', question: 'What is the difference between banana sales (24) and orange sales (20)?', graphic: fruitChart7, options: ['2', '3', '4', '5'], answer: '4', explain: '24 − 20 = 4.' },
+                { type: 'input', cognitive: 'Application', diff: 'hard', question: 'How many watermelons (12), mangoes (9) and durians (6) were sold altogether?', graphic: fruitChart7, answer: '27', explain: '12 + 9 + 6 = 27.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Complete the statement: The canteen sold ________ as many watermelons (12) as durians (6).', graphic: fruitChart7, options: ['Twice', 'Just', 'Half', 'Three times'], answer: 'Twice', explain: '12 ÷ 6 = 2, so it sold twice as many watermelons.' },
+                { type: 'mcq', cognitive: 'Understanding', diff: 'easy', question: 'Which fruit had the second-highest sales?', graphic: fruitChart7, options: ['Oranges', 'Apples', 'Bananas', 'Grapes'], answer: 'Oranges', explain: 'Oranges (20) came second after bananas (24).' },
+                { type: 'input', cognitive: 'Application', diff: 'hard', question: 'How many pieces of fruit were sold across all seven types?', graphic: fruitChart7, answer: '104', explain: '18 + 24 + 12 + 9 + 6 + 15 + 20 = 104.' }
             ],
 
-            // TOPIK 4: Penyelesaian Masalah & KBAT (20 Soalan Unik)
+            // TOPIK 4: Word Problems & KBAT (20 Soalan Unik)
             4: [
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'easy', question: 'Dalam satu tinjauan, 8 murid suka warna Merah dan 6 murid suka Warna Biru. Berapakah jumlah murid?', graphic: { kind: 'text_only', text: 'Merah = 8 | Biru = 6 | Jumlah = ?' }, options: ['12', '13', '14', '15'], answer: '14', explain: 'Jumlah = 8 + 6 = 14 orang murid.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'easy', question: 'Siti kumpul 15 guli, Ali kumpul 9 guli. Berapakah BEZA guli mereka?', graphic: { kind: 'text_only', text: 'Siti = 15 | Ali = 9 | Beza = ?' }, options: ['4', '5', '6', '7'], answer: '6', explain: 'Beza = 15 - 9 = 6 biji guli.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Carta menunjukkan 20 biji kek dijual. Jika Kek Coklat = 12 biji, berapakah bilangan Kek Pandan?', graphic: { kind: 'text_only', text: 'Jumlah Kek = 20 | Coklat = 12 | Pandan = ?' }, answer: '8', explain: 'Kek Pandan = 20 - 12 = 8 biji kek.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Dalam piktograf, 1 simbol 🍎 = 3 biji epal. Jika Abu ada 4 simbol, berapakah jumlah epalnya?', graphic: { kind: 'pictograph_key', icon: '🍎', count: 4, key: 3 }, options: ['7', '10', '12', '15'], answer: '12', explain: '4 × 3 = 12 biji epal.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Kelas 2 Amanah ada 30 orang murid. 14 naik Bas, 10 naik Kereta, baki jalan kaki. Berapakah jalan kaki?', graphic: { kind: 'text_only', text: 'Jumlah = 30 | Bas = 14 | Kereta = 10 | Jalan Kaki = ?' }, options: ['4', '6', '8', '10'], answer: '6', explain: 'Jalan kaki = 30 - 14 - 10 = 6 orang.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'easy', question: 'Dalam jadual gundal, kumpulan gundal menunjukkan 卌 卌 卌. Berapakah jumlahnya?', graphic: { kind: 'tally', count: 15 }, answer: '15', explain: '5 + 5 + 5 = 15.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Di kedai buku, 18 buku cerita dijual pada waktu pagi dan 14 pada waktu petang. Berapakah jumlah buku dijual?', graphic: { kind: 'text_only', text: 'Pagi = 18 | Petang = 14 | Jumlah = ?' }, options: ['30', '31', '32', '34'], answer: '32', explain: '18 + 14 = 32 buah buku.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Adam kumpul 25 setem. Lim kumpul 17 setem. Berapakah beza setem mereka?', graphic: { kind: 'text_only', text: 'Adam = 25 | Lim = 17 | Beza = ?' }, answer: '8', explain: '25 - 17 = 8 setem.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Jadual menunjukkan 35 orang murid memilih sukan. Bola Sepak = 15, Badminton = 12. Berapakah murid memilih Renang?', graphic: { kind: 'text_only', text: 'Jumlah = 35 | Bola Sepak = 15 | Badminton = 12 | Renang = ?' }, options: ['6', '7', '8', '9'], answer: '8', explain: 'Renang = 35 - 15 - 12 = 8 orang murid.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Jika 1 simbol 🎁 = 5 hadiah. Berapakah simbol diperlukan untuk mewakili 20 hadiah?', graphic: { kind: 'pictograph_key', icon: '🎁', count: 4, key: 5 }, options: ['2', '3', '4', '5'], answer: '4', explain: '20 ÷ 5 = 4 simbol.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'easy', question: 'Terdapat 9 mainan di dalam kotak A dan 7 di dalam kotak B. Berapakah jumlah mainan?', graphic: { kind: 'text_only', text: 'Kotak A = 9 | Kotak B = 7 | Jumlah = ?' }, answer: '16', explain: '9 + 7 = 16 mainan.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'easy', question: 'Manakah ayat matematik yang betul untuk mencari BEZA antara 18 dengan 7?', graphic: { kind: 'text_only', text: 'Cari Beza antara 18 dan 7' }, options: ['18 + 7 = 25', '18 - 7 = 11', '18 × 7 = 126', '18 ÷ 7 = 2'], answer: '18 - 7 = 11', explain: 'Kata kunci "Beza" menggunakan operasi tolak (-).' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: 'Sebuah kedai menjual 40 botol jus. Jus Epal = 15, Jus Oren = 15. Berapakah Jus Mangga yang dijual?', graphic: { kind: 'text_only', text: 'Jumlah = 40 | Epal = 15 | Oren = 15 | Mangga = ?' }, options: ['8', '10', '12', '15'], answer: '10', explain: '40 - 15 - 15 = 10 botol.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Kira jumlah gundal murid gemar membaca: 卌 卌 卌 卌.', graphic: { kind: 'tally', count: 20 }, answer: '20', explain: '5 × 4 = 20 orang murid.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Pada hari Isnin, 22 murid hadir perpustakaan. Hari Selasa, 28 murid hadir. Berapakah jumlah kehadiran 2 hari itu?', graphic: { kind: 'text_only', text: 'Isnin = 22 | Selasa = 28 | Jumlah = ?' }, options: ['48', '50', '52', '54'], answer: '50', explain: '22 + 28 = 50 orang murid.' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'hard', question: 'Berapakah beza antara 50 dengan 23?', graphic: { kind: 'text_only', text: '50 - 23 = ?' }, answer: '27', explain: '50 - 23 = 27.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: '1 simbol ⭐️ mewakili 2 markah. Sarah mendapat 16 markah. Berapakah simbol ⭐️ yang diperoleh Sarah?', graphic: { kind: 'pictograph_key', icon: '⭐️', count: 8, key: 2 }, options: ['6', '7', '8', '9'], answer: '8', explain: '16 ÷ 2 = 8 simbol ⭐️.' },
-                { type: 'mcq', cognitive: 'Mengaplikasi', diff: 'easy', question: 'Apakah operasi matematik yang digunakan untuk mencari JUMLAH KESELURUHAN data?', options: ['Tambah (+)', 'Tolak (-)', 'Bahagi (÷)', 'Darab (×)'], answer: 'Tambah (+)', explain: 'Mencari jumlah keseluruhan menggunakan operasi tambah (+).' },
-                { type: 'input', cognitive: 'Mengaplikasi', diff: 'medium', question: 'Pak Cik Leman ada 38 ekor ayam. Dia menjual 15 ekor. Berapakah baki ayamnya?', graphic: { kind: 'text_only', text: 'Mula = 38 | Jual = 15 | Baki = ?' }, answer: '23', explain: '38 - 15 = 23 ekor ayam.' },
-                { type: 'mcq', cognitive: 'Menganalisis', diff: 'hard', question: '20 orang murid mendaftar kelab. Kelab Catur = 8, Kelab Robotik = 7, baki Kelab Seni. Berapakah murid Kelab Seni?', graphic: { kind: 'text_only', text: 'Jumlah = 20 | Catur = 8 | Robotik = 7 | Seni = ?' }, options: ['4', '5', '6', '7'], answer: '5', explain: '20 - 8 - 7 = 5 orang murid.' }
+                { type: 'mcq', cognitive: 'Application', diff: 'easy', question: 'In a survey, 8 pupils choose red and 6 choose blue. Each chooses one colour. How many pupils answered?', graphic: { kind: 'text_only', text: 'Red = 8 | Blue = 6 | Total = ?' }, options: ['12', '13', '14', '15'], answer: '14', explain: '8 + 6 = 14 pupils.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'easy', question: 'Siti collects 15 marbles and Ali collects 9. What is the difference?', graphic: { kind: 'text_only', text: 'Siti = 15 | Ali = 9 | Difference = ?' }, options: ['4', '5', '6', '7'], answer: '6', explain: '15 − 9 = 6 marbles.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'A chart shows that 20 cakes were sold. Of these, 12 were chocolate and the rest were pandan. How many pandan cakes were sold?', graphic: { kind: 'text_only', text: 'Total cakes = 20 | Chocolate = 12 | Pandan = ?' }, answer: '8', explain: '20 − 12 = 8 pandan cakes.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'In a pictograph, each 🍎 represents 3 apples. How many apples do 4 symbols represent?', graphic: { kind: 'pictograph_key', icon: '🍎', count: 4, key: 3 }, options: ['7', '10', '12', '15'], answer: '12', explain: '4 × 3 = 12 apples.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Class 2 Amanah has 30 pupils. Fourteen go to school by bus, ten by car and the rest walk. How many walk?', graphic: { kind: 'text_only', text: 'Total = 30 | Bus = 14 | Car = 10 | Walking = ?' }, options: ['4', '6', '8', '10'], answer: '6', explain: '30 − 14 − 10 = 6 pupils.' },
+                { type: 'input', cognitive: 'Application', diff: 'easy', question: 'A tally chart shows 卌 卌 卌. What is the total?', graphic: { kind: 'tally', count: 15 }, answer: '15', explain: '5 + 5 + 5 = 15.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'A bookshop sells 18 storybooks in the morning and 14 in the afternoon. How many does it sell altogether?', graphic: { kind: 'text_only', text: 'Morning = 18 | Afternoon = 14 | Total = ?' }, options: ['30', '31', '32', '34'], answer: '32', explain: '18 + 14 = 32 books.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'Adam collects 25 stamps and Lim collects 17. What is the difference?', graphic: { kind: 'text_only', text: 'Adam = 25 | Lim = 17 | Difference = ?' }, answer: '8', explain: '25 − 17 = 8 stamps.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Thirty-five pupils each choose one sport. Fifteen choose football, twelve choose badminton and the rest choose swimming. How many choose swimming?', graphic: { kind: 'text_only', text: 'Total = 35 | Football = 15 | Badminton = 12 | Swimming = ?' }, options: ['6', '7', '8', '9'], answer: '8', explain: '35 − 15 − 12 = 8 pupils.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'Each 🎁 represents 5 gifts. How many symbols represent 20 gifts?', graphic: { kind: 'pictograph_key', icon: '🎁', count: 4, key: 5 }, options: ['2', '3', '4', '5'], answer: '4', explain: '20 ÷ 5 = 4 symbols.' },
+                { type: 'input', cognitive: 'Application', diff: 'easy', question: 'Box A contains 9 toys and box B contains 7. How many toys are there altogether?', graphic: { kind: 'text_only', text: 'Box A = 9 | Box B = 7 | Total = ?' }, answer: '16', explain: '9 + 7 = 16 toys.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'easy', question: 'Which number sentence finds the difference between 18 and 7?', graphic: { kind: 'text_only', text: 'Find the difference between 18 and 7' }, options: ['18 + 7 = 25', '18 - 7 = 11', '18 × 7 = 126', '18 ÷ 7 = 2'], answer: '18 - 7 = 11', explain: 'Subtract the smaller number from the greater number to find the difference.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'A shop sells 40 bottles of juice. Fifteen are apple, fifteen are orange and the rest are mango. How many are mango?', graphic: { kind: 'text_only', text: 'Total = 40 | Apples = 15 | Oranges = 15 | Mangoes = ?' }, options: ['8', '10', '12', '15'], answer: '10', explain: '40 − 15 − 15 = 10 bottles.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'The tally of pupils who enjoy reading is 卌 卌 卌 卌. How many pupils does this represent?', graphic: { kind: 'tally', count: 20 }, answer: '20', explain: '5 × 4 = 20 pupils.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'medium', question: 'The library records 22 visits on Monday and 28 on Tuesday. How many visits does it record in total?', graphic: { kind: 'text_only', text: 'Monday = 22 | Tuesday = 28 | Total = ?' }, options: ['48', '50', '52', '54'], answer: '50', explain: '22 + 28 = 50 visits.' },
+                { type: 'input', cognitive: 'Application', diff: 'hard', question: 'What is the difference between 50 and 23?', graphic: { kind: 'text_only', text: '50 - 23 = ?' }, answer: '27', explain: '50 − 23 = 27.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Each ⭐️ represents 2 points. Sarah earns 16 points. How many stars does she get?', graphic: { kind: 'pictograph_key', icon: '⭐️', count: 8, key: 2 }, options: ['6', '7', '8', '9'], answer: '8', explain: '16 ÷ 2 = 8 stars.' },
+                { type: 'mcq', cognitive: 'Application', diff: 'easy', question: 'Which operation do you use to find a total?', options: ['Addition (+)', 'Subtraction (−)', 'Division (÷)', 'Multiplication (×)'], answer: 'Addition (+)', explain: 'Add the values to find the total.' },
+                { type: 'input', cognitive: 'Application', diff: 'medium', question: 'Pak Cik Leman has 38 chickens and sells 15. How many does he have left?', graphic: { kind: 'text_only', text: 'Start = 38 | Sold = 15 | Left = ?' }, answer: '23', explain: '38 − 15 = 23 chickens.' },
+                { type: 'mcq', cognitive: 'Analysis', diff: 'hard', question: 'Twenty pupils each join one club. Eight join Chess Club, seven join Robotics Club and the rest join Art Club. How many join Art Club?', graphic: { kind: 'text_only', text: 'Total = 20 | Chess = 8 | Robotics = 7 | Art = ?' }, options: ['4', '5', '6', '7'], answer: '5', explain: '20 − 8 − 7 = 5 pupils.' }
             ]
         };
 
@@ -414,7 +414,7 @@
         function loginUser() {
             const nameInput = document.getElementById('player-name-input').value.trim();
             if (!nameInput) {
-                alert('Sila masukkan nama anda terlebih dahulu!');
+                alert('Enter your name first.');
                 return;
             }
             currentUser = nameInput;
@@ -514,10 +514,10 @@
             const q = activeQuestions[currentQuestionIdx];
 
             // Badge updates
-            document.getElementById('q-number-badge').innerText = `Soalan ${currentQuestionIdx + 1} / ${activeQuestions.length}`;
-            document.getElementById('score-badge').innerText = `Markah: ${totalScore}`;
-            document.getElementById('cognitive-badge').innerText = `Aras: ${q.cognitive}`;
-            document.getElementById('question-type-badge').innerText = `Jenis: ${q.type === 'mcq' ? 'Objektif' : 'Isi Tempat Kosong'}`;
+            document.getElementById('q-number-badge').innerText = `Question ${currentQuestionIdx + 1} / ${activeQuestions.length}`;
+            document.getElementById('score-badge').innerText = `Score: ${totalScore}`;
+            document.getElementById('cognitive-badge').innerText = `Skill: ${q.cognitive}`;
+            document.getElementById('question-type-badge').innerText = `Format: ${q.type === 'mcq' ? 'Multiple Choice' : 'Fill in the Blank'}`;
 
             // Visual Graphic rendering
             renderVisualGraphic(q.graphic);
@@ -544,8 +544,8 @@
                 const box = document.createElement('div');
                 box.className = 'flex flex-col sm:flex-row gap-3 max-w-md mx-auto';
                 box.innerHTML = `
-                    <input type="text" id="user-text-input" placeholder="Taip jawapan angka di sini..." class="w-full p-3 rounded-xl border-2 border-indigo-300 font-bold text-center text-lg text-indigo-900 focus:outline-none focus:border-indigo-600">
-                    <button onclick="checkInputAnswer()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold px-6 py-3 rounded-xl shadow">Hantar</button>
+                    <input type="text" id="user-text-input" placeholder="Enter your answer…" class="w-full p-3 rounded-xl border-2 border-indigo-300 font-bold text-center text-lg text-indigo-900 focus:outline-none focus:border-indigo-600">
+                    <button onclick="checkInputAnswer()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold px-6 py-3 rounded-xl shadow">Submit</button>
                 `;
                 answerArea.appendChild(box);
             }
@@ -563,7 +563,7 @@
                     }
                 }, 1000);
             } else {
-                document.getElementById('timer-display').innerText = "TIADA HAD";
+                document.getElementById('timer-display').innerText = "NO TIME LIMIT";
             }
         }
 
@@ -619,7 +619,7 @@
                 visualBox.innerHTML = `
                     <div class="text-3xl mb-2">${graphic.icon.repeat(graphic.count)}</div>
                     <div class="bg-yellow-200 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full border border-yellow-400">
-                        Petunjuk: 1 ${graphic.icon} = ${graphic.key} unit
+                        Key: 1 ${graphic.icon} = ${graphic.key} ${graphic.key===1?'unit':'units'}
                     </div>
                 `;
             } else if (graphic.kind === 'text_only') {
@@ -636,15 +636,15 @@
             if (selectedOpt.toString().trim().toLowerCase() === q.answer.toString().trim().toLowerCase()) {
                 // Correct Answer!
                 totalScore += 5;
-                document.getElementById('score-badge').innerText = `Markah: ${totalScore}`;
+                document.getElementById('score-badge').innerText = `Score: ${totalScore}`;
                 if (btnElem) btnElem.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
                 
                 triggerFireworks();
-                showFeedback(true, `Tahniah! Jawapan anda betul! (+5 Markah)<br><span class="text-xs font-normal">${q.explain}</span>`);
+                showFeedback(true, `Well done! Correct answer! (+5 points)<br><span class="text-xs font-normal">${q.explain}</span>`);
             } else {
                 // Wrong Answer!
                 if (btnElem) btnElem.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
-                showFeedback(false, `Jawapan Kurang Tepat! Jawapan betul ialah: <strong class="text-indigo-900">${q.answer}</strong>.<br><span class="text-xs font-normal">${q.explain}</span>`);
+                showFeedback(false, `Try Again! The correct answer is: <strong class="text-indigo-900">${q.answer}</strong>.<br><span class="text-xs font-normal">${q.explain}</span>`);
             }
 
             document.getElementById('next-btn').classList.remove('hidden');
@@ -659,7 +659,7 @@
         function handleTimeout() {
             disableAnswerButtons();
             const q = activeQuestions[currentQuestionIdx];
-            showFeedback(false, `Masa Tamat! Jawapan betul ialah: <strong>${q.answer}</strong>.<br><span class="text-xs font-normal">${q.explain}</span>`);
+            showFeedback(false, `Time’s up! The correct answer is: <strong>${q.answer}</strong>.<br><span class="text-xs font-normal">${q.explain}</span>`);
             document.getElementById('next-btn').classList.remove('hidden');
         }
 
@@ -706,11 +706,11 @@
             document.getElementById('final-score').innerText = `${totalScore} / ${maxScore}`;
             
             const pct = Math.round((totalScore / maxScore) * 100);
-            document.getElementById('accuracy-rate').innerText = `Ketepatan: ${pct}%`;
+            document.getElementById('accuracy-rate').innerText = `Accuracy: ${pct}%`;
 
-            let feedback = "Teruskan Usaha!";
-            if (pct >= 80) feedback = "Cemerlang! Anda seorang pakar Pengurusan Data!";
-            else if (pct >= 50) feedback = "Syabas! Usaha yang baik, boleh tingkatkan lagi!";
+            let feedback = "Keep going!";
+            if (pct >= 80) feedback = "Excellent! You’re a Data Management expert!";
+            else if (pct >= 50) feedback = "Well done! Keep practising to improve your score.";
             document.getElementById('performance-feedback').innerText = feedback;
 
             // Save to Leaderboard
@@ -743,7 +743,7 @@
             if (!container) return;
 
             if (leaderboard.length === 0) {
-                container.innerHTML = `<p class="italic text-gray-400">Belum ada rekod pemain.</p>`;
+                container.innerHTML = `<p class="italic text-gray-400">No player scores yet.</p>`;
                 return;
             }
 
@@ -751,7 +751,7 @@
             leaderboard.slice(0, 3).forEach((item, index) => {
                 html += `<div class="flex justify-between font-semibold">
                     <span>${index + 1}. ${item.name}</span>
-                    <span class="text-emerald-600 font-bold">${item.score} Mata</span>
+                    <span class="text-emerald-600 font-bold">${item.score} Points</span>
                 </div>`;
             });
             container.innerHTML = html;
@@ -763,7 +763,7 @@
             list.innerHTML = '';
 
             if (leaderboard.length === 0) {
-                list.innerHTML = `<p class="text-center text-gray-500 py-4">Tiada rekod disimpan lagi.</p>`;
+                list.innerHTML = `<p class="text-center text-gray-500 py-4">No saved scores yet.</p>`;
             } else {
                 leaderboard.forEach((item, index) => {
                     const row = document.createElement('div');
@@ -773,7 +773,7 @@
                             <span class="w-6 h-6 rounded-full bg-yellow-400 text-indigo-950 flex justify-center items-center text-xs font-black">${index + 1}</span>
                             <span>${item.name}</span>
                         </div>
-                        <span class="text-emerald-600">${item.score} Markah</span>
+                        <span class="text-emerald-600">${item.score} Points</span>
                     `;
                     list.appendChild(row);
                 });

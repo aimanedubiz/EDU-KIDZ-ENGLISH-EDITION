@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATH KIDS – EDU KIDZ: Matematik Tahun 3 (Pengurusan Data)</title>
+    <title>MATH KIDS – EDU KIDZ: Year 3 Mathematics (Data Management)</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -68,19 +68,19 @@
                 </div>
                 <div>
                     <h1 class="font-display font-bold text-xl text-sky-700 leading-tight">MATH KIDS</h1>
-                    <p class="text-xs text-slate-500 font-semibold tracking-wider uppercase">EDU KIDZ • Data Tahun 3</p>
+                    <p class="text-xs text-slate-500 font-semibold tracking-wider uppercase">EDU KIDZ • Year 3 Data Management</p>
                 </div>
             </div>
             
             <div id="header-user-info" class="hidden flex items-center space-x-3">
                 <div class="text-right hidden sm:block">
-                    <p id="user-display-name" class="font-bold text-slate-700 text-sm">Murid Genius</p>
-                    <p id="user-display-level" class="text-xs text-sky-600 font-medium">Bintang: <span id="user-stars">0</span> ⭐</p>
+                    <p id="user-display-name" class="font-bold text-slate-700 text-sm">Pupil</p>
+                    <p id="user-display-level" class="text-xs text-sky-600 font-medium">Stars: <span id="user-stars">0</span> ⭐</p>
                 </div>
                 <div class="w-9 h-9 rounded-full bg-amber-100 border-2 border-amber-400 flex items-center justify-center text-amber-600 font-bold font-display text-sm">
                     👤
                 </div>
-                <button onclick="logoutUser()" class="text-xs text-slate-500 hover:text-red-500 p-1.5 rounded-lg hover:bg-red-50 transition" title="Log Keluar">
+                <button onclick="logoutUser()" class="text-xs text-slate-500 hover:text-red-500 p-1.5 rounded-lg hover:bg-red-50 transition" title="Log Out">
                     <i class="fa-solid fa-right-from-bracket text-base"></i>
                 </button>
             </div>
@@ -97,10 +97,10 @@
                     ✨ Kurikulum KSSR Semakan 2017 KPM
                 </div>
                 <h2 class="font-display font-extrabold text-4xl sm:text-5xl text-slate-800 leading-tight">
-                    Terokai Dunia <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600">Pengurusan Data!</span>
+                    Terokai Dunia <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600">Data Management!</span>
                 </h2>
                 <p class="text-slate-600 text-base sm:text-lg">
-                    Kumpul, baca carta pai, carta palang, piktograf dan selesaikan cabaran Matematik Tahun 3 secara interaktif!
+                    Collect data, read pie charts, bar charts and pictographs, and solve Year 3 maths problems.
                 </p>
             </div>
 
@@ -109,9 +109,9 @@
                 <div class="relative w-64 h-48 bg-white/80 rounded-3xl p-6 shadow-xl border border-sky-100 flex flex-col items-center justify-center text-center backdrop-blur-sm">
                     <div class="text-6xl mb-3 animate-bounce">📈</div>
                     <div class="flex space-x-2">
-                        <span class="px-2.5 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">Carta Pai</span>
-                        <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full font-bold">Piktograf</span>
-                        <span class="px-2.5 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-bold">Jadual</span>
+                        <span class="px-2.5 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">Pie Chart</span>
+                        <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full font-bold">Pictograph</span>
+                        <span class="px-2.5 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-bold">Table</span>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
             <div class="max-w-md mx-auto space-y-3">
                 <button onclick="handleStartBtn()" class="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-display font-bold text-xl rounded-2xl shadow-lg shadow-emerald-200 transition btn-bounce flex items-center justify-center space-x-3">
                     <i class="fa-solid fa-play"></i>
-                    <span>MULA BERMAIN</span>
+                    <span>PLAY NOW</span>
                 </button>
 
                 <div class="grid grid-cols-2 gap-3">
@@ -130,13 +130,13 @@
                     </button>
                     <button onclick="showScreen('screen-register')" class="py-3 px-4 bg-white border-2 border-indigo-200 hover:border-indigo-400 text-indigo-700 font-bold rounded-xl shadow-sm transition flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-user-plus"></i>
-                        <span>DAFTAR</span>
+                        <span>REGISTER</span>
                     </button>
                 </div>
 
                 <button onclick="openLeaderboard()" class="w-full py-3 bg-amber-100 hover:bg-amber-200 text-amber-800 font-bold rounded-xl transition flex items-center justify-center space-x-2">
                     <i class="fa-solid fa-trophy text-amber-500"></i>
-                    <span>PAPAN SKOR (LEADERBOARD)</span>
+                    <span>LEADERBOARD</span>
                 </button>
             </div>
         </section>
@@ -144,66 +144,66 @@
         <!-- ==================== SCREEN 2: LOGIN SCREEN ==================== -->
         <section id="screen-login" class="hidden max-w-md mx-auto w-full bg-white p-8 rounded-3xl shadow-xl border border-sky-100 space-y-6">
             <div class="text-center space-y-1">
-                <h3 class="font-display font-bold text-2xl text-slate-800">Log Masuk Murid</h3>
-                <p class="text-sm text-slate-500">Masukkan nama pengguna dan kata laluan anda</p>
+                <h3 class="font-display font-bold text-2xl text-slate-800">Pupil Login</h3>
+                <p class="text-sm text-slate-500">Enter your username and password</p>
             </div>
 
             <form onsubmit="handleLogin(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Nama Pengguna (Username)</label>
-                    <input type="text" id="login-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-800" placeholder="Contoh: ali123">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Username</label>
+                    <input type="text" id="login-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-800" placeholder="e.g. ali123">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Kata Laluan</label>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Password</label>
                     <input type="password" id="login-password" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-800" placeholder="••••••••">
                 </div>
                 
                 <div id="login-error" class="hidden text-xs text-rose-500 font-bold text-center bg-rose-50 p-2 rounded-lg"></div>
 
                 <button type="submit" class="w-full py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-display font-bold text-lg rounded-xl shadow-md shadow-sky-200 transition btn-bounce">
-                    LOG MASUK
+                    LOG IN
                 </button>
             </form>
 
             <div class="text-center pt-2">
-                <p class="text-xs text-slate-500">Belum ada akaun? <a href="#" onclick="showScreen('screen-register')" class="text-sky-600 font-bold hover:underline">Daftar Akaun Baru</a></p>
+                <p class="text-xs text-slate-500">New pupil? <a href="#" onclick="showScreen('screen-register')" class="text-sky-600 font-bold hover:underline">Create an Account</a></p>
             </div>
         </section>
 
         <!-- ==================== SCREEN 3: REGISTER SCREEN ==================== -->
         <section id="screen-register" class="hidden max-w-md mx-auto w-full bg-white p-8 rounded-3xl shadow-xl border border-sky-100 space-y-6">
             <div class="text-center space-y-1">
-                <h3 class="font-display font-bold text-2xl text-slate-800">Daftar Akaun Baru</h3>
-                <p class="text-sm text-slate-500">Simpan markah dan rekod pencapaian Matematik anda</p>
+                <h3 class="font-display font-bold text-2xl text-slate-800">Create an Account</h3>
+                <p class="text-sm text-slate-500">Save your marks and track your progress</p>
             </div>
 
             <form onsubmit="handleRegister(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Nama Murid</label>
-                    <input type="text" id="reg-fullname" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="Contoh: Ali bin Ahmad">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Pupil's Name</label>
+                    <input type="text" id="reg-fullname" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="e.g. Ali bin Ahmad">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Nama Pengguna (Username)</label>
-                    <input type="text" id="reg-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="Contoh: ali123">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Username</label>
+                    <input type="text" id="reg-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="e.g. ali123">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Kata Laluan</label>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Password</label>
                     <input type="password" id="reg-password" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="••••••••">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Pengesahan Kata Laluan</label>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Confirm Password</label>
                     <input type="password" id="reg-confirm" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="••••••••">
                 </div>
                 
                 <div id="reg-error" class="hidden text-xs text-rose-500 font-bold text-center bg-rose-50 p-2 rounded-lg"></div>
 
                 <button type="submit" class="w-full py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-display font-bold text-lg rounded-xl shadow-md shadow-indigo-200 transition btn-bounce">
-                    DAFTAR SEKARANG
+                    REGISTER NOW
                 </button>
             </form>
 
             <div class="text-center pt-2">
-                <p class="text-xs text-slate-500">Sudah ada akaun? <a href="#" onclick="showScreen('screen-login')" class="text-indigo-600 font-bold hover:underline">Log Masuk Di Sini</a></p>
+                <p class="text-xs text-slate-500">Already registered? <a href="#" onclick="showScreen('screen-login')" class="text-indigo-600 font-bold hover:underline">Log In Here</a></p>
             </div>
         </section>
 
@@ -212,18 +212,18 @@
             <!-- User Welcome Banner -->
             <div class="bg-gradient-to-r from-sky-500 via-indigo-600 to-purple-600 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row justify-between items-center gap-6">
                 <div class="space-y-2 text-center sm:text-left">
-                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold backdrop-blur-md">👋 Sesi Pembelajaran Aktif</span>
-                    <h3 id="dash-welcome-name" class="font-display font-extrabold text-2xl sm:text-3xl">Selamat Datang, Murid!</h3>
-                    <p class="text-sky-100 text-sm max-w-md">Teruskan latihan anda untuk menguasai kemahiran Carta Pai, Carta Palang, dan Piktograf!</p>
+                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold backdrop-blur-md">👋 Learning Session</span>
+                    <h3 id="dash-welcome-name" class="font-display font-extrabold text-2xl sm:text-3xl">Welcome!</h3>
+                    <p class="text-sky-100 text-sm max-w-md">Keep practising with pie charts, bar charts and pictographs.</p>
                 </div>
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl flex items-center space-x-4 text-center">
                     <div>
-                        <p class="text-xs uppercase tracking-wider text-sky-200">Jumlah Skor</p>
+                        <p class="text-xs uppercase tracking-wider text-sky-200">Total Score</p>
                         <p id="dash-total-score" class="font-display text-3xl font-bold text-amber-300">0</p>
                     </div>
                     <div class="h-8 w-px bg-white/20"></div>
                     <div>
-                        <p class="text-xs uppercase tracking-wider text-sky-200">Kategori Dijawab</p>
+                        <p class="text-xs uppercase tracking-wider text-sky-200">Topics Attempted</p>
                         <p id="dash-categories-done" class="font-display text-3xl font-bold text-emerald-300">0/5</p>
                     </div>
                 </div>
@@ -236,11 +236,11 @@
                         📊
                     </div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Mula Latihan</h4>
-                        <p class="text-xs text-slate-500">Pilih kategori dan tahap latihan Matematik.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Start Quiz</h4>
+                        <p class="text-xs text-slate-500">Choose a topic and difficulty level.</p>
                     </div>
                     <span class="text-xs font-bold text-sky-600 flex items-center space-x-1">
-                        <span>Pilih Subtopik</span>
+                        <span>Choose a Topic</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </span>
                 </div>
@@ -250,11 +250,11 @@
                         🏆
                     </div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Papan Skor</h4>
-                        <p class="text-xs text-slate-500">Lihat kedudukan carta dan skor tertinggi.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Leaderboard</h4>
+                        <p class="text-xs text-slate-500">View rankings and high scores.</p>
                     </div>
                     <span class="text-xs font-bold text-amber-600 flex items-center space-x-1">
-                        <span>Lihat Rank</span>
+                        <span>View Rankings</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </span>
                 </div>
@@ -264,11 +264,11 @@
                         📈
                     </div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Rekod Latihan</h4>
-                        <p class="text-xs text-slate-500">Analisis peratusan jawapan betul anda.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Quiz Records</h4>
+                        <p class="text-xs text-slate-500">Review the percentage of answers you got right.</p>
                     </div>
                     <span class="text-xs font-bold text-emerald-600 flex items-center space-x-1">
-                        <span>Semak Prestasi</span>
+                        <span>View Progress</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </span>
                 </div>
@@ -278,11 +278,11 @@
                         🚪
                     </div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Tukar Akaun</h4>
-                        <p class="text-xs text-slate-500">Log keluar atau daftar pemain lain.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Switch Account</h4>
+                        <p class="text-xs text-slate-500">Log out or register another player.</p>
                     </div>
                     <span class="text-xs font-bold text-rose-600 flex items-center space-x-1">
-                        <span>Log Keluar</span>
+                        <span>Log Out</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </span>
                 </div>
@@ -293,11 +293,11 @@
         <section id="screen-category" class="hidden space-y-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <h3 class="font-display font-bold text-2xl text-slate-800">Langkah 1: Pilih Kategori</h3>
-                    <p class="text-xs text-slate-500">Subtopik Pengurusan Data Tahun 3 KSSR</p>
+                    <h3 class="font-display font-bold text-2xl text-slate-800">Step 1: Choose a Topic</h3>
+                    <p class="text-xs text-slate-500">Year 3 KSSR Data Management</p>
                 </div>
                 <button onclick="showScreen('screen-dashboard')" class="text-xs px-3 py-1.5 bg-slate-200 hover:bg-slate-300 rounded-lg font-bold text-slate-700">
-                    <i class="fa-solid fa-arrow-left"></i> Kembali
+                    <i class="fa-solid fa-arrow-left"></i> Back
                 </button>
             </div>
 
@@ -306,8 +306,8 @@
                 <div onclick="selectCategory('A')" class="game-card bg-white p-5 rounded-2xl border-2 border-sky-100 hover:border-sky-500 cursor-pointer flex items-start space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex-shrink-0 flex items-center justify-center font-display font-bold text-xl">A</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Kumpul, Kelas dan Susun Data</h4>
-                        <p class="text-xs text-slate-500 mt-1">Mengelaskan objek, menyusun data ke dalam jadual, menentukan bilangan terbanyak dan tersedikit.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Collecting, Classifying and Organising Data</h4>
+                        <p class="text-xs text-slate-500 mt-1">Classify objects, organise data in tables and find the highest and lowest counts.</p>
                     </div>
                 </div>
 
@@ -315,8 +315,8 @@
                 <div onclick="selectCategory('B')" class="game-card bg-white p-5 rounded-2xl border-2 border-indigo-100 hover:border-indigo-500 cursor-pointer flex items-start space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex-shrink-0 flex items-center justify-center font-display font-bold text-xl">B</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Kenal Carta Pai</h4>
-                        <p class="text-xs text-slate-500 mt-1">Mengenal bahagian/sektor carta pai, membaca maklumat sektor terbesar dan terkecil.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Reading Pie Charts</h4>
+                        <p class="text-xs text-slate-500 mt-1">Read the sectors of a pie chart and identify the largest and smallest.</p>
                     </div>
                 </div>
 
@@ -324,8 +324,8 @@
                 <div onclick="selectCategory('C')" class="game-card bg-white p-5 rounded-2xl border-2 border-purple-100 hover:border-purple-500 cursor-pointer flex items-start space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex-shrink-0 flex items-center justify-center font-display font-bold text-xl">C</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Perkaitan Piktograf, Carta Palang & Pai</h4>
-                        <p class="text-xs text-slate-500 mt-1">Membandingkan maklumat dan mengesahkan kesamaan data antara pelbagai bentuk perwakilan.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Comparing Pictographs, Bar Charts and Pie Charts</h4>
+                        <p class="text-xs text-slate-500 mt-1">Compare information across different data displays.</p>
                     </div>
                 </div>
 
@@ -333,8 +333,8 @@
                 <div onclick="selectCategory('D')" class="game-card bg-white p-5 rounded-2xl border-2 border-emerald-100 hover:border-emerald-500 cursor-pointer flex items-start space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center font-display font-bold text-xl">D</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Lengkapkan Ayat Pernyataan</h4>
-                        <p class="text-xs text-slate-500 mt-1">Melengkapkan ayat penyataan berdasarkan rajah, piktograf, carta palang dan carta pai.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Completing Statements</h4>
+                        <p class="text-xs text-slate-500 mt-1">Complete statements using diagrams, pictographs, bar charts and pie charts.</p>
                     </div>
                 </div>
 
@@ -342,8 +342,8 @@
                 <div onclick="selectCategory('E')" class="game-card bg-white p-5 rounded-2xl border-2 border-amber-100 hover:border-amber-500 cursor-pointer flex items-start space-x-4 md:col-span-2">
                     <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex-shrink-0 flex items-center justify-center font-display font-bold text-xl">E</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">Penyelesaian Masalah (KBAT)</h4>
-                        <p class="text-xs text-slate-500 mt-1">Soalan penyelesaian masalah harian berkaitan data yang diilustrasikan tepat melalui carta palang, piktograf, jadual dan carta pai.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">Problem Solving</h4>
+                        <p class="text-xs text-slate-500 mt-1">Solve problems using bar charts, pictographs, tables and pie charts.</p>
                     </div>
                 </div>
             </div>
@@ -353,31 +353,31 @@
         <section id="screen-difficulty" class="hidden space-y-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <h3 class="font-display font-bold text-2xl text-slate-800">Langkah 2: Pilih Tahap Kesukaran</h3>
-                    <p class="text-xs text-slate-500">Sesuaikan dengan tahap keupayaan kognitif</p>
+                    <h3 class="font-display font-bold text-2xl text-slate-800">Step 2: Choose a Difficulty Level</h3>
+                    <p class="text-xs text-slate-500">Choose the difficulty that suits you</p>
                 </div>
                 <button onclick="showScreen('screen-category')" class="text-xs px-3 py-1.5 bg-slate-200 hover:bg-slate-300 rounded-lg font-bold text-slate-700">
-                    <i class="fa-solid fa-arrow-left"></i> Kembali
+                    <i class="fa-solid fa-arrow-left"></i> Back
                 </button>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div onclick="selectDifficulty('Easy')" class="game-card bg-white p-6 rounded-2xl border-2 border-emerald-200 hover:border-emerald-500 cursor-pointer text-center space-y-3">
                     <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-3xl font-bold">🟢</div>
-                    <h4 class="font-display font-bold text-xl text-slate-800">MUDAH</h4>
-                    <p class="text-xs text-slate-500">Aras Mengingat & Memahami. Data ringkas dan satu langkah pemikiran.</p>
+                    <h4 class="font-display font-bold text-xl text-slate-800">EASY</h4>
+                    <p class="text-xs text-slate-500">Read simple data and solve one-step questions.</p>
                 </div>
 
                 <div onclick="selectDifficulty('Medium')" class="game-card bg-white p-6 rounded-2xl border-2 border-amber-200 hover:border-amber-500 cursor-pointer text-center space-y-3">
                     <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-600 mx-auto flex items-center justify-center text-3xl font-bold">🟡</div>
-                    <h4 class="font-display font-bold text-xl text-slate-800">SEDERHANA</h4>
-                    <p class="text-xs text-slate-500">Aras Memahami & Mengaplikasi. Memerlukan perbandingan dua langkah.</p>
+                    <h4 class="font-display font-bold text-xl text-slate-800">MEDIUM</h4>
+                    <p class="text-xs text-slate-500">Compare data and solve two-step problems.</p>
                 </div>
 
                 <div onclick="selectDifficulty('Hard')" class="game-card bg-white p-6 rounded-2xl border-2 border-rose-200 hover:border-rose-500 cursor-pointer text-center space-y-3">
                     <div class="w-16 h-16 rounded-full bg-rose-100 text-rose-600 mx-auto flex items-center justify-center text-3xl font-bold">🔴</div>
-                    <h4 class="font-display font-bold text-xl text-slate-800">SUKAR</h4>
-                    <p class="text-xs text-slate-500">Aras Mengaplikasi & KBAT Ringan. Gabungan maklumat beberapa perwakilan data.</p>
+                    <h4 class="font-display font-bold text-xl text-slate-800">HARD</h4>
+                    <p class="text-xs text-slate-500">Combine information from different displays.</p>
                 </div>
             </div>
         </section>
@@ -386,11 +386,11 @@
         <section id="screen-mode" class="hidden space-y-6">
             <div class="flex items-center justify-between">
                 <div>
-                    <h3 class="font-display font-bold text-2xl text-slate-800">Langkah 3: Pilih Mod Permainan</h3>
-                    <p class="text-xs text-slate-500">Pilih gaya interaksi jawapan yang disukai</p>
+                    <h3 class="font-display font-bold text-2xl text-slate-800">Step 3: Choose a Game Mode</h3>
+                    <p class="text-xs text-slate-500">Choose how to answer</p>
                 </div>
                 <button onclick="showScreen('screen-difficulty')" class="text-xs px-3 py-1.5 bg-slate-200 hover:bg-slate-300 rounded-lg font-bold text-slate-700">
-                    <i class="fa-solid fa-arrow-left"></i> Kembali
+                    <i class="fa-solid fa-arrow-left"></i> Back
                 </button>
             </div>
 
@@ -398,32 +398,32 @@
                 <div onclick="selectMode('Matching')" class="game-card bg-white p-5 rounded-2xl border-2 border-sky-100 hover:border-sky-500 cursor-pointer flex items-center space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl font-bold">🎯</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">MOD 1: Padanan</h4>
-                        <p class="text-xs text-slate-500">Padankan kategori dengan nilai atau maklumat yang betul.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">MODE 1: Matching</h4>
+                        <p class="text-xs text-slate-500">Match each question to the correct answer.</p>
                     </div>
                 </div>
 
                 <div onclick="selectMode('MCQ')" class="game-card bg-white p-5 rounded-2xl border-2 border-indigo-100 hover:border-indigo-500 cursor-pointer flex items-center space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl font-bold">📝</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">MOD 2: Objektif (MCQ)</h4>
-                        <p class="text-xs text-slate-500">Pilih satu jawapan tepat daripada pilihan A, B, C atau D.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">MODE 2: Multiple Choice</h4>
+                        <p class="text-xs text-slate-500">Choose one answer from A, B, C or D.</p>
                     </div>
                 </div>
 
                 <div onclick="selectMode('DragDrop')" class="game-card bg-white p-5 rounded-2xl border-2 border-purple-100 hover:border-purple-500 cursor-pointer flex items-center space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl font-bold">🖐</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">MOD 3: Drag & Drop</h4>
-                        <p class="text-xs text-slate-500">Seret kad jawapan ke kotak jawapan yang disediakan.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">MODE 3: Drag and Drop</h4>
+                        <p class="text-xs text-slate-500">Drag the answer card into the answer box.</p>
                     </div>
                 </div>
 
                 <div onclick="selectMode('FillBlank')" class="game-card bg-white p-5 rounded-2xl border-2 border-emerald-100 hover:border-emerald-500 cursor-pointer flex items-center space-x-4">
                     <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold">✏️</div>
                     <div>
-                        <h4 class="font-display font-bold text-lg text-slate-800">MOD 4: Isi Tempat Kosong</h4>
-                        <p class="text-xs text-slate-500">Taip atau pilih nilai/jawapan tepat ke dalam petak jawapan.</p>
+                        <h4 class="font-display font-bold text-lg text-slate-800">MODE 4: Fill in the Blank</h4>
+                        <p class="text-xs text-slate-500">Type or select your answer.</p>
                     </div>
                 </div>
             </div>
@@ -432,33 +432,33 @@
         <!-- ==================== SCREEN 8: PILIH MASA ==================== -->
         <section id="screen-timer" class="hidden space-y-6 max-w-lg mx-auto w-full">
             <div class="text-center space-y-1">
-                <h3 class="font-display font-bold text-2xl text-slate-800">Langkah 4: Tetapan Masa</h3>
-                <p class="text-xs text-slate-500">Pilih masa menjawab untuk setiap soalan</p>
+                <h3 class="font-display font-bold text-2xl text-slate-800">Step 4: Choose a Time Limit</h3>
+                <p class="text-xs text-slate-500">Choose the time allowed per question</p>
             </div>
 
             <div class="space-y-3">
                 <button onclick="startGameWithTimer(30)" class="w-full p-4 bg-white hover:bg-sky-50 border-2 border-sky-200 hover:border-sky-500 rounded-2xl transition font-bold text-slate-800 flex items-center justify-between">
                     <div class="flex items-center space-x-3">
                         <span class="text-2xl">⏱️</span>
-                        <span class="text-lg">30 Saat Setiap Soalan</span>
+                        <span class="text-lg">30 Seconds per Question</span>
                     </div>
-                    <span class="px-3 py-1 bg-sky-100 text-sky-700 text-xs rounded-full">Pantas</span>
+                    <span class="px-3 py-1 bg-sky-100 text-sky-700 text-xs rounded-full">Quick Round</span>
                 </button>
 
                 <button onclick="startGameWithTimer(60)" class="w-full p-4 bg-white hover:bg-indigo-50 border-2 border-indigo-200 hover:border-indigo-500 rounded-2xl transition font-bold text-slate-800 flex items-center justify-between">
                     <div class="flex items-center space-x-3">
                         <span class="text-2xl">⏱️</span>
-                        <span class="text-lg">1 Minit Setiap Soalan</span>
+                        <span class="text-lg">1 Minute per Question</span>
                     </div>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">Sederhana</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">Standard Round</span>
                 </button>
 
                 <button onclick="startGameWithTimer(0)" class="w-full p-4 bg-white hover:bg-emerald-50 border-2 border-emerald-200 hover:border-emerald-500 rounded-2xl transition font-bold text-slate-800 flex items-center justify-between">
                     <div class="flex items-center space-x-3">
                         <span class="text-2xl">♾️</span>
-                        <span class="text-lg">Tiada Had Masa</span>
+                        <span class="text-lg">No Time Limit</span>
                     </div>
-                    <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full">Santai</span>
+                    <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full">Untimed Practice</span>
                 </button>
             </div>
         </section>
@@ -469,7 +469,7 @@
             <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between flex-wrap gap-2">
                 <div class="flex items-center space-x-2">
                     <span class="px-3 py-1 bg-sky-100 text-sky-700 rounded-full font-display font-bold text-sm">
-                        Soalan <span id="game-q-index">1</span> / 20
+                        Question <span id="game-q-index">1</span> / 20
                     </span>
                     <span id="game-difficulty-badge" class="px-2.5 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold uppercase">
                         Mudah
@@ -482,7 +482,7 @@
                 </div>
 
                 <div class="flex items-center space-x-2 bg-amber-50 px-3 py-1 rounded-full text-amber-700 font-bold text-sm">
-                    <span>⭐ MARKAH:</span>
+                    <span>⭐ MARKS:</span>
                     <span id="game-score-display" class="font-display text-lg text-amber-600">0</span>
                     <span>/ 100</span>
                 </div>
@@ -499,7 +499,7 @@
                 <div>
                     <span id="q-id-tag" class="text-[10px] uppercase font-bold text-slate-400 block mb-1">ID: DATA-A-M-001</span>
                     <h3 id="q-text" class="font-display font-bold text-xl sm:text-2xl text-slate-800 leading-relaxed">
-                        Soalan akan dipaparkan di sini...
+                        Loading question…
                     </h3>
                 </div>
 
@@ -523,7 +523,7 @@
                         <p id="feedback-explanation" class="text-sm text-slate-700"></p>
                     </div>
                     <button onclick="nextQuestion()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl shadow transition text-sm flex-shrink-0">
-                        Seterusnya <i class="fa-solid fa-arrow-right ml-1"></i>
+                        Next Question <i class="fa-solid fa-arrow-right ml-1"></i>
                     </button>
                 </div>
             </div>
@@ -534,31 +534,31 @@
             <div class="text-5xl animate-bounce">🎉</div>
             
             <div class="space-y-2">
-                <h3 class="font-display font-extrabold text-3xl text-slate-800">TAHNIAH & SYABAS!</h3>
-                <p class="text-slate-500 text-sm">Anda telah melengkapkan modul latihan ini.</p>
+                <h3 class="font-display font-extrabold text-3xl text-slate-800">WELL DONE!</h3>
+                <p class="text-slate-500 text-sm">You have completed the quiz.</p>
             </div>
 
             <!-- Score Display Box -->
             <div class="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 p-6 rounded-2xl space-y-2">
-                <p class="text-xs uppercase tracking-wider text-amber-700 font-bold">Markah Keseluruhan</p>
+                <p class="text-xs uppercase tracking-wider text-amber-700 font-bold">Total Marks</p>
                 <div class="font-display text-5xl font-extrabold text-amber-600">
                     <span id="res-score">0</span> <span class="text-2xl text-amber-400">/ 100</span>
                 </div>
-                <p id="res-badge-text" class="text-xs font-bold text-emerald-600">🌟 Cemerlang! Bintang Emas Matematik!</p>
+                <p id="res-badge-text" class="text-xs font-bold text-emerald-600">🌟 Excellent work!</p>
             </div>
 
             <!-- Breakdown Grid -->
             <div class="grid grid-cols-3 gap-3 text-center text-xs">
                 <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-100">
-                    <p class="text-emerald-600 font-bold">Betul</p>
+                    <p class="text-emerald-600 font-bold">Correct</p>
                     <p id="res-correct" class="font-display font-bold text-xl text-emerald-700">0</p>
                 </div>
                 <div class="bg-rose-50 p-3 rounded-xl border border-rose-100">
-                    <p class="text-rose-600 font-bold">Salah</p>
+                    <p class="text-rose-600 font-bold">Incorrect</p>
                     <p id="res-wrong" class="font-display font-bold text-xl text-rose-700">0</p>
                 </div>
                 <div class="bg-sky-50 p-3 rounded-xl border border-sky-100">
-                    <p class="text-sky-600 font-bold">Masa</p>
+                    <p class="text-sky-600 font-bold">Time</p>
                     <p id="res-time" class="font-display font-bold text-xl text-sky-700">0s</p>
                 </div>
             </div>
@@ -568,7 +568,7 @@
                     🔄 MAIN SEMULA MODUL INI
                 </button>
                 <button onclick="showScreen('screen-dashboard')" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition">
-                    🏠 KEMBALI KE DASHBOARD
+                    🏠 BACK TO DASHBOARD
                 </button>
             </div>
         </section>
@@ -577,18 +577,18 @@
         <section id="screen-leaderboard" class="hidden space-y-6 max-w-2xl mx-auto w-full">
             <div class="flex items-center justify-between">
                 <div>
-                    <h3 class="font-display font-bold text-2xl text-slate-800">🏆 Papan Skor TERTERAS</h3>
-                    <p class="text-xs text-slate-500">Kedudukan markah tertinggi murid MATH KIDS</p>
+                    <h3 class="font-display font-bold text-2xl text-slate-800">🏆 Leaderboard</h3>
+                    <p class="text-xs text-slate-500">Top scores in MATH KIDS</p>
                 </div>
                 <button onclick="showScreen('screen-dashboard')" class="text-xs px-3 py-1.5 bg-slate-200 hover:bg-slate-300 rounded-lg font-bold text-slate-700">
-                    <i class="fa-solid fa-arrow-left"></i> Kembali
+                    <i class="fa-solid fa-arrow-left"></i> Back
                 </button>
             </div>
 
             <div class="bg-white rounded-3xl shadow-lg border border-amber-100 overflow-hidden">
                 <div class="bg-amber-500 text-white px-6 py-4 font-display font-bold flex justify-between items-center text-sm">
-                    <span>NAMA PEMAIN</span>
-                    <span>SKOR TERTINGGI</span>
+                    <span>PLAYER NAME</span>
+                    <span>HIGHEST SCORE</span>
                 </div>
                 <div id="leaderboard-list" class="divide-y divide-slate-100 max-h-96 overflow-y-auto custom-scrollbar">
                     <!-- Dynamic Leaderboard Items -->
@@ -600,7 +600,7 @@
 
     <!-- Footer -->
     <footer class="bg-white/60 border-t border-slate-200 py-3 text-center text-xs text-slate-500">
-        <p>© 2026 🎮 MATH KIDS – EDU KIDZ • Kurikulum KSSR Matematik Tahun 3 (KPM)</p>
+        <p>© 2026 🎮 MATH KIDS – EDU KIDZ • Year 3 Mathematics Curriculum (KSSR, KPM)</p>
     </footer>
 
     <script>
@@ -735,7 +735,7 @@
                 document.getElementById('user-display-name').textContent = currentUser.fullname;
                 document.getElementById('user-stars').textContent = currentUser.totalScore || 0;
                 
-                document.getElementById('dash-welcome-name').textContent = `Selamat Datang, ${currentUser.fullname}!`;
+                document.getElementById('dash-welcome-name').textContent = `Welcome, ${currentUser.fullname}!`;
                 document.getElementById('dash-total-score').textContent = currentUser.totalScore || 0;
                 
                 const catsDone = Object.keys(currentUser.categoryProgress || {}).length;
@@ -785,7 +785,7 @@
                 errEl.classList.add('hidden');
                 showScreen('screen-dashboard');
             } else {
-                errEl.textContent = 'Nama pengguna atau kata laluan tidak betul!';
+                errEl.textContent = 'Incorrect username or password.';
                 errEl.classList.remove('hidden');
             }
         }
@@ -799,14 +799,14 @@
             const errEl = document.getElementById('reg-error');
 
             if (password !== confirm) {
-                errEl.textContent = 'Kata laluan dan pengesahan kata laluan tidak sepadan!';
+                errEl.textContent = 'The passwords do not match.';
                 errEl.classList.remove('hidden');
                 return;
             }
 
             const users = getUsers();
             if (users[username]) {
-                errEl.textContent = 'Nama pengguna telah wujud! Sila guna yang lain.';
+                errEl.textContent = 'That username is taken. Choose another.';
                 errEl.classList.remove('hidden');
                 return;
             }
@@ -864,14 +864,14 @@
             const difficulties = ['Easy', 'Medium', 'Hard'];
 
             const themes = [
-                { items: ['Epal', 'Pisang', 'Oren', 'Anggur'], unit: 'buah', icon: '🍎' },
-                { items: ['Pensel', 'Pemadam', 'Pembaris', 'Buku'], unit: 'batang', icon: '✏️' },
-                { items: ['Kucing', 'Arnab', 'Ikan', 'Burung'], unit: 'ekor', icon: '🐱' },
-                { items: ['Basikal', 'Kereta', 'Motosikal', 'Bas'], unit: 'buah', icon: '🚲' },
-                { items: ['Bola', 'Badminton', 'Renang', 'Lari'], unit: 'orang', icon: '⚽' },
-                { items: ['Hujan', 'Cerah', 'Awan', 'Ribut'], unit: 'hari', icon: '☀️' },
-                { items: ['Merah', 'Biru', 'Kuning', 'Hijau'], unit: 'orang', icon: '🎨' },
-                { items: ['Roti', 'Nasi', 'Mee', 'Pizza'], unit: 'orang', icon: '🍞' }
+                { items: ['Apples', 'Bananas', 'Oranges', 'Grapes'], unit: 'items', icon: '🍎' },
+                { items: ['Pencils', 'Rubbers', 'Rulers', 'Books'], unit: 'items', icon: '✏️' },
+                { items: ['Cats', 'Rabbits', 'Fish', 'Birds'], unit: 'animals', icon: '🐱' },
+                { items: ['Bicycles', 'Cars', 'Motorcycles', 'Buses'], unit: 'items', icon: '🚲' },
+                { items: ['Football', 'Badminton', 'Swimming', 'Running'], unit: 'people', icon: '⚽' },
+                { items: ['Rain', 'Sunny', 'Cloudy', 'Stormy'], unit: 'days', icon: '☀️' },
+                { items: ['Red', 'Blue', 'Yellow', 'Green'], unit: 'people', icon: '🎨' },
+                { items: ['Bread', 'Rice', 'Noodles', 'Pizza'], unit: 'people', icon: '🍞' }
             ];
 
             categories.forEach(cat => {
@@ -887,7 +887,7 @@
 
         function buildUniqueQuestion(cat, diff, idx, theme) {
             const id = `DATA-${cat}-${diff.charAt(0)}-${String(idx).padStart(3, '0')}`;
-            let cognitiveLevel = diff === 'Easy' ? 'Mengingat / Memahami' : (diff === 'Medium' ? 'Memahami / Mengaplikasi' : 'Mengaplikasi / KBAT');
+            let cognitiveLevel = diff === 'Easy' ? 'Remembering / Understanding' : (diff === 'Medium' ? 'Understanding / Applying' : 'Applying / Higher-Order Thinking');
             
             // Values tailored for precise charts (Sum = 20, 24, 30, 40, etc.)
             let baseValues = [];
@@ -926,93 +926,93 @@
             let options = [];
 
             if (cat === 'A') {
-                // Kumpul, Kelas dan Susun Data
+                // Collecting, Classifying and Organising Data
                 diagramType = (idx % 2 === 0) ? 'table' : 'bar';
                 if (idx % 4 === 1) {
-                    questionText = `Berdasarkan data di bawah, apakah item yang mempunyai bilangan PALING BANYAK?`;
+                    questionText = `Which category has the highest count?`;
                     correctAnswer = maxKey;
-                    explanation = `${maxKey} mempunyai bilangan tertinggi iaitu ${maxValue}.`;
+                    explanation = `${maxKey} has the highest count, ${maxValue}.`;
                 } else if (idx % 4 === 2) {
-                    questionText = `Berdasarkan data di bawah, apakah item yang mempunyai bilangan PALING SEDIKIT?`;
+                    questionText = `Which category has the lowest count?`;
                     correctAnswer = minKey;
-                    explanation = `${minKey} mempunyai bilangan terendah iaitu ${minValue}.`;
+                    explanation = `${minKey} has the lowest count, ${minValue}.`;
                 } else if (idx % 4 === 3) {
-                    questionText = `Berapakah JUMLAH keseluruhan bagi semua kategori data ini?`;
+                    questionText = `What is the total count across all categories?`;
                     correctAnswer = `${total}`;
-                    explanation = `Jumlah keseluruhan = ${v[0]} + ${v[1]} + ${v[2]} + ${v[3]} = ${total}.`;
+                    explanation = `Add all four counts: ${v.join(' + ')} = ${total}.`;
                 } else {
                     const diffVal = maxValue - minValue;
-                    questionText = `Berapakah BEZA antara ${maxKey} dan ${minKey}?`;
+                    questionText = `What is the difference between the counts for ${maxKey} and ${minKey}?`;
                     correctAnswer = `${diffVal}`;
-                    explanation = `Beza = ${maxValue} - ${minValue} = ${diffVal}.`;
+                    explanation = `Subtract the smaller count from the larger: ${maxValue} − ${minValue} = ${diffVal}.`;
                 }
             } else if (cat === 'B') {
-                // Kenal Carta Pai
+                // Reading Pie Charts
                 diagramType = 'pie';
                 if (idx % 4 === 1) {
-                    questionText = `Dalam carta pai di bawah, sektor/bahagian manakah yang TERBESAR?`;
+                    questionText = `Which category has the largest sector in the pie chart?`;
                     correctAnswer = maxKey;
                     const maxPct = Math.round((maxValue / total) * 100);
-                    explanation = `Sektor terbesar mewakili nilai tertinggi iaitu ${maxKey} dengan ${maxValue} unit (${maxPct}%).`;
+                    explanation = `The largest sector is ${maxKey}. It represents ${maxValue}, or about ${maxPct}% of the total.`;
                 } else if (idx % 4 === 2) {
-                    questionText = `Berdasarkan carta pai, sektor manakah yang TERKECIL?`;
+                    questionText = `Which category has the smallest sector in the pie chart?`;
                     correctAnswer = minKey;
                     const minPct = Math.round((minValue / total) * 100);
-                    explanation = `Sektor terkecil mewakili nilai terendah iaitu ${minKey} dengan ${minValue} unit (${minPct}%).`;
+                    explanation = `The smallest sector is ${minKey}. It represents ${minValue}, or about ${minPct}% of the total.`;
                 } else if (idx % 4 === 3) {
-                    questionText = `Berapakah nilai atau bilangan bagi sektor berlabel "${items[1]}" dalam carta pai?`;
+                    questionText = `What count does the sector labelled “${items[1]}” represent?`;
                     correctAnswer = `${v[1]}`;
                     const p1 = Math.round((v[1] / total) * 100);
-                    explanation = `Carta pai menunjukkan sektor ${items[1]} bernilai ${v[1]} unit (${p1}%).`;
+                    explanation = `The sector for ${items[1]} represents ${v[1]}, or about ${p1}% of the total.`;
                 } else {
                     const halfVal = total / 2;
                     let halfKey = items.find((it, k) => v[k] === halfVal);
                     if (halfKey) {
-                        questionText = `Sektor manakah yang mewakili TEPAT SEPARUH (50%) daripada keseluruhan carta pai?`;
+                        questionText = `Which sector represents exactly half (50%) of the total?`;
                         correctAnswer = halfKey;
-                        explanation = `${halfKey} bernilai ${halfVal} iaitu separuh (50%) daripada jumlah keseluruhan ${total}.`;
+                        explanation = `${halfKey} has a count of ${halfVal}, exactly half of ${total}.`;
                     } else {
-                        questionText = `Berapakah JUMLAH KESELURUHAN nilai dalam carta pai ini?`;
+                        questionText = `What is the total count represented by the pie chart?`;
                         correctAnswer = `${total}`;
-                        explanation = `Jumlah keseluruhan carta pai = ${v.join(' + ')} = ${total}.`;
+                        explanation = `Add the counts represented by the sectors: ${v.join(' + ')} = ${total}.`;
                     }
                 }
             } else if (cat === 'C') {
-                // Perkaitan Piktograf, Carta Palang & Carta Pai
+                // Perkaitan Pictograph, Bar Chart & Pie Chart
                 diagramType = (idx % 2 === 0) ? 'pictograph' : 'pie';
-                questionText = `Perhatikan perwakilan data di bawah. Kategori manakah yang mewakili nilai ${maxValue}?`;
+                questionText = `Which category has a count of ${maxValue}?`;
                 correctAnswer = maxKey;
-                explanation = `Berdasarkan petunjuk piktograf/carta, ${maxKey} mempunyai nilai ${maxValue}.`;
+                explanation = `The chart shows a count of ${maxValue} for ${maxKey}.`;
             } else if (cat === 'D') {
-                // Lengkapkan Ayat Pernyataan
+                // Completing Statements
                 diagramType = (idx % 3 === 0) ? 'table' : ((idx % 3 === 1) ? 'bar' : 'pictograph');
                 
                 const statementSubTypes = idx % 5;
                 if (statementSubTypes === 0) {
-                    questionText = `Lengkapkan ayat penyataan: Bilangan ${items[0]} adalah _______ berbanding ${items[1]}.`;
-                    correctAnswer = v[0] > v[1] ? "lebih banyak" : "kurang";
-                    explanation = `Bilangan ${items[0]} ialah ${v[0]} manakala ${items[1]} ialah ${v[1]}. Oleh itu, ${items[0]} adalah ${correctAnswer}.`;
+                    questionText = `Complete the statement: The count for ${items[0]} is _______ the count for ${items[1]}.`;
+                    correctAnswer = v[0] > v[1] ? "greater than" : "less than";
+                    explanation = `The counts are ${v[0]} and ${v[1]}, respectively. The first count is ${correctAnswer} the second.`;
                 } else if (statementSubTypes === 1) {
-                    questionText = `Lengkapkan ayat penyataan: Jumlah bilangan bagi ${items[2]} dan ${items[3]} ialah _______.`;
+                    questionText = `Complete the statement: The total count for ${items[2]} and ${items[3]} is _______.`;
                     const sumTwo = v[2] + v[3];
                     correctAnswer = `${sumTwo}`;
-                    explanation = `Jumlah ${items[2]} (${v[2]}) + ${items[3]} (${v[3]}) = ${sumTwo}.`;
+                    explanation = `Add the two counts: ${v[2]} + ${v[3]} = ${sumTwo}.`;
                 } else if (statementSubTypes === 2) {
-                    questionText = `Lengkapkan ayat penyataan: Item yang mempunyai bilangan PALING SEDIKIT ialah _______.`;
+                    questionText = `Complete the statement: The category with the lowest count is _______.`;
                     correctAnswer = minKey;
-                    explanation = `Item dengan bilangan paling sedikit di dalam data ialah ${minKey} (${minValue}).`;
+                    explanation = `${minKey} has the lowest count, ${minValue}.`;
                 } else if (statementSubTypes === 3) {
-                    questionText = `Lengkapkan ayat penyataan: Item yang mencatatkan bilangan TERBANYAK ialah _______.`;
+                    questionText = `Complete the statement: The category with the highest count is _______.`;
                     correctAnswer = maxKey;
-                    explanation = `Item yang mencatatkan bilangan terbanyak di dalam data ialah ${maxKey} (${maxValue}).`;
+                    explanation = `${maxKey} has the highest count, ${maxValue}.`;
                 } else {
-                    questionText = `Lengkapkan ayat penyataan: Beza bilangan antara ${items[0]} dengan ${items[1]} ialah _______.`;
+                    questionText = `Complete the statement: The difference between the counts for ${items[0]} and ${items[1]} is _______.`;
                     const diffAB = Math.abs(v[0] - v[1]);
                     correctAnswer = `${diffAB}`;
-                    explanation = `Beza antara ${items[0]} (${v[0]}) dan ${items[1]} (${v[1]}) ialah ${diffAB}.`;
+                    explanation = `Subtract the smaller count from the larger to get ${diffAB}.`;
                 }
             } else {
-                // Penyelesaian Masalah (KBAT) - Refined to ensure the diagram explicitly visualizes the exact wording and data
+                // Problem Solving - Refined to ensure the diagram explicitly visualizes the exact wording and data
                 const pType = idx % 5;
                 
                 if (pType === 0) {
@@ -1020,61 +1020,60 @@
                     diagramType = 'bar';
                     dataObj = { [items[0]]: v[0], [items[1]]: v[1] };
 
-                    questionText = `Rajah carta palang menunjukkan bilangan ${items[0]} dan ${items[1]} yang dibeli oleh Ibu. Hitung jumlah keseluruhan ${items[0]} dan ${items[1]} tersebut.`;
+                    questionText = `The bar chart shows the counts for ${items[0]} and ${items[1]}. How many are there altogether?`;
                     const combined = v[0] + v[1];
                     correctAnswer = `${combined}`;
-                    explanation = `Jumlahkan ${items[0]} (${v[0]}) dan ${items[1]} (${v[1]}) = ${combined}.`;
+                    explanation = `Add the two counts: ${v[0]} + ${v[1]} = ${combined}.`;
                 } else if (pType === 1) {
                     // Difference word problem: visualized as a Table comparing items[2] and items[3]
                     diagramType = 'table';
                     dataObj = { [items[2]]: v[2], [items[3]]: v[3] };
                     
-                    questionText = `Jadual merekodkan bilangan peserta bagi Kumpulan ${items[2]} dan Kumpulan ${items[3]}. Berapakah beza bilangan ahli antara kedua-dua kumpulan itu?`;
+                    questionText = `The table shows the counts for ${items[2]} and ${items[3]}. What is the difference between the two counts?`;
                     const diffVal = Math.abs(v[2] - v[3]);
                     correctAnswer = `${diffVal}`;
-                    explanation = `Beza = ${v[2]} - ${v[3]} = ${diffVal}.`;
+                    explanation = `Subtract the smaller count from the larger: ${Math.max(v[2],v[3])} − ${Math.min(v[2],v[3])} = ${diffVal}.`;
                 } else if (pType === 2) {
                     // Remainder word problem: visualized as a Pie Chart representing total and categories
                     diagramType = 'pie';
-                    questionText = `Carta pai menunjukkan taburan ${total} item pameran. Jika ${v[0]} daripadanya ialah ${items[0]} dan bakunya ialah ${items[1]}, berapakah bilangan ${items[1]}?`;
+                    questionText = `The pie chart shows a total count of ${total} across two categories. The count for ${items[0]} is ${v[0]}. What is the count for ${items[1]}?`;
                     const remaining = total - v[0];
+                    dataObj = { [items[0]]: v[0], [items[1]]: remaining };
                     correctAnswer = `${remaining}`;
-                    explanation = `Baki = ${total} - ${v[0]} = ${remaining}.`;
+                    explanation = `Subtract the first count from the total: ${total} − ${v[0]} = ${remaining}.`;
                 } else if (pType === 3) {
                     // Multiplication / multiple groups: visualized via Pictograph
                     diagramType = 'pictograph';
                     dataObj = { [items[1]]: v[1] };
                     
-                    questionText = `Piktograf menunjukkan bilangan ${items[1]} dalam sebuah bakul. Jika terdapat 2 buah bakul dengan bilangan yang sama, berapakah jumlah keseluruhan ${items[1]}?`;
+                    questionText = `The pictograph shows the count for ${items[1]} in one survey. A second survey records the same count. What is the total across the two surveys?`;
                     const doubled = v[1] * 2;
                     correctAnswer = `${doubled}`;
-                    explanation = `Jumlah kad/objek untuk 2 bakul = ${v[1]} × 2 = ${doubled}.`;
+                    explanation = `Two equal counts give ${v[1]} × 2 = ${doubled}.`;
                 } else {
                     // Division / sharing: visualized via Table
                     diagramType = 'table';
-                    dataObj = { 'Jumlah Guli': total };
+                    dataObj = { 'Total Marbles': total };
                     
-                    questionText = `Jadual mencatatkan sejumlah ${total} biji guli yang dikongsi sama rata di antara 2 buah balang. Berapakah bilangan guli di dalam setiap balang?`;
-                    const shared = Math.round(total / 2);
+                    questionText = `The table gives the total number of marbles. If they are shared equally between two jars, how many marbles go into each jar?`;
+                    const shared = total / 2;
                     correctAnswer = `${shared}`;
-                    explanation = `Bahagi sama rata: ${total} ÷ 2 = ${shared}.`;
+                    explanation = `Divide the total equally between two jars: ${total} ÷ 2 = ${shared}.`;
                 }
             }
 
             // Options setup for MCQ & Fill In with precise alignment to correctAnswer
             const statementSubTypes = idx % 5;
             if (cat === 'D' && statementSubTypes === 0) {
-                options = ["lebih banyak", "kurang", "sama banyak", "sifar"];
+                options = ["greater than", "less than", "equal to", "zero"];
             } else if (cat === 'D' && (statementSubTypes === 2 || statementSubTypes === 3)) {
-                options = [...items]; // item names like Epal, Pisang, etc.
+                options = [...items]; // item names like Apples, Bananas, etc.
             } else if (cat === 'E') {
                 const cNum = parseInt(correctAnswer) || 12;
                 options = [`${cNum}`, `${cNum + 3}`, `${cNum > 2 ? cNum - 2 : cNum + 4}`, `${cNum + 5}`];
-            } else if (['lebih banyak', 'kurang', maxKey, minKey].includes(correctAnswer) || isNaN(correctAnswer)) {
+            } else if (isNaN(correctAnswer)) {
                 options = [...items];
                 if (!options.includes(correctAnswer)) options[0] = correctAnswer;
-                if (!options.includes('lebih banyak')) options[1] = 'lebih banyak';
-                if (!options.includes('kurang')) options[2] = 'kurang';
             } else {
                 const cNum = parseInt(correctAnswer) || 10;
                 options = [`${cNum}`, `${cNum + 2}`, `${cNum - 1 > 0 ? cNum - 1 : cNum + 4}`, `${cNum + 5}`];
@@ -1130,11 +1129,11 @@
             // Update Top Bar Stats
             document.getElementById('game-q-index').textContent = currentQuestionIndex + 1;
             document.getElementById('game-score-display').textContent = currentScore;
-            document.getElementById('q-id-tag').textContent = `ID: ${q.id} • Mod: ${selectedMode}`;
+            document.getElementById('q-id-tag').textContent = `ID: ${q.id} • Mode: ${{ MCQ: "Multiple Choice", Matching: "Matching", DragDrop: "Drag and Drop", FillBlank: "Fill in the Blank" }[selectedMode] || "Fill in the Blank"}`;
             document.getElementById('q-text').textContent = q.questionText;
 
             const diffBadge = document.getElementById('game-difficulty-badge');
-            diffBadge.textContent = q.difficulty === 'Easy' ? 'Mudah' : (q.difficulty === 'Medium' ? 'Sederhana' : 'Sukar');
+            diffBadge.textContent = q.difficulty;
 
             // Update Progress Bar
             const prog = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
@@ -1172,7 +1171,7 @@
         function createBarChartSVG(data) {
             const keys = Object.keys(data);
             const vals = Object.values(data);
-            const maxVal = Math.max(...vals, 10);
+            const maxVal = Math.ceil(Math.max(...vals, 10) / 4) * 4;
 
             let svg = `<svg viewBox="0 0 400 200" class="w-full max-w-md h-auto">`;
             // Axes
@@ -1188,9 +1187,10 @@
             }
 
             // Bars
-            const barWidth = keys.length <= 2 ? 60 : 45;
+            const slotWidth = 320 / keys.length;
+            const barWidth = Math.min(60, slotWidth * 0.55);
             keys.forEach((key, idx) => {
-                const xPos = 80 + (idx * 110);
+                const xPos = 50 + slotWidth * (idx + 0.5) - barWidth / 2;
                 const barHeight = (vals[idx] / maxVal) * 120;
                 const yPos = 160 - barHeight;
                 const barColor = getColorForKey(key, idx);
@@ -1246,7 +1246,7 @@
 
             // Legend with matching color badges and percentages
             svg += `<div class="bg-white p-3.5 rounded-2xl border border-slate-200 shadow-sm space-y-2 min-w-[200px]">`;
-            svg += `<div class="text-xs font-bold text-slate-400 uppercase tracking-wider pb-1 border-b border-slate-100 flex justify-between"><span>Kategori</span><span>Nilai (%)</span></div>`;
+            svg += `<div class="text-xs font-bold text-slate-400 uppercase tracking-wider pb-1 border-b border-slate-100 flex justify-between"><span>Topic</span><span>Count (%)</span></div>`;
             
             keys.forEach((key, idx) => {
                 const pct = Math.round((vals[idx] / total) * 100);
@@ -1261,7 +1261,7 @@
             });
 
             svg += `<div class="pt-1.5 border-t border-slate-100 flex justify-between text-xs font-extrabold text-sky-700">
-                <span>Jumlah Keseluruhan:</span>
+                <span>Total:</span>
                 <span>${total}</span>
             </div>`;
             svg += `</div></div>`;
@@ -1271,23 +1271,23 @@
 
         function createPictographSVG(data) {
             const keys = Object.keys(data);
-            const keyScale = 2; // Petunjuk: ⭐ = 2 unit
+            const keyScale = 1;
 
             let html = `<div class="w-full max-w-md space-y-2">`;
             html += `<div class="bg-white p-3 rounded-xl border border-slate-200 divide-y divide-slate-100">`;
             
             keys.forEach(key => {
-                const count = Math.max(1, Math.round(data[key] / keyScale));
-                const stars = '⭐'.repeat(count);
+                const count = data[key] / keyScale;
+                const stars = Array(count).fill('⭐').join(' ');
                 html += `<div class="py-2 flex items-center justify-between text-sm">
                     <span class="font-bold text-slate-700">${key}</span>
-                    <span class="text-lg tracking-widest">${stars} (${data[key]})</span>
+                    <span class="text-right text-base leading-relaxed max-w-[70%]">${stars} (${data[key]})</span>
                 </div>`;
             });
 
             html += `</div>`;
             html += `<div class="text-center text-xs font-bold text-sky-700 bg-sky-100 py-1.5 px-3 rounded-lg">
-                Petunjuk: ⭐ mewakili ${keyScale} unit
+                Key: ⭐ represents one unit
             </div></div>`;
 
             return html;
@@ -1298,7 +1298,7 @@
             let html = `<div class="overflow-hidden rounded-xl border border-slate-200 w-full max-w-sm">`;
             html += `<table class="w-full text-left text-sm">`;
             html += `<thead class="bg-sky-600 text-white font-display">
-                <tr><th class="p-3">Maklumat / Kategori</th><th class="p-3 text-right">Bilangan</th></tr>
+                <tr><th class="p-3">Category</th><th class="p-3 text-right">Count</th></tr>
             </thead><tbody class="divide-y divide-slate-100 bg-white">`;
 
             keys.forEach(key => {
@@ -1329,7 +1329,7 @@
                 container.innerHTML = html;
             } else if (selectedMode === 'Matching') {
                 let html = `<div class="text-center space-y-3">
-                    <p class="text-xs text-slate-500 font-semibold">Klik jawapan yang paling tepat memadankan soalan:</p>
+                    <p class="text-xs text-slate-500 font-semibold">Choose the answer that matches the question.</p>
                     <div class="flex flex-wrap justify-center gap-3">`;
                 q.options.forEach(opt => {
                     html += `<button onclick="submitAnswer('${opt}')" class="px-5 py-3 rounded-2xl bg-indigo-50 border-2 border-indigo-200 hover:border-indigo-500 hover:bg-indigo-100 font-bold text-indigo-900 transition">
@@ -1341,7 +1341,7 @@
             } else if (selectedMode === 'DragDrop') {
                 let html = `<div class="space-y-4">
                     <div id="drop-target" class="drop-zone rounded-2xl flex items-center justify-center p-4 bg-slate-50 font-bold text-slate-400">
-                        Seret (Drag) Kad Jawapan Ke Sini
+                        Drag the Answer Card Here
                     </div>
                     <div class="flex flex-wrap justify-center gap-3">`;
                 q.options.forEach((opt, idx) => {
@@ -1369,7 +1369,7 @@
             } else {
                 // Fill in the blank
                 let html = `<div class="max-w-md mx-auto space-y-3 text-center">
-                    <input type="text" id="blank-input" placeholder="Taip jawapan anda di sini..." class="w-full text-center py-3.5 px-4 rounded-xl border-2 border-slate-300 focus:border-sky-500 focus:outline-none font-bold text-lg text-slate-800">
+                    <input type="text" id="blank-input" placeholder="Type your answer here…" class="w-full text-center py-3.5 px-4 rounded-xl border-2 border-slate-300 focus:border-sky-500 focus:outline-none font-bold text-lg text-slate-800">
                     <div class="flex justify-center gap-2 flex-wrap">`;
                 q.options.forEach(opt => {
                     html += `<button onclick="document.getElementById('blank-input').value='${opt}'" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg text-slate-600">
@@ -1378,7 +1378,7 @@
                 });
                 html += `</div>
                     <button onclick="submitAnswer(document.getElementById('blank-input').value)" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-display font-bold rounded-xl shadow transition">
-                        HANTAR JAWAPAN
+                        SUBMIT ANSWER
                     </button>
                 </div>`;
                 container.innerHTML = html;
@@ -1422,6 +1422,8 @@
         // Answer Validation Engine
         function submitAnswer(userAns) {
             clearInterval(timerInterval);
+            const feedbackModal = document.getElementById('feedback-modal');
+            if (!feedbackModal.classList.contains('hidden')) return;
             const q = currentQuestions[currentQuestionIndex];
             
             const cleanUser = String(userAns).trim().toLowerCase();
@@ -1429,7 +1431,6 @@
 
             const isCorrect = cleanUser === cleanCorrect;
 
-            const feedbackModal = document.getElementById('feedback-modal');
             const feedbackIcon = document.getElementById('feedback-icon');
             const feedbackTitle = document.getElementById('feedback-title');
             const feedbackExp = document.getElementById('feedback-explanation');
@@ -1446,16 +1447,16 @@
 
                 feedbackModal.className = "p-4 rounded-2xl border shadow-lg bg-emerald-50 border-emerald-200 text-emerald-900";
                 feedbackIcon.textContent = "🎉";
-                feedbackTitle.textContent = "BETUL! (+5 MARKAH)";
-                feedbackExp.textContent = `Hebat! ${q.explanation}`;
+                feedbackTitle.textContent = "CORRECT! (+5 MARKS)";
+                feedbackExp.textContent = `Well done! ${q.explanation}`;
             } else {
                 playSound('wrong');
                 wrongCount++;
 
                 feedbackModal.className = "p-4 rounded-2xl border shadow-lg bg-rose-50 border-rose-200 text-rose-900";
                 feedbackIcon.textContent = "❌";
-                feedbackTitle.textContent = userAns === "__TIMEOUT__" ? "MASA TAMAT!" : "BELUM BETUL";
-                feedbackExp.textContent = `Jawapan yang betul ialah: "${q.correctAnswer}". ${q.explanation}`;
+                feedbackTitle.textContent = userAns === "__TIMEOUT__" ? "TIME’S UP!" : "INCORRECT";
+                feedbackExp.textContent = `The correct answer is: "${q.correctAnswer}". ${q.explanation}`;
             }
 
             feedbackModal.classList.remove('hidden');
@@ -1479,11 +1480,11 @@
             // Badge evaluation
             const badgeEl = document.getElementById('res-badge-text');
             if (currentScore >= 80) {
-                badgeEl.textContent = "🌟 Cemerlang! Bintang Emas Matematik!";
+                badgeEl.textContent = "🌟 Excellent work!";
             } else if (currentScore >= 50) {
-                badgeEl.textContent = "👍 Syabas! Teruskan Usaha!";
+                badgeEl.textContent = "👍 Well done. Keep practising!";
             } else {
-                badgeEl.textContent = "💪 Jangan Putus Asa! Cuba Lagi!";
+                badgeEl.textContent = "💪 Keep practising. Try another round!";
             }
 
             // Save User Record
@@ -1520,7 +1521,7 @@
             const userArr = Object.values(users);
 
             if (userArr.length === 0) {
-                list.innerHTML = `<div class="p-6 text-center text-xs text-slate-400 font-semibold">Belum ada rekod pemain. Sila mendaftar dan main dahulu!</div>`;
+                list.innerHTML = `<div class="p-6 text-center text-xs text-slate-400 font-semibold">There are no player records yet. Register and play to add a score.</div>`;
                 return;
             }
 
@@ -1544,7 +1545,7 @@
 
         function showProgressModal() {
             if (!currentUser) {
-                showCustomToast('Sila log masuk dahulu untuk melihat rekod latihan anda.');
+                showCustomToast('Log in to view your quiz records.');
                 return;
             }
             showScreen('screen-dashboard');

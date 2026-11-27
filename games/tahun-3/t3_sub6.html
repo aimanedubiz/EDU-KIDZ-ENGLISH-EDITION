@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids Bernama Edu Kidz - Matematik Tahun 3</title>
+    <title>Math Kids Bernama Edu Kidz - Year 3 Mathematics</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter & Poppins -->
@@ -61,7 +61,7 @@
                 </div>
                 <div>
                     <h1 class="font-extrabold text-lg sm:text-xl tracking-wide">Bernama Edu Kidz</h1>
-                    <p class="text-xs text-blue-200 font-medium">Matematik Tahun 3: Panjang, Jisim & Isipadu</p>
+                    <p class="text-xs text-blue-200 font-medium">Year 3 Mathematics: Length, Mass and Volume of Liquid</p>
                 </div>
             </div>
             
@@ -79,7 +79,7 @@
     <footer class="bg-slate-800 text-slate-300 py-6 mt-auto border-t border-slate-700">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <p class="font-semibold text-sm sm:text-base text-white">Math Kids Bernama Edu Kidz &copy; 2026</p>
-            <p class="text-xs text-slate-400 mt-1">Silibus Kementerian Pendidikan Malaysia (KPM) - Kurikulum Standard Sekolah Rendah (KSSR) Tahun 3</p>
+            <p class="text-xs text-slate-400 mt-1">Malaysia’s Ministry of Education • Year 3 Primary School Standard Curriculum (KSSR)</p>
         </div>
     </footer>
 
@@ -93,20 +93,22 @@
         // --- DATA STRUCTURE & COMPREHENSIVE QUESTION BANK (660 UNIQUE QUESTIONS GENERATOR) ---
         
         const categoriesData = [
-            { id: 1, name: "Tukar Unit Panjang", icon: "fa-ruler", color: "bg-blue-500", desc: "Meter (m) kepada Sentimeter (cm) dan sebaliknya." },
-            { id: 2, name: "Tambah & Tolak Panjang", icon: "fa-ruler-combined", color: "bg-indigo-500", desc: "Operasi tambah dan tolak unit panjang m dan cm." },
-            { id: 3, name: "Darab & Bahagi Panjang", icon: "fa-scissors", color: "bg-violet-500", desc: "Pendaraban dan pembahagian ukuran panjang." },
-            { id: 4, name: "Tukar Unit Jisim", icon: "fa-weight-scale", color: "bg-amber-500", desc: "Kilogram (kg) kepada Gram (g) dan sebaliknya." },
-            { id: 5, name: "Tambah & Tolak Jisim", icon: "fa-scale-balanced", color: "bg-orange-500", desc: "Operasi tambah dan tolak jisim objek." },
-            { id: 6, name: "Darab & Bahagi Jisim", icon: "fa-boxes-packing", color: "bg-red-500", desc: "Pendaraban dan pembahagian jisim barangan." },
-            { id: 7, name: "Tukar Unit Isipadu Cecair", icon: "fa-bottle-droplet", color: "bg-teal-500", desc: "Liter (l) kepada Mililiter (ml) dan sebaliknya." },
-            { id: 8, name: "Tambah & Tolak Isipadu", icon: "fa-jug-detergent", color: "bg-cyan-500", desc: "Operasi tambah dan tolak isipadu cecair." },
-            { id: 9, name: "Darab & Bahagi Isipadu", icon: "fa-glass-water", color: "bg-sky-500", desc: "Pendaraban dan pembahagian isipadu cecair." },
-            { id: 10, name: "Ayat Matematik Gambar", icon: "fa-image", color: "bg-emerald-500", desc: "Lengkapkan ayat matematik berdasarkan rajah." },
-            { id: 11, name: "Penyelesaian Masalah", icon: "fa-brain", color: "bg-purple-500", desc: "Soalan situasi harian dan rutin kehidupan." }
+            { id: 1, name: "Converting Units of Length", icon: "fa-ruler", color: "bg-blue-500", desc: "Convert between metres (m) and centimetres (cm)." },
+            { id: 2, name: "Adding and Subtracting Lengths", icon: "fa-ruler-combined", color: "bg-indigo-500", desc: "Add and subtract lengths in metres and centimetres." },
+            { id: 3, name: "Multiplying and Dividing Lengths", icon: "fa-scissors", color: "bg-violet-500", desc: "Multiply and divide lengths." },
+            { id: 4, name: "Converting Units of Mass", icon: "fa-weight-scale", color: "bg-amber-500", desc: "Convert between kilograms (kg) and grams (g)." },
+            { id: 5, name: "Adding and Subtracting Masses", icon: "fa-scale-balanced", color: "bg-orange-500", desc: "Add and subtract the masses of objects." },
+            { id: 6, name: "Multiplying and Dividing Masses", icon: "fa-boxes-packing", color: "bg-red-500", desc: "Multiply and divide masses." },
+            { id: 7, name: "Converting Units of Volume of Liquid", icon: "fa-bottle-droplet", color: "bg-teal-500", desc: "Convert between litres (l) and millilitres (ml)." },
+            { id: 8, name: "Adding and Subtracting Volumes", icon: "fa-jug-detergent", color: "bg-cyan-500", desc: "Add and subtract volumes of liquid." },
+            { id: 9, name: "Multiplying and Dividing Volumes", icon: "fa-glass-water", color: "bg-sky-500", desc: "Multiply and divide volumes of liquid." },
+            { id: 10, name: "Number Sentences from Pictures", icon: "fa-image", color: "bg-emerald-500", desc: "Complete number sentences using the diagrams." },
+            { id: 11, name: "Problem Solving", icon: "fa-brain", color: "bg-purple-500", desc: "Solve problems about everyday situations." }
         ];
 
         // Question Bank Storage generator guaranteeing exactly 20 unique questions per level
+        const levelLabels = { Senang: "Easy", Sederhana: "Medium", Susah: "Hard" };
+
         class QuestionBankGenerator {
             static generateAll() {
                 const bank = {};
@@ -131,33 +133,31 @@
 
             static createSpecificQuestion(catId, level, index, qId) {
                 let qText = "", options = [], answer = "";
-                let num1 = index * (level === 'Senang' ? 1 : level === 'Sederhana' ? 3 : 7);
-                if (num1 <= 0) num1 = 2;
 
                 switch(catId) {
-                    case 1: // Tukar Unit Panjang
+                    case 1: // Converting Units of Length
                         if (level === 'Senang') {
                             const m = index;
-                            qText = `${m} m bersamaan dengan berapa sentimeter?`;
+                            qText = `How many centimetres are there in ${m} m?`;
                             answer = `${m * 100} cm`;
                             options = [`${m * 100} cm`, `${m * 10 + 50} cm`, `${m * 100 + 10} cm`, `${m} cm`];
                         } else if (level === 'Sederhana') {
                             const cm = index * 100 + 50;
-                            qText = `${cm} cm bersamaan dengan berapa meter dan sentimeter?`;
+                            qText = `Express ${cm} cm in metres and centimetres.`;
                             const mPart = Math.floor(cm / 100);
                             const cmPart = cm % 100;
                             answer = `${mPart} m ${cmPart} cm`;
                             options = [`${mPart} m ${cmPart} cm`, `${mPart + 1} m ${cmPart} cm`, `${mPart} m ${cmPart + 20} cm`, `${mPart - 1} m ${cmPart} cm`];
                         } else {
                             const m = index + 4;
-                            const cm = index * 25;
-                            qText = `Tukarkan ${m} m ${cm} cm kepada sentimeter (cm).`;
+                            const cm = 5 + index * 4;
+                            qText = `Convert ${m} m ${cm} cm to centimetres (cm).`;
                             const total = m * 100 + cm;
                             answer = `${total} cm`;
                             options = [`${total} cm`, `${total + 50} cm`, `${total - 25} cm`, `${total + 100} cm`];
                         }
                         break;
-                    case 2: // Tambah & Tolak Panjang
+                    case 2: // Adding and Subtracting Lengths
                         if (level === 'Senang') {
                             const a = index * 10;
                             const b = index * 5;
@@ -180,9 +180,9 @@
                             options = [`${totalCm} cm`, `${totalCm + 10} cm`, `${totalCm - 5} cm`, `${totalCm + 100} cm`];
                         }
                         break;
-                    case 3: // Darab & Bahagi Panjang
+                    case 3: // Multiplying and Dividing Lengths
                         if (level === 'Senang') {
-                            qText = `Panjang seutas reben ialah ${index * 10} cm. Berapakah jumlah panjang 2 utas reben yang sama?`;
+                            qText = `A ribbon is ${index * 10} cm long. What is the total length of 2 ribbons of the same length?`;
                             const ans = index * 20;
                             answer = `${ans} cm`;
                             options = [`${ans} cm`, `${ans + 10} cm`, `${ans - 5} cm`, `${ans + 20} cm`];
@@ -196,35 +196,35 @@
                             options = [`${resM} m ${resCm} cm`, `${resM + 1} m ${resCm} cm`, `${resM} m ${resCm + 10} cm`, `${resM - 1} m ${resCm} cm`];
                         } else {
                             const cm = index * 100 + 200;
-                            qText = `${cm} cm bahagi dengan 4 = ______ cm`;
+                            qText = `${cm} cm ÷ 4 = ______ cm`;
                             const ans = cm / 4;
                             answer = `${ans} cm`;
                             options = [`${ans} cm`, `${ans + 10} cm`, `${ans - 10} cm`, `${ans + 25} cm`];
                         }
                         break;
-                    case 4: // Tukar Unit Jisim
+                    case 4: // Converting Units of Mass
                         if (level === 'Senang') {
                             const kg = index;
-                            qText = `${kg} kg bersamaan dengan berapa gram?`;
+                            qText = `How many grams are there in ${kg} kg?`;
                             answer = `${kg * 1000} g`;
                             options = [`${kg * 1000} g`, `${kg * 100} g`, `${kg * 1000 + 500} g`, `${kg} g`];
                         } else if (level === 'Sederhana') {
                             const g = index * 250 + 1000;
-                            qText = `Tukarkan ${g} g kepada kilogram dan gram.`;
+                            qText = `Convert ${g} g to kilograms and grams.`;
                             const kgPart = Math.floor(g / 1000);
                             const gPart = g % 1000;
                             answer = `${kgPart} kg ${gPart} g`;
-                            options = [`${kgPart} kg ${gPart} g`, `${kgPart + 1} kg ${gPart} g`, `${kgPart} kg ${gPart + 100} g`, `${kgPart} kg ${gPart - 50} g`];
+                            options = [`${kgPart} kg ${gPart} g`, `${kgPart + 1} kg ${gPart} g`, `${kgPart} kg ${gPart + 100} g`, `${kgPart} kg ${gPart + 200} g`];
                         } else {
                             const kg = index + 1;
-                            const g = index * 125;
-                            qText = `Berapakah jumlah dalam gram bagi ${kg} kg ${g} g?`;
+                            const g = index * 45;
+                            qText = `Express ${kg} kg ${g} g in grams.`;
                             const total = kg * 1000 + g;
                             answer = `${total} g`;
                             options = [`${total} g`, `${total + 100} g`, `${total - 50} g`, `${total + 250} g`];
                         }
                         break;
-                    case 5: // Tambah & Tolak Jisim (Refined Susah Level with High Variety)
+                    case 5: // Adding and Subtracting Masses (Refined Susah Level with High Variety)
                         if (level === 'Senang') {
                             const a = index * 100;
                             const b = index * 50;
@@ -240,43 +240,43 @@
                             answer = `${tKg} kg ${tG} g`;
                             options = [`${tKg} kg ${tG} g`, `${tKg + 1} kg ${tG} g`, `${tKg} kg ${tG - 100} g`, `${tKg} kg ${tG + 200} g`];
                         } else {
-                            // Refined & Diverse Difficult Questions for Category 5 (Tambah & Tolak Jisim)
+                            // Refined & Diverse Difficult Questions for Category 5 (Adding and Subtracting Masses)
                             const diffTypes = [
                                 {
-                                    q: `Kira nilai berikut dalam gram (g):\n6 kg 450 g + 3 kg 820 g - 2 kg 100 g = ______ g`,
+                                    q: `Work out in grams (g):\n6 kg 450 g + 3 kg 820 g − 2 kg 100 g = ______ g`,
                                     ans: (6 * 1000 + 450) + (3 * 1000 + 820) - (2 * 1000 + 100),
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Sebuah kontena memuatkan 12 kg 350 g beras. Pekerja menambah 4 beg beras yang masing-masing jisimnya 1 kg 500 g. Berapakah jumlah jisim beras sekarang dalam gram?`,
+                                    q: `A container holds 12 kg 350 g of rice. Workers add 4 bags of rice, each with a mass of 1 kg 500 g. What is the total mass of rice in grams?`,
                                     ans: (12 * 1000 + 350) + 4 * (1 * 1000 + 500),
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Selesaikan dalam kg dan g:\n15 kg 200 g - 4 kg 750 g + 3 kg 400 g = ______ kg ______ g`,
+                                    q: `Work out in kg and g:\n15 kg 200 g − 4 kg 750 g + 3 kg 400 g = ______ kg ______ g`,
                                     ansTotal: (15 * 1000 + 200) - (4 * 1000 + 750) + (3 * 1000 + 400)
                                 },
                                 {
-                                    q: `Ibu membeli 3 paket tepung. Paket A jisimnya 850 g, Paket B jisimnya 1 kg 200 g, dan Paket C jisimnya 2 kg 450 g. Hitung jumlah jisim ketiga-tiga paket tepung dalam gram.`,
+                                    q: `Mum buys 3 packets of flour. Packet A has a mass of 850 g, packet B has a mass of 1 kg 200 g and packet C has a mass of 2 kg 450 g. Find the total mass in grams.`,
                                     ans: 850 + (1 * 1000 + 200) + (2 * 1000 + 450),
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Sebuah lori kecil membawa muatan durian seberat 25 kg. Selepas dihantar ke gerai pertama, muatannya berkurang sebanyak 7 kg 650 g. Berapakah baki jisim durian dalam kilogram dan gram?`,
+                                    q: `A lorry carries 25 kg of durians. It delivers 7 kg 650 g to a stall. What mass of durians is left, in kilograms and grams?`,
                                     ansTotal: (25 * 1000) - (7 * 1000 + 650)
                                 },
                                 {
-                                    q: `Kira hasil tambah berikut dalam gram:\n4 kg 90 g + 7 kg 500 g + 2 kg 85 g = ______ g`,
+                                    q: `Find the total in grams:\n4 kg 90 g + 7 kg 500 g + 2 kg 85 g = ______ g`,
                                     ans: (4 * 1000 + 90) + (7 * 1000 + 500) + (2 * 1000 + 85),
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Sebuah kotak berisi mangga mempunyai jisim 10 kg. Jisim kotak kosong ialah 1 kg 250 g. Berapakah jisim mangga sahaja dalam gram?`,
+                                    q: `A box of mangoes has a mass of 10 kg. The empty box has a mass of 1 kg 250 g. What is the mass of the mangoes alone, in grams?`,
                                     ans: (10 * 1000) - (1 * 1000 + 250),
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Kamil mempunyai beban 18 kg 400 g. Dia mengurangkan beban itu sebanyak 9 kg 880 g. Berapakah baki beban dalam gram?`,
+                                    q: `Kamil carries a load with a mass of 18 kg 400 g. He removes 9 kg 880 g. What is the mass of the remaining load in grams?`,
                                     ans: (18 * 1000 + 400) - (9 * 1000 + 880),
                                     unit: 'g'
                                 }
@@ -308,56 +308,56 @@
                             }
                         }
                         break;
-                    case 6: // Darab & Bahagi Jisim
+                    case 6: // Multiplying and Dividing Masses
                         if (level === 'Senang') {
                             const g = index * 100;
-                            qText = `Jisim sebuku roti ialah ${g} g. Berapakah jisim 3 buku roti yang sama?`;
+                            qText = `A loaf of bread has a mass of ${g} g. What is the total mass of 3 loaves of the same mass?`;
                             const ans = g * 3;
                             answer = `${ans} g`;
                             options = [`${ans} g`, `${ans + 50} g`, `${ans - 100} g`, `${ans + 200} g`];
                         } else if (level === 'Sederhana') {
-                            qText = `2 kg 200 g × 4 = ______ kg ______ g`;
-                            const totalG = (2200) * 4;
+                            qText = `${index + 1} kg 200 g × 4 = ______ kg ______ g`;
+                            const totalG = ((index + 1) * 1000 + 200) * 4;
                             const rKg = Math.floor(totalG / 1000);
                             const rG = totalG % 1000;
                             answer = `${rKg} kg ${rG} g`;
                             options = [`${rKg} kg ${rG} g`, `${rKg + 1} kg ${rG} g`, `${rKg} kg ${rG + 100} g`, `${rKg - 1} kg ${rG} g`];
                         } else {
-                            // Refined & Diverse Difficult Questions for Category 6 (Darab & Bahagi Jisim)
+                            // Refined & Diverse Difficult Questions for Category 6 (Multiplying and Dividing Masses)
                             const diffTypes = [
                                 {
-                                    q: `Selesaikan dalam kilogram dan gram:\n(5 kg 400 g × 3) ÷ 2 = ______ kg ______ g`,
+                                    q: `Work out in kilograms and grams:\n(5 kg 400 g × 3) ÷ 2 = ______ kg ______ g`,
                                     ansTotal: ((5 * 1000 + 400) * 3) / 2
                                 },
                                 {
-                                    q: `Sebuah kilang menghasilkan 8 paket biskut yang sama jisimnya. Jumlah jisim semua paket ialah 6 kg 400 g. Berapakah jisim bagi 3 paket biskut dalam gram?`,
+                                    q: `A factory makes 8 packets of biscuits with the same mass. Together they have a mass of 6 kg 400 g. What is the mass of 3 packets in grams?`,
                                     ans: (6400 / 8) * 3,
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Kira nilai berikut dalam gram:\n12 kg 600 g ÷ 4 + 2 kg 350 g × 2 = ______ g`,
+                                    q: `Work out in grams:\n12 kg 600 g ÷ 4 + 2 kg 350 g × 2 = ______ g`,
                                     ans: (12600 / 4) + ((2 * 1000 + 350) * 2),
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Ibu membeli 5 biji kek yang setiap satunya mempunyai jisim 1 kg 800 g. Jika ibu membahagikan sama banyak kepada 3 buah keluarga, berapakah jisim kek yang diterima oleh setiap keluarga dalam gram?`,
+                                    q: `Mum buys 5 cakes, each with a mass of 1 kg 800 g. She shares them equally among 3 families. What mass of cake does each family receive, in grams?`,
                                     ans: (5 * (1 * 1000 + 800)) / 3,
                                     unit: 'g'
                                 },
                                 {
-                                    q: `Sebuah kontena memuatkan 4 kotak barang. Jisim setiap kotak ialah 3 kg 750 g. Hitung jumlah jisim dalam kilogram dan gram.`,
+                                    q: `A container holds 4 boxes of goods. Each box has a mass of 3 kg 750 g. Find the total mass in kilograms and grams.`,
                                     ansTotal: (3 * 1000 + 750) * 4
                                 },
                                 {
-                                    q: `Kira hasil darab dan bahagi berikut dalam kg dan g:\n9 kg 120 g ÷ 3 × 2 = ______ kg ______ g`,
+                                    q: `Work out in kg and g:\n9 kg 120 g ÷ 3 × 2 = ______ kg ______ g`,
                                     ansTotal: (9120 / 3) * 2
                                 },
                                 {
-                                    q: `Pak Cik Ali menuai kelapa sawit dan membungkusnya kepada 6 beg sama berat. Jumlah keseluruhan jisim ialah 24 kg 600 g. Berapakah jisim bagi 4 beg kelapa sawit tersebut dalam kilogram dan gram?`,
+                                    q: `Mr Ali packs oil palm fruit into 6 bags of equal mass. The bags have a total mass of 24 kg 600 g. What is the mass of 4 bags, in kilograms and grams?`,
                                     ansTotal: (24600 / 6) * 4
                                 },
                                 {
-                                    q: `Sebuah lori kecil mengangkut 6 tong gas. Setiap tong gas mempunyai jisim 14 kg 500 g. Hitung jumlah jisim semua tong gas dalam gram.`,
+                                    q: `A lorry carries 6 gas cylinders. Each has a mass of 14 kg 500 g. Find the total mass in grams.`,
                                     ans: (14 * 1000 + 500) * 6,
                                     unit: 'g'
                                 }
@@ -389,29 +389,29 @@
                             }
                         }
                         break;
-                    case 7: // Tukar Unit Isipadu Cecair
+                    case 7: // Converting Units of Volume of Liquid
                         if (level === 'Senang') {
                             const l = index;
-                            qText = `${l} liter (l) bersamaan dengan berapa mililiter (ml)?`;
+                            qText = `How many millilitres are there in ${l} l?`;
                             answer = `${l * 1000} ml`;
                             options = [`${l * 1000} ml`, `${l * 100} ml`, `${l * 1000 + 250} ml`, `${l} ml`];
                         } else if (level === 'Sederhana') {
                             const ml = index * 250 + 1000;
-                            qText = `Tukarkan ${ml} ml kepada liter dan mililiter.`;
+                            qText = `Convert ${ml} ml to litres and millilitres.`;
                             const lPart = Math.floor(ml / 1000);
                             const mlPart = ml % 1000;
                             answer = `${lPart} l ${mlPart} ml`;
-                            options = [`${lPart} l ${mlPart} ml`, `${lPart + 1} l ${mlPart} ml`, `${lPart} l ${mlPart + 100} ml`, `${lPart} l ${mlPart - 50} ml`];
+                            options = [`${lPart} l ${mlPart} ml`, `${lPart + 1} l ${mlPart} ml`, `${lPart} l ${mlPart + 100} ml`, `${lPart} l ${mlPart + 200} ml`];
                         } else {
                             const l = index + 1;
-                            const ml = index * 150;
-                            qText = `Tukarkan ${l} l ${ml} ml kepada mililiter (ml).`;
+                            const ml = index * 45;
+                            qText = `Convert ${l} l ${ml} ml to millilitres (ml).`;
                             const total = l * 1000 + ml;
                             answer = `${total} ml`;
                             options = [`${total} ml`, `${total + 50} ml`, `${total - 100} ml`, `${total + 200} ml`];
                         }
                         break;
-                    case 8: // Tambah & Tolak Isipadu
+                    case 8: // Adding and Subtracting Volumes
                         if (level === 'Senang') {
                             const a = index * 100;
                             const b = index * 50;
@@ -427,42 +427,42 @@
                             answer = `${tL} l ${tMl} ml`;
                             options = [`${tL} l ${tMl} ml`, `${tL + 1} l ${tMl} ml`, `${tL} l ${tMl - 100} ml`, `${tL} l ${tMl + 200} ml`];
                         } else {
-                            // Refined & Diverse Difficult Questions for Category 8 (Tambah & Tolak Isipadu)
+                            // Refined & Diverse Difficult Questions for Category 8 (Adding and Subtracting Volumes)
                             const diffTypes = [
                                 {
-                                    q: `Kira nilai berikut dalam mililiter (ml):\n5 l 350 ml + 2 l 820 ml - 1 l 500 ml = ______ ml`,
+                                    q: `Work out in millilitres (ml):\n5 l 350 ml + 2 l 820 ml − 1 l 500 ml = ______ ml`,
                                     ans: (5 * 1000 + 350) + (2 * 1000 + 820) - (1 * 1000 + 500),
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Sebuah tong besar mengandungi 15 l air. Puan Suri menuang keluar 3 l 450 ml air ke dalam baldi dan menambah 2 l 120 ml air oren. Berapakah isipadu cecair sekarang dalam liter dan mililiter?`,
+                                    q: `A large container holds 15 l of water. Mrs Suri pours out 3 l 450 ml and adds 2 l 120 ml of orange juice. What is the volume of liquid now, in litres and millilitres?`,
                                     ansTotal: (15 * 1000) - (3 * 1000 + 450) + (2 * 1000 + 120)
                                 },
                                 {
-                                    q: `Selesaikan dalam l dan ml:\n8 l 100 ml - 2 l 650 ml + 4 l 300 ml = ______ l ______ ml`,
+                                    q: `Work out in l and ml:\n8 l 100 ml − 2 l 650 ml + 4 l 300 ml = ______ l ______ ml`,
                                     ansTotal: (8 * 1000 + 100) - (2 * 1000 + 650) + (4 * 1000 + 300)
                                 },
                                 {
-                                    q: `Sebuah bekas mengandungi 3 botol jus. Botol A ada 1 l 250 ml, Botol B ada 950 ml, dan Botol C ada 2 l 100 ml. Hitung jumlah isipadu jus dalam mililiter.`,
+                                    q: `Three bottles contain 1 l 250 ml, 950 ml and 2 l 100 ml of juice. Find the total volume of juice in millilitres.`,
                                     ans: (1 * 1000 + 250) + 950 + (2 * 1000 + 100),
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Restoran Maju menyediakan 20 l air teh o. Sepanjang hari, pelanggan meminum 13 l 750 ml. Berapakah baki air teh o dalam liter dan mililiter?`,
+                                    q: `Maju Restaurant prepares 20 l of tea. Customers drink 13 l 750 ml. What volume of tea is left, in litres and millilitres?`,
                                     ansTotal: (20 * 1000) - (13 * 1000 + 750)
                                 },
                                 {
-                                    q: `Kira hasil tambah berikut dalam mililiter:\n3 l 80 ml + 6 l 450 ml + 1 l 900 ml = ______ ml`,
+                                    q: `Find the total in millilitres:\n3 l 80 ml + 6 l 450 ml + 1 l 900 ml = ______ ml`,
                                     ans: (3 * 1000 + 80) + (6 * 1000 + 450) + (1 * 1000 + 900),
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Sebuah tangki air mempunyai muatan 12 l. Jika 4 l 850 ml air telah digunakan untuk menyiram pokok bunga, berapakah baki air dalam tangki tersebut dalam mililiter?`,
+                                    q: `A tank contains 12 l of water. A gardener uses 4 l 850 ml to water some flowers. What volume of water remains, in millilitres?`,
                                     ans: (12 * 1000) - (4 * 1000 + 850),
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Amin mempunyai 10 l air mineral. Dia mengisi 4 botol kecil yang setiap satunya memuatkan 1 l 200 ml. Berapakah baki air mineral Amin dalam liter dan mililiter?`,
+                                    q: `Amin has 10 l of mineral water. He fills 4 bottles that hold 1 l 200 ml each. What volume of water does he have left, in litres and millilitres?`,
                                     ansTotal: (10 * 1000) - (4 * (1 * 1000 + 200))
                                 }
                             ];
@@ -493,57 +493,57 @@
                             }
                         }
                         break;
-                    case 9: // Darab & Bahagi Isipadu
+                    case 9: // Multiplying and Dividing Volumes
                         if (level === 'Senang') {
                             const ml = index * 100;
-                            qText = `Sebuah botol mengandungi ${ml} ml jus. Berapakah jumlah jus dalam 3 botol yang sama?`;
+                            qText = `A bottle holds ${ml} ml of juice. What volume do 3 identical bottles hold altogether?`;
                             const ans = ml * 3;
                             answer = `${ans} ml`;
                             options = [`${ans} ml`, `${ans + 50} ml`, `${ans - 50} ml`, `${ans + 100} ml`];
                         } else if (level === 'Sederhana') {
-                            qText = `1 l 500 ml × 3 = ______ l ______ ml`;
-                            const totalMl = 1500 * 3;
+                            qText = `${index} l 500 ml × 3 = ______ l ______ ml`;
+                            const totalMl = (index * 1000 + 500) * 3;
                             const rL = Math.floor(totalMl / 1000);
                             const rMl = totalMl % 1000;
                             answer = `${rL} l ${rMl} ml`;
                             options = [`${rL} l ${rMl} ml`, `${rL + 1} l ${rMl} ml`, `${rL} l ${rMl + 100} ml`, `${rL - 1} l ${rMl} ml`];
                         } else {
-                            // Refined & Diverse Difficult Questions for Category 9 (Darab & Bahagi Isipadu)
+                            // Refined & Diverse Difficult Questions for Category 9 (Multiplying and Dividing Volumes)
                             const diffTypes = [
                                 {
-                                    q: `Selesaikan dalam liter dan mililiter:\n(3 l 200 ml × 4) ÷ 2 = ______ l ______ ml`,
+                                    q: `Work out in litres and millilitres:\n(3 l 200 ml × 4) ÷ 2 = ______ l ______ ml`,
                                     ansTotal: ((3 * 1000 + 200) * 4) / 2
                                 },
                                 {
-                                    q: `Sebuah kilang mengeluarkan 6 botol air mineral yang sama isipadu. Jumlah isipadu semua botol ialah 9 l 600 ml. Berapakah isipadu bagi 4 botol air mineral tersebut dalam mililiter?`,
+                                    q: `Six identical bottles contain a total of 9 l 600 ml of mineral water. What volume of water do 4 bottles contain, in millilitres?`,
                                     ans: (9600 / 6) * 4,
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Kira nilai berikut dalam mililiter:\n14 l 800 ml ÷ 4 + 1 l 500 ml × 3 = ______ ml`,
+                                    q: `Work out in millilitres:\n14 l 800 ml ÷ 4 + 1 l 500 ml × 3 = ______ ml`,
                                     ans: (14800 / 4) + ((1 * 1000 + 500) * 3),
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Puan Aminah menyediakan 4 jag air oren yang setiap satunya mengandungi 2 l 250 ml. Jika air itu diagihkan sama banyak ke dalam 5 bekas besar, berapakah isipadu air dalam setiap bekas besar dalam mililiter?`,
+                                    q: `Mrs Aminah prepares 4 jugs of orange juice, each containing 2 l 250 ml. She shares the juice equally among 5 containers. How much does each container hold, in millilitres?`,
                                     ans: (4 * (2 * 1000 + 250)) / 5,
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Sebuah tong besar mengandungi 18 l air. Air itu dibahagikan sama rata ke dalam 8 buah baldi kecil. Berapakah isipadu air di dalam 3 buah baldi kecil dalam liter dan mililiter?`,
+                                    q: `A large container holds 18 l of water. The water is shared equally among 8 buckets. What volume of water is there in 3 buckets, in litres and millilitres?`,
                                     ansTotal: (18000 / 8) * 3
                                 },
                                 {
-                                    q: `Kira hasil darab dan bahagi berikut dalam l dan ml:\n10 l 500 ml ÷ 5 × 4 = ______ l ______ ml`,
+                                    q: `Work out in l and ml:\n10 l 500 ml ÷ 5 × 4 = ______ l ______ ml`,
                                     ansTotal: (10500 / 5) * 4
                                 },
                                 {
-                                    q: `Sebuah kolam renang mainan kanak-kanak diisi dengan air menggunakan hos sebanyak 5 baldi. Setiap baldi memuatkan 4 l 200 ml. Berapakah jumlah isipadu air di dalam kolam dalam mililiter?`,
+                                    q: `Five buckets of water are poured into a paddling pool. Each bucket holds 4 l 200 ml. Find the total volume of water in millilitres.`,
                                     ans: (4 * 1000 + 200) * 5,
                                     unit: 'ml'
                                 },
                                 {
-                                    q: `Pak Abu mengisi 6 botol besar dengan cecair pencuci. Jumlah keseluruhan cecair ialah 15 l 600 ml. Berapakah isipadu bagi 2 botol pencuci tersebut dalam liter dan mililiter?`,
+                                    q: `Mr Abu shares 15 l 600 ml of cleaning liquid equally among 6 large bottles. How much liquid is in 2 bottles, in litres and millilitres?`,
                                     ansTotal: (15600 / 6) * 2
                                 }
                             ];
@@ -574,62 +574,65 @@
                             }
                         }
                         break;
-                    case 10: // Ayat Matematik Gambar
+                    case 10: // Number Sentences from Pictures
                         if (level === 'Senang') {
                             const val = index * 100;
-                            qText = `[Rajah: 2 botol air masing-masing ${val} ml]\nLengkapkan ayat matematik: ${val} ml + ${val} ml = ______ ml`;
+                            qText = `[Diagram: 2 bottles of water, each containing ${val} ml]\nComplete the number sentence: ${val} ml + ${val} ml = ______ ml`;
                             const ans = val * 2;
                             answer = `${ans} ml`;
                             options = [`${ans} ml`, `${ans + 50} ml`, `${ans - 50} ml`, `${ans + 100} ml`];
                         } else if (level === 'Sederhana') {
                             const val = index * 200;
-                            qText = `[Rajah: Bekas berisi ${val * 3} ml air dikeluarkan ${val} ml]\nLengkapkan ayat matematik: ${val * 3} ml - ${val} ml = ______ ml`;
+                            qText = `[Diagram: A container holds ${val * 3} ml of water. ${val} ml is poured out.]\nComplete the number sentence: ${val * 3} ml - ${val} ml = ______ ml`;
                             const ans = val * 2;
                             answer = `${ans} ml`;
                             options = [`${ans} ml`, `${ans + 100} ml`, `${ans - 50} ml`, `${ans + 250} ml`];
                         } else {
                             const val = index * 50;
-                            qText = `[Rajah: 4 bungkusan tepung masing-masing ${val} g]\nLengkapkan ayat matematik: 4 × ${val} g = ______ g`;
+                            qText = `[Diagram: 4 packets of flour, each with a mass of ${val} g]\nComplete the number sentence: 4 × ${val} g = ______ g`;
                             const ans = val * 4;
                             answer = `${ans} g`;
                             options = [`${ans} g`, `${ans + 50} g`, `${ans - 25} g`, `${ans + 100} g`];
                         }
                         break;
-                    case 11: // Penyelesaian Masalah
+                    case 11: // Problem Solving
                         if (level === 'Senang') {
                             const m = index + 2;
-                            qText = `Aina mempunyai reben sepanjang ${m} m. Dia menggunakan 50 cm. Berapakah panjang reben dalam sentimeter yang masih tinggal?`;
+                            qText = `Aina has a ribbon that is ${m} m long. She uses 50 cm. How many centimetres of ribbon are left?`;
                             const ans = m * 100 - 50;
                             answer = `${ans} cm`;
                             options = [`${ans} cm`, `${ans + 50} cm`, `${ans - 10} cm`, `${ans + 100} cm`];
                         } else if (level === 'Sederhana') {
-                            qText = `Sebuah bakul mengandungi 3 kg 200 g buah mangga dan 1 kg 500 g buah oren. Berapakah jumlah jisim buah-buahan itu?`;
+                            qText = `A basket contains 3 kg 200 g of mangoes and 1 kg 500 g of oranges. What is the total mass of the fruit?`;
                             answer = `4 kg 700 g`;
                             options = [`4 kg 700 g`, `5 kg 200 g`, `4 kg 500 g`, `3 kg 700 g`];
                         } else {
-                            qText = `Ibu mempunyi 2 l air sirap. Dia menuang sama banyak ke dalam 4 biji gelas. Berapakah isipadu air dalam setiap gelas dalam mililiter?`;
+                            qText = `Mum shares 2 l of cordial equally among 4 glasses. How much is in each glass, in millilitres?`;
                             answer = `500 ml`;
                             options = [`500 ml`, `250 ml`, `400 ml`, `1,000 ml`];
                         }
                         break;
                 }
 
-                options = options.sort(() => Math.random() - 0.5);
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
 
                 return {
                     id: qId,
                     tahun: 3,
                     kategori: categoriesData.find(c => c.id === catId).name,
-                    subtopik: `Subtopik ${index}`,
+                    subtopik: `Question ${index}`,
                     tahap: level,
-                    aras_kognitif: level === 'Senang' ? 'Mengingat' : level === 'Sederhana' ? 'Memahami' : 'Mengaplikasi',
-                    jenis: 'Objektif',
+                    aras_kognitif: level === 'Senang' ? 'Remembering' : level === 'Sederhana' ? 'Understanding' : 'Applying',
+                    jenis: 'Multiple Choice',
                     soalan: qText,
                     pilihan: options,
                     jawapan: answer,
                     markah: 5,
                     gambarajah: null,
-                    penerangan: `Penerangan langkah demi langkah: Kira dengan teliti menggunakan rumus hubungan unit KPM yang tepat (${answer}).`
+                    penerangan: `The correct answer is ${answer}. Convert mixed units to the smaller unit before calculating. Convert back if the question asks for both units.`
                 };
             }
         }
@@ -741,16 +744,16 @@
                         <span class="text-sm font-semibold truncate max-w-[120px] sm:max-w-xs">${app.currentUser.username}</span>
                     </div>
                     <button onclick="logoutUser()" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold shadow transition flex items-center space-x-1">
-                        <i class="fa-solid fa-right-from-bracket"></i> <span class="hidden sm:inline">Log Keluar</span>
+                        <i class="fa-solid fa-right-from-bracket"></i> <span class="hidden sm:inline">Log Out</span>
                     </button>
                 `;
             } else {
                 area.innerHTML = `
                     <button onclick="app.showScreen('login')" class="bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition border border-white/20">
-                        Log Masuk
+                        Log In
                     </button>
                     <button onclick="app.showScreen('register')" class="bg-yellow-400 hover:bg-yellow-500 text-blue-950 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold shadow transition">
-                        Daftar Akaun
+                        Create an Account
                     </button>
                 `;
             }
@@ -761,15 +764,15 @@
                 <div class="space-y-8 py-4">
                     <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
                         <div class="relative z-10 space-y-4 max-w-xl text-center md:text-left">
-                            <span class="bg-yellow-400 text-blue-950 text-xs font-extrabold uppercase px-3 py-1 rounded-full shadow-sm">KPM Tahun 3 • KSSR</span>
+                            <span class="bg-yellow-400 text-blue-950 text-xs font-extrabold uppercase px-3 py-1 rounded-full shadow-sm">Year 3 • KSSR</span>
                             <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Math Kids <span class="text-yellow-300">Bernama Edu Kidz</span></h2>
-                            <p class="text-blue-100 text-sm sm:text-base font-medium">Permainan interaktif 20 soalan setiap sesi menguasai tajuk Panjang, Jisim dan Isipadu Cecair!</p>
+                            <p class="text-blue-100 text-sm sm:text-base font-medium">Practise length, mass and volume of liquid in rounds of 20 questions.</p>
                             <div class="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
                                 <button onclick="startPlayFlow()" class="bg-yellow-400 hover:bg-yellow-500 text-blue-950 px-6 py-3 rounded-2xl font-extrabold shadow-lg btn-hover flex items-center space-x-2 text-base">
-                                    <i class="fa-solid fa-play"></i> <span>Mula Bermain</span>
+                                    <i class="fa-solid fa-play"></i> <span>Play Now</span>
                                 </button>
                                 <button onclick="app.showScreen('categories')" class="bg-white/15 hover:bg-white/25 text-white border border-white/30 px-5 py-3 rounded-2xl font-bold transition flex items-center space-x-2 text-base backdrop-blur-sm">
-                                    <i class="fa-solid fa-list-check"></i> <span>Pilih Topik</span>
+                                    <i class="fa-solid fa-list-check"></i> <span>Choose a Topic</span>
                                 </button>
                             </div>
                         </div>
@@ -784,24 +787,24 @@
                         <div onclick="startPlayFlow()" class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 game-card cursor-pointer flex flex-col items-center text-center space-y-3">
                             <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-play"></i></div>
                             <div>
-                                <h3 class="font-bold text-slate-800 text-base">Mula Bermain</h3>
-                                <p class="text-xs text-slate-500 mt-1">20 soalan per sesi</p>
+                                <h3 class="font-bold text-slate-800 text-base">Play Now</h3>
+                                <p class="text-xs text-slate-500 mt-1">20 questions per round</p>
                             </div>
                         </div>
 
                         <div onclick="app.showScreen('categories')" class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 game-card cursor-pointer flex flex-col items-center text-center space-y-3">
                             <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-list-check"></i></div>
                             <div>
-                                <h3 class="font-bold text-slate-800 text-base">Pilih Topik</h3>
-                                <p class="text-xs text-slate-500 mt-1">11 kategori utama</p>
+                                <h3 class="font-bold text-slate-800 text-base">Choose a Topic</h3>
+                                <p class="text-xs text-slate-500 mt-1">11 topics</p>
                             </div>
                         </div>
 
                         <div onclick="checkAuthAndNavigate('progress')" class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 game-card cursor-pointer flex flex-col items-center text-center space-y-3">
                             <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-chart-line"></i></div>
                             <div>
-                                <h3 class="font-bold text-slate-800 text-base">Lihat Kemajuan</h3>
-                                <p class="text-xs text-slate-500 mt-1">Prestasi & markah anda</p>
+                                <h3 class="font-bold text-slate-800 text-base">View Progress</h3>
+                                <p class="text-xs text-slate-500 mt-1">Your Progress and Marks</p>
                             </div>
                         </div>
 
@@ -809,39 +812,39 @@
                             <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-trophy"></i></div>
                             <div>
                                 <h3 class="font-bold text-slate-800 text-base">Leaderboard</h3>
-                                <p class="text-xs text-slate-500 mt-1">Carta kedudukan murid</p>
+                                <p class="text-xs text-slate-500 mt-1">Pupil Rankings</p>
                             </div>
                         </div>
 
                         <div onclick="app.showScreen('guide')" class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 game-card cursor-pointer flex flex-col items-center text-center space-y-3">
                             <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-book-open-reader"></i></div>
                             <div>
-                                <h3 class="font-bold text-slate-800 text-base">Panduan Permainan</h3>
-                                <p class="text-xs text-slate-500 mt-1">Arahan & peraturan</p>
+                                <h3 class="font-bold text-slate-800 text-base">Game Guide</h3>
+                                <p class="text-xs text-slate-500 mt-1">Instructions and Rules</p>
                             </div>
                         </div>
 
                         <div onclick="checkAuthAndNavigate('profile')" class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 game-card cursor-pointer flex flex-col items-center text-center space-y-3">
                             <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-user-shield"></i></div>
                             <div>
-                                <h3 class="font-bold text-slate-800 text-base">Profil Murid</h3>
-                                <p class="text-xs text-slate-500 mt-1">Akaun & pencapaian</p>
+                                <h3 class="font-bold text-slate-800 text-base">Pupil Profile</h3>
+                                <p class="text-xs text-slate-500 mt-1">Account and Achievements</p>
                             </div>
                         </div>
 
                         <div onclick="app.showScreen('register')" class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 game-card cursor-pointer flex flex-col items-center text-center space-y-3">
                             <div class="w-14 h-14 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-user-plus"></i></div>
                             <div>
-                                <h3 class="font-bold text-slate-800 text-base">Daftar Akaun</h3>
-                                <p class="text-xs text-slate-500 mt-1">Bina akaun baharu</p>
+                                <h3 class="font-bold text-slate-800 text-base">Create an Account</h3>
+                                <p class="text-xs text-slate-500 mt-1">Create an Account</p>
                             </div>
                         </div>
 
                         <div onclick="app.showScreen('login')" class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 game-card cursor-pointer flex flex-col items-center text-center space-y-3">
                             <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl shadow-sm"><i class="fa-solid fa-right-to-bracket"></i></div>
                             <div>
-                                <h3 class="font-bold text-slate-800 text-base">Log Masuk</h3>
-                                <p class="text-xs text-slate-500 mt-1">Masuk akaun sedia ada</p>
+                                <h3 class="font-bold text-slate-800 text-base">Log In</h3>
+                                <p class="text-xs text-slate-500 mt-1">Log In to an Existing Account</p>
                             </div>
                         </div>
                     </div>
@@ -856,17 +859,17 @@
                         <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl mx-auto flex items-center justify-center text-3xl">
                             <i class="fa-solid fa-user-plus"></i>
                         </div>
-                        <h2 class="text-2xl font-extrabold text-slate-800">Daftar Akaun Murid</h2>
-                        <p class="text-sm text-slate-500">Cipta profil untuk mula merekod markah dan kemajuan anda.</p>
+                        <h2 class="text-2xl font-extrabold text-slate-800">Create a Pupil Account</h2>
+                        <p class="text-sm text-slate-500">Create a profile to save your marks and progress.</p>
                     </div>
 
                     <form onsubmit="handleRegister(event)" class="space-y-4">
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-1">Nama Pengguna (Username)</label>
-                            <input type="text" id="reg-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800" placeholder="Contoh: amir_tahun3">
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Username</label>
+                            <input type="text" id="reg-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800" placeholder="e.g. amir_year3">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-1">Kata Laluan (Password)</label>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Password</label>
                             <input type="password" id="reg-password" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800" placeholder="••••••••">
                         </div>
                         <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3 rounded-xl shadow-lg transition btn-hover">
@@ -875,7 +878,7 @@
                     </form>
 
                     <div class="text-center mt-6">
-                        <p class="text-sm text-slate-600">Sudah mempunyai akaun? <button onclick="app.showScreen('login')" class="text-blue-600 font-bold hover:underline">Log Masuk</button></p>
+                        <p class="text-sm text-slate-600">Already registered? <button onclick="app.showScreen('login')" class="text-blue-600 font-bold hover:underline">Log In</button></p>
                     </div>
                 </div>
             `;
@@ -888,26 +891,26 @@
                         <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-2xl mx-auto flex items-center justify-center text-3xl">
                             <i class="fa-solid fa-right-to-bracket"></i>
                         </div>
-                        <h2 class="text-2xl font-extrabold text-slate-800">Log Masuk Akaun</h2>
-                        <p class="text-sm text-slate-500">Masukkan butiran akaun anda untuk meneruskan pembelajaran.</p>
+                        <h2 class="text-2xl font-extrabold text-slate-800">Log In to Your Account</h2>
+                        <p class="text-sm text-slate-500">Enter your account details to continue.</p>
                     </div>
 
                     <form onsubmit="handleLogin(event)" class="space-y-4">
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-1">Nama Pengguna</label>
-                            <input type="text" id="login-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="Nama pengguna anda">
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Username</label>
+                            <input type="text" id="login-username" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="Your username">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-1">Kata Laluan</label>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Password</label>
                             <input type="password" id="login-password" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-800" placeholder="••••••••">
                         </div>
                         <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold py-3 rounded-xl shadow-lg transition btn-hover">
-                            Log Masuk
+                            Log In
                         </button>
                     </form>
 
                     <div class="text-center mt-6">
-                        <p class="text-sm text-slate-600">Belum ada akaun? <button onclick="app.showScreen('register')" class="text-indigo-600 font-bold hover:underline">Daftar Akaun</button></p>
+                        <p class="text-sm text-slate-600">New player? <button onclick="app.showScreen('register')" class="text-indigo-600 font-bold hover:underline">Create an Account</button></p>
                     </div>
                 </div>
             `;
@@ -926,26 +929,26 @@
                             ${user.username.charAt(0).toUpperCase()}
                         </div>
                         <div class="text-center sm:text-left flex-grow">
-                            <span class="bg-blue-100 text-blue-700 text-xs font-extrabold px-3 py-1 rounded-full">Murid Tahun 3</span>
+                            <span class="bg-blue-100 text-blue-700 text-xs font-extrabold px-3 py-1 rounded-full">Year 3 Pupils</span>
                             <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-1">${user.username}</h2>
-                            <p class="text-sm text-slate-500 mt-1">Akaun rasmi Math Kids Bernama Edu Kidz</p>
+                            <p class="text-sm text-slate-500 mt-1">Math Kids Bernama Edu Kidz Account</p>
                         </div>
                         <button onclick="logoutUser()" class="bg-red-50 hover:bg-red-100 text-red-600 font-bold px-4 py-2 rounded-xl text-sm transition">
-                            Log Keluar
+                            Log Out
                         </button>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 text-center">
-                            <p class="text-xs text-slate-500 font-bold uppercase">Jumlah Sesi</p>
+                            <p class="text-xs text-slate-500 font-bold uppercase">Total Rounds</p>
                             <p class="text-3xl font-extrabold text-blue-600 mt-1">${history.length}</p>
                         </div>
                         <div class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 text-center">
-                            <p class="text-xs text-slate-500 font-bold uppercase">Jumlah Markah</p>
+                            <p class="text-xs text-slate-500 font-bold uppercase">Total Marks</p>
                             <p class="text-3xl font-extrabold text-emerald-600 mt-1">${totalScore}</p>
                         </div>
                         <div class="bg-white p-5 rounded-2xl card-shadow border border-slate-100 text-center">
-                            <p class="text-xs text-slate-500 font-bold uppercase">Topik Dikuasai</p>
+                            <p class="text-xs text-slate-500 font-bold uppercase">Topics Mastered</p>
                             <p class="text-3xl font-extrabold text-purple-600 mt-1">${user.masteredCount || 0} / 11</p>
                         </div>
                     </div>
@@ -953,19 +956,19 @@
                     <div class="bg-white rounded-3xl card-shadow p-6 sm:p-8 border border-slate-100 space-y-4">
                         <h3 class="text-xl font-extrabold text-slate-800 flex items-center space-x-2">
                             <i class="fa-solid fa-clock-rotate-left text-blue-600"></i>
-                            <span>Sejarah Permainan Terkini</span>
+                            <span>Recent Games</span>
                         </h3>
-                        ${history.length === 0 ? '<p class="text-slate-500 text-sm py-4 text-center">Belum ada sebarang sejarah permainan. Mulakan latihan sekarang!</p>' : `
+                        ${history.length === 0 ? '<p class="text-slate-500 text-sm py-4 text-center">There are no games to show yet. Start a round to begin.</p>' : `
                             <div class="space-y-3">
                                 ${history.slice().reverse().map(h => `
                                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex justify-between items-center">
                                         <div>
-                                            <h4 class="font-bold text-slate-800 text-sm sm:text-base">${h.categoryName}</h4>
-                                            <p class="text-xs text-slate-500">Tahap: <span class="font-semibold text-blue-600">${h.level}</span> • ${h.date}</p>
+                                            <h4 class="font-bold text-slate-800 text-sm sm:text-base">${categoriesData.find(c => c.id === h.categoryId)?.name || h.categoryName}</h4>
+                                            <p class="text-xs text-slate-500">Difficulty: <span class="font-semibold text-blue-600">${levelLabels[h.level] || h.level}</span> • ${h.date}</p>
                                         </div>
                                         <div class="text-right">
-                                            <span class="bg-emerald-100 text-emerald-700 font-extrabold px-3 py-1 rounded-xl text-sm">${h.score} Markah</span>
-                                            <p class="text-xs text-slate-500 mt-1">${h.correct} Betul / ${h.total} Soalan</p>
+                                            <span class="bg-emerald-100 text-emerald-700 font-extrabold px-3 py-1 rounded-xl text-sm">${h.score} Marks</span>
+                                            <p class="text-xs text-slate-500 mt-1">${h.correct} correct out of ${h.total}</p>
                                         </div>
                                     </div>
                                 `).join('')}
@@ -980,9 +983,9 @@
             return `
                 <div class="space-y-6">
                     <div class="text-center max-w-2xl mx-auto space-y-2">
-                        <span class="bg-blue-100 text-blue-700 text-xs font-extrabold px-3 py-1 rounded-full">Langkah 1 & 2</span>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-800">Pilih Kategori Permainan</h2>
-                        <p class="text-slate-600 text-sm sm:text-base">Pilih satu daripada 11 kategori silibus Matematik Tahun 3 KPM.</p>
+                        <span class="bg-blue-100 text-blue-700 text-xs font-extrabold px-3 py-1 rounded-full">Steps 1 and 2</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-800">Choose a Topic</h2>
+                        <p class="text-slate-600 text-sm sm:text-base">Choose one of 11 Year 3 mathematics topics.</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -993,13 +996,13 @@
                                         <i class="fa-solid ${cat.icon}"></i>
                                     </div>
                                     <div>
-                                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Kategori ${cat.id}</span>
+                                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Topic ${cat.id}</span>
                                         <h3 class="font-extrabold text-slate-800 text-lg leading-tight mt-0.5">${cat.name}</h3>
                                     </div>
                                 </div>
                                 <p class="text-xs sm:text-sm text-slate-600">${cat.desc}</p>
                                 <div class="pt-2 flex justify-between items-center text-xs font-bold text-blue-600">
-                                    <span>20 Soalan Setiap Sesi</span>
+                                    <span>20 Questions per Round</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </div>
                             </div>
@@ -1014,9 +1017,9 @@
             return `
                 <div class="max-w-2xl mx-auto space-y-6">
                     <div class="text-center space-y-2">
-                        <span class="bg-indigo-100 text-indigo-700 text-xs font-extrabold px-3 py-1 rounded-full">Langkah 3</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Pilih Tahap Kesukaran</h2>
-                        <p class="text-slate-600 text-sm">Kategori: <strong class="text-indigo-600">${cat ? cat.name : ''}</strong></p>
+                        <span class="bg-indigo-100 text-indigo-700 text-xs font-extrabold px-3 py-1 rounded-full">Step 3</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Choose a Difficulty Level</h2>
+                        <p class="text-slate-600 text-sm">Topic: <strong class="text-indigo-600">${cat ? cat.name : ''}</strong></p>
                     </div>
 
                     <div class="grid grid-cols-1 gap-4">
@@ -1026,8 +1029,8 @@
                                     <i class="fa-solid fa-face-smile"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-extrabold text-slate-800 text-xl">Tahap 1: SENANG</h3>
-                                    <p class="text-slate-500 text-sm">Soalan asas, nombor kecil dan bantuan gambar.</p>
+                                    <h3 class="font-extrabold text-slate-800 text-xl">Level 1: EASY</h3>
+                                    <p class="text-slate-500 text-sm">Practise basic questions with small numbers and pictures.</p>
                                 </div>
                             </div>
                             <i class="fa-solid fa-chevron-right text-slate-400 text-lg"></i>
@@ -1039,8 +1042,8 @@
                                     <i class="fa-solid fa-face-laugh"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-extrabold text-slate-800 text-xl">Tahap 2: SEDERHANA</h3>
-                                    <p class="text-slate-500 text-sm">Gabungan penukaran unit dan operasi matematik.</p>
+                                    <h3 class="font-extrabold text-slate-800 text-xl">Level 2: MEDIUM</h3>
+                                    <p class="text-slate-500 text-sm">Practise converting units and doing calculations.</p>
                                 </div>
                             </div>
                             <i class="fa-solid fa-chevron-right text-slate-400 text-lg"></i>
@@ -1052,8 +1055,8 @@
                                     <i class="fa-solid fa-fire"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-extrabold text-slate-800 text-xl">Tahap 3: SUSAH</h3>
-                                    <p class="text-slate-500 text-sm">Penyelesaian masalah mencabar & pelbagai langkah.</p>
+                                    <h3 class="font-extrabold text-slate-800 text-xl">Level 3: HARD</h3>
+                                    <p class="text-slate-500 text-sm">Solve more challenging problems in several steps.</p>
                                 </div>
                             </div>
                             <i class="fa-solid fa-chevron-right text-slate-400 text-lg"></i>
@@ -1062,7 +1065,7 @@
 
                     <div class="text-center pt-2">
                         <button onclick="app.showScreen('categories')" class="text-slate-500 font-bold hover:text-slate-800 text-sm">
-                            <i class="fa-solid fa-arrow-left"></i> Kembali ke Pilih Kategori
+                            <i class="fa-solid fa-arrow-left"></i> Back to Topics
                         </button>
                     </div>
                 </div>
@@ -1073,35 +1076,35 @@
             return `
                 <div class="max-w-2xl mx-auto space-y-6">
                     <div class="text-center space-y-2">
-                        <span class="bg-purple-100 text-purple-700 text-xs font-extrabold px-3 py-1 rounded-full">Langkah 4 & 5</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Tetapan Permainan</h2>
-                        <p class="text-slate-600 text-sm">Setiap sesi permainan mengandungi tepat 20 soalan.</p>
+                        <span class="bg-purple-100 text-purple-700 text-xs font-extrabold px-3 py-1 rounded-full">Steps 4 and 5</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Game Settings</h2>
+                        <p class="text-slate-600 text-sm">Each round contains 20 questions.</p>
                     </div>
 
                     <div class="bg-white rounded-3xl card-shadow p-6 sm:p-8 border border-slate-100 space-y-6">
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">Pilih Tempoh Masa per Soalan:</label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">Time Limit per Question:</label>
                             <div class="grid grid-cols-3 gap-3">
                                 <button onclick="setTimerOption(30)" id="timer-30" class="py-3 px-4 rounded-xl border-2 font-extrabold transition text-sm border-slate-200 text-slate-700 hover:border-blue-500">
-                                    30 Saat
+                                    30 Seconds
                                 </button>
                                 <button onclick="setTimerOption(60)" id="timer-60" class="py-3 px-4 rounded-xl border-2 font-extrabold transition text-sm border-blue-600 bg-blue-50 text-blue-700">
-                                    1 Minit
+                                    1 Minute
                                 </button>
                                 <button onclick="setTimerOption(0)" id="timer-0" class="py-3 px-4 rounded-xl border-2 font-extrabold transition text-sm border-slate-200 text-slate-700 hover:border-blue-500">
-                                    Tiada Had Masa
+                                    No Time Limit
                                 </button>
                             </div>
                         </div>
 
                         <button onclick="startActualGame()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-4 rounded-2xl shadow-xl transition btn-hover text-lg flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-rocket"></i> <span>Mula Menjawab 20 Soalan</span>
+                            <i class="fa-solid fa-rocket"></i> <span>Start 20 Questions</span>
                         </button>
                     </div>
 
                     <div class="text-center pt-2">
                         <button onclick="app.showScreen('levels')" class="text-slate-500 font-bold hover:text-slate-800 text-sm">
-                            <i class="fa-solid fa-arrow-left"></i> Kembali ke Pilih Tahap
+                            <i class="fa-solid fa-arrow-left"></i> Back to Difficulty Levels
                         </button>
                     </div>
                 </div>
@@ -1113,8 +1116,8 @@
                 <div class="max-w-2xl mx-auto space-y-6" id="game-main-box">
                     <div class="bg-white rounded-2xl card-shadow p-4 flex justify-between items-center border border-slate-100">
                         <div class="flex items-center space-x-3">
-                            <span class="bg-blue-100 text-blue-700 font-extrabold text-xs px-3 py-1 rounded-full" id="game-q-counter">Soalan 1/20</span>
-                            <span class="text-xs font-bold text-slate-500" id="game-cat-label">Kategori</span>
+                            <span class="bg-blue-100 text-blue-700 font-extrabold text-xs px-3 py-1 rounded-full" id="game-q-counter">Question 1/20</span>
+                            <span class="text-xs font-bold text-slate-500" id="game-cat-label">Topic</span>
                         </div>
                         <div class="flex items-center space-x-4">
                             <div class="flex items-center space-x-1 text-emerald-600 font-extrabold text-sm">
@@ -1128,9 +1131,9 @@
 
                     <div class="bg-white rounded-3xl card-shadow p-6 sm:p-8 border border-slate-100 space-y-6">
                         <div class="text-center space-y-3">
-                            <span class="bg-indigo-50 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full" id="game-level-badge">Tahap Senang</span>
+                            <span class="bg-indigo-50 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full" id="game-level-badge">Easy</span>
                             <h3 class="text-lg sm:text-xl font-extrabold text-slate-800 leading-relaxed whitespace-pre-line" id="question-text">
-                                Memuatkan soalan...
+                                Loading question…
                             </h3>
                         </div>
 
@@ -1157,39 +1160,39 @@
                             <i class="fa-solid fa-trophy"></i>
                         </div>
                         <div>
-                            <span class="bg-emerald-100 text-emerald-700 text-xs font-extrabold px-3 py-1 rounded-full">Sesi Tamat</span>
-                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-2">Tahniah, ${user.username}!</h2>
-                            <p class="text-sm text-slate-500 mt-1">${cat ? cat.name : ''} • ${app.selectedLevel}</p>
+                            <span class="bg-emerald-100 text-emerald-700 text-xs font-extrabold px-3 py-1 rounded-full">Round Complete</span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-2">Well done, ${user.username}!</h2>
+                            <p class="text-sm text-slate-500 mt-1">${cat ? cat.name : ''} • ${levelLabels[app.selectedLevel]}</p>
                         </div>
 
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4">
                             <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                                <p class="text-xs text-slate-500 font-bold">Markah</p>
+                                <p class="text-xs text-slate-500 font-bold">Marks</p>
                                 <p class="text-2xl font-extrabold text-blue-600 mt-1">${app.score} / ${totalQ * 5}</p>
                             </div>
                             <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                                <p class="text-xs text-slate-500 font-bold">Betul</p>
+                                <p class="text-xs text-slate-500 font-bold">Correct</p>
                                 <p class="text-2xl font-extrabold text-emerald-600 mt-1">${app.correctCount}</p>
                             </div>
                             <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                                <p class="text-xs text-slate-500 font-bold">Salah</p>
+                                <p class="text-xs text-slate-500 font-bold">Incorrect</p>
                                 <p class="text-2xl font-extrabold text-rose-600 mt-1">${app.wrongCount}</p>
                             </div>
                             <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                                <p class="text-xs text-slate-500 font-bold">Ketepatan</p>
+                                <p class="text-xs text-slate-500 font-bold">Accuracy</p>
                                 <p class="text-2xl font-extrabold text-purple-600 mt-1">${accuracy}%</p>
                             </div>
                         </div>
 
                         <div class="flex flex-wrap justify-center gap-3 pt-2">
                             <button onclick="startPlayFlow()" class="bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-6 py-3 rounded-2xl shadow-lg transition btn-hover">
-                                <i class="fa-solid fa-rotate-right"></i> Main Semula
+                                <i class="fa-solid fa-rotate-right"></i> Play Again
                             </button>
                             <button onclick="app.showScreen('categories')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold px-6 py-3 rounded-2xl shadow-lg transition btn-hover">
-                                <i class="fa-solid fa-list"></i> Pilih Kategori Lain
+                                <i class="fa-solid fa-list"></i> Choose Another Topic
                             </button>
                             <button onclick="app.showScreen('home')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-extrabold px-6 py-3 rounded-2xl transition">
-                                Menu Utama
+                                Main Menu
                             </button>
                         </div>
                     </div>
@@ -1205,8 +1208,8 @@
                     <div class="bg-white rounded-3xl card-shadow p-6 sm:p-8 border border-slate-100 space-y-4">
                         <div class="flex justify-between items-center">
                             <div>
-                                <h2 class="text-2xl font-extrabold text-slate-800">Kemajuan Pembelajaran</h2>
-                                <p class="text-sm text-slate-500">Status penguasaan tajuk Panjang, Jisim & Isipadu Cecair KPM.</p>
+                                <h2 class="text-2xl font-extrabold text-slate-800">Learning Progress</h2>
+                                <p class="text-sm text-slate-500">Track your progress across the Year 3 measurement topics.</p>
                             </div>
                             <div class="bg-blue-100 text-blue-700 font-extrabold px-4 py-2 rounded-xl text-sm">
                                 ${user.username}
@@ -1216,7 +1219,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                             ${categoriesData.map(cat => {
                                 const solved = (user.history || []).filter(h => h.categoryId === cat.id).length;
-                                const status = solved >= 3 ? 'Telah Dikuasai' : solved > 0 ? 'Sedang Dipelajari' : 'Belum Dimulakan';
+                                const status = solved >= 3 ? 'Mastered' : solved > 0 ? 'In Progress' : 'Not Started';
                                 const badgeColor = solved >= 3 ? 'bg-emerald-100 text-emerald-700' : solved > 0 ? 'bg-amber-100 text-amber-700' : 'bg-slate-100 text-slate-600';
                                 
                                 return `
@@ -1227,7 +1230,7 @@
                                             </div>
                                             <div>
                                                 <h4 class="font-bold text-slate-800 text-sm">${cat.name}</h4>
-                                                <p class="text-xs text-slate-500">Sesi selesai: ${solved}</p>
+                                                <p class="text-xs text-slate-500">Rounds completed: ${solved}</p>
                                             </div>
                                         </div>
                                         <span class="text-xs font-extrabold px-3 py-1 rounded-full ${badgeColor}">${status}</span>
@@ -1255,11 +1258,11 @@
                             <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl mx-auto flex items-center justify-center text-3xl">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
-                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Leaderboard Murid</h2>
-                            <p class="text-sm text-slate-500">Kedudukan markah tertinggi murid Tahun 3.</p>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Pupil Leaderboard</h2>
+                            <p class="text-sm text-slate-500">Top scores for Year 3 pupils.</p>
                         </div>
 
-                        ${users.length === 0 ? '<div class="text-center py-8 text-slate-500 text-sm">Masih tiada rekod dalam leaderboard. Jadilah yang pertama bermain!</div>' : `
+                        ${users.length === 0 ? '<div class="text-center py-8 text-slate-500 text-sm">There are no leaderboard entries yet.</div>' : `
                             <div class="space-y-3">
                                 ${users.map((u, index) => `
                                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-center justify-between">
@@ -1269,11 +1272,11 @@
                                             </div>
                                             <div>
                                                 <h4 class="font-extrabold text-slate-800">${u.username}</h4>
-                                                <p class="text-xs text-slate-500">${u.totalGames} permainan diselesaikan</p>
+                                                <p class="text-xs text-slate-500">${u.totalGames} games completed</p>
                                             </div>
                                         </div>
                                         <div class="text-right">
-                                            <span class="bg-blue-100 text-blue-700 font-extrabold px-3 py-1 rounded-xl text-sm">${u.totalScore} Markah</span>
+                                            <span class="bg-blue-100 text-blue-700 font-extrabold px-3 py-1 rounded-xl text-sm">${u.totalScore} Marks</span>
                                         </div>
                                     </div>
                                 `).join('')}
@@ -1289,32 +1292,32 @@
                 <div class="max-w-3xl mx-auto space-y-6">
                     <div class="bg-white rounded-3xl card-shadow p-6 sm:p-8 border border-slate-100 space-y-6">
                         <div class="text-center space-y-2">
-                            <span class="bg-purple-100 text-purple-700 text-xs font-extrabold px-3 py-1 rounded-full">Maklumat & Panduan</span>
-                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Panduan Permainan Edu Kidz</h2>
-                            <p class="text-sm text-slate-500">Cara menggunakan aplikasi pembelajaran Matematik Tahun 3.</p>
+                            <span class="bg-purple-100 text-purple-700 text-xs font-extrabold px-3 py-1 rounded-full">Information and Guide</span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Edu Kidz Game Guide</h2>
+                            <p class="text-sm text-slate-500">How to use the Year 3 mathematics game.</p>
                         </div>
 
                         <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
                             <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
                                 <h3 class="font-extrabold text-slate-800 flex items-center space-x-2">
                                     <i class="fa-solid fa-circle-check text-emerald-600"></i>
-                                    <span>20 Soalan Setiap Permainan</span>
+                                    <span>20 Questions per Game</span>
                                 </h3>
-                                <p>Setiap sesi mengandungi tepat 20 soalan unik yang merangkumi sukatan panjang (m, cm), jisim (kg, g) dan isipadu cecair (l, ml) selaras dengan KSSR KPM.</p>
+                                <p>Each round has 20 questions on the topic and difficulty level you choose.</p>
                             </div>
 
                             <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
                                 <h3 class="font-extrabold text-slate-800 flex items-center space-x-2">
                                     <i class="fa-solid fa-star text-yellow-500"></i>
-                                    <span>Sistem Markah</span>
+                                    <span>Scoring</span>
                                 </h3>
-                                <p>Setiap jawapan betul bernilai 5 markah (jumlah maksimum 100 markah bagi 20 soalan). Kumpul markah tertinggi anda!</p>
+                                <p>Each correct answer earns 5 marks. You can earn up to 100 marks per round.</p>
                             </div>
                         </div>
 
                         <div class="text-center pt-2">
                             <button onclick="app.showScreen('home')" class="bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-6 py-3 rounded-2xl shadow-lg transition">
-                                Kembali ke Menu Utama
+                                Back to Main Menu
                             </button>
                         </div>
                     </div>
@@ -1331,7 +1334,7 @@
 
             let users = JSON.parse(localStorage.getItem('edu_kidz_users')) || [];
             if (users.some(u => u.username === username)) {
-                showModal("Nama pengguna telah wujud. Sila pilih nama lain.");
+                showModal("That username is already taken. Choose a different one.");
                 return;
             }
 
@@ -1347,7 +1350,7 @@
             app.currentUser = newUser;
             app.saveUser();
 
-            showModal(`Pendaftaran berjaya! Selamat datang, ${username}.`, () => {
+            showModal(`Account created. Welcome, ${username}.`, () => {
                 app.showScreen('home');
             });
         }
@@ -1363,11 +1366,11 @@
             if (found) {
                 app.currentUser = found;
                 app.saveUser();
-                showModal(`Log masuk berjaya! Selamat kembali, ${username}.`, () => {
+                showModal(`Welcome back, ${username}.`, () => {
                     app.showScreen('home');
                 });
             } else {
-                showModal("Nama pengguna atau kata laluan tidak sah. Sila cuba lagi.");
+                showModal("Invalid username or password. Try again.");
             }
         }
 
@@ -1379,7 +1382,7 @@
 
         function checkAuthAndNavigate(screen) {
             if (!app.currentUser) {
-                showModal("Sila log masuk atau daftar akaun terlebih dahulu untuk melihat profil dan kemajuan.", () => {
+                showModal("Log in or create an account to view your profile and progress.", () => {
                     app.showScreen('login');
                 });
             } else {
@@ -1424,7 +1427,7 @@
             app.correctCount = 0;
             app.wrongCount = 0;
             app.userAnswersHistory = [];
-            app.sessionStartTime = new Date().toLocaleDateString();
+            app.sessionStartTime = new Date().toLocaleDateString('en-GB');
 
             app.showScreen('game');
             setTimeout(() => {
@@ -1448,9 +1451,9 @@
             const qCounterEl = document.getElementById('game-q-counter');
             if (!qCounterEl) return;
 
-            qCounterEl.innerText = `Soalan ${app.currentQuestionIndex + 1}/${app.currentQuestions.length}`;
+            qCounterEl.innerText = `Question ${app.currentQuestionIndex + 1}/${app.currentQuestions.length}`;
             document.getElementById('game-cat-label').innerText = cat ? cat.name : '';
-            document.getElementById('game-level-badge').innerText = `Tahap: ${app.selectedLevel}`;
+            document.getElementById('game-level-badge').innerText = `Difficulty: ${levelLabels[app.selectedLevel]}`;
             document.getElementById('game-score-display').innerText = app.score;
             document.getElementById('question-text').innerText = q.soalan;
 
@@ -1492,6 +1495,7 @@
 
             const isCorrect = (selected === correct);
             const feedbackBox = document.getElementById('feedback-box');
+            if (!feedbackBox.classList.contains('hidden')) return;
             feedbackBox.classList.remove('hidden');
 
             const buttons = document.querySelectorAll('#options-container button');
@@ -1509,23 +1513,23 @@
                 app.correctCount++;
                 feedbackBox.className = "rounded-2xl p-4 text-center space-y-2 bg-emerald-50 border border-emerald-200 text-emerald-800";
                 feedbackBox.innerHTML = `
-                    <h4 class="font-extrabold text-lg"><i class="fa-solid fa-circle-check"></i> Tahniah! Jawapan Kamu Betul! (+5 Markah)</h4>
+                    <h4 class="font-extrabold text-lg"><i class="fa-solid fa-circle-check"></i> Well done! Correct answer. (+5 marks)</h4>
                     <p class="text-xs">${questionObj.penerangan}</p>
                 `;
-                confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+                if (typeof confetti === "function") confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
             } else {
                 app.wrongCount++;
                 feedbackBox.className = "rounded-2xl p-4 text-center space-y-2 bg-rose-50 border border-rose-200 text-rose-800";
                 feedbackBox.innerHTML = `
-                    <h4 class="font-extrabold text-lg"><i class="fa-solid fa-circle-xmark"></i> Jangan Putus Asa! Cuba Lagi!</h4>
-                    <p class="text-xs">Jawapan yang betul ialah: <strong>${correct}</strong></p>
+                    <h4 class="font-extrabold text-lg"><i class="fa-solid fa-circle-xmark"></i> Keep Practising!</h4>
+                    <p class="text-xs">The correct answer is: <strong>${correct}</strong></p>
                     <p class="text-xs text-slate-600">${questionObj.penerangan}</p>
                 `;
             }
 
             app.userAnswersHistory.push({
                 question: questionObj.soalan,
-                selected: selected || 'Masa Tamat',
+                selected: selected || 'Time’s Up',
                 correct: correct,
                 isCorrect: isCorrect
             });
@@ -1546,7 +1550,7 @@
                     score: app.score,
                     correct: app.correctCount,
                     total: app.currentQuestions.length,
-                    date: new Date().toLocaleDateString()
+                    date: new Date().toLocaleDateString('en-GB')
                 };
 
                 if (!app.currentUser.history) app.currentUser.history = [];

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EDU KIDZ – Matematik Tahun 1 (Masa dan Waktu)</title>
+    <title>EDU KIDZ – Year 1 Mathematics (Time)</title>
     <!-- Tailwind CSS untuk reka bentuk moden, ceria & responsif -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Poppins & Fredoka untuk gaya ceria kanak-kanak -->
@@ -44,13 +44,13 @@
                 </div>
                 <div>
                     <h1 class="font-fredoka text-2xl font-bold bg-gradient-to-r from-amber-500 to-rose-500 bg-clip-text text-transparent">EDU KIDZ</h1>
-                    <p class="text-xs text-slate-500 font-medium">Matematik Tahun 1 – Masa & Waktu</p>
+                    <p class="text-xs text-slate-500 font-medium">Year 1 Mathematics – Time</p>
                 </div>
             </div>
             <div id="user-info-bar" class="hidden items-center space-x-4">
                 <span class="text-sm font-semibold bg-amber-100 text-amber-800 px-3 py-1.5 rounded-full border border-amber-200" id="current-user-display">👋 Aiman</span>
-                <button onclick="app.bukaTetapan()" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-lg transition" title="Tetapan Bunyi">🔊</button>
-                <button onclick="app.logKeluar()" class="text-xs font-bold text-rose-600 bg-rose-50 hover:bg-rose-100 px-3 py-1.5 rounded-full border border-rose-200 transition">Log Keluar</button>
+                <button onclick="app.bukaTetapan()" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-lg transition" title="Sound Settings">🔊</button>
+                <button onclick="app.logKeluar()" class="text-xs font-bold text-rose-600 bg-rose-50 hover:bg-rose-100 px-3 py-1.5 rounded-full border border-rose-200 transition">Log Out</button>
             </div>
         </div>
     </header>
@@ -64,7 +64,7 @@
 
     <!-- Footer Ceria -->
     <footer class="py-4 text-center text-xs text-slate-600 font-medium">
-        ⭐ Slogan: <span class="font-bold text-amber-600">"Belajar Masa, Jadi Hebat!"</span> • Silibus KPM Tahun 1 ⭐
+        ⭐ Slogan: <span class="font-bold text-amber-600">"Learn to Tell the Time!"</span> • Silibus KPM Tahun 1 ⭐
     </footer>
 
     <script>
@@ -140,11 +140,11 @@
 
             janaSemuaSoalan() {
                 const topikNama = [
-                    "Kenali Jam dan Masa",
-                    "Padankan Gambarajah Jarum Jam dan Minit",
-                    "Kenali Hari, Minggu dan Bulan",
-                    "Lengkapkan Ayat Matematik Berdasarkan Gambar",
-                    "Soalan Penyelesaian Masalah"
+                    "Clocks and Time",
+                    "Matching Hour and Minute Hands",
+                    "Days, Weeks and Months",
+                    "Complete the Number Sentence Using Pictures",
+                    "Word Problems"
                 ];
 
                 const tahapList = ["Senang", "Sederhana", "Susah"];
@@ -187,10 +187,10 @@
                 let q = "", imgT = "none", imgD = null, opts = [], ans = "";
 
                 if (topikId === 1) {
-                    // Topik 1: Kenali Jam dan Masa
+                    // Topik 1: Clocks and Time
                     let jam = ((index + 3) % 12) + 1;
                     let minitVal = (index % 3 === 0) ? 30 : 0;
-                    q = `Lihat kedudukan jarum pada jam analog. Pukul berapakah waktu tersebut? (Sesi Q1-${index})`;
+                    q = `Look at the hands on the analogue clock. What time does it show? (Q1-${index})`;
                     imgT = "analog";
                     imgD = { jam: jam, minit: minitVal };
                     
@@ -204,26 +204,26 @@
                 else if (topikId === 2) {
                     // Topik 2: Padankan/Kenal Jam & Minit
                     let jam = (index % 11) + 1;
-                    q = `Antara berikut, pernyataan manakah yang betul mengenai jarum jam pada kedudukan angka ${jam}? (Sesi Q2-${index})`;
+                    q = `Which statement about the clock hands is correct? (Q2-${index})`;
                     imgT = "analog";
                     imgD = { jam: jam, minit: 0 };
-                    let benar = `Jarum pendek menunjuk tepat ke angka ${jam}`;
-                    let o1 = `Jarum panjang menunjuk tepat ke angka ${jam}`;
-                    let o2 = `Kedua-dua jarum berada di angka 12`;
-                    let o3 = `Jarum pendek berada di angka ${((jam + 3) % 12) + 1}`;
+                    let benar = `The hour hand points directly to ${jam}`;
+                    let o1 = `The minute hand points directly to ${jam}`;
+                    let o2 = `Both hands point to 12`;
+                    let o3 = `The hour hand points to ${((jam + 3) % 12) + 1}`;
                     opts = this.acakPilihan([benar, o1, o2, o3]);
                     ans = benar;
                 }
                 else if (topikId === 3) {
-                    // Topik 3: Kenali Hari, Minggu dan Bulan
-                    const hariArr = ["Isnin", "Selasa", "Rabu", "Khamis", "Jumaat", "Sabtu", "Ahad"];
-                    const bulanArr = ["Januari", "Februari", "Mac", "April", "Mei", "Jun", "Julai", "Ogos", "September", "Oktober", "November", "Disember"];
+                    // Topik 3: Days, Weeks and Months
+                    const hariArr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+                    const bulanArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                     
                     if (index % 2 === 0) {
                         let hIdx = (index * 2) % 7;
                         let hariIni = hariArr[hIdx];
                         let hariBesok = hariArr[(hIdx + 1) % 7];
-                        q = `Jika hari ini ialah ${hariIni}, apakah hari selepas ${hariIni}? (Sesi Q3-${index})`;
+                        q = `Today is ${hariIni}. What day comes next? (Q3-${index})`;
                         imgT = "kalendar";
                         imgD = { text: hariIni };
                         opts = this.acakPilihan([hariBesok, hariArr[(hIdx + 2) % 7], hariArr[(hIdx + 4) % 7], hariArr[(hIdx + 3) % 7]]);
@@ -232,7 +232,7 @@
                         let bIdx = (index * 3) % 12;
                         let bulanIni = bulanArr[bIdx];
                         let bulanDepan = bulanArr[(bIdx + 1) % 12];
-                        q = `Bulan apakah yang hadir selepas bulan ${bulanIni} dalam kalendar Masihi? (Sesi Q3-${index})`;
+                        q = `Which month comes after ${bulanIni}? (Q3-${index})`;
                         imgT = "kalendar";
                         imgD = { text: bulanIni };
                         opts = this.acakPilihan([bulanDepan, bulanArr[(bIdx + 2) % 12], bulanArr[(bIdx + 4) % 12], bulanArr[(bIdx + 3) % 12]]);
@@ -240,156 +240,156 @@
                     }
                 }
                 else if (topikId === 4) {
-                    // Topik 4: Lengkapkan Ayat Matematik Berdasarkan Gambar (Refined - Unik & Pelbagai Aktiviti Harian)
+                    // Topik 4: Complete the Number Sentence Using Pictures (Refined - Unik & Pelbagai Aktiviti Harian)
                     const senaraiAktivitiTahun1 = [
-                        { ketegori: "pagi", situasi: "Ali bangun dari tidur dan bersarapan bersama keluarga.", pilihan: ["pagi", "petang", "malam", "tengah hari"], jawapan: "pagi" },
-                        { ketegori: "pagi", situasi: "Siti bersiap memakai uniform sekolah dan menaiki bas ke sekolah.", pilihan: ["pagi", "petang", "malam", "tengah hari"], jawapan: "pagi" },
-                        { ketegori: "tengah hari", situasi: "Murid-murid beratur membeli makanan di kantin sekolah pada waktu rehat.", pilihan: ["tengah hari", "pagi", "malam", "subuh"], jawapan: "tengah hari" },
-                        { ketegori: "tengah hari", situasi: "Lonceng berbunyi menandakan sesi persekolahan sesi pagi tamat dan murid pulang.", pilihan: ["tengah hari", "pagi", "malam", "lewat malam"], jawapan: "tengah hari" },
-                        { ketegori: "petang", situasi: "Ahmad bermain bola sepak bersama rakan-rakan di padang taman perumahan.", pilihan: ["petang", "pagi", "tengah hari", "malam"], jawapan: "petang" },
-                        { ketegori: "petang", situasi: "Ibu menyiram pokok bunga dan pokok herba di halaman rumah.", pilihan: ["petang", "pagi", "malam", "tengah hari"], jawapan: "petang" },
-                        { ketegori: "malam", situasi: "Fatimah menyiapkan kerja sekolah dan mengulang kaji pelajaran di bilik tidur.", pilihan: ["malam", "pagi", "tengah hari", "petang"], jawapan: "malam" },
-                        { ketegori: "malam", situasi: "Ah Chong bersedia untuk tidur di atas katil selepas membaca buku cerita.", pilihan: ["malam", "pagi", "tengah hari", "petang"], jawapan: "malam" },
-                        { ketegori: "pagi", situasi: "Matahari terbit di sebelah timur membawa cahaya terang.", pilihan: ["pagi", "malam", "tengah hari", "petang"], jawapan: "pagi" },
-                        { ketegori: "malam", situasi: "Bulan dan bintang kelihatan bersinar terang di langit gelap.", pilihan: ["malam", "pagi", "petang", "tengah hari"], jawapan: "malam" },
-                        { ketegori: "petang", situasi: "Aktiviti riadah keluarga berbasikal di taman tasik ketika cahaya matahari mula condong.", pilihan: ["petang", "pagi", "tengah hari", "malam"], jawapan: "petang" },
-                        { ketegori: "pagi", situasi: "Cikgu memulakan sesi perhimpunan mingguan sekolah pada jam 7:30.", pilihan: ["pagi", "petang", "malam", "tengah hari"], jawapan: "pagi" },
-                        { ketegori: "tengah hari", situasi: "Azman mencuci tangan di sinki kantin sebelum memulakan jamuan makan tengah hari.", pilihan: ["tengah hari", "pagi", "petang", "malam"], jawapan: "tengah hari" },
-                        { ketegori: "malam", situasi: "Seluruh ahli keluarga berkumpul di ruang tamu menonton berita televisyen.", pilihan: ["malam", "pagi", "petang", "tengah hari"], jawapan: "malam" },
-                        { ketegori: "petang", situasi: "Kucing kesayangan tidur lena di atas sofa ruang tamu selepas meronda.", pilihan: ["petang", "pagi", "malam", "tengah hari"], jawapan: "petang" },
-                        { ketegori: "pagi", situasi: "Burung-burung berkicauan merdu di atas pokok ketika udara masih segar.", pilihan: ["pagi", "malam", "petang", "tengah hari"], jawapan: "pagi" },
-                        { ketegori: "tengah hari", situasi: "Bayang-bayang objek kelihatan paling pendek dan tegak di bawah cahaya matahari tegak di atas kepala.", pilihan: ["tengah hari", "pagi", "malam", "petang"], jawapan: "tengah hari" },
-                        { ketegori: "malam", situasi: "Suasana sekeliling menjadi sunyi senyap kerana semua penduduk telah masuk tidur.", pilihan: ["malam", "pagi", "tengah hari", "petang"], jawapan: "malam" },
-                        { ketegori: "petang", situasi: "Nelayan bersiap mengemas jala di pesisir pantai ketika matahari mula terbenam di ufuk barat.", pilihan: ["petang", "pagi", "malam", "tengah hari"], jawapan: "petang" },
-                        { ketegori: "pagi", situasi: "Ibu bapa menghantar anak-anak ke pintu pagar sekolah dengan senyuman ceria.", pilihan: ["pagi", "petang", "malam", "tengah hari"], jawapan: "pagi" }
+                        { ketegori: "morning", situasi: "Ali gets out of bed and has breakfast with his family.", pilihan: ["morning", "afternoon", "night", "midday"], jawapan: "morning" },
+                        { ketegori: "morning", situasi: "Siti puts on her school uniform and takes the bus to school.", pilihan: ["morning", "afternoon", "night", "midday"], jawapan: "morning" },
+                        { ketegori: "midday", situasi: "The pupils queue for lunch in the school canteen.", pilihan: ["midday", "morning", "night", "dawn"], jawapan: "midday" },
+                        { ketegori: "midday", situasi: "The bell rings at the end of the morning school session and the pupils go home.", pilihan: ["midday", "morning", "night", "late at night"], jawapan: "midday" },
+                        { ketegori: "afternoon", situasi: "Ahmad plays football with his friends after school.", pilihan: ["afternoon", "morning", "midday", "night"], jawapan: "afternoon" },
+                        { ketegori: "afternoon", situasi: "Mum waters the flowers and herbs after lunch.", pilihan: ["afternoon", "morning", "night", "midday"], jawapan: "afternoon" },
+                        { ketegori: "night", situasi: "Fatimah finishes her homework and revises before bedtime.", pilihan: ["night", "morning", "midday", "afternoon"], jawapan: "night" },
+                        { ketegori: "night", situasi: "Ah Chong reads a story and gets ready for bed.", pilihan: ["night", "morning", "midday", "afternoon"], jawapan: "night" },
+                        { ketegori: "morning", situasi: "The sun rises in the east.", pilihan: ["morning", "night", "midday", "afternoon"], jawapan: "morning" },
+                        { ketegori: "night", situasi: "The moon and stars shine in the dark sky.", pilihan: ["night", "morning", "afternoon", "midday"], jawapan: "night" },
+                        { ketegori: "afternoon", situasi: "The family goes cycling by the lake after lunch.", pilihan: ["afternoon", "morning", "midday", "night"], jawapan: "afternoon" },
+                        { ketegori: "morning", situasi: "The weekly school assembly starts at 7:30 a.m.", pilihan: ["morning", "afternoon", "night", "midday"], jawapan: "morning" },
+                        { ketegori: "midday", situasi: "Azman washes his hands before lunch in the school canteen.", pilihan: ["midday", "morning", "afternoon", "night"], jawapan: "midday" },
+                        { ketegori: "night", situasi: "The whole family gathers in the living room to watch the late news.", pilihan: ["night", "morning", "afternoon", "midday"], jawapan: "night" },
+                        { ketegori: "afternoon", situasi: "The cat curls up on the sofa after lunch.", pilihan: ["afternoon", "morning", "night", "midday"], jawapan: "afternoon" },
+                        { ketegori: "morning", situasi: "The birds sing in the trees just after sunrise.", pilihan: ["morning", "night", "afternoon", "midday"], jawapan: "morning" },
+                        { ketegori: "midday", situasi: "The sun is highest in the sky and shadows are shortest.", pilihan: ["midday", "morning", "night", "afternoon"], jawapan: "midday" },
+                        { ketegori: "night", situasi: "Everyone in the neighbourhood has gone to bed and it is quiet outside.", pilihan: ["night", "morning", "midday", "afternoon"], jawapan: "night" },
+                        { ketegori: "afternoon", situasi: "The fishermen pack up their nets as the sun begins to set in the late afternoon.", pilihan: ["afternoon", "morning", "night", "midday"], jawapan: "afternoon" },
+                        { ketegori: "morning", situasi: "Parents drop their children off at the school gates before the morning assembly.", pilihan: ["morning", "afternoon", "night", "midday"], jawapan: "morning" }
                     ];
 
                     let actItem = senaraiAktivitiTahun1[(index - 1) % senaraiAktivitiTahun1.length];
-                    q = `Lengkapkan ayat situasi aktiviti berikut:\n"${actItem.situasi}"\nAktiviti di atas biasanya berlaku pada waktu... (Q4-${index})`;
+                    q = `Read about the activity below.\n"${actItem.situasi}"\nWhen does this activity usually happen? (Q4-${index})`;
                     imgT = "aktiviti_ref";
-                    imgD = { teksAktiviti: actItem.situasi };
+                    imgD = { teksActivity: actItem.situasi };
                     opts = this.acakPilihan([...actItem.pilihan]);
                     ans = actItem.jawapan;
                 }
                 else {
-                    // Topik 5: Soalan Penyelesaian Masalah (Refined - 100% Unik, Variatif Tanpa Duplikasi Soalan & Gambarajah)
+                    // Topik 5: Word Problems (Refined - 100% Unik, Variatif Tanpa Duplikasi Soalan & Gambarajah)
                     const senaraiPenyelesaianMasalah = [
                         {
-                            soalan: "Ali membawa wang sebanyak RM5 ke sekolah. Dia membeli sepotong kek berharga RM2 pada waktu rehat pukul 10:00 pagi. Berapakah baki wang Ali selepas membeli kek tersebut?",
+                            soalan: "Ali takes RM5 to school. At 10:00 a.m. he buys a slice of cake for RM2. How much money does he have left?",
                             gambar: { jenis: "wang_kertas", info: "RM5 & RM2" },
                             pilihan: ["RM3", "RM2", "RM5", "RM7"],
                             jawapan: "RM3"
                         },
                         {
-                            soalan: "Siti mula membaca buku cerita pada pukul 3:00 petang dan selesai membaca pada pukul 4:00 petang. Berapakah tempoh masa Siti membaca buku cerita itu?",
-                            gambar: { jenis: "jam_tempoh", info: "3:00 petang hingga 4:00 petang" },
-                            pilihan: ["1 jam", "2 jam", "30 minit", "3 jam"],
-                            jawapan: "1 jam"
+                            soalan: "Siti reads a story from 3:00 p.m. to 4:00 p.m. How long does she read for?",
+                            gambar: { jenis: "jam_tempoh", info: "3:00 p.m. to 4:00 p.m." },
+                            pilihan: ["1 hour", "2 hours", "30 minutes", "3 hours"],
+                            jawapan: "1 hour"
                         },
                         {
-                            soalan: "Ahmad mempunyai dua keping syiling 50 sen dan sekeping wang kertas RM1 di dalam tabung miliknya. Berapakah jumlah nilai wang tabung Ahmad?",
+                            soalan: "Ahmad has two 50 sen coins and one RM1 note in his money box. How much money does he have altogether?",
                             gambar: { jenis: "syiling_wang", info: "50 sen & RM1" },
                             pilihan: ["RM2.00", "RM1.50", "RM1.00", "RM2.50"],
                             jawapan: "RM2.00"
                         },
                         {
-                            soalan: "Ibu pergi ke pasar raya pada hari Sabtu dan merancang untuk pulang bercuti di kampung halaman pada lusa. Hari apakah ibu pulang ke kampung jika hari ini hari Sabtu?",
-                            gambar: { jenis: "kalendar_hari", info: "Sabtu + 2 hari" },
-                            pilihan: ["Isnin", "Ahad", "Selasa", "Rabu"],
-                            jawapan: "Isnin"
+                            soalan: "Mum goes to the supermarket on Saturday. She plans to visit her hometown two days later. On which day does she visit?",
+                            gambar: { jenis: "kalendar_hari", info: "Saturday + 2 days" },
+                            pilihan: ["Monday", "Sunday", "Tuesday", "Wednesday"],
+                            jawapan: "Monday"
                         },
                         {
-                            soalan: "Kelas Matematik Cikgu Aminah bermula tepat pada pukul 8:00 pagi dan tamat pada pukul 9:00 pagi. Berapakah jam tempoh masa kelas Matematik tersebut?",
-                            gambar: { jenis: "jam_analog_pukul", info: "8:00 hingga 9:00" },
-                            pilihan: ["1 jam", "2 jam", "60 minit", "Jawapan A dan C betul"],
-                            jawapan: "Jawapan A dan C betul"
+                            soalan: "Miss Aminah’s maths lesson starts at 8:00 a.m. and ends at 9:00 a.m. How many hours does the lesson last?",
+                            gambar: { jenis: "jam_analog_pukul", info: "8:00 to 9:00" },
+                            pilihan: ["1 hour", "2 hours", "30 minutes", "3 hours"],
+                            jawapan: "1 hour"
                         },
                         {
-                            soalan: "Fatimah menyimpan wang sebanyak RM10 yang diberikan oleh datuknya pada bulan Januari. Dia tidak menggunakan wang itu sehingga bulan Februari. Berapa lamakah tempoh sebulan dalam kalendar Masihi?",
-                            gambar: { jenis: "kalendar_bulan", info: "Januari ke Februari" },
-                            pilihan: ["1 bulan", "2 bulan", "30 hari", "7 hari"],
-                            jawapan: "1 bulan"
+                            soalan: "Fatimah saves RM10 from her grandfather in January and keeps it until February. How many months are there from the start of January to the start of February?",
+                            gambar: { jenis: "kalendar_bulan", info: "January to February" },
+                            pilihan: ["1 month", "2 months", "30 days", "7 days"],
+                            jawapan: "1 month"
                         },
                         {
-                            soalan: "Azman menaiki bas sekolah ke sekolah pada pukul 6:30 pagi. Perjalanan mengambil masa selama setengah jam. Pukul berapakah Azman tiba di sekolah?",
-                            gambar: { jenis: "jam_minit", info: "6:30 + 30 minit" },
-                            pilihan: ["7:00 pagi", "7:30 pagi", "6:00 pagi", "8:00 pagi"],
-                            jawapan: "7:00 pagi"
+                            soalan: "Azman gets on the school bus at 6:30 a.m. The journey takes half an hour. What time does he arrive at school?",
+                            gambar: { jenis: "jam_minit", info: "6:30 + 30 minutes" },
+                            pilihan: ["7:00 a.m.", "7:30 a.m.", "6:00 a.m.", "8:00 a.m."],
+                            jawapan: "7:00 a.m."
                         },
                         {
-                            soalan: "Mei Ling membeli pensel sebatang berharga RM1 dan pemadam berharga 50 sen di kedai buku sekolah pada pukul 10:15 pagi. Berapakah jumlah harga barang yang dibeli?",
+                            soalan: "At 10:15 a.m. Mei Ling buys a pencil for RM1 and a rubber for 50 sen. How much does she spend?",
                             gambar: { jenis: "harga_barang", info: "RM1 + 50 sen" },
                             pilihan: ["RM1.50", "RM2.00", "RM1.00", "RM0.50"],
                             jawapan: "RM1.50"
                         },
                         {
-                            soalan: "Hari sukan sekolah dijadualkan berlangsung pada hari Jumaat minggu hadapan. Jika hari ini hari Isnin, berapakah bilangan hari lagi sebelum hari Jumaat tiba?",
-                            gambar: { jenis: "bilangan_hari", info: "Isnin ke Jumaat" },
-                            pilihan: ["4 hari", "5 hari", "3 hari", "6 hari"],
-                            jawapan: "4 hari"
+                            soalan: "Today is Monday. Sports day is on Friday this week. How many days until sports day?",
+                            gambar: { jenis: "bilangan_hari", info: "Monday to Friday" },
+                            pilihan: ["4 days", "5 days", "3 days", "6 days"],
+                            jawapan: "4 days"
                         },
                         {
-                            soalan: "Bapa menyiram pokok bunga di halaman rumah selama 1 jam dari pukul 5:00 petang. Pukul berapakah bapa selesai menyiram pokok bunga tersebut?",
-                            gambar: { jenis: "jam_petang", info: "5:00 petang + 1 jam" },
-                            pilihan: ["6:00 petang", "5:30 petang", "7:00 petang", "4:00 petang"],
-                            jawapan: "6:00 petang"
+                            soalan: "Dad starts watering the flowers at 5:00 p.m. and waters them for one hour. What time does he finish?",
+                            gambar: { jenis: "jam_petang", info: "5:00 p.m. + 1 hour" },
+                            pilihan: ["6:00 p.m.", "5:30 p.m.", "7:00 p.m.", "4:00 p.m."],
+                            jawapan: "6:00 p.m."
                         },
                         {
-                            soalan: "Zul mempunyai wang kertas RM5 dan sekeping wang kertas RM20. Berapakah jumlah keseluruhan wang kertas yang dimiliki oleh Zul?",
+                            soalan: "Zul has an RM5 note and an RM20 note. What is the total value of the two notes?",
                             gambar: { jenis: "wang_kertas_jumlah", info: "RM5 + RM20" },
                             pilihan: ["RM25", "RM15", "RM30", "RM10"],
                             jawapan: "RM25"
                         },
                         {
-                            soalan: "Keluarga Amin melancong ke Melaka selama 2 minggu pada cuti sekolah penggal pertama. Berapakah jumlah hari bagi tempoh 2 minggu tersebut?",
-                            gambar: { jenis: "minggu_hari", info: "2 minggu" },
-                            pilihan: ["14 hari", "7 hari", "20 hari", "10 hari"],
-                            jawapan: "14 hari"
+                            soalan: "Amin’s family spends two weeks in Melaka during the school holidays. How many days do they spend there?",
+                            gambar: { jenis: "minggu_hari", info: "2 weeks" },
+                            pilihan: ["14 days", "7 days", "20 days", "10 days"],
+                            jawapan: "14 days"
                         },
                         {
-                            soalan: "Sebuah bas sekolah bertolak dari taman perumahan pada pukul 6:45 pagi dan tiba di perkarangan sekolah pada pukul 7:15 pagi. Berapakah minit tempoh perjalanan bas itu?",
-                            gambar: { jenis: "tempoh_minit", info: "6:45 ke 7:15" },
-                            pilihan: ["30 minit", "15 minit", "45 minit", "60 minit"],
-                            jawapan: "30 minit"
+                            soalan: "The school bus leaves at 6:45 a.m. and arrives at 7:15 a.m. How many minutes does the journey take?",
+                            gambar: { jenis: "tempoh_minit", info: "6:45 to 7:15" },
+                            pilihan: ["30 minutes", "15 minutes", "45 minutes", "60 minutes"],
+                            jawapan: "30 minutes"
                         },
                         {
-                            soalan: "Chong membantu ibu mengemas dapur pada hari Ahad dari pukul 9:00 pagi hingga pukul 10:00 pagi. Berapakah tempoh masa Chong mengemas dapur?",
-                            gambar: { jenis: "masa_aktiviti", info: "9:00 hingga 10:00" },
-                            pilihan: ["1 jam", "2 jam", "30 minit", "3 jam"],
-                            jawapan: "1 jam"
+                            soalan: "On Sunday, Chong helps Mum tidy the kitchen from 9:00 a.m. to 10:00 a.m. How long does he spend tidying?",
+                            gambar: { jenis: "masa_aktiviti", info: "9:00 to 10:00" },
+                            pilihan: ["1 hour", "2 hours", "30 minutes", "3 hours"],
+                            jawapan: "1 hour"
                         },
                         {
-                            soalan: "Adik berumur 7 tahun pada tahun ini. Berapakah umur adik dalam tempoh 12 bulan atau setahun akan datang?",
-                            gambar: { jenis: "umur_tahun", info: "7 tahun + 1 tahun" },
-                            pilihan: ["8 tahun", "7 tahun", "9 tahun", "6 tahun"],
-                            jawapan: "8 tahun"
+                            soalan: "Your younger sibling is seven years old this year. How old will they be in 12 months?",
+                            gambar: { jenis: "umur_tahun", info: "7 years + 1 year" },
+                            pilihan: ["8 years", "7 years", "9 years", "6 years"],
+                            jawapan: "8 years"
                         },
                         {
-                            soalan: "Salmah membeli sebuah buku nota berharga RM2 dan sebatang pen berharga RM1 menggunakan sekeping wang kertas RM5. Berapakah baki wang yang diterima oleh Salmah?",
+                            soalan: "Salmah buys an RM2 notebook and an RM1 pen. She pays with an RM5 note. How much change does she get?",
                             gambar: { jenis: "baki_wang", info: "RM5 - (RM2 + RM1)" },
                             pilihan: ["RM2", "RM1", "RM3", "RM4"],
                             jawapan: "RM2"
                         },
                         {
-                            soalan: "Cuti penggal persekolahan bermula pada bulan Disember setiap tahun. Apakah bulan yang mendahului bulan Disember dalam takwim setahun?",
-                            gambar: { jenis: "bulan_sebelum", info: "Sebelum Disember" },
-                            pilihan: ["November", "Oktober", "Januari", "September"],
+                            soalan: "The school holidays begin in December. Which month comes before December?",
+                            gambar: { jenis: "bulan_sebelum", info: "Before December" },
+                            pilihan: ["November", "October", "January", "September"],
                             jawapan: "November"
                         },
                         {
-                            soalan: "Hari lahir Nadia jatuh pada hari Rabu minggu ini. Kakaknya pula menyambut hari lahir tepat 3 hari selepas hari Rabu. Hari apakah hari lahir kakak Nadia?",
-                            gambar: { jenis: "hari_selepas", info: "Rabu + 3 hari" },
-                            pilihan: ["Sabtu", "Jumaat", "Ahad", "Khamis"],
-                            jawapan: "Sabtu"
+                            soalan: "Nadia’s birthday is on Wednesday. Her sister’s birthday is three days later. Which day is her sister’s birthday?",
+                            gambar: { jenis: "hari_selepas", info: "Wednesday + 3 days" },
+                            pilihan: ["Saturday", "Friday", "Sunday", "Thursday"],
+                            jawapan: "Saturday"
                         },
                         {
-                            soalan: "Ibu memasak sup ayam di dapur selama 1 jam bermula pada pukul 11:00 pagi. Pukul berapakah sup ayam tersebut siap dimasak oleh ibu?",
-                            gambar: { jenis: "masa_masak", info: "11:00 pagi + 1 jam" },
-                            pilihan: ["12:00 tengah hari", "1:00 petang", "11:30 pagi", "2:00 petang"],
-                            jawapan: "12:00 tengah hari"
+                            soalan: "Mum starts cooking chicken soup at 11:00 a.m. The soup takes one hour to cook. What time is it ready?",
+                            gambar: { jenis: "masa_masak", info: "11:00 a.m. + 1 hour" },
+                            pilihan: ["noon", "1:00 p.m.", "11:30 a.m.", "2:00 p.m."],
+                            jawapan: "noon"
                         },
                         {
-                            soalan: "Danial mempunyai 4 keping syiling 20 sen di dalam poket baju sekolahnya. Berapakah jumlah nilai ringgit dan sen bagi duit syiling Danial?",
+                            soalan: "Danial has four 20 sen coins. What is their total value?",
                             gambar: { jenis: "syiling_20sen", info: "4 x 20 sen" },
                             pilihan: ["80 sen", "60 sen", "RM1.00", "40 sen"],
                             jawapan: "80 sen"
@@ -397,7 +397,7 @@
                     ];
 
                     let pItem = senaraiPenyelesaianMasalah[(index - 1) % senaraiPenyelesaianMasalah.length];
-                    q = `Soalan Penyelesaian Masalah:\n"${pItem.soalan}" (Q5-${index})`;
+                    q = `Word Problems:\n"${pItem.soalan}" (Q5-${index})`;
                     imgT = "penyelesaian_masalah";
                     imgD = { info: pItem.gambar.info };
                     opts = this.acakPilihan([...pItem.pilihan]);
@@ -516,21 +516,21 @@
                             <span class="text-5xl">⏰👦👧</span>
                         </div>
                         <h2 class="font-fredoka text-3xl font-bold text-amber-600 mb-1">EDU KIDZ</h2>
-                        <p class="text-slate-600 text-sm mb-6 font-medium">Matematik Tahun 1 – Masa dan Waktu<br><span class="text-rose-500 font-bold">"Belajar Masa, Jadi Hebat!"</span></p>
+                        <p class="text-slate-600 text-sm mb-6 font-medium">Year 1 Mathematics – Time<br><span class="text-rose-500 font-bold">"Learn to Tell the Time!"</span></p>
                         
                         <div class="flex bg-amber-50 p-1.5 rounded-2xl mb-6 border border-amber-200">
-                            <button id="tab-login-btn" onclick="app.switchAuthTab('login')" class="flex-1 py-2.5 rounded-xl font-bold text-sm transition bg-white text-amber-600 shadow-sm">Login Akaun</button>
-                            <button id="tab-daftar-btn" onclick="app.switchAuthTab('daftar')" class="flex-1 py-2.5 rounded-xl font-bold text-sm transition text-slate-500 hover:text-amber-600">Daftar Baru</button>
+                            <button id="tab-login-btn" onclick="app.switchAuthTab('login')" class="flex-1 py-2.5 rounded-xl font-bold text-sm transition bg-white text-amber-600 shadow-sm">Log In</button>
+                            <button id="tab-daftar-btn" onclick="app.switchAuthTab('daftar')" class="flex-1 py-2.5 rounded-xl font-bold text-sm transition text-slate-500 hover:text-amber-600">Register</button>
                         </div>
 
                         <!-- Borang Login -->
                         <div id="form-login" class="space-y-4 text-left">
                             <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1">NAMA PENGGUNA</label>
-                                <input type="text" id="login-username" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 font-medium text-sm" placeholder="cth: aiman123">
+                                <label class="block text-xs font-bold text-slate-600 mb-1">USERNAME</label>
+                                <input type="text" id="login-username" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 font-medium text-sm" placeholder="e.g. aiman123">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1">KATA LALUAN</label>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">PASSWORD</label>
                                 <input type="password" id="login-password" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 font-medium text-sm" placeholder="••••••••">
                             </div>
                             <button onclick="app.prosesLogin()" class="w-full py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-white font-bold rounded-xl shadow-lg transform active:scale-95 transition text-base">
@@ -541,19 +541,19 @@
                         <!-- Borang Daftar -->
                         <div id="form-daftar" class="space-y-4 text-left hidden">
                             <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1">NAMA PENUH MURID</label>
-                                <input type="text" id="daftar-nama" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-400 font-medium text-sm" placeholder="cth: Aiman Hakim">
+                                <label class="block text-xs font-bold text-slate-600 mb-1">PUPIL’S FULL NAME</label>
+                                <input type="text" id="daftar-nama" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-400 font-medium text-sm" placeholder="e.g. Aiman Hakim">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1">NAMA PENGGUNA UNIK</label>
-                                <input type="text" id="daftar-username" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-400 font-medium text-sm" placeholder="cth: aiman123">
+                                <label class="block text-xs font-bold text-slate-600 mb-1">CHOOSE A USERNAME</label>
+                                <input type="text" id="daftar-username" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-400 font-medium text-sm" placeholder="e.g. aiman123">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1">KATA LALUAN</label>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">PASSWORD</label>
                                 <input type="password" id="daftar-password" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-400 font-medium text-sm" placeholder="••••••••">
                             </div>
                             <button onclick="app.prosesDaftar()" class="w-full py-3.5 bg-gradient-to-r from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-bold rounded-xl shadow-lg transform active:scale-95 transition text-base">
-                                ✨ DAFTAR AKAUN BARU
+                                ✨ CREATE ACCOUNT
                             </button>
                         </div>
                         <div id="auth-msg" class="mt-4 text-xs font-bold text-rose-600"></div>
@@ -590,7 +590,7 @@
                 const msg = document.getElementById('auth-msg');
 
                 if (!u || !p) {
-                    msg.innerText = "Sila isi nama pengguna dan kata laluan!";
+                    msg.innerText = "Enter your username and password.";
                     return;
                 }
 
@@ -600,7 +600,7 @@
                     this.currentView = 'menu';
                     this.render();
                 } else {
-                    msg.innerText = "Nama pengguna atau kata laluan tidak sah!";
+                    msg.innerText = "Incorrect username or password!";
                 }
             }
 
@@ -612,12 +612,12 @@
                 const msg = document.getElementById('auth-msg');
 
                 if (!nama || !u || !p) {
-                    msg.innerText = "Sila lengkapkan semua medan pendaftaran!";
+                    msg.innerText = "Complete all the registration fields.";
                     return;
                 }
 
                 if (this.users.some(x => x.username === u)) {
-                    msg.innerText = "Nama pengguna telah wujud! Sila guna nama lain.";
+                    msg.innerText = "That username is taken. Please choose another.";
                     return;
                 }
 
@@ -628,7 +628,7 @@
                     totalSoalanDijawab: 0,
                     totalBetul: 0,
                     totalSalah: 0,
-                    totalMarkah: 0,
+                    totalScore: 0,
                     skorTertinggi: 0,
                     topikSelesai: [],
                     tahapSelesai: [],
@@ -658,17 +658,17 @@
                                 Selamat datang, ${this.currentUser.nama}! 👋
                             </span>
                         </div>
-                        <h2 class="font-fredoka text-3xl font-bold text-slate-800 mb-2">MENU UTAMA EDU KIDZ</h2>
-                        <p class="text-slate-500 text-sm mb-6">Pilih aktiviti pembelajaran seronok di bawah:</p>
+                        <h2 class="font-fredoka text-3xl font-bold text-slate-800 mb-2">EDU KIDZ HOME</h2>
+                        <p class="text-slate-500 text-sm mb-6">Choose an activity below.</p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
                             <button onclick="app.navigasiKeTopik()" class="p-5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-white rounded-2xl shadow-lg font-bold text-lg flex items-center justify-center space-x-3 transform active:scale-95 transition">
                                 <span class="text-2xl">🎮</span>
-                                <span>MULA BERMAIN</span>
+                                <span>START PLAYING</span>
                             </button>
                             <button onclick="app.pilihTopikLangsung()" class="p-5 bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 text-white rounded-2xl shadow-lg font-bold text-lg flex items-center justify-center space-x-3 transform active:scale-95 transition">
                                 <span class="text-2xl">📚</span>
-                                <span>PILIH TOPIK</span>
+                                <span>CHOOSE A TOPIC</span>
                             </button>
                             <button onclick="app.bukaLeaderboard()" class="p-5 bg-gradient-to-r from-emerald-400 to-emerald-500 hover:from-emerald-500 hover:to-emerald-600 text-white rounded-2xl shadow-lg font-bold text-lg flex items-center justify-center space-x-3 transform active:scale-95 transition">
                                 <span class="text-2xl">🏆</span>
@@ -676,13 +676,13 @@
                             </button>
                             <button onclick="app.bukaProgress()" class="p-5 bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 text-white rounded-2xl shadow-lg font-bold text-lg flex items-center justify-center space-x-3 transform active:scale-95 transition">
                                 <span class="text-2xl">📊</span>
-                                <span>PROGRESS SAYA</span>
+                                <span>MY PROGRESS</span>
                             </button>
                         </div>
 
                         <div class="mt-6 flex justify-center space-x-4">
                             <button onclick="app.bukaTetapan()" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-sm transition">
-                                ⚙️ Tetapan Bunyi
+                                ⚙️ Sound Settings
                             </button>
                         </div>
                     </div>
@@ -705,23 +705,23 @@
                 this.navigasiKeTopik();
             }
 
-            // --- PILIH TOPIK ---
+            // --- CHOOSE A TOPIC ---
             renderTopikHTML() {
                 const topikList = [
-                    { id: 1, nama: "Kenali Jam dan Masa", ikon: "🕐", desc: "Mengenal jarum jam dan minit pada jam analog." },
-                    { id: 2, nama: "Padankan Gambarajah Jam", ikon: "⏰", desc: "Memadankan kedudukan jarum dengan waktu yang tepat." },
-                    { id: 3, nama: "Kenali Hari, Minggu dan Bulan", ikon: "📅", desc: "Hari dalam seminggu & bulan dalam setahun." },
-                    { id: 4, nama: "Lengkapkan Ayat Matematik", ikon: "📝", desc: "Aktiviti harian berdasarkan waktu pagi, petang, malam." },
-                    { id: 5, nama: "Soalan Penyelesaian Masalah", ikon: "🧠", desc: "Situasi harian melibatkan masa dan wang Malaysia." }
+                    { id: 1, nama: "Clocks and Time", ikon: "🕐", desc: "Identify the hour and minute hands on an analogue clock." },
+                    { id: 2, nama: "Matching Clock Diagrams", ikon: "⏰", desc: "Match the position of the hands to the correct time." },
+                    { id: 3, nama: "Days, Weeks and Months", ikon: "📅", desc: "Practise the days of the week and months of the year." },
+                    { id: 4, nama: "Complete the Number Sentence", ikon: "📝", desc: "Match daily activities to the time of day." },
+                    { id: 5, nama: "Word Problems", ikon: "🧠", desc: "Solve everyday problems involving time and Malaysian money." }
                 ];
 
                 let html = `
                     <div class="text-center">
                         <button onclick="app.navigasiKeMenu()" class="mb-4 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-4 py-2 rounded-xl transition inline-flex items-center space-x-1">
-                            <span>← Kembali ke Menu</span>
+                            <span>← Back to Menu</span>
                         </button>
-                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">PILIH TOPIK PEMBELAJARAN</h2>
-                        <p class="text-slate-500 text-sm mb-6">Pilih salah satu daripada 5 topik Matematik Tahun 1:</p>
+                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">CHOOSE A TOPIC</h2>
+                        <p class="text-slate-500 text-sm mb-6">Choose one of five Year 1 maths topics.</p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
                 `;
@@ -733,7 +733,7 @@
                                 ${t.ikon}
                             </div>
                             <div>
-                                <h3 class="font-fredoka font-bold text-amber-800 text-base">TOPIK ${t.id}: ${t.nama}</h3>
+                                <h3 class="font-fredoka font-bold text-amber-800 text-base">TOPIC ${t.id}: ${t.nama}</h3>
                                 <p class="text-xs text-slate-600">${t.desc}</p>
                             </div>
                         </div>
@@ -756,18 +756,18 @@
                 return `
                     <div class="text-center max-w-md mx-auto">
                         <button onclick="app.navigasiKeTopik()" class="mb-4 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-4 py-2 rounded-xl transition inline-flex items-center space-x-1">
-                            <span>← Kembali Pilih Topik</span>
+                            <span>← Back to Topics</span>
                         </button>
-                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">PILIH TAHAP KESUKARAN</h2>
-                        <p class="text-slate-500 text-sm mb-6">Pilih aras cabaran yang anda inginkan:</p>
+                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">CHOOSE A DIFFICULTY LEVEL</h2>
+                        <p class="text-slate-500 text-sm mb-6">Choose how challenging you want the game to be.</p>
 
                         <div class="space-y-4">
                             <button onclick="app.pilihTahap('Senang')" class="w-full p-4 bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-300 rounded-2xl flex items-center justify-between text-emerald-800 font-bold transition shadow-sm">
                                 <div class="flex items-center space-x-3">
                                     <span class="text-2xl">🟢</span>
                                     <div class="text-left">
-                                        <div class="text-base font-fredoka">SENANG</div>
-                                        <div class="text-xs font-normal text-slate-600">Mengingat & Memahami konsep asas</div>
+                                        <div class="text-base font-fredoka">EASY</div>
+                                        <div class="text-xs font-normal text-slate-600">Recall and understand the basics</div>
                                     </div>
                                 </div>
                                 <span class="text-lg">→</span>
@@ -777,8 +777,8 @@
                                 <div class="flex items-center space-x-3">
                                     <span class="text-2xl">🟡</span>
                                     <div class="text-left">
-                                        <div class="text-base font-fredoka">SEDERHANA</div>
-                                        <div class="text-xs font-normal text-slate-600">Memahami & Mengaplikasi</div>
+                                        <div class="text-base font-fredoka">MEDIUM</div>
+                                        <div class="text-xs font-normal text-slate-600">Understand and apply</div>
                                     </div>
                                 </div>
                                 <span class="text-lg">→</span>
@@ -788,8 +788,8 @@
                                 <div class="flex items-center space-x-3">
                                     <span class="text-2xl">🔴</span>
                                     <div class="text-left">
-                                        <div class="text-base font-fredoka">SUSAH</div>
-                                        <div class="text-xs font-normal text-slate-600">Penyelesaian masalah & Aplikasi harian</div>
+                                        <div class="text-base font-fredoka">HARD</div>
+                                        <div class="text-xs font-normal text-slate-600">Solve everyday problems</div>
                                     </div>
                                 </div>
                                 <span class="text-lg">→</span>
@@ -806,38 +806,38 @@
                 this.render();
             }
 
-            // --- PILIH MOD PERMAINAN ---
+            // --- CHOOSE A GAME MODE ---
             renderModHTML() {
                 return `
                     <div class="text-center max-w-md mx-auto">
                         <button onclick="app.currentView='tahap'; app.render();" class="mb-4 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-4 py-2 rounded-xl transition inline-flex items-center space-x-1">
-                            <span>← Kembali Tahap</span>
+                            <span>← Back to Difficulty</span>
                         </button>
-                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">PILIH MOD PERMAINAN</h2>
-                        <p class="text-slate-500 text-sm mb-6">Bagaimanakah anda ingin menjawab soalan?</p>
+                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">CHOOSE A GAME MODE</h2>
+                        <p class="text-slate-500 text-sm mb-6">How would you like to answer?</p>
 
                         <div class="space-y-3 text-left">
                             <button onclick="app.pilihMod('objektif')" class="w-full p-3.5 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl font-bold text-blue-800 flex items-center space-x-3 transition">
                                 <span class="text-xl">🎯</span>
                                 <div>
-                                    <div class="text-sm font-fredoka">OBJEKTIF</div>
-                                    <div class="text-xs font-normal text-slate-600">Pilih jawapan betul daripada 4 pilihan A, B, C, D</div>
+                                    <div class="text-sm font-fredoka">MULTIPLE CHOICE</div>
+                                    <div class="text-xs font-normal text-slate-600">Choose the correct answer from four options</div>
                                 </div>
                             </button>
 
                             <button onclick="app.pilihMod('isitempat')" class="w-full p-3.5 bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded-xl font-bold text-purple-800 flex items-center space-x-3 transition">
                                 <span class="text-xl">✍️</span>
                                 <div>
-                                    <div class="text-sm font-fredoka">ISI TEMPAT KOSONG & PADANAN</div>
-                                    <div class="text-xs font-normal text-slate-600">Lengkapkan jawapan ringkas atau padanan masa</div>
+                                    <div class="text-sm font-fredoka">FILL IN THE BLANK & MATCHING</div>
+                                    <div class="text-xs font-normal text-slate-600">Fill in a short answer or match times</div>
                                 </div>
                             </button>
 
                             <button onclick="app.pilihMod('campuran')" class="w-full p-3.5 bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-xl font-bold text-amber-800 flex items-center space-x-3 transition">
                                 <span class="text-xl">🌟</span>
                                 <div>
-                                    <div class="text-sm font-fredoka">MOD CAMPURAN (REKOMENDASI)</div>
-                                    <div class="text-xs font-normal text-slate-600">Gabungan pelbagai bentuk soalan menarik</div>
+                                    <div class="text-sm font-fredoka">MIXED MODE (RECOMMENDED)</div>
+                                    <div class="text-xs font-normal text-slate-600">A mix of question formats</div>
                                 </div>
                             </button>
                         </div>
@@ -852,28 +852,28 @@
                 this.render();
             }
 
-            // --- PILIH MASA MENJAWAB ---
+            // --- CHOOSE A TIME LIMIT ---
             renderMasaHTML() {
                 return `
                     <div class="text-center max-w-md mx-auto">
                         <button onclick="app.currentView='mod'; app.render();" class="mb-4 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-4 py-2 rounded-xl transition inline-flex items-center space-x-1">
-                            <span>← Kembali Mod</span>
+                            <span>← Back to Game Mode</span>
                         </button>
-                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">PILIH MASA MENJAWAB</h2>
-                        <p class="text-slate-500 text-sm mb-6">Pilih tempoh masa untuk setiap soalan:</p>
+                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">CHOOSE A TIME LIMIT</h2>
+                        <p class="text-slate-500 text-sm mb-6">Choose the time allowed per question.</p>
 
                         <div class="grid grid-cols-3 gap-3 mb-6">
                             <button onclick="app.mulakanPermainanAktif(30)" class="p-4 bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-300 rounded-2xl text-center font-bold text-emerald-800 transition shadow-sm">
                                 <div class="text-2xl mb-1">⏱️</div>
-                                <div class="text-sm font-fredoka">30 SAAT</div>
+                                <div class="text-sm font-fredoka">30 SECONDS</div>
                             </button>
                             <button onclick="app.mulakanPermainanAktif(60)" class="p-4 bg-amber-50 hover:bg-amber-100 border-2 border-amber-300 rounded-2xl text-center font-bold text-amber-800 transition shadow-sm">
                                 <div class="text-2xl mb-1">⏱️</div>
-                                <div class="text-sm font-fredoka">1 MINIT</div>
+                                <div class="text-sm font-fredoka">1 MINUTE</div>
                             </button>
                             <button onclick="app.mulakanPermainanAktif(0)" class="p-4 bg-purple-50 hover:bg-purple-100 border-2 border-purple-300 rounded-2xl text-center font-bold text-purple-800 transition shadow-sm">
                                 <div class="text-2xl mb-1">♾️</div>
-                                <div class="text-sm font-fredoka">TIADA HAD</div>
+                                <div class="text-sm font-fredoka">NO TIME LIMIT</div>
                             </button>
                         </div>
                     </div>
@@ -913,7 +913,7 @@
 
                     if (this.timeLeft <= 0) {
                         clearInterval(this.timerInterval);
-                        this.semakJawapan(null, true); // Masa tamat
+                        this.semakJawapan(null, true); // Time limit reached
                     }
                 }, 1000);
             }
@@ -948,9 +948,9 @@
                     gambarHTML = `
                         <div class="my-4 flex justify-center">
                             <div class="bg-white border-2 border-amber-300 rounded-2xl p-4 shadow-sm text-center w-48">
-                                <div class="bg-rose-500 text-white font-bold text-xs py-1 rounded-t-xl">KALENDAR EDU KIDZ</div>
+                                <div class="bg-rose-500 text-white font-bold text-xs py-1 rounded-t-xl">EDU KIDZ CALENDAR</div>
                                 <div class="py-3 font-fredoka font-bold text-xl text-amber-800">${q.imageDetails.text}</div>
-                                <div class="text-[10px] text-slate-400">Tahun 1 KPM</div>
+                                <div class="text-[10px] text-slate-400">KPM Year 1</div>
                             </div>
                         </div>
                     `;
@@ -958,7 +958,7 @@
                     gambarHTML = `
                         <div class="my-4 flex justify-center">
                             <div class="px-4 py-2 bg-sky-100 text-sky-800 font-bold rounded-2xl border border-sky-200 text-sm">
-                                🎒 Aktiviti: ${q.imageDetails.aktiviti}
+                                🎒 Activity: ${q.imageDetails.aktiviti}
                             </div>
                         </div>
                     `;
@@ -966,14 +966,14 @@
                     gambarHTML = `
                         <div class="my-4 flex justify-center space-x-2">
                             <div class="px-3 py-1.5 bg-emerald-100 text-emerald-800 font-bold rounded-xl border border-emerald-200 text-xs">💵 ${q.imageDetails.wang}</div>
-                            <div class="px-3 py-1.5 bg-amber-100 text-amber-800 font-bold rounded-xl border border-amber-200 text-xs">⏱️ Masa Tempoh</div>
+                            <div class="px-3 py-1.5 bg-amber-100 text-amber-800 font-bold rounded-xl border border-amber-200 text-xs">⏱️ Duration</div>
                         </div>
                     `;
                 }
 
                 let timerDisplayHTML = this.selectedTimeLimit > 0 ? `
                     <div class="flex justify-between items-center mb-4 bg-amber-50 px-4 py-2 rounded-xl border border-amber-200">
-                        <span class="text-xs font-bold text-amber-800">Masa: <span id="timer-text">${this.timeLeft}</span>s</span>
+                        <span class="text-xs font-bold text-amber-800">Time: <span id="timer-text">${this.timeLeft}</span>s</span>
                         <div class="w-32 bg-slate-200 h-2.5 rounded-full overflow-hidden">
                             <div id="timer-bar" class="bg-amber-500 h-full transition-all duration-1000" style="width: 100%"></div>
                         </div>
@@ -983,14 +983,14 @@
                 // Memastikan q.options sentiasa wujud & mempunyai pilihan jawapan selamat
                 const safeOptions = (q && q.options && q.options.length > 0) 
                     ? q.options 
-                    : [q.correctAnswer, "Pilihan A", "Pilihan B", "Pilihan C"].sort(() => Math.random() - 0.5);
+                    : [q.correctAnswer, "Option A", "Option B", "Option C"].sort(() => Math.random() - 0.5);
 
                 return `
                     <div>
                         <!-- Header Soalan -->
                         <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Soalan ${this.currentIndex + 1} / ${this.activeQuestions.length}</span>
-                            <span class="text-xs font-bold bg-rose-100 text-rose-800 px-3 py-1 rounded-full">⭐ Markah: ${this.score} / 100</span>
+                            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Question ${this.currentIndex + 1} / ${this.activeQuestions.length}</span>
+                            <span class="text-xs font-bold bg-rose-100 text-rose-800 px-3 py-1 rounded-full">⭐ Score: ${this.score} / 100</span>
                         </div>
 
                         ${timerDisplayHTML}
@@ -1038,7 +1038,7 @@
                     sound.playCorrect();
                     if (feedbackBox) {
                         feedbackBox.className = "text-center p-4 rounded-2xl font-bold text-sm mt-4 bg-emerald-100 text-emerald-800 border-2 border-emerald-300 animate-bounce-slow";
-                        feedbackBox.innerHTML = `🎉 Syabas! Jawapan kamu betul! (+5 markah)`;
+                        feedbackBox.innerHTML = `🎉 Well done! Your answer is correct! (+5 points)`;
                     }
                 } else {
                     this.wrongCount++;
@@ -1046,7 +1046,7 @@
                     sound.playWrong();
                     if (feedbackBox) {
                         feedbackBox.className = "text-center p-4 rounded-2xl font-bold text-sm mt-4 bg-rose-100 text-rose-800 border-2 border-rose-300";
-                        feedbackBox.innerHTML = isTimeout ? `⏰ Masa sudah tamat! <br>✅ Jawapan yang betul ialah: <b>${q.correctAnswer}</b>` : `❌ Cuba lagi! <br>✅ Jawapan yang betul ialah: <b>${q.correctAnswer}</b>`;
+                        feedbackBox.innerHTML = isTimeout ? `⏰ Time’s up! <br>✅ The correct answer is: <b>${q.correctAnswer}</b>` : `❌ Try again! <br>✅ The correct answer is: <b>${q.correctAnswer}</b>`;
                     }
                 }
 
@@ -1122,16 +1122,16 @@
                 let ikonPencapaian = "🏆";
 
                 if (finalScore >= 90) {
-                    mesejPencapaian = "Hebat! Kamu memang Juara Masa!";
+                    mesejPencapaian = "Great work! You’re a time champion!";
                     ikonPencapaian = "🏆";
                 } else if (finalScore >= 70) {
-                    mesejPencapaian = "Bagus! Teruskan berlatih!";
+                    mesejPencapaian = "Well done! Keep practising!";
                     ikonPencapaian = "🌟";
                 } else if (finalScore >= 50) {
-                    mesejPencapaian = "Bagus! Cuba lagi untuk skor lebih tinggi!";
+                    mesejPencapaian = "Good work! Try again to improve your score!";
                     ikonPencapaian = "👍";
                 } else {
-                    mesejPencapaian = "Jangan putus asa! Mari cuba lagi!";
+                    mesejPencapaian = "Keep going! Have another go!";
                     ikonPencapaian = "💪";
                 }
 
@@ -1140,12 +1140,12 @@
                 return `
                     <div class="text-center max-w-lg mx-auto py-2">
                         <div class="text-5xl mb-2 animate-bounce-slow">${ikonPencapaian}</div>
-                        <h2 class="font-fredoka text-3xl font-bold text-amber-600 mb-1">PERMAINAN TAMAT!</h2>
+                        <h2 class="font-fredoka text-3xl font-bold text-amber-600 mb-1">GAME COMPLETE!</h2>
                         <p class="text-slate-600 font-bold text-base mb-4">${mesejPencapaian}</p>
 
                         <!-- Kad Skor Utama (Markah Keseluruhan Set Ini) -->
                         <div class="bg-gradient-to-br from-amber-100 to-amber-200 border-4 border-amber-300 rounded-3xl p-6 shadow-md mb-6">
-                            <div class="text-xs font-extrabold tracking-wider text-amber-800 uppercase mb-1">MARKAH KESELURUHAN SET INI</div>
+                            <div class="text-xs font-extrabold tracking-wider text-amber-800 uppercase mb-1">TOTAL SCORE FOR THIS GAME</div>
                             <div class="font-fredoka text-6xl font-extrabold text-amber-600 drop-shadow-sm mb-2">
                                 ${finalScore} <span class="text-2xl font-bold text-slate-600">/ 100</span>
                             </div>
@@ -1157,15 +1157,15 @@
                         <!-- Ringkasan Statistik -->
                         <div class="grid grid-cols-3 gap-3 mb-6">
                             <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-2xl">
-                                <div class="text-xs font-bold text-emerald-700">BETUL</div>
+                                <div class="text-xs font-bold text-emerald-700">CORRECT</div>
                                 <div class="font-fredoka text-xl font-bold text-emerald-800">${this.correctCount} / ${totalQ}</div>
                             </div>
                             <div class="p-3 bg-rose-50 border border-rose-200 rounded-2xl">
-                                <div class="text-xs font-bold text-rose-700">SALAH</div>
+                                <div class="text-xs font-bold text-rose-700">INCORRECT</div>
                                 <div class="font-fredoka text-xl font-bold text-rose-800">${this.wrongCount}</div>
                             </div>
                             <div class="p-3 bg-purple-50 border border-purple-200 rounded-2xl">
-                                <div class="text-xs font-bold text-purple-700">JUMLAH AKAUN</div>
+                                <div class="text-xs font-bold text-purple-700">ACCOUNT TOTAL</div>
                                 <div class="font-fredoka text-xl font-bold text-purple-800">${totalUserMarkah} pts</div>
                             </div>
                         </div>
@@ -1189,7 +1189,7 @@
                 `;
             }
 
-            // --- PAPARAN PROGRESS SAYA ---
+            // --- PAPARAN MY PROGRESS ---
             bukaProgress() {
                 sound.playClick();
                 this.currentView = 'progress';
@@ -1200,42 +1200,42 @@
                 if (!this.currentUser) return '';
                 const u = this.currentUser;
 
-                const lencanaList = u.lencana && u.lencana.length > 0 ? u.lencana : ['Belum ada lencana lagi. Mari bermain!'];
+                const lencanaList = u.lencana && u.lencana.length > 0 ? u.lencana : ['Play to earn your first badge!'];
 
                 return `
                     <div class="max-w-md mx-auto">
                         <button onclick="app.navigasiKeMenu()" class="mb-4 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-4 py-2 rounded-xl transition inline-flex items-center space-x-1">
-                            <span>← Kembali ke Menu</span>
+                            <span>← Back to Menu</span>
                         </button>
-                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1 text-center">📊 PROGRESS SAYA</h2>
-                        <p class="text-slate-500 text-xs text-center mb-6">Rekod pencapaian peribadi ${u.nama}</p>
+                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1 text-center">📊 MY PROGRESS</h2>
+                        <p class="text-slate-500 text-xs text-center mb-6">Personal progress for ${u.nama}</p>
 
                         <div class="bg-white border-2 border-amber-200 rounded-2xl p-4 shadow-sm mb-4 space-y-3">
                             <div class="flex justify-between border-b pb-2 text-sm">
-                                <span class="text-slate-500 font-medium">Jumlah Soalan Dijawab:</span>
+                                <span class="text-slate-500 font-medium">Questions Answered:</span>
                                 <span class="font-bold text-amber-600">${u.totalSoalanDijawab}</span>
                             </div>
                             <div class="flex justify-between border-b pb-2 text-sm">
-                                <span class="text-slate-500 font-medium">Jumlah Jawapan Betul:</span>
+                                <span class="text-slate-500 font-medium">Correct Answers:</span>
                                 <span class="font-bold text-emerald-600">${u.totalBetul}</span>
                             </div>
                             <div class="flex justify-between border-b pb-2 text-sm">
-                                <span class="text-slate-500 font-medium">Jumlah Jawapan Salah:</span>
+                                <span class="text-slate-500 font-medium">Incorrect Answers:</span>
                                 <span class="font-bold text-rose-600">${u.totalSalah}</span>
                             </div>
                             <div class="flex justify-between border-b pb-2 text-sm">
-                                <span class="text-slate-500 font-medium">Jumlah Markah Terkumpul:</span>
+                                <span class="text-slate-500 font-medium">Total Points:</span>
                                 <span class="font-bold text-purple-600">${u.totalMarkah} pts</span>
                             </div>
                             <div class="flex justify-between text-sm">
-                                <span class="text-slate-500 font-medium">Skor Tertinggi Set:</span>
+                                <span class="text-slate-500 font-medium">Best Game Score:</span>
                                 <span class="font-bold text-amber-600">${u.skorTertinggi} / 100</span>
                             </div>
                         </div>
 
-                        <h3 class="font-fredoka text-base font-bold text-slate-800 mb-2">🎖️ Lencana Pencapaian:</h3>
+                        <h3 class="font-fredoka text-base font-bold text-slate-800 mb-2">🎖️ Achievement Badges:</h3>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            ${lencanaList.map(l => `<span class="px-3 py-1.5 bg-amber-100 text-amber-800 text-xs font-bold rounded-full border border-amber-300 shadow-sm">${l}</span>`).join('')}
+                            ${lencanaList.map(l => `<span class="px-3 py-1.5 bg-amber-100 text-amber-800 text-xs font-bold rounded-full border border-amber-300 shadow-sm">${l === '🏅 Jam Hebat' ? '🏅 Clock Star' : l === '🏅 Pakar Masa' ? '🏅 Time Expert' : l === '🏅 Juara Kalendar' ? '🏅 Calendar Champion' : l === '🏆 Master Masa' ? '🏆 Time Master' : l}</span>`).join('')}
                         </div>
                     </div>
                 `;
@@ -1254,13 +1254,13 @@
                 return `
                     <div class="max-w-md mx-auto">
                         <button onclick="app.navigasiKeMenu()" class="mb-4 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-4 py-2 rounded-xl transition inline-flex items-center space-x-1">
-                            <span>← Kembali ke Menu</span>
+                            <span>← Back to Menu</span>
                         </button>
                         <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1 text-center">🏆 LEADERBOARD</h2>
-                        <p class="text-slate-500 text-xs text-center mb-6">Kedudukan markah tertinggi pemain Edu Kidz</p>
+                        <p class="text-slate-500 text-xs text-center mb-6">EDU KIDZ player rankings</p>
 
                         <div class="space-y-2">
-                            ${sorted.length === 0 ? '<p class="text-center text-xs text-slate-400">Belum ada rekod pemain.</p>' : ''}
+                            ${sorted.length === 0 ? '<p class="text-center text-xs text-slate-400">No player scores yet.</p>' : ''}
                             ${sorted.map((usr, idx) => {
                                 let medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `#${idx + 1}`;
                                 let isCurrent = this.currentUser && this.currentUser.username === usr.username;
@@ -1269,7 +1269,7 @@
                                         <div class="flex items-center space-x-3">
                                             <span class="font-bold text-lg w-8 text-center">${medal}</span>
                                             <div>
-                                                <div class="font-bold text-sm text-slate-800">${usr.nama} ${isCurrent ? '(Saya)' : ''}</div>
+                                                <div class="font-bold text-sm text-slate-800">${usr.nama} ${isCurrent ? '(You)' : ''}</div>
                                                 <div class="text-[10px] text-slate-500">@${usr.username}</div>
                                             </div>
                                         </div>
@@ -1295,16 +1295,16 @@
                 return `
                     <div class="max-w-md mx-auto text-center">
                         <button onclick="app.navigasiKeMenu()" class="mb-4 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-4 py-2 rounded-xl transition inline-flex items-center space-x-1">
-                            <span>← Kembali ke Menu</span>
+                            <span>← Back to Menu</span>
                         </button>
-                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">⚙️ TETAPAN APLIKASI</h2>
-                        <p class="text-slate-500 text-xs mb-6">Laraskan tetapan audio dan permainan:</p>
+                        <h2 class="font-fredoka text-2xl font-bold text-slate-800 mb-1">⚙️ APP SETTINGS</h2>
+                        <p class="text-slate-500 text-xs mb-6">Adjust the sound and game settings.</p>
 
                         <div class="bg-white border border-slate-200 rounded-2xl p-4 space-y-4 mb-6">
                             <div class="flex items-center justify-between">
-                                <span class="font-bold text-sm text-slate-700">Kesan Bunyi (Sound FX)</span>
+                                <span class="font-bold text-sm text-slate-700">Sound Effects</span>
                                 <button onclick="sound.enabled = !sound.enabled; app.render();" class="px-4 py-2 rounded-xl font-bold text-xs ${sound.enabled ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'} transition">
-                                    ${sound.enabled ? '🔊 AKTIF' : '🔇 MATI'}
+                                    ${sound.enabled ? '🔊 ON' : '🔇 OFF'}
                                 </button>
                             </div>
                         </div>

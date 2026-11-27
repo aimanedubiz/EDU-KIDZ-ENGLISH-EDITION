@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATH KIDS – EDU KIDZ: Matematik Tahun 2 (Wang)</title>
+    <title>MATH KIDS – EDU KIDZ: Year 2 Mathematics (Money)</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Fredoka & Inter -->
@@ -64,10 +64,10 @@
         <header id="top-nav" class="bg-indigo-600 text-white px-6 py-4 flex items-center justify-between shadow-md hidden">
             <div class="flex items-center space-x-3">
                 <button onclick="goHome()" class="bg-white/20 hover:bg-white/30 p-2.5 rounded-2xl transition font-bold flex items-center space-x-1 text-sm">
-                    <i class="fa-solid fa-house"></i> <span class="hidden sm:inline">Menu Utama</span>
+                    <i class="fa-solid fa-house"></i> <span class="hidden sm:inline">Home</span>
                 </button>
                 <button onclick="goBack()" class="bg-white/20 hover:bg-white/30 p-2.5 rounded-2xl transition font-bold flex items-center space-x-1 text-sm">
-                    <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Kembali</span>
+                    <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Back</span>
                 </button>
             </div>
             
@@ -82,7 +82,7 @@
                 </div>
                 <div class="hidden sm:flex items-center space-x-2 bg-indigo-700 px-3 py-1.5 rounded-full text-sm font-semibold">
                     <i class="fa-solid fa-user-circle text-amber-300"></i>
-                    <span id="nav-username">Pemain</span>
+                    <span id="nav-username">Player</span>
                 </div>
             </div>
         </header>
@@ -97,10 +97,10 @@
     <div id="modal-container" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div id="modal-box" class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center transform scale-95 transition-all">
             <div id="modal-icon" class="text-5xl mb-3 text-indigo-600">🎉</div>
-            <h3 id="modal-title" class="text-2xl font-bold text-slate-800 mb-2">Hebat!</h3>
-            <p id="modal-message" class="text-slate-600 mb-6">Mesej di sini...</p>
+            <h3 id="modal-title" class="text-2xl font-bold text-slate-800 mb-2">Great work!</h3>
+            <p id="modal-message" class="text-slate-600 mb-6">Message…</p>
             <button onclick="closeModal()" class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-2xl shadow-lg transition transform hover:scale-[1.02]">
-                Teruskan
+                Continue
             </button>
         </div>
     </div>
@@ -163,7 +163,7 @@
                 nav.classList.remove('hidden');
                 document.getElementById('nav-coins').innerText = gameState.user ? gameState.user.coins : 0;
                 document.getElementById('nav-score').innerText = gameState.user ? gameState.user.score : 0;
-                document.getElementById('nav-username').innerText = gameState.user ? gameState.user.name : 'Pemain';
+                document.getElementById('nav-username').innerText = gameState.user ? gameState.user.name : 'Player';
             }
 
             const main = document.getElementById('main-content');
@@ -239,22 +239,22 @@
                     <h1 class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 mb-2">
                         MATH KIDS
                     </h1>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-700 mb-6">Matematik Tahun 2 – Wang 🇲🇾</h2>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-700 mb-6">Year 2 Mathematics – Money 🇲🇾</h2>
                     
                     <div class="flex flex-wrap justify-center gap-3 max-w-lg mb-8 text-xs sm:text-sm font-semibold text-slate-600">
-                        <span class="bg-indigo-50 border border-indigo-200 px-3 py-1.5 rounded-xl"><i class="fa-solid fa-coins text-amber-500 mr-1"></i> Syiling & Wang Kertas</span>
-                        <span class="bg-purple-50 border border-purple-200 px-3 py-1.5 rounded-xl"><i class="fa-solid fa-shop text-purple-500 mr-1"></i> Kedai & Pasar Mini</span>
-                        <span class="bg-pink-50 border border-pink-200 px-3 py-1.5 rounded-xl"><i class="fa-solid fa-gamepad text-pink-500 mr-1"></i> 4 Cara Bermain</span>
+                        <span class="bg-indigo-50 border border-indigo-200 px-3 py-1.5 rounded-xl"><i class="fa-solid fa-coins text-amber-500 mr-1"></i> Coins and Banknotes</span>
+                        <span class="bg-purple-50 border border-purple-200 px-3 py-1.5 rounded-xl"><i class="fa-solid fa-shop text-purple-500 mr-1"></i> Shops and Markets</span>
+                        <span class="bg-pink-50 border border-pink-200 px-3 py-1.5 rounded-xl"><i class="fa-solid fa-gamepad text-pink-500 mr-1"></i> 4 Ways to Play</span>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
                         <button onclick="startAuthFlow('register')" class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition transform hover:scale-105 flex items-center justify-center space-x-2 text-lg">
                             <i class="fa-solid fa-user-plus"></i>
-                            <span>DAFTAR PEMAIN</span>
+                            <span>REGISTER PLAYER</span>
                         </button>
                         <button onclick="startAuthFlow('login')" class="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition transform hover:scale-105 flex items-center justify-center space-x-2 text-lg">
                             <i class="fa-solid fa-right-to-bracket"></i>
-                            <span>LOG MASUK</span>
+                            <span>LOG IN</span>
                         </button>
                     </div>
                 </div>
@@ -276,25 +276,25 @@
             return `
                 <div class="bg-emerald-50 border-2 border-emerald-200 p-6 rounded-3xl shadow-md w-full max-w-md mx-auto">
                     <h3 class="text-2xl font-bold text-emerald-800 mb-2 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-user-plus"></i> Daftar Pemain Baru
+                        <i class="fa-solid fa-user-plus"></i> Register a New Player
                     </h3>
-                    <p class="text-emerald-600 text-sm mb-4">Mulakan pengembaraan Matematik Wang anda!</p>
+                    <p class="text-emerald-600 text-sm mb-4">Start your Money Adventure!</p>
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Penuh Murid:</label>
-                            <input type="text" id="reg-name" placeholder="Cth: Aminah Binti Ahmad" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800">
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Pupil’s Full Name:</label>
+                            <input type="text" id="reg-name" placeholder="e.g. Aminah Binti Ahmad" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Pengguna (Username):</label>
-                            <input type="text" id="reg-username" placeholder="Cth: aminah2026" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800">
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Username:</label>
+                            <input type="text" id="reg-username" placeholder="e.g. aminah2026" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800">
                         </div>
                         <button onclick="handleRegister()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition transform hover:scale-[1.02]">
-                            DAFTAR SEKARANG
+                            REGISTER NOW
                         </button>
                     </div>
                     <div class="mt-4 text-center">
                         <button onclick="startAuthFlow('login')" class="text-sm font-semibold text-indigo-600 hover:underline">
-                            Sudah ada akaun? Log masuk di sini
+                            Already have an account? Log in here
                         </button>
                     </div>
                 </div>
@@ -307,33 +307,33 @@
             
             let userListHTML = usernames.length > 0 ? `
                 <div class="mb-4">
-                    <label class="block text-sm font-semibold text-slate-700 mb-1">Pilih Akaun Tersimpan:</label>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Choose a Saved Account:</label>
                     <select id="login-select" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none text-slate-800 bg-white">
-                        <option value="">-- Pilih Nama Pengguna --</option>
+                        <option value="">-- Choose a Username --</option>
                         ${usernames.map(u => `<option value="${u}">${db[u].name} (${u})</option>`).join('')}
                     </select>
                 </div>
-            ` : `<p class="text-sm text-amber-600 bg-amber-50 p-3 rounded-xl mb-4">Tiada akaun tersimpan pada peranti ini. Sila daftar dahulu.</p>`;
+            ` : `<p class="text-sm text-amber-600 bg-amber-50 p-3 rounded-xl mb-4">There are no saved accounts on this device. Create an account first.</p>`;
 
             return `
                 <div class="bg-indigo-50 border-2 border-indigo-200 p-6 rounded-3xl shadow-md w-full max-w-md mx-auto">
                     <h3 class="text-2xl font-bold text-indigo-800 mb-2 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-right-to-bracket"></i> Log Masuk Pemain
+                        <i class="fa-solid fa-right-to-bracket"></i> Log Masuk Player
                     </h3>
-                    <p class="text-indigo-600 text-sm mb-4">Teruskan pengembaraan Wang anda!</p>
+                    <p class="text-indigo-600 text-sm mb-4">Continue your Money Adventure!</p>
                     <div class="space-y-4">
                         ${userListHTML}
                         <div>
-                            <label class="block text-sm font-semibold text-slate-700 mb-1">Atau Masukkan Nama Pengguna:</label>
-                            <input type="text" id="login-username" placeholder="Cth: aminah2026" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none text-slate-800">
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Or enter your username:</label>
+                            <input type="text" id="login-username" placeholder="e.g. aminah2026" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none text-slate-800">
                         </div>
                         <button onclick="handleLogin()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-2xl shadow-lg transition transform hover:scale-[1.02]">
-                            LOG MASUK
+                            LOG IN
                         </button>
                     </div>
                     <div class="mt-4 text-center">
                         <button onclick="startAuthFlow('register')" class="text-sm font-semibold text-emerald-600 hover:underline">
-                            Belum ada akaun? Daftar pemain baharu
+                            Need an account? Register here
                         </button>
                     </div>
                 </div>
@@ -344,7 +344,7 @@
             container.innerHTML = `
                 <div class="flex-1 flex flex-col items-center justify-center p-4">
                     <button onclick="goHome()" class="self-start mb-4 text-indigo-600 font-bold hover:underline flex items-center gap-1">
-                        <i class="fa-solid fa-arrow-left"></i> Kembali ke Halaman Utama
+                        <i class="fa-solid fa-arrow-left"></i> Back ke Halaman Utama
                     </button>
                     <div id="auth-form-container" class="w-full"></div>
                 </div>
@@ -356,13 +356,13 @@
             const username = document.getElementById('reg-username').value.trim().toLowerCase();
             
             if (!name || !username) {
-                showModal('Ralat Pendaftaran', 'Sila isi nama penuh dan nama pengguna!', '⚠️');
+                showModal('Registration Error', 'Enter your full name and username.', '⚠️');
                 return;
             }
 
             const db = getUsersDB();
             if (db[username]) {
-                showModal('Nama Pengguna Wujud', 'Nama pengguna ini telah didaftarkan. Sila pilih nama lain atau log masuk.', '⚠️');
+                showModal('Username Taken', 'This username is taken. Choose another or log in.', '⚠️');
                 return;
             }
 
@@ -382,7 +382,7 @@
             gameState.user = db[username];
             gameState.currentScreen = 'dashboard';
             renderScreen();
-            showModal('Pendaftaran Berjaya! 🎉', `Selamat datang, ${name}! Anda mendapat 50 coin percuma!`, '🌟');
+            showModal('Account Created! 🎉', `Welcome, ${name}! You get 50 free coins!`, '🌟');
         }
 
         function handleLogin() {
@@ -394,20 +394,20 @@
             }
 
             if (!username) {
-                showModal('Ralat Log Masuk', 'Sila pilih atau masukkan nama pengguna!', '⚠️');
+                showModal('Login Error', 'Choose or enter a username.', '⚠️');
                 return;
             }
 
             const db = getUsersDB();
             if (!db[username]) {
-                showModal('Tidak Ditemui', 'Nama pengguna tidak dijumpai. Sila daftar terlebih dahulu.', '❌');
+                showModal('Account Not Found', 'That username was not found. Create an account first.', '❌');
                 return;
             }
 
             gameState.user = db[username];
             gameState.currentScreen = 'dashboard';
             renderScreen();
-            showModal('Selamat Kembali! 👋', `Hai ${gameState.user.name}, jom teruskan belajar topik Wang!`, '✨');
+            showModal('Welcome Back! 👋', `Hello ${gameState.user.name}, let’s keep learning about money!`, '✨');
         }
 
         function renderDashboardScreen(container) {
@@ -419,19 +419,19 @@
                     <!-- Welcome Box -->
                     <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6 rounded-3xl shadow-lg mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div>
-                            <span class="bg-amber-400 text-amber-950 text-xs font-bold px-3 py-1 rounded-full uppercase">Tahun 2 Wang</span>
-                            <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Selamat datang, ${user.name}!</h2>
-                            <p class="text-indigo-100 text-sm">Mari jadi bijak menguruskan wang bersama Edu Kidz!</p>
+                            <span class="bg-amber-400 text-amber-950 text-xs font-bold px-3 py-1 rounded-full uppercase">Year 2 Money</span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Welcome, ${user.name}!</h2>
+                            <p class="text-indigo-100 text-sm">Learn to use money with EDU KIDZ!</p>
                         </div>
                         <div class="flex gap-3 bg-white/10 p-3 rounded-2xl backdrop-blur-sm">
                             <div class="text-center px-3">
                                 <div class="text-2xl font-extrabold text-amber-300">🪙 ${user.coins}</div>
-                                <div class="text-xs text-indigo-200">Coin</div>
+                                <div class="text-xs text-indigo-200">Coins</div>
                             </div>
                             <div class="border-r border-white/20"></div>
                             <div class="text-center px-3">
                                 <div class="text-2xl font-extrabold text-amber-300">⭐ ${user.score}</div>
-                                <div class="text-xs text-indigo-200">Markah</div>
+                                <div class="text-xs text-indigo-200">Points</div>
                             </div>
                         </div>
                     </div>
@@ -439,7 +439,7 @@
                     <!-- Progress Bar Section -->
                     <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl mb-6 shadow-sm">
                         <div class="flex justify-between items-center mb-2 font-bold text-sm text-slate-700">
-                            <span>📈 Progress Keseluruhan Wang</span>
+                            <span>📈 Overall Money Progress</span>
                             <span class="text-indigo-600">${progressPct}%</span>
                         </div>
                         <div class="w-full bg-slate-200 h-4 rounded-full overflow-hidden">
@@ -451,7 +451,7 @@
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
                         <button onclick="navigateTo('topics')" class="bg-gradient-to-br from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white p-5 rounded-3xl shadow-md transition transform hover:scale-105 flex flex-col items-center text-center">
                             <i class="fa-solid fa-play text-3xl mb-2 text-emerald-200"></i>
-                            <span class="font-bold text-sm">PILIH TOPIK</span>
+                            <span class="font-bold text-sm">CHOOSE A TOPIC</span>
                         </button>
                         <button onclick="navigateTo('leaderboard')" class="bg-gradient-to-br from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white p-5 rounded-3xl shadow-md transition transform hover:scale-105 flex flex-col items-center text-center">
                             <i class="fa-solid fa-trophy text-3xl mb-2 text-amber-200"></i>
@@ -463,13 +463,13 @@
                         </button>
                         <button onclick="navigateTo('achievements')" class="bg-gradient-to-br from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white p-5 rounded-3xl shadow-md transition transform hover:scale-105 flex flex-col items-center text-center">
                             <i class="fa-solid fa-medal text-3xl mb-2 text-purple-200"></i>
-                            <span class="font-bold text-sm">PENCAPAIAN</span>
+                            <span class="font-bold text-sm">ACHIEVEMENTS</span>
                         </button>
                     </div>
 
                     <div class="text-center mt-auto">
                         <button onclick="handleLogout()" class="text-slate-500 hover:text-red-600 text-sm font-semibold transition">
-                            <i class="fa-solid fa-right-from-bracket mr-1"></i> Tukar Pemain / Log Keluar
+                            <i class="fa-solid fa-right-from-bracket mr-1"></i> Tukar Player / Log Keluar
                         </button>
                     </div>
                 </div>
@@ -488,22 +488,22 @@
         }
 
         const topicsList = [
-            { id: 1, title: 'Kenali Mata Wang Malaysia', icon: '🪙', desc: 'Kenal pasti syiling & wang kertas Malaysia dengan tepat.' },
-            { id: 2, title: 'Nilai Wang', icon: '💰', desc: 'Nyatakan jumlah nilai gabungan wang dan syiling.' },
-            { id: 3, title: 'Tambah Wang', icon: '➕', desc: 'Operasi tambah nilai wang & harga barangan kedai.' },
-            { id: 4, title: 'Tolak Wang', icon: '➖', desc: 'Kira baki wang selepas pembelian barangan.' },
-            { id: 5, title: 'Darab Wang', icon: '✖️', desc: 'Konsep darab mudah nilai wang dengan kuantiti.' },
-            { id: 6, title: 'Bahagi Wang', icon: '➗', desc: 'Membahagi nilai wang sama rata kepada rakan.' },
-            { id: 7, title: 'Lengkapkan Ayat Matematik', icon: '🧩', desc: 'Selesaikan ayat matematik wang yang kosong.' },
-            { id: 8, title: 'Penyelesaian Masalah', icon: '🛒', desc: 'Situasi cerita harian di kantin, tabung & kedai buku.' }
+            { id: 1, title: 'Recognising Malaysian Money', icon: '🪙', desc: 'Identify Malaysian coins and banknotes.' },
+            { id: 2, title: 'Value of Money', icon: '💰', desc: 'Find the total value of a group of coins and banknotes.' },
+            { id: 3, title: 'Adding Money', icon: '➕', desc: 'Add prices and amounts of money.' },
+            { id: 4, title: 'Subtracting Money', icon: '➖', desc: 'Work out change after a purchase.' },
+            { id: 5, title: 'Multiplying Money', icon: '✖️', desc: 'Multiply a price by the number of items.' },
+            { id: 6, title: 'Dividing Money', icon: '➗', desc: 'Share an amount of money equally.' },
+            { id: 7, title: 'Completing Number Sentences', icon: '🧩', desc: 'Fill in the missing amount.' },
+            { id: 8, title: 'Word Problems', icon: '🛒', desc: 'Solve everyday shopping and saving problems.' }
         ];
 
         function renderTopicsScreen(container) {
             container.innerHTML = `
                 <div class="flex-1 flex flex-col max-w-4xl mx-auto w-full py-4">
                     <div class="text-center mb-6">
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">📚 Pilih Topik Matematik Wang</h2>
-                        <p class="text-slate-500 text-sm">Pilih salah satu daripada 8 topik menarik di bawah</p>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">📚 Choose a Money Topic</h2>
+                        <p class="text-slate-500 text-sm">Choose one of eight topics below.</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
@@ -515,7 +515,7 @@
                                     <p class="text-slate-500 text-xs">${t.desc}</p>
                                 </div>
                                 <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full">PILIH</span>
+                                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full">CHOOSE</span>
                                     <i class="fa-solid fa-arrow-right text-indigo-500 group-hover:translate-x-1 transition"></i>
                                 </div>
                             </div>
@@ -532,10 +532,10 @@
         }
 
         const gameModesList = [
-            { id: 'matching', title: 'PADANAN', icon: '🎴', desc: 'Padankan gambar wang, nilai atau ayat matematik dengan tepat.', color: 'from-amber-500 to-orange-600' },
-            { id: 'objective', title: 'OBJEKTIF', icon: '🎯', desc: 'Pilih satu jawapan betul A, B, C atau D daripada soalan.', color: 'from-emerald-500 to-teal-600' },
-            { id: 'dragdrop', title: 'DRAG & DROP', icon: '🖐️', desc: 'Seret objek wang ke dalam dompet atau ruang jawapan.', color: 'from-blue-500 to-indigo-600' },
-            { id: 'fillblank', title: 'ISI TEMPAT KOSONG', icon: '✏️', desc: 'Taip atau klik nombor untuk melengkapkan ayat matematik.', color: 'from-purple-500 to-pink-600' }
+            { id: 'matching', title: 'MATCHING', icon: '🎴', desc: 'Match money pictures and number sentences to the correct value.', color: 'from-amber-500 to-orange-600' },
+            { id: 'objective', title: 'MULTIPLE CHOICE', icon: '🎯', desc: 'Choose the correct answer from four options.', color: 'from-emerald-500 to-teal-600' },
+            { id: 'dragdrop', title: 'DRAG & DROP', icon: '🖐️', desc: 'Move an answer into the answer box.', color: 'from-blue-500 to-indigo-600' },
+            { id: 'fillblank', title: 'FILL IN THE BLANK', icon: '✏️', desc: 'Enter a number to complete the number sentence.', color: 'from-purple-500 to-pink-600' }
         ];
 
         function renderModesScreen(container) {
@@ -543,8 +543,8 @@
                 <div class="flex-1 flex flex-col max-w-3xl mx-auto w-full py-6 justify-center">
                     <div class="text-center mb-6">
                         <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase">${gameState.selectedTopic.title}</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-2">🎮 PILIH CARA BERMAIN</h2>
-                        <p class="text-slate-500 text-sm">Pilih mod permainan kegemaran anda</p>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-2">🎮 CHOOSE A GAME MODE</h2>
+                        <p class="text-slate-500 text-sm">Choose your favourite game mode.</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -569,17 +569,17 @@
         }
 
         const levelsList = [
-            { id: 'mudah', title: '🟢 MUDAH', desc: '20 Soalan Asas & Pengenalan' },
-            { id: 'sederhana', title: '🟡 SEDERHANA', desc: '20 Soalan Pemahaman Sederhana' },
-            { id: 'sukar', title: '🔴 SUKAR', desc: '20 Soalan Cabaran & KBAT' }
+            { id: 'mudah', title: '🟢 EASY', desc: '20 introductory questions' },
+            { id: 'sederhana', title: '🟡 MEDIUM', desc: '20 intermediate questions' },
+            { id: 'sukar', title: '🔴 HARD', desc: '20 challenge questions' }
         ];
 
         function renderLevelsScreen(container) {
             container.innerHTML = `
                 <div class="flex-1 flex flex-col max-w-xl mx-auto w-full py-6 justify-center">
                     <div class="text-center mb-6">
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">⚡ PILIH TAHAP KESUKARAN</h2>
-                        <p class="text-slate-500 text-sm">Setiap tahap mengandungi 20 soalan rawak</p>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">⚡ CHOOSE A DIFFICULTY LEVEL</h2>
+                        <p class="text-slate-500 text-sm">Each level has 20 randomly generated questions.</p>
                     </div>
 
                     <div class="space-y-4 mb-6">
@@ -607,25 +607,25 @@
             container.innerHTML = `
                 <div class="flex-1 flex flex-col max-w-xl mx-auto w-full py-6 justify-center">
                     <div class="text-center mb-6">
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">⏱️ PILIH MASA PERMAINAN</h2>
-                        <p class="text-slate-500 text-sm">Pilih tempoh masa atau pilih tiada had masa</p>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">⏱️ CHOOSE A TIME LIMIT</h2>
+                        <p class="text-slate-500 text-sm">Choose how much time to allow for the game.</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                         <button onclick="startGameWithTimer(30)" class="bg-amber-500 hover:bg-amber-600 text-white p-6 rounded-3xl shadow-lg transition transform hover:scale-105 flex flex-col items-center text-center">
                             <i class="fa-solid fa-stopwatch text-3xl mb-2 text-amber-100"></i>
-                            <span class="font-bold text-lg">30 SAAT</span>
-                            <span class="text-xs text-amber-100">Pantas & Mencabar</span>
+                            <span class="font-bold text-lg">30 SECONDS</span>
+                            <span class="text-xs text-amber-100">Quick Challenge</span>
                         </button>
                         <button onclick="startGameWithTimer(60)" class="bg-indigo-600 hover:bg-indigo-700 text-white p-6 rounded-3xl shadow-lg transition transform hover:scale-105 flex flex-col items-center text-center">
                             <i class="fa-solid fa-clock text-3xl mb-2 text-indigo-200"></i>
-                            <span class="font-bold text-lg">1 MINIT</span>
-                            <span class="text-xs text-indigo-200">Sederhana</span>
+                            <span class="font-bold text-lg">1 MINUTE</span>
+                            <span class="text-xs text-indigo-200">Standard</span>
                         </button>
                         <button onclick="startGameWithTimer(0)" class="bg-emerald-600 hover:bg-emerald-700 text-white p-6 rounded-3xl shadow-lg transition transform hover:scale-105 flex flex-col items-center text-center">
                             <i class="fa-solid fa-infinity text-3xl mb-2 text-emerald-200"></i>
-                            <span class="font-bold text-lg">TIADA HAD</span>
-                            <span class="text-xs text-emerald-200">Santai Belajar</span>
+                            <span class="font-bold text-lg">NO TIME LIMIT</span>
+                            <span class="text-xs text-emerald-200">Play at Your Own Pace</span>
                         </button>
                     </div>
                 </div>
@@ -682,142 +682,142 @@
             };
 
             switch(topicId) {
-                case 1: // Kenali Mata Wang Malaysia
+                case 1: // Recognising Malaysian Money
                     const coinsList = ['5 sen', '10 sen', '20 sen', '50 sen'];
                     const notesList = ['RM1', 'RM5', 'RM10', 'RM20', 'RM50', 'RM100'];
                     if (Math.random() > 0.5) {
                         const c = coinsList[randInt(0, coinsList.length - 1)];
-                        q.question = `Apakah nilai syiling Malaysia ini?`;
+                        q.question = `What is the value of this Malaysian coin?`;
                         q.imageVisual = `<div class="w-20 h-20 rounded-full bg-amber-400 border-4 border-amber-600 flex items-center justify-center font-extrabold text-amber-950 text-xl shadow-lg mx-auto mb-3">${c}</div>`;
                         q.correctAnswer = c;
-                        q.options = shuffleArray([c, coinsList[randInt(0, 3)] !== c ? coinsList[randInt(0, 3)] : '5 sen', 'RM1', 'RM5']);
-                        q.explanation = `Syiling rasmi Malaysia yang sah bernilai ${c}.`;
+                        q.options = shuffleArray([c, shuffleArray(coinsList.filter(value => value !== c))[0], 'RM1', 'RM5']);
+                        q.explanation = `This coin is worth ${c}.`;
                     } else {
                         const n = notesList[randInt(0, notesList.length - 1)];
-                        q.question = `Kenal pasti wang kertas Malaysia ini:`;
+                        q.question = `What is the value of this Malaysian banknote?`;
                         q.imageVisual = `<div class="w-32 h-20 rounded-xl bg-emerald-500 border-2 border-emerald-700 flex items-center justify-center font-extrabold text-white text-2xl shadow-lg mx-auto mb-3">${n}</div>`;
                         q.correctAnswer = n;
-                        q.options = shuffleArray([n, notesList[randInt(0, 5)] !== n ? notesList[randInt(0, 5)] : 'RM2', '50 sen', '10 sen']);
-                        q.explanation = `Wang kertas tersebut adalah sah bernilai ${n} mengikut Bank Negara Malaysia.`;
+                        q.options = shuffleArray([n, shuffleArray(notesList.filter(value => value !== n))[0], '50 sen', '10 sen']);
+                        q.explanation = `This banknote is worth ${n}.`;
                     }
                     break;
 
-                case 2: // Nilai Wang
+                case 2: // Value of Money
                     const r1 = randInt(1, 10);
                     const r2 = randInt(1, 9);
-                    q.question = `Berapakah jumlah nilai wang berikut? [RM${r1}] + [RM${r2}]`;
+                    q.question = `What is the total amount? [RM${r1}] + [RM${r2}]`;
                     q.imageVisual = `<div class="flex justify-center gap-3 mb-3"><div class="px-4 py-3 bg-emerald-100 text-emerald-800 font-bold rounded-xl border border-emerald-300">RM${r1}</div><div class="px-4 py-3 bg-emerald-100 text-emerald-800 font-bold rounded-xl border border-emerald-300">RM${r2}</div></div>`;
                     const sumVal = `RM${r1 + r2}`;
                     q.correctAnswer = sumVal;
                     q.options = shuffleArray([sumVal, `RM${r1 + r2 + 1}`, `RM${Math.max(1, r1 + r2 - 2)}`, `RM${r1 + r2 + 3}`]);
-                    q.explanation = `Jumlah nilai adalah RM${r1} + RM${r2} = ${sumVal}.`;
+                    q.explanation = `The total is RM${r1} + RM${r2} = ${sumVal}.`;
                     break;
 
-                case 3: // Tambah Wang
+                case 3: // Adding Money
                     const t1 = randInt(2, 20);
                     const t2 = randInt(1, 15);
-                    q.question = `Hitung hasil tambah berikut: RM${t1} + RM${t2} = ?`;
+                    q.question = `Work out: RM${t1} + RM${t2} = ?`;
                     q.imageVisual = `<div class="text-3xl font-extrabold text-indigo-600 mb-3">RM${t1} + RM${t2} = ?</div>`;
                     q.correctAnswer = `RM${t1 + t2}`;
                     q.options = shuffleArray([`RM${t1 + t2}`, `RM${t1 + t2 + 2}`, `RM${Math.max(1, t1 + t2 - 1)}`, `RM${t1 + t2 + 5}`]);
-                    q.explanation = `RM${t1} ditambah dengan RM${t2} menghasilkan jumlah RM${t1 + t2}.`;
+                    q.explanation = `RM${t1} + RM${t2} = RM${t1 + t2}.`;
                     break;
 
-                case 4: // Tolak Wang
+                case 4: // Subtracting Money
                     const m1 = randInt(10, 50);
                     const m2 = randInt(1, m1 - 2);
-                    q.question = `Selesaikan operasi tolak: RM${m1} - RM${m2} = ?`;
+                    q.question = `Work out: RM${m1} - RM${m2} = ?`;
                     q.imageVisual = `<div class="text-3xl font-extrabold text-rose-600 mb-3">RM${m1} - RM${m2} = ?</div>`;
                     q.correctAnswer = `RM${m1 - m2}`;
                     q.options = shuffleArray([`RM${m1 - m2}`, `RM${m1 - m2 + 2}`, `RM${Math.max(1, m1 - m2 - 3)}`, `RM${m1 - m2 + 5}`]);
-                    q.explanation = `Baki daripada RM${m1} ditolak RM${m2} ialah RM${m1 - m2}.`;
+                    q.explanation = `RM${m1} − RM${m2} = RM${m1 - m2}.`;
                     break;
 
-                case 5: // Darab Wang
+                case 5: // Multiplying Money
                     const d1 = randInt(2, 5);
                     const d2 = randInt(2, 4);
-                    q.question = `1 batang pensel berharga RM${d1}. Berapakah harga untuk ${d2} batang pensel?`;
-                    q.imageVisual = `<div class="flex justify-center gap-2 text-3xl mb-3">✏️ × ${d2} (RM${d1} setiap satu)</div>`;
+                    q.question = `One pencil costs RM${d1}. How much do ${d2} pencils cost?`;
+                    q.imageVisual = `<div class="flex justify-center gap-2 text-3xl mb-3">✏️ × ${d2} (RM${d1} each)</div>`;
                     q.correctAnswer = `RM${d1 * d2}`;
                     q.options = shuffleArray([`RM${d1 * d2}`, `RM${(d1 * d2) + 2}`, `RM${Math.max(2, (d1 * d2) - 2)}`, `RM${(d1 * d2) + 4}`]);
-                    q.explanation = `Pendaraban berulang RM${d1} × ${d2} = RM${d1 * d2}.`;
+                    q.explanation = `Multiply: RM${d1} × ${d2} = RM${d1 * d2}.`;
                     break;
 
-                case 6: // Bahagi Wang
+                case 6: // Dividing Money
                     const b1 = [10, 20, 30, 40, 50][randInt(0, 4)];
                     const b2 = [2, 5, 10][randInt(0, 2)];
-                    q.question = `RM${b1} dibahagikan sama rata kepada ${b2} orang murid. Berapakah bahagian setiap orang?`;
-                    q.imageVisual = `<div class="text-2xl font-bold text-indigo-700 mb-3">💰 RM${b1} ÷ ${b2} orang</div>`;
+                    q.question = `RM${b1} is shared equally among ${b2} pupils. How much does each pupil get?`;
+                    q.imageVisual = `<div class="text-2xl font-bold text-indigo-700 mb-3">💰 RM${b1} ÷ ${b2} pupils</div>`;
                     q.correctAnswer = `RM${b1 / b2}`;
-                    q.options = shuffleArray([`RM${b1 / b2}`, `RM${(b1 / b2) + 2}`, `RM${Math.max(1, (b1 / b2) - 1)}`, `RM${(b1 / b2) + 5}`]);
-                    q.explanation = `RM${b1} dibahagi ${b2} orang menghasilkan RM${b1 / b2} seorang.`;
+                    q.options = shuffleArray([`RM${b1 / b2}`, `RM${(b1 / b2) + 2}`, `RM${(b1 / b2) === 1 ? 0 : (b1 / b2) - 1}`, `RM${(b1 / b2) + 5}`]);
+                    q.explanation = `RM${b1} ÷ ${b2} = RM${b1 / b2} per pupil.`;
                     break;
 
-                case 7: // Lengkapkan Ayat Matematik
+                case 7: // Completing Number Sentences
                     const num1 = randInt(5, 20);
                     const num2 = randInt(2, 10);
-                    q.question = `Lengkapkan ruang kosong: RM${num1} + RM${num2} = RM ___`;
+                    q.question = `Fill in the blank: RM${num1} + RM${num2} = RM ___`;
                     q.imageVisual = `<div class="text-3xl font-extrabold text-purple-600 mb-3">RM${num1} + RM${num2} = RM [ ? ]</div>`;
                     q.correctAnswer = `${num1 + num2}`;
                     q.options = shuffleArray([`${num1 + num2}`, `${num1 + num2 + 2}`, `${Math.max(1, num1 + num2 - 3)}`, `${num1 + num2 + 4}`]);
-                    q.explanation = `Nilai tempat kosong ialah RM${num1 + num2}.`;
+                    q.explanation = `The missing amount is RM${num1 + num2}.`;
                     break;
 
-                case 8: // Penyelesaian Masalah (Refined: unique storytelling stories, no duplicate patterns, diverse contexts)
+                case 8: // Word Problems (Refined: unique storytelling stories, no duplicate patterns, diverse contexts)
                     const problemScenarios = [
                         {
-                            desc: "Farah menyimpan RM3 di dalam tabung pada hari Isnin dan RM4 pada hari Selasa. Berapakah jumlah wang simpanan Farah dalam masa dua hari itu?",
+                            desc: "Farah puts RM3 in her money box on Monday and RM4 on Tuesday. How much does she save over the two days?",
                             ans: "RM7",
                             options: ["RM7", "RM8", "RM6", "RM9"],
-                            expl: "Jumlah simpanan = RM3 + RM4 = RM7."
+                            expl: "Total savings = RM3 + RM4 = RM7."
                         },
                         {
-                            desc: "Haziq ada RM12. Dia membeli sebuah buku cerita berharga RM5. Hitung baki wang yang ada pada Haziq.",
+                            desc: "Haziq has RM12 and buys a storybook for RM5. How much money does he have left?",
                             ans: "RM7",
                             options: ["RM7", "RM6", "RM8", "RM5"],
-                            expl: "Baki = RM12 - RM5 = RM7."
+                            expl: "Money left = RM12 - RM5 = RM7."
                         },
                         {
-                            desc: "Ibu memberi Zulaikha wang saku sebanyak RM6 setiap hari. Berapakah jumlah wang saku Zulaikha untuk 3 hari persekolahan?",
+                            desc: "Mum gives Zulaikha RM6 pocket money each day. How much does she get over three school days?",
                             ans: "RM18",
                             options: ["RM18", "RM12", "RM15", "RM20"],
-                            expl: "Jumlah wang = RM6 × 3 = RM18."
+                            expl: "Total amount = RM6 × 3 = RM18."
                         },
                         {
-                            desc: "Encik Ali mempuntai RM40. Dia membahagikan wang itu sama rata kepada 4 orang anaknya. Berapakah wang yang diterima oleh setiap anak?",
+                            desc: "Mr Ali shares RM40 equally among his four children. How much does each child get?",
                             ans: "RM10",
                             options: ["RM10", "RM8", "RM12", "RM15"],
-                            expl: "Bahagian setiap anak = RM40 ÷ 4 = RM10."
+                            expl: "Each child gets = RM40 ÷ 4 = RM10."
                         },
                         {
-                            desc: "Amir mempunyai RM15. Dia membeli sebatang pen berharga RM3 dan sebuah buku nota berharga RM4. Berapakah baki wang Amir?",
+                            desc: "Amir has RM15. He buys a pen for RM3 and a notebook for RM4. How much money does he have left?",
                             ans: "RM8",
                             options: ["RM8", "RM7", "RM9", "RM10"],
-                            expl: "Jumlah perbelanjaan = RM3 + RM4 = RM7. Baki = RM15 - RM7 = RM8."
+                            expl: "Total spent = RM3 + RM4 = RM7. Money left = RM15 - RM7 = RM8."
                         },
                         {
-                            desc: "Puan Salmah membeli 2 bungkus nasi lemak. Harga sebungkus nasi lemak ialah RM2. Dia membayar dengan sekeping wang kertas RM10. Berapakah baki wang yang diterima?",
+                            desc: "Mrs Salmah buys two packets of nasi lemak at RM2 each. She pays with an RM10 banknote. How much change does she get?",
                             ans: "RM6",
                             options: ["RM6", "RM4", "RM8", "RM5"],
-                            expl: "Harga 2 bungkus = RM2 × 2 = RM4. Baki = RM10 - RM4 = RM6."
+                            expl: "Cost of two packets = RM2 × 2 = RM4. Money left = RM10 - RM4 = RM6."
                         },
                         {
-                            desc: "Dalam sebuah tabung terdapat 5 keping syiling 20 sen. Berapakah jumlah nilai syiling tersebut dalam sen?",
+                            desc: "A money box contains five 20 sen coins. What is their total value in sen?",
                             ans: "100 sen",
                             options: ["100 sen", "80 sen", "60 sen", "120 sen"],
-                            expl: "Jumlah nilai = 20 sen × 5 = 100 sen (atau RM1.00)."
+                            expl: "Total value = 20 sen × 5 = 100 sen (or RM1.00)."
                         },
                         {
-                            desc: "Adib ada RM20. Dia mendermakan RM8 kepada tabung anak yatim sekolah. Berapakah baki wang Adib sekarang?",
+                            desc: "Adib has RM20 and donates RM8 to his school’s fund for orphans. How much money does he have left?",
                             ans: "RM12",
                             options: ["RM12", "RM10", "RM14", "RM15"],
-                            expl: "Baki = RM20 - RM8 = RM12."
+                            expl: "Money left = RM20 - RM8 = RM12."
                         }
                     ];
                     
                     const p = problemScenarios[randInt(0, problemScenarios.length - 1)];
                     q.question = p.desc;
-                    q.imageVisual = `<div class="p-3 bg-indigo-50 border border-indigo-200 rounded-2xl mb-3 text-sm font-semibold text-indigo-900">🛒 Cerita Matematik Wang</div>`;
+                    q.imageVisual = `<div class="p-3 bg-indigo-50 border border-indigo-200 rounded-2xl mb-3 text-sm font-semibold text-indigo-900">🛒 Money Word Problem</div>`;
                     q.correctAnswer = p.ans;
                     q.options = shuffleArray([...p.options]);
                     q.explanation = p.expl;
@@ -849,9 +849,9 @@
                 <div class="flex-1 flex flex-col max-w-2xl mx-auto w-full py-4 justify-between">
                     <!-- Top Status Bar -->
                     <div class="flex items-center justify-between bg-slate-100 px-4 py-3 rounded-2xl mb-4 font-bold text-sm">
-                        <span class="text-indigo-600">Soalan ${gameState.currentQuestionIndex + 1} / ${totalQ}</span>
+                        <span class="text-indigo-600">Question ${gameState.currentQuestionIndex + 1} / ${totalQ}</span>
                         <div class="flex items-center space-x-3">
-                            <span class="text-amber-600">⭐ Markah: ${gameState.score}</span>
+                            <span class="text-amber-600">⭐ Score: ${gameState.score}</span>
                             ${gameState.selectedTimer > 0 ? `<span id="game-timer-display" class="bg-rose-500 text-white px-2.5 py-1 rounded-xl text-xs">${gameState.timeLeft}s</span>` : ''}
                         </div>
                     </div>
@@ -905,7 +905,7 @@
                 gameState.coins += 2;
                 gameState.correctCount++;
                 feedbackArea.className = "mt-4 p-4 rounded-2xl text-center bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold";
-                feedbackArea.innerHTML = `🎉 TAHNIAH! JAWAPAN BETUL! (+5 Markah, +2 Coin)<br><span class="text-xs font-normal text-emerald-700">${q.explanation}</span>`;
+                feedbackArea.innerHTML = `🎉 WELL DONE! CORRECT ANSWER! (+5 points, +2 coins)<br><span class="text-xs font-normal text-emerald-700">${q.explanation}</span>`;
                 
                 if (typeof confetti === 'function') {
                     confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 } });
@@ -913,7 +913,7 @@
             } else {
                 gameState.wrongCount++;
                 feedbackArea.className = "mt-4 p-4 rounded-2xl text-center bg-rose-100 text-rose-800 border border-rose-300 font-bold";
-                feedbackArea.innerHTML = `❌ Belum tepat! Jawapan betul ialah: <span class="text-emerald-700 underline">${q.correctAnswer}</span><br><span class="text-xs font-normal text-rose-700">${q.explanation}</span>`;
+                feedbackArea.innerHTML = `❌ Try again! The correct answer is: <span class="text-emerald-700 underline">${q.correctAnswer}</span><br><span class="text-xs font-normal text-rose-700">${q.explanation}</span>`;
             }
 
             setTimeout(() => {
@@ -963,34 +963,34 @@
             container.innerHTML = `
                 <div class="flex-1 flex flex-col max-w-xl mx-auto w-full py-6 justify-center text-center">
                     <div class="text-6xl mb-2">🎆 🎉 🏆</div>
-                    <h2 class="text-3xl font-extrabold text-slate-800 mb-1">GAME TAMAT!</h2>
-                    <p class="text-slate-500 text-sm mb-6">Hebat sekali persembahan anda, ${gameState.user.name}!</p>
+                    <h2 class="text-3xl font-extrabold text-slate-800 mb-1">GAME COMPLETE!</h2>
+                    <p class="text-slate-500 text-sm mb-6">Well done, ${gameState.user.name}!</p>
 
                     <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-6 rounded-3xl shadow-xl mb-6 grid grid-cols-2 gap-4">
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
                             <div class="text-3xl font-extrabold text-amber-300">⭐ ${gameState.score}</div>
-                            <div class="text-xs text-indigo-100">Markah Diperolehi</div>
+                            <div class="text-xs text-indigo-100">Points Earned</div>
                         </div>
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
                             <div class="text-3xl font-extrabold text-amber-300">🪙 +${gameState.coins}</div>
-                            <div class="text-xs text-indigo-100">Coin Dikumpul</div>
+                            <div class="text-xs text-indigo-100">Coins Earned</div>
                         </div>
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
                             <div class="text-2xl font-extrabold text-emerald-300">${gameState.correctCount} / ${totalQ}</div>
-                            <div class="text-xs text-indigo-100">Jawapan Betul</div>
+                            <div class="text-xs text-indigo-100">Correct Answers</div>
                         </div>
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
                             <div class="text-2xl font-extrabold text-emerald-300">${pct}%</div>
-                            <div class="text-xs text-indigo-100">Peratusan Kejayaan</div>
+                            <div class="text-xs text-indigo-100">Accuracy</div>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4">
                         <button onclick="navigateTo('topics')" class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition transform hover:scale-105">
-                            PILIH TOPIK LAIN
+                            CHOOSE ANOTHER TOPIC
                         </button>
                         <button onclick="navigateTo('dashboard')" class="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition transform hover:scale-105">
-                            MENU UTAMA
+                            HOME
                         </button>
                     </div>
                 </div>
@@ -1005,11 +1005,11 @@
                 <div class="flex-1 flex flex-col max-w-2xl mx-auto w-full py-6">
                     <div class="text-center mb-6">
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">🏆 LEADERBOARD EDU KIDZ</h2>
-                        <p class="text-slate-500 text-sm">Senarai pemain paling cemerlang dalam Matematik Wang</p>
+                        <p class="text-slate-500 text-sm">Top Money Players</p>
                     </div>
 
                     <div class="bg-white border-2 border-slate-100 rounded-3xl shadow-sm overflow-hidden mb-6">
-                        ${usersArr.length === 0 ? '<p class="p-6 text-center text-slate-500">Belum ada pemain berdaftar.</p>' : 
+                        ${usersArr.length === 0 ? '<p class="p-6 text-center text-slate-500">No registered players yet.</p>' : 
                             usersArr.map((u, index) => `
                                 <div class="flex items-center justify-between p-4 border-b border-slate-100 hover:bg-slate-50 transition ${u.username === gameState.user.username ? 'bg-indigo-50/70' : ''}">
                                     <div class="flex items-center space-x-4">
@@ -1032,7 +1032,7 @@
                     </div>
 
                     <button onclick="navigateTo('dashboard')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl shadow-md transition mx-auto block">
-                        Kembali ke Dashboard
+                        Back to Dashboard
                     </button>
                 </div>
             `;
@@ -1045,8 +1045,8 @@
             container.innerHTML = `
                 <div class="flex-1 flex flex-col max-w-2xl mx-auto w-full py-6">
                     <div class="text-center mb-6">
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">📊 PROGRESS PEMBELAJARAN</h2>
-                        <p class="text-slate-500 text-sm">Status penguasaan 8 topik Wang oleh ${user.name}</p>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">📊 LEARNING PROGRESS</h2>
+                        <p class="text-slate-500 text-sm">Progress across eight money topics for ${user.name}</p>
                     </div>
 
                     <div class="space-y-3 mb-6">
@@ -1058,7 +1058,7 @@
                                         <span class="text-3xl">${t.icon}</span>
                                         <div>
                                             <h4 class="font-bold text-slate-800 text-sm sm:text-base">${t.title}</h4>
-                                            <span class="text-xs ${isDone ? 'text-emerald-600 font-bold' : 'text-slate-400'}">${isDone ? '✅ Selesai' : '⏳ Belum Selesai'}</span>
+                                            <span class="text-xs ${isDone ? 'text-emerald-600 font-bold' : 'text-slate-400'}">${isDone ? '✅ Completed' : '⏳ Incomplete'}</span>
                                         </div>
                                     </div>
                                     <div class="w-24 sm:w-32 bg-slate-200 h-3 rounded-full overflow-hidden">
@@ -1070,7 +1070,7 @@
                     </div>
 
                     <button onclick="navigateTo('dashboard')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl shadow-md transition mx-auto block">
-                        Kembali ke Dashboard
+                        Back to Dashboard
                     </button>
                 </div>
             `;
@@ -1081,20 +1081,20 @@
             const completedTopics = user.topicsCompleted || {};
 
             const achievementsList = [
-                { id: 't1', title: '🪙 KENALI WANG', desc: 'Selesaikan topik Kenali Mata Wang Malaysia.', unlocked: !!completedTopics[1] },
-                { id: 't3', title: '➕ JUARA TAMBAH', desc: 'Selesaikan topik Tambah Wang.', unlocked: !!completedTopics[3] },
-                { id: 't4', title: '➖ PAKAR BAKI', desc: 'Selesaikan topik Tolak Wang.', unlocked: !!completedTopics[4] },
-                { id: 't5', title: '✖️ MASTER DARAB', desc: 'Selesaikan topik Darab Wang.', unlocked: !!completedTopics[5] },
-                { id: 't6', title: '➗ MASTER BAHAGI', desc: 'Selesaikan topik Bahagi Wang.', unlocked: !!completedTopics[6] },
-                { id: 't8', title: '🛒 PEMBELI BIJAK', desc: 'Selesaikan topik Penyelesaian Masalah.', unlocked: !!completedTopics[8] },
-                { id: 'pro', title: '🏆 WANG MASTER', desc: 'Selesaikan semua 8 topik pembelajaran.', unlocked: Object.keys(completedTopics).length >= 8 }
+                { id: 't1', title: '🪙 MONEY EXPLORER', desc: 'Complete the topic: Recognising Malaysian Money.', unlocked: !!completedTopics[1] },
+                { id: 't3', title: '➕ ADDITION CHAMPION', desc: 'Complete the topic: Adding Money.', unlocked: !!completedTopics[3] },
+                { id: 't4', title: '➖ CHANGE EXPERT', desc: 'Complete the topic: Subtracting Money.', unlocked: !!completedTopics[4] },
+                { id: 't5', title: '✖️ MULTIPLICATION EXPERT', desc: 'Complete the topic: Multiplying Money.', unlocked: !!completedTopics[5] },
+                { id: 't6', title: '➗ DIVISION EXPERT', desc: 'Complete the topic: Dividing Money.', unlocked: !!completedTopics[6] },
+                { id: 't8', title: '🛒 SMART SHOPPER', desc: 'Complete the topic: Word Problems.', unlocked: !!completedTopics[8] },
+                { id: 'pro', title: '🏆 MONEY EXPERT', desc: 'Complete all eight topics.', unlocked: Object.keys(completedTopics).length >= 8 }
             ];
 
             container.innerHTML = `
                 <div class="flex-1 flex flex-col max-w-2xl mx-auto w-full py-6">
                     <div class="text-center mb-6">
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">🎖️ PENCAPAIAN (BADGES)</h2>
-                        <p class="text-slate-500 text-sm">Kumpul semua lencana hebat Edu Kidz!</p>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">🎖️ ACHIEVEMENT BADGES</h2>
+                        <p class="text-slate-500 text-sm">Play to collect the EDU KIDZ badges!</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -1113,7 +1113,7 @@
                     </div>
 
                     <button onclick="navigateTo('dashboard')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl shadow-md transition mx-auto block">
-                        Kembali ke Dashboard
+                        Back to Dashboard
                     </button>
                 </div>
             `;

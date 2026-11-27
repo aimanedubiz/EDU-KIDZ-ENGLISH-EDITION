@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATH KIDS BERNAMA EDU KIDZ - Matematik Tahun 5</title>
+    <title>MATH KIDS BERNAMA EDU KIDZ - Year 5 Mathematics</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -72,9 +72,9 @@
                     🦁
                 </div>
                 <div>
-                    <h3 id="playerNameDisplay" class="font-kids text-lg text-indigo-900 font-bold leading-tight">Murid Edu Kidz</h3>
+                    <h3 id="playerNameDisplay" class="font-kids text-lg text-indigo-900 font-bold leading-tight">EDU KIDZ Player</h3>
                     <div class="flex items-center space-x-2 text-xs font-bold text-indigo-700">
-                        <span id="playerBadgeDisplay" class="bg-indigo-200 px-2 py-0.5 rounded-full">Tetamu</span>
+                        <span id="playerBadgeDisplay" class="bg-indigo-200 px-2 py-0.5 rounded-full">Guest</span>
                         <span class="text-amber-500"><i class="fa-solid font-bold fa-star mr-1"></i><span id="playerScoreDisplay">0</span> pt</span>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <i class="fa-solid fa-house"></i> <span class="hidden sm:inline">Menu</span>
                 </button>
                 <button onclick="logoutPlayer()" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-3 py-1.5 rounded-xl text-sm shadow btn-bounce flex items-center gap-1.5">
-                    <i class="fa-solid fa-right-from-bracket"></i> <span class="hidden sm:inline">Keluar</span>
+                    <i class="fa-solid fa-right-from-bracket"></i> <span class="hidden sm:inline">Log Out</span>
                 </button>
             </div>
         </header>
@@ -93,27 +93,27 @@
         <!-- SCREEN 1: LOGIN / REGISTRATION -->
         <section id="screenAuth" class="space-y-6 my-auto text-center py-6">
             <div class="space-y-2">
-                <span class="bg-amber-400 text-indigo-950 px-4 py-1.5 rounded-full font-kids text-sm font-bold tracking-wide uppercase shadow">Matematik Tahun 5 KPM</span>
+                <span class="bg-amber-400 text-indigo-950 px-4 py-1.5 rounded-full font-kids text-sm font-bold tracking-wide uppercase shadow">Year 5 KSSR Mathematics</span>
                 <h1 class="font-kids text-3xl sm:text-5xl font-extrabold text-indigo-900 tracking-wide drop-shadow-sm mt-2">
                     MATH KIDS BERNAMA EDU KIDZ
                 </h1>
-                <p class="text-indigo-700 font-semibold text-sm sm:text-base">Koordinat, Nisbah dan Kadaran - Pembelajaran Interaktif & Menyeronokkan!</p>
+                <p class="text-indigo-700 font-semibold text-sm sm:text-base">Coordinates, Ratio and Proportion</p>
             </div>
 
             <div class="max-w-md mx-auto bg-white/80 p-6 rounded-3xl border-2 border-indigo-100 shadow-xl space-y-4">
                 <div class="flex border-b-2 border-indigo-100 mb-4 font-kids">
-                    <button id="tabLogin" onclick="switchAuthTab('login')" class="w-1/2 py-2 text-indigo-900 font-bold border-b-4 border-amber-400 text-lg">LOG MASUK</button>
-                    <button id="tabRegister" onclick="switchAuthTab('register')" class="w-1/2 py-2 text-gray-400 font-bold border-b-4 border-transparent text-lg">DAFTAR AKAUN</button>
+                    <button id="tabLogin" onclick="switchAuthTab('login')" class="w-1/2 py-2 text-indigo-900 font-bold border-b-4 border-amber-400 text-lg">LOG IN</button>
+                    <button id="tabRegister" onclick="switchAuthTab('register')" class="w-1/2 py-2 text-gray-400 font-bold border-b-4 border-transparent text-lg">REGISTER</button>
                 </div>
 
                 <!-- Form Inputs -->
                 <div class="space-y-3 text-left">
                     <div>
-                        <label class="block text-xs font-bold text-indigo-900 uppercase mb-1">Nama Pengguna / Nickname</label>
-                        <input type="text" id="authUsername" placeholder="Contoh: Amir123" class="w-full px-4 py-2.5 rounded-xl border-2 border-indigo-200 focus:border-amber-400 focus:outline-none font-bold text-indigo-900">
+                        <label class="block text-xs font-bold text-indigo-900 uppercase mb-1">Username or Nickname</label>
+                        <input type="text" id="authUsername" placeholder="e.g. Amir123" class="w-full px-4 py-2.5 rounded-xl border-2 border-indigo-200 focus:border-amber-400 focus:outline-none font-bold text-indigo-900">
                     </div>
                     <div id="avatarSelectGroup" class="hidden">
-                        <label class="block text-xs font-bold text-indigo-900 uppercase mb-1">Pilih Avatar Kesukaan Anda</label>
+                        <label class="block text-xs font-bold text-indigo-900 uppercase mb-1">Choose an Avatar</label>
                         <div class="flex justify-between gap-2 p-2 bg-indigo-50 rounded-xl" id="avatarOptions">
                             <button onclick="selectAvatar('🦁')" class="avatar-opt text-2xl p-2 rounded-xl bg-amber-200 border-2 border-amber-400">🦁</button>
                             <button onclick="selectAvatar('🚀')" class="avatar-opt text-2xl p-2 rounded-xl bg-white border-2 border-transparent">🚀</button>
@@ -127,10 +127,10 @@
 
                 <div class="pt-2 space-y-2">
                     <button id="btnAuthSubmit" onclick="handleAuthSubmit()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-xl py-3 rounded-2xl shadow-lg btn-bounce uppercase tracking-wider">
-                        <i class="fa-solid fa-play mr-2"></i> Mula Bermain Sekarang
+                        <i class="fa-solid fa-play mr-2"></i> Start Playing
                     </button>
                     <button onclick="playAsGuest()" class="w-full bg-indigo-100 hover:bg-indigo-200 text-indigo-800 font-bold py-2.5 rounded-2xl text-sm transition">
-                        <i class="fa-solid fa-user-astronaut mr-1"></i> Main Sebagai Tetamu
+                        <i class="fa-solid fa-user-astronaut mr-1"></i> Play as a Guest
                     </button>
                 </div>
             </div>
@@ -139,26 +139,26 @@
         <!-- SCREEN 2: MAIN MENU DASHBOARD -->
         <section id="screenMenu" class="hidden space-y-6 my-auto">
             <div class="text-center space-y-1">
-                <h2 class="font-kids text-3xl font-bold text-indigo-950">DASHBOARD PERMAINAN</h2>
-                <p class="text-indigo-700 text-sm">Pilih aktiviti dan bersedia untuk mengumpul markah tertinggi!</p>
+                <h2 class="font-kids text-3xl font-bold text-indigo-950">GAME DASHBOARD</h2>
+                <p class="text-indigo-700 text-sm">Choose an activity and try to improve your score.</p>
             </div>
 
             <!-- Stats Bar -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                 <div class="bg-amber-100 border-2 border-amber-300 p-3 rounded-2xl shadow-sm">
-                    <p class="text-xs font-bold text-amber-800 uppercase">Jumlah Markah</p>
+                    <p class="text-xs font-bold text-amber-800 uppercase">Total Marks</p>
                     <p id="dashTotalScore" class="font-kids text-2xl font-bold text-amber-900">0</p>
                 </div>
                 <div class="bg-emerald-100 border-2 border-emerald-300 p-3 rounded-2xl shadow-sm">
-                    <p class="text-xs font-bold text-emerald-800 uppercase">Peratus Kemajuan</p>
+                    <p class="text-xs font-bold text-emerald-800 uppercase">Progress</p>
                     <p id="dashProgressPercent" class="font-kids text-2xl font-bold text-emerald-900">0%</p>
                 </div>
                 <div class="bg-sky-100 border-2 border-sky-300 p-3 rounded-2xl shadow-sm">
-                    <p class="text-xs font-bold text-sky-800 uppercase">Dijawab Betul</p>
+                    <p class="text-xs font-bold text-sky-800 uppercase">Correct Answers</p>
                     <p id="dashCorrectCount" class="font-kids text-2xl font-bold text-sky-900">0</p>
                 </div>
                 <div class="bg-purple-100 border-2 border-purple-300 p-3 rounded-2xl shadow-sm">
-                    <p class="text-xs font-bold text-purple-800 uppercase">Lencana Dibuka</p>
+                    <p class="text-xs font-bold text-purple-800 uppercase">Badges Earned</p>
                     <p id="dashBadgeCount" class="font-kids text-2xl font-bold text-purple-900">0 / 5</p>
                 </div>
             </div>
@@ -167,17 +167,17 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <button onclick="quickStartGame()" class="sm:col-span-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white p-5 rounded-3xl shadow-lg border-4 border-emerald-300 text-left btn-bounce flex items-center justify-between">
                     <div>
-                        <span class="bg-emerald-800/40 text-xs px-2.5 py-1 rounded-full font-bold uppercase">Main Pantas</span>
-                        <h3 class="font-kids text-2xl font-bold mt-1">MULA BERMAIN SEKARANG!</h3>
-                        <p class="text-emerald-100 text-xs mt-1">Cabaran 20 soalan mengikut tetapan terkini anda.</p>
+                        <span class="bg-emerald-800/40 text-xs px-2.5 py-1 rounded-full font-bold uppercase">Quick Play</span>
+                        <h3 class="font-kids text-2xl font-bold mt-1">START PLAYING</h3>
+                        <p class="text-emerald-100 text-xs mt-1">Play 20 questions using your current settings.</p>
                     </div>
                     <i class="fa-solid fa-circle-play text-5xl text-emerald-200"></i>
                 </button>
 
                 <button onclick="showScreen('screenSetup')" class="bg-gradient-to-r from-amber-400 to-orange-500 text-indigo-950 p-5 rounded-3xl shadow-lg border-4 border-amber-300 text-left btn-bounce flex items-center justify-between">
                     <div>
-                        <h3 class="font-kids text-xl font-bold">TETAPAN GAME</h3>
-                        <p class="text-amber-950/80 text-xs mt-1">Pilih Topik, Mod & Masa</p>
+                        <h3 class="font-kids text-xl font-bold">GAME SETTINGS</h3>
+                        <p class="text-amber-950/80 text-xs mt-1">Choose a Topic, Mode and Time Limit</p>
                     </div>
                     <i class="fa-solid fa-sliders text-4xl text-amber-900/50"></i>
                 </button>
@@ -185,8 +185,8 @@
                 <button onclick="showScreen('screenProgress')" class="bg-white border-2 border-indigo-200 p-4 rounded-2xl shadow-sm text-left hover:bg-indigo-50 transition flex items-center space-x-3">
                     <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-chart-line"></i></div>
                     <div>
-                        <h4 class="font-bold text-indigo-900">Kemajuan Belajar</h4>
-                        <p class="text-xs text-gray-500">Analisis prestasi topik</p>
+                        <h4 class="font-bold text-indigo-900">Learning Progress</h4>
+                        <p class="text-xs text-gray-500">Review your scores by topic</p>
                     </div>
                 </button>
 
@@ -194,15 +194,15 @@
                     <div class="w-10 h-10 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-trophy"></i></div>
                     <div>
                         <h4 class="font-bold text-indigo-900">Leaderboard</h4>
-                        <p class="text-xs text-gray-500">Carta kedudukan jaguh</p>
+                        <p class="text-xs text-gray-500">Player Rankings</p>
                     </div>
                 </button>
 
                 <button onclick="showScreen('screenBadges')" class="bg-white border-2 border-indigo-200 p-4 rounded-2xl shadow-sm text-left hover:bg-indigo-50 transition flex items-center space-x-3">
                     <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-award"></i></div>
                     <div>
-                        <h4 class="font-bold text-indigo-900">Lencana Kejuaraan</h4>
-                        <p class="text-xs text-gray-500">Koleksi pencapaian</p>
+                        <h4 class="font-bold text-indigo-900">Badges</h4>
+                        <p class="text-xs text-gray-500">View your achievements</p>
                     </div>
                 </button>
             </div>
@@ -211,40 +211,40 @@
         <!-- SCREEN 3: GAME SETUP (Topic, Mode, Difficulty, Timer) -->
         <section id="screenSetup" class="hidden space-y-5 my-auto">
             <div class="flex items-center justify-between border-b-2 border-indigo-100 pb-3">
-                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-gear text-amber-500 mr-2"></i>PILIHAN GAME</h2>
-                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-xmark"></i> Batal</button>
+                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-gear text-amber-500 mr-2"></i>GAME OPTIONS</h2>
+                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-xmark"></i> Cancel</button>
             </div>
 
             <!-- Topic Selector -->
             <div>
-                <label class="block font-kids text-indigo-900 text-base font-bold mb-2">1. Pilih Topik Pembelajaran:</label>
+                <label class="block font-kids text-indigo-900 text-base font-bold mb-2">1. Choose a Topic:</label>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <button onclick="selectTopic('KOORD')" id="btnTopikKOORD" class="topic-btn p-3 rounded-2xl border-2 border-indigo-200 text-left hover:border-indigo-500 bg-indigo-50 font-bold text-sm text-indigo-900 flex items-center gap-3">
                         <span class="w-8 h-8 rounded-lg bg-indigo-500 text-white flex items-center justify-center">A</span>
                         <div>
-                            <div>Jarak Di Antara Dua Koordinat</div>
-                            <div class="text-xs text-gray-500 font-normal">Grid satah, paksi mendatar & menegak</div>
+                            <div>Distance Between Two Points</div>
+                            <div class="text-xs text-gray-500 font-normal">Coordinate grids and horizontal and vertical axes</div>
                         </div>
                     </button>
                     <button onclick="selectTopic('NISBAH')" id="btnTopikNISBAH" class="topic-btn p-3 rounded-2xl border-2 border-indigo-200 text-left hover:border-indigo-500 bg-white font-bold text-sm text-indigo-900 flex items-center gap-3">
                         <span class="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center">B</span>
                         <div>
-                            <div>Nisbah Antara Dua Kuantiti</div>
-                            <div class="text-xs text-gray-500 font-normal">Simbol (:), perbandingan & bentuk termudah</div>
+                            <div>Ratio of Two Quantities</div>
+                            <div class="text-xs text-gray-500 font-normal">Use ratio notation to compare quantities</div>
                         </div>
                     </button>
                     <button onclick="selectTopic('KADARAN')" id="btnTopikKADARAN" class="topic-btn p-3 rounded-2xl border-2 border-indigo-200 text-left hover:border-indigo-500 bg-white font-bold text-sm text-indigo-900 flex items-center gap-3">
                         <span class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center">C</span>
                         <div>
-                            <div>Kadaran Untuk Mencari Nilai</div>
-                            <div class="text-xs text-gray-500 font-normal">Nilai seunit & jadual kadaran terus</div>
+                            <div>Using Proportion to Find Values</div>
+                            <div class="text-xs text-gray-500 font-normal">Unit prices and direct proportion</div>
                         </div>
                     </button>
                     <button onclick="selectTopic('MASALAH')" id="btnTopikMASALAH" class="topic-btn p-3 rounded-2xl border-2 border-indigo-200 text-left hover:border-indigo-500 bg-white font-bold text-sm text-indigo-900 flex items-center gap-3">
                         <span class="w-8 h-8 rounded-lg bg-purple-500 text-white flex items-center justify-center">D</span>
                         <div>
-                            <div>Penyelesaian Masalah Harian</div>
-                            <div class="text-xs text-gray-500 font-normal">Konteks situasi sekolah & kehidupan</div>
+                            <div>Everyday Problems</div>
+                            <div class="text-xs text-gray-500 font-normal">Solve problems in everyday situations</div>
                         </div>
                     </button>
                 </div>
@@ -254,37 +254,37 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <!-- Mode -->
                 <div>
-                    <label class="block font-kids text-indigo-900 text-sm font-bold mb-1">2. Mod Permainan:</label>
+                    <label class="block font-kids text-indigo-900 text-sm font-bold mb-1">2. Game Mode:</label>
                     <select id="selectMode" class="w-full p-2.5 rounded-xl border-2 border-indigo-200 font-bold text-indigo-900 text-sm focus:outline-none">
-                        <option value="OBJEKTIF">Mod Objektif (A, B, C, D)</option>
-                        <option value="PADANAN">Mod Padanan Kad</option>
-                        <option value="DRAGDROP">Mod Seret & Lepas</option>
-                        <option value="ISITEMPAT">Mod Isi Tempat Kosong</option>
+                        <option value="OBJEKTIF">Multiple Choice (A, B, C, D)</option>
+                        <option value="PADANAN">Matching Cards</option>
+                        <option value="DRAGDROP">Drag &amp; Drop</option>
+                        <option value="ISITEMPAT">Fill in the Blank</option>
                     </select>
                 </div>
                 <!-- Difficulty -->
                 <div>
-                    <label class="block font-kids text-indigo-900 text-sm font-bold mb-1">3. Tahap Kesukaran:</label>
+                    <label class="block font-kids text-indigo-900 text-sm font-bold mb-1">3. Difficulty Level:</label>
                     <select id="selectDifficulty" class="w-full p-2.5 rounded-xl border-2 border-indigo-200 font-bold text-indigo-900 text-sm focus:outline-none">
-                        <option value="S">Tahap 1 — Senang (Asas)</option>
-                        <option value="M">Tahap 2 — Sederhana (1-2 Langkah)</option>
-                        <option value="T">Tahap 3 — Susah (Penaakulan)</option>
+                        <option value="S">Level 1 — Easy (Basics)</option>
+                        <option value="M">Level 2 — Medium (One or Two Steps)</option>
+                        <option value="T">Level 3 — Hard (Reasoning)</option>
                     </select>
                 </div>
                 <!-- Timer -->
                 <div>
-                    <label class="block font-kids text-indigo-900 text-sm font-bold mb-1">4. Tetapan Masa Soalan:</label>
+                    <label class="block font-kids text-indigo-900 text-sm font-bold mb-1">4. Time Limit per Question:</label>
                     <select id="selectTimer" class="w-full p-2.5 rounded-xl border-2 border-indigo-200 font-bold text-indigo-900 text-sm focus:outline-none">
-                        <option value="30">30 Saat bagi setiap soalan</option>
-                        <option value="60">1 Minit (60s) setiap soalan</option>
-                        <option value="0">Tiada Had Masa</option>
+                        <option value="30">30 Seconds</option>
+                        <option value="60">1 Minute</option>
+                        <option value="0">No Time Limit</option>
                     </select>
                 </div>
             </div>
 
             <div class="pt-2">
                 <button onclick="startGameWithConfig()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-kids text-xl py-3 rounded-2xl shadow-lg btn-bounce uppercase tracking-wide">
-                    <i class="fa-solid fa-play-circle mr-2"></i> Mula Permainan Sekarang
+                    <i class="fa-solid fa-play-circle mr-2"></i> Start Game
                 </button>
             </div>
         </section>
@@ -294,11 +294,11 @@
             <!-- Game Top Header -->
             <div class="flex items-center justify-between bg-indigo-50 p-3 rounded-2xl border border-indigo-200 text-sm font-bold text-indigo-900">
                 <div class="flex items-center space-x-2">
-                    <span id="gameTopicBadge" class="bg-indigo-600 text-white text-xs px-2.5 py-1 rounded-lg uppercase">Koordinat</span>
-                    <span id="gameDiffBadge" class="bg-amber-400 text-indigo-950 text-xs px-2.5 py-1 rounded-lg uppercase">Tahap 1</span>
+                    <span id="gameTopicBadge" class="bg-indigo-600 text-white text-xs px-2.5 py-1 rounded-lg uppercase">Coordinates</span>
+                    <span id="gameDiffBadge" class="bg-amber-400 text-indigo-950 text-xs px-2.5 py-1 rounded-lg uppercase">Level 1</span>
                 </div>
                 <div>
-                    Soalan: <span id="gameCurrentQNum" class="text-indigo-600 font-extrabold text-lg">1</span> / 20
+                    Question: <span id="gameCurrentQNum" class="text-indigo-600 font-extrabold text-lg">1</span> / 20
                 </div>
                 <div class="flex items-center space-x-2">
                     <i class="fa-regular fa-clock text-rose-500"></i>
@@ -312,7 +312,7 @@
                     <h3 id="gameQuestionText" class="text-base sm:text-lg font-bold text-indigo-950 leading-snug">
                         Memuatkan soalan...
                     </h3>
-                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded-md shrink-0 ml-2">5 Markah</span>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded-md shrink-0 ml-2">5 Marks</span>
                 </div>
 
                 <!-- Mathematical Visual / Canvas Area -->
@@ -331,7 +331,7 @@
                 <div id="feedbackTitle" class="font-kids text-lg font-bold"></div>
                 <p id="feedbackDesc" class="text-gray-700"></p>
                 <button id="btnNextQuestion" onclick="nextQuestion()" class="mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-5 py-2 rounded-xl text-sm shadow btn-bounce float-right">
-                    Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-1"></i>
+                    Next Question <i class="fa-solid fa-arrow-right ml-1"></i>
                 </button>
                 <div class="clear-both"></div>
             </div>
@@ -341,43 +341,43 @@
         <section id="screenResults" class="hidden space-y-5 my-auto text-center py-4">
             <div class="space-y-1">
                 <span class="text-4xl">🎉</span>
-                <h2 class="font-kids text-3xl font-extrabold text-indigo-950">PERMAINAN TAMAT!</h2>
-                <p class="text-indigo-700 text-sm">Syabas dan tahniah di atas usaha gigih anda!</p>
+                <h2 class="font-kids text-3xl font-extrabold text-indigo-950">GAME COMPLETE!</h2>
+                <p class="text-indigo-700 text-sm">Well done for completing the game!</p>
             </div>
 
             <div class="bg-white p-6 rounded-3xl border-2 border-indigo-100 shadow-xl max-w-lg mx-auto space-y-4">
                 <div class="p-4 bg-amber-50 border-2 border-amber-200 rounded-2xl">
-                    <p class="text-xs font-bold text-amber-800 uppercase">JUMLAH MARKAH SESI INI</p>
+                    <p class="text-xs font-bold text-amber-800 uppercase">TOTAL MARKS</p>
                     <p id="resSessionScore" class="font-kids text-5xl font-extrabold text-amber-600 my-1">100 / 100</p>
-                    <p id="resAccuracyPercent" class="text-sm font-bold text-amber-900">Ketepatan Jawapan: 100%</p>
+                    <p id="resAccuracyPercent" class="text-sm font-bold text-amber-900">Accuracy: 100%</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-3 text-left text-xs font-bold">
                     <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 text-emerald-900">
-                        <i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Jawapan Betul: <span id="resCorrectCount">0</span>
+                        <i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Correct Answers: <span id="resCorrectCount">0</span>
                     </div>
                     <div class="bg-rose-50 p-2.5 rounded-xl border border-rose-200 text-rose-900">
-                        <i class="fa-solid fa-circle-xmark text-rose-500 mr-1"></i> Jawapan Salah: <span id="resWrongCount">0</span>
+                        <i class="fa-solid fa-circle-xmark text-rose-500 mr-1"></i> Incorrect Answers: <span id="resWrongCount">0</span>
                     </div>
                     <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-200 text-indigo-900">
-                        <i class="fa-solid fa-book-open text-indigo-500 mr-1"></i> Topik: <span id="resTopicName">Koordinat</span>
+                        <i class="fa-solid fa-book-open text-indigo-500 mr-1"></i> Topic: <span id="resTopicName">Coordinates</span>
                     </div>
                     <div class="bg-purple-50 p-2.5 rounded-xl border border-purple-200 text-purple-900">
-                        <i class="fa-solid fa-stopwatch text-purple-500 mr-1"></i> Purata Masa: <span id="resAvgTime">0s</span>
+                        <i class="fa-solid fa-stopwatch text-purple-500 mr-1"></i> Time Limit: <span id="resAvgTime">0s</span>
                     </div>
                 </div>
 
                 <div id="resBadgeUnlocked" class="hidden p-3 bg-purple-100 border border-purple-300 rounded-xl text-purple-900 text-xs font-bold flex items-center justify-center gap-2">
                     <span class="text-2xl">🏅</span>
-                    <span>Anda membuka Lencana Pencapaian Baharu!</span>
+                    <span>You earned a new badge!</span>
                 </div>
 
                 <div class="pt-2 grid grid-cols-2 gap-3">
                     <button onclick="quickStartGame()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-kids py-2.5 rounded-xl font-bold shadow btn-bounce">
-                        <i class="fa-solid fa-rotate-right mr-1"></i> Main Semula
+                        <i class="fa-solid fa-rotate-right mr-1"></i> Play Again
                     </button>
                     <button onclick="showScreen('screenMenu')" class="bg-indigo-600 hover:bg-indigo-700 text-white font-kids py-2.5 rounded-xl font-bold shadow btn-bounce">
-                        <i class="fa-solid fa-house mr-1"></i> Menu Utama
+                        <i class="fa-solid fa-house mr-1"></i> Main Menu
                     </button>
                 </div>
             </div>
@@ -386,8 +386,8 @@
         <!-- SCREEN 6: LEADERBOARD -->
         <section id="screenLeaderboard" class="hidden space-y-4 my-auto">
             <div class="flex items-center justify-between border-b-2 border-indigo-100 pb-3">
-                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-trophy text-amber-500 mr-2"></i>LEADERBOARD JAGUH</h2>
-                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-arrow-left"></i> Kembali</button>
+                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-trophy text-amber-500 mr-2"></i>PLAYER LEADERBOARD</h2>
+                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-arrow-left"></i> Back</button>
             </div>
 
             <div class="bg-white rounded-2xl border-2 border-indigo-100 overflow-hidden shadow-sm">
@@ -395,10 +395,10 @@
                     <table class="w-full text-left text-sm">
                         <thead class="bg-indigo-900 text-white font-kids text-xs uppercase">
                             <tr>
-                                <th class="p-3">Ked.</th>
-                                <th class="p-3">Pemain</th>
-                                <th class="p-3">Markah</th>
-                                <th class="p-3">Lencana</th>
+                                <th class="p-3">Rank</th>
+                                <th class="p-3">Player</th>
+                                <th class="p-3">Marks</th>
+                                <th class="p-3">Badges</th>
                             </tr>
                         </thead>
                         <tbody id="leaderboardTbody" class="divide-y divide-indigo-50 font-bold">
@@ -412,8 +412,8 @@
         <!-- SCREEN 7: BADGES & ACHIEVEMENTS -->
         <section id="screenBadges" class="hidden space-y-4 my-auto">
             <div class="flex items-center justify-between border-b-2 border-indigo-100 pb-3">
-                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-award text-purple-500 mr-2"></i>LENCANA PENCAPAIAN</h2>
-                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-arrow-left"></i> Kembali</button>
+                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-award text-purple-500 mr-2"></i>ACHIEVEMENT BADGES</h2>
+                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-arrow-left"></i> Back</button>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="badgesContainer">
@@ -424,8 +424,8 @@
         <!-- SCREEN 8: LEARNING PROGRESS -->
         <section id="screenProgress" class="hidden space-y-4 my-auto">
             <div class="flex items-center justify-between border-b-2 border-indigo-100 pb-3">
-                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-chart-line text-sky-500 mr-2"></i>KEMAJUAN PEMBELAJARAN</h2>
-                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-arrow-left"></i> Kembali</button>
+                <h2 class="font-kids text-2xl font-bold text-indigo-950"><i class="fa-solid fa-chart-line text-sky-500 mr-2"></i>LEARNING PROGRESS</h2>
+                <button onclick="showScreen('screenMenu')" class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-xl font-bold"><i class="fa-solid fa-arrow-left"></i> Back</button>
             </div>
 
             <div class="space-y-3" id="topicProgressList">
@@ -435,8 +435,8 @@
 
         <!-- FOOTER -->
         <footer class="mt-4 text-center text-xs text-indigo-800 font-semibold border-t border-indigo-100 pt-3 flex justify-between items-center">
-            <span>© MATH KIDS BERNAMA EDU KIDZ — DSKP Matematik Tahun 5</span>
-            <span class="bg-indigo-100 text-indigo-900 px-2 py-0.5 rounded-full font-bold">V2.5 Interaktif</span>
+            <span>© MATH KIDS BERNAMA EDU KIDZ — Year 5 KSSR Mathematics</span>
+            <span class="bg-indigo-100 text-indigo-900 px-2 py-0.5 rounded-full font-bold">V2.5 Interactive</span>
         </footer>
     </div>
 
@@ -466,11 +466,11 @@
 
         // BADGE DEFINITIONS
         const BADGES_DEFINITIONS = [
-            { id: 'b_koord', name: 'Pakar Koordinat', icon: '📍', desc: 'Dapatkan sekurang-kurangnya 50 markah dalam topik Koordinat' },
-            { id: 'b_nisbah', name: 'Juara Nisbah', icon: '⚖️', desc: 'Dapatkan sekurang-kurangnya 50 markah dalam topik Nisbah' },
-            { id: 'b_kadaran', name: 'Pakar Kadaran', icon: '📊', desc: 'Dapatkan sekurang-kurangnya 50 markah dalam topik Kadaran' },
-            { id: 'b_masalah', name: 'Jaguh Penyelesaian', icon: '🧩', desc: 'Selesaikan soalan dalam topik Penyelesaian Masalah' },
-            { id: 'b_bintang', name: 'Bintang Matematik', icon: '🌟', desc: 'Kumpul keseluruhan markah melebihi 200 markah' }
+            { id: 'b_koord', name: 'Coordinates Expert', icon: '📍', desc: 'Earn at least 50 marks in Coordinates' },
+            { id: 'b_nisbah', name: 'Ratio Champion', icon: '⚖️', desc: 'Earn at least 50 marks in Ratio' },
+            { id: 'b_kadaran', name: 'Proportion Expert', icon: '📊', desc: 'Earn at least 50 marks in Proportion' },
+            { id: 'b_masalah', name: 'Problem-Solving Champion', icon: '🧩', desc: 'Earn at least 50 marks in Problem Solving' },
+            { id: 'b_bintang', name: 'Maths Star', icon: '🌟', desc: 'Earn at least 200 marks in total' }
         ];
 
         // Generates 240 structured questions dynamically following standard DSKP Year 5 specs
@@ -520,46 +520,46 @@
                 }
 
                 const dist = isHorizontal ? Math.abs(x2 - x1) : Math.abs(y2 - y1);
-                q.soalan = `Titik P berkoordinat (${x1}, ${y1}) dan Titik Q berkoordinat (${x2}, ${y2}). Berapakah jarak ${isHorizontal ? 'mendatar' : 'menegak'} di antara kedua-dua titik tersebut?`;
-                q.jawapan = `${dist} unit`;
-                q.pilihan = [`${dist} unit`, `${dist + 1} unit`, `${dist > 1 ? dist - 1 : dist + 2} unit`, `${dist + 3} unit`].sort(() => Math.random() - 0.5);
-                q.penerangan = `Titik P (${x1}, ${y1}) dan Q (${x2}, ${y2}) berada pada garis ${isHorizontal ? 'mendatar' : 'menegak'} yang sama. Perbezaan nilai ialah ${dist} unit.`;
+                q.soalan = `Point P is at (${x1}, ${y1}) and point Q is at (${x2}, ${y2}). What is the ${isHorizontal ? 'horizontal' : 'vertical'} distance between them?`;
+                q.jawapan = `${dist} units`;
+                q.pilihan = [`${dist} units`, `${dist + 1} units`, `${dist > 1 ? dist - 1 : dist + 2} units`, `${dist + 3} units`].sort(() => Math.random() - 0.5);
+                q.penerangan = `Find the difference between the ${isHorizontal ? 'x-coordinates' : 'y-coordinates'}. The distance is ${dist} units.`;
                 q.visualData = { type: 'grid', p1: { name: 'P', x: x1, y: y1 }, p2: { name: 'Q', x: x2, y: y2 } };
 
             } else if (topik === 'NISBAH') {
                 let a = index, b = index + (tahap === 'S' ? 1 : tahap === 'M' ? 2 : 3);
                 if (tahap === 'T') { a = a * 2; b = b * 2; }
 
-                q.soalan = `Di dalam sebuah kotak terdapat ${a} biji guli merah dan ${b} biji guli biru. Nyatakan nisbah bilangan guli merah kepada bilangan guli biru.`;
+                q.soalan = `A box contains ${a} red marbles and ${b} blue marbles. Write the ratio of red marbles to blue marbles using these counts.`;
                 q.jawapan = `${a}:${b}`;
-                q.pilihan = [`${a}:${b}`, `${b}:${a}`, `1:${a}`, `${a + 1}:${b}`].sort(() => Math.random() - 0.5);
-                q.penerangan = `Tertib kuantiti ialah Merah kepada Biru, jadi nisbahnya ditulis sebagai ${a}:${b}.`;
-                q.visualData = { type: 'objects', countA: a, countB: b, labelA: 'Merah', labelB: 'Biru' };
+                q.pilihan = [`${a}:${b}`, `${b}:${a}`, `${a}:${b + 1}`, `${a + 1}:${b}`].sort(() => Math.random() - 0.5);
+                q.penerangan = `Write red first and blue second. The ratio is ${a}:${b}.`;
+                q.visualData = { type: 'objects', countA: a, countB: b, labelA: 'Red marbles', labelB: 'Blue marbles' };
 
             } else if (topik === 'KADARAN') {
                 let unitPrice = (tahap === 'S') ? 3 : (tahap === 'M') ? 7 : 12;
-                let qty1 = (index % 3) + 2;
+                let qty1 = index + 2;
                 let total1 = unitPrice * qty1;
                 let qty2 = qty1 + (tahap === 'S' ? 2 : 4);
                 let ans = unitPrice * qty2;
 
-                q.soalan = `Harga bagi ${qty1} buah buku cerita ialah RM${total1}. Berapakah harga bagi ${qty2} buah buku cerita yang sama?`;
+                q.soalan = `${qty1} storybooks cost RM${total1}. How much do ${qty2} storybooks cost at the same price per book?`;
                 q.jawapan = `RM${ans}`;
                 q.pilihan = [`RM${ans}`, `RM${ans - unitPrice}`, `RM${ans + unitPrice}`, `RM${ans + 10}`].sort(() => Math.random() - 0.5);
-                q.penerangan = `Harga 1 buah buku = RM${total1} ÷ ${qty1} = RM${unitPrice}. Jadi, harga ${qty2} buah buku = ${qty2} × RM${unitPrice} = RM${ans}.`;
-                q.visualData = { type: 'table', item: 'Buku Cerita', qty1: qty1, val1: `RM${total1}`, qty2: qty2, val2: '?' };
+                q.penerangan = `Divide RM${total1} by ${qty1} to get RM${unitPrice} per book. Multiply by ${qty2} to get RM${ans}.`;
+                q.visualData = { type: 'table', item: 'Storybooks', qty1: qty1, val1: `RM${total1}`, qty2: qty2, val2: '?' };
 
             } else { // MASALAH
                 let scale = (tahap === 'S') ? 5 : (tahap === 'M') ? 10 : 25;
-                let items = index + 2;
+                let items = 2 * (index + 2);
                 let total = items * scale;
 
-                q.soalan = `Cikgu Hassan membeli ${items} paket pembaris untuk murid Tahun 5. Setiap paket mengandungi ${scale} batang pembaris. Jika nisbah pembaris merah kepada hijau ialah 1:1, berapakah bilangan pembaris merah?`;
+                q.soalan = `Mr Hassan buys ${items} packs of rulers for Year 5 pupils. Each pack contains ${scale} rulers. The ratio of red rulers to green rulers is 1:1. How many red rulers are there?`;
                 let ansNum = total / 2;
-                q.jawapan = `${ansNum} batang`;
-                q.pilihan = [`${ansNum} batang`, `${total} batang`, `${ansNum / 2} batang`, `${ansNum + 5} batang`].sort(() => Math.random() - 0.5);
-                q.penerangan = `Jumlah pembaris = ${items} × ${scale} = ${total}. Nisbah 1:1 bermaksud bilangan pembaris merah ialah separuh daripada jumlah asal, iaitu ${total} ÷ 2 = ${ansNum}.`;
-                q.visualData = { type: 'text', text: `Jumlah Paket: ${items}\nIsi Sepaket: ${scale} batang` };
+                q.jawapan = `${ansNum} rulers`;
+                q.pilihan = [`${ansNum} rulers`, `${total} rulers`, `${ansNum - 1} rulers`, `${ansNum + 5} rulers`].sort(() => Math.random() - 0.5);
+                q.penerangan = `There are ${items} × ${scale} = ${total} rulers. Half are red, so ${total} ÷ 2 = ${ansNum} red rulers.`;
+                q.visualData = { type: 'text', text: `Number of Packs: ${items}\nRulers per Pack: ${scale} rulers` };
             }
 
             return q;
@@ -571,7 +571,7 @@
             document.getElementById('tabLogin').className = tab === 'login' ? 'w-1/2 py-2 text-indigo-900 font-bold border-b-4 border-amber-400 text-lg' : 'w-1/2 py-2 text-gray-400 font-bold border-b-4 border-transparent text-lg';
             document.getElementById('tabRegister').className = tab === 'register' ? 'w-1/2 py-2 text-indigo-900 font-bold border-b-4 border-amber-400 text-lg' : 'w-1/2 py-2 text-gray-400 font-bold border-b-4 border-transparent text-lg';
             document.getElementById('avatarSelectGroup').className = tab === 'register' ? 'block' : 'hidden';
-            document.getElementById('btnAuthSubmit').innerText = tab === 'login' ? 'LOG MASUK SEKARANG' : 'DAFTAR AKAUN BAHARU';
+            document.getElementById('btnAuthSubmit').innerText = tab === 'login' ? 'LOG IN NOW' : 'CREATE AN ACCOUNT';
         }
 
         function selectAvatar(emoji) {
@@ -584,7 +584,7 @@
         function handleAuthSubmit() {
             const username = document.getElementById('authUsername').value.trim();
             if (!username) {
-                alert('Sila masukkan Nama Pengguna anda!');
+                alert('Enter your username.');
                 return;
             }
 
@@ -611,7 +611,7 @@
 
         function playAsGuest() {
             currentUser = {
-                username: 'Tetamu_' + Math.floor(Math.random() * 1000),
+                username: 'Guest_' + Math.floor(Math.random() * 1000),
                 avatar: '🤖',
                 totalScore: 0,
                 correctAnswers: 0,
@@ -693,7 +693,7 @@
 
             // Render Header Badges
             document.getElementById('gameTopicBadge').innerText = getTopicTitle(currentTopic);
-            document.getElementById('gameDiffBadge').innerText = `Tahap ${currentDiff === 'S' ? '1' : currentDiff === 'M' ? '2' : '3'}`;
+            document.getElementById('gameDiffBadge').innerText = `Level ${currentDiff === 'S' ? '1' : currentDiff === 'M' ? '2' : '3'}`;
             document.getElementById('gameCurrentQNum').innerText = index + 1;
             document.getElementById('gameQuestionText').innerText = currentQuestionObj.soalan;
 
@@ -735,7 +735,7 @@
             hasAnsweredCurrent = true;
             sessionWrong++;
 
-            showFeedback(false, `Masa Tamat! Jawapan betul ialah: ${currentQuestionObj.jawapan}. ${currentQuestionObj.penerangan}`);
+            showFeedback(false, `Time’s up! The correct answer is: ${currentQuestionObj.jawapan}. ${currentQuestionObj.penerangan}`);
         }
 
         function renderMathVisualCanvas(visual) {
@@ -751,13 +751,15 @@
                 // Draw Coordinate Grid
                 const originX = 40;
                 const originY = 150;
-                const step = 25;
+                const maxX = Math.max(6, visual.p1.x, visual.p2.x);
+                const maxY = Math.max(5, visual.p1.y, visual.p2.y);
+                const step = Math.min(24, 125 / maxY);
 
                 ctx.strokeStyle = '#cbd5e1';
                 ctx.lineWidth = 1;
 
                 // Grid lines
-                for (let x = 0; x <= 10; x++) {
+                for (let x = 0; x <= maxX; x++) {
                     ctx.beginPath();
                     ctx.moveTo(originX + x * step, 10);
                     ctx.lineTo(originX + x * step, originY);
@@ -767,10 +769,10 @@
                     ctx.fillText(x, originX + x * step - 3, originY + 15);
                 }
 
-                for (let y = 0; y <= 5; y++) {
+                for (let y = 0; y <= maxY; y++) {
                     ctx.beginPath();
                     ctx.moveTo(originX, originY - y * step);
-                    ctx.lineTo(originX + 10 * step, originY - y * step);
+                    ctx.lineTo(originX + maxX * step, originY - y * step);
                     ctx.stroke();
                     ctx.fillStyle = '#475569';
                     ctx.font = '10px Quicksand';
@@ -799,19 +801,19 @@
                 // Render Visual Objects for Ratio
                 ctx.fillStyle = '#3b82f6';
                 ctx.font = 'bold 14px Fredoka';
-                ctx.fillText(`Kuantiti ${visual.labelA}: ${visual.countA}`, 20, 40);
-                for (let i = 0; i < Math.min(visual.countA, 10); i++) {
+                ctx.fillText(`${visual.labelA}: ${visual.countA}`, 20, 40);
+                for (let i = 0; i < visual.countA; i++) {
                     ctx.beginPath();
-                    ctx.arc(30 + (i * 25), 65, 9, 0, Math.PI * 2);
+                    ctx.arc(24 + (i % 16) * 19, 51 + Math.floor(i / 16) * 14, 5, 0, Math.PI * 2);
                     ctx.fillStyle = '#ef4444';
                     ctx.fill();
                 }
 
                 ctx.fillStyle = '#3b82f6';
-                ctx.fillText(`Kuantiti ${visual.labelB}: ${visual.countB}`, 20, 110);
-                for (let i = 0; i < Math.min(visual.countB, 10); i++) {
+                ctx.fillText(`${visual.labelB}: ${visual.countB}`, 20, 110);
+                for (let i = 0; i < visual.countB; i++) {
                     ctx.beginPath();
-                    ctx.arc(30 + (i * 25), 135, 9, 0, Math.PI * 2);
+                    ctx.arc(24 + (i % 16) * 19, 121 + Math.floor(i / 16) * 14, 5, 0, Math.PI * 2);
                     ctx.fillStyle = '#3b82f6';
                     ctx.fill();
                 }
@@ -830,11 +832,11 @@
 
                 ctx.fillStyle = '#1e1b4b';
                 ctx.font = 'bold 14px Quicksand';
-                ctx.fillText(`Bilangan (${visual.item})`, 50, 55);
-                ctx.fillText('Nilai / Harga', 50, 105);
+                ctx.fillText(`Quantity (${visual.item})`, 50, 55);
+                ctx.fillText('Price', 50, 105);
 
-                ctx.fillText(`${visual.qty1} unit ➔ ${visual.val1}`, 190, 55);
-                ctx.fillText(`${visual.qty2} unit ➔ ${visual.val2}`, 190, 105);
+                ctx.fillText(`${visual.qty1} books ➔ ${visual.val1}`, 190, 55);
+                ctx.fillText(`${visual.qty2} books ➔ ${visual.val2}`, 190, 105);
             }
         }
 
@@ -859,8 +861,8 @@
                 const wrap = document.createElement('div');
                 wrap.className = 'space-y-3';
                 wrap.innerHTML = `
-                    <input type="text" id="blankAnswerInput" placeholder="Taip jawapan anda di sini..." class="w-full p-3 rounded-2xl border-2 border-indigo-300 font-bold text-indigo-900 text-center text-lg focus:outline-none focus:border-amber-400">
-                    <button onclick="submitAnswer(document.getElementById('blankAnswerInput').value)" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-kids py-2.5 rounded-2xl text-base font-bold shadow btn-bounce">Hantar Jawapan</button>
+                    <input type="text" id="blankAnswerInput" placeholder="Type your answer…" class="w-full p-3 rounded-2xl border-2 border-indigo-300 font-bold text-indigo-900 text-center text-lg focus:outline-none focus:border-amber-400">
+                    <button onclick="submitAnswer(document.getElementById('blankAnswerInput').value)" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-kids py-2.5 rounded-2xl text-base font-bold shadow btn-bounce">Submit Answer</button>
                 `;
                 container.appendChild(wrap);
 
@@ -868,7 +870,7 @@
                 const wrap = document.createElement('div');
                 wrap.className = 'grid grid-cols-2 gap-3 text-center';
                 wrap.innerHTML = `
-                    <div class="p-3 bg-amber-100 border-2 border-amber-300 rounded-2xl font-bold text-amber-950 text-sm">Soalan Target:\n${q.soalan.substring(0, 30)}...</div>
+                    <div class="p-3 bg-amber-100 border-2 border-amber-300 rounded-2xl font-bold text-amber-950 text-sm">Match the question:\n${q.soalan.substring(0, 30)}...</div>
                     <div class="space-y-2">
                         ${q.pilihan.map(p => `<button onclick="submitAnswer('${p}')" class="w-full p-2 bg-indigo-100 hover:bg-indigo-200 border border-indigo-300 rounded-xl font-bold text-indigo-900 text-xs">${p}</button>`).join('')}
                     </div>
@@ -879,7 +881,7 @@
                 const wrap = document.createElement('div');
                 wrap.className = 'space-y-3 text-center';
                 wrap.innerHTML = `
-                    <p class="text-xs font-bold text-indigo-800">Tekan mana-mana kad jawapan untuk dimasukkan ke petak pilihan:</p>
+                    <p class="text-xs font-bold text-indigo-800">Select the correct answer card:</p>
                     <div class="flex flex-wrap justify-center gap-2">
                         ${q.pilihan.map(p => `<button onclick="submitAnswer('${p}')" class="px-4 py-2 bg-amber-300 hover:bg-amber-400 border-2 border-amber-500 rounded-xl font-kids text-indigo-950 text-sm font-bold shadow btn-bounce">${p}</button>`).join('')}
                     </div>
@@ -893,18 +895,19 @@
             hasAnsweredCurrent = true;
             clearInterval(gameTimer);
 
-            const isCorrect = String(userAns).trim().toLowerCase() === String(currentQuestionObj.jawapan).trim().toLowerCase();
+            const normalize = value => String(value).toLowerCase().replace(/\s+/g, '').replace(/units?$|rulers$/g, '');
+            const isCorrect = normalize(userAns) === normalize(currentQuestionObj.jawapan);
 
             if (isCorrect) {
                 sessionScore += currentQuestionObj.markah;
                 sessionCorrect++;
                 triggerFireworks();
                 playAudioTone(600, 'sine');
-                showFeedback(true, `Tahniah! Jawapan Anda Betul!\n${currentQuestionObj.penerangan}`);
+                showFeedback(true, `Well done! Correct answer.\n${currentQuestionObj.penerangan}`);
             } else {
                 sessionWrong++;
                 playAudioTone(200, 'sawtooth');
-                showFeedback(false, `Jangan Putus Asa! Jawapan tepat ialah: ${currentQuestionObj.jawapan}.\n${currentQuestionObj.penerangan}`);
+                showFeedback(false, `The correct answer is: ${currentQuestionObj.jawapan}.\n${currentQuestionObj.penerangan}`);
             }
         }
 
@@ -918,11 +921,11 @@
             if (isCorrect) {
                 panel.classList.add('bg-emerald-100', 'border-emerald-300');
                 title.className = 'font-kids text-lg font-bold text-emerald-900';
-                title.innerText = '🎉 TAHNIAH! BINTANG MATHEMATIK!';
+                title.innerText = '🎉 WELL DONE!';
             } else {
                 panel.classList.add('bg-rose-100', 'border-rose-300');
                 title.className = 'font-kids text-lg font-bold text-rose-900';
-                title.innerText = '💡 CUBA LAGI! PENERANGAN JAWAPAN:';
+                title.innerText = '💡 WORKED EXPLANATION';
             }
 
             desc.innerText = descText;
@@ -998,7 +1001,7 @@
                 // Check and award Badges
                 checkBadgesUnlock();
 
-                if (currentUser.username && !currentUser.username.startsWith('Tetamu_')) {
+                if (currentUser.username && !currentUser.username.startsWith('Guest_')) {
                     let users = JSON.parse(localStorage.getItem(STORAGE_USERS) || '{}');
                     users[currentUser.username] = currentUser;
                     localStorage.setItem(STORAGE_USERS, JSON.stringify(users));
@@ -1008,11 +1011,11 @@
             // Update Results UI Screen
             document.getElementById('resSessionScore').innerText = `${sessionScore} / 100`;
             const accuracy = sessionQuestions.length > 0 ? Math.round((sessionCorrect / sessionQuestions.length) * 100) : 0;
-            document.getElementById('resAccuracyPercent').innerText = `Ketepatan Jawapan: ${accuracy}%`;
+            document.getElementById('resAccuracyPercent').innerText = `Accuracy: ${accuracy}%`;
             document.getElementById('resCorrectCount').innerText = sessionCorrect;
             document.getElementById('resWrongCount').innerText = sessionWrong;
             document.getElementById('resTopicName').innerText = getTopicTitle(currentTopic);
-            document.getElementById('resAvgTime').innerText = `${currentTimerSetting}s`;
+            document.getElementById('resAvgTime').innerText = currentTimerSetting ? `${currentTimerSetting}s` : 'No Time Limit';
 
             updateTopBarUI();
             showScreen('screenResults');
@@ -1044,7 +1047,7 @@
             let usersObj = JSON.parse(localStorage.getItem(STORAGE_USERS) || '{}');
             let list = Object.values(usersObj);
 
-            if (currentUser && currentUser.username.startsWith('Tetamu_')) {
+            if (currentUser && currentUser.username.startsWith('Guest_')) {
                 list.push(currentUser);
             }
 
@@ -1079,7 +1082,7 @@
                     <div>
                         <h4 class="font-bold text-sm text-indigo-950">${b.name}</h4>
                         <p class="text-xs text-gray-600">${b.desc}</p>
-                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${isUnlocked ? 'bg-emerald-200 text-emerald-800' : 'bg-gray-200 text-gray-700'}">${isUnlocked ? 'DIBUKA' : 'TERKUNCI'}</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${isUnlocked ? 'bg-emerald-200 text-emerald-800' : 'bg-gray-200 text-gray-700'}">${isUnlocked ? 'UNLOCKED' : 'LOCKED'}</span>
                     </div>
                 `;
                 container.appendChild(card);
@@ -1091,10 +1094,10 @@
             container.innerHTML = '';
 
             const topics = [
-                { key: 'KOORD', name: 'Jarak Di Antara Dua Koordinat' },
-                { key: 'NISBAH', name: 'Nisbah Antara Dua Kuantiti' },
-                { key: 'KADARAN', name: 'Kadaran Untuk Mencari Nilai' },
-                { key: 'MASALAH', name: 'Penyelesaian Masalah Harian' }
+                { key: 'KOORD', name: 'Distance Between Two Points' },
+                { key: 'NISBAH', name: 'Ratio of Two Quantities' },
+                { key: 'KADARAN', name: 'Using Proportion to Find Values' },
+                { key: 'MASALAH', name: 'Everyday Problems' }
             ];
 
             topics.forEach(t => {
@@ -1104,7 +1107,7 @@
                 wrap.innerHTML = `
                     <div class="flex justify-between text-sm font-bold text-indigo-900">
                         <span>${t.name}</span>
-                        <span>${score} Markah</span>
+                        <span>${score} Marks</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                         <div class="bg-amber-400 h-3 rounded-full" style="width: ${Math.min((score / 300) * 100, 100)}%"></div>
@@ -1116,11 +1119,11 @@
 
         function getTopicTitle(key) {
             switch (key) {
-                case 'KOORD': return 'Koordinat';
-                case 'NISBAH': return 'Nisbah';
-                case 'KADARAN': return 'Kadaran';
-                case 'MASALAH': return 'Masalah';
-                default: return 'Matematik';
+                case 'KOORD': return 'Coordinates';
+                case 'NISBAH': return 'Ratio';
+                case 'KADARAN': return 'Proportion';
+                case 'MASALAH': return 'Problem Solving';
+                default: return 'Mathematics';
             }
         }
     </script>

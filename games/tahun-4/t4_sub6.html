@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids Bernama Edu Kidz – Tahun 4: RUANG</title>
+    <title>Math Kids Bernama Edu Kidz – Year 4: Space</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -78,7 +78,7 @@
                 </div>
                 <div>
                     <h1 class="font-extrabold text-lg sm:text-xl text-eduDark tracking-wide">MATH KIDS <span class="text-eduBlue">EDU KIDZ</span></h1>
-                    <p class="text-xs text-slate-500 font-semibold">Tahun 4: RUANG | Belajar Sambil Bermain!</p>
+                    <p class="text-xs text-slate-500 font-semibold">Year 4: Space</p>
                 </div>
             </div>
             
@@ -86,15 +86,15 @@
                 <div class="flex items-center bg-sky-50 px-3 py-1.5 rounded-full border border-sky-200">
                     <span id="nav-avatar" class="text-2xl mr-2">🦉</span>
                     <div>
-                        <span id="nav-username" class="font-bold text-sm text-slate-700 block leading-tight">Nama</span>
-                        <span class="text-xs text-eduBlue font-semibold"><i class="fa-solid fa-star text-amber-500 mr-1"></i><span id="nav-score">0</span> Markah</span>
+                        <span id="nav-username" class="font-bold text-sm text-slate-700 block leading-tight">Name</span>
+                        <span class="text-xs text-eduBlue font-semibold"><i class="fa-solid fa-star text-amber-500 mr-1"></i><span id="nav-score">0</span> marks</span>
                     </div>
                 </div>
-                <button onclick="toggleAudio()" id="audio-toggle-btn" class="w-10 h-10 bg-amber-100 hover:bg-amber-200 text-amber-700 rounded-full flex items-center justify-center transition shadow-sm" title="Bunyi Muzik/Kesan">
+                <button onclick="toggleAudio()" id="audio-toggle-btn" class="w-10 h-10 bg-amber-100 hover:bg-amber-200 text-amber-700 rounded-full flex items-center justify-center transition shadow-sm" title="Sound Effects">
                     <i class="fa-solid fa-volume-high" id="audio-icon"></i>
                 </button>
                 <button onclick="logoutUser()" class="bg-rose-100 hover:bg-rose-200 text-rose-700 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center">
-                    <i class="fa-solid fa-right-from-bracket mr-1"></i> Log Keluar
+                    <i class="fa-solid fa-right-from-bracket mr-1"></i> Log Out
                 </button>
             </div>
         </div>
@@ -115,19 +115,19 @@
                     <i class="fa-solid fa-sparkles mr-1 text-amber-500"></i> KPM Kurikulum Standard Sekolah Rendah
                 </span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-800 mb-2">Math Kids <span class="text-eduBlue">Edu Kidz</span></h2>
-                <p class="text-lg sm:text-xl font-bold text-eduPurple mb-4">MATEMATIK TAHUN 4 : TOPIK RUANG</p>
-                <p class="text-sm sm:text-base text-slate-600 max-w-lg mb-8 italic">“Belajar Matematik Sambil Bermain! Kenali Sudut, Garis, Perimeter, Luas, Isipadu dan Penyelesaian Masalah dengan Ceria!”</p>
+                <p class="text-lg sm:text-xl font-bold text-eduPurple mb-4">YEAR 4 MATHEMATICS • SPACE</p>
+                <p class="text-sm sm:text-base text-slate-600 max-w-lg mb-8 italic">Practise angles, lines, perimeter, area and volume, and apply them in problem solving.</p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md justify-center">
                     <button onclick="showScreen('login')" class="flex-1 bg-gradient-to-r from-eduBlue to-sky-600 hover:from-sky-600 hover:to-eduBlue text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center text-base">
-                        <i class="fa-solid fa-right-to-bracket mr-2"></i> Log Masuk
+                        <i class="fa-solid fa-right-to-bracket mr-2"></i> Log In
                     </button>
                     <button onclick="showScreen('register')" class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-600 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center text-base">
-                        <i class="fa-solid fa-user-plus mr-2"></i> Daftar Akaun
+                        <i class="fa-solid fa-user-plus mr-2"></i> Register
                     </button>
                 </div>
                 <div class="mt-6 text-xs text-slate-400">
-                    Versi Desktop & Mudah Alih Interaktif • Disokong Sistem Storan Selamat
+                    Play on desktop or mobile. Progress is saved on this device.
                 </div>
             </div>
 
@@ -137,21 +137,21 @@
                     <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-3 shadow-inner">
                         <i class="fa-solid fa-user-plus"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800">Daftar Akaun Pemain Baharu</h3>
-                    <p class="text-sm text-slate-500">Sila masukkan butiran anda untuk mula menyimpan rekod pembelajaran.</p>
+                    <h3 class="text-2xl font-bold text-slate-800">Create a Player Account</h3>
+                    <p class="text-sm text-slate-500">Enter your details to save your progress.</p>
                 </div>
 
                 <form onsubmit="handleRegister(event)" class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Nama Pengguna</label>
-                        <input type="text" id="reg-username" required placeholder="Cth: Amirul_Tahun4" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Username</label>
+                        <input type="text" id="reg-username" required placeholder="e.g. Amirul_Tahun4" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Kata Laluan</label>
-                        <input type="password" id="reg-password" required placeholder="Cth: rahsia123" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Password</label>
+                        <input type="password" id="reg-password" required placeholder="e.g. secret123" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 uppercase mb-2">Pilih Avatar Pemain</label>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-2">Choose a Player Avatar</label>
                         <div class="grid grid-cols-5 gap-3" id="avatar-selector">
                             <div onclick="selectAvatar('🦉')" class="avatar-option cursor-pointer text-3xl p-3 bg-sky-50 border-2 border-sky-400 rounded-xl text-center transition hover:bg-sky-100 selected-avatar">🦉</div>
                             <div onclick="selectAvatar('🦊')" class="avatar-option cursor-pointer text-3xl p-3 bg-slate-50 border-2 border-slate-200 rounded-xl text-center transition hover:bg-sky-100">🦊</div>
@@ -161,12 +161,12 @@
                         </div>
                     </div>
                     <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition mt-4">
-                        Daftar & Mula Masuk
+                        Register and Log In
                     </button>
                 </form>
                 <div class="text-center mt-6">
                     <button onclick="showScreen('welcome')" class="text-sm font-bold text-slate-500 hover:text-slate-800">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Kembali ke Utama
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Home
                     </button>
                 </div>
             </div>
@@ -177,26 +177,26 @@
                     <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-3 shadow-inner">
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800">Log Masuk Pemain</h3>
-                    <p class="text-sm text-slate-500">Teruskan rekod kecemerlangan Matematik anda!</p>
+                    <h3 class="text-2xl font-bold text-slate-800">Player Login</h3>
+                    <p class="text-sm text-slate-500">Keep practising your maths skills!</p>
                 </div>
 
                 <form onsubmit="handleLogin(event)" class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Nama Pengguna</label>
-                        <input type="text" id="login-username" required placeholder="Nama pengguna anda" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Username</label>
+                        <input type="text" id="login-username" required placeholder="Your username" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Kata Laluan</label>
-                        <input type="password" id="login-password" required placeholder="Kata laluan anda" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Password</label>
+                        <input type="password" id="login-password" required placeholder="Your password" class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-eduBlue focus:outline-none font-medium">
                     </div>
                     <button type="submit" class="w-full bg-eduBlue hover:bg-sky-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition mt-4">
-                        Log Masuk Sekarang
+                        Log In Now
                     </button>
                 </form>
                 <div class="text-center mt-6">
                     <button onclick="showScreen('welcome')" class="text-sm font-bold text-slate-500 hover:text-slate-800">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Kembali ke Utama
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Home
                     </button>
                 </div>
             </div>
@@ -207,13 +207,13 @@
                     <div class="flex items-center space-x-4 mb-4 sm:mb-0">
                         <div id="dash-avatar" class="text-5xl bg-white/20 p-3 rounded-2xl backdrop-blur-sm">🦉</div>
                         <div>
-                            <span class="text-xs uppercase tracking-wider text-sky-100 font-semibold">Selamat Datang Kembali,</span>
-                            <h2 id="dash-username" class="text-2xl sm:text-3xl font-extrabold">Nama Pemain</h2>
-                            <p class="text-xs text-sky-100 mt-1"><i class="fa-solid fa-award text-amber-300 mr-1"></i> Pangkat: <span id="dash-rank-title">Ahli Matematik Cilik</span></p>
+                            <span class="text-xs uppercase tracking-wider text-sky-100 font-semibold">Welcome back,</span>
+                            <h2 id="dash-username" class="text-2xl sm:text-3xl font-extrabold">Player Name</h2>
+                            <p class="text-xs text-sky-100 mt-1"><i class="fa-solid fa-award text-amber-300 mr-1"></i> Rank: <span id="dash-rank-title">Young Mathematician</span></p>
                         </div>
                     </div>
                     <div class="bg-white/10 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/20 text-center">
-                        <span class="text-xs text-sky-100 uppercase tracking-wide block">Jumlah Markah</span>
+                        <span class="text-xs text-sky-100 uppercase tracking-wide block">Total Marks</span>
                         <span id="dash-score" class="text-3xl font-extrabold text-amber-300">0</span>
                     </div>
                 </div>
@@ -222,29 +222,29 @@
                     <div onclick="startQuickGame()" class="card-hover bg-gradient-to-br from-amber-400 to-orange-500 text-white p-5 rounded-2xl cursor-pointer shadow-md flex flex-col justify-between">
                         <div class="text-3xl mb-2"><i class="fa-solid fa-gamepad"></i></div>
                         <div>
-                            <h4 class="font-bold text-base">Mula Bermain</h4>
-                            <p class="text-xs text-amber-100">Main kuiz pantas</p>
+                            <h4 class="font-bold text-base">Play Now</h4>
+                            <p class="text-xs text-amber-100">Start a quiz</p>
                         </div>
                     </div>
                     <div onclick="showScreen('topic-select')" class="card-hover bg-gradient-to-br from-sky-400 to-blue-600 text-white p-5 rounded-2xl cursor-pointer shadow-md flex flex-col justify-between">
                         <div class="text-3xl mb-2"><i class="fa-solid fa-shapes"></i></div>
                         <div>
-                            <h4 class="font-bold text-base">Pilih Topik</h4>
-                            <p class="text-xs text-sky-100">6 topik Ruang</p>
+                            <h4 class="font-bold text-base">Choose a Topic</h4>
+                            <p class="text-xs text-sky-100">6 Space Topics</p>
                         </div>
                     </div>
                     <div onclick="showScreen('progress')" class="card-hover bg-gradient-to-br from-emerald-400 to-teal-600 text-white p-5 rounded-2xl cursor-pointer shadow-md flex flex-col justify-between">
                         <div class="text-3xl mb-2"><i class="fa-solid fa-chart-line"></i></div>
                         <div>
-                            <h4 class="font-bold text-base">Progress Saya</h4>
-                            <p class="text-xs text-emerald-100">Statistik & pencapaian</p>
+                            <h4 class="font-bold text-base">My Progress</h4>
+                            <p class="text-xs text-emerald-100">Statistics and Achievements</p>
                         </div>
                     </div>
                     <div onclick="showScreen('leaderboard')" class="card-hover bg-gradient-to-br from-purple-500 to-indigo-600 text-white p-5 rounded-2xl cursor-pointer shadow-md flex flex-col justify-between">
                         <div class="text-3xl mb-2"><i class="fa-solid fa-trophy"></i></div>
                         <div>
                             <h4 class="font-bold text-base">Leaderboard</h4>
-                            <p class="text-xs text-purple-100">Kedudukan pemain</p>
+                            <p class="text-xs text-purple-100">Player Rankings</p>
                         </div>
                     </div>
                 </div>
@@ -255,8 +255,8 @@
                             <i class="fa-solid fa-medal"></i>
                         </div>
                         <div class="text-left">
-                            <h5 class="font-bold text-sm text-slate-800">Pencapaian (Badges)</h5>
-                            <p class="text-xs text-slate-500">Lihat lencana anda</p>
+                            <h5 class="font-bold text-sm text-slate-800">Achievements</h5>
+                            <p class="text-xs text-slate-500">View your badges</p>
                         </div>
                     </button>
                     <button onclick="showScreen('profile')" class="bg-white hover:bg-slate-50 border-2 border-slate-200 p-4 rounded-2xl flex items-center space-x-3 transition shadow-sm">
@@ -264,8 +264,8 @@
                             <i class="fa-solid fa-user-gear"></i>
                         </div>
                         <div class="text-left">
-                            <h5 class="font-bold text-sm text-slate-800">Profil Pemain</h5>
-                            <p class="text-xs text-slate-500">Tukar avatar & akaun</p>
+                            <h5 class="font-bold text-sm text-slate-800">Player Profile</h5>
+                            <p class="text-xs text-slate-500">Change avatar or account</p>
                         </div>
                     </button>
                     <button onclick="logoutUser()" class="bg-white hover:bg-rose-50 border-2 border-rose-100 p-4 rounded-2xl flex items-center space-x-3 transition shadow-sm text-rose-600">
@@ -273,8 +273,8 @@
                             <i class="fa-solid fa-right-from-bracket"></i>
                         </div>
                         <div class="text-left">
-                            <h5 class="font-bold text-sm">Log Keluar</h5>
-                            <p class="text-xs text-rose-400">Tutup sesi semasa</p>
+                            <h5 class="font-bold text-sm">Log Out</h5>
+                            <p class="text-xs text-rose-400">End the current session</p>
                         </div>
                     </button>
                 </div>
@@ -284,8 +284,8 @@
             <div id="screen-topic-select" class="screen hidden flex flex-col p-6 sm:p-8 flex-grow">
                 <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h3 class="text-2xl font-extrabold text-slate-800">Pilih Topik Matematik Tahun 4</h3>
-                        <p class="text-xs text-slate-500">Pilih salah satu daripada 6 topik Ruang yang disediakan.</p>
+                        <h3 class="text-2xl font-extrabold text-slate-800">Choose a Year 4 Maths Topic</h3>
+                        <p class="text-xs text-slate-500">Choose one of the six Space topics.</p>
                     </div>
                     <button onclick="showScreen('dashboard')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">
                         <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
@@ -299,13 +299,13 @@
                             <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-2xl group-hover:bg-sky-500 group-hover:text-white transition">
                                 <i class="fa-solid fa-compass-drafting"></i>
                             </div>
-                            <span class="text-xs bg-sky-50 text-sky-700 font-bold px-2.5 py-1 rounded-full">Topik 1</span>
+                            <span class="text-xs bg-sky-50 text-sky-700 font-bold px-2.5 py-1 rounded-full">Topic 1</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-base text-slate-800 mb-1">Kenal Sudut</h4>
-                            <p class="text-xs text-slate-500 mb-3">Sudut tirus, sudut tepat, sudut cakah, sudut lurus & jangka sudut.</p>
+                            <h4 class="font-bold text-base text-slate-800 mb-1">Identifying Angles</h4>
+                            <p class="text-xs text-slate-500 mb-3">Recognise acute, right, obtuse and straight angles.</p>
                         </div>
-                        <div class="text-xs font-bold text-sky-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Pilih Topik</div>
+                        <div class="text-xs font-bold text-sky-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Choose a Topic</div>
                     </div>
 
                     <!-- Topic 2 -->
@@ -314,13 +314,13 @@
                             <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition">
                                 <i class="fa-solid fa-equals"></i>
                             </div>
-                            <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2.5 py-1 rounded-full">Topik 2</span>
+                            <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2.5 py-1 rounded-full">Topic 2</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-base text-slate-800 mb-1">Garis Selari & Serenjang</h4>
-                            <p class="text-xs text-slate-500 mb-3">Mengenal garis selari, garis serenjang & sudut 90°.</p>
+                            <h4 class="font-bold text-base text-slate-800 mb-1">Parallel and Perpendicular Lines</h4>
+                            <p class="text-xs text-slate-500 mb-3">Recognise parallel lines and lines that meet at right angles.</p>
                         </div>
-                        <div class="text-xs font-bold text-emerald-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Pilih Topik</div>
+                        <div class="text-xs font-bold text-emerald-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Choose a Topic</div>
                     </div>
 
                     <!-- Topic 3 -->
@@ -329,13 +329,13 @@
                             <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl group-hover:bg-amber-500 group-hover:text-white transition">
                                 <i class="fa-solid fa-vector-square"></i>
                             </div>
-                            <span class="text-xs bg-amber-50 text-amber-700 font-bold px-2.5 py-1 rounded-full">Topik 3</span>
+                            <span class="text-xs bg-amber-50 text-amber-700 font-bold px-2.5 py-1 rounded-full">Topic 3</span>
                         </div>
                         <div>
                             <h4 class="font-bold text-base text-slate-800 mb-1">Perimeter</h4>
-                            <p class="text-xs text-slate-500 mb-3">Mengira perimeter segi empat, bentuk gabungan & unit cm/m.</p>
+                            <p class="text-xs text-slate-500 mb-3">Calculate perimeter in centimetres and metres.</p>
                         </div>
-                        <div class="text-xs font-bold text-amber-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Pilih Topik</div>
+                        <div class="text-xs font-bold text-amber-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Choose a Topic</div>
                     </div>
 
                     <!-- Topic 4 -->
@@ -344,13 +344,13 @@
                             <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl group-hover:bg-purple-500 group-hover:text-white transition">
                                 <i class="fa-solid fa-table-cells"></i>
                             </div>
-                            <span class="text-xs bg-purple-50 text-purple-700 font-bold px-2.5 py-1 rounded-full">Topik 4</span>
+                            <span class="text-xs bg-purple-50 text-purple-700 font-bold px-2.5 py-1 rounded-full">Topic 4</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-base text-slate-800 mb-1">Luas</h4>
-                            <p class="text-xs text-slate-500 mb-3">Luas petak unit, segi empat sama, segi empat tepat (cm² dan m²).</p>
+                            <h4 class="font-bold text-base text-slate-800 mb-1">Area</h4>
+                            <p class="text-xs text-slate-500 mb-3">Find areas of squares and rectangles in cm² and m².</p>
                         </div>
-                        <div class="text-xs font-bold text-purple-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Pilih Topik</div>
+                        <div class="text-xs font-bold text-purple-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Choose a Topic</div>
                     </div>
 
                     <!-- Topic 5 -->
@@ -359,13 +359,13 @@
                             <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-2xl group-hover:bg-rose-500 group-hover:text-white transition">
                                 <i class="fa-solid fa-cube"></i>
                             </div>
-                            <span class="text-xs bg-rose-50 text-rose-700 font-bold px-2.5 py-1 rounded-full">Topik 5</span>
+                            <span class="text-xs bg-rose-50 text-rose-700 font-bold px-2.5 py-1 rounded-full">Topic 5</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-base text-slate-800 mb-1">Isipadu</h4>
-                            <p class="text-xs text-slate-500 mb-3">Isipadu kubus & kuboid menggunakan kubus unit & formula.</p>
+                            <h4 class="font-bold text-base text-slate-800 mb-1">Volume</h4>
+                            <p class="text-xs text-slate-500 mb-3">Find volumes of cubes and cuboids.</p>
                         </div>
-                        <div class="text-xs font-bold text-rose-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Pilih Topik</div>
+                        <div class="text-xs font-bold text-rose-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Choose a Topic</div>
                     </div>
 
                     <!-- Topic 6 -->
@@ -374,13 +374,13 @@
                             <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl group-hover:bg-indigo-500 group-hover:text-white transition">
                                 <i class="fa-solid fa-brain"></i>
                             </div>
-                            <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-2.5 py-1 rounded-full">Topik 6</span>
+                            <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-2.5 py-1 rounded-full">Topic 6</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-base text-slate-800 mb-1">Penyelesaian Masalah</h4>
-                            <p class="text-xs text-slate-500 mb-3">Situasi harian melibatkan sudut, garis, perimeter, luas & isipadu.</p>
+                            <h4 class="font-bold text-base text-slate-800 mb-1">Problem Solving</h4>
+                            <p class="text-xs text-slate-500 mb-3">Solve everyday problems involving angles, lines, perimeter, area and volume.</p>
                         </div>
-                        <div class="text-xs font-bold text-indigo-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Pilih Topik</div>
+                        <div class="text-xs font-bold text-indigo-600 flex items-center"><i class="fa-solid fa-play mr-1"></i> Choose a Topic</div>
                     </div>
                 </div>
             </div>
@@ -388,19 +388,19 @@
             <!-- 6. SCREEN: DIFFICULTY SELECTION -->
             <div id="screen-difficulty-select" class="screen hidden flex flex-col p-6 sm:p-8 flex-grow max-w-xl mx-auto w-full justify-center">
                 <div class="text-center mb-6">
-                    <span id="selected-topic-badge" class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full">Topik 1</span>
-                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-2">Pilih Tahap Kesukaran</h3>
-                    <p class="text-sm text-slate-500">Sesuaikan tahap cabaran dengan kebolehan anda.</p>
+                    <span id="selected-topic-badge" class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full">Topic 1</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-2">Choose a Difficulty Level</h3>
+                    <p class="text-sm text-slate-500">Choose the level that suits you.</p>
                 </div>
 
                 <div class="space-y-4 mb-6">
                     <div onclick="selectDifficulty('mudah')" class="card-hover bg-white border-2 border-emerald-300 hover:border-emerald-500 p-4 rounded-2xl cursor-pointer shadow-sm flex items-center justify-between">
                         <div>
                             <div class="flex items-center space-x-2">
-                                <h4 class="font-extrabold text-emerald-700 text-lg">MUDAH</h4>
-                                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">[MENGINGAT]</span>
+                                <h4 class="font-extrabold text-emerald-700 text-lg">EASY</h4>
+                                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">[REMEMBERING]</span>
                             </div>
-                            <p class="text-xs text-slate-600 mt-1">Soalan asas, mengenal pasti konsep, bentuk, ukuran & istilah.</p>
+                            <p class="text-xs text-slate-600 mt-1">Recognise shapes, measurements and geometry terms.</p>
                         </div>
                         <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold">
                             <i class="fa-solid fa-chevron-right"></i>
@@ -410,10 +410,10 @@
                     <div onclick="selectDifficulty('sederhana')" class="card-hover bg-white border-2 border-amber-300 hover:border-amber-500 p-4 rounded-2xl cursor-pointer shadow-sm flex items-center justify-between">
                         <div>
                             <div class="flex items-center space-x-2">
-                                <h4 class="font-extrabold text-amber-700 text-lg">SEDERHANA</h4>
-                                <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">[MEMAHAMI]</span>
+                                <h4 class="font-extrabold text-amber-700 text-lg">MEDIUM</h4>
+                                <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">[UNDERSTANDING]</span>
                             </div>
-                            <p class="text-xs text-slate-600 mt-1">Kefahaman konsep, membuat perbandingan, pengiraan mudah & tafsir gambar.</p>
+                            <p class="text-xs text-slate-600 mt-1">Compare shapes, do simple calculations and interpret diagrams.</p>
                         </div>
                         <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-bold">
                             <i class="fa-solid fa-chevron-right"></i>
@@ -423,10 +423,10 @@
                     <div onclick="selectDifficulty('sukar')" class="card-hover bg-white border-2 border-rose-300 hover:border-rose-500 p-4 rounded-2xl cursor-pointer shadow-sm flex items-center justify-between">
                         <div>
                             <div class="flex items-center space-x-2">
-                                <h4 class="font-extrabold text-rose-700 text-lg">SUKAR</h4>
-                                <span class="bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded">[MENGAPLIKASI]</span>
+                                <h4 class="font-extrabold text-rose-700 text-lg">HARD</h4>
+                                <span class="bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded">[APPLYING]</span>
                             </div>
-                            <p class="text-xs text-slate-600 mt-1">Pengiraan beberapa langkah, situasi baharu, gabungan maklumat & KBAT.</p>
+                            <p class="text-xs text-slate-600 mt-1">Solve multi-step and unfamiliar problems.</p>
                         </div>
                         <div class="w-10 h-10 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center font-bold">
                             <i class="fa-solid fa-chevron-right"></i>
@@ -436,7 +436,7 @@
 
                 <div class="text-center">
                     <button onclick="showScreen('topic-select')" class="text-sm font-bold text-slate-500 hover:text-slate-800">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Kembali ke Pilih Topik
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Topics
                     </button>
                 </div>
             </div>
@@ -444,8 +444,8 @@
             <!-- 7. SCREEN: TIME MODE SELECTION -->
             <div id="screen-time-select" class="screen hidden flex flex-col p-6 sm:p-8 flex-grow max-w-xl mx-auto w-full justify-center">
                 <div class="text-center mb-6">
-                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Pilih Mod Masa</h3>
-                    <p class="text-sm text-slate-500">Pilih had masa mengikut gaya permainan anda.</p>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Choose a Time Limit</h3>
+                    <p class="text-sm text-slate-500">Choose how much time you have per question.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
@@ -453,30 +453,30 @@
                         <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">
                             <i class="fa-solid fa-stopwatch"></i>
                         </div>
-                        <h4 class="font-extrabold text-slate-800 text-lg">30 Saat</h4>
-                        <p class="text-xs text-slate-500 mt-1">Countdown pantas setiap soalan</p>
+                        <h4 class="font-extrabold text-slate-800 text-lg">30 Seconds</h4>
+                        <p class="text-xs text-slate-500 mt-1">A short countdown for each question</p>
                     </div>
 
                     <div onclick="startGameWithTime(60)" class="card-hover bg-white border-2 border-amber-300 hover:border-amber-500 p-5 rounded-2xl cursor-pointer text-center shadow-sm">
                         <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">
                             <i class="fa-solid fa-clock"></i>
                         </div>
-                        <h4 class="font-extrabold text-slate-800 text-lg">1 Minit</h4>
-                        <p class="text-xs text-slate-500 mt-1">Masa selesa berfikir</p>
+                        <h4 class="font-extrabold text-slate-800 text-lg">1 Minute</h4>
+                        <p class="text-xs text-slate-500 mt-1">More time to work out each answer</p>
                     </div>
 
                     <div onclick="startGameWithTime(0)" class="card-hover bg-white border-2 border-emerald-300 hover:border-emerald-500 p-5 rounded-2xl cursor-pointer text-center shadow-sm">
                         <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">
                             <i class="fa-solid fa-infinity"></i>
                         </div>
-                        <h4 class="font-extrabold text-slate-800 text-lg">Tiada Had</h4>
-                        <p class="text-xs text-slate-500 mt-1">Jawab tanpa tekanan masa</p>
+                        <h4 class="font-extrabold text-slate-800 text-lg">No Time Limit</h4>
+                        <p class="text-xs text-slate-500 mt-1">Answer at your own pace</p>
                     </div>
                 </div>
 
                 <div class="text-center">
                     <button onclick="showScreen('difficulty-select')" class="text-sm font-bold text-slate-500 hover:text-slate-800">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Kembali ke Tahap Kesukaran
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Difficulty Levels
                     </button>
                 </div>
             </div>
@@ -486,15 +486,15 @@
                 <!-- Game Top Status Bar -->
                 <div class="flex flex-wrap justify-between items-center bg-slate-100 px-4 py-3 rounded-2xl border border-slate-200 mb-4">
                     <div class="flex items-center space-x-3">
-                        <span id="game-topic-badge" class="bg-eduBlue text-white text-xs font-bold px-3 py-1 rounded-full">Topik 1</span>
-                        <span id="game-diff-badge" class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Mudah</span>
+                        <span id="game-topic-badge" class="bg-eduBlue text-white text-xs font-bold px-3 py-1 rounded-full">Topic 1</span>
+                        <span id="game-diff-badge" class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">Easy</span>
                     </div>
                     <div class="flex items-center space-x-4 my-1 sm:my-0">
                         <div class="text-xs font-bold text-slate-600">
-                            <i class="fa-solid fa-list-check text-eduBlue mr-1"></i> Soalan: <span id="current-q-num">1</span>/20
+                            <i class="fa-solid fa-list-check text-eduBlue mr-1"></i> Question: <span id="current-q-num">1</span>/20
                         </div>
                         <div class="text-xs font-bold text-slate-600">
-                            <i class="fa-solid fa-star text-amber-500 mr-1"></i> Markah: <span id="current-game-score">0</span>
+                            <i class="fa-solid fa-star text-amber-500 mr-1"></i> marks: <span id="current-game-score">0</span>
                         </div>
                         <div id="timer-box" class="text-xs font-extrabold text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-200 flex items-center">
                             <i class="fa-solid fa-stopwatch mr-1"></i> <span id="timer-display">30</span>s
@@ -506,11 +506,11 @@
                 <div class="bg-white border-2 border-slate-200 rounded-3xl p-5 sm:p-6 shadow-sm mb-4 flex-grow flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-center mb-2">
-                            <span id="cognitive-badge" class="text-[10px] bg-indigo-50 text-indigo-700 font-extrabold px-2.5 py-0.5 rounded-full border border-indigo-100">[MENGINGAT]</span>
-                            <span class="text-xs text-slate-400 font-semibold">Nilai: 5 Markah</span>
+                            <span id="cognitive-badge" class="text-[10px] bg-indigo-50 text-indigo-700 font-extrabold px-2.5 py-0.5 rounded-full border border-indigo-100">[REMEMBERING]</span>
+                            <span class="text-xs text-slate-400 font-semibold">Worth 5 marks</span>
                         </div>
                         <h3 id="question-text" class="text-lg sm:text-xl font-bold text-slate-800 mb-4 leading-snug">
-                            Soalan kuiz akan dipaparkan di sini...
+                            Loading question…
                         </h3>
                         
                         <!-- Diagram Container -->
@@ -529,21 +529,21 @@
                 <div id="feedback-panel" class="hidden absolute inset-0 bg-slate-900/60 backdrop-blur-sm z-40 flex items-center justify-center p-4">
                     <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl border-4 border-white animate-bounce-short">
                         <div id="feedback-icon" class="text-5xl mb-3">🎉</div>
-                        <h3 id="feedback-title" class="text-2xl font-extrabold text-slate-800 mb-1">BETUL!</h3>
-                        <p id="feedback-score-gain" class="text-sm font-bold text-emerald-600 mb-3">+5 Markah</p>
+                        <h3 id="feedback-title" class="text-2xl font-extrabold text-slate-800 mb-1">CORRECT!</h3>
+                        <p id="feedback-score-gain" class="text-sm font-bold text-emerald-600 mb-3">+5 marks</p>
                         <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-left mb-6">
-                            <h5 class="text-xs font-bold text-slate-400 uppercase mb-1">Penerangan Jawapan:</h5>
-                            <p id="feedback-explanation" class="text-sm text-slate-700 font-medium">Penerangan ringkas...</p>
+                            <h5 class="text-xs font-bold text-slate-400 uppercase mb-1">Explanation:</h5>
+                            <p id="feedback-explanation" class="text-sm text-slate-700 font-medium">Explanation…</p>
                         </div>
                         <button onclick="nextQuestion()" class="w-full bg-eduBlue hover:bg-sky-600 text-white font-bold py-3.5 rounded-2xl shadow-lg transition">
-                            Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-1"></i>
+                            Next Question <i class="fa-solid fa-arrow-right ml-1"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="flex justify-between items-center text-xs text-slate-500 px-2">
-                    <span>Maskot Edu Kidz: <span class="text-sky-600 font-bold">"Fikir elok-elok, awak pasti boleh!"</span> 🦉</span>
-                    <button onclick="quitGame()" class="text-rose-500 font-bold hover:underline">Keluar Permainan</button>
+                    <span>Edu Kidz Mascot: <span class="text-sky-600 font-bold">"Take your time and think it through!"</span> 🦉</span>
+                    <button onclick="quitGame()" class="text-rose-500 font-bold hover:underline">End Quiz</button>
                 </div>
             </div>
 
@@ -552,24 +552,24 @@
                 <div class="w-20 h-20 bg-amber-100 text-amber-500 rounded-full flex items-center justify-center text-4xl mb-4 shadow-inner">
                     🏆
                 </div>
-                <h3 class="text-3xl font-extrabold text-slate-800 mb-1">🎉 SYABAS, <span id="res-username">Pemain</span>!</h3>
-                <p id="res-evaluation-msg" class="text-sm font-bold text-eduBlue mb-6 bg-sky-50 px-4 py-1.5 rounded-full border border-sky-200">Hebat! Teruskan usaha cemerlang!</p>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-1">🎉 WELL DONE, <span id="res-username">Player</span>!</h3>
+                <p id="res-evaluation-msg" class="text-sm font-bold text-eduBlue mb-6 bg-sky-50 px-4 py-1.5 rounded-full border border-sky-200">Excellent work. Keep it up!</p>
 
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-xl mb-6">
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
-                        <span class="text-xs text-slate-400 uppercase font-bold block">Jumlah Markah</span>
+                        <span class="text-xs text-slate-400 uppercase font-bold block">Total Marks</span>
                         <span id="res-total-score" class="text-2xl font-extrabold text-amber-500">85/100</span>
                     </div>
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
-                        <span class="text-xs text-slate-400 uppercase font-bold block">Jawapan Betul</span>
+                        <span class="text-xs text-slate-400 uppercase font-bold block">Correct Answers</span>
                         <span id="res-correct-count" class="text-2xl font-extrabold text-emerald-600">17/20</span>
                     </div>
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
-                        <span class="text-xs text-slate-400 uppercase font-bold block">Ketepatan</span>
+                        <span class="text-xs text-slate-400 uppercase font-bold block">Accuracy</span>
                         <span id="res-accuracy" class="text-2xl font-extrabold text-eduBlue">85%</span>
                     </div>
                     <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
-                        <span class="text-xs text-slate-400 uppercase font-bold block">Masa Diambil</span>
+                        <span class="text-xs text-slate-400 uppercase font-bold block">Time Taken</span>
                         <span id="res-time-taken" class="text-2xl font-extrabold text-purple-600">04:12</span>
                     </div>
                 </div>
@@ -588,8 +588,8 @@
             <div id="screen-progress" class="screen hidden flex flex-col p-6 sm:p-8 flex-grow">
                 <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h3 class="text-2xl font-extrabold text-slate-800">Progress Pembelajaran Saya</h3>
-                        <p class="text-xs text-slate-500">Rekod pencapaian dan prestasi anda merentasi topik Ruang.</p>
+                        <h3 class="text-2xl font-extrabold text-slate-800">My Learning Progress</h3>
+                        <p class="text-xs text-slate-500">Review your progress across the Space topics.</p>
                     </div>
                     <button onclick="showScreen('dashboard')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">
                         <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
@@ -598,21 +598,21 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                     <div class="bg-sky-50 border border-sky-200 p-4 rounded-2xl">
-                        <span class="text-xs text-sky-600 font-bold uppercase block">Jumlah Permainan</span>
+                        <span class="text-xs text-sky-600 font-bold uppercase block">Games Played</span>
                         <span id="prog-total-games" class="text-3xl font-extrabold text-slate-800">0</span>
                     </div>
                     <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl">
-                        <span class="text-xs text-emerald-600 font-bold uppercase block">Purata Ketepatan</span>
+                        <span class="text-xs text-emerald-600 font-bold uppercase block">Average Accuracy</span>
                         <span id="prog-avg-accuracy" class="text-3xl font-extrabold text-slate-800">0%</span>
                     </div>
                     <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl">
-                        <span class="text-xs text-amber-600 font-bold uppercase block">Jumlah Soalan Dijawab</span>
+                        <span class="text-xs text-amber-600 font-bold uppercase block">Questions Answered</span>
                         <span id="prog-total-answered" class="text-3xl font-extrabold text-slate-800">0</span>
                     </div>
                 </div>
 
                 <div class="bg-white border-2 border-slate-200 p-5 rounded-3xl mb-4">
-                    <h4 class="font-bold text-slate-800 mb-4 text-sm"><i class="fa-solid fa-chart-bar text-eduBlue mr-2"></i> Penguasaan Mengikut Topik</h4>
+                    <h4 class="font-bold text-slate-800 mb-4 text-sm"><i class="fa-solid fa-chart-bar text-eduBlue mr-2"></i> Progress by Topic</h4>
                     <div class="space-y-4" id="topic-progress-list">
                         <!-- Populated by JS -->
                     </div>
@@ -623,8 +623,8 @@
             <div id="screen-leaderboard" class="screen hidden flex flex-col p-6 sm:p-8 flex-grow">
                 <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h3 class="text-2xl font-extrabold text-slate-800">🏆 Leaderboard Edu Kidz</h3>
-                        <p class="text-xs text-slate-500">Kedudukan pemain terbaik di kalangan semua akaun berdaftar.</p>
+                        <h3 class="text-2xl font-extrabold text-slate-800">🏆 Edu Kidz Leaderboard</h3>
+                        <p class="text-xs text-slate-500">Top scores among registered players.</p>
                     </div>
                     <button onclick="showScreen('dashboard')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">
                         <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
@@ -635,10 +635,10 @@
                     <table class="w-full text-left border-collapse">
                         <thead>
                             <tr class="bg-slate-100 text-slate-600 text-xs uppercase font-bold border-b border-slate-200">
-                                <th class="p-4">Kedudukan</th>
-                                <th class="p-4">Pemain</th>
-                                <th class="p-4 text-right">Markah</th>
-                                <th class="p-4 text-right">Ketepatan</th>
+                                <th class="p-4">Rank</th>
+                                <th class="p-4">Player</th>
+                                <th class="p-4 text-right">Marks</th>
+                                <th class="p-4 text-right">Accuracy</th>
                             </tr>
                         </thead>
                         <tbody id="leaderboard-tbody" class="divide-y divide-slate-100 text-sm font-medium">
@@ -652,8 +652,8 @@
             <div id="screen-achievements" class="screen hidden flex flex-col p-6 sm:p-8 flex-grow">
                 <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h3 class="text-2xl font-extrabold text-slate-800">🎖️️ Pencapaian & Lencana</h3>
-                        <p class="text-xs text-slate-500">Buka lencana istimewa melalui prestasi hebat anda dalam permainan.</p>
+                        <h3 class="text-2xl font-extrabold text-slate-800">🎖️️ Achievements and Badges</h3>
+                        <p class="text-xs text-slate-500">Earn badges by reaching game milestones.</p>
                     </div>
                     <button onclick="showScreen('dashboard')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">
                         <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
@@ -669,8 +669,8 @@
             <div id="screen-profile" class="screen hidden flex flex-col p-6 sm:p-8 flex-grow max-w-lg mx-auto w-full">
                 <div class="flex items-center justify-between mb-6">
                     <div>
-                        <h3 class="text-2xl font-extrabold text-slate-800">Profil Pemain</h3>
-                        <p class="text-xs text-slate-500">Ubah avatar dan tetapan akaun anda.</p>
+                        <h3 class="text-2xl font-extrabold text-slate-800">Player Profile</h3>
+                        <p class="text-xs text-slate-500">Change your avatar and account settings.</p>
                     </div>
                     <button onclick="showScreen('dashboard')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">
                         <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
@@ -679,12 +679,12 @@
 
                 <div class="bg-white border-2 border-slate-200 p-6 rounded-3xl text-center mb-6">
                     <div id="profile-avatar-display" class="text-6xl mb-3 bg-sky-50 w-24 h-24 rounded-full flex items-center justify-center mx-auto border-2 border-sky-300 shadow-inner">🦉</div>
-                    <h4 id="profile-username" class="text-xl font-bold text-slate-800">Nama Pemain</h4>
-                    <p class="text-xs text-slate-400 mt-1">Akaun Aktif Edu Kidz</p>
+                    <h4 id="profile-username" class="text-xl font-bold text-slate-800">Player Name</h4>
+                    <p class="text-xs text-slate-400 mt-1">Active Edu Kidz Account</p>
                 </div>
 
                 <div class="bg-white border-2 border-slate-200 p-6 rounded-3xl mb-6">
-                    <label class="block text-xs font-bold text-slate-600 uppercase mb-3">Tukar Avatar Pemain</label>
+                    <label class="block text-xs font-bold text-slate-600 uppercase mb-3">Change Player Avatar</label>
                     <div class="grid grid-cols-5 gap-3" id="profile-avatar-selector">
                         <div onclick="updateProfileAvatar('🦉')" class="profile-avatar-opt cursor-pointer text-3xl p-3 bg-sky-50 border-2 border-sky-400 rounded-xl text-center transition hover:bg-sky-100">🦉</div>
                         <div onclick="updateProfileAvatar('🦊')" class="profile-avatar-opt cursor-pointer text-3xl p-3 bg-slate-50 border-2 border-slate-200 rounded-xl text-center transition hover:bg-sky-100">🦊</div>
@@ -774,220 +774,231 @@
 
         // Database of Badges
         const badgesList = [
-            { id: 'first_win', name: 'Pemain Hebat', desc: 'Menyelesaikan sesi permainan pertama.', icon: '🏆', unlocked: false },
-            { id: 'perfect_10', name: 'Tepat 10 Soalan', desc: 'Menjawab sekurang-kurangnya 10 soalan betul dalam satu sesi.', icon: '🎯', unlocked: false },
-            { id: 'score_100', name: '100 Markah', desc: 'Mendapat skor penuh 100 markah dalam satu set.', icon: '⭐', unlocked: false },
-            { id: 'streak_5', name: '5 Betul Berturut', desc: 'Mendapat 5 jawapan betul berturut-turut.', icon: '🔥', unlocked: false },
-            { id: 'master_ruang', name: 'Master Ruang', desc: 'Menyelesaikan kesemua 6 topik utama.', icon: '💎', unlocked: false },
-            { id: 'total_300', name: '300 Soalan Dijawab', desc: 'Menjawab 300 soalan secara kumulatif.', icon: '🚀', unlocked: false }
+            { id: 'first_win', name: 'First Game', desc: 'Complete your first quiz.', icon: '🏆', unlocked: false },
+            { id: 'perfect_10', name: '10 Correct Answers', desc: 'Answer at least ten questions correctly in one quiz.', icon: '🎯', unlocked: false },
+            { id: 'score_100', name: '100 Marks', desc: 'Score 100 marks in one quiz.', icon: '⭐', unlocked: false },
+            { id: 'streak_5', name: '5 in a Row', desc: 'Answer five questions correctly in a row.', icon: '🔥', unlocked: false },
+            { id: 'master_ruang', name: 'Space Master', desc: 'Complete all six topics.', icon: '💎', unlocked: false },
+            { id: 'total_300', name: '300 Questions Answered', desc: 'Answer 300 questions in total.', icon: '🚀', unlocked: false }
         ];
 
         // --- QUESTION GENERATOR ENGINE (360+ Rich Questions for Year 4 KPM Ruang) ---
+        function drawAngle(degrees, straightLine = false) {
+            const angle = degrees * Math.PI / 180;
+            const x = (75 + 52 * Math.cos(angle)).toFixed(2);
+            const y = (66 - 52 * Math.sin(angle)).toFixed(2);
+            return `<svg width="150" height="82" viewBox="0 0 150 82" aria-hidden="true">
+                <line x1="${straightLine ? 12 : 75}" y1="66" x2="138" y2="66" stroke="#1e293b" stroke-width="3"/>
+                <line x1="75" y1="66" x2="${x}" y2="${y}" stroke="#0284c7" stroke-width="3"/>
+                ${straightLine ? `<text x="112" y="55" font-size="12" fill="#0284c7">${degrees}°</text><text x="28" y="55" font-size="12" fill="#1e293b">?</text>` : ''}
+            </svg>`;
+        }
+
         function generateQuestionBank(topic, diff) {
             let questions = [];
             let count = 20;
 
             for (let i = 1; i <= count; i++) {
                 let qId = `T${topic}-${diff.toUpperCase()}-${i < 10 ? '0' + i : i}`;
-                let cognitive = diff === 'mudah' ? 'MENGINGAT' : (diff === 'sederhana' ? 'MEMAHAMI' : 'MENGAPLIKASI');
+                let cognitive = diff === 'mudah' ? 'REMEMBERING' : (diff === 'sederhana' ? 'UNDERSTANDING' : 'APPLYING');
                 let qObj = { id: qId, topic: topic, difficulty: diff, cognitive: cognitive, mark: 5 };
 
-                if (topic === 1) { // KENAL Sudut
+                if (topic === 1) { // KENAL Angle
                     if (diff === 'mudah') {
                         const types = [
-                            { q: "Apakah jenis sudut yang mempunyai ukuran kurang daripada 90°?", opts: ["Sudut tirus", "Sudut tepat", "Sudut cakah", "Sudut lurus"], ans: "Sudut tirus", exp: "Sudut tirus adalah sudut yang ukurannya kurang daripada 90°." },
-                            { q: "Apakah jenis sudut yang mempunyai ukuran tepat 90°?", opts: ["Sudut tirus", "Sudut tepat", "Sudut cakah", "Sudut lurus"], ans: "Sudut tepat", exp: "Sudut tepat mempunyai ukuran tepat 90° seperti bucu segi empat." },
-                            { q: "Apakah jenis sudut yang mempunyai ukuran melebihi 90° tetapi kurang daripada 180°?", opts: ["Sudut tirus", "Sudut tepat", "Sudut cakah", "Sudut lurus"], ans: "Sudut cakah", exp: "Sudut cakah adalah sudut antara 90° hingga 180°." },
-                            { q: "Apakah jenis sudut yang mempunyai ukuran tepat 180°?", opts: ["Sudut tirus", "Sudut tepat", "Sudut cakah", "Sudut lurus"], ans: "Sudut lurus", exp: "Sudut lurus terbentuk dalam garis lurus yang bernilai 180°." }
+                            { q: "What type of angle is greater than 0° and less than 90°?", opts: ["Acute angle", "Right angle", "Obtuse angle", "Straight angle"], ans: "Acute angle", exp: "An acute angle is greater than 0° and less than 90°." },
+                            { q: "What type of angle measures exactly 90°?", opts: ["Acute angle", "Right angle", "Obtuse angle", "Straight angle"], ans: "Right angle", exp: "A right angle measures exactly 90°." },
+                            { q: "What type of angle is greater than 90° and less than 180°?", opts: ["Acute angle", "Right angle", "Obtuse angle", "Straight angle"], ans: "Obtuse angle", exp: "An obtuse angle measures more than 90° and less than 180°." },
+                            { q: "What type of angle measures exactly 180°?", opts: ["Acute angle", "Right angle", "Obtuse angle", "Straight angle"], ans: "Straight angle", exp: "A straight angle measures 180° and forms a straight line." }
                         ];
                         let item = types[(i - 1) % types.length];
                         qObj.question = item.q;
                         qObj.options = item.opts;
                         qObj.answer = item.ans;
                         qObj.explanation = item.exp;
-                        qObj.diagram = `<svg width="120" height="80" viewBox="0 0 120 80"><path d="M20 70 L90 70 L90 20" stroke="#0284c7" stroke-width="4" fill="none"/><text x="50" y="65" font-size="12" fill="#1e293b">Sudut</text></svg>`;
+                        qObj.diagram = drawAngle([45, 90, 135, 180][(i - 1) % types.length]);
                     } else if (diff === 'sederhana') {
                         let angleVal = 30 + (i * 5) % 130;
-                        let typeName = angleVal < 90 ? "Sudut tirus" : (angleVal === 90 ? "Sudut tepat" : "Sudut cakah");
-                        qObj.question = `Sebuah sudut ditunjukkan dengan ukuran ${angleVal}°. Apakah jenis sudut ini?`;
-                        qObj.options = ["Sudut tirus", "Sudut tepat", "Sudut cakah", "Sudut lurus"];
+                        let typeName = angleVal < 90 ? "Acute angle" : (angleVal === 90 ? "Right angle" : "Obtuse angle");
+                        qObj.question = `An angle measures ${angleVal}°. What type of angle is it?`;
+                        qObj.options = ["Acute angle", "Right angle", "Obtuse angle", "Straight angle"];
                         qObj.answer = typeName;
-                        qObj.explanation = `Ukuran ${angleVal}° dikategorikan sebagai ${typeName}.`;
+                        qObj.explanation = `An angle measuring ${angleVal}° is a ${typeName.toLowerCase()}.`;
                         qObj.diagram = `<div class="text-3xl font-extrabold text-eduBlue bg-sky-50 px-6 py-2 rounded-xl border border-sky-200">${angleVal}°</div>`;
                     } else { // SUKAR
                         let a = 45 + i;
                         let b = 180 - a;
-                        qObj.question = `Jika satu sudut lurus (180°) dibahagikan kepada dua bahagian dan sudut pertama ialah ${a}°, berapakah nilai sudut kedua?`;
+                        qObj.question = `Two adjacent angles on a straight line total 180°. One measures ${a}°. How large is the other?`;
                         qObj.options = [`${b}°`, `${a}°`, `${b + 10}°`, `${b - 5}°`];
                         qObj.answer = `${b}°`;
-                        qObj.explanation = `Sudut lurus berjumlah 180°. Oleh itu, sudut kedua ialah 180° - ${a}° = ${b}°.`;
-                        qObj.diagram = `<svg width="150" height="70" viewBox="0 0 150 70"><line x1="10" y1="50" x2="140" y2="50" stroke="#1e293b" stroke-width="3"/><line x1="75" y1="50" x2="110" y2="15" stroke="#0284c7" stroke-width="3"/><text x="40" y="45" font-size="12" fill="#0284c7">${a}°</text><text x="95" y="45" font-size="12" fill="#10b981">${b}°</text></svg>`;
+                        qObj.explanation = `A straight angle measures 180°. The other angle is 180° − ${a}° = ${b}°.`;
+                        qObj.diagram = drawAngle(a, true);
                     }
                 } else if (topic === 2) { // GARIS SELARI DAN GARIS SERENJANG (REFINED WITH NEW QUESTIONS)
                     if (diff === 'mudah') {
                         const types = [
-                            { q: "Antara objek harian berikut, yang manakah menunjukkan contoh terbaik bagi dua garis selari?", opts: ["Landasan kereta api", "Sudut bucu meja", "Huruf L besar", "Penjuru buku teks"], ans: "Landasan kereta api", exp: "Landasan kereta api sentiasa mempunyai jarak yang sama antara satu sama lain dan tidak akan bersilang." },
-                            { q: "Apakah ciri utama yang membezakan garis selari dengan garis serenjang?", opts: ["Garis selari tidak bersilang manakala garis serenjang bersilang pada sudut 90°", "Garis selari bersilang pada 90°", "Garis serenjang tidak pernah bertemu", "Tiada perbezaan langsung"], ans: "Garis selari tidak bersilang manakala garis serenjang bersilang pada sudut 90°", exp: "Garis selari tidak pernah bersilang, manakala garis serenjang bersilang dan membentuk sudut tepat 90°." },
-                            { q: "Antara huruf abjad berikut, yang manakah memaparkan sepasang garis serenjang?", opts: ["Huruf L", "Huruf Z", "Huruf N", "Huruf V"], ans: "Huruf L", exp: "Huruf L membentuk sudut tegak 90° di penjurunya, iaitu ciri garis serenjang." },
-                            { q: "Apakah nama garis lurus yang sentiasa berjarak sama dan tidak akan pernah bertemu walaupun dipanjangkan?", opts: ["Garis selari", "Garis serenjang", "Garis bersilang", "Garis condong"], ans: "Garis selari", exp: "Garis selari kekal pada jarak tetap sepanjang laluannya dan tidak akan bersilang." }
+                            { q: "Which everyday object best shows two parallel lines?", opts: ["Rails on a straight railway track", "Corner of a rectangular table", "Block capital L", "Corner of a textbook"], ans: "Rails on a straight railway track", exp: "The two rails on a straight stretch of railway track stay the same distance apart." },
+                            { q: "What is the difference between parallel and perpendicular lines?", opts: ["Parallel lines never meet. Perpendicular lines meet at 90°.", "Parallel lines meet at 90°", "Perpendicular lines never meet", "There is no difference"], ans: "Parallel lines never meet. Perpendicular lines meet at 90°.", exp: "Parallel lines never meet. Perpendicular lines meet at 90°." },
+                            { q: "Which block capital letter shows a pair of perpendicular lines?", opts: ["L", "Z", "N", "V"], ans: "L", exp: "The strokes in a block capital L meet at a right angle." },
+                            { q: "What do we call lines that remain the same distance apart and never meet, even if extended?", opts: ["Parallel lines", "Perpendicular lines", "Intersecting lines", "Slanting lines"], ans: "Parallel lines", exp: "Parallel lines stay the same distance apart and never intersect." }
                         ];
                         let item = types[(i - 1) % types.length];
                         qObj.question = item.q;
                         qObj.options = item.opts;
                         qObj.answer = item.ans;
                         qObj.explanation = item.exp;
-                        qObj.diagram = `<div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 font-bold text-emerald-800">Topik 2: Garis Selari & Serenjang (Mudah)</div>`;
+                        qObj.diagram = `<div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 font-bold text-emerald-800">Parallel and Perpendicular Lines</div>`;
                     } else if (diff === 'sederhana') {
                         const types = [
-                            { q: "Berapakah bilangan pasang garis selari yang terdapat pada sebuah bentuk segi empat sama?", opts: ["2 pasang", "1 pasang", "3 pasang", "Tiada pasang"], ans: "2 pasang", exp: "Segi empat sama mempunyai dua pasang sisi bertentangan yang selari." },
-                            { q: "Dalam sebuah segi empat tepat, apakah hubungan geometri antara sisi panjang dengan sisi lebar yang bersebelahan?", opts: ["Garis serenjang", "Garis selari", "Garis selari berpusat", "Garis condong"], ans: "Garis serenjang", exp: "Sisi bersebelahan segi empat tepat bertemu pada penjuru sudut tegak 90°, maka ia adalah garis serenjang." },
-                            { q: "Antara bentuk berikut, yang manakah mempunyai sepasang garis selari sahaja (seperti bentuk trapezium)?", opts: ["Trapezium", "Segi tiga sama sisi", "Pentagon sekata", "Lelayang"], ans: "Trapezium", exp: "Trapezium mempunyai sepasang sisi bertentangan yang selari manakala dua sisi lagi tidak selari." },
-                            { q: "Jika dua garis lurus pada sehelai kertas bersilang dan membentuk sudut tepat 90°, apakah jenis garis tersebut?", opts: ["Garis serenjang", "Garis selari", "Garis lurus selari", "Garis selari condong"], ans: "Garis serenjang", exp: "Garis yang bersilang pada sudut tepat 90° dinamakan garis serenjang." }
+                            { q: "How many pairs of parallel sides does a square have?", opts: ["2 pairs", "1 pair", "3 pairs", "No pairs"], ans: "2 pairs", exp: "A square has two pairs of opposite parallel sides." },
+                            { q: "How are the length and width of a rectangle related where they meet?", opts: ["Perpendicular lines", "Parallel lines", "Lines sharing a centre point", "Slanting lines"], ans: "Perpendicular lines", exp: "Adjacent sides of a rectangle are perpendicular. They meet at 90°." },
+                            { q: "Which shape has exactly one pair of parallel sides?", opts: ["Trapezium", "Equilateral triangle", "Regular pentagon", "Kite"], ans: "Trapezium", exp: "A trapezium can have one pair of parallel sides, with the other two sides not parallel." },
+                            { q: "Two straight lines cross at 90°. What kind of lines are they?", opts: ["Perpendicular lines", "Parallel lines", "Coincident lines", "Slanting parallel lines"], ans: "Perpendicular lines", exp: "Lines that meet at a right angle are perpendicular." }
                         ];
                         let item = types[(i - 1) % types.length];
                         qObj.question = item.q;
                         qObj.options = item.opts;
                         qObj.answer = item.ans;
                         qObj.explanation = item.exp;
-                        qObj.diagram = `<div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 font-bold text-emerald-800">Analisis Bentuk 2D (Sederhana)</div>`;
+                        qObj.diagram = `<div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 font-bold text-emerald-800">Properties of 2D Shapes</div>`;
                     } else { // SUKAR
                         const types = [
-                            { q: "Sebuah kuboid mempunyai 12 tepi. Berapakah bilangan pasangan tepi yang saling selari pada muka atas kuboid?", opts: ["2 pasang", "4 pasang", "6 pasang", "1 pasang"], ans: "2 pasang", exp: "Pada satu muka segi empat tepat kuboid, terdapat 2 pasang sisi bertentangan yang selari." },
-                            { q: "Diberi garis AB adalah selari dengan garis CD, dan garis CD pula adalah serenjang dengan garis EF. Apakah hubungan antara garis AB dengan garis EF?", opts: ["Garis EF adalah serenjang dengan garis AB", "Garis EF adalah selari dengan garis AB", "Garis EF bersilang pada sudut 45°", "Garis EF bersilang rapat"], ans: "Garis EF adalah serenjang dengan garis AB", exp: "Jika satu garis serenjang kepada garis CD yang selari dengan AB, maka garis itu juga serenjang kepada garis AB." },
-                            { q: "Dalam koordinat grid, garis lurus dari titik (2,3) ke (2,8) dibandingkan dengan garis dari titik (5,3) ke (5,8). Apakah sifat kedua-dua garis ini?", opts: ["Garis selari menegak", "Garis serenjang", "Garis bersilang condong", "Garis selari melintang"], ans: "Garis selari menegak", exp: "Kedua-dua garis mempunyai koordinat x yang malar (x=2 dan x=5), menjadikannya garis selari menegak." },
-                            { q: "Apakah sifat geometri bagi penjuru bilik di mana dinding kiri, dinding hadapan dan lantai bertemu?", opts: ["Tiga garis bersilang serenjang antara satu sama lain", "Tiga garis selari", "Dua garis selari satu serenjang", "Garis condong"], ans: "Tiga garis bersilang serenjang antara satu sama lain", exp: "Penjuru bilik membentuk sudut 3D di mana dinding dan lantai bertemu secara berserenjang pada sudut 90°." }
+                            { q: "A cuboid has 12 edges. How many pairs of parallel edges are on its top face?", opts: ["2 pairs", "4 pairs", "6 pairs", "1 pair"], ans: "2 pairs", exp: "The rectangular top face has two pairs of parallel edges." },
+                            { q: "Line AB is parallel to line CD. Line CD is perpendicular to line EF. How are AB and EF related?", opts: ["EF is perpendicular to AB", "EF is parallel to AB", "EF meets AB at 45°", "EF and AB coincide"], ans: "EF is perpendicular to AB", exp: "A line perpendicular to CD is also perpendicular to any line parallel to CD." },
+                            { q: "One line joins (2, 3) to (2, 8). Another joins (5, 3) to (5, 8). How are the two lines related?", opts: ["Vertical parallel lines", "Perpendicular lines", "Slanting intersecting lines", "Horizontal parallel lines"], ans: "Vertical parallel lines", exp: "Each has a constant x-coordinate, so both lines are vertical and parallel." },
+                            { q: "At a rectangular room's corner, two walls meet the floor. How are the three edges at that corner related?", opts: ["All three pairs of edges are perpendicular", "All three edges are parallel", "Two edges are parallel and the third is perpendicular to them", "Slanting lines"], ans: "All three pairs of edges are perpendicular", exp: "Each pair of edges meets at a right angle." }
                         ];
                         let item = types[(i - 1) % types.length];
                         qObj.question = item.q;
                         qObj.options = item.opts;
                         qObj.answer = item.ans;
                         qObj.explanation = item.exp;
-                        qObj.diagram = `<div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 font-bold text-emerald-800">KBAT Geometri Ruang & Garis (Sukar)</div>`;
+                        qObj.diagram = `<div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 font-bold text-emerald-800">Lines and Edges</div>`;
                     }
                 } else if (topic === 3) { // PERIMETER
                     if (diff === 'mudah') {
                         let side = 4 + (i % 6);
                         let perim = side * 4;
-                        qObj.question = `Hitung perimeter segi empat sama yang mempunyai panjang sisi ${side} cm.`;
+                        qObj.question = `Find the perimeter of a square with sides ${side} cm long.`;
                         qObj.options = [`${perim} cm`, `${side * 2} cm`, `${perim + 4} cm`, `${side * 3} cm`];
                         qObj.answer = `${perim} cm`;
-                        qObj.explanation = `Perimeter segi empat sama = 4 × sisi = 4 × ${side} cm = ${perim} cm.`;
-                        qObj.diagram = `<div class="bg-amber-50 px-4 py-2 rounded-xl border border-amber-200 font-bold text-amber-800">Sisi = ${side} cm</div>`;
+                        qObj.explanation = `A square has four equal sides. Its perimeter is 4 × ${side} cm = ${perim} cm.`;
+                        qObj.diagram = `<div class="bg-amber-50 px-4 py-2 rounded-xl border border-amber-200 font-bold text-amber-800">Side = ${side} cm</div>`;
                     } else if (diff === 'sederhana') {
                         let p = 8 + (i % 5);
                         let l = 4 + (i % 3);
                         let perim = 2 * (p + l);
-                        qObj.question = `Sebuah segi empat tepat mempunyai panjang ${p} cm dan lebar ${l} cm. Hitung perimeternya.`;
+                        qObj.question = `A rectangle is ${p} cm long and ${l} cm wide. Find its perimeter.`;
                         qObj.options = [`${perim} cm`, `${p + l} cm`, `${2 * p} cm`, `${perim + 2} cm`];
                         qObj.answer = `${perim} cm`;
-                        qObj.explanation = `Perimeter segi empat tepat = 2 × (panjang + lebar) = 2 × (${p} + ${l}) = 2 × ${p + l} = ${perim} cm.`;
-                        qObj.diagram = `<div class="bg-amber-50 px-4 py-2 rounded-xl border border-amber-200 font-bold text-amber-800">Panjang = ${p} cm, Lebar = ${l} cm</div>`;
+                        qObj.explanation = `Perimeter = 2 × (length + width) = 2 × (${p} + ${l}) = ${perim} cm.`;
+                        qObj.diagram = `<div class="bg-amber-50 px-4 py-2 rounded-xl border border-amber-200 font-bold text-amber-800">Length = ${p} cm, Width = ${l} cm</div>`;
                     } else {
                         let side1 = 10 + i;
                         let side2 = 6 + i;
                         let side3 = 8;
                         let perim = side1 + side2 + side3;
-                        qObj.question = `Sebuah segi tiga mempunyai panjang sisi ${side1} cm, ${side2} cm, dan ${side3} cm. Berapakah perimeternya?`;
+                        qObj.question = `A triangle has sides of ${side1} cm, ${side2} cm and ${side3} cm. Find its perimeter.`;
                         qObj.options = [`${perim} cm`, `${perim + 5} cm`, `${side1 * side2} cm`, `${perim - 4} cm`];
                         qObj.answer = `${perim} cm`;
-                        qObj.explanation = `Perimeter segi tiga ialah jumlah kesemua sisinya: ${side1} + ${side2} + ${side3} = ${perim} cm.`;
-                        qObj.diagram = `<div class="bg-amber-50 px-4 py-2 rounded-xl border border-amber-200 font-bold text-amber-800">Sisi: ${side1}cm, ${side2}cm, ${side3}cm</div>`;
+                        qObj.explanation = `Add the three side lengths: ${side1} + ${side2} + ${side3} = ${perim} cm.`;
+                        qObj.diagram = `<div class="bg-amber-50 px-4 py-2 rounded-xl border border-amber-200 font-bold text-amber-800">Sides: ${side1}cm, ${side2}cm, ${side3}cm</div>`;
                     }
                 } else if (topic === 4) { // LUAS
                     if (diff === 'mudah') {
                         let s = 3 + (i % 5);
                         let area = s * s;
-                        qObj.question = `Hitung luas sebuah segi empat sama yang panjang sisinya ${s} cm.`;
-                        qObj.options = [`${area} cm²`, `${s * 4} cm²`, `${area + 2} cm²`, `${s * 2} cm²`];
+                        qObj.question = `Find the area of a square with sides ${s} cm long.`;
+                        qObj.options = [`${area} cm²`, `${area + 5} cm²`, `${area + 2} cm²`, `${s * 2} cm²`];
                         qObj.answer = `${area} cm²`;
-                        qObj.explanation = `Luas segi empat sama = sisi × sisi = ${s} × ${s} = ${area} cm².`;
-                        qObj.diagram = `<div class="bg-purple-50 px-4 py-2 rounded-xl border border-purple-200 font-bold text-purple-800">Sisi = ${s} cm</div>`;
+                        qObj.explanation = `Area = side × side = ${s} × ${s} = ${area} cm².`;
+                        qObj.diagram = `<div class="bg-purple-50 px-4 py-2 rounded-xl border border-purple-200 font-bold text-purple-800">Side = ${s} cm</div>`;
                     } else if (diff === 'sederhana') {
                         let p = 6 + (i % 4);
                         let l = 3 + (i % 3);
                         let area = p * l;
-                        qObj.question = `Sebuah segi empat tepat mempunyai panjang ${p} cm dan lebar ${l} cm. Berapakah luasnya?`;
-                        qObj.options = [`${area} cm²`, `${2*(p+l)} cm²`, `${area + 4} cm²`, `${p*l + 2} cm²`];
+                        qObj.question = `A rectangle is ${p} cm long and ${l} cm wide. Find its area.`;
+                        qObj.options = [`${area} cm²`, `${area - 3} cm²`, `${area + 4} cm²`, `${p*l + 2} cm²`];
                         qObj.answer = `${area} cm²`;
-                        qObj.explanation = `Luas segi empat tepat = panjang × lebar = ${p} × ${l} = ${area} cm².`;
-                        qObj.diagram = `<div class="bg-purple-50 px-4 py-2 rounded-xl border border-purple-200 font-bold text-purple-800">Panjang = ${p} cm, Lebar = ${l} cm</div>`;
+                        qObj.explanation = `Area = length × width = ${p} × ${l} = ${area} cm².`;
+                        qObj.diagram = `<div class="bg-purple-50 px-4 py-2 rounded-xl border border-purple-200 font-bold text-purple-800">Length = ${p} cm, Width = ${l} cm</div>`;
                     } else {
                         let area = 48 + (i * 4);
                         let p = 8;
                         let l = area / p;
-                        qObj.question = `Luas sebuah segi empat tepat ialah ${area} cm². Jika panjangnya ${p} cm, berapakah lebarnya?`;
-                        qObj.options = [`${l} cm`, `${l + 2} cm`, `${p} cm`, `${l - 1} cm`];
+                        qObj.question = `A rectangle has area ${area} cm² and length ${p} cm. What is its width?`;
+                        qObj.options = [`${l} cm`, `${l + 2} cm`, `${l + 3} cm`, `${l - 1} cm`];
                         qObj.answer = `${l} cm`;
-                        qObj.explanation = `Lebar = Luas ÷ Panjang = ${area} ÷ ${p} = ${l} cm.`;
-                        qObj.diagram = `<div class="bg-purple-50 px-4 py-2 rounded-xl border border-purple-200 font-bold text-purple-800">Luas = ${area} cm², Panjang = ${p} cm</div>`;
+                        qObj.explanation = `Width = area ÷ length = ${area} ÷ ${p} = ${l} cm.`;
+                        qObj.diagram = `<div class="bg-purple-50 px-4 py-2 rounded-xl border border-purple-200 font-bold text-purple-800">Area = ${area} cm², Length = ${p} cm</div>`;
                     }
                 } else if (topic === 5) { // ISIPADU
                     if (diff === 'mudah') {
                         let s = 2 + (i % 3);
                         let vol = s * s * s;
-                        qObj.question = `Hitung isipadu sebuah kubus yang panjang sisinya ${s} cm.`;
-                        qObj.options = [`${vol} cm³`, `${s * 6} cm³`, `${vol + 4} cm³`, `${s * s} cm³`];
+                        qObj.question = `Find the volume of a cube with edges ${s} cm long.`;
+                        qObj.options = [`${vol} cm³`, `${vol + 7} cm³`, `${vol + 4} cm³`, `${s * s} cm³`];
                         qObj.answer = `${vol} cm³`;
-                        qObj.explanation = `Isipadu kubus = sisi × sisi × sisi = ${s} × ${s} × ${s} = ${vol} cm³.`;
-                        qObj.diagram = `<div class="bg-rose-50 px-4 py-2 rounded-xl border border-rose-200 font-bold text-rose-800">Sisi kubus = ${s} cm</div>`;
+                        qObj.explanation = `Volume = edge × edge × edge = ${s} × ${s} × ${s} = ${vol} cm³.`;
+                        qObj.diagram = `<div class="bg-rose-50 px-4 py-2 rounded-xl border border-rose-200 font-bold text-rose-800">Cube edge = ${s} cm</div>`;
                     } else if (diff === 'sederhana') {
                         let p = 4, l = 3, t = 2 + (i % 3);
                         let vol = p * l * t;
-                        qObj.question = `Sebuah kuboid mempunyai panjang ${p} cm, lebar ${l} cm dan tinggi ${t} cm. Berapakah isipadunya?`;
+                        qObj.question = `A cuboid is ${p} cm long, ${l} cm wide and ${t} cm high. Find its volume.`;
                         qObj.options = [`${vol} cm³`, `${vol + 6} cm³`, `${p*l} cm³`, `${vol - 2} cm³`];
                         qObj.answer = `${vol} cm³`;
-                        qObj.explanation = `Isipadu kuboid = panjang × lebar × tinggi = ${p} × ${l} × ${t} = ${vol} cm³.`;
-                        qObj.diagram = `<div class="bg-rose-50 px-4 py-2 rounded-xl border border-rose-200 font-bold text-rose-800">P = ${p}cm, L = ${l}cm, T = ${t}cm</div>`;
+                        qObj.explanation = `Volume = length × width × height = ${p} × ${l} × ${t} = ${vol} cm³.`;
+                        qObj.diagram = `<div class="bg-rose-50 px-4 py-2 rounded-xl border border-rose-200 font-bold text-rose-800">Length = ${p} cm, width = ${l} cm, height = ${t} cm</div>`;
                     } else {
-                        let vol = 120 + (i * 10);
+                        let vol = (5 + i) * 24;
                         let tapak = 24;
                         let tinggi = vol / tapak;
-                        qObj.question = `Isipadu sebuah kuboid ialah ${vol} cm³. Jika luas tapaknya ialah ${tapak || 24} cm², berapakah tingginya?`;
+                        qObj.question = `A cuboid has a volume of ${vol} cm³ and a base area of ${tapak} cm². What is its height?`;
                         qObj.options = [`${tinggi} cm`, `${tinggi + 2} cm`, `${tinggi * 2} cm`, `${tinggi - 1} cm`];
                         qObj.answer = `${tinggi} cm`;
-                        qObj.explanation = `Tinggi = Isipadu ÷ Luas Tapak = ${vol} ÷ ${tapak} = ${tinggi} cm.`;
-                        qObj.diagram = `<div class="bg-rose-50 px-4 py-2 rounded-xl border border-rose-200 font-bold text-rose-800">Isipadu = ${vol} cm³, Tapak = ${tapak} cm²</div>`;
+                        qObj.explanation = `Height = volume ÷ base area = ${vol} ÷ ${tapak} = ${tinggi} cm.`;
+                        qObj.diagram = `<div class="bg-rose-50 px-4 py-2 rounded-xl border border-rose-200 font-bold text-rose-800">Volume = ${vol} cm³, Base area = ${tapak} cm²</div>`;
                     }
                 } else if (topic === 6) { // PENYELESAIAN MASALAH
                     if (diff === 'mudah') {
                         const probList = [
-                            { q: "Sebuah bingkai gambar berbentuk segi empat sama mempunyai panjang sisi 15 cm. Berapakah perimeter bingkai gambar itu?", opts: ["60 cm", "30 cm", "45 cm", "75 cm"], ans: "60 cm", exp: "Perimeter = 4 × 15 cm = 60 cm." },
-                            { q: "Sebuah kadbod berbentuk segi empat tepat mempunyai panjang 12 cm dan lebar 5 cm. Berapakah luas kadbod tersebut?", opts: ["60 cm²", "34 cm²", "17 cm²", "30 cm²"], ans: "60 cm²", exp: "Luas = 12 cm × 5 cm = 60 cm²." },
-                            { q: "Sebuah kubus kecil mempunyai panjang sisi 3 cm. Berapakah isipadu kubus itu?", opts: ["27 cm³", "9 cm³", "18 cm³", "12 cm³"], ans: "27 cm³", exp: "Isipadu = 3 × 3 × 3 = 27 cm³." },
-                            { q: "Dua garis lurus pada kertas lukisan tidak akan pernah bersilang walau dipanjangkan sejauh mana pun. Apakah nama garis ini?", opts: ["Garis selari", "Garis serenjang", "Garis bersilang", "Garis condong"], ans: "Garis selari", exp: "Garis selari sentiasa berjarak sama dan tidak pernah bersilang." }
+                            { q: "A square picture frame has sides 15 cm long. What is its perimeter?", opts: ["60 cm", "30 cm", "45 cm", "75 cm"], ans: "60 cm", exp: "Perimeter = 4 × 15 cm = 60 cm." },
+                            { q: "A rectangular piece of card is 12 cm long and 5 cm wide. What is its area?", opts: ["60 cm²", "34 cm²", "17 cm²", "30 cm²"], ans: "60 cm²", exp: "Area = 12 cm × 5 cm = 60 cm²." },
+                            { q: "A cube has edges 3 cm long. What is its volume?", opts: ["27 cm³", "9 cm³", "18 cm³", "12 cm³"], ans: "27 cm³", exp: "Volume = 3 × 3 × 3 = 27 cm³." },
+                            { q: "Two distinct straight lines on a sheet of paper never meet, no matter how far they are extended. What are they called?", opts: ["Parallel lines", "Perpendicular lines", "Intersecting lines", "Slanting lines"], ans: "Parallel lines", exp: "Parallel lines stay the same distance apart and never intersect." }
                         ];
                         let item = probList[(i - 1) % probList.length];
                         qObj.question = item.q;
                         qObj.options = item.opts;
                         qObj.answer = item.ans;
                         qObj.explanation = item.exp;
-                        qObj.diagram = `<div class="bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-200 font-bold text-indigo-800">Penyelesaian Masalah Asas (Mudah)</div>`;
+                        qObj.diagram = `<div class="bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-200 font-bold text-indigo-800">Basic Problem Solving (Easy)</div>`;
                     } else if (diff === 'sederhana') {
                         const probList = [
-                            { q: "Sebuah bilik darjah berbentuk segi empat tepat berukuran panjang 9 m dan lebar 7 m. Hitung luas lantai bilik darjah tersebut.", opts: ["63 m²", "32 m²", "56 m²", "48 m²"], ans: "63 m²", exp: "Luas = 9 m × 7 m = 63 m²." },
-                            { q: "Amin berjalan mengelilingi sebuah padang bola berbentuk segi empat tepat yang panjangnya 40 m dan lebarnya 25 m sebanyak 2 kali. Berapakah jumlah jarak larian Amin?", opts: ["260 m", "130 m", "100 m", "200 m"], ans: "260 m", exp: "Perimeter padang = 2 × (40 + 25) = 130 m. Untuk 2 pusingan = 130 m × 2 = 260 m." },
-                            { q: "Sebuah kotak kuboid mempunyai panjang 10 cm, lebar 4 cm dan tinggi 5 cm. Hitung isipadu kotak tersebut.", opts: ["200 cm³", "19 cm³", "90 cm³", "150 cm³"], ans: "200 cm³", exp: "Isipadu = 10 × 4 × 5 = 200 cm³." },
-                            { q: "Satu sudut lurus (180°) dipotong kepada dua bahagian. Jika bahagian pertama ialah 65°, berapakah nilai bahagian sudut yang satu lagi?", opts: ["115°", "125°", "95°", "110°"], ans: "115°", exp: "Sudut lurus bernilai 180°. Bahagian kedua = 180° - 65° = 115°." }
+                            { q: "A classroom floor is 9 m long and 7 m wide. What is its area?", opts: ["63 m²", "32 m²", "56 m²", "48 m²"], ans: "63 m²", exp: "Area = 9 m × 7 m = 63 m²." },
+                            { q: "Amin walks twice around a rectangular football pitch that is 40 m long and 25 m wide. How far does he walk?", opts: ["260 m", "130 m", "100 m", "200 m"], ans: "260 m", exp: "One lap is 2 × (40 + 25) = 130 m. Two laps total 260 m." },
+                            { q: "A cuboid box is 10 cm long, 4 cm wide and 5 cm high. What is its volume?", opts: ["200 cm³", "19 cm³", "90 cm³", "150 cm³"], ans: "200 cm³", exp: "Volume = 10 × 4 × 5 = 200 cm³." },
+                            { q: "A straight angle is split into two parts. One part measures 65°. How large is the other?", opts: ["115°", "125°", "95°", "110°"], ans: "115°", exp: "A straight angle measures 180°. The other part measures 180° − 65° = 115°." }
                         ];
                         let item = probList[(i - 1) % probList.length];
                         qObj.question = item.q;
                         qObj.options = item.opts;
                         qObj.answer = item.ans;
                         qObj.explanation = item.exp;
-                        qObj.diagram = `<div class="bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-200 font-bold text-indigo-800">Penyelesaian Masalah Harian (Sederhana)</div>`;
+                        qObj.diagram = `<div class="bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-200 font-bold text-indigo-800">Everyday Problem Solving (Medium)</div>`;
                     } else { // SUKAR
                         const probList = [
-                            { q: "Sebuah kolam renang berbentuk segi empat tepat mempunyai panjang 20 m dan lebar 12 m. Disekeliling kolam itu dipasang penutup pagar. Jika harga pagar ialah RM10 bagi setiap 1 meter, berapakah jumlah kos pagar yang diperlukan?", opts: ["RM640", "RM320", "RM480", "RM240"], ans: "RM640", exp: "Perimeter kolam = 2 × (20 + 12) = 64 m. Kos = 64 m × RM10 = RM640." },
-                            { q: "Sebuah bekas berbentuk kuboid mempunyai luas tapak 30 cm² dan tinggi 8 cm. Sebanyak 150 cm³ air telah diisi ke dalam bekas itu. Berapakah isipadu ruang kosong yang tinggal di dalam bekas tersebut?", opts: ["90 cm³", "240 cm³", "120 cm³", "60 cm³"], ans: "90 cm³", exp: "Jumlah isipadu kuboid = 30 cm² × 8 cm = 240 cm³. Ruang kosong = 240 - 150 = 90 cm³." },
-                            { q: "Siti ingin menyusun jubin lantai berbentuk segi empat sama berukuran sisi 2 m di atas ruang lantai seluas 48 m². Berapakah bilangan jubin maksimum yang diperlukan?", opts: ["12 keping", "24 keping", "8 keping", "16 keping"], ans: "12 keping", exp: "Luas 1 jubin = 2 × 2 = 4 m². Bilangan jubin = 48 m² ÷ 4 m² = 12 keping." },
-                            { q: "Dua sudut dalam satu garis lurus masing-masing bernilai (3x)° dan (2x + 30)°. Berapakah nilai x jika jumlahnya membentuk 180°?", opts: ["30", "25", "35", "40"], ans: "30", exp: "3x + 2x + 30 = 180 => 5x = 150 => x = 30." }
+                            { q: "A rectangular pool is 20 m long and 12 m wide. A fence around it costs RM10 per metre. How much does the fence cost?", opts: ["RM640", "RM320", "RM480", "RM240"], ans: "RM640", exp: "The perimeter is 2 × (20 + 12) = 64 m. The cost is 64 × RM10 = RM640." },
+                            { q: "A cuboid container has a base area of 30 cm² and is 8 cm high. It contains 150 cm³ of water. What volume is still empty?", opts: ["90 cm³", "240 cm³", "120 cm³", "60 cm³"], ans: "90 cm³", exp: "The container holds 30 × 8 = 240 cm³. The empty space is 240 − 150 = 90 cm³." },
+                            { q: "Siti covers a floor of area 48 m² with square tiles whose sides are 2 m long. How many tiles are needed if they fit exactly?", opts: ["12 tiles", "24 tiles", "8 tiles", "16 tiles"], ans: "12 tiles", exp: "Each tile covers 2 × 2 = 4 m². 48 ÷ 4 = 12 tiles." },
+                            { q: "Two adjacent angles on a straight line measure (3x)° and (2x + 30)°. What is x?", opts: ["30", "25", "35", "40"], ans: "30", exp: "Their sum is 180°. 3x + 2x + 30 = 180, so 5x = 150 and x = 30." }
                         ];
                         let item = probList[(i - 1) % probList.length];
                         qObj.question = item.q;
                         qObj.options = item.opts;
                         qObj.answer = item.ans;
                         qObj.explanation = item.exp;
-                        qObj.diagram = `<div class="bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-200 font-bold text-indigo-800">KBAT Penyelesaian Masalah (Sukar)</div>`;
+                        qObj.diagram = `<div class="bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-200 font-bold text-indigo-800">Multi-Step Problem Solving (Hard)</div>`;
                     }
                 }
 
@@ -1057,7 +1068,7 @@
             const pass = document.getElementById('reg-password').value;
 
             if (playersDb[username]) {
-                alertUser("Nama pengguna telah wujud! Sila pilih nama lain atau log masuk.");
+                alertUser("That username is taken. Choose another or log in.");
                 return;
             }
 
@@ -1086,7 +1097,7 @@
             const pass = document.getElementById('login-password').value;
 
             if (!playersDb[username] || playersDb[username].password !== pass) {
-                alertUser("Nama pengguna atau kata laluan salah!");
+                alertUser("Incorrect username or password.");
                 return;
             }
 
@@ -1114,7 +1125,7 @@
             document.getElementById('dash-username').innerText = p.username;
             document.getElementById('dash-score').innerText = p.score;
             document.getElementById('dash-avatar').innerText = p.avatar;
-            document.getElementById('dash-rank-title').innerText = p.score > 200 ? 'Master Edu Kidz' : 'Ahli Matematik Cilik';
+            document.getElementById('dash-rank-title').innerText = p.score > 200 ? 'Master Edu Kidz' : 'Young Mathematician';
         }
 
         function alertUser(msg) {
@@ -1129,7 +1140,7 @@
 
         function selectTopic(topicNum) {
             currentTopic = topicNum;
-            document.getElementById('selected-topic-badge').innerText = `Topik ${topicNum}`;
+            document.getElementById('selected-topic-badge').innerText = `Topic ${topicNum}`;
             showScreen('difficulty-select');
         }
 
@@ -1155,6 +1166,7 @@
         }
 
         function loadQuestion() {
+            document.getElementById('feedback-panel').classList.add('hidden');
             if (gameSession.currentIndex >= gameSession.questions.length) {
                 endGame();
                 return;
@@ -1163,11 +1175,11 @@
             let q = gameSession.questions[gameSession.currentIndex];
             document.getElementById('current-q-num').innerText = gameSession.currentIndex + 1;
             document.getElementById('current-game-score').innerText = gameSession.score;
-            document.getElementById('game-topic-badge').innerText = `Topik ${currentTopic}`;
-            document.getElementById('game-diff-badge').innerText = currentDifficulty.toUpperCase();
+            document.getElementById('game-topic-badge').innerText = `Topic ${currentTopic}`;
+            document.getElementById('game-diff-badge').innerText = ({ mudah: 'EASY', sederhana: 'MEDIUM', sukar: 'HARD' })[currentDifficulty];
             document.getElementById('cognitive-badge').innerText = `[${q.cognitive}]`;
             document.getElementById('question-text').innerText = q.question;
-            document.getElementById('diagram-container').innerHTML = q.diagram || '<div class="text-xs text-slate-400">Tiada gambarajah</div>';
+            document.getElementById('diagram-container').innerHTML = q.diagram || '<div class="text-xs text-slate-400">No diagram</div>';
 
             let optContainer = document.getElementById('options-container');
             optContainer.innerHTML = '';
@@ -1200,11 +1212,12 @@
         }
 
         function submitAnswer(selectedOpt) {
+            const feedbackPanel = document.getElementById('feedback-panel');
+            if (!feedbackPanel.classList.contains('hidden')) return;
             clearInterval(gameSession.timerInterval);
             let q = gameSession.questions[gameSession.currentIndex];
             let isCorrect = (selectedOpt === q.answer);
 
-            let feedbackPanel = document.getElementById('feedback-panel');
             let feedbackIcon = document.getElementById('feedback-icon');
             let feedbackTitle = document.getElementById('feedback-title');
             let feedbackScoreGain = document.getElementById('feedback-score-gain');
@@ -1215,17 +1228,17 @@
                 gameSession.score += 5;
                 gameSession.correctCount++;
                 feedbackIcon.innerText = "🎉";
-                feedbackTitle.innerText = "BETUL!";
+                feedbackTitle.innerText = "CORRECT!";
                 feedbackTitle.className = "text-2xl font-extrabold text-emerald-600 mb-1";
-                feedbackScoreGain.innerText = "+5 Markah";
+                feedbackScoreGain.innerText = "+5 marks";
                 createFireworks();
             } else {
                 playSound('incorrect');
                 gameSession.wrongCount++;
                 feedbackIcon.innerText = "💡";
-                feedbackTitle.innerText = selectedOpt === null ? "MASA TAMAT!" : "CUBA LAGI!";
+                feedbackTitle.innerText = selectedOpt === null ? "TIME’S UP!" : "INCORRECT";
                 feedbackTitle.className = "text-2xl font-extrabold text-rose-500 mb-1";
-                feedbackScoreGain.innerText = `Jawapan betul: ${q.answer}`;
+                feedbackScoreGain.innerText = `Correct answer: ${q.answer}`;
             }
 
             feedbackExp.innerText = q.explanation;
@@ -1255,8 +1268,8 @@
         }
 
         function quitGame() {
-            clearInterval(gameSession.timerInterval);
-            if (confirm("Adakah anda pasti mahu keluar permainan? Progress semasa tidak akan disimpan.")) {
+            if (confirm("End this quiz? Your progress in this round will be lost.")) {
+                clearInterval(gameSession.timerInterval);
                 showScreen('dashboard');
             }
         }
@@ -1291,9 +1304,9 @@
             let secs = timeTakenSec % 60;
             document.getElementById('res-time-taken').innerText = `${mins < 10 ? '0' + mins : mins}:${secs < 10 ? '0' + secs : secs}`;
 
-            let evalMsg = "Hebat! Teruskan usaha cemerlang!";
-            if (accuracy < 50) evalMsg = "Jangan berputus asa! Cuba lagi dan belajar daripada kesilapan.";
-            else if (accuracy < 80) evalMsg = "Bagus! Cuba lagi untuk meningkatkan markah ke tahap lebih tinggi.";
+            let evalMsg = "Excellent work. Keep it up!";
+            if (accuracy < 50) evalMsg = "Keep practising and review the explanations.";
+            else if (accuracy < 80) evalMsg = "Well done. Try another round to improve your score.";
             document.getElementById('res-evaluation-msg').innerText = evalMsg;
 
             showScreen('result');
@@ -1314,12 +1327,12 @@
             document.getElementById('prog-total-answered').innerText = p.totalAnswered;
 
             let topicNames = {
-                1: "Topik 1: Kenal Sudut",
-                2: "Topik 2: Garis Selari & Serenjang",
-                3: "Topik 3: Perimeter",
-                4: "Topik 4: Luas",
-                5: "Topik 5: Isipadu",
-                6: "Topik 6: Penyelesaian Masalah"
+                1: "Topic 1: Identifying Angles",
+                2: "Topic 2: Parallel and Perpendicular Lines",
+                3: "Topic 3: Perimeter",
+                4: "Topic 4: Area",
+                5: "Topic 5: Volume",
+                6: "Topic 6: Problem Solving"
             };
 
             let list = document.getElementById('topic-progress-list');
@@ -1346,7 +1359,7 @@
 
             let sorted = Object.values(playersDb).sort((a, b) => b.score - a.score);
             if (sorted.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="4" class="p-6 text-center text-slate-400">Belum ada rekod pemain.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="4" class="p-6 text-center text-slate-400">There are no player records yet.</td></tr>`;
                 return;
             }
 
@@ -1380,7 +1393,7 @@
                         <h4 class="font-extrabold text-slate-800 text-base">${b.name}</h4>
                         <p class="text-xs text-slate-500 mt-0.5">${b.desc}</p>
                         <span class="inline-block mt-2 text-[10px] font-bold px-2.5 py-0.5 rounded-full ${unlocked ? 'bg-amber-100 text-amber-800' : 'bg-slate-200 text-slate-600'}">
-                            ${unlocked ? '✓ Dibuka' : '🔒 Berkunci'}
+                            ${unlocked ? '✓ Unlocked' : '🔒 Locked'}
                         </span>
                     </div>
                 `;
@@ -1405,7 +1418,7 @@
 
         function resetPlayerStats() {
             if (!currentUser) return;
-            if (confirm("Adakah anda pasti mahu menetapkan semula semua statistik akaun ini?")) {
+            if (confirm("Reset all statistics for this account?")) {
                 let p = playersDb[currentUser];
                 p.score = 0;
                 p.totalGames = 0;

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids – Edu Kidz: Pengembaraan Duit Tahun 1</title>
+    <title>Math Kids – Edu Kidz: Year 1 Money Adventure</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -132,9 +132,9 @@
                     👦
                 </div>
                 <div>
-                    <h2 id="navPlayerName" class="font-bold text-lg sm:text-xl text-brandDark leading-tight">Adik Comel</h2>
+                    <h2 id="navPlayerName" class="font-bold text-lg sm:text-xl text-brandDark leading-tight">Young Player</h2>
                     <div class="flex items-center gap-2 text-xs sm:text-sm text-gray-600 font-semibold">
-                        <span id="navLevelBadge" class="bg-brandPurple text-white px-2 py-0.5 rounded-full text-xs">Tahap 1</span>
+                        <span id="navLevelBadge" class="bg-brandPurple text-white px-2 py-0.5 rounded-full text-xs">Level 1</span>
                         <span>⭐ <span id="navTotalScore">0</span> Mata</span>
                     </div>
                 </div>
@@ -144,12 +144,12 @@
             <div class="flex items-center gap-2 sm:gap-3">
                 <button onclick="app.showScreen('mainMenu')" class="bg-brandBlue text-white p-2.5 sm:px-4 sm:py-2 rounded-2xl font-bold shadow-3d-sm bounce-hover active-press flex items-center gap-2 text-sm sm:text-base">
                     <i class="fa-solid fa-house"></i>
-                    <span class="hidden sm:inline">Menu Utama</span>
+                    <span class="hidden sm:inline">Main Menu</span>
                 </button>
                 <button onclick="soundManager.toggleMute()" id="muteBtn" class="bg-brandYellow text-brandDark p-2.5 sm:px-3 sm:py-2 rounded-2xl font-bold shadow-3d-sm bounce-hover active-press text-sm sm:text-base">
                     <i class="fa-solid fa-volume-high" id="muteIcon"></i>
                 </button>
-                <button onclick="app.logout()" class="bg-brandRed text-white p-2.5 sm:px-3 sm:py-2 rounded-2xl font-bold shadow-3d-sm bounce-hover active-press text-sm sm:text-base" title="Log Keluar">
+                <button onclick="app.logout()" class="bg-brandRed text-white p-2.5 sm:px-3 sm:py-2 rounded-2xl font-bold shadow-3d-sm bounce-hover active-press text-sm sm:text-base" title="Log Out">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </button>
             </div>
@@ -170,15 +170,15 @@
     <div id="feedbackModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div id="feedbackCard" class="bg-white border-8 border-brandYellow rounded-3xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl transform scale-95 transition-all duration-300">
             <div id="feedbackIcon" class="text-6xl sm:text-7xl mb-3">🎉</div>
-            <h3 id="feedbackTitle" class="text-2xl sm:text-3xl font-extrabold text-brandBlue mb-2">Tahniah!</h3>
-            <p id="feedbackText" class="text-base sm:text-lg font-bold text-gray-700 mb-6">Jawapan anda betul!</p>
+            <h3 id="feedbackTitle" class="text-2xl sm:text-3xl font-extrabold text-brandBlue mb-2">Well Done!</h3>
+            <p id="feedbackText" class="text-base sm:text-lg font-bold text-gray-700 mb-6">Your answer is correct!</p>
             
             <div id="correctAnswerBox" class="hidden mb-6 p-3 bg-red-50 border-2 border-red-200 rounded-2xl text-red-700 text-sm font-bold">
-                Jawapan Betul: <span id="correctAnswerVal" class="text-base font-extrabold underline"></span>
+                Correct Answers: <span id="correctAnswerVal" class="text-base font-extrabold underline"></span>
             </div>
 
             <button id="feedbackNextBtn" onclick="app.nextQuestion()" class="w-full bg-brandGreen hover:bg-emerald-400 text-white font-extrabold text-xl py-3 rounded-2xl shadow-3d bounce-hover active-press flex items-center justify-center gap-2">
-                <span>Teruskan</span>
+                <span>Continue</span>
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
@@ -469,7 +469,7 @@
                         <i class="fa-solid fa-crow text-3xl sm:text-4xl"></i>
                     </div>
                     <div class="flex justify-between items-end">
-                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Burung Enggang</span>
+                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Hornbill</span>
                         <span class="font-black text-xl sm:text-2xl leading-none">5</span>
                     </div>
                 </div>`,
@@ -497,7 +497,7 @@
                         <i class="fa-solid fa-fish text-3xl sm:text-4xl"></i>
                     </div>
                     <div class="flex justify-between items-end">
-                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Penyu Penyu</span>
+                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Sea Turtles</span>
                         <span class="font-black text-xl sm:text-2xl leading-none">20</span>
                     </div>
                 </div>`,
@@ -511,7 +511,7 @@
                         <i class="fa-solid fa-tree text-3xl sm:text-4xl"></i>
                     </div>
                     <div class="flex justify-between items-end">
-                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Kelapa Sawit</span>
+                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Oil Palm</span>
                         <span class="font-black text-xl sm:text-2xl leading-none">50</span>
                     </div>
                 </div>`,
@@ -525,7 +525,7 @@
                         <i class="fa-solid fa-mountain text-3xl sm:text-4xl"></i>
                     </div>
                     <div class="flex justify-between items-end">
-                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Gunung Kinabalu</span>
+                        <span class="text-[10px] font-bold bg-white/20 px-1 rounded">Mount Kinabalu</span>
                         <span class="font-black text-xl sm:text-2xl leading-none">100</span>
                     </div>
                 </div>`
@@ -538,13 +538,13 @@
         class QuestionEngine {
             constructor() {
                 this.topics = {
-                    1: { name: "Kenali Wang", icon: "💰" },
-                    2: { name: "Nyatakan Jumlah Nilai Wang", icon: "🪙" },
-                    3: { name: "Padankan Jumlah Wang", icon: "🧩" },
-                    4: { name: "Lengkapkan Tukaran Wang", icon: "🔄" },
-                    5: { name: "Ayat Matematik Gambar", icon: "✏️" },
-                    6: { name: "Tambah & Tolak Wang", icon: "➕➖" },
-                    7: { name: "Penyelesaian Masalah", icon: "🛒" }
+                    1: { name: "Recognising Money", icon: "💰" },
+                    2: { name: "Total Value of Money", icon: "🪙" },
+                    3: { name: "Matching Money Amounts", icon: "🧩" },
+                    4: { name: "Lengkapkan Equivalent Amounts of Money", icon: "🔄" },
+                    5: { name: "Number Sentences with Pictures", icon: "✏️" },
+                    6: { name: "Adding and Subtracting Money", icon: "➕➖" },
+                    7: { name: "Word Problems", icon: "🛒" }
                 };
             }
 
@@ -571,25 +571,25 @@
                 let qData = {};
 
                 switch (parseInt(topicId)) {
-                    case 1: // Kenali Wang
+                    case 1: // Recognising Money
                         qData = this.genTopic1(level, actualMode);
                         break;
-                    case 2: // Nyatakan Jumlah Nilai
+                    case 2: // Total Value of Money
                         qData = this.genTopic2(level, actualMode);
                         break;
                     case 3: // Padankan Jumlah
                         qData = this.genTopic3(level, actualMode);
                         break;
-                    case 4: // Tukaran Wang
+                    case 4: // Equivalent Amounts of Money
                         qData = this.genTopic4(level, actualMode);
                         break;
-                    case 5: // Ayat Matematik Gambar
+                    case 5: // Number Sentences with Pictures
                         qData = this.genTopic5(level, actualMode);
                         break;
                     case 6: // Tambah & Tolak
                         qData = this.genTopic6(level, actualMode);
                         break;
-                    case 7: // Penyelesaian Masalah
+                    case 7: // Word Problems
                         qData = this.genTopic7(level, actualMode);
                         break;
                     default:
@@ -608,7 +608,7 @@
             }
 
             // --- Topic Generators ---
-            genTopic1(level, mode) { // Kenali Wang
+            genTopic1(level, mode) { // Recognising Money
                 const items = level === 'mudah' ? 
                     ['5sen', '10sen', '20sen', '50sen', 'RM1', 'RM5'] :
                     ['RM1', 'RM5', 'RM10', 'RM20', 'RM50', 'RM100'];
@@ -617,7 +617,7 @@
                 const isCoin = target.includes('sen');
                 const valText = target.replace('sen', ' sen');
 
-                const prompt = isCoin ? "Apakah nilai wang syiling ini?" : "Apakah nilai wang kertas ini?";
+                const prompt = isCoin ? "What is the value of this coin?" : "What is the value of this banknote?";
                 
                 // Formulate choices
                 let choices = [valText];
@@ -636,7 +636,7 @@
                 };
             }
 
-            genTopic2(level, mode) { // Nyatakan Jumlah Nilai
+            genTopic2(level, mode) { // Total Value of Money
                 let visuals = [];
                 let totalCents = 0;
 
@@ -673,7 +673,7 @@
                 choices.sort(() => Math.random() - 0.5);
 
                 return {
-                    prompt: "Berapakah jumlah nilai wang di atas?",
+                    prompt: "What is the total value of the money shown?",
                     visuals: visuals,
                     choices: choices,
                     correctAnswer: totalStr,
@@ -696,7 +696,7 @@
                 choices.sort(() => Math.random() - 0.5);
 
                 return {
-                    prompt: "Pilih jumlah nilai wang yang sepadan:",
+                    prompt: "Choose the value that matches the money shown.",
                     visuals: sel.vis,
                     choices: choices,
                     correctAnswer: sel.val,
@@ -704,13 +704,13 @@
                 };
             }
 
-            genTopic4(level, mode) { // Lengkapkan Tukaran Wang
+            genTopic4(level, mode) { // Lengkapkan Equivalent Amounts of Money
                 const options = [
-                    { prompt: "50 sen sama nilai dengan berapa keping syiling 10 sen?", ans: "5", vis: ['50sen'] },
-                    { prompt: "20 sen sama nilai dengan berapa keping syiling 10 sen?", ans: "2", vis: ['20sen'] },
-                    { prompt: "RM1 sama nilai dengan berapa keping syiling 50 sen?", ans: "2", vis: ['RM1'] },
-                    { prompt: "RM5 sama nilai dengan berapa keping wang kertas RM1?", ans: "5", vis: ['RM5'] },
-                    { prompt: "RM10 sama nilai dengan berapa keping wang kertas RM5?", ans: "2", vis: ['RM10'] }
+                    { prompt: "How many 10 sen coins are worth 50 sen?", ans: "5", vis: ['50sen'] },
+                    { prompt: "How many 10 sen coins are worth 20 sen?", ans: "2", vis: ['20sen'] },
+                    { prompt: "How many 50 sen coins are worth RM1?", ans: "2", vis: ['RM1'] },
+                    { prompt: "How many RM1 banknotes are worth RM5?", ans: "5", vis: ['RM5'] },
+                    { prompt: "How many RM5 banknotes are worth RM10?", ans: "2", vis: ['RM10'] }
                 ];
                 const sel = options[Math.floor(Math.random() * options.length)];
                 
@@ -726,7 +726,15 @@
                 };
             }
 
-            genTopic5(level, mode) { // Ayat Matematik Gambar
+            ringgitNotes(amount) {
+                return [...Array(Math.floor(amount / 5)).fill('RM5'), ...Array(amount % 5).fill('RM1')];
+            }
+
+            senCoins(amount) {
+                return [...Array(Math.floor(amount / 20)).fill('20sen'), ...Array((amount % 20) / 10).fill('10sen')];
+            }
+
+            genTopic5(level, mode) { // Number Sentences with Pictures
                 const num1 = level === 'mudah' ? Math.floor(Math.random() * 3) + 1 : Math.floor(Math.random() * 5) + 2;
                 const num2 = Math.floor(Math.random() * 3) + 1;
                 const isAdd = Math.random() > 0.3;
@@ -734,16 +742,16 @@
                 if (isAdd) {
                     const ans = num1 + num2;
                     return {
-                        prompt: `Lengkapkan ayat matematik: RM${num1} + RM${num2} = ?`,
-                        visuals: [`RM${num1}`.replace('RM3','RM1').replace('RM4','RM1'), `RM${num2}`.replace('RM3','RM1')],
+                        prompt: `Complete the number sentence: RM${num1} + RM${num2} = ?`,
+                        visuals: [...this.ringgitNotes(num1), ...this.ringgitNotes(num2)],
                         choices: [`RM${ans}`, `RM${ans+1}`, `RM${ans-1 <= 0 ? 9 : ans-1}`, `RM${ans+2}`],
                         correctAnswer: `RM${ans}`
                     };
                 } else {
                     const top = num1 + num2;
                     return {
-                        prompt: `Lengkapkan ayat matematik: RM${top} - RM${num2} = ?`,
-                        visuals: [`RM${top}`.replace('RM3','RM5').replace('RM4','RM5')],
+                        prompt: `Complete the number sentence: RM${top} - RM${num2} = ?`,
+                        visuals: this.ringgitNotes(top),
                         choices: [`RM${num1}`, `RM${num1+2}`, `RM${num1+1}`, `RM${num1-1 <= 0 ? 8 : num1-1}`],
                         correctAnswer: `RM${num1}`
                     };
@@ -756,8 +764,8 @@
                     const v2 = (Math.floor(Math.random() * 3) + 1) * 10;
                     const ans = v1 + v2;
                     return {
-                        prompt: `Hitung: ${v1} sen + ${v2} sen = ___`,
-                        visuals: [`${v1}sen`.replace('30sen','20sen'), `${v2}sen`.replace('30sen','10sen')],
+                        prompt: `Work out: ${v1} sen + ${v2} sen = ___`,
+                        visuals: [...this.senCoins(v1), ...this.senCoins(v2)],
                         choices: [`${ans} sen`, `${ans+10} sen`, `${ans-10} sen`, `${ans+20} sen`],
                         correctAnswer: `${ans} sen`
                     };
@@ -766,33 +774,33 @@
                     const r2 = Math.floor(Math.random() * 2) + 1;
                     const ans = r1 - r2;
                     return {
-                        prompt: `Hitung baki: RM${r1} - RM${r2} = ___`,
-                        visuals: ['RM5', 'RM1'],
+                        prompt: `Work out how much is left: RM${r1} - RM${r2} = ___`,
+                        visuals: this.ringgitNotes(r1),
                         choices: [`RM${ans}`, `RM${ans+1}`, `RM${ans+2}`, `RM${ans-1 <= 0 ? 7 : ans-1}`],
                         correctAnswer: `RM${ans}`
                     };
                 }
             }
 
-            genTopic7(level, mode) { // Penyelesaian Masalah
+            genTopic7(level, mode) { // Word Problems
                 const stories = [
                     {
                         name: "Aina",
-                        item: "buku cerita",
+                        item: "a storybook",
                         cost: 4,
                         paid: 5,
                         type: "change"
                     },
                     {
                         name: "Adam",
-                        item: "pensel warna",
+                        item: "coloured pencils",
                         cost: 3,
                         paid: 10,
                         type: "change"
                     },
                     {
                         name: "Siti",
-                        item: "epal",
+                        item: "an apple",
                         cost: 2,
                         paid: 5,
                         type: "change"
@@ -803,9 +811,9 @@
                 const change = s.paid - s.cost;
 
                 return {
-                    prompt: `${s.name} ada RM${s.paid}. Dia membeli ${s.item} berharga RM${s.cost}. Berapakah baki wang ${s.name}?`,
+                    prompt: `${s.name} has RM${s.paid} and buys ${s.item} for RM${s.cost}. How much money is left?`,
                     visuals: [`RM${s.paid}`],
-                    choices: [`RM${change}`, `RM${change+1}`, `RM${change+2}`, `RM${s.cost}`],
+                    choices: [`RM${change}`, `RM${change+1}`, `RM${change+2}`, `RM${change + 3}`],
                     correctAnswer: `RM${change}`
                 };
             }
@@ -932,7 +940,7 @@
                 document.getElementById('navAvatar').innerText = state.currentUser.avatar || '👦';
                 document.getElementById('navPlayerName').innerText = state.currentUser.name;
                 document.getElementById('navTotalScore').innerText = state.currentUser.totalScore;
-                document.getElementById('navLevelBadge').innerText = `Tahap ${state.currentUser.level || 1}`;
+                document.getElementById('navLevelBadge').innerText = `Level ${state.currentUser.level || 1}`;
             }
 
             showScreen(screenName) {
@@ -983,15 +991,15 @@
                     <div class="glass-panel rounded-3xl p-6 sm:p-10 max-w-md mx-auto shadow-2xl text-center border-4 border-white">
                         <div class="text-6xl mb-3 animate-bounce">🪙</div>
                         <h1 class="text-3xl sm:text-4xl font-extrabold text-brandBlue mb-1">MATH KIDS</h1>
-                        <p class="text-brandRed font-bold text-lg mb-6">EDU KIDZ: WANG TAHUN 1</p>
+                        <p class="text-brandRed font-bold text-lg mb-6">EDU KIDZ: YEAR 1 MONEY</p>
 
                         <form onsubmit="app.handleLogin(event)" class="space-y-4 text-left">
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1">Nama Pengguna (Username)</label>
-                                <input type="text" id="loginUsername" required class="w-full px-4 py-3 rounded-2xl border-2 border-gray-300 focus:border-brandBlue focus:outline-none font-bold text-lg" placeholder="Contoh: smart">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Username</label>
+                                <input type="text" id="loginUsername" required class="w-full px-4 py-3 rounded-2xl border-2 border-gray-300 focus:border-brandBlue focus:outline-none font-bold text-lg" placeholder="e.g. smart">
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1">Kata Laluan</label>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Password</label>
                                 <input type="password" id="loginPassword" required class="w-full px-4 py-3 rounded-2xl border-2 border-gray-300 focus:border-brandBlue focus:outline-none font-bold text-lg" placeholder="••••">
                             </div>
 
@@ -1001,8 +1009,8 @@
                         </form>
 
                         <div class="mt-6 text-sm font-bold text-gray-600">
-                            Belum ada akaun? 
-                            <button onclick="app.showScreen('register')" class="text-brandBlue underline hover:text-brandPurple ml-1">Daftar Akaun Baru</button>
+                            Need an account? 
+                            <button onclick="app.showScreen('register')" class="text-brandBlue underline hover:text-brandPurple ml-1">Create an Account</button>
                         </div>
                     </div>
                 `;
@@ -1016,7 +1024,7 @@
                 if (state.login(u, p)) {
                     this.showScreen('mainMenu');
                 } else {
-                    alert('Nama pengguna atau kata laluan tidak sah! (Akaun demo: smart / 1234)');
+                    alert('Incorrect username or password! (Demo account: smart / 1234)');
                 }
             }
 
@@ -1024,25 +1032,25 @@
             renderRegister() {
                 return `
                     <div class="glass-panel rounded-3xl p-6 sm:p-10 max-w-md mx-auto shadow-2xl text-center border-4 border-white">
-                        <h2 class="text-3xl font-extrabold text-brandPurple mb-2">Daftar Akaun Baru</h2>
-                        <p class="text-gray-600 font-bold mb-4">Sertai Pengembaraan Duit Edu Kidz!</p>
+                        <h2 class="text-3xl font-extrabold text-brandPurple mb-2">Create an Account</h2>
+                        <p class="text-gray-600 font-bold mb-4">Join the EDU KIDZ Money Adventure!</p>
 
                         <form onsubmit="app.handleRegister(event)" class="space-y-3 text-left">
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Nama Pemain</label>
-                                <input type="text" id="regName" required class="w-full px-4 py-2.5 rounded-xl border-2 border-gray-300 focus:border-brandPurple focus:outline-none font-bold" placeholder="Nama penuh / gelaran">
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Player Name</label>
+                                <input type="text" id="regName" required class="w-full px-4 py-2.5 rounded-xl border-2 border-gray-300 focus:border-brandPurple focus:outline-none font-bold" placeholder="Full name or nickname">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Nama Pengguna (Username)</label>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Username</label>
                                 <input type="text" id="regUsername" required class="w-full px-4 py-2.5 rounded-xl border-2 border-gray-300 focus:border-brandPurple focus:outline-none font-bold" placeholder="username">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Kata Laluan</label>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Password</label>
                                 <input type="password" id="regPassword" required class="w-full px-4 py-2.5 rounded-xl border-2 border-gray-300 focus:border-brandPurple focus:outline-none font-bold" placeholder="••••">
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Pilih Avatar Maskot</label>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Choose a Mascot</label>
                                 <div class="grid grid-cols-5 gap-2" id="avatarSelector">
                                     <button type="button" onclick="app.selectAvatar('👦')" class="avatar-opt text-2xl p-2 bg-white rounded-xl border-2 border-brandPurple shadow">👦</button>
                                     <button type="button" onclick="app.selectAvatar('👧')" class="avatar-opt text-2xl p-2 bg-white rounded-xl border-2 border-gray-200">👧</button>
@@ -1059,8 +1067,8 @@
                         </form>
 
                         <div class="mt-4 text-sm font-bold text-gray-600">
-                            Sudah ada akaun? 
-                            <button onclick="app.showScreen('login')" class="text-brandPurple underline ml-1">Log Masuk</button>
+                            Already have an account? 
+                            <button onclick="app.showScreen('login')" class="text-brandPurple underline ml-1">Log In</button>
                         </div>
                     </div>
                 `;
@@ -1088,7 +1096,7 @@
                     state.login(username, password);
                     this.showScreen('mainMenu');
                 } else {
-                    alert('Nama pengguna telah wujud! Sila guna nama lain.');
+                    alert('That username is taken. Please choose another.');
                 }
             }
 
@@ -1102,12 +1110,12 @@
                             <div class="flex items-center gap-4">
                                 <div class="text-5xl sm:text-6xl animate-bounce">🧙‍♂️</div>
                                 <div>
-                                    <h1 class="text-2xl sm:text-3xl font-extrabold text-brandDark">Selamat Datang, ${u.name}!</h1>
-                                    <p class="text-gray-600 font-bold">Jom kumpul lebih banyak mata dalam Pengembaraan Wang!</p>
+                                    <h1 class="text-2xl sm:text-3xl font-extrabold text-brandDark">Welcome, ${u.name}!</h1>
+                                    <p class="text-gray-600 font-bold">Earn more points in the Money Adventure!</p>
                                 </div>
                             </div>
                             <button onclick="app.showScreen('topicSelect')" class="w-full sm:w-auto bg-brandGreen text-white font-extrabold text-xl px-8 py-4 rounded-2xl shadow-3d bounce-hover active-press flex items-center justify-center gap-3 glow-effect">
-                                <span>🎮 MULA BERMAIN</span>
+                                <span>🎮 START PLAYING</span>
                                 <i class="fa-solid fa-play"></i>
                             </button>
                         </div>
@@ -1115,20 +1123,20 @@
                         <!-- Stats Bar Grid -->
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                             <div class="bg-white p-4 rounded-2xl border-2 border-brandYellow shadow-md text-center">
-                                <div class="text-xs text-gray-500 font-bold">Jumlah Markah</div>
+                                <div class="text-xs text-gray-500 font-bold">Total Score</div>
                                 <div class="text-2xl sm:text-3xl font-black text-brandYellow">⭐ ${u.totalScore}</div>
                             </div>
                             <div class="bg-white p-4 rounded-2xl border-2 border-brandBlue shadow-md text-center">
-                                <div class="text-xs text-gray-500 font-bold">Soalan Dijawab</div>
+                                <div class="text-xs text-gray-500 font-bold">Questions Answered</div>
                                 <div class="text-2xl sm:text-3xl font-black text-brandBlue">📝 ${u.answeredCount}</div>
                             </div>
                             <div class="bg-white p-4 rounded-2xl border-2 border-brandGreen shadow-md text-center">
-                                <div class="text-xs text-gray-500 font-bold">Jawapan Betul</div>
+                                <div class="text-xs text-gray-500 font-bold">Correct Answers</div>
                                 <div class="text-2xl sm:text-3xl font-black text-brandGreen">✅ ${u.correctCount}</div>
                             </div>
                             <div class="bg-white p-4 rounded-2xl border-2 border-brandPurple shadow-md text-center">
-                                <div class="text-xs text-gray-500 font-bold">Tahap Pembelajaran</div>
-                                <div class="text-2xl sm:text-3xl font-black text-brandPurple">🏆 Tahap ${u.level || 1}</div>
+                                <div class="text-xs text-gray-500 font-bold">Learning Level</div>
+                                <div class="text-2xl sm:text-3xl font-black text-brandPurple">🏆 Level ${u.level || 1}</div>
                             </div>
                         </div>
 
@@ -1136,12 +1144,12 @@
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                             <button onclick="app.showScreen('topicSelect')" class="bg-gradient-to-b from-blue-400 to-brandBlue text-white p-5 rounded-3xl shadow-3d bounce-hover active-press flex flex-col items-center gap-2 border-2 border-white">
                                 <i class="fa-solid fa-book-open text-3xl"></i>
-                                <span class="font-extrabold text-lg">📚 Pilih Topik</span>
+                                <span class="font-extrabold text-lg">📚 Choose a Topic</span>
                             </button>
 
                             <button onclick="app.showScreen('progress')" class="bg-gradient-to-b from-green-400 to-brandGreen text-white p-5 rounded-3xl shadow-3d bounce-hover active-press flex flex-col items-center gap-2 border-2 border-white">
                                 <i class="fa-solid fa-chart-line text-3xl"></i>
-                                <span class="font-extrabold text-lg">📊 Progress Saya</span>
+                                <span class="font-extrabold text-lg">📊 My Progress</span>
                             </button>
 
                             <button onclick="app.showScreen('leaderboard')" class="bg-gradient-to-b from-amber-400 to-brandYellow text-brandDark p-5 rounded-3xl shadow-3d bounce-hover active-press flex flex-col items-center gap-2 border-2 border-white">
@@ -1151,12 +1159,12 @@
 
                             <button onclick="app.showScreen('profile')" class="bg-gradient-to-b from-purple-400 to-brandPurple text-white p-5 rounded-3xl shadow-3d bounce-hover active-press flex flex-col items-center gap-2 border-2 border-white">
                                 <i class="fa-solid fa-user-gear text-3xl"></i>
-                                <span class="font-extrabold text-lg">👤 Profil Saya</span>
+                                <span class="font-extrabold text-lg">👤 My Profile</span>
                             </button>
 
                             <button onclick="app.logout()" class="col-span-2 sm:col-span-2 bg-gradient-to-b from-rose-400 to-brandRed text-white p-5 rounded-3xl shadow-3d bounce-hover active-press flex items-center justify-center gap-3 border-2 border-white">
                                 <i class="fa-solid fa-door-open text-3xl"></i>
-                                <span class="font-extrabold text-lg">🚪 Log Keluar</span>
+                                <span class="font-extrabold text-lg">🚪 Log Out</span>
                             </button>
                         </div>
                     </div>
@@ -1166,23 +1174,23 @@
             // --- 4. TOPIC SELECTION SCREEN ---
             renderTopicSelect() {
                 const topics = [
-                    { id: 1, name: "Kenali Wang", desc: "Wang kertas & syiling Malaysia", icon: "💰", color: "from-blue-400 to-blue-600" },
-                    { id: 2, name: "Jumlah Nilai Wang", desc: "Kira nilai gabungan wang", icon: "🪙", color: "from-emerald-400 to-emerald-600" },
-                    { id: 3, name: "Padankan Jumlah Wang", desc: "Padankan gambar dengan nilai", icon: "🧩", color: "from-purple-400 to-purple-600" },
-                    { id: 4, name: "Tukaran Wang", desc: "Kombinasi & kesamaan nilai", icon: "🔄", color: "from-amber-400 to-amber-600" },
-                    { id: 5, name: "Ayat Matematik Gambar", desc: "Persamaan matematik berilustrasi", icon: "✏️", color: "from-pink-400 to-pink-600" },
-                    { id: 6, name: "Tambah & Tolak Wang", desc: "Pengiraan ringgit dan sen", icon: "➕➖", color: "from-indigo-400 to-indigo-600" },
-                    { id: 7, name: "Penyelesaian Masalah", desc: "Situasi harian & baki wang", icon: "🛒", color: "from-teal-400 to-teal-600" }
+                    { id: 1, name: "Recognising Money", desc: "Malaysian banknotes and coins", icon: "💰", color: "from-blue-400 to-blue-600" },
+                    { id: 2, name: "Total Value of Money", desc: "Find the total value of a group of coins or notes", icon: "🪙", color: "from-emerald-400 to-emerald-600" },
+                    { id: 3, name: "Matching Money Amounts", desc: "Match each picture to its value", icon: "🧩", color: "from-purple-400 to-purple-600" },
+                    { id: 4, name: "Equivalent Amounts of Money", desc: "Identify different ways to make the same amount", icon: "🔄", color: "from-amber-400 to-amber-600" },
+                    { id: 5, name: "Number Sentences with Pictures", desc: "Work with illustrated number sentences", icon: "✏️", color: "from-pink-400 to-pink-600" },
+                    { id: 6, name: "Adding and Subtracting Money", desc: "Calculate with ringgit and sen", icon: "➕➖", color: "from-indigo-400 to-indigo-600" },
+                    { id: 7, name: "Word Problems", desc: "Solve everyday money and change problems", icon: "🛒", color: "from-teal-400 to-teal-600" }
                 ];
 
                 return `
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <h2 class="text-2xl sm:text-3xl font-black text-brandDark flex items-center gap-2">
-                                <span>📚 Pilih Topik Pembelajaran</span>
+                                <span>📚 Choose a Learning Topic</span>
                             </h2>
                             <button onclick="app.showScreen('mainMenu')" class="text-sm font-bold bg-white px-4 py-2 rounded-xl border border-gray-200 hover:bg-gray-100">
-                                <i class="fa-solid fa-arrow-left mr-1"></i> Kembali
+                                <i class="fa-solid fa-arrow-left mr-1"></i> Back
                             </button>
                         </div>
 
@@ -1196,7 +1204,7 @@
                                                 ${t.icon}
                                             </div>
                                             <div>
-                                                <span class="text-xs font-black uppercase tracking-wider text-brandBlue">Topik ${t.id}</span>
+                                                <span class="text-xs font-black uppercase tracking-wider text-brandBlue">Topic ${t.id}</span>
                                                 <h3 class="font-extrabold text-lg text-brandDark leading-snug">${t.name}</h3>
                                                 <p class="text-xs font-semibold text-gray-500 mt-0.5">${t.desc}</p>
                                             </div>
@@ -1204,7 +1212,7 @@
 
                                         <div>
                                             <div class="flex justify-between text-xs font-bold text-gray-600 mb-1">
-                                                <span>Kemajuan</span>
+                                                <span>Progress</span>
                                                 <span>${prog}%</span>
                                             </div>
                                             <div class="w-full bg-gray-200 h-3 rounded-full overflow-hidden">
@@ -1227,54 +1235,54 @@
             // --- 5. GAME SETUP SCREEN ---
             renderGameSetup() {
                 const topicNames = {
-                    1: "Kenali Wang", 2: "Jumlah Nilai Wang", 3: "Padankan Jumlah Wang",
-                    4: "Tukaran Wang", 5: "Ayat Matematik Gambar", 6: "Tambah & Tolak Wang", 7: "Penyelesaian Masalah"
+                    1: "Recognising Money", 2: "Total Value of Money", 3: "Matching Money Amounts",
+                    4: "Equivalent Amounts of Money", 5: "Number Sentences with Pictures", 6: "Adding and Subtracting Money", 7: "Word Problems"
                 };
 
                 return `
                     <div class="glass-panel rounded-3xl p-6 sm:p-8 max-w-2xl mx-auto shadow-2xl space-y-6 border-4 border-white">
                         <div class="text-center border-b pb-4">
-                            <span class="bg-brandBlue text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase">Tetapan Permainan</span>
-                            <h2 class="text-2xl sm:text-3xl font-black text-brandDark mt-1">Topik ${this.gameConfig.topicId}: ${topicNames[this.gameConfig.topicId]}</h2>
+                            <span class="bg-brandBlue text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase">Game Settings</span>
+                            <h2 class="text-2xl sm:text-3xl font-black text-brandDark mt-1">Topic ${this.gameConfig.topicId}: ${topicNames[this.gameConfig.topicId]}</h2>
                         </div>
 
                         <!-- Game Type Choice -->
                         <div>
-                            <label class="block text-sm font-extrabold text-gray-700 mb-2">Pilih Jenis Permainan:</label>
+                            <label class="block text-sm font-extrabold text-gray-700 mb-2">Choose a Game Format:</label>
                             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                                <button onclick="app.setGameType('objektif')" id="gt-objektif" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-brandBlue text-white border-brandBlue">🎯 Objektif (A/B/C/D)</button>
-                                <button onclick="app.setGameType('padanan')" id="gt-padanan" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">🧩 Padanan</button>
+                                <button onclick="app.setGameType('objektif')" id="gt-objektif" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-brandBlue text-white border-brandBlue">🎯 Multiple Choice (A/B/C/D)</button>
+                                <button onclick="app.setGameType('padanan')" id="gt-padanan" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">🧩 Matching</button>
                                 <button onclick="app.setGameType('dragdrop')" id="gt-dragdrop" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">🖱️ Drag & Drop</button>
-                                <button onclick="app.setGameType('isitempatkosong')" id="gt-isitempatkosong" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">✏️ Isi Tempat Kosong</button>
-                                <button onclick="app.setGameType('campuran')" id="gt-campuran" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200 col-span-2 sm:col-span-2">🔀 Campuran Rawak</button>
+                                <button onclick="app.setGameType('isitempatkosong')" id="gt-isitempatkosong" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">✏️ Fill in the Blank</button>
+                                <button onclick="app.setGameType('campuran')" id="gt-campuran" class="gt-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200 col-span-2 sm:col-span-2">🔀 Random Mix</button>
                             </div>
                         </div>
 
                         <!-- Difficulty Choice -->
                         <div>
-                            <label class="block text-sm font-extrabold text-gray-700 mb-2">Pilih Tahap Kesukaran:</label>
+                            <label class="block text-sm font-extrabold text-gray-700 mb-2">Choose a Difficulty Level:</label>
                             <div class="grid grid-cols-3 gap-2">
-                                <button onclick="app.setLevel('mudah')" id="lvl-mudah" class="lvl-btn p-3 rounded-2xl border-2 font-bold text-sm bg-brandGreen text-white border-brandGreen">🟢 Mudah</button>
-                                <button onclick="app.setLevel('sederhana')" id="lvl-sederhana" class="lvl-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">🟡 Sederhana</button>
-                                <button onclick="app.setLevel('susah')" id="lvl-susah" class="lvl-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">🔴 Susah</button>
+                                <button onclick="app.setLevel('mudah')" id="lvl-mudah" class="lvl-btn p-3 rounded-2xl border-2 font-bold text-sm bg-brandGreen text-white border-brandGreen">🟢 Easy</button>
+                                <button onclick="app.setLevel('sederhana')" id="lvl-sederhana" class="lvl-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">🟡 Medium</button>
+                                <button onclick="app.setLevel('susah')" id="lvl-susah" class="lvl-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">🔴 Hard</button>
                             </div>
                         </div>
 
                         <!-- Timer Choice -->
                         <div>
-                            <label class="block text-sm font-extrabold text-gray-700 mb-2">Masa Setiap Soalan:</label>
+                            <label class="block text-sm font-extrabold text-gray-700 mb-2">Time per Question:</label>
                             <div class="grid grid-cols-3 gap-2">
-                                <button onclick="app.setTimer(30)" id="tm-30" class="tm-btn p-3 rounded-2xl border-2 font-bold text-sm bg-brandPurple text-white border-brandPurple">⏱️ 30 Saat</button>
-                                <button onclick="app.setTimer(60)" id="tm-60" class="tm-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">⏱️ 1 Minit</button>
-                                <button onclick="app.setTimer('inf')" id="tm-inf" class="tm-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">♾️ Tiada Had</button>
+                                <button onclick="app.setTimer(30)" id="tm-30" class="tm-btn p-3 rounded-2xl border-2 font-bold text-sm bg-brandPurple text-white border-brandPurple">⏱️ 30 Seconds</button>
+                                <button onclick="app.setTimer(60)" id="tm-60" class="tm-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">⏱️ 1 Minute</button>
+                                <button onclick="app.setTimer('inf')" id="tm-inf" class="tm-btn p-3 rounded-2xl border-2 font-bold text-sm bg-white text-gray-700 border-gray-200">♾️ No Time Limit</button>
                             </div>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex gap-3 pt-2">
-                            <button onclick="app.showScreen('topicSelect')" class="w-1/3 bg-gray-200 text-gray-700 font-extrabold py-3.5 rounded-2xl shadow-3d-sm active-press">Batal</button>
+                            <button onclick="app.showScreen('topicSelect')" class="w-1/3 bg-gray-200 text-gray-700 font-extrabold py-3.5 rounded-2xl shadow-3d-sm active-press">Cancel</button>
                             <button onclick="app.showScreen('gameplay')" class="w-2/3 bg-brandGreen text-white font-extrabold text-xl py-3.5 rounded-2xl shadow-3d bounce-hover active-press flex items-center justify-center gap-2">
-                                <span>🚀 MULA MAIN</span>
+                                <span>🚀 START GAME</span>
                             </button>
                         </div>
                     </div>
@@ -1330,10 +1338,10 @@
                     <div class="glass-panel rounded-3xl p-5 sm:p-8 max-w-3xl mx-auto shadow-2xl border-4 border-white space-y-6">
                         <!-- Header Stats Bar -->
                         <div class="flex items-center justify-between bg-white/80 p-3 rounded-2xl border border-gray-200 font-extrabold text-sm sm:text-base">
-                            <span class="text-brandBlue">Soalan ${q.qNumber} / 20</span>
-                            <span class="text-brandYellow">⭐ Markah: ${this.quizScore}</span>
+                            <span class="text-brandBlue">Question ${q.qNumber} / 20</span>
+                            <span class="text-brandYellow">⭐ Score: ${this.quizScore}</span>
                             <span class="text-brandRed" id="timerDisplay">
-                                ⏱️ ${this.gameConfig.timerMode === 'inf' ? 'Tiada Had' : `${this.timeLeft}s`}
+                                ⏱️ ${this.gameConfig.timerMode === 'inf' ? 'No Time Limit' : `${this.timeLeft}s`}
                             </span>
                         </div>
 
@@ -1374,7 +1382,7 @@
                 } else if (q.mode === 'dragdrop') {
                     return `
                         <div class="space-y-4 text-center">
-                            <p class="text-xs font-bold text-gray-500">Pilih jawapan yang betul di bawah:</p>
+                            <p class="text-xs font-bold text-gray-500">Choose the correct answer below.</p>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                                 ${q.choices.map(c => `
                                     <button onclick="app.submitAnswer('${c}')" class="bg-brandYellow hover:bg-amber-300 text-brandDark font-black text-lg p-4 rounded-2xl shadow-3d bounce-hover active-press">
@@ -1387,9 +1395,9 @@
                 } else { // Fill in the blank / input
                     return `
                         <div class="flex flex-col items-center gap-3">
-                            <input type="text" id="blankInput" class="w-full max-w-xs text-center font-black text-2xl py-3 rounded-2xl border-4 border-brandBlue focus:outline-none shadow-inner" placeholder="Taip jawapan...">
+                            <input type="text" id="blankInput" class="w-full max-w-xs text-center font-black text-2xl py-3 rounded-2xl border-4 border-brandBlue focus:outline-none shadow-inner" placeholder="Enter your answer…">
                             <button onclick="app.submitInputAnswer()" class="bg-brandGreen text-white font-extrabold text-lg px-8 py-3 rounded-2xl shadow-3d bounce-hover active-press">
-                                JAWAB NOW
+                                SUBMIT ANSWER
                             </button>
                         </div>
                     `;
@@ -1439,15 +1447,15 @@
 
                 if (isCorrect) {
                     icon.innerText = "🎉";
-                    title.innerText = "Tahniah! Jawapan Betul!";
+                    title.innerText = "Well done! Correct answer!";
                     title.className = "text-2xl sm:text-3xl font-extrabold text-brandGreen mb-2";
-                    text.innerText = "Hebat sekali! Anda mendapat +5 markah!";
+                    text.innerText = "Great work! You earned 5 points!";
                     correctBox.classList.add('hidden');
                 } else {
                     icon.innerText = "💡";
-                    title.innerText = "Cuba Lagi!";
+                    title.innerText = "Try Again!";
                     title.className = "text-2xl sm:text-3xl font-extrabold text-brandRed mb-2";
-                    text.innerText = userAns === null ? "Masa telah tamat!" : "Jangan putus asa, mari belajar!";
+                    text.innerText = userAns === null ? "Time’s up!" : "Keep practising!";
                     correctVal.innerText = q.correctAnswer;
                     correctBox.classList.remove('hidden');
                 }
@@ -1470,41 +1478,41 @@
             // --- 7. RESULTS SCREEN ---
             renderResults() {
                 const pct = Math.round((this.quizScore / 100) * 100);
-                let msg = "Jangan putus asa! Cuba lagi!";
+                let msg = "Keep going! Try again!";
                 let icon = "💪";
 
-                if (pct >= 90) { msg = "Hebat! Anda memang Juara Wang!"; icon = "🏆"; }
-                else if (pct >= 70) { msg = "Bagus! Teruskan berlatih!"; icon = "🌟"; }
-                else if (pct >= 50) { msg = "Bagus! Anda semakin mahir!"; icon = "👍"; }
+                if (pct >= 90) { msg = "Great work! You’re a money champion!"; icon = "🏆"; }
+                else if (pct >= 70) { msg = "Well done! Keep practising!"; icon = "🌟"; }
+                else if (pct >= 50) { msg = "Good work! You’re getting better!"; icon = "👍"; }
 
                 return `
                     <div class="glass-panel rounded-3xl p-6 sm:p-10 max-w-xl mx-auto shadow-2xl text-center space-y-6 border-4 border-white">
                         <div class="text-6xl sm:text-7xl animate-bounce">${icon}</div>
                         
                         <div>
-                            <span class="bg-brandYellow text-brandDark font-black text-xs px-4 py-1.5 rounded-full uppercase">Permainan Tamat</span>
-                            <h2 class="text-3xl sm:text-4xl font-black text-brandDark mt-2">Keputusan Keputusan</h2>
+                            <span class="bg-brandYellow text-brandDark font-black text-xs px-4 py-1.5 rounded-full uppercase">Game Complete</span>
+                            <h2 class="text-3xl sm:text-4xl font-black text-brandDark mt-2">Results</h2>
                             <p class="text-brandBlue font-bold text-lg mt-1">${msg}</p>
                         </div>
 
                         <!-- Results Score Box -->
                         <div class="bg-gradient-to-r from-blue-500 to-brandBlue text-white p-6 rounded-3xl shadow-lg border-2 border-white space-y-2">
-                            <div class="text-sm font-bold opacity-90">MARKAHKESELURUHAN</div>
+                            <div class="text-sm font-bold opacity-90">TOTAL SCORE</div>
                             <div class="text-5xl font-black">${this.quizScore} / 100</div>
-                            <div class="text-sm font-extrabold bg-white/20 px-3 py-1 rounded-full inline-block">Ketepatan: ${pct}%</div>
+                            <div class="text-sm font-extrabold bg-white/20 px-3 py-1 rounded-full inline-block">Accuracy: ${pct}%</div>
                         </div>
 
                         <!-- Quick Actions -->
                         <div class="grid grid-cols-2 gap-3">
                             <button onclick="app.showScreen('gameplay')" class="bg-brandGreen text-white font-extrabold py-3.5 rounded-2xl shadow-3d bounce-hover active-press">
-                                🔄 MAIN LAGI
+                                🔄 PLAY AGAIN
                             </button>
                             <button onclick="app.showScreen('topicSelect')" class="bg-brandBlue text-white font-extrabold py-3.5 rounded-2xl shadow-3d bounce-hover active-press">
                                 📚 PILIH TOPIK
                             </button>
                         </div>
                         <button onclick="app.showScreen('mainMenu')" class="w-full bg-gray-200 text-gray-700 font-extrabold py-3 rounded-2xl active-press">
-                            🏠 MENU UTAMA
+                            🏠 MAIN MENU
                         </button>
                     </div>
                 `;
@@ -1514,28 +1522,28 @@
             renderProgress() {
                 const u = state.currentUser;
                 const topicNames = {
-                    1: "Kenali Wang", 2: "Nyatakan Jumlah Nilai", 3: "Padankan Jumlah Wang",
-                    4: "Tukaran Wang", 5: "Ayat Matematik Gambar", 6: "Tambah & Tolak Wang", 7: "Penyelesaian Masalah"
+                    1: "Recognising Money", 2: "Total Value of Money", 3: "Matching Money Amounts",
+                    4: "Equivalent Amounts of Money", 5: "Number Sentences with Pictures", 6: "Adding and Subtracting Money", 7: "Word Problems"
                 };
 
                 return `
                     <div class="space-y-6">
                         <div class="flex items-center justify-between">
-                            <h2 class="text-2xl sm:text-3xl font-black text-brandDark">📊 Progress Saya</h2>
+                            <h2 class="text-2xl sm:text-3xl font-black text-brandDark">📊 My Progress</h2>
                             <button onclick="app.showScreen('mainMenu')" class="text-sm font-bold bg-white px-4 py-2 rounded-xl border border-gray-200">
-                                <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
+                                <i class="fa-solid fa-arrow-left mr-1"></i> Main Menu
                             </button>
                         </div>
 
                         <!-- Topic Progress Bars -->
                         <div class="glass-panel rounded-3xl p-6 shadow-xl space-y-4 border-4 border-white">
-                            <h3 class="font-extrabold text-xl text-brandBlue mb-2">Kemajuan Mengikut Topik</h3>
+                            <h3 class="font-extrabold text-xl text-brandBlue mb-2">Progress by Topic</h3>
                             ${Object.keys(topicNames).map(id => {
                                 const prog = u.topicProgress[id] || 0;
                                 return `
                                     <div class="space-y-1">
                                         <div class="flex justify-between text-sm font-bold text-gray-700">
-                                            <span>Topik ${id}: ${topicNames[id]}</span>
+                                            <span>Topic ${id}: ${topicNames[id]}</span>
                                             <span>${prog}%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 h-4 rounded-full overflow-hidden">
@@ -1548,13 +1556,13 @@
 
                         <!-- Badges Grid -->
                         <div class="glass-panel rounded-3xl p-6 shadow-xl border-4 border-white">
-                            <h3 class="font-extrabold text-xl text-brandPurple mb-4">🏅 Lencana Pencapaian</h3>
+                            <h3 class="font-extrabold text-xl text-brandPurple mb-4">🏅 Achievement Badges</h3>
                             <div class="flex flex-wrap gap-3">
                                 ${u.badges.length > 0 ? u.badges.map(b => `
                                     <span class="bg-yellow-100 text-yellow-800 border-2 border-yellow-300 font-extrabold px-4 py-2 rounded-2xl shadow-sm text-sm">
-                                        ${b}
+                                        ${({ '🏅 PENGENAL WANG': '🏅 MONEY EXPLORER', '🏅 JUARA WANG': '🏅 MONEY CHAMPION' })[b] || b}
                                     </span>
-                                `).join('') : '<p class="text-sm font-bold text-gray-500">Belum ada lencana. Teruskan bermain untuk kumpul lencana!</p>'}
+                                `).join('') : '<p class="text-sm font-bold text-gray-500">Play to earn your first badge!</p>'}
                             </div>
                         </div>
                     </div>
@@ -1569,9 +1577,9 @@
                 return `
                     <div class="space-y-6 max-w-2xl mx-auto">
                         <div class="flex items-center justify-between">
-                            <h2 class="text-2xl sm:text-3xl font-black text-brandDark">🏆 Leaderboard Edu Kidz</h2>
+                            <h2 class="text-2xl sm:text-3xl font-black text-brandDark">🏆 EDU KIDZ Leaderboard</h2>
                             <button onclick="app.showScreen('mainMenu')" class="text-sm font-bold bg-white px-4 py-2 rounded-xl border border-gray-200">
-                                <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
+                                <i class="fa-solid fa-arrow-left mr-1"></i> Main Menu
                             </button>
                         </div>
 
@@ -1585,13 +1593,13 @@
                                             <span class="text-2xl font-black w-8">${medal}</span>
                                             <span class="text-3xl">${u.avatar || '👦'}</span>
                                             <div>
-                                                <div class="font-extrabold text-brandDark">${u.name} ${isCurrent ? '(Anda)' : ''}</div>
-                                                <div class="text-xs text-gray-500 font-bold">Tahap ${u.level || 1}</div>
+                                                <div class="font-extrabold text-brandDark">${u.name} ${isCurrent ? '(You)' : ''}</div>
+                                                <div class="text-xs text-gray-500 font-bold">Level ${u.level || 1}</div>
                                             </div>
                                         </div>
                                         <div class="text-right">
                                             <div class="font-black text-brandBlue text-lg">⭐ ${u.totalScore}</div>
-                                            <div class="text-xs text-gray-500 font-bold">${u.correctCount} betul</div>
+                                            <div class="text-xs text-gray-500 font-bold">${u.correctCount} correct</div>
                                         </div>
                                     </div>
                                 `;
@@ -1616,14 +1624,14 @@
                         </div>
 
                         <div class="bg-white p-4 rounded-2xl border-2 border-gray-200 text-left space-y-2 text-sm font-bold">
-                            <div class="flex justify-between"><span>Tahap Semasa:</span> <span class="text-brandPurple">Tahap ${u.level || 1}</span></div>
-                            <div class="flex justify-between"><span>Jumlah Markah:</span> <span class="text-brandYellow">⭐ ${u.totalScore}</span></div>
-                            <div class="flex justify-between"><span>Soalan Dijawab:</span> <span class="text-brandBlue">${u.answeredCount}</span></div>
-                            <div class="flex justify-between"><span>Jawapan Betul:</span> <span class="text-brandGreen">${u.correctCount}</span></div>
+                            <div class="flex justify-between"><span>Current Level:</span> <span class="text-brandPurple">Level ${u.level || 1}</span></div>
+                            <div class="flex justify-between"><span>Total Score:</span> <span class="text-brandYellow">⭐ ${u.totalScore}</span></div>
+                            <div class="flex justify-between"><span>Questions Answered:</span> <span class="text-brandBlue">${u.answeredCount}</span></div>
+                            <div class="flex justify-between"><span>Correct Answers:</span> <span class="text-brandGreen">${u.correctCount}</span></div>
                         </div>
 
                         <button onclick="app.showScreen('mainMenu')" class="w-full bg-brandBlue text-white font-extrabold py-3.5 rounded-2xl shadow-3d bounce-hover active-press">
-                            🏠 KEMBALI KE MENU
+                            🏠 BACK TO MENU
                         </button>
                     </div>
                 `;

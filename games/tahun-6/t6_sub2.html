@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms" class="h-full">
+<html lang="en-GB" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids – Edu Kidz Tahun 6</title>
+    <title>Math Kids – Edu Kidz Year 6</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter & Fredoka for playful kids education look -->
@@ -66,8 +66,8 @@
                     <i class="fa-solid fa-graduation-cap"></i>
                 </div>
                 <div>
-                    <h1 class="font-display text-lg sm:text-xl font-bold bg-gradient-to-r from-eduBlue to-eduPurple bg-clip-text text-transparent">Edu Kidz Tahun 6</h1>
-                    <p class="text-xs text-slate-500 font-medium">KPM Matematik KSSM</p>
+                    <h1 class="font-display text-lg sm:text-xl font-bold bg-gradient-to-r from-eduBlue to-eduPurple bg-clip-text text-transparent">Edu Kidz Year 6</h1>
+                    <p class="text-xs text-slate-500 font-medium">KSSR Mathematics</p>
                 </div>
             </div>
             
@@ -79,10 +79,10 @@
                 
                 <div class="flex items-center bg-blue-50 border border-blue-200 px-3 py-1.5 rounded-xl shadow-sm cursor-pointer hover:bg-blue-100 transition" onclick="showScreen('profile-screen')">
                     <span id="header-avatar" class="text-xl mr-1.5">👦</span>
-                    <span id="header-username" class="font-display font-semibold text-blue-900 text-xs sm:text-sm hidden sm:inline">Pemain</span>
+                    <span id="header-username" class="font-display font-semibold text-blue-900 text-xs sm:text-sm hidden sm:inline">Player</span>
                 </div>
 
-                <button onclick="logoutPlayer()" title="Log Keluar" class="bg-red-50 hover:bg-red-100 text-red-600 p-2 rounded-xl border border-red-200 transition text-sm">
+                <button onclick="logoutPlayer()" title="Log Out" class="bg-red-50 hover:bg-red-100 text-red-600 p-2 rounded-xl border border-red-200 transition text-sm">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </button>
             </div>
@@ -97,18 +97,18 @@
                         <i class="fa-solid fa-brain"></i>
                     </div>
                     <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-800">MATH KIDS</h2>
-                    <p class="text-eduPurple font-semibold text-sm sm:text-base">EDU KIDZ TAHUN 6 KPM</p>
-                    <p class="text-xs text-slate-500 mt-1">Pecahan, Perpuluhan & Peratus</p>
+                    <p class="text-eduPurple font-semibold text-sm sm:text-base">EDU KIDZ YEAR 6</p>
+                    <p class="text-xs text-slate-500 mt-1">Fractions, Decimals and Percentages</p>
                 </div>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wider">Nama Penuh Murid</label>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wider">Pupil’s Full Name</label>
                         <input type="text" id="input-username" placeholder="Cth: Aiman Hakim" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-eduBlue font-medium text-sm">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">Pilih Avatar Anda</label>
+                        <label class="block text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">Choose an Avatar</label>
                         <div id="avatar-selector" class="grid grid-cols-5 gap-2">
                             <button type="button" onclick="selectAvatar('👦')" class="avatar-btn p-3 rounded-xl border-2 border-eduBlue bg-blue-50 text-2xl flex items-center justify-center transition">👦</button>
                             <button type="button" onclick="selectAvatar('👧')" class="avatar-btn p-3 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-2xl flex items-center justify-center transition">👧</button>
@@ -119,7 +119,7 @@
                     </div>
 
                     <button onclick="handleLogin()" class="w-full mt-4 bg-gradient-to-r from-eduBlue to-eduPurple text-white font-display font-bold py-3.5 rounded-xl shadow-lg hover:opacity-95 transition transform active:scale-95 text-base">
-                        <i class="fa-solid fa-rocket mr-2"></i> Mula Pengembaraan!
+                        <i class="fa-solid fa-rocket mr-2"></i> Start Playing
                     </button>
                 </div>
             </div>
@@ -127,15 +127,15 @@
             <div id="menu-screen" class="max-w-2xl mx-auto w-full hide space-y-6">
                 <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-3xl p-6 sm:p-8 shadow-xl text-center relative overflow-hidden">
                     <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl font-display"><i class="fa-solid fa-calculator"></i></div>
-                    <h2 class="font-display text-2xl sm:text-3xl font-bold mb-2">Selamat Datang, <span id="welcome-name">Murid</span>! 👋</h2>
-                    <p class="text-blue-100 text-sm max-w-md mx-auto">Sedia untuk menguasai Pecahan, Perpuluhan & Peratus Tahun 6 dengan Topik 6 (Operasi Bergabung) dikemaskini dengan set soalan baharu & unik!</p>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold mb-2">Welcome, <span id="welcome-name">Pupil</span>! 👋</h2>
+                    <p class="text-blue-100 text-sm max-w-md mx-auto">Practise Year 6 fractions, decimals and percentages.</p>
                     
                     <div class="mt-6 flex flex-wrap justify-center gap-3">
                         <button onclick="showScreen('topic-screen')" class="bg-white text-blue-600 hover:bg-blue-50 font-display font-bold px-6 py-3 rounded-xl shadow-md transition transform hover:scale-105">
-                            <i class="fa-solid fa-play mr-2 text-eduGreen"></i> Mula Bermain
+                            <i class="fa-solid fa-play mr-2 text-eduGreen"></i> Start Playing
                         </button>
                         <button onclick="showScreen('topic-screen')" class="bg-blue-700/60 hover:bg-blue-700 text-white font-display font-semibold px-5 py-3 rounded-xl backdrop-blur-sm transition">
-                            <i class="fa-solid fa-book-open mr-2"></i> Pilih Topik
+                            <i class="fa-solid fa-book-open mr-2"></i> Choose a Topic
                         </button>
                     </div>
                 </div>
@@ -145,8 +145,8 @@
                         <div class="w-12 h-12 bg-purple-50 text-eduPurple rounded-xl mx-auto flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
-                        <h3 class="font-display font-bold text-sm text-slate-800">Progress Saya</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Statistik & Lencana</p>
+                        <h3 class="font-display font-bold text-sm text-slate-800">My Progress</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Statistics and Badges</p>
                     </button>
 
                     <button onclick="showScreen('leaderboard-screen'); loadLeaderboard();" class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 hover:border-eduYellow hover:shadow-lg transition text-center group">
@@ -154,23 +154,23 @@
                             <i class="fa-solid fa-trophy"></i>
                         </div>
                         <h3 class="font-display font-bold text-sm text-slate-800">Leaderboard</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Kedudukan Juara</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Player Rankings</p>
                     </button>
 
                     <button onclick="showScreen('profile-screen')" class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 hover:border-eduPink hover:shadow-lg transition text-center group">
                         <div class="w-12 h-12 bg-pink-50 text-eduPink rounded-xl mx-auto flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition">
                             <i class="fa-solid fa-user-gear"></i>
                         </div>
-                        <h3 class="font-display font-bold text-sm text-slate-800">Profil</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Akaun & Avatar</p>
+                        <h3 class="font-display font-bold text-sm text-slate-800">Profile</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Account and Avatar</p>
                     </button>
 
                     <button onclick="showScreen('guide-screen')" class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 hover:border-eduGreen hover:shadow-lg transition text-center group">
                         <div class="w-12 h-12 bg-emerald-50 text-eduGreen rounded-xl mx-auto flex items-center justify-center text-xl mb-2 group-hover:scale-110 transition">
                             <i class="fa-solid fa-circle-question"></i>
                         </div>
-                        <h3 class="font-display font-bold text-sm text-slate-800">Cara Bermain</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">Panduan & Peraturan</p>
+                        <h3 class="font-display font-bold text-sm text-slate-800">How to Play</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Game Guide</p>
                     </button>
                 </div>
             </div>
@@ -178,11 +178,11 @@
             <div id="topic-screen" class="max-w-3xl mx-auto w-full hide space-y-4">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-800">Pilih Topik Matematik KPM</h2>
-                        <p class="text-xs sm:text-sm text-slate-500">Pilih salah satu daripada 7 tajuk Tahun 6 (Topik 6 dikemaskini dengan soalan baharu & berbeza!)</p>
+                        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-800">Choose a Maths Topic</h2>
+                        <p class="text-xs sm:text-sm text-slate-500">Choose one of the seven Year 6 topics.</p>
                     </div>
                     <button onclick="showScreen('menu-screen')" class="bg-white hover:bg-slate-100 text-slate-600 px-4 py-2 rounded-xl text-sm font-semibold shadow-sm border border-slate-200">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Main Menu
                     </button>
                 </div>
 
@@ -194,47 +194,47 @@
             <div id="setup-screen" class="max-w-md mx-auto w-full bg-white rounded-3xl shadow-xl p-6 sm:p-8 hide space-y-5 border border-slate-100">
                 <div class="text-center">
                     <span id="setup-topic-icon" class="text-3xl mb-1 inline-block">🍕</span>
-                    <h2 id="setup-topic-title" class="font-display text-xl font-bold text-slate-800">Bahagi Pecahan</h2>
-                    <p class="text-xs text-slate-500">Sila tetapkan tahap kesukaran dan masa</p>
+                    <h2 id="setup-topic-title" class="font-display text-xl font-bold text-slate-800">Dividing Fractions</h2>
+                    <p class="text-xs text-slate-500">Choose a difficulty level and time limit</p>
                 </div>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wider">Tahap Kesukaran</label>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wider">Difficulty Level</label>
                         <div class="grid grid-cols-3 gap-2">
                             <button type="button" onclick="setDifficulty('Mudah')" id="diff-mudah" class="diff-btn py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-700 font-display font-semibold text-xs transition flex items-center justify-center">
-                                🟢 Mudah
+                                🟢 Easy
                             </button>
                             <button type="button" onclick="setDifficulty('Sederhana')" id="diff-sederhana" class="diff-btn py-2.5 px-3 rounded-xl border-2 border-slate-200 text-slate-600 font-display font-semibold text-xs transition flex items-center justify-center">
-                                🟡 Sederhana
+                                🟡 Medium
                             </button>
                             <button type="button" onclick="setDifficulty('Susah')" id="diff-susah" class="diff-btn py-2.5 px-3 rounded-xl border-2 border-slate-200 text-slate-600 font-display font-semibold text-xs transition flex items-center justify-center">
-                                🔴 Susah
+                                🔴 Hard
                             </button>
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wider">Pilihan Masa</label>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wider">Time Limit</label>
                         <div class="grid grid-cols-3 gap-2">
                             <button type="button" onclick="setTimeMode(30)" id="time-30" class="time-btn py-2.5 px-3 rounded-xl border-2 border-slate-200 text-slate-600 font-display font-semibold text-xs transition flex items-center justify-center">
-                                ⏱ 30 Saat
+                                ⏱ 30 Seconds
                             </button>
                             <button type="button" onclick="setTimeMode(60)" id="time-60" class="time-btn py-2.5 px-3 rounded-xl border-2 border-blue-500 bg-blue-50 text-blue-700 font-display font-semibold text-xs transition flex items-center justify-center">
-                                ⏱ 1 Minit
+                                ⏱ 1 Minute
                             </button>
                             <button type="button" onclick="setTimeMode(0)" id="time-inf" class="time-btn py-2.5 px-3 rounded-xl border-2 border-slate-200 text-slate-600 font-display font-semibold text-xs transition flex items-center justify-center">
-                                ♾ Tiada Had
+                                ♾ No Time Limit
                             </button>
                         </div>
                     </div>
 
                     <div class="pt-2">
                         <button onclick="startQuizSession()" class="w-full bg-gradient-to-r from-eduBlue to-eduPurple text-white font-display font-bold py-3.5 rounded-xl shadow-lg hover:opacity-95 transition transform active:scale-95 text-sm">
-                            <i class="fa-solid fa-play mr-2"></i> Mula Kuiz (20 Soalan 100% Tanpa Berulang)
+                            <i class="fa-solid fa-play mr-2"></i> Start Quiz (20 Questions)
                         </button>
                         <button onclick="showScreen('topic-screen')" class="w-full mt-2 text-slate-500 text-xs font-semibold py-2 hover:text-slate-700 transition">
-                            Kembali ke Pilih Topik
+                            Back to Topics
                         </button>
                     </div>
                 </div>
@@ -243,13 +243,13 @@
             <div id="quiz-screen" class="max-w-2xl mx-auto w-full hide space-y-4">
                 <div class="bg-white rounded-2xl shadow-sm p-4 border border-slate-100 flex items-center justify-between">
                     <div class="flex items-center space-x-3">
-                        <span id="quiz-topic-badge" class="bg-blue-100 text-blue-800 text-xs font-display font-bold px-2.5 py-1 rounded-lg">Topik 1</span>
-                        <span id="quiz-diff-badge" class="bg-emerald-100 text-emerald-800 text-xs font-display font-bold px-2.5 py-1 rounded-lg">Mudah</span>
+                        <span id="quiz-topic-badge" class="bg-blue-100 text-blue-800 text-xs font-display font-bold px-2.5 py-1 rounded-lg">Topic 1</span>
+                        <span id="quiz-diff-badge" class="bg-emerald-100 text-emerald-800 text-xs font-display font-bold px-2.5 py-1 rounded-lg">Easy</span>
                     </div>
                     
                     <div class="flex items-center space-x-4">
                         <div class="text-xs font-semibold text-slate-500">
-                            Soalan <span id="current-q-num" class="font-bold text-slate-800">1</span>/20
+                            Question <span id="current-q-num" class="font-bold text-slate-800">1</span>/20
                         </div>
                         <div class="flex items-center bg-amber-50 px-3 py-1 rounded-lg border border-amber-200">
                             <i class="fa-solid fa-star text-amber-500 mr-1.5"></i>
@@ -272,9 +272,9 @@
                     </div>
 
                     <div class="text-center sm:text-left">
-                        <span id="question-cognitive" class="inline-block text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-700 px-2 py-0.5 rounded-md mb-2">Mengaplikasi</span>
+                        <span id="question-cognitive" class="inline-block text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-700 px-2 py-0.5 rounded-md mb-2">Applying</span>
                         <h3 id="question-text" class="font-display text-lg sm:text-xl font-bold text-slate-800 leading-snug">
-                            Soalan matematik akan dipaparkan di sini...
+                            Loading question…
                         </h3>
                     </div>
 
@@ -286,15 +286,15 @@
                         <div class="flex items-start space-x-3">
                             <div class="text-blue-600 text-xl mt-0.5"><i class="fa-solid fa-circle-info"></i></div>
                             <div>
-                                <h4 class="font-display font-bold text-blue-900 text-sm">Penerangan Jawapan:</h4>
-                                <p id="explanation-text" class="text-xs sm:text-sm text-blue-800 mt-1">Penerangan ringkas...</p>
+                                <h4 class="font-display font-bold text-blue-900 text-sm">Worked Explanation:</h4>
+                                <p id="explanation-text" class="text-xs sm:text-sm text-blue-800 mt-1">Worked explanation…</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="flex justify-end pt-2">
                         <button id="btn-next-question" onclick="nextQuestion()" class="bg-slate-800 hover:bg-slate-900 text-white font-display font-bold px-6 py-3 rounded-xl shadow-md transition hide">
-                            Seterusnya <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                            Next <i class="fa-solid fa-arrow-right ml-1.5"></i>
                         </button>
                     </div>
                 </div>
@@ -306,43 +306,43 @@
                 </div>
 
                 <div>
-                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-800">🎉 TAMAT!</h2>
-                    <p class="text-xs text-slate-500 mt-1">Tahniah kerana berjaya menyelesaikan sesi kuiz tanpa sebarang soalan berulang!</p>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-800">🎉 QUIZ COMPLETE!</h2>
+                    <p class="text-xs text-slate-500 mt-1">Well done for completing the quiz!</p>
                 </div>
 
                 <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 grid grid-cols-2 gap-4 text-left">
                     <div>
-                        <p class="text-xs text-slate-400 font-medium">Markah Diperolehi</p>
+                        <p class="text-xs text-slate-400 font-medium">Marks Earned</p>
                         <p id="res-score" class="font-display font-bold text-xl text-amber-600">100 / 100</p>
                     </div>
                     <div>
-                        <p class="text-xs text-slate-400 font-medium">Ketepatan</p>
+                        <p class="text-xs text-slate-400 font-medium">Accuracy</p>
                         <p id="res-accuracy" class="font-display font-bold text-xl text-emerald-600">100%</p>
                     </div>
                     <div>
-                        <p class="text-xs text-slate-400 font-medium">Jawapan Betul</p>
+                        <p class="text-xs text-slate-400 font-medium">Correct Answers</p>
                         <p id="res-correct" class="font-display font-bold text-lg text-slate-700">20</p>
                     </div>
                     <div>
-                        <p class="text-xs text-slate-400 font-medium">Jawapan Salah</p>
+                        <p class="text-xs text-slate-400 font-medium">Incorrect Answers</p>
                         <p id="res-wrong" class="font-display font-bold text-lg text-slate-700">0</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col gap-2.5">
                     <button onclick="restartSameQuiz()" class="w-full bg-gradient-to-r from-eduBlue to-eduPurple text-white font-display font-bold py-3 rounded-xl shadow-md hover:opacity-95 transition text-sm">
-                        <i class="fa-solid fa-rotate-right mr-2"></i> Main Lagi Soalan Baharu (Tanpa Berulang)
+                        <i class="fa-solid fa-rotate-right mr-2"></i> Play Again
                     </button>
                     <div class="grid grid-cols-2 gap-2">
                         <button onclick="showScreen('topic-screen')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-display font-semibold py-2.5 rounded-xl text-xs transition">
-                            Pilih Topik Lain
+                            Choose a Topic Lain
                         </button>
                         <button onclick="showScreen('leaderboard-screen'); loadLeaderboard();" class="bg-amber-100 hover:bg-amber-200 text-amber-800 font-display font-semibold py-2.5 rounded-xl text-xs transition">
                             Leaderboard
                         </button>
                     </div>
                     <button onclick="showScreen('menu-screen')" class="text-slate-500 hover:text-slate-700 text-xs font-semibold py-1">
-                        Kembali ke Menu Utama
+                        Back to the Main Menu
                     </button>
                 </div>
             </div>
@@ -350,11 +350,11 @@
             <div id="progress-screen" class="max-w-2xl mx-auto w-full hide space-y-5">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-800">Progress & Pencapaian</h2>
-                        <p class="text-xs sm:text-sm text-slate-500">Rekod pencapaian pembelajaran anda</p>
+                        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-800">Progress and Achievements</h2>
+                        <p class="text-xs sm:text-sm text-slate-500">Review your quiz results</p>
                     </div>
                     <button onclick="showScreen('menu-screen')" class="bg-white hover:bg-slate-100 text-slate-600 px-4 py-2 rounded-xl text-sm font-semibold shadow-sm border border-slate-200">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Main Menu
                     </button>
                 </div>
 
@@ -362,28 +362,28 @@
                     <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-center space-x-4">
                         <div class="w-12 h-12 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center text-2xl font-display">⭐</div>
                         <div>
-                            <p class="text-xs text-slate-400 font-medium">Jumlah Markah</p>
+                            <p class="text-xs text-slate-400 font-medium">Total Marks</p>
                             <h3 id="prog-total-score" class="font-display font-bold text-xl text-slate-800">0</h3>
                         </div>
                     </div>
                     <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-center space-x-4">
                         <div class="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center text-2xl font-display">🎯</div>
                         <div>
-                            <p class="text-xs text-slate-400 font-medium">Soalan Dijawab</p>
+                            <p class="text-xs text-slate-400 font-medium">Questions Answered</p>
                             <h3 id="prog-total-answered" class="font-display font-bold text-xl text-slate-800">0</h3>
                         </div>
                     </div>
                     <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-center space-x-4">
                         <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center text-2xl font-display">🏆</div>
                         <div>
-                            <p class="text-xs text-slate-400 font-medium">Topik Selesai</p>
+                            <p class="text-xs text-slate-400 font-medium">Topics Completed</p>
                             <h3 id="prog-topics-done" class="font-display font-bold text-xl text-slate-800">0 / 7</h3>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 space-y-4">
-                    <h3 class="font-display font-bold text-base text-slate-800">Lencana & Badge Diperolehi</h3>
+                    <h3 class="font-display font-bold text-base text-slate-800">Badges Earned</h3>
                     <div id="badges-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         <!-- Badges injected by JS -->
                     </div>
@@ -394,10 +394,10 @@
                 <div class="flex items-center justify-between">
                     <div>
                         <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-800">Leaderboard Edu Kidz</h2>
-                        <p class="text-xs sm:text-sm text-slate-500">Kedudukan murid cemerlang Tahun 6</p>
+                        <p class="text-xs sm:text-sm text-slate-500">Year 6 Player Rankings</p>
                     </div>
                     <button onclick="showScreen('menu-screen')" class="bg-white hover:bg-slate-100 text-slate-600 px-4 py-2 rounded-xl text-sm font-semibold shadow-sm border border-slate-200">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Menu Utama
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Main Menu
                     </button>
                 </div>
 
@@ -411,18 +411,18 @@
             <div id="profile-screen" class="max-w-md mx-auto w-full bg-white rounded-3xl shadow-xl p-6 sm:p-8 hide space-y-6 border border-slate-100">
                 <div class="text-center">
                     <div id="profile-avatar-display" class="w-20 h-20 bg-blue-50 rounded-3xl mx-auto flex items-center justify-center text-4xl shadow-md mb-2">👦</div>
-                    <h2 id="profile-name-display" class="font-display text-xl font-bold text-slate-800">Nama Murid</h2>
-                    <p class="text-xs text-slate-400">Murid Tahun 6 • KPM</p>
+                    <h2 id="profile-name-display" class="font-display text-xl font-bold text-slate-800">Pupil’s Name</h2>
+                    <p class="text-xs text-slate-400">Year 6 Pupil</p>
                 </div>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wider">Tukar Nama Profil</label>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wider">Change Profile Name</label>
                         <input type="text" id="edit-username" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-eduBlue text-sm font-medium">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">Pilih Avatar Baru</label>
+                        <label class="block text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">Choose a New Avatar</label>
                         <div id="edit-avatar-selector" class="grid grid-cols-5 gap-2">
                             <button type="button" onclick="selectEditAvatar('👦')" class="edit-avatar-btn p-2 rounded-xl border-2 border-eduBlue bg-blue-50 text-xl flex items-center justify-center">👦</button>
                             <button type="button" onclick="selectEditAvatar('👧')" class="edit-avatar-btn p-2 rounded-xl border-2 border-slate-200 text-xl flex items-center justify-center">👧</button>
@@ -433,10 +433,10 @@
                     </div>
 
                     <button onclick="saveProfileChanges()" class="w-full bg-gradient-to-r from-eduBlue to-eduPurple text-white font-display font-bold py-3 rounded-xl shadow-md hover:opacity-95 transition text-sm">
-                        Simpan Perubahan
+                        Save Changes
                     </button>
                     <button onclick="showScreen('menu-screen')" class="w-full text-slate-500 hover:text-slate-700 text-xs font-semibold py-1">
-                        Kembali ke Menu Utama
+                        Back to the Main Menu
                     </button>
                 </div>
             </div>
@@ -444,11 +444,11 @@
             <div id="guide-screen" class="max-w-2xl mx-auto w-full bg-white rounded-3xl shadow-xl p-6 sm:p-8 hide space-y-5 border border-slate-100">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h2 class="font-display text-xl font-bold text-slate-800">Cara Bermain Edu Kidz</h2>
-                        <p class="text-xs text-slate-500">Panduan untuk murid Tahun 6</p>
+                        <h2 class="font-display text-xl font-bold text-slate-800">How to Play EDU KIDZ</h2>
+                        <p class="text-xs text-slate-500">Guide for Year 6 Pupils</p>
                     </div>
                     <button onclick="showScreen('menu-screen')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl text-xs font-semibold">
-                        Tutup
+                        Close
                     </button>
                 </div>
 
@@ -456,22 +456,22 @@
                     <div class="flex items-start space-x-3 bg-blue-50/60 p-3.5 rounded-2xl border border-blue-100">
                         <div class="text-blue-600 text-lg mt-0.5"><i class="fa-solid fa-1"></i></div>
                         <div>
-                            <strong class="text-blue-900 block font-display">Pilih Topik & Tahap</strong>
-                            Terdapat 7 topik utama Matematik Tahun 6 KPM (Topik 6 menampilkan set soalan baharu dan unik!). Pilih tahap Mudah, Sederhana, atau Susah.
+                            <strong class="text-blue-900 block font-display">Choose a Topic and Difficulty Level</strong>
+                            Choose from seven Year 6 topics and three difficulty levels.
                         </div>
                     </div>
                     <div class="flex items-start space-x-3 bg-purple-50/60 p-3.5 rounded-2xl border border-purple-100">
                         <div class="text-purple-600 text-lg mt-0.5"><i class="fa-solid fa-2"></i></div>
                         <div>
-                            <strong class="text-purple-900 block font-display">Sistem Anti-Berulang (420 Soalan)</strong>
-                            Bank soalan mengandungi 420 soalan unik. Setiap sesi mengandungi 20 soalan berbeza yang diacak sepenuhnya tanpa pengulangan langsung!
+                            <strong class="text-purple-900 block font-display">Question Bank (420 Questions)</strong>
+                            The question bank contains 420 questions, with 20 in each session.
                         </div>
                     </div>
                     <div class="flex items-start space-x-3 bg-amber-50/60 p-3.5 rounded-2xl border border-amber-100">
                         <div class="text-amber-600 text-lg mt-0.5"><i class="fa-solid fa-3"></i></div>
                         <div>
-                            <strong class="text-amber-900 block font-display">Kumpul Bintang & Lencana</strong>
-                            Kumpul markah tertinggi, buka lencana istimewa, serta catatkan nama anda di papan juara (Leaderboard)!
+                            <strong class="text-amber-900 block font-display">Earn Marks and Badges</strong>
+                            Earn marks, unlock badges and see your score on the leaderboard.
                         </div>
                     </div>
                 </div>
@@ -480,7 +480,7 @@
         </main>
 
         <footer class="text-center py-3 text-xs text-slate-400 font-medium">
-            Math Kids – Edu Kidz Tahun 6 KPM &copy; 2026
+            Math Kids – Edu Kidz Year 6 KPM &copy; 2026
         </footer>
     </div>
 
@@ -545,7 +545,7 @@
                 let headerUsername = document.getElementById('header-username');
                 if (headerScore) headerScore.innerText = `${currentUser.totalScore || 0} pts`;
                 if (headerAvatar) headerAvatar.innerText = currentUser.avatar || '👦';
-                if (headerUsername) headerUsername.innerText = currentUser.name || 'Pemain';
+                if (headerUsername) headerUsername.innerText = currentUser.name || 'Player';
                 
                 let mainHeader = document.getElementById('main-header');
                 if (mainHeader) mainHeader.classList.remove('hide');
@@ -602,13 +602,13 @@
         }
 
         const TOPICS = [
-            { id: 1, name: "Bahagi Pecahan", icon: "🍕", desc: "Pecahan wajar, tak wajar & nombor bercampur" },
-            { id: 2, name: "Operasi Asas", icon: "🔢", desc: "Tambah, tolak, darab & bahagi nombor bulat & perpuluhan" },
-            { id: 3, name: "Tukar Perpuluhan ke Peratus", icon: "💯", desc: "Grid 100 petak & penukaran nilai" },
-            { id: 4, name: "Tambah dan Tolak Peratus", icon: "📊", desc: "Situasi harian, diskaun & markah" },
-            { id: 5, name: "Nilai Kuantiti dan Peratus", icon: "🧮", desc: "Menentukan nilai kuantiti daripada peratus dan sebaliknya" },
-            { id: 6, name: "Operasi Bergabung", icon: "⚡", desc: "Turutan operasi pecahan, perpuluhan & peratus (Dikemaskini Baharu!)" },
-            { id: 7, name: "Penyelesaian Masalah", icon: "🛒", desc: "Situasi harian wang, nisbah, purata & gabungan (Diperkaya Dipertingkat!)" }
+            { id: 1, name: "Dividing Fractions", icon: "🍕", desc: "Proper fractions, improper fractions and mixed numbers" },
+            { id: 2, name: "Basic Operations", icon: "🔢", desc: "Calculate with whole numbers and decimals" },
+            { id: 3, name: "Converting Decimals and Percentages", icon: "💯", desc: "Use hundred-square grids and convert values" },
+            { id: 4, name: "Adding and Subtracting Percentages", icon: "📊", desc: "Everyday contexts, discounts and marks" },
+            { id: 5, name: "Quantities and Percentages", icon: "🧮", desc: "Use percentages to find quantities and totals" },
+            { id: 6, name: "Combined Operations", icon: "⚡", desc: "Use the order of operations with fractions, decimals and percentages" },
+            { id: 7, name: "Problem Solving", icon: "🛒", desc: "Solve everyday problems involving money, fractions and percentages" }
         ];
 
         let QUESTION_BANK = [];
@@ -640,12 +640,12 @@
             let options = [];
             let correctAns = "";
             let explanation = "";
-            let cognitive = "MENGINGAT";
+            let cognitive = "REMEMBERING";
             let visualType = "pizza";
 
-            if (diff === 'Mudah') cognitive = (index % 2 === 0) ? "MENGINGAT" : "MEMAHAMI";
-            else if (diff === 'Sederhana') cognitive = "MEMAHAMI";
-            else cognitive = "MENGAPLIKASI";
+            if (diff === 'Mudah') cognitive = (index % 2 === 0) ? "REMEMBERING" : "UNDERSTANDING";
+            else if (diff === 'Sederhana') cognitive = "UNDERSTANDING";
+            else cognitive = "APPLYING";
 
             if (topicId === 1) {
                 visualType = "fraction-bar";
@@ -656,25 +656,25 @@
                     
                     let num = numerators[(index - 1) % numerators.length];
                     let denom = denominators[(index - 1) % denominators.length];
-                    let div = divisors[(index - 1) % divisors.length];
+                    let div = divisors[index - 1] + (index === 7 ? 2 : 0);
 
-                    qText = `Berapakah hasil bahagi ${num}/${denom} ÷ ${div} ?`;
+                    qText = `Calculate ${num}/${denom} ÷ ${div}.`;
                     let correctNum = num;
                     let correctDenom = denom * div;
                     correctAns = `${correctNum}/${correctDenom}`;
                     
-                    let wrong1 = `${num + 1}/${correctDenom}`;
+                    let wrong1 = `${num}/${correctDenom + 1}`;
                     let wrong2 = `${num}/${denom}`;
-                    let wrong3 = `${correctNum}/${denom}`;
+                    let wrong3 = `${correctNum}/${denom * (div + 1)}`;
                     options = [correctAns, wrong1, wrong2, wrong3];
-                    explanation = `Darabkan penyebut dengan nombor bulat: (${num}/${denom}) ÷ ${div} = ${num} / (${denom} × ${div}) = ${correctNum}/${correctDenom}.`;
+                    explanation = `Multiply the denominator by ${div}. The result is ${correctNum}/${correctDenom}.`;
                 } else if (diff === 'Sederhana') {
-                    let whole = (index % 4) + 1;
-                    let num = (index % 2 === 0) ? 1 : 3;
+                    let whole = 1 + Math.floor((index - 1) / 3);
+                    let num = 1;
                     let denom = 2;
                     let div = (index % 3) + 2;
 
-                    qText = `Selesaikan: ${whole} ${num}/${denom} ÷ ${div} = ?`;
+                    qText = `Calculate ${whole} ${num}/${denom} ÷ ${div}.`;
                     let improperNum = (whole * denom) + num;
                     let ansNum = improperNum;
                     let ansDenom = denom * div;
@@ -684,17 +684,17 @@
                         ansDenom /= 2;
                     }
                     correctAns = `${ansNum}/${ansDenom}`;
-                    options = [correctAns, `${ansNum + 1}/${ansDenom}`, `${ansNum}/${ansDenom + 2}`, `${whole}/${div}`];
-                    explanation = `Tukarkan nombor bercampur kepada pecahan tak wajar (${improperNum}/${denom}), kemudian darab salingan ${div}: ${ansNum}/${ansDenom}.`;
+                    options = [correctAns, `${ansNum + 1}/${ansDenom}`, `${ansNum}/${ansDenom + 2}`, `${ansNum + 2}/${ansDenom}`];
+                    explanation = `Convert the mixed number to ${improperNum}/${denom}, then multiply by 1/${div} to get ${ansNum}/${ansDenom}.`;
                 } else {
                     let kids = (index % 4) + 2;
-                    let baseVal = (index % 3 + 2) * 2;
-                    qText = `Ibu membahagikan ${baseVal} 1/2 kg tepung sama rata ke dalam ${kids} bekas kecil. Berapakah jisim tepung dalam setiap bekas?`;
+                    let baseVal = 2 + index;
+                    qText = `Mum shares ${baseVal} 1/2 kg of flour equally among ${kids} containers. How much goes into each container? Give your answer to two decimal places.`;
                     let totalVal = (baseVal * 2 + 1) / 2;
                     let ansVal = (totalVal / kids).toFixed(2);
                     correctAns = `${ansVal} kg`;
                     options = [`${ansVal} kg`, `${(parseFloat(ansVal) + 0.5).toFixed(2)} kg`, `${(parseFloat(ansVal) - 0.2).toFixed(2)} kg`, `${(baseVal / kids).toFixed(2)} kg`];
-                    explanation = `Tukarkan ${baseVal} 1/2 kepada pecahan tak wajar dan bahagikan dengan ${kids} untuk mendapat ${ansVal} kg.`;
+                    explanation = `Divide ${totalVal} kg by ${kids}. Rounded to two decimal places, this is ${ansVal} kg.`;
                 }
             } 
             else if (topicId === 2) {
@@ -703,150 +703,144 @@
                     let a = (index * 12.5).toFixed(1);
                     let b = (index * 3.2).toFixed(1);
                     let ans = (parseFloat(a) + parseFloat(b)).toFixed(1);
-                    qText = `Hitung nilai: ${a} + ${b} = ?`;
+                    qText = `Calculate ${a} + ${b}.`;
                     correctAns = `${ans}`;
                     options = [`${ans}`, `${(parseFloat(ans) + 2.1).toFixed(1)}`, `${(parseFloat(ans) - 1.5).toFixed(1)}`, `${(parseFloat(ans) + 5.0).toFixed(1)}`];
-                    explanation = `Lakukan penambahan perpuluhan mengikut nilai tempat titik perpuluhan: ${a} + ${b} = ${ans}.`;
+                    explanation = `Line up the decimal points and add. ${a} + ${b} = ${ans}.`;
                 } else if (diff === 'Sederhana') {
                     let a = 1000 + (index * 145);
                     let b = (index * 12.4).toFixed(1);
                     let ans = (a - parseFloat(b)).toFixed(1);
-                    qText = `Cari baki berikut: ${a} − ${b} = ?`;
+                    qText = `Calculate ${a} − ${b}.`;
                     correctAns = `${ans}`;
                     options = [`${ans}`, `${(parseFloat(ans) + 10.5).toFixed(1)}`, `${(parseFloat(ans) - 12.0).toFixed(1)}`, `${(parseFloat(ans) + 25.4).toFixed(1)}`];
-                    explanation = `Pastikan nilai tempat nombor bulat diselaraskan dengan titik perpuluhan: ${a}.0 − ${b} = ${ans}.`;
+                    explanation = `Line up the decimal points and subtract. ${a}.0 − ${b} = ${ans}.`;
                 } else {
                     let multVal = 24 + index;
                     let decVal = (index * 0.25).toFixed(2);
                     let ans = (multVal * parseFloat(decVal)).toFixed(2);
-                    qText = `Selesaikan operasi darab ini: ${multVal} × ${decVal} = ?`;
+                    qText = `Calculate ${multVal} × ${decVal}.`;
                     correctAns = `${ans}`;
                     options = [`${ans}`, `${(parseFloat(ans) + 4.50).toFixed(2)}`, `${(parseFloat(ans) - 2.25).toFixed(2)}`, `${(parseFloat(ans) + 12.00).toFixed(2)}`];
-                    explanation = `Darabkan seperti biasa dan tetapkan dua tempat perpuluhan: ${multVal} × ${decVal} = ${ans}.`;
+                    explanation = `Multiply, then place the decimal point. ${multVal} × ${decVal} = ${ans}.`;
                 }
             } 
             else if (topicId === 3) {
                 visualType = "grid-100";
                 if (diff === 'Mudah') {
-                    let vals = [0.1, 0.2, 0.25, 0.4, 0.5, 0.75, 0.8, 0.15, 0.35, 0.65];
-                    let val = vals[(index - 1) % vals.length];
-                    let pct = val * 100;
-                    qText = `Tukarkan nilai perpuluhan ${val} kepada peratus.`;
+                    let val = Number((index / 20).toFixed(2));
+                    let pct = Math.round(val * 100);
+                    qText = `Write ${val} as a percentage.`;
                     correctAns = `${pct}%`;
-                    options = [`${pct}%`, `${pct+10}%`, `${Math.max(0, pct-5)}%`, `${pct*2}%`];
-                    explanation = `Darabkan nilai perpuluhan dengan 100%: ${val} × 100% = ${pct}%.`;
+                    options = [`${pct}%`, `${pct+10}%`, `${Math.max(0, pct-5)}%`, `${pct + 15}%`];
+                    explanation = `Multiply the decimal by 100%. ${val} × 100% = ${pct}%.`;
                 } else if (diff === 'Sederhana') {
-                    let vals = [0.03, 0.08, 0.12, 0.35, 0.65, 0.95, 0.01, 0.45, 0.55, 0.85];
-                    let val = vals[(index - 1) % vals.length];
-                    let pct = val * 100;
-                    qText = `Tukarkan ${val} kepada peratus.`;
+                    let val = (2 * index - 1) / 100;
+                    let pct = Math.round(val * 100);
+                    qText = `Write ${val} as a percentage.`;
                     correctAns = `${pct}%`;
                     options = [`${pct}%`, `${pct*10}%`, `${(val*10)}%`, `${pct+5}%`];
-                    explanation = `${val} × 100% = ${pct}%.`;
+                    explanation = `Multiply by 100%. ${val} × 100% = ${pct}%.`;
                 } else {
-                    let pcts = [115, 125, 150, 175, 200, 250, 105, 300, 120, 140];
-                    let pct = pcts[(index - 1) % pcts.length];
+                    let pct = 105 + 5 * index;
                     let dec = pct / 100;
-                    qText = `Antara berikut, yang manakah setara dengan ${pct}% dalam bentuk perpuluhan?`;
+                    qText = `Write ${pct}% as a decimal.`;
                     correctAns = `${dec}`;
                     options = [`${dec}`, `${dec * 10}`, `${dec / 10}`, `${dec + 0.5}`];
-                    explanation = `Bahagikan peratus dengan 100: ${pct} ÷ 100 = ${dec}.`;
+                    explanation = `Divide ${pct} by 100 to get ${dec}.`;
                 }
             } 
             else if (topicId === 4) {
                 visualType = "bar-chart";
                 if (diff === 'Mudah') {
-                    let p1 = ((index % 4) + 1) * 10;
+                    let p1 = index * 2;
                     let p2 = ((index % 3) + 1) * 10;
                     let sum = p1 + p2;
-                    qText = `Hitung: ${p1}% + ${p2}% = ?`;
+                    qText = `Calculate ${p1}% + ${p2}%.`;
                     correctAns = `${sum}%`;
                     options = [`${sum}%`, `${sum + 10}%`, `${Math.abs(sum - 10)}%`, `${sum + 20}%`];
-                    explanation = `Tambah peratus secara terus: ${p1}% + ${p2}% = ${sum}%.`;
+                    explanation = `Add the percentages. ${p1}% + ${p2}% = ${sum}%.`;
                 } else if (diff === 'Sederhana') {
                     let base = 90 - (index * 2);
                     let sub = 25 + (index % 5);
                     let ans = base - sub;
-                    qText = `Selesaikan: ${base}% − ${sub}% = ?`;
+                    qText = `Calculate ${base}% − ${sub}%.`;
                     correctAns = `${ans}%`;
                     options = [`${ans}%`, `${ans + 5}%`, `${ans - 5}%`, `${ans + 10}%`];
-                    explanation = `Tolak nilai peratus: ${base}% - ${sub}% = ${ans}%.`;
+                    explanation = `Subtract the percentages. ${base}% − ${sub}% = ${ans}%.`;
                 } else {
                     let total = 500 + (index * 50);
                     let pBoys = 40 + (index % 15);
                     let pGirls = 100 - pBoys;
-                    qText = `Dalam sebuah dewan, ${pBoys}% daripada ${total} orang murid ialah murid lelaki. Berapakah peratus murid perempuan?`;
+                    qText = `Of the ${total} pupils in a hall, ${pBoys}% are boys. What percentage are girls?`;
                     correctAns = `${pGirls}%`;
-                    options = [`${pGirls}%`, `${pBoys}%`, `${pGirls + 5}%`, `${Math.abs(pGirls - 10)}%`];
-                    explanation = `Jumlah keseluruhan peratus ialah 100%. Peratus murid perempuan = 100% - ${pBoys}% = ${pGirls}%.`;
+                    options = [`${pGirls}%`, `${pGirls + 2}%`, `${pGirls + 5}%`, `${Math.abs(pGirls - 10)}%`];
+                    explanation = `Subtract the percentage of boys from 100%. The percentage of girls is ${pGirls}%.`;
                 }
             } 
             else if (topicId === 5) {
                 visualType = "calculator";
                 if (diff === 'Mudah') {
-                    let totals = [200, 300, 400, 500, 600, 800, 1000, 1200, 1500, 2000];
                     let pcts = [5, 10, 15, 20, 25, 30, 40, 50, 75, 80];
-                    let total = totals[(index - 1) % totals.length];
+                    let total = 200 + index * 100;
                     let pct = pcts[(index - 1) % pcts.length];
                     let ans = (pct / 100) * total;
 
-                    qText = `Berapakah nilai bagi ${pct}% daripada ${total} biji guli?`;
+                    qText = `How many marbles are ${pct}% of ${total}?`;
                     correctAns = `${ans}`;
                     options = [`${ans}`, `${ans + 20}`, `${Math.max(0, ans - 15)}`, `${ans * 2}`];
-                    explanation = `Cari nilai kuantiti dengan mendarab peratus dengan jumlah: (${pct}/100) × ${total} = ${ans}.`;
+                    explanation = `Multiply ${total} by ${pct}/100 to get ${ans} marbles.`;
                 } else if (diff === 'Sederhana') {
-                    let parts = [12, 18, 24, 35, 42, 50, 64, 75, 88, 95];
                     let pcts = [20, 25, 40, 50, 60, 75, 80, 10, 30, 45];
-                    let part = parts[(index - 1) % parts.length];
                     let pct = pcts[(index - 1) % pcts.length];
-                    let totalVal = Math.round((part * 100) / pct);
+                    let totalVal = 100 + index * 20;
+                    const part = totalVal * pct / 100;
 
-                    qText = `Jika ${pct}% daripada suatu wang simpanan ialah RM${part}, berapakah jumlah keseluruhan wang simpanan itu?`;
+                    qText = `If ${pct}% of a savings balance is RM${part}, what is the full balance?`;
                     correctAns = `RM${totalVal}`;
-                    options = [`RM${totalVal}`, `RM${totalVal + 20}`, `RM${Math.max(10, totalVal - 30)}`, `RM${part * 2}`];
-                    explanation = `Jika ${pct}% = RM${part}, maka 100% = (RM${part} ÷ ${pct}) × 100 = RM${totalVal}.`;
+                    options = [`RM${totalVal}`, `RM${totalVal + 20}`, `RM${Math.max(10, totalVal - 30)}`, `RM${totalVal + 40}`];
+                    explanation = `Divide RM${part} by ${pct}, then multiply by 100 to get RM${totalVal}.`;
                 } else {
                     let originalPrice = 250 + (index * 35);
                     let discPct = (index % 2 === 0) ? 30 : 40;
                     let discountAmount = (discPct / 100) * originalPrice;
                     let finalPrice = originalPrice - discountAmount;
 
-                    qText = `Sebuah basikal berharga RM${originalPrice} diberi diskaun sebanyak ${discPct}%. Hitung harga jualan basikal selepas diskaun.`;
-                    correctAns = `RM${finalPrice.toFixed(0)}`;
-                    options = [`RM${finalPrice.toFixed(0)}`, `RM${finalPrice.toFixed(0) * 1 + 30}`, `RM${Math.max(50, finalPrice.toFixed(0) * 1 - 40)}`, `RM${originalPrice}`];
-                    explanation = `Diskaun = ${discPct}% dari RM${originalPrice} = RM${discountAmount}. Harga jualan = RM${originalPrice} - RM${discountAmount} = RM${finalPrice.toFixed(0)}.`;
+                    qText = `A bicycle costing RM${originalPrice} is discounted by ${discPct}%. What is the sale price?`;
+                    correctAns = `RM${finalPrice.toFixed(2)}`;
+                    options = [`RM${finalPrice.toFixed(2)}`, `RM${finalPrice.toFixed(2) * 1 + 30}`, `RM${Math.max(50, finalPrice.toFixed(2) * 1 - 40)}`, `RM${originalPrice}`];
+                    explanation = `Subtract the discount of RM${discountAmount.toFixed(2)} from RM${originalPrice}. The sale price is RM${finalPrice.toFixed(2)}.`;
                 }
             } 
             else if (topicId === 6) {
                 visualType = "lightning";
                 if (diff === 'Mudah') {
-                    let addDecs = [2.5, 4.2, 3.8, 6.4, 5.1, 7.3, 8.5, 1.9, 9.2, 3.4];
-                    let val = addDecs[(index - 1) % addDecs.length];
+                    let val = Number((1.5 + index * 0.4).toFixed(1));
                     let ans = (val + 1.5).toFixed(1);
-                    qText = `Selesaikan operasi bergabung mudah berikut: ${val} + (0.5 × 3) = ?`;
+                    qText = `Calculate ${val} + (0.5 × 3).`;
                     correctAns = `${ans}`;
-                    options = [`${ans}`, `${(parseFloat(ans) + 1.0).toFixed(1)}`, `${(Math.max(0, parseFloat(ans) - 0.8)).toFixed(1)}`, `${(parseFloat(ans) * 1.2).toFixed(1)}`];
-                    explanation = `Ikut tertib operasi (kurungan didahulukan): 0.5 × 3 = 1.5. Kemudian ${val} + 1.5 = ${ans}.`;
+                    options = [`${ans}`, `${(parseFloat(ans) + 1.0).toFixed(1)}`, `${(Math.max(0, parseFloat(ans) - 0.8)).toFixed(1)}`, `${(parseFloat(ans) + 1.5).toFixed(1)}`];
+                    explanation = `Work out the brackets first. 0.5 × 3 = 1.5. Then ${val} + 1.5 = ${ans}.`;
                 } else if (diff === 'Sederhana') {
                     let fracParts = ['3/4', '1/2', '4/5', '1/4', '7/10'];
                     let fStr = fracParts[(index - 1) % fracParts.length];
-                    let ansMap = { '3/4': '0.60', '1/2': '0.35', '4/5': '0.65', '1/4': '0.20', '7/10': '0.55' };
-                    let targetAns = ansMap[fStr] || '0.50';
+                    const factor = 1 + Math.floor((index - 1) / 5);
+                    const [numerator, denominator] = fStr.split('/').map(Number);
+                    const targetAns = ((numerator / denominator - 0.15) * factor).toFixed(2);
                     
-                    qText = `Hitung nilai bagi operasi berikut: (${fStr} − 0.15) × 1.0 = ?`;
+                    qText = `Calculate (${fStr} − 0.15) × ${factor}.`;
                     correctAns = `${targetAns}`;
-                    options = [`${targetAns}`, `${(parseFloat(targetAns) + 0.20).toFixed(2)}`, `${(Math.max(0, parseFloat(targetAns) - 0.15)).toFixed(2)}`, `${(parseFloat(targetAns) * 2).toFixed(2)}`];
-                    explanation = `Tukarkan pecahan ${fStr} kepada perpuluhan terlebih dahulu, kemudian tolak 0.15 untuk mendapat ${targetAns}.`;
+                    options = [`${targetAns}`, `${(parseFloat(targetAns) + 0.20).toFixed(2)}`, `${(Math.max(0, parseFloat(targetAns) - 0.15)).toFixed(2)}`, `${(parseFloat(targetAns) + 0.30).toFixed(2)}`];
+                    explanation = `Convert ${fStr} to a decimal, subtract 0.15 and multiply by ${factor} to get ${targetAns}.`;
                 } else {
-                    let baseVals = [200, 400, 500, 250, 300];
-                    let v = baseVals[(index - 1) % baseVals.length];
+                    let v = 200 + index * 20;
                     let pctVal = (index % 2 === 0) ? 20 : 10;
                     let ansNum = (v * (1 + pctVal / 100)) - 50;
                     
-                    qText = `Selesaikan operasi kompleks: ${v} + (${pctVal}% daripada ${v}) − 50 = ?`;
+                    qText = `Calculate ${v} + (${pctVal}% of ${v}) − 50.`;
                     correctAns = `${ansNum.toFixed(1)}`;
                     options = [`${ansNum.toFixed(1)}`, `${(ansNum + 40).toFixed(1)}`, `${(ansNum - 30).toFixed(1)}`, `${(ansNum * 1.1).toFixed(1)}`];
-                    explanation = `Kira peratus dahulu: ${pctVal}% daripada ${v} = ${(pctVal/100)*v}. Tambah kepada ${v} dan tolak 50 menghasilkan ${ansNum.toFixed(1)}.`;
+                    explanation = `Find ${pctVal}% of ${v}, add it to ${v} and subtract 50 to get ${ansNum.toFixed(1)}.`;
                 }
             } 
             else {
@@ -856,72 +850,72 @@
                     if (subType === 0) {
                         let money = 40 + (index * 10);
                         let half = money / 2;
-                        qText = `Siti mempunyai RM${money}. Dia membelanjakan 50% daripada wangnya untuk membeli buku rujukan. Berapakah baki wang Siti?`;
+                        qText = `Siti has RM${money}. She spends 50% on reference books. How much money does she have left?`;
                         correctAns = `RM${half}`;
                         options = [`RM${half}`, `RM${half + 5}`, `RM${half - 5}`, `RM${money}`];
-                        explanation = `Wang dibelanjakan = 50% dari RM${money} = RM${half}. Baki = RM${money} - RM${half} = RM${half}.`;
+                        explanation = `She spends RM${half}. Subtract this from RM${money} to get RM${half}.`;
                     } else if (subType === 1) {
                         let price = 80 + (index * 5);
                         let disc = 10;
                         let ans = price - disc;
-                        qText = `Sebuah beg sekolah berharga RM${price}. Kedai memberikan rebat tunai sebanyak RM${disc}. Berapakah harga selepas rebat?`;
+                        qText = `A school bag costs RM${price}. The shop offers a cash rebate of RM${disc}. What is the price after the rebate?`;
                         correctAns = `RM${ans}`;
-                        options = [`RM${ans}`, `RM${ans + 10}`, `RM${ans - 5}`, `RM${price}`];
-                        explanation = `Harga selepas rebat = RM${price} − RM${disc} = RM${ans}.`;
+                        options = [`RM${ans}`, `RM${ans + 15}`, `RM${ans - 5}`, `RM${price}`];
+                        explanation = `Subtract RM${disc} from RM${price} to get RM${ans}.`;
                     } else if (subType === 2) {
-                        let pack = 4 + (index % 3);
+                        let pack = 3 + Math.floor(index / 2);
                         let pricePerPack = 12;
                         let total = pack * pricePerPack;
-                        qText = `Amir membeli ${pack} kotak pensel warna dengan harga RM${pricePerPack} setiap kotak. Hitung jumlah bayaran yang perlu dijelaskan oleh Amir.`;
+                        qText = `Amir buys ${pack} boxes of coloured pencils at RM${pricePerPack} per box. How much does he pay?`;
                         correctAns = `RM${total}`;
                         options = [`RM${total}`, `RM${total + 10}`, `RM${Math.max(10, total - 12)}`, `RM${pricePerPack}`];
-                        explanation = `Jumlah = ${pack} × RM${pricePerPack} = RM${total}.`;
+                        explanation = `Multiply ${pack} by RM${pricePerPack} to get RM${total}.`;
                     } else {
                         let initial = 150;
                         let add = 50 + (index * 10);
                         let ans = initial + add;
-                        qText = `Tabung Aminah mengandungi RM${initial}. Selepas ibu memasukkan RM${add} lagi ke dalam tabung itu, berapakah jumlah wang Aminah sekarang?`;
+                        qText = `Aminah has RM${initial} in her savings jar. Mum adds RM${add}. How much money is in the jar now?`;
                         correctAns = `RM${ans}`;
                         options = [`RM${ans}`, `RM${ans + 20}`, `RM${Math.max(50, ans - 30)}`, `RM${initial}`];
-                        explanation = `Jumlah keseluruhan wang = RM${initial} + RM${add} = RM${ans}.`;
+                        explanation = `Add RM${initial} and RM${add} to get RM${ans}.`;
                     }
                 } else if (diff === 'Sederhana') {
                     let subType = index % 4;
                     if (subType === 0) {
                         let correctCount = 15 + (index % 5);
                         let totalQ = 20;
-                        let pct = (correctCount / totalQ) * 100;
-                        qText = `Dalam satu ujian Matematik, Ali menjawab betul ${correctCount} daripada ${totalQ} soalan. Berapakah peratus markah yang diperoleh Ali?`;
+                        let pct = (correctCount * 100) / totalQ;
+                        qText = `Ali answers ${correctCount} out of ${totalQ} maths questions correctly. What percentage does he get?`;
                         correctAns = `${pct}%`;
-                        options = [`${pct}%`, `${pct - 5}%`, `${pct + 5}%`, `80%`];
-                        explanation = `Peratus markah = (${correctCount} / ${totalQ}) × 100% = ${pct}%.`;
+                        options = [`${pct}%`, `${pct - 5}%`, `${pct + 5}%`, `${pct - 10}%`];
+                        explanation = `Divide ${correctCount} by ${totalQ}, then multiply by 100%. The answer is ${pct}%.`;
                     } else if (subType === 1) {
                         let totalPpl = 40 + (index * 5);
                         let pctAdults = 60;
                         let adults = (pctAdults / 100) * totalPpl;
                         let kids = totalPpl - adults;
-                        qText = `Seramai ${totalPpl} orang pelawat melawat Pameran Sains. 60% daripada mereka ialah dewasa dan selebihnya kanak-kanak. Hitung bilangan pelawat kanak-kanak.`;
+                        qText = `A science exhibition has ${totalPpl} visitors. Of these, 60% are adults and the rest are children. How many are children?`;
                         correctAns = `${kids}`;
                         options = [`${kids}`, `${adults}`, `${kids + 4}`, `${Math.max(2, kids - 5)}`];
-                        explanation = `Peratus kanak-kanak = 100% - 60% = 40%. 40% daripada ${totalPpl} = ${kids} orang.`;
+                        explanation = `Children make up 40% of the visitors. 40% of ${totalPpl} is ${kids}.`;
                     } else if (subType === 2) {
-                        let itemA = 45.50;
+                        let itemA = 45.50 + index;
                         let itemB = 22.80;
                         let voucher = 10.00;
                         let net = (itemA + itemB) - voucher;
-                        qText = `Zarith membeli sehelai baju bernilai RM${itemA} dan sepasang kasut bernilai RM${itemB}. Dia menggunakan baucar diskaun bernilai RM${voucher}. Hitung jumlah wang yang perlu dibayar.`;
+                        qText = `Zarith buys a shirt for RM${itemA.toFixed(2)} and shoes for RM${itemB.toFixed(2)}. He uses a voucher worth RM${voucher}. How much does he pay?`;
                         correctAns = `RM${net.toFixed(2)}`;
                         options = [`RM${net.toFixed(2)}`, `RM${(net + 5).toFixed(2)}`, `RM${(net - 5).toFixed(2)}`, `RM${(itemA + itemB).toFixed(2)}`];
-                        explanation = `Jumlah asal = RM${itemA} + RM${itemB} = RM${(itemA+itemB).toFixed(2)}. Tolak baucar RM${voucher} = RM${net.toFixed(2)}.`;
+                        explanation = `Add the prices, then subtract RM${voucher}. The total is RM${net.toFixed(2)}.`;
                     } else {
-                        let totalMeters = 120;
+                        let totalMeters = 100 + index * 10;
                         let usedPct = 35;
                         let used = (usedPct / 100) * totalMeters;
                         let remaining = totalMeters - used;
-                        qText = `Puan Salma mempunyai ${totalMeters} m kain. Dia menggunakan ${usedPct}% daripada kain itu untuk menjahit langsir. Berapakah baki kain (dalam meter) yang masih ada?`;
+                        qText = `Mrs Salma has ${totalMeters} m of fabric and uses ${usedPct}% to make curtains. How many metres are left?`;
                         correctAns = `${remaining} m`;
                         options = [`${remaining} m`, `${used} m`, `${remaining + 10} m`, `${totalMeters} m`];
-                        explanation = `Kain digunakan = ${usedPct}% dari ${totalMeters} m = ${used} m. Baki = ${totalMeters} - ${used} = ${remaining} m.`;
+                        explanation = `She uses ${used} m. Subtract this from ${totalMeters} m to get ${remaining} m.`;
                     }
                 } else {
                     let subType = index % 4;
@@ -931,41 +925,41 @@
                         let pandanPct = 25;
                         let pandan = (pandanPct / 100) * totalCakes;
                         let strawberi = totalCakes - choc - pandan;
-                        qText = `Sebuah kilang menghasilkan ${totalCakes} biji kek. 3/8 perisa coklat, 25% perisa pandan, dan selebihnya perisa strawberi. Berapakah bilangan kek perisa strawberi?`;
+                        qText = `A factory makes ${totalCakes} cakes. Three eighths are chocolate, 25% are pandan and the rest are strawberry. How many are strawberry?`;
                         correctAns = `${strawberi}`;
-                        options = [`${strawberi}`, `${strawberi + 100}`, `${Math.max(0, strawberi - 100)}`, `${choc}`];
-                        explanation = `Coklat = ${choc}, Pandan = ${pandan}. Strawberi = ${totalCakes} - ${choc} - ${pandan} = ${strawberi}.`;
+                        options = [`${strawberi}`, `${strawberi + 100}`, `${Math.max(0, strawberi - 100)}`, `${strawberi + 200}`];
+                        explanation = `Subtract ${choc} chocolate cakes and ${pandan} pandan cakes from ${totalCakes}. There are ${strawberi} strawberry cakes.`;
                     } else if (subType === 1) {
                         let capital = 5000 + (index * 200);
                         let profitPct = 18;
                         let profit = (profitPct / 100) * capital;
                         let totalRevenue = capital + profit;
-                        qText = `Encik Farhan melaburkan modal sebanyak RM${capital} dalam perniagaan. Beliau mendapat pulangan keuntungan sebanyak ${profitPct}% daripada modal itu. Hitung jumlah keseluruhan wang Encik Farhan sekarang.`;
+                        qText = `Mr Farhan invests RM${capital} and earns ${profitPct}% profit. How much are the investment and profit worth altogether?`;
                         correctAns = `RM${totalRevenue.toFixed(0)}`;
                         options = [`RM${totalRevenue.toFixed(0)}`, `RM${capital}`, `RM${(totalRevenue + 200).toFixed(0)}`, `RM${(totalRevenue - 150).toFixed(0)}`];
-                        explanation = `Keuntungan = ${profitPct}% daripada RM${capital} = RM${profit}. Jumlah keseluruhan = RM${capital} + RM${profit} = RM${totalRevenue.toFixed(0)}.`;
+                        explanation = `The profit is RM${profit}. Add it to RM${capital} to get RM${totalRevenue.toFixed(0)}.`;
                     } else if (subType === 2) {
-                        let totalBoxes = 1200;
+                        let totalBoxes = 1200 + index * 80;
                         let damagedPct = 5;
                         let soldPct = 75;
                         let damaged = (damagedPct / 100) * totalBoxes;
                         let goodBoxes = totalBoxes - damaged;
                         let sold = (soldPct / 100) * goodBoxes;
                         let unsold = goodBoxes - sold;
-                        qText = `Sebuah gudang menyimpan ${totalBoxes} kotak buah mangga. 5% rosak dan dibuang. Daripada baki kotak yang baik, 75% telah dijual. Berapakah bilangan kotak buah mangga yang belum dijual?`;
+                        qText = `A warehouse has ${totalBoxes} boxes of mangoes. It discards 5% as damaged and sells 75% of the good boxes. How many good boxes are left unsold?`;
                         correctAns = `${unsold}`;
                         options = [`${unsold}`, `${sold}`, `${unsold + 30}`, `${damaged}`];
-                        explanation = `Kotak rosak = ${damaged}. Baki baik = ${goodBoxes}. Dijual = ${sold}. Baki belum dijual = ${goodBoxes} - ${sold} = ${unsold} kotak.`;
+                        explanation = `After discarding ${damaged} boxes, ${goodBoxes} remain. Subtract the ${sold} boxes sold to get ${unsold}.`;
                     } else {
                         let workers = 8;
-                        let days = 15;
+                        let days = 15 + index * 3;
                         let totalManDays = workers * days;
                         let newWorkers = 12;
                         let newDays = totalManDays / newWorkers;
-                        qText = `Seramai ${workers} orang pekerja boleh menyiapkan sebuah projek landskap dalam masa ${days} hari. Jika bilangan pekerja dikurangkan atau ditambah kepada ${newWorkers} orang dengan kadar kerja yang sama, berapakah hari yang diperlukan?`;
-                        correctAns = `${newDays} hari`;
-                        options = [`${newDays} hari`, `${newDays + 3} hari`, `${days} hari`, `${newDays - 2} hari`];
-                        explanation = `Jumlah hari orang (man-days) = ${workers} × ${days} = ${totalManDays}. Untuk ${newWorkers} pekerja, masa diperlukan = ${totalManDays} ÷ ${newWorkers} = ${newDays} hari.`;
+                        qText = `A team of ${workers} workers takes ${days} days to landscape a site. How many days would ${newWorkers} workers take at the same rate per worker?`;
+                        correctAns = `${newDays} days`;
+                        options = [`${newDays} days`, `${newDays + 3} days`, `${days} days`, `${newDays - 2} days`];
+                        explanation = `The job takes ${workers} × ${days} = ${totalManDays} worker-days. Divide by ${newWorkers} to get ${newDays} days.`;
                     }
                 }
             }
@@ -991,7 +985,7 @@
         function handleLogin() {
             let nameInput = document.getElementById('input-username').value.trim();
             if (!nameInput) {
-                showCustomMessage("Sila masukkan nama penuh murid terlebih dahulu.");
+                showCustomMessage("Enter the pupil’s full name.");
                 return;
             }
 
@@ -1062,7 +1056,7 @@
                             ${topic.icon}
                         </div>
                         <div>
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Topik ${topic.id}</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Topic ${topic.id}</span>
                             <h3 class="font-display font-bold text-base text-slate-800">${topic.name}</h3>
                             <p class="text-xs text-slate-500 mt-0.5">${topic.desc}</p>
                         </div>
@@ -1129,8 +1123,8 @@
 
             document.getElementById('current-q-num').innerText = currentQuestionIndex + 1;
             document.getElementById('quiz-score').innerText = sessionScore;
-            document.getElementById('quiz-topic-badge').innerText = `Topik ${q.topicId}`;
-            document.getElementById('quiz-diff-badge').innerText = q.difficulty;
+            document.getElementById('quiz-topic-badge').innerText = `Topic ${q.topicId}`;
+            document.getElementById('quiz-diff-badge').innerText = ({ Mudah: 'Easy', Sederhana: 'Medium', Susah: 'Hard' })[q.difficulty];
             
             let progPercent = ((currentQuestionIndex) / activeQuestions.length) * 100;
             document.getElementById('quiz-progress-bar').style.width = `${Math.max(progPercent, 5)}%`;
@@ -1140,7 +1134,7 @@
             document.getElementById('explanation-box').classList.add('hide');
             document.getElementById('btn-next-question').classList.add('hide');
 
-            renderVisualDiagram(q.visual);
+            renderVisualDiagram(q.visual, q);
             renderAnswerOptions(q);
 
             if (currentTimeLimit > 0) {
@@ -1161,7 +1155,7 @@
             }
         }
 
-        function renderVisualDiagram(type) {
+        function renderVisualDiagram(type, q) {
             let container = document.getElementById('question-visual');
             container.innerHTML = '';
 
@@ -1178,19 +1172,19 @@
                     </div>
                 `;
             } else if (type === 'grid-100') {
-                container.innerHTML = `
+                const value = Number(q.question.match(/\d+(?:\.\d+)?/)[0]);
+                const shaded = q.difficulty === 'Susah' ? value : Math.round(value * 100);
+                container.innerHTML = Array.from({ length: Math.ceil(shaded / 100) }, (_, gridIndex) => `
                     <div class="grid grid-cols-10 gap-0.5 w-32 h-32 mx-auto bg-slate-200 p-1 rounded-xl shadow-inner">
-                        ${Array.from({length: 40}).map((_, i) => `<div class="bg-blue-500 rounded-[1px]"></div>`).join('')}
-                        ${Array.from({length: 60}).map((_, i) => `<div class="bg-white rounded-[1px]"></div>`).join('')}
-                    </div>
-                `;
+                        ${Array.from({ length: 100 }, (_, cell) => `<div class="${gridIndex * 100 + cell < shaded ? 'bg-blue-500' : 'bg-white'} rounded-[1px]"></div>`).join('')}
+                    </div>`).join('');
             } else if (type === 'bar-chart') {
                 container.innerHTML = `
-                    <div class="flex items-end justify-center space-x-4 h-20 pt-2">
+                    <div class="flex items-end justify-center space-x-4 h-20 pt-2" aria-label="Example percentage chart">
                         <div class="w-8 bg-eduBlue rounded-t-lg h-[60%] flex items-center justify-center text-white text-[10px] font-bold">35%</div>
                         <div class="w-8 bg-eduPurple rounded-t-lg h-[85%] flex items-center justify-center text-white text-[10px] font-bold">45%</div>
                         <div class="w-8 bg-eduPink rounded-t-lg h-[40%] flex items-center justify-center text-white text-[10px] font-bold">20%</div>
-                    </div>
+                    </div><p class="text-center text-xs text-slate-500">Example chart</p>
                 `;
             } else {
                 container.innerHTML = `
@@ -1259,7 +1253,7 @@
                 }
             });
 
-            document.getElementById('explanation-text').innerText = `Masa tamat! ${q.explanation}`;
+            document.getElementById('explanation-text').innerText = `Time’s up! ${q.explanation}`;
             document.getElementById('explanation-box').classList.remove('hide');
             document.getElementById('btn-next-question').classList.remove('hide');
         }
@@ -1299,11 +1293,11 @@
         }
 
         const AVAILABLE_BADGES = [
-            { id: 'b1', name: 'Pecahan Hebat', icon: '🍕', desc: 'Menyiapkan Topik Bahagi Pecahan' },
-            { id: 'b2', name: 'Raja Perpuluhan', icon: '💯', desc: 'Menyiapkan Topik Tukar Perpuluhan' },
-            { id: 'b3', name: 'Pakar Peratus', icon: '📊', desc: 'Menyiapkan Topik Tambah Tolak Peratus' },
-            { id: 'b4', name: 'Juara Kuantiti', icon: '🧮', desc: 'Menyiapkan Topik Kuantiti dan Peratus' },
-            { id: 'b5', name: 'Edu Kidz Champion', icon: '👑', desc: 'Mencapai lebih 100 markah keseluruhan' }
+            { id: 'b1', name: 'Fraction Expert', icon: '🍕', desc: 'Complete Dividing Fractions' },
+            { id: 'b2', name: 'Decimal Champion', icon: '💯', desc: 'Complete Converting Decimals and Percentages' },
+            { id: 'b3', name: 'Percentage Expert', icon: '📊', desc: 'Complete Adding and Subtracting Percentages' },
+            { id: 'b4', name: 'Quantity Champion', icon: '🧮', desc: 'Complete Quantities and Percentages' },
+            { id: 'b5', name: 'Edu Kidz Champion', icon: '👑', desc: 'Earn more than 100 marks in total' }
         ];
 
         function checkAndAwardBadges() {
@@ -1348,7 +1342,7 @@
             listContainer.innerHTML = '';
 
             if (users.length === 0) {
-                listContainer.innerHTML = `<p class="text-center text-slate-400 text-sm py-6">Belum ada rekod pemain lagi.</p>`;
+                listContainer.innerHTML = `<p class="text-center text-slate-400 text-sm py-6">No scores yet.</p>`;
                 return;
             }
 
@@ -1362,7 +1356,7 @@
                         <span class="text-2xl">${u.avatar}</span>
                         <div>
                             <h4 class="font-display font-bold text-sm text-slate-800">${u.name}</h4>
-                            <p class="text-[10px] text-slate-500">${u.completedTopics ? u.completedTopics.length : 0} Topik Selesai</p>
+                            <p class="text-[10px] text-slate-500">${u.completedTopics ? u.completedTopics.length : 0} Topics Completed</p>
                         </div>
                     </div>
                     <div class="flex items-center bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-sm">
@@ -1386,7 +1380,7 @@
         function saveProfileChanges() {
             let newName = document.getElementById('edit-username').value.trim();
             if (!newName) {
-                showCustomMessage("Nama profil tidak boleh kosong.");
+                showCustomMessage("Enter a profile name.");
                 return;
             }
 
@@ -1395,7 +1389,7 @@
             updateActiveUser(currentUser);
             document.getElementById('welcome-name').innerText = currentUser.name;
             updateHeaderInfo();
-            showCustomMessage("Profil berjaya dikemas kini!");
+            showCustomMessage("Profile updated.");
             showScreen('menu-screen');
         }
 
@@ -1423,7 +1417,7 @@
         function showCustomFeedback(isCorrect) {
             let feedback = document.createElement('div');
             feedback.className = `fixed top-6 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-2xl shadow-xl font-display font-bold text-white transition-all transform animate-bounce ${isCorrect ? 'bg-emerald-500' : 'bg-rose-500'}`;
-            feedback.innerHTML = isCorrect ? '<i class="fa-solid fa-circle-check mr-2"></i> TAHNIAH! JAWAPAN BETUL!' : '<i class="fa-solid fa-circle-xmark mr-2"></i> CUBA LAGI!';
+            feedback.innerHTML = isCorrect ? '<i class="fa-solid fa-circle-check mr-2"></i> WELL DONE! CORRECT ANSWER!' : '<i class="fa-solid fa-circle-xmark mr-2"></i> INCORRECT ANSWER';
             document.body.appendChild(feedback);
             setTimeout(() => feedback.remove(), 2000);
         }

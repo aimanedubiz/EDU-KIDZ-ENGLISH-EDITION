@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids - Edu Kidz Tahun 4</title>
+    <title>Math Kids - Edu Kidz Year 4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -62,8 +62,8 @@
                     🐱
                 </div>
                 <div>
-                    <h2 id="header-username" class="font-bold text-slate-800 text-sm sm:text-base">Pemain</h2>
-                    <p class="text-xs text-slate-500">Tahun 4 • Masa & Waktu (Refined Darab & Bahagi Masa)</p>
+                    <h2 id="header-username" class="font-bold text-slate-800 text-sm sm:text-base">Player</h2>
+                    <p class="text-xs text-slate-500">Year 4 • Time</p>
                 </div>
             </div>
             
@@ -73,10 +73,10 @@
                     <span id="header-score">0</span> Markah
                 </div>
                 <button onclick="goToHome()" class="bg-indigo-50 text-indigo-600 hover:bg-indigo-100 px-3 py-1.5 rounded-xl text-xs font-bold transition">
-                    <i class="fa-solid fa-house mr-1"></i> Utama
+                    <i class="fa-solid fa-house mr-1"></i> Home
                 </button>
                 <button onclick="logout()" class="bg-rose-50 text-rose-600 hover:bg-rose-100 px-3 py-1.5 rounded-xl text-xs font-bold transition">
-                    <i class="fa-solid fa-right-from-bracket mr-1"></i> Keluar
+                    <i class="fa-solid fa-right-from-bracket mr-1"></i> Log Out
                 </button>
             </div>
         </header>
@@ -87,7 +87,7 @@
 
         <!-- FOOTER -->
         <footer class="mt-4 text-center text-xs text-slate-400">
-            MATH KIDS – EDU KIDZ TAHUN 4 • KPM Matematik • Sistem Anti-Pengulangan Soalan 2026
+            MATH KIDS – EDU KIDZ YEAR 4 • KSSR Mathematics • 2026
         </footer>
     </div>
 
@@ -136,15 +136,21 @@
         // --- Helper Function for Time String Formatting ---
         function formatTimeStr(h, m, isSec = false) {
             if (isSec) {
-                if (h > 0 && m > 0) return `${h} minit ${m} saat`;
-                if (h > 0) return `${h} minit`;
-                return `${m} saat`;
+                if (h > 0 && m > 0) return `${h} minutes ${m} seconds`;
+                if (h > 0) return `${h} minutes`;
+                return `${m} seconds`;
             } else {
-                if (h > 0 && m > 0) return `${h} jam ${m} minit`;
-                if (h > 0) return `${h} jam`;
-                return `${m} minit`;
+                if (h > 0 && m > 0) return `${h} hours ${m} minutes`;
+                if (h > 0) return `${h} hours`;
+                return `${m} minutes`;
             }
         }
+
+        function formatClock12(hour, minute) {
+            return `${hour % 12 || 12}:${String(minute).padStart(2, '0')} ${hour < 12 ? 'am' : 'pm'}`;
+        }
+
+        const difficultyLabels = { senang: 'Easy', sederhana: 'Medium', susah: 'Hard' };
 
         // --- Application State & Curriculum Data ---
         let appState = {
@@ -171,15 +177,15 @@
         const AVATARS = ['👦', '👧', '🤖', '🐱', '🐶', '🦊', '🐼', '🦁', '🚀', '⭐'];
 
         const TOPICS_DATA = [
-            { id: 1, title: 'Sistem 12 Jam dan 24 Jam', icon: 'fa-solid fa-clock', desc: 'Mengenal, membaca & tukar sistem masa 12 & 24 jam dengan teliti.' },
-            { id: 2, title: 'Tempoh', icon: 'fa-solid fa-hourglass-half', desc: 'Mengira masa mula, masa tamat & tempoh aktiviti.' },
-            { id: 3, title: 'Anggaran Masa & Perkaitan', icon: 'fa-solid fa-calendar-days', desc: 'Alaf, abad, dekad, tahun, bulan, minggu & anggaran masa.' },
-            { id: 4, title: 'Tukar Unit Masa', icon: 'fa-solid fa-arrows-rotate', desc: 'Pertukaran saat, minit, jam, hari, minggu & bulan.' },
-            { id: 5, title: 'Tambah Masa', icon: 'fa-solid fa-plus', desc: 'Penambahan minit, jam dan hari secara tepat.' },
-            { id: 6, title: 'Tolak Masa', icon: 'fa-solid fa-minus', desc: 'Pengurangan masa dan pengumpulan semula unit.' },
-            { id: 7, title: 'Darab Masa', icon: 'fa-solid fa-xmark', desc: 'Pendaraban unit masa dengan nombor bulat (Refined & Non-repeating).' },
-            { id: 8, title: 'Bahagi Masa', icon: 'fa-solid fa-divide', desc: 'Pembahagian unit masa kepada kumpulan sama rata (Refined & Non-repeating).' },
-            { id: 9, title: 'Penyelesaian Masalah', icon: 'fa-solid fa-puzzle-piece', desc: 'Soalan berayat & situasi harian termasuk wang Malaysia.' }
+            { id: 1, title: '12-Hour and 24-Hour Time', icon: 'fa-solid fa-clock', desc: 'Read and convert between 12-hour and 24-hour times.' },
+            { id: 2, title: 'Duration', icon: 'fa-solid fa-hourglass-half', desc: 'Find start times, finish times and durations.' },
+            { id: 3, title: 'Estimating Time and Relating Units', icon: 'fa-solid fa-calendar-days', desc: 'Explore units of time and estimate durations.' },
+            { id: 4, title: 'Converting Units of Time', icon: 'fa-solid fa-arrows-rotate', desc: 'Convert between units of time.' },
+            { id: 5, title: 'Adding Time', icon: 'fa-solid fa-plus', desc: 'Add durations and regroup when needed.' },
+            { id: 6, title: 'Subtracting Time', icon: 'fa-solid fa-minus', desc: 'Subtract durations and regroup when needed.' },
+            { id: 7, title: 'Multiplying Time', icon: 'fa-solid fa-xmark', desc: 'Multiply durations by whole numbers.' },
+            { id: 8, title: 'Dividing Time', icon: 'fa-solid fa-divide', desc: 'Divide durations into equal parts.' },
+            { id: 9, title: 'Problem Solving', icon: 'fa-solid fa-puzzle-piece', desc: 'Solve everyday problems involving time and money.' }
         ];
 
         // --- Question Bank Generator ---
@@ -190,6 +196,12 @@
                 ['senang', 'sederhana', 'susah'].forEach(diff => {
                     for (let i = 1; i <= 20; i++) {
                         let qObj = buildQuestion(topic.id, diff, i);
+                        const singular = text => text.replace(/\b1 (hours|minutes|seconds|days|weeks|months|years|centuries|millennia)\b/g, (_, unit) =>
+                            unit === 'centuries' ? '1 century' : unit === 'millennia' ? '1 millennium' : '1 ' + unit.slice(0, -1));
+                        qObj.question = singular(qObj.question);
+                        qObj.explanation = singular(qObj.explanation);
+                        qObj.correct = singular(qObj.correct);
+                        qObj.options = qObj.options.map(singular);
                         bank[topic.id][diff].push(qObj);
                     }
                 });
@@ -209,54 +221,49 @@
                         let isPM = index % 2 === 0;
                         let h24 = isPM ? (hours === 12 ? 12 : hours + 12) : (hours === 12 ? 0 : hours);
                         let h24Str = String(h24).padStart(2, '0') + ":" + (index % 2 === 0 ? "15" : "00");
-                        let ans12 = `${hours}:${index % 2 === 0 ? "15" : "00"} ${isPM ? 'petang' : 'pagi'}`;
-                        if (hours >= 7 && isPM) ans12 = `${hours}:${index % 2 === 0 ? "15" : "00"} malam`;
-                        if (h24 === 0) ans12 = `12:${index % 2 === 0 ? "15" : "00"} tengah malam`;
-                        if (h24 === 12) ans12 = `12:${index % 2 === 0 ? "15" : "00"} tengah hari`;
+                        const ans12 = formatClock12(h24, index % 2 === 0 ? 15 : 0);
 
-                        let wrong1 = `${(hours%12)+1}:00 ${isPM ? 'pagi' : 'petang'}`;
-                        let wrong2 = `${hours}:45 ${isPM ? 'pagi' : 'malam'}`;
-                        let wrong3 = `${Math.max(1, hours-1)}:30 ${isPM ? 'petang' : 'pagi'}`;
+                        let wrong1 = `${(hours%12)+1}:00 ${isPM ? 'am' : 'pm'}`;
+                        let wrong2 = `${hours}:45 ${isPM ? 'am' : 'pm'}`;
+                        let wrong3 = `${Math.max(1, hours-1)}:30 ${isPM ? 'pm' : 'am'}`;
 
                         return {
-                            id, topic: topicId, diff, aras: 'Mengingat', mode: 'objektif',
-                            question: `Tukarkan waktu sistem 24 jam berikut kepada sistem 12 jam yang betul: Jam ${h24Str}`,
+                            id, topic: topicId, diff, aras: 'Remembering', mode: 'objektif',
+                            question: `Convert this 24-hour time to the 12-hour format: ${h24Str}.`,
                             options: [ans12, wrong1, wrong2, wrong3].sort(() => Math.random() - 0.5),
                             correct: ans12,
-                            explanation: `Jam ${h24Str} dalam sistem 12 jam ditulis sebagai ${ans12} dengan menggunakan perkataan pagi/petang/malam/tengah hari.`
+                            explanation: `The 12-hour equivalent of ${h24Str} is ${ans12}.`
                         };
                     } else {
                         let hours12 = ((index - 11) % 11) + 1;
                         let isPM = index % 2 !== 0;
                         let h24 = isPM ? (hours12 === 12 ? 12 : hours12 + 12) : (hours12 === 12 ? 0 : hours12);
-                        let h24Correct = `jam ${String(h24).padStart(2,'0')}30`;
+                        let h24Correct = `${String(h24).padStart(2,'0')}:30`;
                         return {
-                            id, topic: topicId, diff, aras: 'Mengingat', mode: 'isikosong',
-                            question: `Tuliskan ${hours12}:30 ${isPM ? (hours12>=7 ? 'malam' : 'petang') : 'pagi'} dalam sistem 24 jam (Format: jam XXXX).`,
+                            id, topic: topicId, diff, aras: 'Remembering', mode: 'isikosong',
+                            question: `Write ${hours12}:30 ${isPM ? 'pm' : 'am'} in the 24-hour format (HH:MM).`,
                             options: [],
                             correct: h24Correct,
-                            explanation: `Sistem 24 jam ditulis dengan awalan "jam" diikuti 4 digit nombor, iaitu ${h24Correct}.`
+                            explanation: `The 24-hour equivalent is ${h24Correct}.`
                         };
                     }
                 } else if (diff === 'sederhana') {
                     let min = (index * 5) % 60;
                     let h24 = 10 + (index % 12);
                     let h12Val = h24 > 12 ? h24 - 12 : h24;
-                    let timeOfDay = h24 >= 19 ? 'malam' : (h24 >= 12 ? 'petang' : 'pagi');
-                    if (h24 === 12) timeOfDay = 'tengah hari';
-                    if (h24 === 24 || h24 === 0) timeOfDay = 'tengah malam';
+                    const timeOfDay = h24 < 12 ? 'am' : 'pm';
 
                     return {
-                        id, topic: topicId, diff, aras: 'Memahami', mode: 'objektif',
-                        question: `Bas ekspres dijadualkan bertolak pada jam ${String(h24).padStart(2,'0')}:${String(min).padStart(2,'0')}. Apakah waktu ini dalam sistem 12 jam?`,
+                        id, topic: topicId, diff, aras: 'Understanding', mode: 'objektif',
+                        question: `An express bus leaves at ${String(h24).padStart(2,'0')}:${String(min).padStart(2,'0')}. What time is this in the 12-hour format?`,
                         options: [
                             `${h12Val}:${String(min).padStart(2,'0')} ${timeOfDay}`,
                             `${h12Val === 12 ? 1 : h12Val + 1}:${String(min).padStart(2,'0')} ${timeOfDay}`,
                             `${h12Val}:${String((min+15)%60).padStart(2,'0')} ${timeOfDay}`,
-                            `${h12Val > 1 ? h12Val - 1 : 12}:${String(min).padStart(2,'0')} pagi`
+                            `${h12Val > 1 ? h12Val - 1 : 12}:${String(min).padStart(2,'0')} am`
                         ].sort(() => Math.random() - 0.5),
                         correct: `${h12Val}:${String(min).padStart(2,'0')} ${timeOfDay}`,
-                        explanation: `Jam ${h24}:${String(min).padStart(2,'0')} bersamaan dengan ${h12Val}:${String(min).padStart(2,'0')} ${timeOfDay}.`
+                        explanation: `The 12-hour equivalent of ${h24}:${String(min).padStart(2,'0')} is ${h12Val}:${String(min).padStart(2,'0')} ${timeOfDay}.`
                     };
                 } else {
                     let flightNo = 200 + index;
@@ -266,16 +273,16 @@
                     let h12 = 6 + extraH;
                     let h24 = 18 + extraH;
                     return {
-                        id, topic: topicId, diff, aras: 'Mengaplikasi', mode: 'objektif',
-                        question: `Penerbangan MH${flightNo} berlepas pada pukul ${h12}:${String(m).padStart(2,'0')} petang. Apakah waktu berlepas dalam sistem 24 jam?`,
+                        id, topic: topicId, diff, aras: 'Applying', mode: 'objektif',
+                        question: `Flight MH${flightNo} departs at ${h12}:${String(m).padStart(2,'0')} pm. What is the departure time in the 24-hour format?`,
                         options: [
-                            `jam ${h24}:${String(m).padStart(2,'0')}`,
-                            `jam ${h24 === 23 ? 0 : h24 + 1}:${String(m).padStart(2,'0')}`,
-                            `jam ${h24}:${String((m+15)%60).padStart(2,'0')}`,
-                            `jam ${h24 > 0 ? h24 - 1 : 23}:${String(m).padStart(2,'0')}`
+                            `${h24}:${String(m).padStart(2,'0')}`,
+                            `${h24 === 23 ? 0 : h24 + 1}:${String(m).padStart(2,'0')}`,
+                            `${h24}:${String((m+15)%60).padStart(2,'0')}`,
+                            `${h24 > 0 ? h24 - 1 : 23}:${String(m).padStart(2,'0')}`
                         ].sort(() => Math.random() - 0.5),
-                        correct: `jam ${h24}:${String(m).padStart(2,'0')}`,
-                        explanation: `Waktu petang ${h12}:${String(m).padStart(2,'0')} ditambah 12 jam dalam sistem 24 jam menjadi jam ${h24}:${String(m).padStart(2,'0')}.`
+                        correct: `${h24}:${String(m).padStart(2,'0')}`,
+                        explanation: `Add 12 to the hour: ${h12}:${String(m).padStart(2,'0')} pm becomes ${h24}:${String(m).padStart(2,'0')}.`
                     };
                 }
             } else if (topicId === 2) {
@@ -284,72 +291,72 @@
                 let endH = startH + Math.floor(endMTotal / 60);
                 let endM = endMTotal % 60;
                 return {
-                    id, topic: topicId, diff, aras: 'Mengaplikasi', mode: 'objektif',
-                    question: `Aktiviti bermula pada pukul 08:10 pagi dan tamat pada pukul ${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')} pagi. Berapakah tempoh aktiviti tersebut?`,
-                    options: [`${durationM} minit`, `${durationM + 15} minit`, `${durationM - 10} minit`, `${durationM + 30} minit`],
-                    correct: `${durationM} minit`,
-                    explanation: `Tempoh dikira dari 08:10 hingga ${endH}:${String(endM).padStart(2,'0')} iaitu ${durationM} minit.`
+                    id, topic: topicId, diff, aras: 'Applying', mode: 'objektif',
+                    question: `An activity starts at 8:10 am and finishes at ${endH}:${String(endM).padStart(2,'0')} am. How long does it last?`,
+                    options: [`${durationM} minutes`, `${durationM + 15} minutes`, `${durationM - 10} minutes`, `${durationM + 30} minutes`],
+                    correct: `${durationM} minutes`,
+                    explanation: `The elapsed time from 8:10 am to ${endH}:${String(endM).padStart(2,'0')} am is ${durationM} minutes.`
                 };
             } else if (topicId === 3) {
                 let subType = index % 5;
                 if (subType === 0) {
-                    let abad = ((index - 1) % 5) + 1;
-                    let tahun = abad * 100;
+                    let centuries = ((index - 1) % 5) + 1;
+                    let years = centuries * 100;
                     return {
-                        id, topic: topicId, diff, aras: 'Memahami', mode: 'objektif',
-                        question: `${abad} abad adalah sama dengan berapa tahun?`,
-                        options: [`${tahun} tahun`, `${tahun + 50} tahun`, `${tahun / 2} tahun`, `${tahun + 100} tahun`].sort(() => Math.random() - 0.5),
-                        correct: `${tahun} tahun`,
-                        explanation: `1 abad = 100 tahun. Maka ${abad} abad × 100 = ${tahun} tahun.`
+                        id, topic: topicId, diff, aras: 'Understanding', mode: 'objektif',
+                        question: `How many years are there in ${centuries} centuries?`,
+                        options: [`${years} years`, `${years + 50} years`, `${years / 2} years`, `${years + 100} years`].sort(() => Math.random() - 0.5),
+                        correct: `${years} years`,
+                        explanation: `One century is 100 years. ${centuries} × 100 = ${years} years.`
                     };
                 } else if (subType === 1) {
                     let alaf = 1;
                     let abadVal = alaf * 10;
                     return {
-                        id, topic: topicId, diff, aras: 'Memahami', mode: 'objektif',
-                        question: `${alaf} alaf adalah sama dengan berapa abad?`,
-                        options: [`${abadVal} abad`, `${abadVal + 5} abad`, `${abadVal * 2} abad`, `${abadVal - 2} abad`].sort(() => Math.random() - 0.5),
-                        correct: `${abadVal} abad`,
-                        explanation: `1 alaf = 10 abad atau 1000 tahun.`
+                        id, topic: topicId, diff, aras: 'Understanding', mode: 'objektif',
+                        question: `How many centuries are there in ${alaf} millennia?`,
+                        options: [`${abadVal} centuries`, `${abadVal + 5} centuries`, `${abadVal * 2} centuries`, `${abadVal - 2} centuries`].sort(() => Math.random() - 0.5),
+                        correct: `${abadVal} centuries`,
+                        explanation: `One millennium is 10 centuries or 1,000 years.`
                     };
                 } else if (subType === 2) {
                     let tahunVal = ((index - 1) % 4) + 1;
                     let bulanVal = tahunVal * 12;
                     return {
-                        id, topic: topicId, diff, aras: 'Memahami', mode: 'objektif',
-                        question: `${tahunVal} tahun adalah sama dengan berapa bulan?`,
-                        options: [`${bulanVal} bulan`, `${bulanVal + 6} bulan`, `${bulanVal - 3} bulan`, `${bulanVal + 12} bulan`].sort(() => Math.random() - 0.5),
-                        correct: `${bulanVal} bulan`,
-                        explanation: `1 tahun = 12 bulan. Maka ${tahunVal} tahun × 12 = ${bulanVal} bulan.`
+                        id, topic: topicId, diff, aras: 'Understanding', mode: 'objektif',
+                        question: `How many months are there in ${tahunVal} years?`,
+                        options: [`${bulanVal} months`, `${bulanVal + 6} months`, `${bulanVal - 3} months`, `${bulanVal + 12} months`].sort(() => Math.random() - 0.5),
+                        correct: `${bulanVal} months`,
+                        explanation: `One year is 12 months. ${tahunVal} × 12 = ${bulanVal} months.`
                     };
                 } else if (subType === 3) {
                     let mingguVal = ((index - 1) % 4) + 2;
                     let hariVal = mingguVal * 7;
                     return {
-                        id, topic: topicId, diff, aras: 'Memahami', mode: 'objektif',
-                        question: `${mingguVal} minggu adalah sama dengan berapa hari?`,
-                        options: [`${hariVal} hari`, `${hariVal + 2} hari`, `${hariVal - 1} hari`, `${hariVal + 7} hari`].sort(() => Math.random() - 0.5),
-                        correct: `${hariVal} hari`,
-                        explanation: `1 minggu = 7 hari. Maka ${mingguVal} minggu × 7 = ${hariVal} hari.`
+                        id, topic: topicId, diff, aras: 'Understanding', mode: 'objektif',
+                        question: `How many days are there in ${mingguVal} weeks?`,
+                        options: [`${hariVal} days`, `${hariVal + 2} days`, `${hariVal - 1} days`, `${hariVal + 7} days`].sort(() => Math.random() - 0.5),
+                        correct: `${hariVal} days`,
+                        explanation: `One week is 7 days. ${mingguVal} × 7 = ${hariVal} days.`
                     };
                 } else {
                     return {
-                        id, topic: topicId, diff, aras: 'Mengaplikasi', mode: 'objektif',
-                        question: `Antara berikut, yang manakah anggaran masa yang paling munasabah untuk memasak sebiji kek di dalam ketuhar?`,
-                        options: [`45 minit`, `45 saat`, `45 jam`, `45 hari`].sort(() => Math.random() - 0.5),
-                        correct: `45 minit`,
-                        explanation: `Memasak kek di dalam ketuhar biasanya mengambil masa sekitar 45 minit, iaitu unit masa yang paling munasabah.`
+                        id, topic: topicId, diff, aras: 'Applying', mode: 'objektif',
+                        question: `Which is the most reasonable estimate for the time it takes to bake a cake?`,
+                        options: [`45 minutes`, `45 seconds`, `45 hours`, `45 days`].sort(() => Math.random() - 0.5),
+                        correct: `45 minutes`,
+                        explanation: `About 45 minutes is a reasonable estimate for baking a cake.`
                     };
                 }
             } else if (topicId === 4) {
                 let hours = (index % 5) + 1;
                 let minutes = hours * 60;
                 return {
-                    id, topic: topicId, diff, aras: 'Mengingat', mode: 'isikosong',
-                    question: `${hours} jam = _____ minit`,
+                    id, topic: topicId, diff, aras: 'Remembering', mode: 'isikosong',
+                    question: `${hours} hours = _____ minutes`,
                     options: [],
                     correct: `${minutes}`,
-                    explanation: `1 jam = 60 minit. ${hours} jam × 60 = ${minutes} minit.`
+                    explanation: `One hour is 60 minutes. ${hours} × 60 = ${minutes} minutes.`
                 };
             } else if (topicId === 5) {
                 let h1 = 1, m1 = 15, h2 = 2, m2 = (index * 5) % 55;
@@ -358,11 +365,11 @@
                 let finalM = totalM % 60;
                 let finalH = h1 + h2 + extraH;
                 return {
-                    id, topic: topicId, diff, aras: 'Memahami', mode: 'objektif',
-                    question: `Hitungkan: ${h1} jam ${m1} minit + ${h2} jam ${m2} minit = ?`,
-                    options: [`${finalH} jam ${finalM} minit`, `${finalH + 1} jam ${finalM} minit`, `${finalH} jam ${finalM + 10} minit`, `${finalH - 1} jam ${finalM} minit`],
-                    correct: `${finalH} jam ${finalM} minit`,
-                    explanation: `Hasil tambah jam dan minit memberikan ${finalH} jam ${finalM} minit.`
+                    id, topic: topicId, diff, aras: 'Understanding', mode: 'objektif',
+                    question: `Work out: ${h1} hours ${m1} minutes + ${h2} hours ${m2} minutes.`,
+                    options: [`${finalH} hours ${finalM} minutes`, `${finalH + 1} hours ${finalM} minutes`, `${finalH} hours ${finalM + 10} minutes`, `${finalH - 1} hours ${finalM} minutes`],
+                    correct: `${finalH} hours ${finalM} minutes`,
+                    explanation: `Add the hours and minutes and regroup if needed. The total is ${formatTimeStr(finalH, finalM)}.`
                 };
             } else if (topicId === 6) {
                 let h1, m1, h2, m2;
@@ -393,18 +400,18 @@
                 let diffMinTotal = (h1 * 60 + m1) - (h2 * 60 + m2);
                 let resH = Math.floor(diffMinTotal / 60);
                 let resM = diffMinTotal % 60;
-                let correctAns = resM > 0 ? `${resH} jam ${resM} minit` : `${resH} jam`;
+                let correctAns = resM > 0 ? `${resH} hours ${resM} minutes` : `${resH} hours`;
 
-                let wrong1 = `${resH + 1} jam ${resM} minit`;
-                let wrong2 = `${resH} jam ${resM > 15 ? resM - 15 : resM + 15} minit`;
-                let wrong3 = `${resH > 0 ? resH - 1 : 0} jam ${resM} minit`;
+                let wrong1 = `${resH + 1} hours ${resM} minutes`;
+                let wrong2 = `${resH} hours ${resM > 15 ? resM - 15 : resM + 15} minutes`;
+                let wrong3 = `${resH > 0 ? resH - 1 : 0} hours ${resM} minutes`;
 
                 return {
-                    id, topic: topicId, diff, aras: m1 < m2 ? 'Memahami' : 'Mengingat', mode: 'objektif',
-                    question: `Hitungkan: ${h1} jam ${m1} minit − ${h2} jam ${m2} minit = ?`,
+                    id, topic: topicId, diff, aras: m1 < m2 ? 'Understanding' : 'Remembering', mode: 'objektif',
+                    question: `Work out: ${h1} hours ${m1} minutes − ${h2} hours ${m2} minutes.`,
                     options: [correctAns, wrong1, wrong2, wrong3].sort(() => Math.random() - 0.5),
                     correct: correctAns,
-                    explanation: m1 < m2 ? `Oleh kerana minit ${m1} kurang daripada ${m2}, 1 jam dikumpul semula kepada 60 minit. Hasil tolakan ialah ${correctAns}.` : `Hasil tolak jam ${h1} jam ${m1} minit dengan ${h2} jam ${m2} minit ialah ${correctAns}.`
+                    explanation: m1 < m2 ? `Since ${m1} minutes is less than ${m2} minutes, exchange one hour for 60 minutes. The difference is ${correctAns}.` : `Subtract the hours and minutes separately to get ${correctAns}.`
                 };
             } else if (topicId === 7) {
                 // --- TOPIC 7: DARAB MASA ---
@@ -418,11 +425,11 @@
                     resH = Math.floor(totalMin / 60);
                     resM = totalMin % 60;
                     ansStr = formatTimeStr(resH, resM);
-                    qText = `Hitungkan hasil darab berikut: ${h} jam ${m} minit × ${multiplier} = ?`;
-                    expl = `Darabkan jam dan minit dengan ${multiplier}. Jumlahnya ialah ${ansStr}.`;
-                    wrong1 = `${resH + 1} jam ${resM} minit`;
-                    wrong2 = `${resH} jam ${resM > 10 ? resM - 10 : resM + 15} minit`;
-                    wrong3 = `${Math.max(0, resH - 1)} jam ${resM} minit`;
+                    qText = `Work out: ${h} hours ${m} minutes × ${multiplier}.`;
+                    expl = `Multiply the hours and minutes by ${multiplier} and regroup. The result is ${ansStr}.`;
+                    wrong1 = `${resH + 1} hours ${resM} minutes`;
+                    wrong2 = `${resH} hours ${resM > 10 ? resM - 10 : resM + 15} minutes`;
+                    wrong3 = `${resH > 0 ? resH - 1 : resH + 2} hours ${resM} minutes`;
                 } else if (diff === 'sederhana') {
                     let isSec = index % 2 === 0;
                     if (isSec) {
@@ -433,11 +440,11 @@
                         let resMin = Math.floor(totalSec / 60);
                         let resSec = totalSec % 60;
                         ansStr = formatTimeStr(resMin, resSec, true);
-                        qText = `Selesaikan operasi berikut: ${m} minit ${s} saat × ${multiplier} = ?`;
-                        expl = `Darabkan minit dan saat dengan ${multiplier} untuk mendapatkan ${ansStr}.`;
-                        wrong1 = `${resMin + 1} minit ${resSec} saat`;
-                        wrong2 = `${resMin} minit ${resSec > 15 ? resSec - 15 : resSec + 15} saat`;
-                        wrong3 = `${Math.max(0, resMin - 1)} minit ${resSec} saat`;
+                        qText = `Work out: ${m} minutes ${s} seconds × ${multiplier}.`;
+                        expl = `Multiply the minutes and seconds by ${multiplier} and regroup to get ${ansStr}.`;
+                        wrong1 = `${resMin + 1} minutes ${resSec} seconds`;
+                        wrong2 = `${resMin} minutes ${resSec > 15 ? resSec - 15 : resSec + 15} seconds`;
+                        wrong3 = `${resMin > 0 ? resMin - 1 : resMin + 2} minutes ${resSec} seconds`;
                     } else {
                         h = (index % 4) + 2;
                         m = ((index * 11) % 40) + 10;
@@ -446,14 +453,14 @@
                         resH = Math.floor(totalMin / 60);
                         resM = totalMin % 60;
                         ansStr = formatTimeStr(resH, resM);
-                        qText = `Darabkan unit masa berikut: ${h} jam ${m} minit × ${multiplier} = ?`;
-                        expl = `Darabkan ${h} jam ${m} minit dengan ${multiplier} untuk mendapatkan ${ansStr}.`;
-                        wrong1 = `${resH + 1} jam ${resM} minit`;
-                        wrong2 = `${resH} jam ${resM > 20 ? resM - 20 : resM + 20} minit`;
-                        wrong3 = `${Math.max(0, resH - 1)} jam ${resM} minit`;
+                        qText = `Multiply: ${h} hours ${m} minutes × ${multiplier}.`;
+                        expl = `Multiply the duration by ${multiplier} to get ${ansStr}.`;
+                        wrong1 = `${resH + 1} hours ${resM} minutes`;
+                        wrong2 = `${resH} hours ${resM > 20 ? resM - 20 : resM + 20} minutes`;
+                        wrong3 = `${resH > 0 ? resH - 1 : resH + 2} hours ${resM} minutes`;
                     }
                 } else {
-                    let activityName = ['Kursus latihan robotik', 'Projek seni lukis', 'Sesi latihan bola sepak', 'Kelas ulangkaji matematik', 'Perjalanan ekspres bas', 'Bengkel sains inovasi', 'Aktiviti senamrobik'][index % 7];
+                    let activityName = ['robotics', 'art', 'football training', 'maths revision', 'transport training', 'science', 'aerobics'][index % 7];
                     h = (index % 3) + 1;
                     m = ((index * 13) % 45) + 5;
                     multiplier = (index % 4) + 6;
@@ -461,15 +468,15 @@
                     resH = Math.floor(totalMin / 60);
                     resM = totalMin % 60;
                     ansStr = formatTimeStr(resH, resM);
-                    qText = `Setiap sesi ${activityName} mengambil masa ${h} jam ${m} minit. Berapakah jumlah masa yang diambil untuk ${multiplier} sesi ${activityName} tersebut?`;
-                    expl = `Darabkan masa satu sesi dengan ${multiplier}. Jumlah keseluruhan ialah ${ansStr}.`;
-                    wrong1 = `${resH + 1} jam ${resM} minit`;
-                    wrong2 = `${resH} jam ${resM > 15 ? resM - 15 : resM + 15} minit`;
-                    wrong3 = `${Math.max(0, resH - 1)} jam ${resM} minit`;
+                    qText = `Each ${activityName} session lasts ${h} hours ${m} minutes. How long do ${multiplier} sessions take in total?`;
+                    expl = `Multiply the time for one session by ${multiplier}. The total is ${ansStr}.`;
+                    wrong1 = `${resH + 1} hours ${resM} minutes`;
+                    wrong2 = `${resH} hours ${resM > 15 ? resM - 15 : resM + 15} minutes`;
+                    wrong3 = `${resH > 0 ? resH - 1 : resH + 2} hours ${resM} minutes`;
                 }
 
                 return {
-                    id, topic: topicId, diff, aras: diff === 'senang' ? 'Mengingat' : (diff === 'sederhana' ? 'Memahami' : 'Mengaplikasi'), mode: 'objektif',
+                    id, topic: topicId, diff, aras: diff === 'senang' ? 'Remembering' : (diff === 'sederhana' ? 'Understanding' : 'Applying'), mode: 'objektif',
                     question: qText,
                     options: [ansStr, wrong1, wrong2, wrong3].sort(() => Math.random() - 0.5),
                     correct: ansStr,
@@ -494,12 +501,12 @@
                     let origM = totalMInput % 60;
                     
                     ansStr = formatTimeStr(resH, resM);
-                    qText = `Selesaikan operasi bahagi unit masa berikut: ${formatTimeStr(origH, origM)} ÷ ${divisor} = ?`;
-                    expl = `Bahagikan ${formatTimeStr(origH, origM)} dengan ${divisor}. Hasilnya ialah ${ansStr}.`;
+                    qText = `Work out: ${formatTimeStr(origH, origM)} ÷ ${divisor}.`;
+                    expl = `Divide ${formatTimeStr(origH, origM)} by ${divisor} to get ${ansStr}.`;
                     
-                    wrong1 = `${resH + 1} jam ${resM} minit`;
-                    wrong2 = `${resH} jam ${resM > 10 ? resM - 10 : resM + 15} minit`;
-                    wrong3 = `${Math.max(0, resH - 1)} jam ${resM} minit`;
+                    wrong1 = `${resH + 1} hours ${resM} minutes`;
+                    wrong2 = `${resH} hours ${resM > 10 ? resM - 10 : resM + 15} minutes`;
+                    wrong3 = `${resH > 0 ? resH - 1 : resH + 2} hours ${resM} minutes`;
                 } else if (diff === 'sederhana') {
                     // Sederhana: Minutes and seconds division with remainder conversion
                     let minInput = (index % 4) + 2; // 2 to 5 minutes
@@ -515,15 +522,15 @@
                     let origSec = totalSec % 60;
                     
                     ansStr = formatTimeStr(resMin, resSec, true);
-                    qText = `Selesaikan operasi bahagi masa: ${formatTimeStr(origMin, origSec, true)} ÷ ${divisor} = ?`;
-                    expl = `Bahagikan ${formatTimeStr(origMin, origSec, true)} dengan ${divisor} untuk mendapat ${ansStr}.`;
+                    qText = `Work out: ${formatTimeStr(origMin, origSec, true)} ÷ ${divisor}.`;
+                    expl = `Divide ${formatTimeStr(origMin, origSec, true)} by ${divisor} to get ${ansStr}.`;
                     
-                    wrong1 = `${resMin + 1} minit ${resSec} saat`;
-                    wrong2 = `${resMin} minit ${resSec > 15 ? resSec - 15 : resSec + 15} saat`;
-                    wrong3 = `${Math.max(0, resMin - 1)} minit ${resSec} saat`;
+                    wrong1 = `${resMin + 1} minutes ${resSec} seconds`;
+                    wrong2 = `${resMin} minutes ${resSec > 15 ? resSec - 15 : resSec + 15} seconds`;
+                    wrong3 = `${resMin > 0 ? resMin - 1 : resMin + 2} minutes ${resSec} seconds`;
                 } else {
                     // Susah: Word problems / Situasi harian division
-                    let scenario = ['program motivasi', 'latihan projek sains', 'aktiviti sukaneka', 'seminar kemahiran', 'sesi ulangkaji berkumpulan', 'bengkel reka cipta'][index % 6];
+                    let scenario = ['mentoring', 'science project', 'sports day', 'skills training', 'group revision', 'design workshop'][index % 6];
                     let totalH = (index % 3) + 2; // 2, 3, 4 hours
                     let totalM = ((index * 11) % 40) + 10;
                     divisor = (index % 3) + 2; // 2, 3, 4 equal sessions
@@ -537,16 +544,16 @@
                     let origM = totalMins % 60;
                     
                     ansStr = formatTimeStr(resH, resM);
-                    qText = `Jumlah masa bagi ${divisor} sesi ${scenario} yang sama panjang ialah ${formatTimeStr(origH, origM)}. Berapakah masa yang diambil untuk satu sesi ${scenario} tersebut?`;
-                    expl = `Bahagikan jumlah masa ${formatTimeStr(origH, origM)} dengan bilangan sesi (${divisor}). Masa untuk satu sesi ialah ${ansStr}.`;
+                    qText = `A total of ${formatTimeStr(origH, origM)} is shared equally across ${divisor} ${scenario} sessions. How long is each session?`;
+                    expl = `Divide the total time by ${divisor}. Each session lasts ${ansStr}.`;
                     
-                    wrong1 = `${resH + 1} jam ${resM} minit`;
-                    wrong2 = `${resH} jam ${resM > 15 ? resM - 15 : resM + 15} minit`;
-                    wrong3 = `${Math.max(0, resH - 1)} jam ${resM} minit`;
+                    wrong1 = `${resH + 1} hours ${resM} minutes`;
+                    wrong2 = `${resH} hours ${resM > 15 ? resM - 15 : resM + 15} minutes`;
+                    wrong3 = `${resH > 0 ? resH - 1 : resH + 2} hours ${resM} minutes`;
                 }
 
                 return {
-                    id, topic: topicId, diff, aras: diff === 'senang' ? 'Mengingat' : (diff === 'sederhana' ? 'Memahami' : 'Mengaplikasi'), mode: 'objektif',
+                    id, topic: topicId, diff, aras: diff === 'senang' ? 'Remembering' : (diff === 'sederhana' ? 'Understanding' : 'Applying'), mode: 'objektif',
                     question: qText,
                     options: [ansStr, wrong1, wrong2, wrong3].sort(() => Math.random() - 0.5),
                     correct: ansStr,
@@ -564,13 +571,12 @@
                     let totalM = startM + durationM;
                     let endH = startH + Math.floor(totalM / 60);
                     let endM = totalM % 60;
-                    let endStr = `${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')}`;
-                    qText = `Aktiviti ulang kaji kelas bermula pada pukul ${String(startH).padStart(2,'0')}:${String(startM).padStart(2,'0')} pagi dan mengambil masa ${durationM} minit. Pukul berapakah aktiviti itu tamat?`;
-                    correctAns = `${endStr} pagi`;
-                    expl = `Masa mula ${startH}:${String(startM).padStart(2,'0')} ditambah dengan tempoh ${durationM} minit menghasilkan waktu tamat ${endStr} pagi.`;
-                    wrong1 = `${String(endH + 1).padStart(2,'0')}:${String(endM).padStart(2,'0')} pagi`;
-                    wrong2 = `${String(endH).padStart(2,'0')}:${String((endM+15)%60).padStart(2,'0')} pagi`;
-                    wrong3 = `${String(Math.max(1, endH-1)).padStart(2,'0')}:${String(endM).padStart(2,'0')} pagi`;
+                    correctAns = formatClock12(endH, endM);
+                    qText = `A class revision session starts at ${formatClock12(startH, startM)} and lasts ${durationM} minutes. What time does it finish?`;
+                    expl = `Add ${durationM} minutes to the start time to get ${correctAns}.`;
+                    wrong1 = formatClock12(endH + 1, endM);
+                    wrong2 = formatClock12(endH, (endM + 15) % 60);
+                    wrong3 = formatClock12(endH - 1, endM);
                 } else if (subType === 1) {
                     let hours = 1 + (index % 3);
                     let mins = 15 + ((index * 5) % 35);
@@ -579,11 +585,11 @@
                     let resH = Math.floor(totalMins / 60);
                     let resM = totalMins % 60;
                     correctAns = formatTimeStr(resH, resM);
-                    qText = `Setiap sesi latihan bola sepak mengambil masa ${formatTimeStr(hours, mins)}. Berapakah jumlah masa yang diambil untuk ${multiplier} sesi latihan tersebut?`;
-                    expl = `Darabkan masa satu sesi (${formatTimeStr(hours, mins)}) dengan ${multiplier}. Jumlahnya ialah ${correctAns}.`;
+                    qText = `Each football training session lasts ${formatTimeStr(hours, mins)}. How long do ${multiplier} sessions take altogether?`;
+                    expl = `Multiply the time for one session by ${multiplier}. The total is ${correctAns}.`;
                     wrong1 = formatTimeStr(resH + 1, resM);
                     wrong2 = formatTimeStr(resH, resM > 15 ? resM - 15 : resM + 15);
-                    wrong3 = formatTimeStr(Math.max(0, resH - 1), resM);
+                    wrong3 = formatTimeStr(resH > 0 ? resH - 1 : resH + 2, resM);
                 } else if (subType === 2) {
                     let totalH = 2 + (index % 2);
                     let totalM = 30 + ((index * 10) % 25);
@@ -596,19 +602,19 @@
                     let origH = Math.floor(totalMins / 60);
                     let origM = totalMins % 60;
                     correctAns = formatTimeStr(resH, resM);
-                    qText = `Jumlah masa bagi ${divisor} sesi bengkel reka cipta yang sama panjang ialah ${formatTimeStr(origH, origM)}. Berapakah masa yang diambil untuk satu sesi bengkel tersebut?`;
-                    expl = `Bahagikan jumlah masa ${formatTimeStr(origH, origM)} dengan ${divisor}. Masa untuk satu sesi ialah ${correctAns}.`;
+                    qText = `A total of ${formatTimeStr(origH, origM)} is shared equally across ${divisor} design workshops. How long is each workshop?`;
+                    expl = `Divide the total duration by ${divisor}. Each workshop lasts ${correctAns}.`;
                     wrong1 = formatTimeStr(resH + 1, resM);
                     wrong2 = formatTimeStr(resH, resM > 10 ? resM - 10 : resM + 15);
-                    wrong3 = formatTimeStr(Math.max(0, resH - 1), resM);
+                    wrong3 = formatTimeStr(resH > 0 ? resH - 1 : resH + 2, resM);
                 } else if (subType === 3) {
                     let price1 = 30 + (index * 5);
                     let price2 = 15 + (index * 2);
                     let totalRM = price1 + price2;
                     let duration = 30 + (index * 10);
-                    qText = `Ibu membeli sebuah buku rujukan matematik berharga RM${price1}.00 dan sebuah alat tulis berharga RM${price2}.00. Urusan pembelian di kedai mengambil masa ${duration} minit. Berapakah jumlah wang yang dibayar oleh ibu?`;
+                    qText = `Mum buys a maths reference book for RM${price1}.00 and stationery for RM${price2}.00. Her visit to the shop takes ${duration} minutes. How much does she spend altogether?`;
                     correctAns = `RM${totalRM}.00`;
-                    expl = `Jumlah wang dikira dengan menambah harga buku (RM${price1}.00) dan alat tulis (RM${price2}.00), iaitu RM${totalRM}.00 (tempoh masa ${duration} minit adalah maklumat tambahan).`;
+                    expl = `Add RM${price1}.00 and RM${price2}.00 to get RM${totalRM}.00.`;
                     wrong1 = `RM${totalRM + 10}.00`;
                     wrong2 = `RM${Math.max(10, totalRM - 10)}.00`;
                     wrong3 = `RM${totalRM + 20}.00`;
@@ -622,15 +628,15 @@
                     let finalM = totalM % 60;
                     let finalH = h1 + h2 + extraH;
                     correctAns = formatTimeStr(finalH, finalM);
-                    qText = `Amirul meluangkan masa ${formatTimeStr(h1, m1)} untuk mengulang kaji pelajaran dan ${formatTimeStr(h2, m2)} untuk menyiapkan kerja sekolah. Berapakah jumlah masa kesemua aktiviti tersebut?`;
-                    expl = `Tambahkan masa mengulang kaji (${formatTimeStr(h1, m1)}) dengan masa kerja sekolah (${formatTimeStr(h2, m2)}) untuk mendapat ${correctAns}.`;
+                    qText = `Amirul spends ${formatTimeStr(h1, m1)} revising and ${formatTimeStr(h2, m2)} doing homework. How much time does he spend altogether?`;
+                    expl = `Add the time spent revising and doing homework to get ${correctAns}.`;
                     wrong1 = formatTimeStr(finalH + 1, finalM);
                     wrong2 = formatTimeStr(finalH, finalM > 15 ? finalM - 15 : finalM + 15);
-                    wrong3 = formatTimeStr(Math.max(0, finalH - 1), finalM);
+                    wrong3 = formatTimeStr(finalH > 0 ? finalH - 1 : finalH + 2, finalM);
                 }
 
                 return {
-                    id, topic: topicId, diff, aras: 'Mengaplikasi', mode: 'objektif',
+                    id, topic: topicId, diff, aras: 'Applying', mode: 'objektif',
                     question: qText,
                     options: [correctAns, wrong1, wrong2, wrong3].sort(() => Math.random() - 0.5),
                     correct: correctAns,
@@ -691,11 +697,11 @@
                     ⏰
                 </div>
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-1">MATH KIDS</h1>
-                <p class="text-indigo-600 font-bold mb-6 text-sm sm:text-base">EDU KIDZ TAHUN 4 • MASA DAN WAKTU</p>
+                <p class="text-indigo-600 font-bold mb-6 text-sm sm:text-base">EDU KIDZ YEAR 4 • TIME</p>
                 
                 <div class="space-y-4 text-left">
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 mb-1 uppercase tracking-wider">Pilih Avatar</label>
+                        <label class="block text-xs font-bold text-slate-600 mb-1 uppercase tracking-wider">Choose an Avatar</label>
                         <div id="avatar-selector" class="flex justify-center gap-2 overflow-x-auto py-2">
                             ${AVATARS.map((av, idx) => `
                                 <button onclick="selectAvatar('${av}')" class="avatar-opt w-10 h-10 rounded-xl bg-slate-100 hover:bg-indigo-100 flex items-center justify-center text-xl transition border-2 ${idx === 0 ? 'border-indigo-500 bg-indigo-50 scale-110' : 'border-transparent'}">
@@ -706,12 +712,12 @@
                     </div>
                     
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 mb-1 uppercase tracking-wider">Nama Pengguna Murid</label>
-                        <input type="text" id="username-input" placeholder="Contoh: Amirul Hakim" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-medium text-sm">
+                        <label class="block text-xs font-bold text-slate-600 mb-1 uppercase tracking-wider">Pupil Username</label>
+                        <input type="text" id="username-input" placeholder="e.g. Amirul Hakim" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 font-medium text-sm">
                     </div>
 
                     <button onclick="handleLogin()" class="bouncy-btn w-full bg-gradient-to-r from-indigo-600 to-violet-600 text-white py-3.5 rounded-2xl font-bold shadow-lg shadow-indigo-500/30 text-base mt-2">
-                        <i class="fa-solid fa-play mr-2"></i> Masuk & Mula Bermain
+                        <i class="fa-solid fa-play mr-2"></i> Log In and Play
                     </button>
                 </div>
             </div>`;
@@ -733,7 +739,7 @@
             const nameInput = document.getElementById('username-input');
             const name = nameInput ? nameInput.value.trim() : '';
             if (!name) {
-                showModalMessage('Sila masukkan nama anda terlebih dahulu!');
+                showModalMessage('Enter your name to continue.');
                 return;
             }
             let existing = appState.profiles.find(p => p.name.toLowerCase() === name.toLowerCase());
@@ -767,25 +773,25 @@
             return `
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-4xl mx-auto">
                 <div class="text-center mb-8">
-                    <span class="bg-indigo-100 text-indigo-700 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wide">KPM Kurikulum Standard Sekolah Rendah</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wide">Malaysian Primary School Standard Curriculum (KSSR)</span>
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-800 mt-2">MATH KIDS – EDU KIDZ</h1>
-                    <p class="text-slate-500 font-semibold text-sm sm:text-base">Topik Khas: Matematik Tahun 4 • Masa dan Waktu</p>
+                    <p class="text-slate-500 font-semibold text-sm sm:text-base">Year 4 Mathematics • Time</p>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
                     <button onclick="setScreen('topics')" class="bouncy-btn bg-gradient-to-br from-indigo-500 to-blue-600 text-white p-5 rounded-2xl text-left shadow-lg shadow-blue-500/25 flex flex-col justify-between">
                         <i class="fa-solid fa-play text-2xl mb-3"></i>
                         <div>
-                            <div class="font-bold text-lg">Mula Bermain</div>
-                            <div class="text-xs text-blue-100">Pilih topik & jawab soalan</div>
+                            <div class="font-bold text-lg">Play Now</div>
+                            <div class="text-xs text-blue-100">Choose a topic and answer questions</div>
                         </div>
                     </button>
 
                     <button onclick="setScreen('topics')" class="bouncy-btn bg-gradient-to-br from-violet-500 to-purple-600 text-white p-5 rounded-2xl text-left shadow-lg shadow-purple-500/25 flex flex-col justify-between">
                         <i class="fa-solid fa-book-open text-2xl mb-3"></i>
                         <div>
-                            <div class="font-bold text-lg">Pilih Topik</div>
-                            <div class="text-xs text-purple-100">9 Modul Pembelajaran</div>
+                            <div class="font-bold text-lg">Choose a Topic</div>
+                            <div class="text-xs text-purple-100">9 Topics</div>
                         </div>
                     </button>
 
@@ -793,31 +799,31 @@
                         <i class="fa-solid fa-trophy text-2xl mb-3"></i>
                         <div>
                             <div class="font-bold text-lg">Leaderboard</div>
-                            <div class="text-xs text-amber-100">Carta skor tertinggi</div>
+                            <div class="text-xs text-amber-100">High scores</div>
                         </div>
                     </button>
 
                     <button onclick="setScreen('progress')" class="bouncy-btn bg-gradient-to-br from-emerald-500 to-teal-600 text-white p-5 rounded-2xl text-left shadow-lg shadow-emerald-500/25 flex flex-col justify-between">
                         <i class="fa-solid fa-chart-line text-2xl mb-3"></i>
                         <div>
-                            <div class="font-bold text-lg">Progress Saya</div>
-                            <div class="text-xs text-emerald-100">Pencapaian & statistik</div>
+                            <div class="font-bold text-lg">My Progress</div>
+                            <div class="text-xs text-emerald-100">Achievements and statistics</div>
                         </div>
                     </button>
 
                     <button onclick="setScreen('account')" class="bouncy-btn bg-gradient-to-br from-pink-500 to-rose-600 text-white p-5 rounded-2xl text-left shadow-lg shadow-pink-500/25 flex flex-col justify-between">
                         <i class="fa-solid fa-user-gear text-2xl mb-3"></i>
                         <div>
-                            <div class="font-bold text-lg">Akaun</div>
-                            <div class="text-xs text-pink-100">Profil & tukar pemain</div>
+                            <div class="font-bold text-lg">Account</div>
+                            <div class="text-xs text-pink-100">View or switch player profiles</div>
                         </div>
                     </button>
 
                     <button onclick="setScreen('settings')" class="bouncy-btn bg-gradient-to-br from-slate-600 to-slate-800 text-white p-5 rounded-2xl text-left shadow-lg shadow-slate-600/25 flex flex-col justify-between">
                         <i class="fa-solid fa-gear text-2xl mb-3"></i>
                         <div>
-                            <div class="font-bold text-lg">Tetapan</div>
-                            <div class="text-xs text-slate-300">Audio & maklumat game</div>
+                            <div class="font-bold text-lg">Settings</div>
+                            <div class="text-xs text-slate-300">Audio and game information</div>
                         </div>
                     </button>
                 </div>
@@ -830,9 +836,9 @@
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-4xl mx-auto">
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="setScreen('home')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Back
                     </button>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Pilih Topik Pembelajaran</h2>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Choose a Topic</h2>
                     <div class="w-20"></div>
                 </div>
 
@@ -841,16 +847,16 @@
                         const isCompleted = appState.currentUser.completedTopics.includes(t.id);
                         return `
                         <div onclick="selectTopic(${t.id})" class="bouncy-btn bg-white border-2 border-slate-100 hover:border-indigo-500 p-5 rounded-2xl cursor-pointer flex flex-col justify-between shadow-sm relative overflow-hidden group">
-                            ${isCompleted ? '<span class="absolute top-3 right-3 bg-emerald-100 text-emerald-700 text-xs px-2.5 py-1 rounded-full font-bold"><i class="fa-solid fa-check mr-1"></i> Selesai</span>' : ''}
+                            ${isCompleted ? '<span class="absolute top-3 right-3 bg-emerald-100 text-emerald-700 text-xs px-2.5 py-1 rounded-full font-bold"><i class="fa-solid fa-check mr-1"></i> Completed</span>' : ''}
                             <div>
                                 <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
                                     <i class="${t.icon}"></i>
                                 </div>
-                                <h3 class="font-bold text-slate-800 text-base mb-1">Topik ${t.id}:${t.title}</h3>
+                                <h3 class="font-bold text-slate-800 text-base mb-1">Topic ${t.id}:${t.title}</h3>
                                 <p class="text-slate-500 text-xs">${t.desc}</p>
                             </div>
                             <div class="mt-4 text-xs font-bold text-indigo-600 flex items-center">
-                                Pilih Topik <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                                Choose a Topic <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
                             </div>
                         </div>`;
                     }).join('')}
@@ -866,20 +872,20 @@
         // --- Game Mode & Difficulty ---
         function renderGameModeScreen() {
             const modes = [
-                { id: 'objektif', title: '🎯 Objektif', desc: 'Pilih jawapan betul daripada 4 pilihan jawapan.' },
-                { id: 'padanan', title: '🧩 Padanan', desc: 'Padankan soalan dengan pasangan jawapan yang tepat.' },
-                { id: 'dragdrop', title: '🖱 Seret & Lepas (Drag & Drop)', desc: 'Seret objek atau nilai ke tempat ruang yang betul.' },
-                { id: 'isikosong', title: '✏ Isi Tempat Kosong', desc: 'Taip jawapan angka atau nilai unit masa yang tepat.' },
-                { id: 'campuran', title: '🔀 Campuran Pelbagai', desc: 'Gabungan pelbagai gaya soalan interaktif yang menyeronokkan.' }
+                { id: 'objektif', title: '🎯 Multiple Choice', desc: 'Choose the correct answer from four options.' },
+                { id: 'padanan', title: '🧩 Matching', desc: 'Match the question to the correct answer.' },
+                { id: 'dragdrop', title: '🖱 Drag and Drop', desc: 'Drag an answer to the answer box or select it.' },
+                { id: 'isikosong', title: '✏ Fill in the Blank', desc: 'Type your answer using the requested format.' },
+                { id: 'campuran', title: '🔀 Mixed Modes', desc: 'Play a mix of question formats.' }
             ];
 
             return `
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-3xl mx-auto">
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="setScreen('topics')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Back
                     </button>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Pilih Jenis Permainan</h2>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Choose a Game Mode</h2>
                     <div class="w-20"></div>
                 </div>
 
@@ -891,7 +897,7 @@
                                 <p class="text-slate-500 text-xs">${m.desc}</p>
                             </div>
                             <div class="mt-4 text-xs font-bold text-violet-600 flex items-center">
-                                Pilih Mod Ini <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                                Choose This Mode <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
                             </div>
                         </div>
                     `).join('')}
@@ -906,18 +912,18 @@
 
         function renderDifficultyScreen() {
             const difficulties = [
-                { id: 'senang', title: '🟢 Senang', aras: 'Aras: Mengingat', desc: 'Soalan asas, nombor mudah & banyak bantuan visual.' },
-                { id: 'sederhana', title: '🟡 Sederhana', aras: 'Aras: Memahami', desc: 'Mentafsir maklumat, gabungan dua langkah mudah.' },
-                { id: 'susah', title: '🔴 Susah', aras: 'Aras: Mengaplikasi', desc: 'Soalan berayat kompleks & situasi kehidupan harian.' }
+                { id: 'senang', title: '🟢 Easy', aras: 'Level: Remembering', desc: 'Practise with basic numbers and one-step questions.' },
+                { id: 'sederhana', title: '🟡 Medium', aras: 'Level: Understanding', desc: 'Interpret information and work through two steps.' },
+                { id: 'susah', title: '🔴 Hard', aras: 'Level: Applying', desc: 'Solve everyday problems involving several steps.' }
             ];
 
             return `
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-3xl mx-auto">
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="setScreen('gamemode')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Back
                     </button>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Pilih Tahap Kesukaran</h2>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Choose a Difficulty Level</h2>
                     <div class="w-20"></div>
                 </div>
 
@@ -929,7 +935,7 @@
                                 <h3 class="font-bold text-slate-800 text-xl mt-3 mb-2">${d.title}</h3>
                                 <p class="text-slate-500 text-xs">${d.desc}</p>
                             </div>
-                            <button class="mt-6 w-full bg-indigo-50 text-indigo-600 py-2 rounded-xl text-xs font-bold">Pilih Tahap</button>
+                            <button class="mt-6 w-full bg-indigo-50 text-indigo-600 py-2 rounded-xl text-xs font-bold">Choose a Level</button>
                         </div>
                     `).join('')}
                 </div>
@@ -943,18 +949,18 @@
 
         function renderTimerScreen() {
             const timers = [
-                { seconds: 30, title: '⏱ 30 Saat', desc: 'Cabaran kepantasan menjawab setiap soalan.' },
-                { seconds: 60, title: '⏱ 1 Minit', desc: 'Masa selesa untuk berfikir dan mengira.' },
-                { seconds: 0, title: '♾ Tiada Had Masa', desc: 'Fokus penuh tanpa tekanan masa.' }
+                { seconds: 30, title: '⏱ 30 Seconds', desc: 'Answer each question within 30 seconds.' },
+                { seconds: 60, title: '⏱ 1 Minute', desc: 'Take up to one minute per question.' },
+                { seconds: 0, title: '♾ No Time Limit', desc: 'Practise at your own pace.' }
             ];
 
             return `
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-3xl mx-auto text-center">
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="setScreen('difficulty')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Back
                     </button>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Pilih Masa Menjawab</h2>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Choose a Time Limit</h2>
                     <div class="w-20"></div>
                 </div>
 
@@ -965,7 +971,7 @@
                                 <h3 class="font-bold text-slate-800 text-lg mb-2">${t.title}</h3>
                                 <p class="text-slate-500 text-xs">${t.desc}</p>
                             </div>
-                            <button class="mt-6 w-full bg-emerald-50 text-emerald-600 py-2.5 rounded-xl text-xs font-bold">Mula Permainan 🚀</button>
+                            <button class="mt-6 w-full bg-emerald-50 text-emerald-600 py-2.5 rounded-xl text-xs font-bold">Start Quiz 🚀</button>
                         </div>
                     `).join('')}
                 </div>
@@ -1018,20 +1024,20 @@
                 <div class="flex flex-wrap items-center justify-between border-b border-slate-100 pb-4 mb-6 gap-2">
                     <div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">${topicInfo.title}</span>
-                        <div class="text-xs text-slate-400 font-semibold">Tahap: <span class="capitalize text-slate-700">${appState.selectedDifficulty}</span> • Aras: ${q.aras}</div>
+                        <div class="text-xs text-slate-400 font-semibold">Difficulty: <span class="capitalize text-slate-700">${difficultyLabels[appState.selectedDifficulty]}</span> • Level: ${q.aras}</div>
                     </div>
                     <div class="flex items-center space-x-3">
                         <div id="game-timer-display" class="bg-rose-50 text-rose-600 px-3 py-1.5 rounded-xl font-bold text-xs ${appState.selectedTimer > 0 ? '' : 'hidden'}">
                             <i class="fa-solid fa-stopwatch mr-1"></i> <span id="timer-val">${appState.timeLeft}</span>s
                         </div>
                         <div class="bg-amber-100 text-amber-800 px-3 py-1.5 rounded-xl font-bold text-xs">
-                            Markah: <span id="live-session-score">${appState.sessionScore}</span> / 100
+                            Marks: <span id="live-session-score">${appState.sessionScore}</span> / 100
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-6">
-                    <div class="text-xs font-bold text-slate-400 mb-1">SOALAN ${appState.currentQuestionIndex + 1} / ${appState.currentQuestions.length} (ID: ${q.id})</div>
+                    <div class="text-xs font-bold text-slate-400 mb-1">QUESTION ${appState.currentQuestionIndex + 1} / ${appState.currentQuestions.length} (ID: ${q.id})</div>
                     <h3 class="text-lg sm:text-xl font-extrabold text-slate-800 leading-snug">${q.question}</h3>
                 </div>
 
@@ -1041,10 +1047,10 @@
 
                 <div class="flex justify-between items-center pt-4 border-t border-slate-100">
                     <button onclick="goToHome()" class="text-slate-400 hover:text-slate-600 text-xs font-bold">
-                        <i class="fa-solid fa-house mr-1"></i> Utama
+                        <i class="fa-solid fa-house mr-1"></i> Home
                     </button>
                     <button id="submit-ans-btn" onclick="checkAnswer()" class="bouncy-btn bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md shadow-indigo-500/25">
-                        Hantar Jawapan <i class="fa-solid fa-arrow-right ml-2"></i>
+                        Submit Answer <i class="fa-solid fa-arrow-right ml-2"></i>
                     </button>
                 </div>
             </div>`;
@@ -1054,14 +1060,18 @@
             if (appState.selectedGameMode === 'isikosong' || q.mode === 'isikosong') {
                 return `
                 <div class="space-y-4">
-                    <input type="text" id="user-input-answer" placeholder="Taip jawapan anda di sini..." class="w-full px-5 py-4 rounded-2xl border-2 border-slate-200 focus:border-indigo-500 focus:outline-none font-bold text-lg text-slate-700">
-                    <p class="text-xs text-slate-400"><i class="fa-solid fa-circle-info mr-1"></i> Sila taip mengikut format jawapan yang diminta.</p>
+                    <input type="text" id="user-input-answer" placeholder="Type your answer here…" class="w-full px-5 py-4 rounded-2xl border-2 border-slate-200 focus:border-indigo-500 focus:outline-none font-bold text-lg text-slate-700">
+                    <p class="text-xs text-slate-400"><i class="fa-solid fa-circle-info mr-1"></i> Use the answer format shown in the question.</p>
                 </div>`;
             } else {
+                const mode = appState.selectedGameMode === 'campuran' ? q.mode : appState.selectedGameMode;
+                const drag = mode === 'dragdrop';
                 return `
+                ${drag ? '<div ondragover="event.preventDefault()" ondrop="dropTimeAnswer(event)" class="mb-3 rounded-xl border-2 border-dashed border-indigo-300 bg-indigo-50 p-3 text-center text-sm font-semibold" id="time-drop-zone">Drag an answer here or select it below</div>' : ''}
+                ${mode === 'padanan' ? '<p class="mb-3 text-sm font-semibold">Match the question to the correct answer.</p>' : ''}
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="options-container">
                     ${q.options.map((opt, idx) => `
-                        <button onclick="selectOption('${opt.replace(/'/g, "\\'")}')" class="option-btn text-left p-4 rounded-2xl border-2 border-slate-100 hover:border-indigo-500 hover:bg-indigo-50/50 font-semibold text-slate-700 transition flex items-center justify-between group">
+                        <button ${drag ? `draggable="true" ondragstart="event.dataTransfer.setData('text/plain', this.dataset.value)"` : ''} data-value="${opt}" onclick="selectOption(this.dataset.value)" class="option-btn text-left p-4 rounded-2xl border-2 border-slate-100 hover:border-indigo-500 hover:bg-indigo-50/50 font-semibold text-slate-700 transition flex items-center justify-between group">
                             <span><span class="inline-block w-7 h-7 rounded-xl bg-slate-100 text-slate-600 font-bold text-center leading-7 mr-3 group-hover:bg-indigo-600 group-hover:text-white transition">${String.fromCharCode(65 + idx)}</span>${opt}</span>
                             <div class="w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center"></div>
                         </button>
@@ -1071,14 +1081,23 @@
         }
 
         let selectedUserChoice = null;
+        function dropTimeAnswer(event) {
+            event.preventDefault();
+            const answer = event.dataTransfer.getData('text/plain');
+            const question = appState.currentQuestions[appState.currentQuestionIndex];
+            if (question.options.includes(answer)) selectOption(answer);
+        }
+
         function selectOption(opt) {
             selectedUserChoice = opt;
             document.querySelectorAll('.option-btn').forEach(btn => {
                 btn.classList.remove('border-indigo-600', 'bg-indigo-50');
-                if (btn.innerText.includes(opt)) {
+                if (btn.dataset.value === opt) {
                     btn.classList.add('border-indigo-600', 'bg-indigo-50');
                 }
             });
+            const dropZone = document.getElementById('time-drop-zone');
+            if (dropZone) dropZone.textContent = opt;
             playSound('click');
         }
 
@@ -1099,15 +1118,16 @@
         }
 
         function handleTimeOut() {
+            if (document.getElementById('feedback-modal')) return;
             playSound('wrong');
             appState.sessionWrong++;
             const q = appState.currentQuestions[appState.currentQuestionIndex];
             markQuestionAsAnswered(q.id);
-            showFeedbackModal(false, "Masa tamat!", q.correct, q.explanation);
+            showFeedbackModal(false, "Time’s Up!", q.correct, q.explanation);
         }
 
         function checkAnswer() {
-            if (appState.timerInterval) clearInterval(appState.timerInterval);
+            if (document.getElementById('feedback-modal')) return;
             const q = appState.currentQuestions[appState.currentQuestionIndex];
             let userAns = null;
 
@@ -1119,23 +1139,31 @@
             }
 
             if (!userAns) {
-                showModalMessage('Sila pilih atau masukkan jawapan terlebih dahulu!');
-                setupGameHandlers();
+                showModalMessage('Choose or enter an answer first.');
                 return;
             }
+            if (appState.timerInterval) clearInterval(appState.timerInterval);
 
-            const isCorrect = userAns.toLowerCase() === q.correct.toLowerCase();
+            const normalise = value => {
+                const text = value.toLowerCase().trim().replace(/\s+/g, ' ');
+                if (/^\d{2}:\d{2}$/.test(q.correct)) {
+                    return text.replace(/^(?:jam|hours)\s+/, '').replace(/:/, '');
+                }
+                if (/^\d+$/.test(q.correct)) return text.replace(/\s+minutes?$/, '');
+                return text;
+            };
+            const isCorrect = normalise(userAns) === normalise(q.correct);
             markQuestionAsAnswered(q.id);
 
             if (isCorrect) {
                 playSound('correct');
                 appState.sessionCorrect++;
                 appState.sessionScore += 5;
-                showFeedbackModal(true, "🎉 BETUL!", q.correct, q.explanation);
+                showFeedbackModal(true, "Correct!", q.correct, q.explanation);
             } else {
                 playSound('wrong');
                 appState.sessionWrong++;
-                showFeedbackModal(false, "❌ CUBA LAGI!", q.correct, q.explanation);
+                showFeedbackModal(false, "Incorrect", q.correct, q.explanation);
             }
         }
 
@@ -1161,11 +1189,11 @@
                         ${isCorrect ? '🎉' : '❌'}
                     </div>
                     <h3 class="text-2xl font-extrabold ${isCorrect ? 'text-emerald-600' : 'text-rose-600'} mb-2">${title}</h3>
-                    ${!isCorrect ? `<p class="text-slate-600 text-sm font-semibold mb-1">Jawapan sebenar: <span class="text-indigo-600 font-bold">${correctAns}</span></p>` : ''}
+                    ${!isCorrect ? `<p class="text-slate-600 text-sm font-semibold mb-1">Correct answer: <span class="text-indigo-600 font-bold">${correctAns}</span></p>` : ''}
                     <p class="text-slate-500 text-xs mb-6 bg-slate-50 p-3 rounded-xl border border-slate-100">${explanation}</p>
                     
                     <button onclick="nextQuestion()" class="bouncy-btn w-full bg-indigo-600 text-white py-3 rounded-2xl font-bold text-sm shadow-lg shadow-indigo-500/25">
-                        Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i>
+                        Next Question <i class="fa-solid fa-arrow-right ml-2"></i>
                     </button>
                 </div>
             </div>`;
@@ -1211,34 +1239,34 @@
                 <div class="w-20 h-20 bg-gradient-to-tr from-amber-400 to-orange-500 rounded-3xl mx-auto flex items-center justify-center text-4xl shadow-lg mb-6 text-white">
                     🏆
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-1">TAHNIAH!</h2>
-                <p class="text-indigo-600 font-bold mb-6 text-sm">Sesi Pembelajaran Selesai (Anti-Repeated)</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-1">WELL DONE!</h2>
+                <p class="text-indigo-600 font-bold mb-6 text-sm">Quiz Complete</p>
 
                 <div class="bg-slate-50 p-4 rounded-2xl space-y-3 mb-6 text-left border border-slate-100">
                     <div class="flex justify-between font-semibold text-sm">
-                        <span class="text-slate-500">Jumlah Markah:</span>
+                        <span class="text-slate-500">Total Marks:</span>
                         <span class="text-indigo-600 font-extrabold">${appState.sessionScore} / 100</span>
                     </div>
                     <div class="flex justify-between font-semibold text-sm">
-                        <span class="text-slate-500">Betul:</span>
+                        <span class="text-slate-500">Correct:</span>
                         <span class="text-emerald-600 font-extrabold">${appState.sessionCorrect} / 20</span>
                     </div>
                     <div class="flex justify-between font-semibold text-sm">
-                        <span class="text-slate-500">Salah:</span>
+                        <span class="text-slate-500">Incorrect:</span>
                         <span class="text-rose-600 font-extrabold">${appState.sessionWrong} / 20</span>
                     </div>
                     <div class="flex justify-between font-semibold text-sm">
-                        <span class="text-slate-500">Masa Diambil:</span>
+                        <span class="text-slate-500">Time Taken:</span>
                         <span class="text-slate-700 font-extrabold">${minutes}:${seconds}</span>
                     </div>
                 </div>
 
                 <div class="space-y-3">
                     <button onclick="setScreen('topics')" class="bouncy-btn w-full bg-indigo-600 text-white py-3.5 rounded-2xl font-bold text-sm shadow-lg shadow-indigo-500/25">
-                        Pilih Topik Lain <i class="fa-solid fa-book ml-2"></i>
+                        Choose Another Topic <i class="fa-solid fa-book ml-2"></i>
                     </button>
                     <button onclick="goToHome()" class="bouncy-btn w-full bg-slate-100 hover:bg-slate-200 text-slate-700 py-3.5 rounded-2xl font-bold text-sm transition">
-                        Kembali ke Halaman Utama <i class="fa-solid fa-house ml-2"></i>
+                        Back to Home <i class="fa-solid fa-house ml-2"></i>
                     </button>
                 </div>
             </div>`;
@@ -1253,17 +1281,17 @@
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-3xl mx-auto">
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="goToHome()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Utama
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Home
                     </button>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Progress Saya</h2>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">My Progress</h2>
                     <div class="w-20"></div>
                 </div>
 
                 <div class="bg-gradient-to-r from-indigo-500 to-violet-600 text-white p-6 rounded-2xl mb-6 shadow-md flex items-center justify-between">
                     <div>
-                        <div class="text-indigo-200 text-xs font-bold uppercase tracking-wider">Tahap Keseluruhan</div>
-                        <div class="text-3xl font-extrabold mt-1">${percent}% Selesai</div>
-                        <div class="text-xs text-indigo-100 mt-1">${completedCount} daripada 9 topik • ${answeredTotal} soalan unik dijawab</div>
+                        <div class="text-indigo-200 text-xs font-bold uppercase tracking-wider">Overall Progress</div>
+                        <div class="text-3xl font-extrabold mt-1">${percent}% Complete</div>
+                        <div class="text-xs text-indigo-100 mt-1">${completedCount} of 9 topics • ${answeredTotal} questions answered</div>
                     </div>
                     <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-3xl">
                         📈
@@ -1280,12 +1308,12 @@
                                     <i class="${t.icon}"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 text-sm">Topik ${t.id}:${t.title}</h4>
+                                    <h4 class="font-bold text-slate-800 text-sm">Topic ${t.id}:${t.title}</h4>
                                     <p class="text-slate-400 text-xs">${t.desc}</p>
                                 </div>
                             </div>
                             <div>
-                                ${done ? '<span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-check mr-1"></i> Selesai</span>' : '<span class="bg-slate-100 text-slate-400 px-3 py-1 rounded-full text-xs font-bold">Belum Mula</span>'}
+                                ${done ? '<span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-check mr-1"></i> Completed</span>' : '<span class="bg-slate-100 text-slate-400 px-3 py-1 rounded-full text-xs font-bold">Not Started</span>'}
                             </div>
                         </div>`;
                     }).join('')}
@@ -1300,9 +1328,9 @@
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-3xl mx-auto">
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="goToHome()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Utama
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Home
                     </button>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">🏆 Leaderboard Edu Kidz</h2>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">🏆 Edu Kidz Leaderboard</h2>
                     <div class="w-20"></div>
                 </div>
 
@@ -1317,8 +1345,8 @@
                                     ${p.avatar}
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 text-sm">${p.name}${p.id === appState.currentUser.id ? ' (Anda)' : ''}</h4>
-                                    <p class="text-slate-400 text-xs">${p.completedTopics.length} Topik Selesai</p>
+                                    <h4 class="font-bold text-slate-800 text-sm">${p.name}${p.id === appState.currentUser.id ? ' (You)' : ''}</h4>
+                                    <p class="text-slate-400 text-xs">${p.completedTopics.length} Topics Completed</p>
                                 </div>
                             </div>
                             <div class="bg-amber-100 text-amber-800 px-3 py-1.5 rounded-xl font-bold text-xs">
@@ -1337,20 +1365,20 @@
                     ${appState.currentUser.avatar}
                 </div>
                 <h2 class="text-2xl font-extrabold text-slate-800 mb-1">${appState.currentUser.name}</h2>
-                <p class="text-indigo-600 font-bold text-xs mb-6">Murid Tahun 4 • Akaun Aktif</p>
+                <p class="text-indigo-600 font-bold text-xs mb-6">Year 4 Pupil • Active Account</p>
 
                 <div class="bg-slate-50 p-4 rounded-2xl text-left space-y-2 mb-6 border border-slate-100 text-sm">
-                    <div class="flex justify-between font-semibold"><span class="text-slate-500">Jumlah Markah:</span> <span class="text-amber-600">${appState.currentUser.score}</span></div>
-                    <div class="flex justify-between font-semibold"><span class="text-slate-500">Topik Selesai:</span> <span class="text-emerald-600">${appState.currentUser.completedTopics.length} / 9</span></div>
-                    <div class="flex justify-between font-semibold"><span class="text-slate-500">Soalan Unik Dijawab:</span> <span class="text-indigo-600">${appState.currentUser.answeredQuestionIds.length}</span></div>
+                    <div class="flex justify-between font-semibold"><span class="text-slate-500">Total Marks:</span> <span class="text-amber-600">${appState.currentUser.score}</span></div>
+                    <div class="flex justify-between font-semibold"><span class="text-slate-500">Topics Completed:</span> <span class="text-emerald-600">${appState.currentUser.completedTopics.length} / 9</span></div>
+                    <div class="flex justify-between font-semibold"><span class="text-slate-500">Questions Answered:</span> <span class="text-indigo-600">${appState.currentUser.answeredQuestionIds.length}</span></div>
                 </div>
 
                 <div class="space-y-3">
                     <button onclick="logout()" class="bouncy-btn w-full bg-rose-50 text-rose-600 hover:bg-rose-100 py-3 rounded-2xl font-bold text-sm transition">
-                        <i class="fa-solid fa-right-from-bracket mr-2"></i> Log Keluar / Tukar Akaun
+                        <i class="fa-solid fa-right-from-bracket mr-2"></i> Log Out / Switch Account
                     </button>
                     <button onclick="goToHome()" class="bouncy-btn w-full bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 rounded-2xl font-bold text-sm transition">
-                        Kembali ke Utama
+                        Back to Home
                     </button>
                 </div>
             </div>`;
@@ -1361,25 +1389,25 @@
             <div class="game-card p-6 sm:p-8 rounded-3xl w-full max-w-md mx-auto">
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="goToHome()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition">
-                        <i class="fa-solid fa-arrow-left mr-2"></i> Utama
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Home
                     </button>
-                    <h2 class="text-xl font-extrabold text-slate-800">Tetapan Game</h2>
+                    <h2 class="text-xl font-extrabold text-slate-800">Game Settings</h2>
                     <div class="w-16"></div>
                 </div>
 
                 <div class="space-y-4 text-left text-sm">
                     <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-between">
                         <div>
-                            <h4 class="font-bold text-slate-800">Kesan Bunyi Audio</h4>
-                            <p class="text-slate-400 text-xs">Bunyi interaktif ketika menjawab</p>
+                            <h4 class="font-bold text-slate-800">Sound Effects</h4>
+                            <p class="text-slate-400 text-xs">Sound when answering questions</p>
                         </div>
-                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">Aktif</span>
+                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">Active</span>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                        <h4 class="font-bold text-slate-800 mb-1">Sistem Anti-Pengulangan & Refined Darab/Bahagi Masa</h4>
+                        <h4 class="font-bold text-slate-800 mb-1">Multiplying and Dividing Time</h4>
                         <p class="text-slate-500 text-xs leading-relaxed">
-                            Topik Darab & Bahagi Masa kini menampilkan variasi soalan unik (jam, minit, saat & situasi harian) merentasi setiap indeks tanpa pengulangan soalan yang sama.
+                            Practise multiplying and dividing durations in hours, minutes and seconds.
                         </p>
                     </div>
                 </div>

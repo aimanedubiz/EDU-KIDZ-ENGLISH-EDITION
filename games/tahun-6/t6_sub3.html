@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids – Edu Kidz: Matematik Tahun 6 Wang</title>
+    <title>Math Kids – Edu Kidz: Year 6 Money</title>
     <!-- Tailwind CSS for modern responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Poppins & Inter -->
@@ -62,18 +62,18 @@
                 </div>
                 <div>
                     <h1 class="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">MATH KIDS – EDU KIDZ</h1>
-                    <p class="text-xs sm:text-sm font-medium text-slate-500">Matematik Tahun 6 • Topik: Wang</p>
+                    <p class="text-xs sm:text-sm font-medium text-slate-500">Year 6 Mathematics • Money</p>
                 </div>
             </div>
             
             <div id="user-badge" class="hidden flex items-center space-x-3 bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-100">
                 <div class="w-9 h-9 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow" id="user-initials">M</div>
                 <div>
-                    <div class="text-xs text-slate-500 font-medium">Pemain:</div>
+                    <div class="text-xs text-slate-500 font-medium">Player:</div>
                     <div class="text-sm font-bold text-indigo-900 truncate max-w-[120px] sm:max-w-[150px]" id="current-username-display">-</div>
                 </div>
                 <button onclick="openAccountModal()" class="text-xs bg-white text-indigo-600 hover:bg-indigo-600 hover:text-white px-2.5 py-1 rounded-lg border border-indigo-200 transition font-semibold">
-                    <i class="fa-solid fa-user-gear"></i> Akaun
+                    <i class="fa-solid fa-user-gear"></i> Account
                 </button>
             </div>
         </header>
@@ -85,8 +85,8 @@
 
         <!-- Footer -->
         <footer class="mt-6 text-center text-xs text-slate-500 py-2 border-t border-slate-200/60">
-            <p>Kementerian Pendidikan Malaysia (KPM) • Kurikulum Standard Sekolah Rendah (KSSR) Tahun 6</p>
-            <p class="mt-1">Math Kids – Edu Kidz © 2026 • Hak Cipta Terpelihara</p>
+            <p>Year 6 KSSR Mathematics</p>
+            <p class="mt-1">Math Kids – Edu Kidz © 2026 • All Rights Reserved</p>
         </footer>
     </div>
 
@@ -212,19 +212,19 @@
                     this.currentUser = user;
                     this.saveUsers();
                     this.init();
-                    showNotification(`Selamat datang kembali, ${user.name}!`, 'success');
+                    showNotification(`Welcome back, ${user.name}!`, 'success');
                 } else {
-                    showNotification('Nama pengguna atau kata laluan salah!', 'error');
+                    showNotification('Check your username and password.', 'error');
                 }
             },
 
             register(username, name, password) {
                 if (!username || !name || !password) {
-                    showNotification('Sila lengkapkan semua maklumat!', 'error');
+                    showNotification('Complete all fields.', 'error');
                     return;
                 }
                 if (this.users.some(u => u.username === username)) {
-                    showNotification('Nama pengguna telah wujud. Sila guna nama lain.', 'error');
+                    showNotification('That username is taken. Choose another one.', 'error');
                     return;
                 }
                 const newUser = {
@@ -250,7 +250,7 @@
                 this.currentUser = newUser;
                 this.saveUsers();
                 this.init();
-                showNotification('Akaun berjaya didaftarkan!', 'success');
+                showNotification('Account created.', 'success');
             },
 
             logout() {
@@ -258,17 +258,18 @@
                 this.currentUser = null;
                 document.getElementById('user-badge').classList.add('hidden');
                 this.renderAuthScreen();
-                showNotification('Anda telah log keluar.', 'success');
+                showNotification('You have logged out.', 'success');
             }
         };
 
+        const levelLabels = { mudah: 'Easy', sederhana: 'Medium', sukar: 'Hard' };
         const TopicNames = {
-            1: "Kenali Harga Kos, Harga Jual, Untung dan Rugi",
-            2: "Kenali Diskaun, Rebat dan Baucar",
-            3: "Kenali Invois, Bil, Resit dan Cukai Perkhidmatan",
-            4: "Faedah dan Dividen",
-            5: "Kenali Aset, Liabiliti, Insurans dan Takaful",
-            6: "Penyelesaian Masalah Berkaitan Wang"
+            1: "Cost Price, Selling Price, Profit and Loss",
+            2: "Discounts, Rebates and Vouchers",
+            3: "Invoices, Bills, Receipts and Service Tax",
+            4: "Interest and Dividends",
+            5: "Assets, Liabilities, Insurance and Takaful",
+            6: "Money Problems"
         };
 
         const QuestionBank = {};
@@ -295,8 +296,8 @@
         }
 
         function generateSingleOtherQuestion(topic, level, index) {
-            let qId = `WANG-T${topic}-${level.charAt(0).toUpperCase()}-${String(index).padStart(3, '0')}`;
-            let cognitive = level === 'mudah' ? 'Mengingat' : (level === 'sederhana' ? 'Memahami' : 'Mengaplikasi');
+            let qId = `WANG-T${topic}-${({ mudah: "M", sederhana: "S", sukar: "K" })[level]}-${String(index).padStart(3, '0')}`;
+            let cognitive = level === 'mudah' ? 'Remembering' : (level === 'sederhana' ? 'Understanding' : 'Applying');
             let names = ['Amir', 'Siti', 'Raju', 'Mei Ling', 'Aiman', 'Zack', 'Nurul', 'David', 'Farah', 'Kumar'];
             let name = names[(index + topic) % names.length];
             let qText = "", options = [], answer = "", explanation = "", visualType = "wang", type = "objektif";
@@ -306,28 +307,28 @@
                 let cost = 10 + (index * 4) + (level === 'mudah' ? 5 : (level === 'sederhana' ? 20 : 60));
                 let profit = 4 + (index * 2);
                 let sell = cost + profit;
-                qText = `Harga kos sebuah beg ialah RM${cost}. ${name} menjual beg itu pada harga RM${sell}. Berapakah keuntungan yang diperoleh?`;
+                qText = `A bag costs RM${cost}. ${name} sells it for RM${sell}. What is the profit?`;
                 answer = `RM${profit}`;
                 options = [`RM${profit - 2}`, `RM${profit}`, `RM${profit + 5}`, `RM${profit + 10}`].sort(() => Math.random() - 0.5);
-                explanation = `Keuntungan = Harga Jual − Harga Kos = RM${sell} − RM${cost} = RM${profit}.`;
+                explanation = `Profit = selling price − cost price = RM${sell} − RM${cost} = RM${profit}.`;
             } else if (topic === 3) {
                 visualType = "resit";
-                let item1 = 12 + index;
+                let item1 = 12 + index + ({ mudah: 0, sederhana: 20, sukar: 40 })[level];
                 let item2 = 18 + (index * 2);
                 let total = item1 + item2;
-                qText = `Dalam sebuah resit kedai buku, ${name} membeli pen bernilai RM${item1}.00 dan buku nota bernilai RM${item2}.00. Berapakah jumlah harga barang sebelum cukai?`;
+                qText = `${name} buys a pen for RM${item1}.00 and a notebook for RM${item2}.00. What is the total before tax?`;
                 answer = `RM${total}.00`;
                 options = [`RM${total}.00`, `RM${total - 5}.00`, `RM${total + 5}.00`, `RM${total + 10}.00`].sort(() => Math.random() - 0.5);
-                explanation = `Jumlah = RM${item1} + RM${item2} = RM${total}.00.`;
+                explanation = `Total = RM${item1} + RM${item2} = RM${total}.00.`;
             } else if (topic === 4) {
                 visualType = "bank";
                 let principal = 1000 + (index * 200);
-                let rate = level === 'mudah' ? 2 : 3;
+                let rate = level === 'mudah' ? 2 : level === 'sederhana' ? 3 : 4;
                 let interest = (principal * rate) / 100;
-                qText = `${name} menyimpan wang sebanyak RM${principal} di sebuah bank dengan kadar faedah ${rate}% setahun. Berapakah faedah yang diterima selepas 1 tahun?`;
+                qText = `${name} deposits RM${principal} in a bank that pays ${rate}% interest per year. How much interest is earned in one year?`;
                 answer = `RM${interest.toFixed(2)}`;
                 options = [`RM${interest.toFixed(2)}`, `RM${(interest * 2).toFixed(2)}`, `RM${(principal + interest).toFixed(2)}`, `RM${(interest + 5).toFixed(2)}`].sort(() => Math.random() - 0.5);
-                explanation = `Faedah = P × r × t = RM${principal} × ${rate}% = RM${interest.toFixed(2)}.`;
+                explanation = `Interest for one year = RM${principal} × ${rate}% = RM${interest.toFixed(2)}.`;
             }
 
             return { id: qId, topic, level, cognitive, type, question: qText, options, correctAnswer: answer, explanation, visual: visualType };
@@ -336,22 +337,22 @@
         // --- TOPIK 2 GENERATOR (Diskaun, Rebat dan Baucar) ---
         function generateTopic2Questions() {
             const mudah2 = [
-                { q: "Apakah yang dimaksudkan dengan 'Diskaun'?", ans: "Potongan harga daripada harga asal barang.", opts: ["Potongan harga daripada harga asal barang.", "Wang tambahan yang perlu dibayar.", "Cukai yang dikenakan oleh kerajaan.", "Faedah simpanan di dalam bank."] },
-                { q: "Apakah fungsi utama 'Baucar' dalam jualan?", ans: "Kupon yang memberi potongan harga atau nilai percuma.", opts: ["Kupon yang memberi potongan harga atau nilai percuma.", "Resit bukti pembayaran.", "Dokumen tuntutan hutang.", "Penyataan simpanan bank."] },
-                { q: "Sebuah baju berharga RM50 diberikan diskaun 10%. Berapakah nilai diskaun tersebut?", ans: "RM5.00", opts: ["RM5.00", "RM10.00", "RM15.00", "RM2.00"] },
-                { q: "Puan Aminah mendapat rebat sebanyak RM10 apabila membeli peralatan elektrik RM100. Berapakah jumlah wang yang dibayar?", ans: "RM90.00", opts: ["RM90.00", "RM110.00", "RM95.00", "RM80.00"] },
-                { q: "Manakah antara berikut biasanya memberikan baucar tunai?", ans: "Pasar raya semasa promosi.", opts: ["Pasar raya semasa promosi.", "Balai polis.", "Klinik kesihatan.", "Perpustakaan awam."] },
-                { q: "Kasut berharga RM80 dijual dengan potongan diskaun RM20. Berapakah harga selepas diskaun?", ans: "RM60.00", opts: ["RM60.00", "RM70.00", "RM50.00", "RM65.00"] },
-                { q: "Apakah kesan pemberian diskaun ke atas harga sesuatu barangan?", ans: "Harga barang menjadi lebih murah.", opts: ["Harga barang menjadi lebih murah.", "Harga barang menjadi lebih mahal.", "Tiada perubahan harga.", "Harga kos bertambah."] },
-                { q: "Siti ada baucar tunai RM5. Dia membeli buku RM18. Berapakah yang perlu dibayar Siti?", ans: "RM13.00", opts: ["RM13.00", "RM15.00", "RM23.00", "RM12.00"] },
-                { q: "Apakah istilah bagi pemulangan semula sebahagian wang selepas pembayaran dilakukan?", ans: "Rebat", opts: ["Rebat", "Faedah", "Invois", "Cukai"] },
-                { q: "Harga asal sebuah permainan ialah RM40. Potongan diskaun 50% diberikan. Berapakah harga baharu?", ans: "RM20.00", opts: ["RM20.00", "RM25.00", "RM15.00", "RM30.00"] }
+                { q: "What is a discount?", ans: "A reduction in the original price.", opts: ["A reduction in the original price.", "An extra payment.", "A tax charged by the government.", "Interest earned on bank savings."] },
+                { q: "What is a voucher used for?", ans: "To obtain a discount or a free item.", opts: ["To obtain a discount or a free item.", "To prove a payment has been made.", "To request payment of a debt.", "To show a bank balance."] },
+                { q: "A shirt costs RM50 before a 10% discount. How much is the discount?", ans: "RM5.00", opts: ["RM5.00", "RM10.00", "RM15.00", "RM2.00"] },
+                { q: "Mrs Aminah receives an RM10 rebate on a RM100 appliance. What is the net cost?", ans: "RM90.00", opts: ["RM90.00", "RM110.00", "RM95.00", "RM80.00"] },
+                { q: "Which business might offer a cash voucher during a promotion?", ans: "A supermarket.", opts: ["A supermarket.", "A police station.", "A health clinic.", "A public library."] },
+                { q: "Shoes costing RM80 are reduced by RM20. What is the sale price?", ans: "RM60.00", opts: ["RM60.00", "RM70.00", "RM50.00", "RM65.00"] },
+                { q: "What does a discount do to the price?", ans: "It reduces the price.", opts: ["It reduces the price.", "It increases the price.", "It leaves the price unchanged.", "It increases the cost to the seller."] },
+                { q: "Siti uses an RM5 cash voucher to buy an RM18 book. How much does she pay?", ans: "RM13.00", opts: ["RM13.00", "RM15.00", "RM23.00", "RM12.00"] },
+                { q: "What is a partial refund given after payment called?", ans: "Rebate", opts: ["Rebate", "Interest", "Invoice", "Tax"] },
+                { q: "A game costs RM40 before a 50% discount. What is its sale price?", ans: "RM20.00", opts: ["RM20.00", "RM25.00", "RM15.00", "RM30.00"] }
             ];
 
             mudah2.forEach((item, idx) => {
                 QuestionBank[2].mudah.push({
-                    id: `WANG-T2-M-${String(idx + 1).padStart(3, '0')}`, topic: 2, level: 'mudah', cognitive: 'Mengingat', type: 'objektif',
-                    question: item.q, options: [...item.opts].sort(() => Math.random() - 0.5), correctAnswer: item.ans, explanation: `Jawapan tepat: ${item.ans}`, visual: 'troli'
+                    id: `WANG-T2-M-${String(idx + 1).padStart(3, '0')}`, topic: 2, level: 'mudah', cognitive: 'Remembering', type: 'objektif',
+                    question: item.q, options: [...item.opts].sort(() => Math.random() - 0.5), correctAnswer: item.ans, explanation: `Correct answer: ${item.ans}`, visual: 'troli'
                 });
             });
 
@@ -360,10 +361,10 @@
                 let disc = 10;
                 let ansVal = cost - (cost * (disc / 100));
                 QuestionBank[2].mudah.push({
-                    id: `WANG-T2-M-${String(i).padStart(3, '0')}`, topic: 2, level: 'mudah', cognitive: 'Memahami', type: 'objektif',
-                    question: `Sebuah jam tangan berharga RM${cost} diberikan diskaun ${disc}%. Berapakah harga jual jam tersebut?`,
+                    id: `WANG-T2-M-${String(i).padStart(3, '0')}`, topic: 2, level: 'mudah', cognitive: 'Understanding', type: 'objektif',
+                    question: `A watch costs RM${cost} before a ${disc}% discount. What is its sale price?`,
                     options: [`RM${ansVal.toFixed(2)}`, `RM${(ansVal + 5).toFixed(2)}`, `RM${(ansVal - 2).toFixed(2)}`, `RM${(cost + 5).toFixed(2)}`].sort(() => Math.random() - 0.5),
-                    correctAnswer: `RM${ansVal.toFixed(2)}`, explanation: `Diskaun 10% dari RM${cost} = RM${cost * 0.1}. Harga baharu = RM${ansVal.toFixed(2)}.`, visual: 'troli'
+                    correctAnswer: `RM${ansVal.toFixed(2)}`, explanation: `A 10% discount on RM${cost} = RM${cost * 0.1}. Sale price = RM${ansVal.toFixed(2)}.`, visual: 'troli'
                 });
             }
 
@@ -373,10 +374,10 @@
                 let discAmount = (orig * disc) / 100;
                 let finalPrice = orig - discAmount;
                 QuestionBank[2].sederhana.push({
-                    id: `WANG-T2-S-${String(i).padStart(3, '0')}`, topic: 2, level: 'sederhana', cognitive: 'Memahami', type: 'objektif',
-                    question: `Harga sebuah jaket ialah RM${orig}. Kedai menawarkan diskaun ${disc}%. Berapakah jumlah wang yang dapat dijimatkan?`,
+                    id: `WANG-T2-S-${String(i).padStart(3, '0')}`, topic: 2, level: 'sederhana', cognitive: 'Understanding', type: 'objektif',
+                    question: `A jacket costs RM${orig} before a ${disc}% discount. How much does the customer save?`,
                     options: [`RM${discAmount.toFixed(2)}`, `RM${finalPrice.toFixed(2)}`, `RM${(discAmount + 10).toFixed(2)}`, `RM${(discAmount - 5).toFixed(2)}`].sort(() => Math.random() - 0.5),
-                    correctAnswer: `RM${discAmount.toFixed(2)}`, explanation: `Jumlah jimat (diskaun) = ${disc}% × RM${orig} = RM${discAmount.toFixed(2)}.`, visual: 'troli'
+                    correctAnswer: `RM${discAmount.toFixed(2)}`, explanation: `Saving = ${disc}% × RM${orig} = RM${discAmount.toFixed(2)}.`, visual: 'troli'
                 });
 
                 let pOrig = 200 + (i * 20);
@@ -384,10 +385,10 @@
                 let pVoucher = 15;
                 let pFinal = pOrig - pDisc - pVoucher;
                 QuestionBank[2].sukar.push({
-                    id: `WANG-T2-K-${String(i).padStart(3, '0')}`, topic: 2, level: 'sukar', cognitive: 'Mengaplikasi', type: 'objektif',
-                    question: `Sebuah basikal berharga RM${pOrig}. Kedai memberikan diskaun 25% dan pelanggan menggunakan baucar tunai RM${pVoucher}. Hitung harga akhir basikal itu.`,
-                    options: [`RM${pFinal.toFixed(2)}`, `RM${(pFinal + 15).toFixed(2)}`, `RM${(pOrig - pDisc).toFixed(2)}`, `RM${(pFinal - 10).toFixed(2)}`].sort(() => Math.random() - 0.5),
-                    correctAnswer: `RM${pFinal.toFixed(2)}`, explanation: `1. Harga selepas diskaun 25% = RM${pOrig - pDisc}. 2. Tolak baucar RM${pVoucher} = RM${pFinal.toFixed(2)}.`, visual: 'troli'
+                    id: `WANG-T2-K-${String(i).padStart(3, '0')}`, topic: 2, level: 'sukar', cognitive: 'Applying', type: 'objektif',
+                    question: `A bicycle costs RM${pOrig}. The shop applies a 25% discount, then accepts a cash voucher worth RM${pVoucher}. What is the final price?`,
+                    options: [`RM${pFinal.toFixed(2)}`, `RM${(pFinal + 5).toFixed(2)}`, `RM${(pOrig - pDisc).toFixed(2)}`, `RM${(pFinal - 10).toFixed(2)}`].sort(() => Math.random() - 0.5),
+                    correctAnswer: `RM${pFinal.toFixed(2)}`, explanation: `1. Price after the 25% discount = RM${pOrig - pDisc}. 2. Subtract the voucher value RM${pVoucher} = RM${pFinal.toFixed(2)}.`, visual: 'troli'
                 });
             }
         }
@@ -395,26 +396,26 @@
         // --- TOPIK 5 GENERATOR (Aset, Liabiliti, Insurans dan Takaful) ---
         function generateTopic5Questions() {
             const mudah5 = [
-                { q: "Apakah definisi 'Aset'?", ans: "Harta atau wang tunai yang dimiliki.", opts: ["Harta atau wang tunai yang dimiliki.", "Tanggungan atau hutang yang wajib dibayar.", "Cukai yang dikenakan oleh kerajaan.", "Denda kelewatan bayaran."] },
-                { q: "Manakah antara berikut merupakan contoh Liabiliti?", ans: "Pinjaman kad kredit", opts: ["Pinjaman kad kredit", "Wang simpanan di bank", "Rumah kediaman bebas hutang", "Emas simpanan"] },
-                { q: "Apakah tujuan utama mengambil Insurans atau Takaful?", ans: "Memberikan perlindungan kewangan daripada risiko.", opts: ["Memberikan perlindungan kewangan daripada risiko.", "Mendapatkan keuntungan berlipat ganda.", "Membayar simpanan tahunan secara paksa.", "Mengelak daripada bayaran cukai pendapatan."] },
-                { q: "Apakah konsep utama dalam sistem Takaful?", ans: "Saling membantu dan bekerjasama berdasarkan prinsip syariah.", opts: ["Saling membantu dan bekerjasama berdasarkan prinsip syariah.", "Pelaburan saham berisiko tinggi.", "Pinjaman wang berfaedah.", "Perjudian nasib."] },
-                { q: "Manakah antara berikut tergolong sebagai Aset?", ans: "Akaun simpanan tetap di bank", opts: ["Akaun simpanan tetap di bank", "Ansuran kereta yang belum selesai", "Pinjaman peribadi bank", "Hutang kedai runcit"] }
+                { q: "What is an asset?", ans: "Something you own that has value.", opts: ["Something you own that has value.", "A debt you must repay.", "A tax charged by the government.", "A late payment charge."] },
+                { q: "Which of these is a liability?", ans: "Credit card debt", opts: ["Credit card debt", "Bank savings", "A home owned outright", "Gold savings"] },
+                { q: "What is the main purpose of insurance or takaful?", ans: "To provide financial protection against certain risks.", opts: ["To provide financial protection against certain risks.", "To guarantee high profits.", "To require yearly savings.", "To avoid income tax."] },
+                { q: "What is a central principle of takaful?", ans: "Mutual assistance based on Shariah principles.", opts: ["Mutual assistance based on Shariah principles.", "High-risk share trading.", "Interest-bearing lending.", "Gambling."] },
+                { q: "Which of these is an asset?", ans: "A fixed deposit", opts: ["A fixed deposit", "Unpaid car instalments", "A personal loan balance", "Money owed to a shop"] }
             ];
 
             mudah5.forEach((item, idx) => {
                 QuestionBank[5].mudah.push({
-                    id: `WANG-T5-M-${String(idx + 1).padStart(3, '0')}`, topic: 5, level: 'mudah', cognitive: 'Mengingat', type: 'objektif',
-                    question: item.q, options: [...item.opts].sort(() => Math.random() - 0.5), correctAnswer: item.ans, explanation: `Penerangan: ${item.ans}`, visual: 'bank'
+                    id: `WANG-T5-M-${String(idx + 1).padStart(3, '0')}`, topic: 5, level: 'mudah', cognitive: 'Remembering', type: 'objektif',
+                    question: item.q, options: [...item.opts].sort(() => Math.random() - 0.5), correctAnswer: item.ans, explanation: `Explanation: ${item.ans}`, visual: 'bank'
                 });
             });
 
             for (let i = 6; i <= 20; i++) {
                 QuestionBank[5].mudah.push({
-                    id: `WANG-T5-M-${String(i).padStart(3, '0')}`, topic: 5, level: 'mudah', cognitive: 'Mengingat', type: 'objektif',
-                    question: `Jika Encik Kamal mempunyai simpanan tunai sebanyak RM${i * 1000}, adakah simpanan tersebut dikategorikan sebagai Aset atau Liabiliti?`,
-                    options: ["Aset", "Liabiliti", "Cukai", "Faedah"].sort(() => Math.random() - 0.5),
-                    correctAnswer: "Aset", explanation: "Simpanan tunai ialah harta yang dimiliki, maka ia merupakan Aset.", visual: 'bank'
+                    id: `WANG-T5-M-${String(i).padStart(3, '0')}`, topic: 5, level: 'mudah', cognitive: 'Remembering', type: 'objektif',
+                    question: `Mr Kamal has RM${i * 1000} in cash savings. Are his savings an asset or a liability?`,
+                    options: ["Asset", "Liability", "Tax", "Interest"].sort(() => Math.random() - 0.5),
+                    correctAnswer: "Asset", explanation: "Cash savings are an asset because the saver owns them.", visual: 'bank'
                 });
             }
 
@@ -423,42 +424,42 @@
                 let liab = 10000 + (i * 500);
                 let netWorth = asset - liab;
                 QuestionBank[5].sederhana.push({
-                    id: `WANG-T5-S-${String(i).padStart(3, '0')}`, topic: 5, level: 'sederhana', cognitive: 'Memahami', type: 'objektif',
-                    question: `Puan Rahmah mempunyai jumlah Aset bernilai RM${asset} dan jumlah Liabiliti bernilai RM${liab}. Hitung nilai harta bersihnya.`,
+                    id: `WANG-T5-S-${String(i).padStart(3, '0')}`, topic: 5, level: 'sederhana', cognitive: 'Understanding', type: 'objektif',
+                    question: `Mrs Rahmah has assets worth RM${asset} and liabilities of RM${liab}. What is her net worth?`,
                     options: [`RM${netWorth}`, `RM${asset + liab}`, `RM${netWorth - 2000}`, `RM${netWorth + 5000}`].sort(() => Math.random() - 0.5),
-                    correctAnswer: `RM${netWorth}`, explanation: `Harta Bersih = Jumlah Aset − Jumlah Liabiliti = RM${asset} − RM${liab} = RM${netWorth}.`, visual: 'bank'
+                    correctAnswer: `RM${netWorth}`, explanation: `Net worth = total assets − total liabilities = RM${asset} − RM${liab} = RM${netWorth}.`, visual: 'bank'
                 });
 
                 QuestionBank[5].sukar.push({
-                    id: `WANG-T5-K-${String(i).padStart(3, '0')}`, topic: 5, level: 'sukar', cognitive: 'Mengaplikasi', type: 'objektif',
-                    question: `Encik Ali mempunyai wang RM${asset}. Beliau membayar premium Takaful sebanyak RM${1200 + (i * 100)} setahun untuk perlindungan perubatan keluarga. Mengapakah tindakan ini dikira sebagai perancangan kewangan yang baik?`,
+                    id: `WANG-T5-K-${String(i).padStart(3, '0')}`, topic: 5, level: 'sukar', cognitive: 'Applying', type: 'objektif',
+                    question: `Mr Ali has RM${asset}. He pays RM${1200 + (i * 100)} per year for takaful medical cover for his family. How can this help him manage financial risk?`,
                     options: [
-                        "Mengurangkan risiko beban kewangan jika berlaku kecemasan kesihatan.",
-                        "Menambah tanggungan liabiliti bulanan tanpa faedah.",
-                        "Memastikan wang tunai habis digunakan.",
-                        "Elak bayar zakat harta."
+                        "It can reduce the financial impact of a medical emergency.",
+                        "It increases monthly debts without providing cover.",
+                        "It ensures that all savings are spent.",
+                        "It removes the obligation to pay zakat."
                     ].sort(() => Math.random() - 0.5),
-                    correctAnswer: "Mengurangkan risiko beban kewangan jika berlaku kecemasan kesihatan.",
-                    explanation: "Takaful memberikan perlindungan kewangan bagi mengelakkan kemerosotan aset secara mendadak akibat bayaran perubatan.", visual: 'bank'
+                    correctAnswer: "It can reduce the financial impact of a medical emergency.",
+                    explanation: "Takaful can help cover expenses covered by the policy and reduce the need to draw on savings.", visual: 'bank'
                 });
             }
         }
 
-        // --- REFINED TOPIK 6 GENERATOR (Penyelesaian Masalah Berkaitan Wang) ---
+        // --- REFINED TOPIK 6 GENERATOR (Money Problems) ---
         function generateTopic6Questions() {
             const mudahList6 = [
-                { q: "Encik Ahmad membeli 3 biji buku dengan harga RM12.50 sebuah. Berapakah jumlah harga yang perlu dibayarnya?", ans: "RM37.50", opts: ["RM37.50", "RM35.00", "RM39.00", "RM32.50"] },
-                { q: "Siti mempunyai wang sebanyak RM150.00. Dia membeli sepasang kasut sekolah berharga RM58.90. Hitung baki wang Siti.", ans: "RM91.10", opts: ["RM91.10", "RM92.10", "RM90.10", "RM95.10"] },
-                { q: "Harga 4 batang pen yang sama ialah RM16.80. Berapakah harga bagi sebatang pen tersebut?", ans: "RM4.20", opts: ["RM4.20", "RM4.00", "RM4.50", "RM3.80"] },
-                { q: "Raju menyimpan RM25.50 setiap minggu di dalam tabung. Berapakah jumlah simpanannya selepas 4 minggu?", ans: "RM102.00", opts: ["RM102.00", "RM100.00", "RM105.00", "RM98.00"] },
-                { q: "Puan Lim membelanjakan RM84.60 untuk barangan dapur dan RM35.40 untuk buah-buahan. Berapakah jumlah perbelanjaan Puan Lim?", ans: "RM120.00", opts: ["RM120.00", "RM119.00", "RM125.00", "RM115.00"] }
+                { q: "Mr Ahmad buys three books at RM12.50 each. How much does he pay?", ans: "RM37.50", opts: ["RM37.50", "RM35.00", "RM39.00", "RM32.50"] },
+                { q: "Siti has RM150.00 and buys school shoes for RM58.90. How much is left?", ans: "RM91.10", opts: ["RM91.10", "RM92.10", "RM90.10", "RM95.10"] },
+                { q: "Four identical pens cost RM16.80. How much does one pen cost?", ans: "RM4.20", opts: ["RM4.20", "RM4.00", "RM4.50", "RM3.80"] },
+                { q: "Raju saves RM25.50 each week. How much does he save in four weeks?", ans: "RM102.00", opts: ["RM102.00", "RM100.00", "RM105.00", "RM98.00"] },
+                { q: "Mrs Lim spends RM84.60 on groceries and RM35.40 on fruit. How much does she spend altogether?", ans: "RM120.00", opts: ["RM120.00", "RM119.00", "RM125.00", "RM115.00"] }
             ];
 
             mudahList6.forEach((item, idx) => {
                 QuestionBank[6].mudah.push({
-                    id: `WANG-T6-M-${String(idx + 1).padStart(3, '0')}`, topic: 6, level: 'mudah', cognitive: 'Mengingat', type: 'objektif',
+                    id: `WANG-T6-M-${String(idx + 1).padStart(3, '0')}`, topic: 6, level: 'mudah', cognitive: 'Remembering', type: 'objektif',
                     question: item.q, options: [...item.opts].sort(() => Math.random() - 0.5),
-                    correctAnswer: item.ans, explanation: `Penyelesaian: ${item.ans}.`, visual: 'troli'
+                    correctAnswer: item.ans, explanation: `Answer: ${item.ans}.`, visual: 'troli'
                 });
             });
 
@@ -466,10 +467,10 @@
                 let cost = i * 15;
                 let sell = cost + 25;
                 QuestionBank[6].mudah.push({
-                    id: `WANG-T6-M-${String(i).padStart(3, '0')}`, topic: 6, level: 'mudah', cognitive: 'Mengingat', type: 'objektif',
-                    question: `Sebuah barang dibeli pada harga kos RM${cost} dan dijual pada harga RM${sell}. Berapakah keuntungan yang diperoleh?`,
+                    id: `WANG-T6-M-${String(i).padStart(3, '0')}`, topic: 6, level: 'mudah', cognitive: 'Remembering', type: 'objektif',
+                    question: `An item costs RM${cost} and sells for RM${sell}. What is the profit?`,
                     options: [`RM25.00`, `RM30.00`, `RM20.00`, `RM15.00`].sort(() => Math.random() - 0.5),
-                    correctAnswer: `RM25.00`, explanation: `Untung = RM${sell} − RM${cost} = RM25.00.`, visual: 'troli'
+                    correctAnswer: `RM25.00`, explanation: `Profit = RM${sell} − RM${cost} = RM25.00.`, visual: 'troli'
                 });
             }
 
@@ -478,22 +479,22 @@
                 let spendAmt = 120 + (i * 10);
                 let saveAmt = baseAmt - spendAmt;
                 QuestionBank[6].sederhana.push({
-                    id: `WANG-T6-S-${String(i).padStart(3, '0')}`, topic: 6, level: 'sederhana', cognitive: 'Memahami', type: 'objektif',
-                    question: `Aiman mempunyai simpanan sebanyak RM${baseAmt}.00. Dia membelanjakan RM${spendAmt}.00 dan bakinya disimpan. Berapakah baki simpanan baharu Aiman?`,
+                    id: `WANG-T6-S-${String(i).padStart(3, '0')}`, topic: 6, level: 'sederhana', cognitive: 'Understanding', type: 'objektif',
+                    question: `Aiman has RM${baseAmt}.00 in savings and spends RM${spendAmt}.00. How much does he have left?`,
                     options: [`RM${saveAmt}.00`, `RM${saveAmt + 20}.00`, `RM${spendAmt}.00`, `RM${saveAmt - 10}.00`].sort(() => Math.random() - 0.5),
-                    correctAnswer: `RM${saveAmt}.00`, explanation: `Baki simpanan = RM${baseAmt} − RM${spendAmt} = RM${saveAmt}.00.`, visual: 'troli'
+                    correctAnswer: `RM${saveAmt}.00`, explanation: `Savings remaining = RM${baseAmt} − RM${spendAmt} = RM${saveAmt}.00.`, visual: 'troli'
                 });
 
                 let capital = 1000 + (i * 100);
                 let profitVal = (capital * 15) / 100;
                 let totalVal = capital + profitVal;
                 let taxVal = (totalVal * 6) / 100;
-                let finalVal = (totalVal + taxVal).toFixed(2);
+                let finalVal = (totalVal - taxVal).toFixed(2);
                 QuestionBank[6].sukar.push({
-                    id: `WANG-T6-K-${String(i).padStart(3, '0')}`, topic: 6, level: 'sukar', cognitive: 'Mengaplikasi', type: 'objektif',
-                    question: `Siti melabur RM${capital}.00 dengan pulangan 15%. Cukai 6% dikenakan ke atas jumlah nilai selepas pulangan. Berapakah nilai akhir pelaburan?`,
+                    id: `WANG-T6-K-${String(i).padStart(3, '0')}`, topic: 6, level: 'sukar', cognitive: 'Applying', type: 'objektif',
+                    question: `Siti invests RM${capital}.00 and earns a 15% return. She pays 6% tax on the total value after the return. How much remains after tax?`,
                     options: [`RM${finalVal}`, `RM${(Number(finalVal) + 50).toFixed(2)}`, `RM${(capital + profitVal).toFixed(2)}`, `RM${(Number(finalVal) - 30).toFixed(2)}`].sort(() => Math.random() - 0.5),
-                    correctAnswer: `RM${finalVal}`, explanation: `1. Untung 15% = RM${totalVal.toFixed(2)}. 2. Cukai 6% = RM${taxVal.toFixed(2)}. 3. Jumlah = RM${finalVal}.`, visual: 'troli'
+                    correctAnswer: `RM${finalVal}`, explanation: `After the 15% return, the value is RM${totalVal.toFixed(2)}. Subtract RM${taxVal.toFixed(2)} in tax to get RM${finalVal}.`, visual: 'troli'
                 });
             }
         }
@@ -510,46 +511,46 @@
                             <div class="inline-flex bg-gradient-to-tr from-indigo-600 to-violet-600 text-white p-4 rounded-3xl text-3xl shadow-lg mb-3">
                                 🎓
                             </div>
-                            <h2 class="text-2xl font-extrabold text-slate-800 font-title">Sistem Akaun Pemain</h2>
-                            <p class="text-sm text-slate-500 mt-1">Sila log masuk atau daftar untuk mula bermain!</p>
+                            <h2 class="text-2xl font-extrabold text-slate-800 font-title">Player Account</h2>
+                            <p class="text-sm text-slate-500 mt-1">Log in or register to play.</p>
                         </div>
 
                         <div class="flex rounded-xl bg-slate-100 p-1 mb-6">
-                            <button id="tab-login-btn" onclick="switchAuthTab('login')" class="flex-1 py-2 text-sm font-bold rounded-lg bg-white text-indigo-600 shadow transition">Log Masuk</button>
-                            <button id="tab-reg-btn" onclick="switchAuthTab('register')" class="flex-1 py-2 text-sm font-bold rounded-lg text-slate-600 hover:text-indigo-600 transition">Daftar Akaun</button>
+                            <button id="tab-login-btn" onclick="switchAuthTab('login')" class="flex-1 py-2 text-sm font-bold rounded-lg bg-white text-indigo-600 shadow transition">Log In</button>
+                            <button id="tab-reg-btn" onclick="switchAuthTab('register')" class="flex-1 py-2 text-sm font-bold rounded-lg text-slate-600 hover:text-indigo-600 transition">Register</button>
                         </div>
 
                         <!-- Login Form -->
                         <div id="form-login" class="space-y-4">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nama Pengguna</label>
-                                <input type="text" id="login-username" placeholder="Cth: amir2026" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Username</label>
+                                <input type="text" id="login-username" placeholder="e.g. amir2026" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Kata Laluan</label>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Password</label>
                                 <input type="password" id="login-password" placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
                             </div>
                             <button onclick="handleLoginSubmit()" class="w-full py-3.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl font-bold shadow-lg transition transform active:scale-95">
-                                <i class="fa-solid fa-right-to-bracket mr-2"></i> Log Masuk Sekarang
+                                <i class="fa-solid fa-right-to-bracket mr-2"></i> Log In Sekarang
                             </button>
                         </div>
 
                         <!-- Register Form -->
                         <div id="form-register" class="space-y-4 hidden">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nama Pengguna (Username)</label>
-                                <input type="text" id="reg-username" placeholder="Cth: siti6" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Username</label>
+                                <input type="text" id="reg-username" placeholder="e.g. siti6" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nama Penuh Murid</label>
-                                <input type="text" id="reg-name" placeholder="Cth: Siti Aminah" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Pupil’s Full Name</label>
+                                <input type="text" id="reg-name" placeholder="e.g. Siti Aminah" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Kata Laluan</label>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Password</label>
                                 <input type="password" id="reg-password" placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm bg-slate-50">
                             </div>
                             <button onclick="handleRegisterSubmit()" class="w-full py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-xl font-bold shadow-lg transition transform active:scale-95">
-                                <i class="fa-solid fa-user-plus mr-2"></i> Daftar & Mula
+                                <i class="fa-solid fa-user-plus mr-2"></i> Register and Play
                             </button>
                         </div>
                     </div>
@@ -580,7 +581,7 @@
             const u = document.getElementById('login-username').value.trim();
             const p = document.getElementById('login-password').value.trim();
             if(!u || !p) {
-                showNotification('Sila masukkan nama pengguna dan kata laluan!', 'error');
+                showNotification('Enter your username and password.', 'error');
                 return;
             }
             GameState.login(u, p);
@@ -601,22 +602,22 @@
                         <div class="inline-flex bg-gradient-to-tr from-amber-400 to-yellow-300 text-white p-5 rounded-3xl text-4xl shadow-xl mb-4 animate-bounce-subtle">
                             💎
                         </div>
-                        <h2 class="text-3xl font-extrabold text-slate-800 font-title mb-1">Selamat Datang, ${GameState.currentUser.name}!</h2>
-                        <p class="text-slate-500 font-medium mb-8">Pilih menu di bawah untuk meneruskan pengembaraan Matematik Wang anda.</p>
+                        <h2 class="text-3xl font-extrabold text-slate-800 font-title mb-1">Welcome, ${GameState.currentUser.name}!</h2>
+                        <p class="text-slate-500 font-medium mb-8">Choose an activity to practise money problems.</p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <button onclick="GameState.renderTopicSelection()" class="p-4 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-2xl font-bold shadow-lg flex items-center space-x-4 transition transform hover:-translate-y-1">
                                 <div class="bg-white/20 p-3 rounded-xl text-2xl"><i class="fa-solid fa-play"></i></div>
                                 <div class="text-left">
-                                    <div class="text-lg">Mula Bermain</div>
-                                    <div class="text-xs text-indigo-200">Uji minda 6 topik wang</div>
+                                    <div class="text-lg">Start Playing</div>
+                                    <div class="text-xs text-indigo-200">Practise six money topics</div>
                                 </div>
                             </button>
 
                             <button onclick="GameState.renderTopicSelection()" class="p-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-2xl font-bold shadow-lg flex items-center space-x-4 transition transform hover:-translate-y-1">
                                 <div class="bg-white/20 p-3 rounded-xl text-2xl"><i class="fa-solid fa-book-open"></i></div>
                                 <div class="text-left">
-                                    <div class="text-lg">Pilih Topik</div>
+                                    <div class="text-lg">Choose a Topic</div>
                                     <div class="text-xs text-emerald-200">6 Kategori Pembelajaran</div>
                                 </div>
                             </button>
@@ -625,25 +626,25 @@
                                 <div class="bg-white/20 p-3 rounded-xl text-2xl"><i class="fa-solid fa-trophy"></i></div>
                                 <div class="text-left">
                                     <div class="text-lg">Leaderboard</div>
-                                    <div class="text-xs text-amber-100">Carta pencapaian tertinggi</div>
+                                    <div class="text-xs text-amber-100">Highest Scores</div>
                                 </div>
                             </button>
 
                             <button onclick="GameState.renderProgress()" class="p-4 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white rounded-2xl font-bold shadow-lg flex items-center space-x-4 transition transform hover:-translate-y-1">
                                 <div class="bg-white/20 p-3 rounded-xl text-2xl"><i class="fa-solid fa-chart-pie"></i></div>
                                 <div class="text-left">
-                                    <div class="text-lg">Progress Saya</div>
-                                    <div class="text-xs text-sky-100">Statistik & markah anda</div>
+                                    <div class="text-lg">My Progress</div>
+                                    <div class="text-xs text-sky-100">Your Scores and Statistics</div>
                                 </div>
                             </button>
                         </div>
 
                         <div class="mt-6 flex flex-wrap justify-center gap-3">
                             <button onclick="GameState.renderHowToPlay()" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition flex items-center space-x-2">
-                                <i class="fa-solid fa-circle-question text-indigo-600"></i> <span>Cara Bermain</span>
+                                <i class="fa-solid fa-circle-question text-indigo-600"></i> <span>How to Play</span>
                             </button>
                             <button onclick="openAccountModal()" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition flex items-center space-x-2">
-                                <i class="fa-solid fa-user text-indigo-600"></i> <span>Akaun & Tetapan</span>
+                                <i class="fa-solid fa-user text-indigo-600"></i> <span>Account Settings</span>
                             </button>
                         </div>
                     </div>
@@ -653,12 +654,12 @@
 
         GameState.renderTopicSelection = function() {
             const topics = [
-                { id: 1, title: "Topik 1: Harga Kos, Harga Jual, Untung & Rugi", icon: "💰" },
-                { id: 2, title: "Topik 2: Diskaun, Rebat dan Baucar", icon: "🏷️" },
-                { id: 3, title: "Topik 3: Invois, Bil, Resit & Cukai Perkhidmatan", icon: "🧾" },
-                { id: 4, title: "Topik 4: Faedah dan Dividen", icon: "🏦" },
-                { id: 5, title: "Topik 5: Aset, Liabiliti, Insurans & Takaful", icon: "🏠" },
-                { id: 6, title: "Topik 6: Penyelesaian Masalah Berkaitan Wang", icon: "🧠" }
+                { id: 1, title: TopicNames[1], icon: "💰" },
+                { id: 2, title: TopicNames[2], icon: "🏷️" },
+                { id: 3, title: TopicNames[3], icon: "🧾" },
+                { id: 4, title: TopicNames[4], icon: "🏦" },
+                { id: 5, title: TopicNames[5], icon: "🏠" },
+                { id: 6, title: TopicNames[6], icon: "🧠" }
             ];
 
             const main = document.getElementById('main-view');
@@ -666,9 +667,9 @@
                 <div class="flex-1 flex flex-col p-4 max-w-4xl mx-auto w-full">
                     <div class="flex items-center justify-between mb-6">
                         <button onclick="GameState.renderMainMenu()" class="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-xl font-bold shadow-sm border border-slate-200 transition flex items-center space-x-2">
-                            <i class="fa-solid fa-arrow-left"></i> <span>Menu Utama</span>
+                            <i class="fa-solid fa-arrow-left"></i> <span>Main Menu</span>
                         </button>
-                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">Pilih Topik Pembelajaran</h2>
+                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">Choose a Topic</h2>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -678,19 +679,19 @@
                                     <div class="flex items-center space-x-3 mb-3">
                                         <div class="text-3xl bg-indigo-50 p-3 rounded-xl">${t.icon}</div>
                                         <div>
-                                            <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Topik ${t.id}</span>
+                                            <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Topic ${t.id}</span>
                                             <h3 class="font-bold text-slate-800 text-base">${t.title}</h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                                     <div class="flex space-x-1">
-                                        <span class="px-2 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-lg">🟢 Mudah</span>
-                                        <span class="px-2 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-lg">🟡 Sederhana</span>
-                                        <span class="px-2 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-lg">🔴 Sukar</span>
+                                        <span class="px-2 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-lg">🟢 Easy</span>
+                                        <span class="px-2 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-lg">🟡 Medium</span>
+                                        <span class="px-2 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-lg">🔴 Hard</span>
                                     </div>
                                     <button onclick="GameState.setupGame(${t.id})" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold text-sm shadow transition">
-                                        Pilih <i class="fa-solid fa-chevron-right ml-1"></i>
+                                        Choose <i class="fa-solid fa-chevron-right ml-1"></i>
                                     </button>
                                 </div>
                             </div>
@@ -702,27 +703,27 @@
 
         GameState.setupGame = function(topicId) {
             this.currentTopic = topicId;
-            showModal(`Tetapan Permainan • Topik ${topicId}`, `
+            showModal(`Game Settings • Topic ${topicId}`, `
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Pilih Tahap Kesukaran</label>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Choose a Difficulty Level</label>
                         <div class="grid grid-cols-3 gap-2">
-                            <button onclick="setGameLevel('mudah')" id="lvl-mudah" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-emerald-500 bg-emerald-50 text-emerald-700 transition">🟢 Mudah</button>
-                            <button onclick="setGameLevel('sederhana')" id="lvl-sederhana" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">🟡 Sederhana</button>
-                            <button onclick="setGameLevel('sukar')" id="lvl-sukar" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">🔴 Sukar</button>
+                            <button onclick="setGameLevel('mudah')" id="lvl-mudah" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-emerald-500 bg-emerald-50 text-emerald-700 transition">🟢 Easy</button>
+                            <button onclick="setGameLevel('sederhana')" id="lvl-sederhana" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">🟡 Medium</button>
+                            <button onclick="setGameLevel('sukar')" id="lvl-sukar" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">🔴 Hard</button>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Pilih Tempoh Masa per Soalan</label>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Choose a Time Limit per Question</label>
                         <div class="grid grid-cols-3 gap-2">
-                            <button onclick="setGameTime(30)" id="time-30" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">⏱️ 30 Saat</button>
-                            <button onclick="setGameTime(60)" id="time-60" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-indigo-500 bg-indigo-50 text-indigo-700 transition">⏱️ 1 Minit</button>
-                            <button onclick="setGameTime(0)" id="time-0" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">♾️ Tiada Had</button>
+                            <button onclick="setGameTime(30)" id="time-30" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">⏱️ 30 Seconds</button>
+                            <button onclick="setGameTime(60)" id="time-60" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-indigo-500 bg-indigo-50 text-indigo-700 transition">⏱️ 1 Minute</button>
+                            <button onclick="setGameTime(0)" id="time-0" class="py-2.5 px-3 rounded-xl font-bold text-sm border-2 border-slate-200 bg-slate-50 text-slate-600 transition">♾️ No Time Limit</button>
                         </div>
                     </div>
                 </div>
             `, [
-                { text: "Mula Main Sekarang! 🚀", onclick: "GameState.startGame()", class: "bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white" }
+                { text: "Start Playing 🚀", onclick: "GameState.startGame()", class: "bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white" }
             ]);
         };
 
@@ -775,6 +776,7 @@
                 return;
             }
 
+            session.answered = false;
             const q = session.questions[session.currentIndex];
             const main = document.getElementById('main-view');
 
@@ -785,12 +787,12 @@
                 <div class="flex-1 flex flex-col max-w-2xl mx-auto w-full">
                     <div class="bg-white rounded-2xl p-4 shadow-md border border-indigo-100 mb-4 flex flex-wrap items-center justify-between gap-3">
                         <div>
-                            <span class="text-xs font-bold text-indigo-600 uppercase">Topik ${q.topic} • ${q.level.toUpperCase()}</span>
-                            <div class="text-lg font-extrabold text-slate-800">Soalan ${session.currentIndex + 1} / 20</div>
+                            <span class="text-xs font-bold text-indigo-600 uppercase">Topic ${q.topic} • ${levelLabels[q.level]}</span>
+                            <div class="text-lg font-extrabold text-slate-800">Question ${session.currentIndex + 1} / 20</div>
                         </div>
                         <div class="flex items-center space-x-4">
                             <div class="bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 text-amber-800 font-bold text-sm">
-                                ⭐ Markah: ${session.score}
+                                ⭐ Marks: ${session.score}
                             </div>
                             ${this.timeLimit > 0 ? `
                                 <div id="timer-badge" class="bg-rose-50 px-3 py-1.5 rounded-xl border border-rose-200 text-rose-700 font-bold text-sm flex items-center space-x-1">
@@ -808,7 +810,7 @@
                         <div>
                             <div class="flex items-center space-x-2 mb-4">
                                 <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-bold rounded-lg text-xs uppercase"><i class="fa-solid fa-tag mr-1"></i> ${q.cognitive}</span>
-                                <span class="px-3 py-1 bg-violet-50 text-violet-700 font-bold rounded-lg text-xs uppercase"><i class="fa-solid fa-coins mr-1"></i> Reka Bentuk Wang Malaysia</span>
+                                <span class="px-3 py-1 bg-violet-50 text-violet-700 font-bold rounded-lg text-xs uppercase"><i class="fa-solid fa-coins mr-1"></i> Malaysian Currency</span>
                             </div>
 
                             <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-6 leading-relaxed">
@@ -845,24 +847,27 @@
 
         GameState.handleTimeout = function() {
             const session = this.activeSession;
+            if (session.answered) return;
+            session.answered = true;
             const q = session.questions[session.currentIndex];
             session.wrongCount++;
-            session.currentIndex++;
 
-            showModal('Masa Tamat! ⏰', `
+            showModal('Time’s up! ⏰', `
                 <div class="text-center space-y-3">
-                    <div class="text-rose-600 font-bold text-lg">Masa untuk soalan ini telah tamat.</div>
-                    <p class="text-slate-600">Jawapan yang betul ialah:</p>
+                    <div class="text-rose-600 font-bold text-lg">The time limit for this question has expired.</div>
+                    <p class="text-slate-600">Correct answer:</p>
                     <div class="text-xl font-extrabold text-emerald-600 bg-emerald-50 py-2 rounded-xl border border-emerald-200">${q.correctAnswer}</div>
                     <p class="text-xs text-slate-500 mt-2">${q.explanation}</p>
                 </div>
             `, [
-                { text: "Soalan Seterusnya ➡️", onclick: "closeModal(); GameState.renderGameQuestion();", class: "bg-indigo-600 hover:bg-indigo-700 text-white" }
+                { text: "Next Question ➡️", onclick: "closeModal(); GameState.nextQuestion();", class: "bg-indigo-600 hover:bg-indigo-700 text-white" }
             ]);
         };
 
         GameState.submitAnswer = function(selectedOption) {
             const session = this.activeSession;
+            if (session.answered) return;
+            session.answered = true;
             if (session.timerInterval) clearInterval(session.timerInterval);
             
             const q = session.questions[session.currentIndex];
@@ -872,29 +877,29 @@
                 session.score += 5;
                 session.correctCount++;
                 triggerFireworks();
-                showModal('🎉 TAHNIAH! JAWAPAN BETUL!', `
+                showModal('🎉 WELL DONE! CORRECT ANSWER!', `
                     <div class="text-center space-y-3">
-                        <div class="text-3xl font-extrabold text-emerald-600">+5 MARKAH ⭐</div>
-                        <p class="text-slate-600">Jawapan anda tepat sekali!</p>
+                        <div class="text-3xl font-extrabold text-emerald-600">+5 MARKS ⭐</div>
+                        <p class="text-slate-600">Your answer is correct.</p>
                         <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-xs text-emerald-800 text-left">
-                            <strong>Penerangan:</strong> ${q.explanation}
+                            <strong>Explanation:</strong> ${q.explanation}
                         </div>
                     </div>
                 `, [
-                    { text: "Soalan Seterusnya ➡️", onclick: "closeModal(); GameState.nextQuestion();", class: "bg-emerald-600 hover:bg-emerald-700 text-white" }
+                    { text: "Next Question ➡️", onclick: "closeModal(); GameState.nextQuestion();", class: "bg-emerald-600 hover:bg-emerald-700 text-white" }
                 ]);
             } else {
                 session.wrongCount++;
-                showModal('❌ JAWAPAN KURANG TEPAT', `
+                showModal('❌ INCORRECT ANSWER', `
                     <div class="space-y-3">
-                        <p class="text-slate-600">Jawapan yang betul ialah:</p>
+                        <p class="text-slate-600">Correct answer:</p>
                         <div class="text-lg font-extrabold text-emerald-600 bg-emerald-50 p-3 rounded-xl border border-emerald-200">${q.correctAnswer}</div>
                         <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs text-slate-700">
-                            <strong>Nota Ringkas:</strong> ${q.explanation}
+                            <strong>Worked explanation:</strong> ${q.explanation}
                         </div>
                     </div>
                 `, [
-                    { text: "Teruskan ➡️", onclick: "closeModal(); GameState.nextQuestion();", class: "bg-indigo-600 hover:bg-indigo-700 text-white" }
+                    { text: "Continue ➡️", onclick: "closeModal(); GameState.nextQuestion();", class: "bg-indigo-600 hover:bg-indigo-700 text-white" }
                 ]);
             }
         };
@@ -938,31 +943,31 @@
                 <div class="flex-1 flex flex-col items-center justify-center p-4">
                     <div class="bg-white rounded-3xl p-8 shadow-2xl max-w-lg w-full border border-indigo-100 text-center animate-fade-in">
                         <div class="text-5xl mb-3">🎉</div>
-                        <h2 class="text-2xl font-extrabold text-slate-800 font-title mb-1">TAHNIAH! SESI TAMAT</h2>
-                        <p class="text-sm text-slate-500 mb-6">Topik ${this.currentTopic} • Tahap ${this.currentLevel.toUpperCase()}</p>
+                        <h2 class="text-2xl font-extrabold text-slate-800 font-title mb-1">GAME COMPLETE!</h2>
+                        <p class="text-sm text-slate-500 mb-6">Topic ${this.currentTopic} • ${levelLabels[this.currentLevel]}</p>
 
                         <div class="grid grid-cols-2 gap-3 mb-6">
                             <div class="bg-indigo-50 p-4 rounded-2xl border border-indigo-100">
-                                <div class="text-xs text-slate-500 font-bold uppercase">Markah Diperolehi</div>
+                                <div class="text-xs text-slate-500 font-bold uppercase">Marks Earned</div>
                                 <div class="text-2xl font-extrabold text-indigo-600">${session.score} / 100</div>
                             </div>
                             <div class="bg-emerald-50 p-4 rounded-2xl border border-emerald-100">
-                                <div class="text-xs text-slate-500 font-bold uppercase">Ketepatan</div>
+                                <div class="text-xs text-slate-500 font-bold uppercase">Accuracy</div>
                                 <div class="text-2xl font-extrabold text-emerald-600">${accuracy}%</div>
                             </div>
                         </div>
 
                         <div class="space-y-2 mb-6 text-left bg-slate-50 p-4 rounded-2xl border border-slate-200">
                             <div class="flex justify-between text-sm font-semibold text-slate-700">
-                                <span>Jumlah Soalan:</span>
+                                <span>Questions:</span>
                                 <span>20</span>
                             </div>
                             <div class="flex justify-between text-sm font-semibold text-emerald-600">
-                                <span>Jawapan Betul:</span>
+                                <span>Correct Answers:</span>
                                 <span>${session.correctCount}</span>
                             </div>
                             <div class="flex justify-between text-sm font-semibold text-rose-600">
-                                <span>Jawapan Salah:</span>
+                                <span>Incorrect Answers:</span>
                                 <span>${session.wrongCount}</span>
                             </div>
                         </div>
@@ -973,14 +978,14 @@
                             </button>
                             <div class="grid grid-cols-2 gap-2">
                                 <button onclick="GameState.renderTopicSelection()" class="py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition">
-                                    📚 Pilih Topik Lain
+                                    📚 Choose a Topic Lain
                                 </button>
                                 <button onclick="GameState.renderLeaderboard()" class="py-2.5 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-xl font-bold text-sm transition">
                                     🏆 Leaderboard
                                 </button>
                             </div>
                             <button onclick="GameState.renderMainMenu()" class="w-full py-2.5 bg-white hover:bg-slate-50 text-indigo-600 rounded-xl font-bold text-sm border border-indigo-200 transition">
-                                🏠 Menu Utama
+                                🏠 Main Menu
                             </button>
                         </div>
                     </div>
@@ -996,13 +1001,13 @@
                 <div class="flex-1 flex flex-col p-4 max-w-2xl mx-auto w-full">
                     <div class="flex items-center justify-between mb-6">
                         <button onclick="GameState.renderMainMenu()" class="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-xl font-bold shadow-sm border border-slate-200 transition flex items-center space-x-2">
-                            <i class="fa-solid fa-arrow-left"></i> <span>Menu Utama</span>
+                            <i class="fa-solid fa-arrow-left"></i> <span>Main Menu</span>
                         </button>
-                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">🏆 Leaderboard Pemain</h2>
+                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">🏆 Player Leaderboard</h2>
                     </div>
 
                     <div class="bg-white rounded-3xl p-6 shadow-xl border border-indigo-100 space-y-3">
-                        ${sorted.length === 0 ? '<p class="text-center text-slate-500 py-6">Belum ada pemain dalam senarai.</p>' : ''}
+                        ${sorted.length === 0 ? '<p class="text-center text-slate-500 py-6">No players on the leaderboard yet.</p>' : ''}
                         ${sorted.map((u, idx) => `
                             <div class="flex items-center justify-between p-4 rounded-2xl ${idx === 0 ? 'bg-amber-50 border border-amber-200' : (idx === 1 ? 'bg-slate-100' : (idx === 2 ? 'bg-amber-50/50' : 'bg-slate-50'))}">
                                 <div class="flex items-center space-x-4">
@@ -1015,8 +1020,8 @@
                                     </div>
                                 </div>
                                 <div class="text-right">
-                                    <div class="text-lg font-extrabold text-indigo-600">${u.totalScore} markah</div>
-                                    <div class="text-xs text-slate-500">${u.correctAnswers} jawapan betul</div>
+                                    <div class="text-lg font-extrabold text-indigo-600">${u.totalScore} marks</div>
+                                    <div class="text-xs text-slate-500">${u.correctAnswers} correct answers</div>
                                 </div>
                             </div>
                         `).join('')}
@@ -1033,9 +1038,9 @@
                 <div class="flex-1 flex flex-col p-4 max-w-2xl mx-auto w-full">
                     <div class="flex items-center justify-between mb-6">
                         <button onclick="GameState.renderMainMenu()" class="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-xl font-bold shadow-sm border border-slate-200 transition flex items-center space-x-2">
-                            <i class="fa-solid fa-arrow-left"></i> <span>Menu Utama</span>
+                            <i class="fa-solid fa-arrow-left"></i> <span>Main Menu</span>
                         </button>
-                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">📊 Progress Saya</h2>
+                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">📊 My Progress</h2>
                     </div>
 
                     <div class="space-y-4">
@@ -1045,20 +1050,20 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-slate-800">${u.name}</h3>
-                                <p class="text-xs text-slate-500">Nama Pengguna: @${u.username}</p>
+                                <p class="text-xs text-slate-500">Username: @${u.username}</p>
                                 <div class="mt-2 flex space-x-2">
-                                    <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-lg text-xs font-bold">⭐ Jumlah Markah: ${u.totalScore}</span>
-                                    <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-lg text-xs font-bold">✅ Betul: ${u.correctAnswers}</span>
+                                    <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-lg text-xs font-bold">⭐ Total Marks: ${u.totalScore}</span>
+                                    <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-lg text-xs font-bold">✅ Correct: ${u.correctAnswers}</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="bg-white rounded-3xl p-6 shadow-xl border border-indigo-100 space-y-4">
-                            <h3 class="font-bold text-slate-800 text-base mb-2">Pencapaian Mengikut Topik Wang</h3>
+                            <h3 class="font-bold text-slate-800 text-base mb-2">Progress by Money Topic</h3>
                             ${[1, 2, 3, 4, 5, 6].map(tId => `
                                 <div class="space-y-1">
                                     <div class="flex justify-between text-xs font-bold text-slate-700">
-                                        <span>Topik ${tId}: ${TopicNames[tId].substring(0, 35)}...</span>
+                                        <span>Topic ${tId}: ${TopicNames[tId].substring(0, 35)}...</span>
                                         <span>${u.topicProgress[tId] || 0}%</span>
                                     </div>
                                     <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
@@ -1078,31 +1083,31 @@
                 <div class="flex-1 flex flex-col p-4 max-w-2xl mx-auto w-full">
                     <div class="flex items-center justify-between mb-6">
                         <button onclick="GameState.renderMainMenu()" class="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-xl font-bold shadow-sm border border-slate-200 transition flex items-center space-x-2">
-                            <i class="fa-solid fa-arrow-left"></i> <span>Menu Utama</span>
+                            <i class="fa-solid fa-arrow-left"></i> <span>Main Menu</span>
                         </button>
-                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">❓ Cara Bermain</h2>
+                        <h2 class="text-2xl font-extrabold text-slate-800 font-title">❓ How to Play</h2>
                     </div>
 
                     <div class="bg-white rounded-3xl p-6 shadow-xl border border-indigo-100 space-y-4 text-slate-600 text-sm leading-relaxed">
                         <div class="flex items-start space-x-3">
                             <div class="bg-indigo-50 p-2 rounded-xl text-indigo-600 font-bold">1</div>
                             <div>
-                                <h4 class="font-bold text-slate-800">Pilih Topik & Tahap</h4>
-                                <p>Terdapat 6 topik utama Matematik Tahun 6 KPM dan 3 tahap kesukaran (Mudah, Sederhana, Sukar).</p>
+                                <h4 class="font-bold text-slate-800">Choose a Topic and Level</h4>
+                                <p>There are six Year 6 topics and three difficulty levels.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-3">
                             <div class="bg-emerald-50 p-2 rounded-xl text-emerald-600 font-bold">2</div>
                             <div>
-                                <h4 class="font-bold text-slate-800">Jawab Soalan</h4>
-                                <p>Setiap sesi mempunyai 20 soalan dengan 5 markah setiap jawapan betul. Perhatikan masa jika anda memilih mod bermasa!</p>
+                                <h4 class="font-bold text-slate-800">Answer Questions</h4>
+                                <p>Each session has 20 questions. Every correct answer earns 5 marks. Check the timer if you choose a time limit.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-3">
                             <div class="bg-amber-50 p-2 rounded-xl text-amber-600 font-bold">3</div>
                             <div>
-                                <h4 class="font-bold text-slate-800">Kumpul Markah & Naik Pangkat</h4>
-                                <p>Kumpul markah tertinggi, naikkan pencapaian anda ke tahap cemerlang dan kuasai carta leaderboard pemain!</p>
+                                <h4 class="font-bold text-slate-800">Earn Marks and Improve Your Ranking</h4>
+                                <p>Earn marks to improve your leaderboard ranking.</p>
                             </div>
                         </div>
                     </div>
@@ -1112,21 +1117,21 @@
 
         window.openAccountModal = function() {
             const u = GameState.currentUser;
-            showModal('Tetapan Akaun Pemain', `
+            showModal('Player Account Settings', `
                 <div class="space-y-4">
                     <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-                        <div class="text-xs text-slate-500 font-bold">Pemain Aktif:</div>
+                        <div class="text-xs text-slate-500 font-bold">Current Player:</div>
                         <div class="font-bold text-slate-800">${u.name} (@${u.username})</div>
                     </div>
                     <button onclick="closeModal(); GameState.logout();" class="w-full py-2.5 bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-xl font-bold text-sm transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-right-from-bracket"></i> <span>Log Keluar (Logout)</span>
+                        <i class="fa-solid fa-right-from-bracket"></i> <span>Log Out</span>
                     </button>
                     <button onclick="closeModal(); resetUserProgress();" class="w-full py-2.5 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-xl font-bold text-sm transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-rotate-left"></i> <span>Reset Progress Saya</span>
+                        <i class="fa-solid fa-rotate-left"></i> <span>Reset My Progress</span>
                     </button>
                 </div>
             `, [
-                { text: "Tutup", onclick: "closeModal()", class: "bg-slate-200 hover:bg-slate-300 text-slate-700" }
+                { text: "Close", onclick: "closeModal()", class: "bg-slate-200 hover:bg-slate-300 text-slate-700" }
             ]);
         };
 
@@ -1137,7 +1142,7 @@
             GameState.currentUser.wrongAnswers = 0;
             GameState.currentUser.topicProgress = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
             GameState.saveUsers();
-            showNotification('Progress anda telah di-reset.', 'success');
+            showNotification('Progress has been reset.', 'success');
             GameState.renderMainMenu();
         };
 

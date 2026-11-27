@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids Bernama Edu Kidz - Matematik Tahun 3: Koordinat</title>
+    <title>Math Kids Bernama Edu Kidz - Year 3 Mathematics: Coordinates</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -90,30 +90,30 @@
             </div>
             <div>
                 <h1 class="text-xl md:text-2xl font-bold text-blue-900 tracking-wide leading-none">MATH KIDS</h1>
-                <p class="text-xs md:text-sm font-semibold text-emerald-600">BERNAMA EDU KIDZ • TAHUN 3</p>
+                <p class="text-xs md:text-sm font-semibold text-emerald-600">BERNAMA EDU KIDZ • YEAR 3</p>
             </div>
         </div>
 
         <!-- Navigation Controls & User Profile Info -->
         <div class="flex items-center gap-2 sm:gap-4">
             <!-- HOME BUTTON (Always accessible) -->
-            <button onclick="showScreen('screenMainMenu')" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-xl font-bold text-xs md:text-sm flex items-center gap-1.5 shadow btn-bounce" title="Kembali ke Menu Utama">
+            <button onclick="showScreen('screenMainMenu')" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-xl font-bold text-xs md:text-sm flex items-center gap-1.5 shadow btn-bounce" title="Back to Main Menu">
                 <i class="fa-solid fa-house"></i>
-                <span class="hidden sm:inline">Menu Utama</span>
+                <span class="hidden sm:inline">Main Menu</span>
             </button>
 
             <!-- User Profile Info -->
             <div id="userHeaderInfo" class="hidden flex items-center gap-2 sm:gap-4">
                 <div class="text-right hidden sm:block">
-                    <span class="block text-xs font-bold text-gray-500">PEMAIN</span>
-                    <span id="currentUserName" class="text-base font-bold text-blue-700">Tetamu</span>
+                    <span class="block text-xs font-bold text-gray-500">PLAYER</span>
+                    <span id="currentUserName" class="text-base font-bold text-blue-700">Guest</span>
                 </div>
                 <div class="bg-blue-100 border-2 border-blue-400 p-2 rounded-xl flex items-center gap-2">
                     <i class="fa-solid fa-star text-yellow-500 star-shine text-lg"></i>
                     <span id="currentUserScore" class="font-bold text-blue-900 text-lg">0</span>
                 </div>
                 <button onclick="logout()" class="bg-red-100 hover:bg-red-200 text-red-600 p-2 rounded-xl font-bold text-xs flex items-center gap-1 border border-red-300">
-                    <i class="fa-solid fa-right-from-bracket"></i> <span class="hidden md:inline">Keluar</span>
+                    <i class="fa-solid fa-right-from-bracket"></i> <span class="hidden md:inline">Log Out</span>
                 </button>
             </div>
         </div>
@@ -132,42 +132,42 @@
                     <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tr from-yellow-300 to-amber-400 rounded-full flex items-center justify-center text-5xl border-4 border-white shadow-lg">
                         🐱‍🚀
                     </div>
-                    <span class="absolute -bottom-2 -right-2 bg-emerald-500 text-white text-xs px-2 py-1 rounded-full border-2 border-white font-bold">Matik!</span>
+                    <span class="absolute -bottom-2 -right-2 bg-emerald-500 text-white text-xs px-2 py-1 rounded-full border-2 border-white font-bold">Maths!</span>
                 </div>
             </div>
 
             <h2 class="text-3xl md:text-5xl font-black text-blue-900 mb-1 tracking-wider drop-shadow-sm">
-                MATEMATIK TAHUN 3
+                YEAR 3 MATHEMATICS
             </h2>
             <div class="inline-block bg-blue-600 text-white font-bold px-6 py-1.5 rounded-full text-base md:text-lg shadow-md mb-6">
-                SUBTOPIK: KOORDINAT (KPM)
+                COORDINATES (KPM)
             </div>
 
             <!-- Action Buttons Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-6">
                 <button onclick="showStartPlayModal()" class="sm:col-span-2 md:col-span-3 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xl py-4 px-6 rounded-2xl shadow-lg border-b-4 border-emerald-700 btn-bounce flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-play text-2xl"></i> MULA BERMAIN NOW
+                    <i class="fa-solid fa-play text-2xl"></i> PLAY NOW
                 </button>
 
                 <button onclick="showScreen('screenAuth')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg py-3 px-4 rounded-xl shadow border-b-4 border-blue-700 btn-bounce flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-user-plus"></i> DAFTAR / LOG MASUK
+                    <i class="fa-solid fa-user-plus"></i> REGISTER / LOG IN
                 </button>
 
                 <button onclick="showScreen('screenGuide')" class="bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg py-3 px-4 rounded-xl shadow border-b-4 border-amber-700 btn-bounce flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-book-open"></i> PANDUAN
+                    <i class="fa-solid fa-book-open"></i> GAME GUIDE
                 </button>
 
                 <button onclick="showRecordsScreen()" class="bg-purple-500 hover:bg-purple-600 text-white font-bold text-lg py-3 px-4 rounded-xl shadow border-b-4 border-purple-700 btn-bounce flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-chart-line"></i> REKOD MARKAH
+                    <i class="fa-solid fa-chart-line"></i> SCORE RECORDS
                 </button>
 
                 <button onclick="showLeaderboardScreen()" class="sm:col-span-2 md:col-span-3 bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white font-bold text-lg py-3 px-4 rounded-xl shadow border-b-4 border-pink-700 btn-bounce flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-trophy text-yellow-300"></i> LEADERBOARD KELAS
+                    <i class="fa-solid fa-trophy text-yellow-300"></i> CLASS LEADERBOARD
                 </button>
             </div>
 
             <p class="text-xs text-gray-500 font-semibold">
-                Sistem Pengukuhan Koordinat Mengikut Kurikulum Standard Sekolah Rendah (KSSR Semakan)
+                Coordinates practice for the revised Primary School Standard Curriculum (KSSR)
             </p>
         </div>
 
@@ -175,84 +175,84 @@
         <div id="screenAuth" class="hidden w-full max-w-md custom-card rounded-3xl p-6 md:p-8">
             <div class="text-center mb-6">
                 <div class="text-4xl mb-2">🔑</div>
-                <h2 class="text-2xl font-bold text-blue-900">Akaun Murid</h2>
-                <p class="text-xs text-gray-600">Daftar atau masuk untuk menyimpan progress & markah kamu.</p>
+                <h2 class="text-2xl font-bold text-blue-900">Pupil Account</h2>
+                <p class="text-xs text-gray-600">Register or log in to save your progress and marks.</p>
             </div>
 
             <div class="flex mb-6 bg-blue-50 p-1 rounded-xl border border-blue-200">
-                <button id="tabLoginBtn" onclick="switchAuthTab('login')" class="flex-1 py-2 rounded-lg font-bold text-sm bg-white text-blue-900 shadow">Log Masuk</button>
-                <button id="tabRegisterBtn" onclick="switchAuthTab('register')" class="flex-1 py-2 rounded-lg font-bold text-sm text-gray-600">Daftar Baharu</button>
+                <button id="tabLoginBtn" onclick="switchAuthTab('login')" class="flex-1 py-2 rounded-lg font-bold text-sm bg-white text-blue-900 shadow">Log In</button>
+                <button id="tabRegisterBtn" onclick="switchAuthTab('register')" class="flex-1 py-2 rounded-lg font-bold text-sm text-gray-600">Create an Account</button>
             </div>
 
             <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Nama Pengguna</label>
-                    <input type="text" id="loginUsername" required class="w-full p-3 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none font-semibold text-gray-800" placeholder="Contoh: Amir99">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Username</label>
+                    <input type="text" id="loginUsername" required class="w-full p-3 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none font-semibold text-gray-800" placeholder="e.g. Amir99">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Kata Laluan</label>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Password</label>
                     <input type="password" id="loginPassword" required class="w-full p-3 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none font-semibold text-gray-800" placeholder="••••••••">
                 </div>
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-md btn-bounce">
-                    Mula Log Masuk
+                    Log In
                 </button>
             </form>
 
             <form id="registerForm" onsubmit="handleRegister(event)" class="hidden space-y-4">
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Nama Penuh Murid</label>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Pupil's Full Name</label>
                     <input type="text" id="regFullName" required class="w-full p-3 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none font-semibold text-gray-800" placeholder="Ali bin Ahmad">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Nama Pengguna (Username)</label>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Username</label>
                     <input type="text" id="regUsername" required class="w-full p-3 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none font-semibold text-gray-800" placeholder="ali2026">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Kata Laluan</label>
-                    <input type="password" id="regPassword" required class="w-full p-3 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none font-semibold text-gray-800" placeholder="Cipta kata laluan">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Password</label>
+                    <input type="password" id="regPassword" required class="w-full p-3 rounded-xl border-2 border-blue-300 focus:border-blue-600 focus:outline-none font-semibold text-gray-800" placeholder="Create a password">
                 </div>
                 <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow-md btn-bounce">
-                    Daftar Akaun Baharu
+                    Create an Account
                 </button>
             </form>
 
             <button onclick="showScreen('screenMainMenu')" class="w-full mt-4 text-center text-sm font-bold text-gray-500 hover:text-blue-700">
-                <i class="fa-solid fa-arrow-left"></i> Kembali ke Menu Utama
+                <i class="fa-solid fa-arrow-left"></i> Back to Main Menu
             </button>
         </div>
 
         <!-- 3. SELECTION SETUP SCREEN -->
         <div id="screenTopicSelect" class="hidden w-full max-w-4xl custom-card rounded-3xl p-6 md:p-8">
             <h2 class="text-2xl md:text-3xl font-black text-center text-blue-900 mb-6">
-                🎯 PILIH TETAPAN PERMAINAN
+                🎯 GAME SETTINGS
             </h2>
 
             <!-- Step 1: Topic -->
             <div class="mb-6">
                 <label class="block text-sm font-extrabold text-blue-800 mb-3 flex items-center gap-2">
                     <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">1</span>
-                    PILIH SUBTOPIK:
+                    CHOOSE A TOPIC:
                 </label>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <button onclick="selectTopic('Kenal Kedudukan')" id="topikA" class="topic-btn border-2 border-blue-300 p-4 rounded-2xl text-left bg-blue-50 hover:bg-blue-100 transition">
                         <div class="text-3xl mb-1">📍</div>
-                        <div class="font-bold text-blue-900">TOPIK A</div>
-                        <div class="text-sm font-semibold text-blue-700">Kenal Kedudukan</div>
-                        <div class="text-xs text-gray-500 mt-1">Baris, lajur & kedudukan objek asas.</div>
+                        <div class="font-bold text-blue-900">TOPIC A</div>
+                        <div class="text-sm font-semibold text-blue-700">Recognising Positions</div>
+                        <div class="text-xs text-gray-500 mt-1">Find rows, columns and object positions.</div>
                     </button>
 
                     <button onclick="selectTopic('Tentukan Kedudukan')" id="topikB" class="topic-btn border-2 border-blue-300 p-4 rounded-2xl text-left bg-blue-50 hover:bg-blue-100 transition">
                         <div class="text-3xl mb-1">🧭</div>
-                        <div class="font-bold text-blue-900">TOPIK B</div>
-                        <div class="text-sm font-semibold text-blue-700">Tentukan Kedudukan</div>
-                        <div class="text-xs text-gray-500 mt-1">Membaca & menulis koordinat grid.</div>
+                        <div class="font-bold text-blue-900">TOPIC B</div>
+                        <div class="text-sm font-semibold text-blue-700">Finding Positions</div>
+                        <div class="text-xs text-gray-500 mt-1">Read and write grid coordinates.</div>
                     </button>
 
                     <button onclick="selectTopic('Penyelesaian Masalah')" id="topikC" class="topic-btn border-2 border-blue-300 p-4 rounded-2xl text-left bg-blue-50 hover:bg-blue-100 transition">
                         <div class="text-3xl mb-1">💡</div>
-                        <div class="font-bold text-blue-900">TOPIK C</div>
-                        <div class="text-sm font-semibold text-blue-700">Penyelesaian Masalah</div>
-                        <div class="text-xs text-gray-500 mt-1">Soalan cerita & petunjuk lokasi.</div>
+                        <div class="font-bold text-blue-900">TOPIC C</div>
+                        <div class="text-sm font-semibold text-blue-700">Problem Solving</div>
+                        <div class="text-xs text-gray-500 mt-1">Solve problems using position clues.</div>
                     </button>
                 </div>
             </div>
@@ -261,17 +261,17 @@
             <div class="mb-6">
                 <label class="block text-sm font-extrabold text-blue-800 mb-3 flex items-center gap-2">
                     <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">2</span>
-                    PILIH TAHAP KESUKARAN:
+                    CHOOSE A DIFFICULTY LEVEL:
                 </label>
                 <div class="grid grid-cols-3 gap-3">
                     <button onclick="selectDifficulty('Senang')" id="diffSenang" class="diff-btn border-2 border-emerald-300 p-3 rounded-xl font-bold text-emerald-800 bg-emerald-50 text-center hover:bg-emerald-100">
-                        ⭐ TAHAP 1<br><span class="text-xs font-normal">Senang</span>
+                        ⭐ LEVEL 1<br><span class="text-xs font-normal">Easy</span>
                     </button>
                     <button onclick="selectDifficulty('Sederhana')" id="diffSederhana" class="diff-btn border-2 border-amber-300 p-3 rounded-xl font-bold text-amber-800 bg-amber-50 text-center hover:bg-amber-100">
-                        ⭐⭐ TAHAP 2<br><span class="text-xs font-normal">Sederhana</span>
+                        ⭐⭐ LEVEL 2<br><span class="text-xs font-normal">Medium</span>
                     </button>
                     <button onclick="selectDifficulty('Susah')" id="diffSusah" class="diff-btn border-2 border-red-300 p-3 rounded-xl font-bold text-red-800 bg-red-50 text-center hover:bg-red-100">
-                        ⭐⭐⭐ TAHAP 3<br><span class="text-xs font-normal">Susah / KBAT</span>
+                        ⭐⭐⭐ LEVEL 3<br><span class="text-xs font-normal">Hard</span>
                     </button>
                 </div>
             </div>
@@ -280,17 +280,17 @@
             <div class="mb-8">
                 <label class="block text-sm font-extrabold text-blue-800 mb-3 flex items-center gap-2">
                     <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">3</span>
-                    PILIH MASA MENJAWAB (PILIHAN):
+                    CHOOSE A TIME LIMIT:
                 </label>
                 <div class="grid grid-cols-3 gap-3">
                     <button onclick="selectTimer(30)" id="timer30" class="timer-btn border-2 border-gray-300 p-2.5 rounded-xl text-center font-bold text-sm bg-gray-50">
-                        ⏱️ 30 Saat / Soalan
+                        ⏱️ 30 Seconds per Question
                     </button>
                     <button onclick="selectTimer(60)" id="timer60" class="timer-btn border-2 border-gray-300 p-2.5 rounded-xl text-center font-bold text-sm bg-gray-50">
-                        ⏱️ 1 Minit / Soalan
+                        ⏱️ 1 Minute per Question
                     </button>
                     <button onclick="selectTimer(0)" id="timer0" class="timer-btn border-2 border-gray-300 p-2.5 rounded-xl text-center font-bold text-sm bg-gray-50">
-                        ♾️ Tiada Had Masa
+                        ♾️ No Time Limit
                     </button>
                 </div>
             </div>
@@ -298,10 +298,10 @@
             <!-- Start Action Button -->
             <div class="flex gap-4">
                 <button onclick="showScreen('screenMainMenu')" class="w-1/3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3.5 rounded-2xl">
-                    Kembali
+                    Back
                 </button>
                 <button onclick="startGameSession()" class="w-2/3 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xl py-3.5 rounded-2xl shadow-lg border-b-4 border-emerald-700 btn-bounce flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-bolt"></i> MULA CABARAN NOW!
+                    <i class="fa-solid fa-bolt"></i> START QUIZ
                 </button>
             </div>
         </div>
@@ -314,13 +314,13 @@
                     <button onclick="showScreen('screenMainMenu')" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow btn-bounce">
                         <i class="fa-solid fa-house"></i> Home
                     </button>
-                    <span id="gameTopicBadge" class="bg-blue-600 text-white font-bold text-xs px-3 py-1 rounded-full">Topik A</span>
-                    <span id="gameDiffBadge" class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">Senang</span>
+                    <span id="gameTopicBadge" class="bg-blue-600 text-white font-bold text-xs px-3 py-1 rounded-full">Topic A</span>
+                    <span id="gameDiffBadge" class="bg-emerald-600 text-white font-bold text-xs px-3 py-1 rounded-full">Easy</span>
                 </div>
 
                 <div class="flex items-center gap-4">
                     <div class="font-bold text-sm text-gray-600">
-                        Soalan: <span id="currentQNum" class="text-blue-700 font-black text-lg">1</span> / 20
+                        Question: <span id="currentQNum" class="text-blue-700 font-black text-lg">1</span> / 20
                     </div>
                     <div class="bg-yellow-300 border border-yellow-500 px-3 py-1 rounded-xl font-bold text-blue-900 text-sm flex items-center gap-1">
                         ⭐ <span id="gameScoreDisplay">0</span>
@@ -337,7 +337,7 @@
                 <!-- Left Column: Visual Grid Diagram -->
                 <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-4 flex flex-col items-center justify-center min-h-[280px]">
                     <div id="diagramTitle" class="text-xs font-black text-blue-900 mb-2 uppercase tracking-wide">
-                        📍 RAJAH GRID KOORDINAT
+                        📍 COORDINATE GRID
                     </div>
                     <div id="diagramContainer" class="w-full flex justify-center items-center">
                         <!-- Rendered via JS -->
@@ -351,7 +351,7 @@
                             <span class="bg-purple-100 text-purple-800 text-xs font-extrabold px-3 py-1 rounded-full" id="questionTypeBadge">
                                 Format: Objektif
                             </span>
-                            <span class="text-xs font-bold text-amber-600"><i class="fa-solid fa-award"></i> 5 Markah</span>
+                            <span class="text-xs font-bold text-amber-600"><i class="fa-solid fa-award"></i> 5 marks</span>
                         </div>
                         <h3 id="questionText" class="text-lg md:text-xl font-black text-blue-950 leading-snug">
                             Apakah koordinat bagi rumah di atas grid?
@@ -370,7 +370,7 @@
                     </div>
 
                     <button id="nextBtn" onclick="nextQuestion()" class="hidden w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-md btn-bounce flex items-center justify-center gap-2">
-                        Soalan Seterusnya <i class="fa-solid fa-arrow-right"></i>
+                        Next Question <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
@@ -379,31 +379,31 @@
         <!-- 5. FINAL RESULTS SCREEN -->
         <div id="screenResults" class="hidden w-full max-w-2xl custom-card rounded-3xl p-6 md:p-8 text-center">
             <div class="text-5xl mb-2">🎉</div>
-            <h2 class="text-3xl font-black text-blue-900 mb-1">KEPUTUSAN PERMAINAN</h2>
-            <p class="text-sm font-semibold text-gray-600 mb-6">Syabas! Kamu telah menyelesaikan set latihan ini.</p>
+            <h2 class="text-3xl font-black text-blue-900 mb-1">QUIZ RESULTS</h2>
+            <p class="text-sm font-semibold text-gray-600 mb-6">Well done! You have completed the quiz.</p>
 
             <div class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-6 rounded-2xl shadow-lg mb-6">
-                <div class="text-xs font-bold uppercase tracking-wider text-blue-200 mb-1">JUMLAH MARKAH</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-blue-200 mb-1">TOTAL MARKS</div>
                 <div class="text-5xl font-black mb-2"><span id="finalScore">85</span> <span class="text-2xl text-blue-200">/ 100</span></div>
                 
                 <div class="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-blue-400/50 text-center">
                     <div>
-                        <div class="text-xs text-blue-200">BETUL</div>
+                        <div class="text-xs text-blue-200">CORRECT</div>
                         <div id="finalCorrect" class="text-xl font-bold text-emerald-300">17</div>
                     </div>
                     <div>
-                        <div class="text-xs text-blue-200">SALAH</div>
+                        <div class="text-xs text-blue-200">INCORRECT</div>
                         <div id="finalWrong" class="text-xl font-bold text-red-300">3</div>
                     </div>
                     <div>
-                        <div class="text-xs text-blue-200">KETEPATAN</div>
+                        <div class="text-xs text-blue-200">ACCURACY</div>
                         <div id="finalAccuracy" class="text-xl font-bold text-yellow-300">85%</div>
                     </div>
                 </div>
             </div>
 
             <div id="recommendationBox" class="bg-amber-50 border border-amber-300 rounded-xl p-3 text-left text-xs text-amber-900 mb-6">
-                <span class="font-bold">💡 Cadangan Pembelajaran:</span> <span id="recommendationText">Tahniah, penguasaan kamu amat memuaskan!</span>
+                <span class="font-bold">💡 Learning Feedback:</span> <span id="recommendationText">Well done! Keep practising your coordinate skills.</span>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -411,13 +411,13 @@
                     🔄 Main Lagi Set Ini
                 </button>
                 <button onclick="showScreen('screenTopicSelect')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow btn-bounce">
-                    🎯 Pilih Topik Lain
+                    🎯 Choose Another Topic
                 </button>
                 <button onclick="showRecordsScreen()" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-xl shadow btn-bounce">
                     📊 Lihat Rekod Saya
                 </button>
                 <button onclick="showScreen('screenMainMenu')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 rounded-xl shadow btn-bounce">
-                    🏠 Menu Utama
+                    🏠 Main Menu
                 </button>
             </div>
         </div>
@@ -428,12 +428,12 @@
                 <div class="flex items-center gap-3">
                     <div class="text-3xl">🏆</div>
                     <div>
-                        <h2 class="text-2xl font-bold text-blue-900">LEADERBOARD KELAS</h2>
-                        <p class="text-xs text-gray-500">Kedudukan markah tertinggi murid-murid.</p>
+                        <h2 class="text-2xl font-bold text-blue-900">CLASS LEADERBOARD</h2>
+                        <p class="text-xs text-gray-500">Top scores for pupils.</p>
                     </div>
                 </div>
                 <button onclick="showScreen('screenMainMenu')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-xl text-xs font-bold">
-                    Tutup
+                    Close
                 </button>
             </div>
 
@@ -441,10 +441,10 @@
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="bg-blue-50 text-blue-900 text-xs font-bold border-b border-gray-200">
-                            <th class="p-3">KEDUDUKAN</th>
-                            <th class="p-3">NAMA PEMAIN</th>
-                            <th class="p-3">MARKAH TERTINGGI</th>
-                            <th class="p-3">KETEPATAN</th>
+                            <th class="p-3">RANK</th>
+                            <th class="p-3">PLAYER NAME</th>
+                            <th class="p-3">HIGHEST SCORE</th>
+                            <th class="p-3">ACCURACY</th>
                         </tr>
                     </thead>
                     <tbody id="leaderboardTbody" class="divide-y divide-gray-100 text-sm">
@@ -458,66 +458,66 @@
         <div id="screenRecords" class="hidden w-full max-w-3xl custom-card rounded-3xl p-6 md:p-8">
             <div class="flex justify-between items-center mb-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-blue-900">📊 REKOD & KEMAJUAN PEMAIN</h2>
-                    <p id="recordUserSubtitle" class="text-xs text-gray-500">Pemain: Tetamu</p>
+                    <h2 class="text-2xl font-bold text-blue-900">📊 PLAYER RECORDS AND PROGRESS</h2>
+                    <p id="recordUserSubtitle" class="text-xs text-gray-500">Player: Guest</p>
                 </div>
                 <button onclick="showScreen('screenMainMenu')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-xl text-xs font-bold">
-                    Tutup
+                    Close
                 </button>
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                 <div class="bg-blue-50 p-3 rounded-xl border border-blue-200 text-center">
-                    <div class="text-xs text-blue-600 font-bold">JUMLAH SESI</div>
+                    <div class="text-xs text-blue-600 font-bold">TOTAL SESSIONS</div>
                     <div id="statTotalSessions" class="text-2xl font-black text-blue-900">0</div>
                 </div>
                 <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-center">
-                    <div class="text-xs text-emerald-600 font-bold">MARKAH TERTINGGI</div>
+                    <div class="text-xs text-emerald-600 font-bold">HIGHEST SCORE</div>
                     <div id="statHighScore" class="text-2xl font-black text-emerald-900">0</div>
                 </div>
                 <div class="bg-yellow-50 p-3 rounded-xl border border-yellow-200 text-center">
-                    <div class="text-xs text-yellow-600 font-bold">JAWAPAN BETUL</div>
+                    <div class="text-xs text-yellow-600 font-bold">CORRECT ANSWERS</div>
                     <div id="statTotalCorrect" class="text-2xl font-black text-yellow-900">0</div>
                 </div>
                 <div class="bg-purple-50 p-3 rounded-xl border border-purple-200 text-center">
-                    <div class="text-xs text-purple-600 font-bold">PURATA KETEPATAN</div>
+                    <div class="text-xs text-purple-600 font-bold">AVERAGE ACCURACY</div>
                     <div id="statAvgAccuracy" class="text-2xl font-black text-purple-900">0%</div>
                 </div>
             </div>
 
-            <h3 class="font-bold text-sm text-gray-700 mb-2">Sejarah Permainan Terakhir</h3>
+            <h3 class="font-bold text-sm text-gray-700 mb-2">Recent Games</h3>
             <div class="bg-white rounded-xl border border-gray-200 max-h-48 overflow-y-auto p-2 space-y-2" id="historyList">
-                <p class="text-xs text-gray-400 text-center py-4">Tiada rekod permainan lagi.</p>
+                <p class="text-xs text-gray-400 text-center py-4">There are no games to show yet.</p>
             </div>
         </div>
 
         <!-- 8. GUIDE SCREEN -->
         <div id="screenGuide" class="hidden w-full max-w-3xl custom-card rounded-3xl p-6 md:p-8">
             <h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-2">
-                📖 PANDUAN PERMAINAN & SILIBUS KOORDINAT
+                📖 COORDINATES GAME GUIDE
             </h2>
             <div class="space-y-4 text-sm text-gray-700 leading-relaxed max-h-[60vh] overflow-y-auto pr-2">
                 <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
-                    <h3 class="font-bold text-blue-900 mb-1">📍 Konsep Utama Koordinat Tahun 3:</h3>
+                    <h3 class="font-bold text-blue-900 mb-1">📍 Year 3 Coordinate Skills:</h3>
                     <ul class="list-disc list-inside space-y-1 text-xs">
-                        <li><strong>Kedudukan:</strong> Menggunakan paksi mendatar (lajur A, B, C, D) dan paksi menegak (baris 1, 2, 3, 4).</li>
-                        <li><strong>Membaca Koordinat:</strong> Format bertulis (Lajur, Baris) contohnya (A, 1) atau (B, 3).</li>
-                        <li><strong>Objek Visual:</strong> Simbol/Objek haiwan, buahan, kenderaan dan rumah diletakkan pada petak grid.</li>
+                        <li><strong>Positions:</strong> Columns A to D run from left to right. Rows 1 to 4 run from bottom to top.</li>
+                        <li><strong>Reading Coordinates:</strong> Write the column first and the row second, for example (A, 1) or (B, 3).</li>
+                        <li><strong>Grid Symbols:</strong> Animals, fruit, vehicles and houses appear in squares on the grid.</li>
                     </ul>
                 </div>
 
                 <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
-                    <h3 class="font-bold text-emerald-900 mb-1">🎮 Jenis Permainan:</h3>
+                    <h3 class="font-bold text-emerald-900 mb-1">🎮 Game Formats:</h3>
                     <ul class="list-disc list-inside space-y-1 text-xs">
-                        <li><strong>Objektif Visual:</strong> Pilih 1 jawapan tepat daripada pilihan A, B, C, atau D yang dipaparkan bersama ikon/gambar.</li>
-                        <li><strong>Petak Grid Interaktif:</strong> Tekan terus pada petak grid sasaran di sebelah kiri.</li>
-                        <li><strong>Isi Tempat Kosong:</strong> Taip atau lengkapkan nombor/huruf koordinat.</li>
+                        <li><strong>Multiple Choice:</strong> Choose one answer from A, B, C or D.</li>
+                        <li><strong>Interactive Grid:</strong> Select the target square on the grid.</li>
+                        <li><strong>Fill in the Blank:</strong> Type the column letter, coordinates or object name requested.</li>
                     </ul>
                 </div>
             </div>
 
             <button onclick="showScreen('screenMainMenu')" class="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl">
-                Saya Faham, Kembali
+                Back to Main Menu
             </button>
         </div>
 
@@ -525,7 +525,7 @@
 
     <!-- FOOTER -->
     <footer class="text-center text-xs font-semibold text-slate-500 py-3 mt-4">
-        Math Kids Bernama Edu Kidz © 2026 • Modul Pembelajaran Matematik Tahun 3 (KPM)
+        Math Kids Bernama Edu Kidz © 2026 • Year 3 Mathematics Learning Module (KPM)
     </footer>
 
     <script>
@@ -542,6 +542,14 @@
         let timerInterval = null;
         let timeLeft = 0;
         let interactiveGridSelected = null;
+
+        const topicLabels = {
+            'Kenal Kedudukan': 'Recognising Positions',
+            'Tentukan Kedudukan': 'Finding Positions',
+            'Penyelesaian Masalah': 'Problem Solving'
+        };
+        const difficultyLabels = { Senang: 'Easy', Sederhana: 'Medium', Susah: 'Hard' };
+        const objectNames = ['cat', 'dog', 'car', 'house', 'apple', 'tree', 'rocket', 'football', 'backpack', 'star', 'gift', 'bear', 'crown', 'ice cream', 'balloon', 'sailing boat'];
 
         const iconsList = ['🐱', '🐶', '🚗', '🏠', '🍎', '🌳', '🚀', '⚽', '🎒', '⭐', '🎁', '🐻', '👑', '🍦', '🎈', '⛵'];
 
@@ -567,12 +575,14 @@
 
         function generateUniqueQuestion(id, topik, tahap, num) {
             const icon = iconsList[(num - 1) % iconsList.length];
-            let qType = "Objektif Visual";
-            if (num % 3 === 2) qType = "Isi Tempat Kosong";
-            if (num % 3 === 0) qType = "Petak Grid Interaktif";
+            let qType = "Multiple Choice";
+            if (num % 3 === 2) qType = "Fill in the Blank";
+            if (num % 3 === 0) qType = "Interactive Grid";
 
-            const col = Math.floor(Math.random() * 4) + 1;
-            const row = Math.floor(Math.random() * 4) + 1;
+            const movesRight = topik === "Kenal Kedudukan" && tahap === "Susah";
+            const movesUp = topik === "Tentukan Kedudukan" && tahap === "Susah";
+            const col = Math.floor(Math.random() * (movesRight ? 3 : 4)) + 1;
+            const row = Math.floor(Math.random() * (movesUp ? 3 : 4)) + 1;
             const colLetter = String.fromCharCode(64 + col);
 
             let qText = "";
@@ -583,17 +593,17 @@
 
             if (topik === "Kenal Kedudukan") {
                 if (tahap === "Senang") {
-                    qText = `Apakah lajur (pilihan A, B, C, D) bagi objek ${icon}?`;
+                    qText = `Which column contains ${icon}?`;
                     answer = `${colLetter}`;
                     visualOptions = [
-                        { label: 'A', text: 'Lajur A', icon: '📍' },
-                        { label: 'B', text: 'Lajur B', icon: '📍' },
-                        { label: 'C', text: 'Lajur C', icon: '📍' },
-                        { label: 'D', text: 'Lajur D', icon: '📍' }
+                        { label: 'A', text: 'Column A', icon: '📍' },
+                        { label: 'B', text: 'Column B', icon: '📍' },
+                        { label: 'C', text: 'Column C', icon: '📍' },
+                        { label: 'D', text: 'Column D', icon: '📍' }
                     ];
-                    explanation = `Objek ${icon} terletak pada lajur ${colLetter}.`;
+                    explanation = `${icon} is in column ${colLetter}.`;
                 } else if (tahap === "Sederhana") {
-                    qText = `Apakah koordinat tepat (Lajur, Baris) bagi objek ${icon}?`;
+                    qText = `What are the coordinates (column, row) of ${icon}?`;
                     answer = `(${colLetter}, ${row})`;
                     visualOptions = [
                         { label: 'A', text: `(${colLetter}, ${row})`, icon: icon },
@@ -601,22 +611,22 @@
                         { label: 'C', text: `(${colLetter}, ${row + 1 > 4 ? 1 : row + 1})`, icon: '❓' },
                         { label: 'D', text: `(A, 1)`, icon: '📍' }
                     ].sort(() => 0.5 - Math.random());
-                    explanation = `Format koordinat ialah (Lajur, Baris) iaitu (${colLetter}, ${row}).`;
+                    explanation = `Read the column first and the row second: (${colLetter}, ${row}).`;
                 } else {
-                    qText = `Jika objek ${icon} bergerak 1 petak ke kanan dari (${colLetter}, ${row}), apakah lajur baharunya?`;
-                    const nextCol = String.fromCharCode(64 + Math.min(4, col + 1));
+                    qText = `If ${icon} moves one square to the right from (${colLetter}, ${row}), what is its new column?`;
+                    const nextCol = String.fromCharCode(64 + col + 1);
                     answer = `${nextCol}`;
                     visualOptions = [
-                        { label: 'A', text: 'Lajur A', icon: '➡️' },
-                        { label: 'B', text: 'Lajur B', icon: '➡️' },
-                        { label: 'C', text: 'Lajur C', icon: '➡️' },
-                        { label: 'D', text: 'Lajur D', icon: '➡️' }
+                        { label: 'A', text: 'Column A', icon: '➡️' },
+                        { label: 'B', text: 'Column B', icon: '➡️' },
+                        { label: 'C', text: 'Column C', icon: '➡️' },
+                        { label: 'D', text: 'Column D', icon: '➡️' }
                     ];
-                    explanation = `Gerak ke kanan menambah lajur dari ${colLetter} ke ${nextCol}.`;
+                    explanation = `One square to the right takes you from column ${colLetter} to column ${nextCol}.`;
                 }
             } else if (topik === "Tentukan Kedudukan") {
                 if (tahap === "Senang") {
-                    qText = `Cari koordinat bagi petak yang mengandungi ${icon}.`;
+                    qText = `Find the coordinates of the square containing ${icon}.`;
                     answer = `(${colLetter}, ${row})`;
                     visualOptions = [
                         { label: 'A', text: `(${colLetter}, ${row})`, icon: icon },
@@ -624,23 +634,23 @@
                         { label: 'C', text: `(C, 3)`, icon: '🎈' },
                         { label: 'D', text: `(D, 4)`, icon: '🚀' }
                     ].sort(() => 0.5 - Math.random());
-                    explanation = `Objek ${icon} berada di persilangan Lajur ${colLetter} dan Baris ${row}.`;
+                    explanation = `${icon} is where column ${colLetter} and row ${row} meet.`;
                 } else if (tahap === "Sederhana") {
-                    qText = `Objek manakah yang berada di koordinat (${colLetter}, ${row})?`;
+                    qText = `Which object is at (${colLetter}, ${row})?`;
                     answer = `${icon}`;
                     const wrong1 = iconsList[(num + 1) % iconsList.length];
                     const wrong2 = iconsList[(num + 2) % iconsList.length];
                     const wrong3 = iconsList[(num + 3) % iconsList.length];
                     visualOptions = [
-                        { label: 'A', text: `Objek ${icon}`, icon: icon },
-                        { label: 'B', text: `Objek ${wrong1}`, icon: wrong1 },
-                        { label: 'C', text: `Objek ${wrong2}`, icon: wrong2 },
-                        { label: 'D', text: `Objek ${wrong3}`, icon: wrong3 }
+                        { label: 'A', text: `Object ${icon}`, icon: icon },
+                        { label: 'B', text: `Object ${wrong1}`, icon: wrong1 },
+                        { label: 'C', text: `Object ${wrong2}`, icon: wrong2 },
+                        { label: 'D', text: `Object ${wrong3}`, icon: wrong3 }
                     ].sort(() => 0.5 - Math.random());
-                    explanation = `Pada koordinat (${colLetter}, ${row}), wujud objek ${icon}.`;
+                    explanation = `${icon} is at (${colLetter}, ${row}).`;
                 } else {
-                    qText = `Tentukan koordinat jika ${icon} dinaikkan 1 baris ke atas.`;
-                    const nextRow = Math.min(4, row + 1);
+                    qText = `If ${icon} moves up one square, what are its new coordinates?`;
+                    const nextRow = row + 1;
                     answer = `(${colLetter}, ${nextRow})`;
                     visualOptions = [
                         { label: 'A', text: `(${colLetter}, ${nextRow})`, icon: '⬆️' },
@@ -648,10 +658,10 @@
                         { label: 'C', text: `(A, ${nextRow})`, icon: '🔄' },
                         { label: 'D', text: `(D, 1)`, icon: '❌' }
                     ].sort(() => 0.5 - Math.random());
-                    explanation = `Bila bergerak 1 baris ke atas, nombor baris bertambah menjadi (${colLetter}, ${nextRow}).`;
+                    explanation = `Moving up one square increases the row number by 1, giving (${colLetter}, ${nextRow}).`;
                 }
             } else { // Penyelesaian Masalah
-                qText = `Cari lokasi target ${icon} yang berada pada lajur ${colLetter} dan baris ${row}.`;
+                qText = `Find the square in column ${colLetter} and row ${row}.`;
                 answer = `(${colLetter}, ${row})`;
                 visualOptions = [
                     { label: 'A', text: `(${colLetter}, ${row})`, icon: icon },
@@ -659,8 +669,37 @@
                     { label: 'C', text: `(A, ${row})`, icon: '🧭' },
                     { label: 'D', text: `(B, 4)`, icon: '🗺️' }
                 ].sort(() => 0.5 - Math.random());
-                explanation = `Lokasi persilangan sasaran ialah (${colLetter}, ${row}).`;
+                explanation = `Column ${colLetter} and row ${row} meet at (${colLetter}, ${row}).`;
             }
+
+            const gridAnswer = `(${String.fromCharCode(64 + col + Number(movesRight))}, ${row + Number(movesUp)})`;
+            if (qType === "Interactive Grid") {
+                if (movesRight || movesUp) {
+                    qText = `Select the square ${icon} will reach after moving one square ${movesRight ? "to the right" : "up"}.`;
+                } else if (topik === "Penyelesaian Masalah") {
+                    qText = `Select the square in column ${colLetter} and row ${row}.`;
+                } else {
+                    qText = `Select the square containing ${icon}.`;
+                }
+                answer = gridAnswer;
+                explanation = `The correct square is ${gridAnswer}.`;
+            }
+
+            const answerValue = text => text.replace(/^(?:Column|Object) /, '');
+            const distinctOptions = new Map(visualOptions.map(opt => [answerValue(opt.text), opt]));
+            for (let offset = 1; distinctOptions.size < 4; offset++) {
+                const position = (4 * (row - 1) + col - 1 + offset) % 16;
+                const text = `(${String.fromCharCode(65 + position % 4)}, ${1 + Math.floor(position / 4)})`;
+                if (!distinctOptions.has(text)) distinctOptions.set(text, { text, icon: '📍' });
+            }
+            visualOptions = [...distinctOptions.values()];
+            for (let i = visualOptions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [visualOptions[i], visualOptions[j]] = [visualOptions[j], visualOptions[i]];
+            }
+            visualOptions = visualOptions.map((opt, index) => ({
+                ...opt, label: String.fromCharCode(65 + index), value: answerValue(opt.text)
+            }));
 
             return {
                 id, topik, tahap,
@@ -677,6 +716,7 @@
         buildQuestionBank();
 
         function showScreen(screenId) {
+            if (screenId !== 'screenGameplay') clearInterval(timerInterval);
             ['screenMainMenu', 'screenAuth', 'screenTopicSelect', 'screenGameplay', 'screenResults', 'screenLeaderboard', 'screenRecords', 'screenGuide'].forEach(s => {
                 const el = document.getElementById(s);
                 if (el) el.classList.add('hidden');
@@ -701,13 +741,13 @@
             const password = document.getElementById('regPassword').value;
 
             if (usersDB[username]) {
-                alert('Nama pengguna telah wujud!');
+                alert('That username is already taken.');
                 return;
             }
 
             usersDB[username] = { fullName, username, password, highScore: 0, totalSessions: 0, totalCorrect: 0, totalQuestions: 0, history: [] };
             localStorage.setItem('edu_users_db', JSON.stringify(usersDB));
-            alert('Pendaftaran berjaya! Sila log masuk.');
+            alert('Account created. Please log in.');
             switchAuthTab('login');
         }
 
@@ -717,13 +757,13 @@
             const password = document.getElementById('loginPassword').value;
 
             if (!usersDB[username] || usersDB[username].password !== password) {
-                alert('Nama pengguna atau kata laluan salah!');
+                alert('Incorrect username or password.');
                 return;
             }
 
             currentUser = usersDB[username];
             updateUserHeader();
-            alert(`Selamat datang, ${currentUser.fullName}!`);
+            alert(`Welcome, ${currentUser.fullName}!`);
             showScreen('screenMainMenu');
         }
 
@@ -777,8 +817,8 @@
             sessionCorrect = 0;
             sessionWrong = 0;
 
-            document.getElementById('gameTopicBadge').innerText = currentSelectedTopic;
-            document.getElementById('gameDiffBadge').innerText = currentSelectedDiff;
+            document.getElementById('gameTopicBadge').innerText = topicLabels[currentSelectedTopic];
+            document.getElementById('gameDiffBadge').innerText = difficultyLabels[currentSelectedDiff];
             document.getElementById('gameScoreDisplay').innerText = sessionScore;
 
             showScreen('screenGameplay');
@@ -807,7 +847,7 @@
                     document.getElementById('timeLeft').innerText = timeLeft;
                     if (timeLeft <= 0) {
                         clearInterval(timerInterval);
-                        checkAnswer('Masa Tamat');
+                        checkAnswer('Time’s Up');
                     }
                 }, 1000);
             } else {
@@ -829,7 +869,7 @@
             // Top-left origin indicator
             gridWrapper.appendChild(createCell('Y/X', 'bg-blue-400 text-white text-xs font-bold rounded-lg'));
 
-            // Lajur headers
+            // Column headers
             ['A', 'B', 'C', 'D'].forEach(col => {
                 gridWrapper.appendChild(createCell(col, 'bg-blue-500 text-white font-extrabold rounded-lg shadow-sm'));
             });
@@ -848,7 +888,7 @@
                         cell.classList.add('bg-yellow-200', 'border-yellow-400', 'scale-105');
                     }
 
-                    if (q.jenis === 'Petak Grid Interaktif') {
+                    if (q.jenis === 'Interactive Grid') {
                         cell.classList.add('cursor-pointer', 'hover:border-emerald-500');
                         cell.onclick = () => selectGridCell(cell, colLetter, r);
                     }
@@ -871,7 +911,7 @@
             const area = document.getElementById('interactionArea');
             area.innerHTML = '';
 
-            if (q.jenis === 'Objektif Visual') {
+            if (q.jenis === 'Multiple Choice') {
                 const gridDiv = document.createElement('div');
                 gridDiv.className = 'grid grid-cols-1 sm:grid-cols-2 gap-2.5';
 
@@ -885,33 +925,33 @@
                         </div>
                         <span class="text-xl">${opt.icon}</span>
                     `;
-                    btn.onclick = () => checkAnswer(opt.text.replace('Lajur ', '').replace('Objek ', ''));
+                    btn.onclick = () => checkAnswer(opt.value);
                     gridDiv.appendChild(btn);
                 });
                 area.appendChild(gridDiv);
-            } else if (q.jenis === 'Isi Tempat Kosong') {
+            } else if (q.jenis === 'Fill in the Blank') {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'space-y-3';
                 wrapper.innerHTML = `
                     <div class="bg-blue-50 p-3 rounded-xl border border-blue-200 text-xs font-bold text-blue-900">
-                        💡 Petunjuk: Tulis koordinat dalam format (Lajur, Baris) contoh: (A, 2)
+                        💡 ${q.jawapan.startsWith('(') ? 'Write the column first and the row second, e.g. (A, 2).' : /^[A-D]$/.test(q.jawapan) ? 'Type the column letter.' : 'Type the name of the object.'}
                     </div>
-                    <input type="text" id="blankInput" placeholder="Taip jawapan contoh: (A, 2)" class="w-full p-3 border-2 border-blue-400 rounded-xl font-black text-gray-800 text-center uppercase focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    <input type="text" id="blankInput" placeholder="Type your answer" class="w-full p-3 border-2 border-blue-400 rounded-xl font-black text-gray-800 text-center uppercase focus:outline-none focus:ring-2 focus:ring-blue-600">
                     <button onclick="submitBlankAnswer()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow btn-bounce">
-                        Hantar Jawapan Saya
+                        Submit Answer
                     </button>
                 `;
                 area.appendChild(wrapper);
-            } else if (q.jenis === 'Petak Grid Interaktif') {
+            } else if (q.jenis === 'Interactive Grid') {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'text-center space-y-3';
                 wrapper.innerHTML = `
-                    <p class="text-xs text-gray-600 font-extrabold">Sila klik/tekan pada sasaran petak grid di sebelah kiri.</p>
+                    <p class="text-xs text-gray-600 font-extrabold">Select the target square on the grid.</p>
                     <div id="selectedGridLabel" class="font-black text-blue-900 bg-yellow-100 border border-yellow-400 p-2 rounded-xl text-sm">
-                        Petak Dipilih: Belum Pilih
+                        Selected square: None
                     </div>
                     <button onclick="submitGridAnswer()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow btn-bounce">
-                        Sahkan Pilihan Petak
+                        Confirm Selection
                     </button>
                 `;
                 area.appendChild(wrapper);
@@ -924,7 +964,7 @@
             });
             cellElem.classList.add('bg-emerald-300', 'border-emerald-600');
             interactiveGridSelected = `(${colLetter}, ${rowNum})`;
-            document.getElementById('selectedGridLabel').innerText = `Petak Dipilih: (${colLetter}, ${rowNum})`;
+            document.getElementById('selectedGridLabel').innerText = `Selected square: (${colLetter}, ${rowNum})`;
         }
 
         function submitBlankAnswer() {
@@ -934,7 +974,7 @@
 
         function submitGridAnswer() {
             if (!interactiveGridSelected) {
-                alert('Sila klik pada salah satu petak grid terlebih dahulu!');
+                alert('Select a square on the grid first.');
                 return;
             }
             checkAnswer(interactiveGridSelected);
@@ -943,11 +983,14 @@
         function checkAnswer(userAns) {
             clearInterval(timerInterval);
             const q = currentSessionQuestions[currentQuestionIdx];
-            const cleanUser = userAns.replace(/\s+/g, '');
-            const cleanTarget = q.jawapan.replace(/\s+/g, '');
-            const isCorrect = cleanUser === cleanTarget;
-
             const feedbackBox = document.getElementById('feedbackBox');
+            if (!feedbackBox.classList.contains('hidden')) return;
+            const normalise = value => value.toLowerCase().replace(/\s+/g, '');
+            const objectName = objectNames[iconsList.indexOf(q.jawapan)];
+            const cleanUser = normalise(userAns);
+            const isCorrect = cleanUser === normalise(q.jawapan)
+                || (objectName !== undefined && cleanUser === normalise(objectName));
+
             const feedbackTitle = document.getElementById('feedbackTitle');
             const feedbackDesc = document.getElementById('feedbackDesc');
 
@@ -959,8 +1002,8 @@
                 document.getElementById('gameScoreDisplay').innerText = sessionScore;
 
                 feedbackBox.classList.add('bg-emerald-100', 'border-emerald-400', 'text-emerald-900');
-                feedbackTitle.innerHTML = '🎉 <strong>TAHNIAH! JAWAPAN TEPAT!</strong>';
-                feedbackDesc.innerText = `+5 Markah! ${q.penerangan}`;
+                feedbackTitle.innerHTML = '🎉 <strong>WELL DONE! CORRECT ANSWER!</strong>';
+                feedbackDesc.innerText = `+5 marks! ${q.penerangan}`;
 
                 if (typeof confetti === 'function') {
                     confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
@@ -968,8 +1011,8 @@
             } else {
                 sessionWrong++;
                 feedbackBox.classList.add('bg-red-100', 'border-red-400', 'text-red-900');
-                feedbackTitle.innerHTML = '❌ <strong>CUBA LAGI! JAWAPAN KURANG TEPAT</strong>';
-                feedbackDesc.innerText = `Jawapan sebenar ialah: ${q.jawapan}. ${q.penerangan}`;
+                feedbackTitle.innerHTML = '❌ <strong>INCORRECT ANSWER</strong>';
+                feedbackDesc.innerText = `The correct answer is: ${q.jawapan}. ${q.penerangan}`;
             }
 
             document.querySelectorAll('#interactionArea button, #interactionArea input').forEach(el => el.disabled = true);
@@ -998,11 +1041,11 @@
 
             const recText = document.getElementById('recommendationText');
             if (accuracy >= 80) {
-                recText.innerText = "Tahniah! Penguasaan konsep koordinat kamu amat cemerlang!";
+                recText.innerText = "Well done! You can read and use coordinates with confidence.";
             } else if (accuracy >= 50) {
-                recText.innerText = "Syabas! Kamu faham asas koordinat, teruskan latihan untuk markah lebih tinggi.";
+                recText.innerText = "You understand the basics. Keep practising to improve your score.";
             } else {
-                recText.innerText = "Jangan putus asa! Sila ulang kaji subtopik ini semula untuk memantapkan pemahaman.";
+                recText.innerText = "Keep practising this topic to build your confidence.";
             }
 
             if (currentUser) {
@@ -1014,7 +1057,7 @@
                 }
 
                 currentUser.history.push({
-                    date: new Date().toLocaleDateString('ms-MY'),
+                    date: new Date().toLocaleDateString('en-GB'),
                     topic: currentSelectedTopic,
                     diff: currentSelectedDiff,
                     score: sessionScore,
@@ -1032,7 +1075,7 @@
         function showRecordsScreen() {
             showScreen('screenRecords');
             if (currentUser) {
-                document.getElementById('recordUserSubtitle').innerText = `Pemain: ${currentUser.fullName}`;
+                document.getElementById('recordUserSubtitle').innerText = `Player: ${currentUser.fullName}`;
                 document.getElementById('statTotalSessions').innerText = currentUser.totalSessions;
                 document.getElementById('statHighScore').innerText = currentUser.highScore;
                 document.getElementById('statTotalCorrect').innerText = currentUser.totalCorrect;
@@ -1044,23 +1087,23 @@
 
                 const historyContainer = document.getElementById('historyList');
                 if (currentUser.history.length === 0) {
-                    historyContainer.innerHTML = '<p class="text-xs text-gray-400 text-center py-4">Tiada rekod permainan lagi.</p>';
+                    historyContainer.innerHTML = '<p class="text-xs text-gray-400 text-center py-4">There are no games to show yet.</p>';
                 } else {
                     historyContainer.innerHTML = currentUser.history.slice().reverse().map(h => `
                         <div class="flex justify-between items-center bg-gray-50 p-2.5 rounded-lg text-xs border border-gray-200">
                             <div>
-                                <span class="font-bold text-blue-900">${h.topic}</span> (${h.diff})
+                                <span class="font-bold text-blue-900">${topicLabels[h.topic] || h.topic}</span> (${difficultyLabels[h.diff] || h.diff})
                                 <div class="text-[10px] text-gray-400">${h.date}</div>
                             </div>
                             <div class="text-right">
-                                <span class="font-bold text-emerald-700">${h.score} Markah</span>
+                                <span class="font-bold text-emerald-700">${h.score} marks</span>
                                 <div class="text-[10px] text-purple-600">${h.accuracy}</div>
                             </div>
                         </div>
                     `).join('');
                 }
             } else {
-                document.getElementById('recordUserSubtitle').innerText = 'Pemain: Tetamu (Log masuk untuk simpan rekod)';
+                document.getElementById('recordUserSubtitle').innerText = 'Player: Guest (Log in to save your record)';
             }
         }
 
@@ -1072,7 +1115,7 @@
             userArray.sort((a, b) => b.highScore - a.highScore);
 
             if (userArray.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="4" class="p-4 text-center text-xs text-gray-400">Tiada data pemain lagi.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="4" class="p-4 text-center text-xs text-gray-400">There are no player records yet.</td></tr>';
                 return;
             }
 

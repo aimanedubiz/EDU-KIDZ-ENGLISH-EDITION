@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids Bernama Edu Kidz - Tahun 5: Ruang</title>
+    <title>Math Kids Bernama Edu Kidz - Year 5: Space</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -84,7 +84,7 @@
                 <h1 class="font-game text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
                     MATH KIDS BERNAMA EDU KIDZ
                 </h1>
-                <p class="text-xs text-slate-500 font-bold tracking-wide">MATEMATIK TAHUN 5 — RUANG</p>
+                <p class="text-xs text-slate-500 font-bold tracking-wide">YEAR 5 MATHEMATICS — SPACE</p>
             </div>
         </div>
 
@@ -100,8 +100,8 @@
 
     <!-- Bottom Footer -->
     <footer class="bg-slate-900 text-slate-300 py-3 text-center text-xs font-semibold">
-        <p>MATH KIDS BERNAMA EDU KIDZ &copy; 2026 — Silibus KPM Matematik Tahun 5 (Bidang: Ruang)</p>
-        <p class="text-slate-500 mt-0.5">Slogan: “Belajar Matematik, Main Dengan Bijak!”</p>
+        <p>MATH KIDS BERNAMA EDU KIDZ &copy; 2026 — Year 5 KSSR Mathematics (Space)</p>
+        <p class="text-slate-500 mt-0.5">“Learn Maths, Play Smart!”</p>
     </footer>
 
     <!-- Audio Synth Manager (Web Audio API) -->
@@ -200,7 +200,7 @@
 
             // Render Angle Protractor / Interior Angle Diagram
             renderAngle(angleVal, showProtractor = false) {
-                const rad = (180 - angleVal) * Math.PI / 180;
+                const rad = angleVal * Math.PI / 180;
                 const x2 = 150 + 100 * Math.cos(-rad);
                 const y2 = 150 + 100 * Math.sin(-rad);
                 return `
@@ -225,8 +225,8 @@
                     <text x="95" y="110" fill="#1e40af" font-weight="bold" font-size="18">A</text>
                     
                     <!-- Rect B (Attached) -->
-                    <rect x="160" y="80" width="100" height="100" fill="#bbf7d0" stroke="#15803d" stroke-width="3"/>
-                    <text x="205" y="135" fill="#166534" font-weight="bold" font-size="18">B</text>
+                    ${w2 > 0 ? `<rect x="160" y="80" width="100" height="100" fill="#bbf7d0" stroke="#15803d" stroke-width="3"/>
+                    <text x="205" y="135" fill="#166534" font-weight="bold" font-size="18">B</text>` : ''}
 
                     <!-- Dimension Labels -->
                     <!-- Top Rect A -->
@@ -260,9 +260,9 @@
                         ` : ''}
 
                         <!-- Labels -->
-                        <text x="90" y="170" fill="#0f172a" font-weight="bold" font-size="14" text-anchor="middle">Panjang = ${length}</text>
-                        <text x="220" y="140" fill="#0f172a" font-weight="bold" font-size="14">Lebar = ${width}</text>
-                        <text x="0" y="110" fill="#0f172a" font-weight="bold" font-size="14">Tinggi = ${height}</text>
+                        <text x="90" y="170" fill="#0f172a" font-weight="bold" font-size="14" text-anchor="middle">Length = ${length}</text>
+                        <text x="220" y="140" fill="#0f172a" font-weight="bold" font-size="14">Width = ${width}</text>
+                        <text x="0" y="110" fill="#0f172a" font-weight="bold" font-size="14">Height = ${height}</text>
                     </g>
                 </svg>`;
             }
@@ -274,12 +274,12 @@
         class QuestionDatabase {
             constructor() {
                 this.subtopics = [
-                    { id: 'poligon', name: 'Poligon Sekata', code: 'POL' },
-                    { id: 'sudut', name: 'Ukur Sudut Pedalaman', code: 'SUD' },
-                    { id: 'perimeter', name: 'Perimeter Bentuk Gabungan', code: 'PER' },
-                    { id: 'luas', name: 'Luas Bentuk Gabungan', code: 'LUA' },
-                    { id: 'isipadu', name: 'Isipadu Bentuk Gabungan', code: 'ISI' },
-                    { id: 'masalah', name: 'Penyelesaian Masalah Ruang', code: 'MAS' }
+                    { id: 'poligon', name: 'Regular Polygons', code: 'POL' },
+                    { id: 'sudut', name: 'Measuring Interior Angles', code: 'SUD' },
+                    { id: 'perimeter', name: 'Perimeter of Composite Shapes', code: 'PER' },
+                    { id: 'luas', name: 'Area of Composite Shapes', code: 'LUA' },
+                    { id: 'isipadu', name: 'Volume of Composite Solids', code: 'ISI' },
+                    { id: 'masalah', name: 'Space Problems', code: 'MAS' }
                 ];
                 this.levels = ['Senang', 'Sederhana', 'Susah'];
                 this.data = this.generateAllQuestions();
@@ -312,153 +312,154 @@
                 let qObj = {
                     id: id,
                     tahun: 5,
-                    mata_pelajaran: "Matematik",
-                    bidang: "Ruang",
+                    mata_pelajaran: "Mathematics",
+                    bidang: "Space",
                     subtopik: sub.name,
                     tahap: level,
-                    aras_kognitif: level === 'Senang' ? 'Mengingat' : (level === 'Sederhana' ? 'Memahami' : 'Mengaplikasi'),
+                    aras_kognitif: level === 'Senang' ? 'Remembering' : (level === 'Sederhana' ? 'Understanding' : 'Applying'),
                     jenis: index % 4 === 1 ? 'Objektif' : (index % 4 === 2 ? 'Padanan' : (index % 4 === 3 ? 'DragDrop' : 'IsiKosong')),
                     markah: 5
                 };
 
-                // Subtopic A: Poligon Sekata
+                // Subtopic A: Regular Polygons
                 if (sub.id === 'poligon') {
                     const polygonTypes = [
-                        { name: 'Segi tiga sama sisi', sides: 3, angle: 60 },
-                        { name: 'Segi empat sama', sides: 4, angle: 90 },
-                        { name: 'Pentagon sekata', sides: 5, angle: 108 },
-                        { name: 'Heksagon sekata', sides: 6, angle: 120 },
-                        { name: 'Heptagon sekata', sides: 7, angle: 128.5 },
-                        { name: 'Oktagon sekata', sides: 8, angle: 135 }
+                        { name: 'Equilateral triangle', sides: 3, angle: 60 },
+                        { name: 'Square', sides: 4, angle: 90 },
+                        { name: 'Regular pentagon', sides: 5, angle: 108 },
+                        { name: 'Regular hexagon', sides: 6, angle: 120 },
+                        { name: 'Regular heptagon', sides: 7, angle: 128.5 },
+                        { name: 'Regular octagon', sides: 8, angle: 135 }
                     ];
                     const poly = polygonTypes[(index - 1) % polygonTypes.length];
                     
                     if (level === 'Senang') {
-                        qObj.soalan = `Berapakah bilangan sisi sekata bagi sebuah ${poly.name}?`;
-                        qObj.pilihan = [`${poly.sides} sisi`, `${poly.sides + 1} sisi`, `${poly.sides - 1 || 2} sisi`, `${poly.sides + 2} sisi`].sort(() => Math.random() - 0.5);
-                        qObj.jawapan = `${poly.sides} sisi`;
+                        qObj.soalan = `How many sides does a ${poly.name.toLowerCase()} have?`;
+                        qObj.pilihan = [`${poly.sides} sides`, `${poly.sides + 1} sides`, `${poly.sides - 1 || 2} sides`, `${poly.sides + 2} sides`].sort(() => Math.random() - 0.5);
+                        qObj.jawapan = `${poly.sides} sides`;
                         qObj.diagramType = 'polygon';
                         qObj.diagramSides = poly.sides;
-                        qObj.penerangan = `${poly.name} mempunyai ${poly.sides} sisi yang sama panjang dan ${poly.sides} bucu.`;
+                        qObj.penerangan = `${poly.name} has ${poly.sides} equal sides and ${poly.sides} vertices.`;
                     } else if (level === 'Sederhana') {
-                        qObj.soalan = `Apakah nama poligon sekata yang mempunyai ${poly.sides} bucu dan ${poly.sides} sisi sama panjang?`;
-                        qObj.pilihan = ['Heksagon sekata', 'Pentagon sekata', 'Oktagon sekata', 'Segi tiga sama sisi'].filter(x => x !== poly.name);
+                        qObj.soalan = `Which regular polygon has ${poly.sides} vertices and ${poly.sides} equal sides?`;
+                        qObj.pilihan = ['Regular hexagon', 'Regular pentagon', 'Regular octagon', 'Equilateral triangle'].filter(x => x !== poly.name);
+                        qObj.pilihan = qObj.pilihan.slice(0, 3);
                         qObj.pilihan.push(poly.name);
                         qObj.pilihan.sort(() => Math.random() - 0.5);
                         qObj.jawapan = poly.name;
                         qObj.diagramType = 'polygon';
                         qObj.diagramSides = poly.sides;
-                        qObj.penerangan = `Poligon dengan ${poly.sides} bucu dan sisi yang sama ialah ${poly.name}.`;
+                        qObj.penerangan = `A regular polygon with ${poly.sides} sides is a ${poly.name.toLowerCase()}.`;
                     } else {
-                        qObj.soalan = `Sebuah ${poly.name} mempunyai perimeter ${(poly.sides * (index + 2))} cm. Berapakah panjang satu sisinya?`;
+                        qObj.soalan = `A ${poly.name.toLowerCase()} has a perimeter of ${poly.sides * (index + 2)} cm. How long is one side?`;
                         const sideLen = index + 2;
                         qObj.pilihan = [`${sideLen} cm`, `${sideLen + 2} cm`, `${sideLen - 1} cm`, `${sideLen * 2} cm`].sort(() => Math.random() - 0.5);
                         qObj.jawapan = `${sideLen} cm`;
                         qObj.diagramType = 'polygon';
                         qObj.diagramSides = poly.sides;
-                        qObj.penerangan = `Panjang satu sisi = Perimeter ÷ Bilangan Sisi = ${(poly.sides * (index + 2))} ÷ ${poly.sides} = ${sideLen} cm.`;
+                        qObj.penerangan = `Divide the perimeter by the number of sides. ${poly.sides * (index + 2)} ÷ ${poly.sides} = ${sideLen} cm.`;
                     }
                 }
-                // Subtopic B: Ukur Sudut Pedalaman
+                // Subtopic B: Measuring Interior Angles
                 else if (sub.id === 'sudut') {
-                    const angles = [60, 90, 108, 120, 135];
-                    const angleVal = angles[(index - 1) % angles.length];
+                    const angleVal = 45 + (index - 1) * 5;
 
                     if (level === 'Senang') {
-                        qObj.soalan = `Apakah nilai sudut pedalaman yang ditunjukkan pada rajah di bawah?`;
+                        qObj.soalan = `What is the interior angle shown in the diagram?`;
                         qObj.pilihan = [`${angleVal}°`, `${angleVal + 10}°`, `${angleVal - 15}°`, `${angleVal + 20}°`].sort(() => Math.random() - 0.5);
                         qObj.jawapan = `${angleVal}°`;
                         qObj.diagramType = 'angle';
                         qObj.diagramAngle = angleVal;
-                        qObj.penerangan = `Nilai sudut pedalaman yang diukur menggunakan jangka sudut ialah ${angleVal}°.`;
+                        qObj.penerangan = `The angle shown measures ${angleVal}°.`;
                     } else if (level === 'Sederhana') {
                         const sumOfTriangle = 180;
                         const known1 = 50 + (index % 30);
                         const known2 = 60;
                         const missing = sumOfTriangle - (known1 + known2);
-                        qObj.soalan = `Jumlah sudut dalam sebuah segi tiga ialah 180°. Jika dua sudut ialah ${known1}° dan ${known2}°, berapakah nilai sudut yang ketiga?`;
+                        qObj.soalan = `Two angles of a triangle are ${known1}° and ${known2}°. What is the third angle?`;
                         qObj.pilihan = [`${missing}°`, `${missing + 10}°`, `${missing - 5}°`, `${missing + 15}°`].sort(() => Math.random() - 0.5);
                         qObj.jawapan = `${missing}°`;
                         qObj.diagramType = 'angle';
                         qObj.diagramAngle = missing;
-                        qObj.penerangan = `Sudut ketiga = 180° - (${known1}° + ${known2}°) = 180° - ${known1 + known2}° = ${missing}°.`;
+                        qObj.penerangan = `Subtract the two known angles from 180°. 180° − (${known1}° + ${known2}°) = ${missing}°.`;
                     } else {
-                        qObj.soalan = `Sebuah segi empat tepat dibahagi dua secara pepenjuru membentuk dua segi tiga bersudut tegak (90°). Jika salah satu sudut tajam ialah ${30 + (index % 20)}°, berapakah sudut tajam yang satu lagi?`;
+                        qObj.soalan = `A diagonal divides a rectangle into two right-angled triangles. One acute angle is ${30 + (index % 20)}°. What is the other acute angle?`;
                         const missing = 90 - (30 + (index % 20));
                         qObj.pilihan = [`${missing}°`, `${missing + 10}°`, `${missing - 10}°`, `${missing + 15}°`].sort(() => Math.random() - 0.5);
                         qObj.jawapan = `${missing}°`;
                         qObj.diagramType = 'angle';
                         qObj.diagramAngle = missing;
-                        qObj.penerangan = `Dalam segi tiga tegak, jumlah dua sudut tajam = 90°. Sudut satu lagi = 90° - ${30 + (index % 20)}° = ${missing}°.`;
+                        qObj.penerangan = `The two acute angles add up to 90°. The other angle is 90° − ${30 + (index % 20)}° = ${missing}°.`;
                     }
                 }
-                // Subtopic C: Perimeter Bentuk Gabungan
+                // Subtopic C: Perimeter of Composite Shapes
                 else if (sub.id === 'perimeter') {
-                    const sideA = 4 + index;
+                    const levelOffset = this.levels.indexOf(level) * 20;
+                    const sideA = 4 + index + levelOffset;
                     const sideB = 6 + index;
                     const sideC = 5 + index;
-                    const totalPerim = (sideA * 2) + (sideB * 2) + sideC;
+                    const totalPerim = 2 * (sideA + sideB + sideC);
 
-                    qObj.soalan = `Cari perimeter luar bagi bentuk gabungan segi empat tepat dan segi tiga sama kaki bersisi ${sideA} cm, ${sideB} cm, dan ${sideC} cm seperti rajah.`;
+                    qObj.soalan = `Rectangle A is ${sideA} cm wide and ${sideB} cm high. Rectangle B is ${sideC} cm wide and ${sideA} cm high. They are joined along B’s entire vertical side as shown. What is the perimeter of the combined shape?`;
                     qObj.pilihan = [`${totalPerim} cm`, `${totalPerim + 4} cm`, `${totalPerim - 3} cm`, `${totalPerim + 6} cm`].sort(() => Math.random() - 0.5);
                     qObj.jawapan = `${totalPerim} cm`;
                     qObj.diagramType = 'composite2d';
                     qObj.diagramParams = [sideA, sideB, sideC, sideA, `${sideA} cm`, `${sideB} cm`, `${sideC} cm`, `${sideA} cm`];
-                    qObj.penerangan = `Perimeter hanya mengira sempadan bahagian LUAR sahaja. Jumlah = ${totalPerim} cm.`;
+                    qObj.penerangan = `Add the two rectangle perimeters and subtract the shared side twice. 2 × (${sideA} + ${sideB}) + 2 × (${sideC} + ${sideA}) − 2 × ${sideA} = ${totalPerim} cm.`;
                 }
-                // Subtopic D: Luas Bentuk Gabungan
+                // Subtopic D: Area of Composite Shapes
                 else if (sub.id === 'luas') {
-                    const w1 = 3 + index, h1 = 5 + index;
+                    const w1 = 3 + index + this.levels.indexOf(level) * 20, h1 = 5 + index;
                     const w2 = 4 + index, h2 = 4 + index;
                     const areaA = w1 * h1;
                     const areaB = w2 * h2;
                     const totalArea = areaA + areaB;
 
-                    qObj.soalan = `Bentuk gabungan ini terdiri daripada Segi Empat Tepat A (${w1} cm × ${h1} cm) dan Segi Empat Sama B (${w2} cm × ${h2} cm). Berapakah jumlah luas keseluruhan?`;
+                    qObj.soalan = `The composite shape consists of rectangle A (${w1} cm × ${h1} cm) and square B (${w2} cm × ${h2} cm). What is its total area?`;
                     qObj.pilihan = [`${totalArea} cm²`, `${totalArea + 10} cm²`, `${totalArea - 5} cm²`, `${totalArea + 8} cm²`].sort(() => Math.random() - 0.5);
                     qObj.jawapan = `${totalArea} cm²`;
                     qObj.diagramType = 'composite2d';
                     qObj.diagramParams = [w1, h1, w2, h2, `${w1} cm`, `${h1} cm`, `${w2} cm`, `${h2} cm`];
-                    qObj.penerangan = `Luas A = ${w1} × ${h1} = ${areaA} cm². Luas B = ${w2} × ${h2} = ${areaB} cm². Jumlah Luas = ${areaA} + ${areaB} = ${totalArea} cm².`;
+                    qObj.penerangan = `Area of A = ${w1} × ${h1} = ${areaA} cm². Area of B = ${w2} × ${h2} = ${areaB} cm². Total area = ${areaA} + ${areaB} = ${totalArea} cm².`;
                 }
-                // Subtopic E: Isipadu Bentuk Gabungan
+                // Subtopic E: Volume of Composite Solids
                 else if (sub.id === 'isipadu') {
                     const l = 2 + (index % 5);
                     const w = 3 + (index % 4);
                     const h = 4 + (index % 4);
                     const vol1 = l * w * h;
-                    const vol2 = 10 + (index * 2);
+                    const vol2 = 10 + (index * 2) + this.levels.indexOf(level) * 40;
                     const totalVol = vol1 + vol2;
 
-                    qObj.soalan = `Bongkah A mempunyai isipadu ${vol1} cm³ dan Bongkah B mempunyai isipadu ${vol2} cm³. Berapakah jumlah isipadu gabungan kedua-dua bongkah tersebut?`;
+                    qObj.soalan = `Block A has a volume of ${vol1} cm³ and block B has a volume of ${vol2} cm³. What is their combined volume?`;
                     qObj.pilihan = [`${totalVol} cm³`, `${totalVol + 12} cm³`, `${totalVol - 8} cm³`, `${totalVol + 15} cm³`].sort(() => Math.random() - 0.5);
                     qObj.jawapan = `${totalVol} cm³`;
                     qObj.diagramType = 'cuboid3d';
                     qObj.diagramParams = [l, w, h, true];
-                    qObj.penerangan = `Jumlah Isipadu = Isipadu A + Isipadu B = ${vol1} + ${vol2} = ${totalVol} cm³.`;
+                    qObj.penerangan = `Add the volumes of both blocks. ${vol1} + ${vol2} = ${totalVol} cm³.`;
                 }
-                // Subtopic F: Penyelesaian Masalah Ruang
+                // Subtopic F: Space Problems
                 else {
-                    const costPerMeter = 12;
+                    const costPerMeter = 12 + this.levels.indexOf(level) * 2;
                     const length = 5 + index;
                     const width = 3 + index;
                     const perimeter = 2 * (length + width);
                     const totalCost = perimeter * costPerMeter;
 
-                    qObj.soalan = `En. Ahmad ingin memasang pagar di sekeliling taman bunga berbentuk segi empat tepat bersaiz ${length} m × ${width} m. Jika kos pagar ialah RM${costPerMeter} semeter, berapakah jumlah kos yang perlu dibayar?`;
+                    qObj.soalan = `Mr Ahmad wants to fence a rectangular flower garden that measures ${length} m by ${width} m. The fence costs RM${costPerMeter} per metre. What is the total cost?`;
                     qObj.pilihan = [`RM ${totalCost}`, `RM ${totalCost + 24}`, `RM ${totalCost - 12}`, `RM ${totalCost + 36}`].sort(() => Math.random() - 0.5);
                     qObj.jawapan = `RM ${totalCost}`;
                     qObj.diagramType = 'composite2d';
-                    qObj.diagramParams = [length, width, length, width, `${length} m`, `${width} m`, `${length} m`, `${width} m`];
-                    qObj.penerangan = `Perimeter = 2 × (${length} + ${width}) = ${perimeter} m. Jumlah Kos = ${perimeter} m × RM${costPerMeter} = RM ${totalCost}.`;
+                    qObj.diagramParams = [length, width, 0, 0, `${length} m`, `${width} m`, '', ''];
+                    qObj.penerangan = `Perimeter = 2 × (${length} + ${width}) = ${perimeter} m. Total cost = ${perimeter} × RM${costPerMeter} = RM${totalCost}.`;
                 }
 
                 // Pairs for Matching / DragDrop / Fill
                 qObj.pairs = [
                     { q: qObj.soalan, a: qObj.jawapan },
-                    { q: "Formula Perimeter", a: "Jumlah Sisi Luar" },
-                    { q: "Formula Luas Segi Empat", a: "Panjang × Lebar" },
-                    { q: "Unit Isipadu Standard", a: "cm³ atau m³" }
+                    { q: "Perimeter Formula", a: "Sum of the Outer Side Lengths" },
+                    { q: "Area of a Rectangle", a: "Length × Width" },
+                    { q: "Units of Volume", a: "cm³ or m³" }
                 ];
 
                 return qObj;
@@ -470,6 +471,7 @@
         }
 
         const questionBank = new QuestionDatabase();
+        const levelLabels = { Senang: "Easy", Sederhana: "Medium", Susah: "Hard" };
     </script>
 
     <!-- App State and Logic Management Engine -->
@@ -526,7 +528,7 @@
             register(username, displayname, password) {
                 const users = this.getUsers();
                 if (users.some(u => u.username === username)) {
-                    return { success: false, msg: "Nama pengguna sudah wujud!" };
+                    return { success: false, msg: "That username is taken." };
                 }
                 const newUser = { username, displayname, password, createdAt: new Date().toISOString() };
                 this.saveUser(newUser);
@@ -541,7 +543,7 @@
                     this.currentUser = user;
                     return { success: true };
                 }
-                return { success: false, msg: "Nama pengguna atau kata laluan tidak sah!" };
+                return { success: false, msg: "Check your username and password." };
             }
 
             logout() {
@@ -564,7 +566,7 @@
                             <i data-lucide="user" class="w-4 h-4 text-blue-600"></i>
                             <span class="font-bold text-xs md:text-sm text-blue-800">${this.currentUser.displayname}</span>
                         </div>
-                        <button onclick="app.logout()" class="p-1.5 hover:bg-slate-100 rounded-full text-slate-500 hover:text-red-500 transition" title="Log Keluar">
+                        <button onclick="app.logout()" class="p-1.5 hover:bg-slate-100 rounded-full text-slate-500 hover:text-red-500 transition" title="Log Out">
                             <i data-lucide="log-out" class="w-5 h-5"></i>
                         </button>
                     `;
@@ -620,7 +622,7 @@
 
                 this.answersHistory.push({
                     question: currentQ,
-                    userAnswer: userAnswer || "Masa Tamat",
+                    userAnswer: userAnswer || "Time’s Up",
                     isCorrect: isCorrect
                 });
 
@@ -637,17 +639,17 @@
                             <i data-lucide="${isCorrect ? 'check-circle-2' : 'x-circle'}" class="w-10 h-10"></i>
                         </div>
                         <h2 class="font-game text-2xl font-bold ${isCorrect ? 'text-green-600' : 'text-red-600'} mb-1">
-                            ${isCorrect ? 'Tahniah! Jawapan Anda Betul!' : 'Belum tepat. Mari kita belajar!'}
+                            ${isCorrect ? 'Well done! Correct answer.' : 'Incorrect answer. Review the working below.'}
                         </h2>
-                        <p class="text-sm text-slate-500 mb-4">+${isCorrect ? '5' : '0'} Markah Ditambah</p>
+                        <p class="text-sm text-slate-500 mb-4">+${isCorrect ? '5' : '0'} Marks Earned</p>
 
                         <div class="bg-slate-50 p-4 rounded-2xl text-left border border-slate-200 mb-4 text-xs md:text-sm">
-                            <p class="font-bold text-slate-700 mb-1">Jawapan Betul: <span class="text-green-600 font-extrabold">${q.jawapan}</span></p>
-                            <p class="text-slate-600 mt-2 font-medium"><strong class="text-slate-800">Penerangan:</strong> ${q.penerangan}</p>
+                            <p class="font-bold text-slate-700 mb-1">Correct Answer: <span class="text-green-600 font-extrabold">${q.jawapan}</span></p>
+                            <p class="text-slate-600 mt-2 font-medium"><strong class="text-slate-800">Explanation:</strong> ${q.penerangan}</p>
                         </div>
 
                         <button onclick="app.nextQuestion(); this.closest('.fixed').remove();" class="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-game font-bold rounded-xl shadow-lg hover:brightness-110 btn-bounce">
-                            ${this.currentIndex < this.sessionQuestions.length - 1 ? 'Soalan Seterusnya' : 'Lihat Keputusan Akhir'}
+                            ${this.currentIndex < this.sessionQuestions.length - 1 ? 'Next Question' : 'View Results'}
                         </button>
                     </div>
                 `;
@@ -693,27 +695,27 @@
                             <div class="bg-gradient-to-tr from-amber-400 to-orange-500 w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg text-white">
                                 <i data-lucide="gamepad-2" class="w-10 h-10"></i>
                             </div>
-                            <h2 class="font-game text-2xl font-bold text-slate-800 mb-1">Log Masuk Pemain</h2>
-                            <p class="text-xs text-slate-500 mb-6">Sila masukkan maklumat akaun anda untuk bermain</p>
+                            <h2 class="font-game text-2xl font-bold text-slate-800 mb-1">Player Login</h2>
+                            <p class="text-xs text-slate-500 mb-6">Enter your account details to play</p>
 
                             <form onsubmit="event.preventDefault(); app.handleLogin();" class="space-y-4 text-left">
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pengguna</label>
-                                    <input type="text" id="login-username" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm font-semibold" placeholder="Contoh: amir123">
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Username</label>
+                                    <input type="text" id="login-username" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm font-semibold" placeholder="e.g. amir123">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Kata Laluan</label>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
                                     <input type="password" id="login-password" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm font-semibold" placeholder="••••••••">
                                 </div>
                                 <div id="login-error" class="text-xs text-red-500 font-bold hidden"></div>
                                 <button type="submit" class="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-game font-bold rounded-xl shadow-lg hover:brightness-110 btn-bounce">
-                                    Log Masuk
+                                    Log In
                                 </button>
                             </form>
                             <div class="mt-6 pt-4 border-t border-slate-200">
-                                <p class="text-xs text-slate-600">Belum mempunyai akaun?</p>
+                                <p class="text-xs text-slate-600">Need an account?</p>
                                 <button onclick="app.navTo('register')" class="text-xs font-bold text-blue-600 hover:underline mt-1">
-                                    Daftar Akaun Baharu
+                                    Register
                                 </button>
                             </div>
                         </div>
@@ -724,78 +726,78 @@
                 else if (this.currentView === 'register') {
                     container.innerHTML = `
                         <div class="glass-card p-8 rounded-3xl max-w-md w-full text-center border border-white/50 my-6">
-                            <h2 class="font-game text-2xl font-bold text-slate-800 mb-1">Pendaftaran Akaun</h2>
-                            <p class="text-xs text-slate-500 mb-6">Cipta profil pembelajaran anda sendiri</p>
+                            <h2 class="font-game text-2xl font-bold text-slate-800 mb-1">Create an Account</h2>
+                            <p class="text-xs text-slate-500 mb-6">Create a pupil profile</p>
 
                             <form onsubmit="event.preventDefault(); app.handleRegister();" class="space-y-3 text-left">
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pengguna (ID)</label>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Username (ID)</label>
                                     <input type="text" id="reg-username" required class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 text-sm" placeholder="amir123">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Nama Paparan Pemain</label>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Player Display Name</label>
                                     <input type="text" id="reg-displayname" required class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 text-sm" placeholder="Amir Smart">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Kata Laluan</label>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
                                     <input type="password" id="reg-password" required class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 text-sm" placeholder="••••••••">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Pengesahan Kata Laluan</label>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Confirm Password</label>
                                     <input type="password" id="reg-confirm" required class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 text-sm" placeholder="••••••••">
                                 </div>
                                 <div id="reg-error" class="text-xs text-red-500 font-bold hidden"></div>
                                 <button type="submit" class="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-game font-bold rounded-xl shadow-lg hover:brightness-110 btn-bounce mt-2">
-                                    Daftar Akaun
+                                    Register
                                 </button>
                             </form>
                             <button onclick="app.navTo('login')" class="text-xs font-bold text-slate-500 hover:underline mt-4">
-                                &larr; Kembali ke Log Masuk
+                                &larr; Back to Login
                             </button>
                         </div>
                     `;
                 }
 
-                // View: Menu Utama
+                // View: Main Menu
                 else if (this.currentView === 'menu') {
                     container.innerHTML = `
                         <div class="glass-card p-6 md:p-8 rounded-3xl max-w-4xl w-full border border-white/50 text-center my-4">
                             <div class="mb-6">
-                                <span class="bg-blue-100 text-blue-700 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Tahun 5 Matematik (KPM)</span>
-                                <h2 class="font-game text-3xl md:text-4xl font-extrabold text-slate-800 mt-2">Pilih Tugasan Pembelajaran</h2>
-                                <p class="text-sm text-slate-500">Pilih menu di bawah untuk mula meneroka konsep Ruang</p>
+                                <span class="bg-blue-100 text-blue-700 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Year 5 KSSR Mathematics</span>
+                                <h2 class="font-game text-3xl md:text-4xl font-extrabold text-slate-800 mt-2">Choose an Activity</h2>
+                                <p class="text-sm text-slate-500">Choose an activity to practise geometry.</p>
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left mb-6">
                                 <button onclick="app.startSession()" class="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl shadow-lg hover:shadow-xl transition btn-bounce flex items-center gap-4">
                                     <div class="p-3 bg-white/20 rounded-xl"><i data-lucide="play" class="w-6 h-6"></i></div>
                                     <div>
-                                        <h3 class="font-game font-bold text-lg">Mula Bermain</h3>
-                                        <p class="text-xs opacity-80">Terus ke permainan kuiz</p>
+                                        <h3 class="font-game font-bold text-lg">Start Playing</h3>
+                                        <p class="text-xs opacity-80">Go straight to the quiz</p>
                                     </div>
                                 </button>
 
                                 <button onclick="app.navTo('subtopics')" class="p-4 bg-white border border-slate-200 hover:border-blue-400 text-slate-800 rounded-2xl shadow-sm hover:shadow-md transition btn-bounce flex items-center gap-4">
                                     <div class="p-3 bg-blue-100 text-blue-600 rounded-xl"><i data-lucide="book-open" class="w-6 h-6"></i></div>
                                     <div>
-                                        <h3 class="font-game font-bold text-lg">Pilih Topik</h3>
-                                        <p class="text-xs text-slate-500">6 Subtopik Ruang</p>
+                                        <h3 class="font-game font-bold text-lg">Choose a Topic</h3>
+                                        <p class="text-xs text-slate-500">6 Space Topics</p>
                                     </div>
                                 </button>
 
                                 <button onclick="app.navTo('settings')" class="p-4 bg-white border border-slate-200 hover:border-purple-400 text-slate-800 rounded-2xl shadow-sm hover:shadow-md transition btn-bounce flex items-center gap-4">
                                     <div class="p-3 bg-purple-100 text-purple-600 rounded-xl"><i data-lucide="sliders" class="w-6 h-6"></i></div>
                                     <div>
-                                        <h3 class="font-game font-bold text-lg">Mod & Kesukaran</h3>
-                                        <p class="text-xs text-slate-500">Masa & Tahap Soalan</p>
+                                        <h3 class="font-game font-bold text-lg">Mode and Difficulty</h3>
+                                        <p class="text-xs text-slate-500">Time Limit and Difficulty</p>
                                     </div>
                                 </button>
 
                                 <button onclick="app.navTo('records')" class="p-4 bg-white border border-slate-200 hover:border-green-400 text-slate-800 rounded-2xl shadow-sm hover:shadow-md transition btn-bounce flex items-center gap-4">
                                     <div class="p-3 bg-green-100 text-green-600 rounded-xl"><i data-lucide="bar-chart-2" class="w-6 h-6"></i></div>
                                     <div>
-                                        <h3 class="font-game font-bold text-lg">Rekod Saya</h3>
-                                        <p class="text-xs text-slate-500">Pencapaian Pembelajaran</p>
+                                        <h3 class="font-game font-bold text-lg">My Scores</h3>
+                                        <p class="text-xs text-slate-500">View Your Progress</p>
                                     </div>
                                 </button>
 
@@ -803,15 +805,15 @@
                                     <div class="p-3 bg-amber-100 text-amber-600 rounded-xl"><i data-lucide="trophy" class="w-6 h-6"></i></div>
                                     <div>
                                         <h3 class="font-game font-bold text-lg">Leaderboard</h3>
-                                        <p class="text-xs text-slate-500">Kedudukan Pemain</p>
+                                        <p class="text-xs text-slate-500">Player Rankings</p>
                                     </div>
                                 </button>
 
                                 <button onclick="app.navTo('guide')" class="p-4 bg-white border border-slate-200 hover:border-slate-400 text-slate-800 rounded-2xl shadow-sm hover:shadow-md transition btn-bounce flex items-center gap-4">
                                     <div class="p-3 bg-slate-100 text-slate-600 rounded-xl"><i data-lucide="help-circle" class="w-6 h-6"></i></div>
                                     <div>
-                                        <h3 class="font-game font-bold text-lg">Panduan Game</h3>
-                                        <p class="text-xs text-slate-500">Cara & Peraturan Game</p>
+                                        <h3 class="font-game font-bold text-lg">Game Guide</h3>
+                                        <p class="text-xs text-slate-500">How to Play</p>
                                     </div>
                                 </button>
                             </div>
@@ -825,11 +827,11 @@
                         <div class="glass-card p-6 md:p-8 rounded-3xl max-w-4xl w-full border border-white/50 my-4">
                             <div class="flex justify-between items-center mb-6">
                                 <div>
-                                    <h2 class="font-game text-2xl font-bold text-slate-800">Pilih Subtopik Ruang</h2>
-                                    <p class="text-xs text-slate-500">Silibus KPM Matematik Tahun 5</p>
+                                    <h2 class="font-game text-2xl font-bold text-slate-800">Choose a Space Topic</h2>
+                                    <p class="text-xs text-slate-500">Year 5 KSSR Mathematics</p>
                                 </div>
                                 <button onclick="app.navTo('menu')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl transition">
-                                    &larr; Kembali
+                                    &larr; Back
                                 </button>
                             </div>
 
@@ -839,7 +841,7 @@
                                         <div>
                                             <span class="text-xs font-extrabold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded-full">Topik ${sub.code}</span>
                                             <h3 class="font-game font-bold text-slate-800 text-base mt-2">${sub.name}</h3>
-                                            <p class="text-xs text-slate-500 mt-1">20 Soalan Setiap Tahap Kesukaran</p>
+                                            <p class="text-xs text-slate-500 mt-1">20 Questions per Difficulty Level</p>
                                         </div>
                                         <i data-lucide="chevron-right" class="w-6 h-6 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition"></i>
                                     </button>
@@ -854,41 +856,41 @@
                     container.innerHTML = `
                         <div class="glass-card p-6 md:p-8 rounded-3xl max-w-2xl w-full border border-white/50 my-4">
                             <div class="flex justify-between items-center mb-6">
-                                <h2 class="font-game text-2xl font-bold text-slate-800">Tetapan Permainan</h2>
+                                <h2 class="font-game text-2xl font-bold text-slate-800">Game Settings</h2>
                                 <button onclick="app.navTo('menu')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl">
-                                    &larr; Kembali
+                                    &larr; Back
                                 </button>
                             </div>
 
                             <div class="space-y-6 text-left">
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Tahap Kesukaran</label>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Difficulty Level</label>
                                     <div class="grid grid-cols-3 gap-3">
                                         ${['Senang', 'Sederhana', 'Susah'].map(lvl => `
                                             <button onclick="app.selectedLevel='${lvl}'; app.render();" class="py-3 font-game font-bold rounded-xl border text-sm transition ${this.selectedLevel === lvl ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'}">
-                                                ${lvl}
+                                                ${levelLabels[lvl]}
                                             </button>
                                         `).join('')}
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label class="block text-sm font-bold text-slate-700 mb-2">Pilihan Pemasa Soalan</label>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Time Limit per Question</label>
                                     <div class="grid grid-cols-3 gap-3">
                                         <button onclick="app.selectedTimerMode=30; app.render();" class="py-3 font-game font-bold rounded-xl border text-sm transition ${this.selectedTimerMode === 30 ? 'bg-indigo-600 text-white border-indigo-600 shadow-md' : 'bg-white text-slate-700 border-slate-200'}">
-                                            30 Saat
+                                            30 Seconds
                                         </button>
                                         <button onclick="app.selectedTimerMode=60; app.render();" class="py-3 font-game font-bold rounded-xl border text-sm transition ${this.selectedTimerMode === 60 ? 'bg-indigo-600 text-white border-indigo-600 shadow-md' : 'bg-white text-slate-700 border-slate-200'}">
-                                            1 Minit
+                                            1 Minute
                                         </button>
                                         <button onclick="app.selectedTimerMode=0; app.render();" class="py-3 font-game font-bold rounded-xl border text-sm transition ${this.selectedTimerMode === 0 ? 'bg-indigo-600 text-white border-indigo-600 shadow-md' : 'bg-white text-slate-700 border-slate-200'}">
-                                            Tiada Had
+                                            No Time Limit
                                         </button>
                                     </div>
                                 </div>
 
                                 <button onclick="app.startSession()" class="w-full py-3.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-game font-bold rounded-xl shadow-lg hover:brightness-110 btn-bounce mt-4">
-                                    Mula Bermain Sekarang
+                                    Start Playing
                                 </button>
                             </div>
                         </div>
@@ -902,13 +904,13 @@
                         <div class="glass-card p-6 md:p-8 rounded-3xl max-w-3xl w-full border border-white/50 my-4">
                             <!-- Game Top Progress Bar -->
                             <div class="flex justify-between items-center mb-4 text-xs font-bold text-slate-600">
-                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Soalan ${this.currentIndex + 1} / ${this.sessionQuestions.length}</span>
-                                <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full">Aras: ${q.aras_kognitif}</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Question ${this.currentIndex + 1} / ${this.sessionQuestions.length}</span>
+                                <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full">Skill: ${q.aras_kognitif}</span>
                                 <div class="flex items-center gap-1 text-indigo-600 font-extrabold text-sm">
                                     <i data-lucide="clock" class="w-4 h-4"></i>
                                     <span id="game-timer-display">${this.selectedTimerMode ? this.selectedTimerMode + 's' : '∞'}</span>
                                 </div>
-                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">Markah: ${this.score}</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">Marks: ${this.score}</span>
                             </div>
 
                             <!-- Question Card -->
@@ -950,26 +952,26 @@
                             <div class="w-20 h-20 bg-amber-100 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                                 <i data-lucide="award" class="w-12 h-12"></i>
                             </div>
-                            <h2 class="font-game text-3xl font-extrabold text-slate-800 mb-1">Permainan Tamat!</h2>
-                            <p class="text-xs text-slate-500 mb-6">Tahniah kerana menyelesaikan kuiz Matematik Tahun 5: Ruang</p>
+                            <h2 class="font-game text-3xl font-extrabold text-slate-800 mb-1">Game Complete!</h2>
+                            <p class="text-xs text-slate-500 mb-6">Well done for completing the Year 5 Space quiz.</p>
 
                             <div class="grid grid-cols-2 gap-4 mb-6">
                                 <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100">
-                                    <p class="text-xs font-bold text-blue-600">Jumlah Markah</p>
+                                    <p class="text-xs font-bold text-blue-600">Total Marks</p>
                                     <p class="font-game text-3xl font-extrabold text-blue-800 mt-1">${this.score} / 100</p>
                                 </div>
                                 <div class="bg-green-50 p-4 rounded-2xl border border-green-100">
-                                    <p class="text-xs font-bold text-green-600">Ketepatan</p>
+                                    <p class="text-xs font-bold text-green-600">Accuracy</p>
                                     <p class="font-game text-3xl font-extrabold text-green-800 mt-1">${accuracy}%</p>
                                 </div>
                             </div>
 
                             <div class="flex gap-3">
                                 <button onclick="app.startSession()" class="flex-1 py-3 bg-blue-600 text-white font-game font-bold rounded-xl shadow-md hover:bg-blue-700 btn-bounce">
-                                    Main Semula
+                                    Play Again
                                 </button>
                                 <button onclick="app.navTo('menu')" class="flex-1 py-3 bg-slate-100 text-slate-700 font-game font-bold rounded-xl border border-slate-200 hover:bg-slate-200 btn-bounce">
-                                    Menu Utama
+                                    Main Menu
                                 </button>
                             </div>
                         </div>
@@ -982,25 +984,25 @@
                     container.innerHTML = `
                         <div class="glass-card p-6 md:p-8 rounded-3xl max-w-3xl w-full border border-white/50 my-4">
                             <div class="flex justify-between items-center mb-6">
-                                <h2 class="font-game text-2xl font-bold text-slate-800">Rekod Pembelajaran Saya</h2>
+                                <h2 class="font-game text-2xl font-bold text-slate-800">My Game History</h2>
                                 <button onclick="app.navTo('menu')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl">
-                                    &larr; Kembali
+                                    &larr; Back
                                 </button>
                             </div>
 
                             ${userScores.length === 0 ? `
-                                <p class="text-slate-500 text-sm py-8 text-center">Tiada rekod permainan ditemui. Sila main kuiz dahulu!</p>
+                                <p class="text-slate-500 text-sm py-8 text-center">Play a quiz to see your scores here.</p>
                             ` : `
                                 <div class="space-y-3 max-h-96 overflow-y-auto pr-1">
                                     ${userScores.map(s => `
                                         <div class="bg-white p-4 rounded-2xl border border-slate-200 flex justify-between items-center">
                                             <div>
-                                                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md">${s.subtopic} (${s.level})</span>
+                                                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md">${s.subtopic} (${levelLabels[s.level] || s.level})</span>
                                                 <p class="text-xs text-slate-400 mt-1">${s.date}</p>
                                             </div>
                                             <div class="text-right">
-                                                <p class="font-game font-bold text-lg text-slate-800">${s.score} Markah</p>
-                                                <p class="text-xs text-green-600 font-bold">${s.accuracy}% Ketepatan</p>
+                                                <p class="font-game font-bold text-lg text-slate-800">${s.score} Marks</p>
+                                                <p class="text-xs text-green-600 font-bold">${s.accuracy}% Accuracy</p>
                                             </div>
                                         </div>
                                     `).join('')}
@@ -1016,9 +1018,9 @@
                     container.innerHTML = `
                         <div class="glass-card p-6 md:p-8 rounded-3xl max-w-2xl w-full border border-white/50 my-4">
                             <div class="flex justify-between items-center mb-6">
-                                <h2 class="font-game text-2xl font-bold text-slate-800">Leaderboard Pemain</h2>
+                                <h2 class="font-game text-2xl font-bold text-slate-800">Player Leaderboard</h2>
                                 <button onclick="app.navTo('menu')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl">
-                                    &larr; Kembali
+                                    &larr; Back
                                 </button>
                             </div>
 
@@ -1047,24 +1049,24 @@
                     container.innerHTML = `
                         <div class="glass-card p-6 md:p-8 rounded-3xl max-w-2xl w-full border border-white/50 my-4 text-left">
                             <div class="flex justify-between items-center mb-6">
-                                <h2 class="font-game text-2xl font-bold text-slate-800">Panduan Permainan</h2>
+                                <h2 class="font-game text-2xl font-bold text-slate-800">Game Guide</h2>
                                 <button onclick="app.navTo('menu')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl">
-                                    &larr; Kembali
+                                    &larr; Back
                                 </button>
                             </div>
 
                             <div class="space-y-4 text-sm text-slate-600">
                                 <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100">
-                                    <h3 class="font-bold text-blue-800 mb-1">1. Format Permainan</h3>
-                                    <p>Setiap sesi mengandungi 20 soalan matematik interaktif. Setiap soalan yang betul memberi 5 markah (Jumlah 100 markah).</p>
+                                    <h3 class="font-bold text-blue-800 mb-1">1. Game Format</h3>
+                                    <p>Each session has 20 questions worth 5 marks each, for a total of 100 marks.</p>
                                 </div>
                                 <div class="bg-amber-50 p-4 rounded-2xl border border-amber-100">
-                                    <h3 class="font-bold text-amber-800 mb-1">2. Pilihan Pemasa</h3>
-                                    <p>Anda boleh memilih pemasa 30 saat, 1 minit, atau tiada had masa mengikut tahap keselesaan anda.</p>
+                                    <h3 class="font-bold text-amber-800 mb-1">2. Timer Settings</h3>
+                                    <p>Choose 30 seconds, 1 minute or no time limit.</p>
                                 </div>
                                 <div class="bg-green-50 p-4 rounded-2xl border border-green-100">
-                                    <h3 class="font-bold text-green-800 mb-1">3. Penerangan Jawapan</h3>
-                                    <p>Setiap soalan yang dijawab akan diberikan penjelasan serta-merta untuk membantu pengukuhan konsep Matematik Tahun 5.</p>
+                                    <h3 class="font-bold text-green-800 mb-1">3. Worked Explanations</h3>
+                                    <p>A worked explanation appears after each question.</p>
                                 </div>
                             </div>
                         </div>
@@ -1095,7 +1097,7 @@
 
                 if (p !== c) {
                     const err = document.getElementById('reg-error');
-                    err.innerText = "Kata laluan tidak sepadan!";
+                    err.innerText = "The passwords do not match.";
                     err.classList.remove('hidden');
                     return;
                 }

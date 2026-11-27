@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATH KIDS – EDU KIDZ | Matematik Tahun 4</title>
+    <title>MATH KIDS – EDU KIDZ | Year 4 Mathematics</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -43,7 +43,7 @@
                 </div>
                 <div>
                     <h1 class="font-game font-bold text-base md:text-lg text-indigo-900 leading-tight">MATH KIDS <span class="text-pink-500">EDU KIDZ</span></h1>
-                    <p class="text-[11px] text-slate-500 font-medium">Tahun 4 • KSSR Matematik</p>
+                    <p class="text-[11px] text-slate-500 font-medium">Year 4 • KSSR Mathematics</p>
                 </div>
             </div>
 
@@ -52,13 +52,13 @@
                 <div id="player-badge" class="hidden bg-indigo-50 border border-indigo-200 px-3 py-1.5 rounded-xl flex items-center gap-2">
                     <span id="nav-avatar" class="text-lg">👦</span>
                     <div>
-                        <p id="nav-username" class="text-xs font-bold text-indigo-900 leading-none">Nama</p>
-                        <p class="text-[10px] text-indigo-600 font-medium">⭐ <span id="nav-score">0</span> Mata</p>
+                        <p id="nav-username" class="text-xs font-bold text-indigo-900 leading-none">Name</p>
+                        <p class="text-[10px] text-indigo-600 font-medium">⭐ <span id="nav-score">0</span> marks</p>
                     </div>
                 </div>
 
                 <div class="flex items-center gap-1.5">
-                    <button onclick="navigateTo('home')" title="Menu Utama" class="p-2.5 bg-indigo-100 hover:bg-indigo-200 text-indigo-700 rounded-xl transition flex items-center justify-center shadow-sm">
+                    <button onclick="navigateTo('home')" title="Main Menu" class="p-2.5 bg-indigo-100 hover:bg-indigo-200 text-indigo-700 rounded-xl transition flex items-center justify-center shadow-sm">
                         <i class="fa-solid fa-house"></i>
                     </button>
                     <button onclick="navigateTo('topics')" title="Topik" class="p-2.5 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded-xl transition flex items-center justify-center shadow-sm">
@@ -70,7 +70,7 @@
                     <button onclick="navigateTo('leaderboard')" title="Leaderboard" class="p-2.5 bg-amber-100 hover:bg-amber-200 text-amber-700 rounded-xl transition flex items-center justify-center shadow-sm">
                         <i class="fa-solid fa-trophy"></i>
                     </button>
-                    <button onclick="logoutUser()" title="Log Keluar" class="p-2.5 bg-rose-100 hover:bg-rose-200 text-rose-700 rounded-xl transition flex items-center justify-center shadow-sm">
+                    <button onclick="logoutUser()" title="Log Out" class="p-2.5 bg-rose-100 hover:bg-rose-200 text-rose-700 rounded-xl transition flex items-center justify-center shadow-sm">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </button>
                 </div>
@@ -82,7 +82,7 @@
         </main>
 
         <footer class="mt-6 text-center text-xs text-slate-400 font-medium py-2">
-            MATH KIDS – EDU KIDZ &copy; 2026 • KSSR Matematik Tahun 4 Malaysia (Koordinat, Nisbah & Kadaran)
+            MATH KIDS – EDU KIDZ &copy; 2026 • KSSR Year 4 Mathematics Malaysia (Koordinat, Nisbah & Kadaran)
         </footer>
 
     </div>
@@ -91,8 +91,8 @@
     <div id="custom-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border-4 border-indigo-100 transform transition-all text-center">
             <div id="modal-icon" class="text-4xl mb-3">🎉</div>
-            <h3 id="modal-title" class="font-game font-bold text-2xl text-slate-800 mb-2">Tajuk Modal</h3>
-            <p id="modal-message" class="text-slate-600 text-sm mb-6 leading-relaxed whitespace-pre-line">Mesej kandungan dipaparkan di sini.</p>
+            <h3 id="modal-title" class="font-game font-bold text-2xl text-slate-800 mb-2">Notice</h3>
+            <p id="modal-message" class="text-slate-600 text-sm mb-6 leading-relaxed whitespace-pre-line">Message</p>
             <div id="modal-actions" class="flex gap-3 justify-center">
                 <button onclick="closeModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-game px-6 py-2.5 rounded-xl shadow-lg transition">OK</button>
             </div>
@@ -123,10 +123,10 @@
         function initQuestionBank() {
             if (questionBank.length > 0) return;
 
-            // TOPIC 1: Kenal dan Tentukan Koordinat (60 unique questions)
+            // TOPIC 1: Reading Coordinates (60 unique questions)
             for (let i = 1; i <= 60; i++) {
                 let diff = i <= 20 ? 'Senang' : i <= 40 ? 'Sederhana' : 'Susah';
-                let aras = i <= 10 ? 'Mengingat' : i <= 40 ? 'Memahami' : 'Mengaplikasi';
+                let aras = i <= 10 ? 'Remembering' : i <= 40 ? 'Understanding' : 'Applying';
                 let x = ((i * 3) % 5) + 1;
                 let y = ((i * 7) % 5) + 1;
                 if (x === y) y = (y % 5) + 1;
@@ -139,38 +139,38 @@
                 let lbl = labels[i % labels.length];
 
                 if (diff === 'Senang') {
-                    qText = `Berdasarkan grid koordinat di atas, apakah koordinat bagi titik ${lbl} yang terletak pada lajur dan baris tersebut?`;
+                    qText = `Read the grid. What are the coordinates of point ${lbl}?`;
                     let wrong1 = `(${y},${x})`;
                     let wrong2 = `(${x+1 > 5 ? 1 : x+1},${y})`;
                     let wrong3 = `(${x},${y+1 > 5 ? 1 : y+1})`;
                     options = [`(${x},${y})`, wrong1, wrong2, wrong3].sort(() => Math.random() - 0.5);
                     correctAns = `(${x},${y})`;
-                    explanation = `Koordinat titik ${lbl} ditulis dalam bentuk (x, y). Nilai x (melintang) dibaca dahulu iaitu ${x}, diikuti nilai y (menegak) iaitu ${y}.`;
+                    explanation = `Read x first and y second. Point ${lbl} is at (${x}, ${y}).`;
                 } else if (diff === 'Sederhana') {
-                    qText = `Jika asalan O ialah (0,0), tentukan koordinat bagi objek ${lbl} dengan mengira jarak dari paksi-x dan paksi-y pada grid di atas.`;
+                    qText = `The origin O is (0, 0). Read the horizontal and vertical positions of ${lbl}. What are its coordinates?`;
                     let wrong1 = `(${y},${x})`;
                     let wrong2 = `(${x > 1 ? x-1 : x+1},${y})`;
                     let wrong3 = `(${x},${y > 1 ? y-1 : y+1})`;
                     options = [`(${x},${y})`, wrong1, wrong2, wrong3].sort(() => Math.random() - 0.5);
                     correctAns = `(${x},${y})`;
-                    explanation = `Paksi-x menunjukkan nilai ${x} dan paksi-y menunjukkan nilai ${y}. Oleh itu, koordinat titik ${lbl} ialah (${x},${y}).`;
+                    explanation = `The x-coordinate is ${x} and the y-coordinate is ${y}. Point ${lbl} is at (${x}, ${y}).`;
                 } else {
                     let moveX = (i % 2) + 1;
                     let moveY = ((i + 1) % 2) + 1;
-                    qText = `Titik ${lbl} terletak pada koordinat (${x}, ${y}). Jika titik ${lbl} digerakkan ${moveX} unit ke kanan dan ${moveY} unit ke atas pada grid, apakah koordinat baharu?`;
+                    qText = `Point ${lbl} starts at (${x}, ${y}). It moves ${moveX} units right and ${moveY} units up. What are its new coordinates?`;
                     let nx = x + moveX;
                     let ny = y + moveY;
                     options = [`(${nx},${ny})`, `(${x},${ny})`, `(${nx},${y})`, `(${nx+1},${ny+1})`].sort(() => Math.random() - 0.5);
                     correctAns = `(${nx},${ny})`;
-                    explanation = `Nilai x asal ${x} ditambah ${moveX} menjadi ${nx}. Nilai y asal ${y} ditambah ${moveY} menjadi ${ny}. Koordinat baharu ialah (${nx},${ny}).`;
+                    explanation = `Add ${moveX} to x and ${moveY} to y. The new coordinates are (${nx}, ${ny}).`;
                 }
 
                 questionBank.push({
                     id: `K4-KOOR-${diff[0].toUpperCase()}-${String(i).padStart(3, '0')}`,
-                    topic: 'Kenal dan Tentukan Koordinat',
+                    topic: 'Reading Coordinates',
                     difficulty: diff,
                     cognitive: aras,
-                    type: 'Objektif',
+                    type: 'Multiple Choice',
                     question: qText,
                     visualType: 'grid',
                     visualData: { x: x, y: y, label: lbl },
@@ -181,12 +181,13 @@
                 });
             }
 
-            // TOPIC 2: Tanda Titik Koordinat (60 unique questions)
+            // TOPIC 2: Plotting Coordinates (60 unique questions)
             for (let i = 1; i <= 60; i++) {
                 let diff = i <= 20 ? 'Senang' : i <= 40 ? 'Sederhana' : 'Susah';
-                let aras = i <= 15 ? 'Mengingat' : i <= 45 ? 'Memahami' : 'Mengaplikasi';
+                let aras = i <= 15 ? 'Remembering' : i <= 45 ? 'Understanding' : 'Applying';
                 let cx = ((i * 2) % 4) + 1;
                 let cy = ((i * 5) % 4) + 1;
+                if (cx === cy) cy = (cy % 4) + 1;
                 let labels2 = ['P', 'Q', 'R', 'S', 'T', 'K', 'L', 'M'];
                 let lbl2 = labels2[i % labels2.length];
                 let qText = "";
@@ -194,104 +195,104 @@
                 let correctAns = "";
 
                 if (diff === 'Senang') {
-                    qText = `Pilih kedudukan titik ${lbl2} yang betul pada koordinat (${cx}, ${cy}) di atas grid.`;
-                    options = [`Koordinat (${cx},${cy}) pada grid`, `Koordinat (${cy},${cx})`, `Koordinat (${cx+1},${cy})`, `Koordinat (${cx},${cy+1})`].sort(() => Math.random() - 0.5);
-                    correctAns = `Koordinat (${cx},${cy}) pada grid`;
+                    qText = `Which option places point ${lbl2} at (${cx}, ${cy})?`;
+                    options = [`Coordinates (${cx},${cy})`, `Coordinates (${cy},${cx})`, `Coordinates (${cx+1},${cy})`, `Coordinates (${cx},${cy+1})`].sort(() => Math.random() - 0.5);
+                    correctAns = `Coordinates (${cx},${cy})`;
                 } else if (diff === 'Sederhana') {
-                    qText = `Antara berikut, manakah titik ${lbl2} yang mewakili koordinat (${cx}, ${cy}) dengan tepat pada grid koordinat di atas?`;
-                    options = [`Titik ${lbl2} pada (${cx},${cy})`, `Titik ${lbl2} pada (${cy},${cx})`, `Titik ${lbl2} pada (${cx+1},${cy})`, `Titik ${lbl2} pada (0,${cy})`].sort(() => Math.random() - 0.5);
-                    correctAns = `Titik ${lbl2} pada (${cx},${cy})`;
+                    qText = `Which position on the grid matches the coordinates (${cx}, ${cy}) for point ${lbl2}?`;
+                    options = [`Point ${lbl2} at (${cx},${cy})`, `Point ${lbl2} at (${cy},${cx})`, `Point ${lbl2} at (${cx+1},${cy})`, `Point ${lbl2} at (0,${cy})`].sort(() => Math.random() - 0.5);
+                    correctAns = `Point ${lbl2} at (${cx},${cy})`;
                 } else {
-                    qText = `Tandakan titik ${lbl2} pada koordinat (${cx}, ${cy}). Berapakah jumlah nilai koordinat (x + y) bagi titik tersebut?`;
+                    qText = `Point ${lbl2} is at (${cx}, ${cy}). What is the sum of its x- and y-coordinates?`;
                     let sumXY = cx + cy;
-                    options = [`${sumXY} unit`, `${cx} unit`, `${cy} unit`, `${sumXY + 2} unit`].sort(() => Math.random() - 0.5);
-                    correctAns = `${sumXY} unit`;
+                    options = [`${sumXY}`, `${cx}`, `${cy}`, `${sumXY + 2}`].sort(() => Math.random() - 0.5);
+                    correctAns = `${sumXY}`;
                 }
 
                 questionBank.push({
                     id: `K4-TANDA-${diff[0].toUpperCase()}-${String(i).padStart(3, '0')}`,
-                    topic: 'Tanda Titik Koordinat',
+                    topic: 'Plotting Coordinates',
                     difficulty: diff,
                     cognitive: aras,
-                    type: 'Objektif',
+                    type: 'Multiple Choice',
                     question: qText,
                     visualType: 'grid',
                     visualData: { x: cx, y: cy, label: lbl2 },
                     options: options,
                     correct: correctAns,
                     marks: 5,
-                    explanation: `Titik koordinat (x, y) ditandakan dengan mencari nilai pada paksi-x (${cx}) terlebih dahulu, kemudian bergerak ke nilai pada paksi-y (${cy}).`
+                    explanation: `Read x first (${cx}), then y (${cy}).${diff === "Susah" ? " Their sum is " + (cx + cy) + "." : ""}`
                 });
             }
 
             // TOPIC 3: Nisbah (60 unique questions)
             const itemsList = [
-                {a: 'epal', b: 'oren', iconA: '🍎', iconB: '🍊'},
-                {a: 'buku', b: 'pensel', iconA: '📚', iconB: '✏️'},
-                {a: 'bola biru', b: 'bola merah', iconA: '🔵', iconB: '🔴'},
-                {a: 'gula-gula', b: 'biskut', iconA: '🍬', iconB: '🍪'},
-                {a: 'bunga merah', b: 'bunga kuning', iconA: '🌸', iconB: '🌻'},
-                {a: 'kereta', b: 'bas', iconA: '🚗', iconB: '🚌'}
+                {a: 'apples', b: 'oranges', iconA: '🍎', iconB: '🍊'},
+                {a: 'books', b: 'pencils', iconA: '📚', iconB: '✏️'},
+                {a: 'blue balls', b: 'red balls', iconA: '🔵', iconB: '🔴'},
+                {a: 'sweets', b: 'biscuits', iconA: '🍬', iconB: '🍪'},
+                {a: 'red flowers', b: 'yellow flowers', iconA: '🌸', iconB: '🌻'},
+                {a: 'cars', b: 'buses', iconA: '🚗', iconB: '🚌'}
             ];
             for (let i = 1; i <= 60; i++) {
                 let diff = i <= 20 ? 'Senang' : i <= 40 ? 'Sederhana' : 'Susah';
-                let aras = i <= 15 ? 'Mengingat' : i <= 45 ? 'Memahami' : 'Mengaplikasi';
+                let aras = i <= 15 ? 'Remembering' : i <= 45 ? 'Understanding' : 'Applying';
                 let item = itemsList[i % itemsList.length];
-                let numA = ((i * 3) % 4) + 2;
-                let numB = ((i * 5) % 5) + 2;
+                let numA = [3, 5, 7][i % 3];
+                const numB = 2;
                 let qText = "";
                 let options = [];
-                let correctAns = `${numA} kepada ${numB}`;
+                let correctAns = `${numA} : ${numB}`;
 
                 if (diff === 'Senang') {
-                    qText = `Berdasarkan gambar rajah objek ${item.a} dan ${item.b} di atas, apakah nisbah bilangan ${item.a} kepada bilangan ${item.b}?`;
-                    options = [`${numA} kepada ${numB}`, `${numB} kepada ${numA}`, `${numA} kepada ${numA+numB}`, `${numB} kepada ${numA+numB}`].sort(() => Math.random() - 0.5);
-                    correctAns = `${numA} kepada ${numB}`;
+                    qText = `Using the diagram, find the ratio of ${item.a} to ${item.b}.`;
+                    options = [`${numA} : ${numB}`, `${numB} : ${numA}`, `${numA} : ${numA+numB}`, `${numB} : ${numA+numB}`].sort(() => Math.random() - 0.5);
+                    correctAns = `${numA} : ${numB}`;
                 } else if (diff === 'Sederhana') {
                     let mult = (i % 2) + 2;
                     let tA = numA * mult;
                     let tB = numB * mult;
-                    qText = `Terdapat ${tA} buah ${item.a} dan ${tB} buah ${item.b} di dalam bakul. Nyatakan nisbah dalam bentuk ringkas ${item.a} kepada ${item.b}.`;
-                    options = [`${numA} kepada ${numB}`, `${numB} kepada ${numA}`, `${tA} kepada ${tB}`, `1 kepada 1`].sort(() => Math.random() - 0.5);
-                    correctAns = `${numA} kepada ${numB}`;
+                    qText = `There are ${tA} ${item.a} and ${tB} ${item.b}. Write the ratio of ${item.a} to ${item.b} in its simplest form.`;
+                    options = [`${numA} : ${numB}`, `${numB} : ${numA}`, `${tA} : ${tB}`, `1 : 1`].sort(() => Math.random() - 0.5);
+                    correctAns = `${numA} : ${numB}`;
                 } else {
-                    qText = `Nisbah bilangan ${item.a} kepada ${item.b} ialah ${numA}:${numB}. Jika terdapat ${numA * 2} buah ${item.a}, berapakah bilangan ${item.b}?`;
+                    qText = `The ratio of ${item.a} to ${item.b} is ${numA}:${numB}. If there are ${numA * 2} ${item.a}, how many ${item.b} are there?`;
                     let ansB = numB * 2;
-                    options = [`${ansB}`, `${numA * 2}`, `${ansB + 2}`, `${ansB - 1}`].sort(() => Math.random() - 0.5);
+                    options = [`${ansB}`, `${numA * 2}`, `${ansB + 1}`, `${ansB - 1}`].sort(() => Math.random() - 0.5);
                     correctAns = `${ansB}`;
                 }
 
                 questionBank.push({
                     id: `K4-NISB-${diff[0].toUpperCase()}-${String(i).padStart(3, '0')}`,
-                    topic: 'Nisbah',
+                    topic: 'Ratio',
                     difficulty: diff,
                     cognitive: aras,
-                    type: 'Objektif',
+                    type: 'Multiple Choice',
                     question: qText,
                     visualType: 'ratio',
                     visualData: { countA: numA, countB: numB, iconA: item.iconA, iconB: item.iconB, labelA: item.a, labelB: item.b },
                     options: options,
                     correct: correctAns,
                     marks: 5,
-                    explanation: `Nisbah membandingkan kuantiti ${item.a} (${numA}) kepada ${item.b} (${numB}). Susunan jawapan mestilah mengikut tertib yang diminta dalam soalan.`
+                    explanation: `Compare ${item.a} with ${item.b}, in that order. The answer is ${correctAns}.`
                 });
             }
 
             // TOPIC 4: KADARAN (REFINED & FULLY UNIQUE 60 QUESTIONS: 20 Senang, 20 Sederhana, 20 Susah)
             const kadaranItems = [
-                {name: 'Pensel', icon: '✏️', unitName: 'batang'},
-                {name: 'Buku Latihan', icon: '📘', unitName: 'buah'},
-                {name: 'Botol Air Mineral', icon: '🍼', unitName: 'botol'},
-                {name: 'Peket Biskut', icon: '🍪', unitName: 'peket'},
-                {name: 'Epal Merah', icon: '🍎', unitName: 'biji'},
-                {name: 'Pen Merah', icon: '✒️', unitName: 'batang'},
-                {name: 'Kotak Pensel Warna', icon: '🎨', unitName: 'kotak'},
-                {name: 'Buku Cerita', icon: '📚', unitName: 'naskhah'}
+                {name: 'pencils', icon: '✏️', unitName: 'batang'},
+                {name: 'exercise books', icon: '📘', unitName: 'buah'},
+                {name: 'bottles of mineral water', icon: '🍼', unitName: 'botol'},
+                {name: 'packets of biscuits', icon: '🍪', unitName: 'peket'},
+                {name: 'red apples', icon: '🍎', unitName: 'biji'},
+                {name: 'red pens', icon: '✒️', unitName: 'batang'},
+                {name: 'boxes of coloured pencils', icon: '🎨', unitName: 'kotak'},
+                {name: 'storybooks', icon: '📚', unitName: 'naskhah'}
             ];
 
             for (let i = 1; i <= 60; i++) {
                 let diff = i <= 20 ? 'Senang' : i <= 40 ? 'Sederhana' : 'Susah';
-                let aras = i <= 15 ? 'Mengingat' : i <= 45 ? 'Memahami' : 'Mengaplikasi';
+                let aras = i <= 15 ? 'Remembering' : i <= 45 ? 'Understanding' : 'Applying';
                 let item = kadaranItems[i % kadaranItems.length];
                 
                 // Completely unique mathematical parameters to prevent any repetition
@@ -306,14 +307,14 @@
                     let targetQty = givenQty + ((i % 3) + 1); // 2 to 7 units
                     let targetPrice = unitPrice * targetQty;
                     
-                    qText = `Harga bagi ${givenQty} ${item.unitName} ${item.name} ialah RM${unitPrice * givenQty}. Berapakah jumlah harga untuk membeli ${targetQty} ${item.unitName} ${item.name} yang sama?`;
+                    qText = `The total price for ${givenQty} ${givenQty === 1 ? item.name.replace(/s\b/, "") : item.name} is RM${unitPrice * givenQty}. How much do ${targetQty} cost at the same price per item?`;
                     
                     let w1 = `RM${targetPrice + unitPrice}`;
                     let w2 = `RM${Math.max(1, targetPrice - unitPrice)}`;
                     let w3 = `RM${targetPrice + (unitPrice * 2)}`;
                     options = [`RM${targetPrice}`, w1, w2, w3].sort(() => Math.random() - 0.5);
                     correctAns = `RM${targetPrice}`;
-                    explanation = `Cari harga 1 ${item.unitName} dahulu iaitu RM${unitPrice * givenQty} ÷ ${givenQty} = RM${unitPrice}. Harga untuk ${targetQty} ${item.unitName} ialah ${targetQty} × RM${unitPrice} = RM${targetPrice}.`;
+                    explanation = `Divide RM${unitPrice * givenQty} by ${givenQty} to get RM${unitPrice} per item. Multiply by ${targetQty} to get RM${targetPrice}.`;
 
                 } else if (diff === 'Sederhana') {
                     let givenQty = ((i % 3) + 2); // 2, 3, 4 units
@@ -321,14 +322,14 @@
                     let targetQty = givenQty + 3; // +3 units
                     let targetTotal = unitPrice * targetQty;
 
-                    qText = `Ibu membeli ${givenQty} ${item.unitName} ${item.name} dengan jumlah harga RM${givenTotal}. Menggunakan kaedah unitari, berapakah harga bagi ${targetQty} ${item.unitName} ${item.name}?`;
+                    qText = `Mum pays RM${givenTotal} for ${givenQty} ${item.name}. Use the unitary method to find the cost of ${targetQty}.`;
 
                     let w1 = `RM${targetTotal + unitPrice}`;
                     let w2 = `RM${Math.abs(targetTotal - (unitPrice * 2))}`;
-                    let w3 = `RM${targetTotal + 3}`;
+                    let w3 = `RM${targetTotal + 3 * unitPrice}`;
                     options = [`RM${targetTotal}`, w1, w2, w3].sort(() => Math.random() - 0.5);
                     correctAns = `RM${targetTotal}`;
-                    explanation = `Kaedah unitari: 1 ${item.unitName} bernilai RM${givenTotal} ÷ ${givenQty} = RM${unitPrice}. Maka, ${targetQty} ${item.unitName} bernilai ${targetQty} × RM${unitPrice} = RM${targetTotal}.`;
+                    explanation = `Divide RM${givenTotal} by ${givenQty} to get RM${unitPrice} per item. Multiply by ${targetQty} to get RM${targetTotal}.`;
 
                 } else {
                     // Susah: Two-step proportions or inverse/complex comparisons
@@ -338,7 +339,7 @@
                     let complexQty = baseQty * multiFactor;
                     let complexPrice = basePrice * multiFactor;
 
-                    qText = `Harga bagi ${baseQty} ${item.unitName} ${item.name} ialah RM${basePrice}. Jika Encik Ali mempunyai bajet sebanyak RM${complexPrice + (unitPrice * multiFactor)}, berapakah maksimum ${item.unitName} ${item.name} yang boleh dibeli?`;
+                    qText = `${baseQty} ${item.name} cost RM${basePrice}. Mr Ali has RM${complexPrice + (unitPrice * multiFactor)}. How many can he buy at most?`;
 
                     let maxPossibleQty = complexQty + multiFactor;
                     let w1 = `${maxPossibleQty - 2}`;
@@ -346,15 +347,15 @@
                     let w3 = `${maxPossibleQty - 1}`;
                     options = [`${maxPossibleQty}`, w1, w2, w3].sort(() => Math.random() - 0.5);
                     correctAns = `${maxPossibleQty}`;
-                    explanation = `Harga 1 ${item.unitName} = RM${basePrice} ÷ ${baseQty} = RM${unitPrice}. Dengan bajet RM${complexPrice + (unitPrice * multiFactor)}, bilangan maksimum ialah (${complexPrice + (unitPrice * multiFactor)}) ÷ RM${unitPrice} = ${maxPossibleQty} ${item.unitName}.`;
+                    explanation = `Divide RM${basePrice} by ${baseQty} to get RM${unitPrice} per item. At this price Mr Ali can afford ${maxPossibleQty} items.`;
                 }
 
                 questionBank.push({
                     id: `K4-KADA-${diff[0].toUpperCase()}-${String(i).padStart(3, '0')}`,
-                    topic: 'Kadaran',
+                    topic: 'Proportion',
                     difficulty: diff,
                     cognitive: aras,
-                    type: 'Objektif',
+                    type: 'Multiple Choice',
                     question: qText,
                     visualType: 'proportion',
                     visualData: { price: unitPrice, qty: 3, item: item.name, icon: item.icon },
@@ -365,10 +366,10 @@
                 });
             }
 
-            // TOPIC 5: Penyelesaian Masalah (60 unique questions)
+            // TOPIC 5: Problem Solving (60 unique questions)
             for (let i = 1; i <= 60; i++) {
                 let diff = i <= 20 ? 'Senang' : i <= 40 ? 'Sederhana' : 'Susah';
-                let aras = i <= 10 ? 'Mengingat' : i <= 40 ? 'Memahami' : 'Mengaplikasi';
+                let aras = i <= 10 ? 'Remembering' : i <= 40 ? 'Understanding' : 'Applying';
                 let qText = "";
                 let options = [];
                 let correctAns = "";
@@ -379,29 +380,29 @@
                     let startX = (i % 4) + 1;
                     let moveX = ((i * 2) % 3) + 2;
                     let endX = startX + moveX;
-                    qText = `Siti berada di titik (${startX}, 3) pada grid koordinat dan bergerak ke kanan sejauh ${moveX} unit secara melintang. Apakah koordinat baharu Siti?`;
+                    qText = `Siti starts at (${startX}, 3) and moves ${moveX} units right. What are her new coordinates?`;
                     correctAns = `(${endX}, 3)`;
                     let w1 = `(${startX}, ${3 + moveX})`;
                     let w2 = `(${endX - 1}, 3)`;
                     let w3 = `(${endX + 1}, 4)`;
                     options = [correctAns, w1, w2, w3].sort(() => Math.random() - 0.5);
-                    explanation = `Pergerakan melintang ke kanan hanya mengubah nilai koordinat x (bertambah). Nilai x baharu ialah ${startX} + ${moveX} = ${endX}. Koordinat baharu ialah (${endX}, 3).`;
+                    explanation = `Moving right changes only x. Add ${moveX} to ${startX} to get ${endX}. The new coordinates are (${endX}, 3).`;
 
                 } else if (diff === 'Sederhana') {
                     // Unique ratio word problems
                     let ratioA = (i % 3) + 2; // 2, 3, 4
-                    let ratioB = ((i * 2) % 4) + 3; // 3, 4, 5, 6
+                    let ratioB = (i % 2) + 5;
                     let multiplier = (i % 3) + 2; // 2, 3, 4
                     let totalA = ratioA * multiplier;
                     let totalB = ratioB * multiplier;
 
-                    qText = `Nisbah bilangan pen merah kepada pen biru di dalam sebuah kotak ialah ${ratioA}:${ratioB}. Jika terdapat ${totalA} batang pen merah, berapakah bilangan pen biru di dalam kotak tersebut?`;
-                    correctAns = `${totalB} batang`;
-                    let w1 = `${totalA} batang`;
-                    let w2 = `${totalB + ratioB} batang`;
-                    let w3 = `${Math.max(2, totalB - ratioA)} batang`;
+                    qText = `The ratio of red pens to blue pens in a box is ${ratioA}:${ratioB}. There are ${totalA} red pens. How many blue pens are there?`;
+                    correctAns = `${totalB} pens`;
+                    let w1 = `${totalA} pens`;
+                    let w2 = `${totalB + ratioB} pens`;
+                    let w3 = `${totalB + 2 * ratioB} pens`;
                     options = [correctAns, w1, w2, w3].sort(() => Math.random() - 0.5);
-                    explanation = `Gunakan konsep nisbah setara. Pen merah bertambah sebanyak ${multiplier} kali ganda (${ratioA} × ${multiplier} = ${totalA}). Maka pen biru juga perlu didarab dengan ${multiplier} (${ratioB} × ${multiplier} = ${totalB}).`;
+                    explanation = `Multiply both parts of the ratio by ${multiplier}. There are ${ratioB} × ${multiplier} = ${totalB} blue pens.`;
 
                 } else {
                     // Unique complex unitary method / proportion problem
@@ -411,24 +412,24 @@
                     let targetCount = unitCount + 4; // e.g. +4 units
                     let targetCost = targetCount * unitPrice;
 
-                    qText = `Harga bagi ${unitCount} buah buku latihan ialah RM${totalCost}. Encik Ahmad ingin membeli ${targetCount} buah buku latihan yang sama untuk anaknya. Berapakah jumlah wang yang perlu dibayar?`;
+                    qText = `${unitCount} exercise books cost RM${totalCost}. How much does Mr Ahmad pay for ${targetCount} at the same price per book?`;
                     correctAns = `RM${targetCost}`;
                     let w1 = `RM${targetCost + unitPrice}`;
                     let w2 = `RM${Math.max(5, targetCost - (unitPrice * 2))}`;
-                    let w3 = `RM${totalCost + targetCount}`;
+                    let w3 = `RM${targetCost + 2 * unitPrice}`;
                     options = [correctAns, w1, w2, w3].sort(() => Math.random() - 0.5);
-                    explanation = `Cari harga 1 buah buku latihan terlebih dahulu: RM${totalCost} ÷ ${unitCount} = RM${unitPrice}. Seterusnya darab dengan ${targetCount} buah buku: ${targetCount} × RM${unitPrice} = RM${targetCost}.`;
+                    explanation = `Divide RM${totalCost} by ${unitCount} to get RM${unitPrice} per book. Multiply by ${targetCount} to get RM${targetCost}.`;
                 }
 
                 questionBank.push({
                     id: `K4-PENY-${diff[0].toUpperCase()}-${String(i).padStart(3, '0')}`,
-                    topic: 'Penyelesaian Masalah',
+                    topic: 'Problem Solving',
                     difficulty: diff,
                     cognitive: aras,
-                    type: 'Objektif',
+                    type: 'Multiple Choice',
                     question: qText,
                     visualType: 'problem',
-                    visualData: { title: 'Penyelesaian Masalah Harian' },
+                    visualData: { title: 'Everyday Problem Solving' },
                     options: options,
                     correct: correctAns,
                     marks: 5,
@@ -527,22 +528,22 @@
                     </div>
 
                     <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-xl max-w-lg w-full border border-indigo-100 mb-6">
-                        <span class="bg-indigo-100 text-indigo-700 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Tahun 4 • KSSR Matematik</span>
-                        <h3 class="font-game text-lg text-slate-800 mt-3 font-bold">📍 Koordinat, Nisbah dan Kadaran</h3>
-                        <p class="text-slate-600 text-xs md:text-sm mt-2">Belajar matematik dengan gambar rajah grid dan objek interaktif!</p>
+                        <span class="bg-indigo-100 text-indigo-700 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Year 4 • KSSR Mathematics</span>
+                        <h3 class="font-game text-lg text-slate-800 mt-3 font-bold">📍 Coordinates, Ratio and Proportion</h3>
+                        <p class="text-slate-600 text-xs md:text-sm mt-2">Practise with coordinate grids and pictures.</p>
                         
                         <div class="grid grid-cols-2 gap-4 mt-6">
                             <button onclick="navigateTo('register')" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 text-white font-game py-3 px-6 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-sm">
-                                <i class="fa-solid fa-user-plus"></i> Daftar
+                                <i class="fa-solid fa-user-plus"></i> Register
                             </button>
                             <button onclick="navigateTo('login')" class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 text-white font-game py-3 px-6 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-sm">
-                                <i class="fa-solid fa-right-to-bracket"></i> Login
+                                <i class="fa-solid fa-right-to-bracket"></i> Log In
                             </button>
                         </div>
                     </div>
                     
                     <button onclick="navigateTo('leaderboard')" class="text-indigo-700 bg-white hover:bg-indigo-50 font-bold px-4 py-2 rounded-xl text-xs shadow border border-indigo-200 transition flex items-center gap-2">
-                        <i class="fa-solid fa-trophy text-amber-500"></i> Papan Kedudukan Leaderboard
+                        <i class="fa-solid fa-trophy text-amber-500"></i> Leaderboard
                     </button>
                 </div>
             `;
@@ -553,25 +554,25 @@
                 <div class="max-w-md mx-auto bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-indigo-100 w-full">
                     <div class="text-center mb-6">
                         <span class="text-3xl">👤</span>
-                        <h2 class="font-game font-bold text-2xl text-indigo-900 mt-1">Daftar Akaun Pemain</h2>
-                        <p class="text-xs text-slate-500">Mulakan pengembaraan matematik anda!</p>
+                        <h2 class="font-game font-bold text-2xl text-indigo-900 mt-1">Create a Player Account</h2>
+                        <p class="text-xs text-slate-500">Start your maths practice.</p>
                     </div>
 
                     <form onsubmit="handleRegister(event)" class="space-y-4">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nama Pengguna</label>
-                            <input type="text" id="reg-username" required placeholder="Contoh: Aizat Zahir" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Username</label>
+                            <input type="text" id="reg-username" required placeholder="e.g. Aizat Zahir" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">ID Pemain (Unik)</label>
-                            <input type="text" id="reg-id" required placeholder="Contoh: aizat04" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Unique Player ID</label>
+                            <input type="text" id="reg-id" required placeholder="e.g. aizat04" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Kata Laluan</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Password</label>
                             <input type="password" id="reg-pass" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Pilih Avatar</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Choose an Avatar</label>
                             <div class="grid grid-cols-5 gap-2 pt-1" id="avatar-selector">
                                 <button type="button" onclick="selectAvatar(this, '👦')" class="avatar-btn p-2 bg-indigo-50 border-2 border-indigo-500 rounded-2xl text-xl">👦</button>
                                 <button type="button" onclick="selectAvatar(this, '👧')" class="avatar-btn p-2 bg-slate-50 border-2 border-slate-200 rounded-2xl text-xl">👧</button>
@@ -582,8 +583,8 @@
                         </div>
 
                         <div class="pt-3 flex gap-3">
-                            <button type="button" onclick="navigateTo('welcome')" class="w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-game py-3 rounded-xl text-sm">Kembali</button>
-                            <button type="submit" class="w-2/3 bg-indigo-600 hover:bg-indigo-700 text-white font-game py-3 rounded-xl shadow-lg text-sm">Daftar</button>
+                            <button type="button" onclick="navigateTo('welcome')" class="w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-game py-3 rounded-xl text-sm">Back</button>
+                            <button type="submit" class="w-2/3 bg-indigo-600 hover:bg-indigo-700 text-white font-game py-3 rounded-xl shadow-lg text-sm">Register</button>
                         </div>
                     </form>
                 </div>
@@ -608,7 +609,7 @@
             const password = document.getElementById('reg-pass').value;
 
             if (usersList.some(u => u.playerId === playerId)) {
-                showModal('⚠ Ralat', 'ID Pemain ini telah wujud. Sila guna ID lain.', '❌');
+                showModal('⚠ Error', 'That player ID already exists. Choose another.', '❌');
                 return;
             }
 
@@ -627,7 +628,7 @@
             localStorage.setItem('mathkids_active_user', JSON.stringify(newUser));
             currentUser = newUser;
 
-            showModal('🎉 Berjaya!', `Selamat datang, ${username}!`, '🌟');
+            showModal('🎉 Success!', `Welcome, ${username}!`, '🌟');
             setTimeout(() => { closeModal(); navigateTo('home'); }, 1200);
         }
 
@@ -636,23 +637,23 @@
                 <div class="max-w-md mx-auto bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-indigo-100 w-full">
                     <div class="text-center mb-6">
                         <span class="text-3xl">🔐</span>
-                        <h2 class="font-game font-bold text-2xl text-indigo-900 mt-1">Log Masuk Pemain</h2>
-                        <p class="text-xs text-slate-500">Teruskan rekod pembelajaran anda</p>
+                        <h2 class="font-game font-bold text-2xl text-indigo-900 mt-1">Player Login</h2>
+                        <p class="text-xs text-slate-500">Continue your maths practice</p>
                     </div>
 
                     <form onsubmit="handleLogin(event)" class="space-y-4">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">ID Pemain</label>
-                            <input type="text" id="login-id" required placeholder="Contoh: aizat04" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Player ID</label>
+                            <input type="text" id="login-id" required placeholder="e.g. aizat04" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Kata Laluan</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Password</label>
                             <input type="password" id="login-pass" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
                         </div>
 
                         <div class="pt-3 flex gap-3">
-                            <button type="button" onclick="navigateTo('welcome')" class="w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-game py-3 rounded-xl text-sm">Kembali</button>
-                            <button type="submit" class="w-2/3 bg-pink-600 hover:bg-pink-700 text-white font-game py-3 rounded-xl shadow-lg text-sm">Log Masuk</button>
+                            <button type="button" onclick="navigateTo('welcome')" class="w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-game py-3 rounded-xl text-sm">Back</button>
+                            <button type="submit" class="w-2/3 bg-pink-600 hover:bg-pink-700 text-white font-game py-3 rounded-xl shadow-lg text-sm">Log In</button>
                         </div>
                     </form>
                 </div>
@@ -666,13 +667,13 @@
 
             const found = usersList.find(u => u.playerId === playerId && u.password === password);
             if (!found) {
-                showModal('❌ Ralat', 'ID Pemain atau Kata Laluan tidak sah.', '⚠');
+                showModal('❌ Error', 'Incorrect player ID or password.', '⚠');
                 return;
             }
 
             currentUser = found;
             localStorage.setItem('mathkids_active_user', JSON.stringify(found));
-            showModal('🎉 Berjaya!', `Selamat kembali, ${found.username}!`, '⭐');
+            showModal('🎉 Success!', `Welcome back, ${found.username}!`, '⭐');
             setTimeout(() => { closeModal(); navigateTo('home'); }, 1000);
         }
 
@@ -686,12 +687,12 @@
             return `
                 <div class="text-center py-2">
                     <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-6 md:p-8 text-white shadow-xl mb-6 relative overflow-hidden">
-                        <h2 class="font-game font-bold text-2xl md:text-3xl mb-1">Hai, ${currentUser.username}! 👋</h2>
-                        <p class="text-indigo-100 text-xs md:text-sm max-w-md mx-auto">Sedia menguasai Koordinat, Nisbah dan Kadaran?</p>
+                        <h2 class="font-game font-bold text-2xl md:text-3xl mb-1">Hello, ${currentUser.username}! 👋</h2>
+                        <p class="text-indigo-100 text-xs md:text-sm max-w-md mx-auto">Ready to practise coordinates, ratio and proportion?</p>
                         
                         <div class="mt-5 flex flex-wrap justify-center gap-3">
                             <button onclick="navigateTo('topics')" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-game font-bold px-6 py-3 rounded-2xl shadow-lg transition flex items-center gap-2 text-sm">
-                                <i class="fa-solid fa-play"></i> MULA BERMAIN
+                                <i class="fa-solid fa-play"></i> PLAY NOW
                             </button>
                             <button onclick="navigateTo('progress')" class="bg-white/20 hover:bg-white/30 text-white font-game px-5 py-3 rounded-2xl backdrop-blur-md transition flex items-center gap-2 text-xs">
                                 <i class="fa-solid fa-chart-line"></i> Progress Saya
@@ -702,7 +703,7 @@
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                         <div onclick="navigateTo('topics')" class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 hover:border-indigo-300 transition cursor-pointer text-center">
                             <span class="text-2xl">📚</span>
-                            <h4 class="font-game font-bold text-slate-800 mt-2 text-xs">Pilih Topik</h4>
+                            <h4 class="font-game font-bold text-slate-800 mt-2 text-xs">Choose a Topic</h4>
                         </div>
                         <div onclick="navigateTo('leaderboard')" class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 hover:border-amber-300 transition cursor-pointer text-center">
                             <span class="text-2xl">🏆</span>
@@ -710,11 +711,11 @@
                         </div>
                         <div onclick="navigateTo('progress')" class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 hover:border-emerald-300 transition cursor-pointer text-center">
                             <span class="text-2xl">📊</span>
-                            <h4 class="font-game font-bold text-slate-800 mt-2 text-xs">Pencapaian</h4>
+                            <h4 class="font-game font-bold text-slate-800 mt-2 text-xs">Achievements</h4>
                         </div>
                         <div onclick="navigateTo('settings')" class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 hover:border-purple-300 transition cursor-pointer text-center">
                             <span class="text-2xl">⚙</span>
-                            <h4 class="font-game font-bold text-slate-800 mt-2 text-xs">Tetapan</h4>
+                            <h4 class="font-game font-bold text-slate-800 mt-2 text-xs">Settings</h4>
                         </div>
                     </div>
                 </div>
@@ -723,19 +724,19 @@
 
         function renderTopicsView() {
             const topics = [
-                { id: 't1', name: 'Kenal dan Tentukan Koordinat', icon: '📍', desc: 'Paksi-x, Paksi-y, Asalan O, Sukuan Pertama' },
-                { id: 't2', name: 'Tanda Titik Koordinat', icon: '🎯', desc: 'Grid interaktif, meletakkan titik (x,y)' },
-                { id: 't3', name: 'Nisbah', icon: '⚖️', desc: 'Hubungan kuantiti, objek harian 1:1 hingga 1:10' },
-                { id: 't4', name: 'Kadaran', icon: '🔢', desc: 'Kaedah unitari, harga & kuantiti kehidupan harian' },
-                { id: 't5', name: 'Penyelesaian Masalah', icon: '🧩', desc: 'Gabungan Koordinat, Nisbah & Kadaran' }
+                { id: 't1', name: 'Reading Coordinates', icon: '📍', desc: 'The x-axis, y-axis, origin O and first quadrant' },
+                { id: 't2', name: 'Plotting Coordinates', icon: '🎯', desc: 'Locate points (x, y) on a grid' },
+                { id: 't3', name: 'Ratio', icon: '⚖️', desc: 'Compare quantities of everyday objects' },
+                { id: 't4', name: 'Proportion', icon: '🔢', desc: 'Use the unitary method to work out prices and quantities' },
+                { id: 't5', name: 'Problem Solving', icon: '🧩', desc: 'Apply coordinates, ratio and proportion' }
             ];
 
             return `
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div>
-                            <h2 class="font-game font-bold text-xl md:text-2xl text-indigo-900">📚 Pilih Topik Pembelajaran</h2>
-                            <p class="text-xs text-slate-500">KSSR Matematik Tahun 4 (Tajuk 7.0)</p>
+                            <h2 class="font-game font-bold text-xl md:text-2xl text-indigo-900">📚 Choose a Topic</h2>
+                            <p class="text-xs text-slate-500">Year 4 KSSR Mathematics (Topic 7.0)</p>
                         </div>
                         <button onclick="navigateTo('home')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3 py-2 rounded-xl transition">
                             <i class="fa-solid fa-arrow-left"></i> Menu
@@ -753,7 +754,7 @@
                                     <p class="text-slate-500 text-[11px] mt-1 leading-relaxed">${t.desc}</p>
                                 </div>
                                 <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-indigo-600">
-                                    <span>60 Soalan Unik</span>
+                                    <span>60 Questions</span>
                                     <i class="fa-solid fa-chevron-right group-hover:translate-x-1 transition"></i>
                                 </div>
                             </div>
@@ -775,31 +776,31 @@
                     <div class="text-center mb-5">
                         <span class="text-3xl">⚙️</span>
                         <h2 class="font-game font-bold text-xl md:text-2xl text-indigo-900 mt-1">${selectedTopicName}</h2>
-                        <p class="text-xs text-slate-500">Pilih Tahap Kesukaran & Had Masa</p>
+                        <p class="text-xs text-slate-500">Choose a Difficulty Level and Time Limit</p>
                     </div>
 
                     <div class="space-y-5">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">1. Pilih Tahap Kesukaran</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">1. Choose a Difficulty Level</label>
                             <div class="grid grid-cols-3 gap-2">
-                                <button type="button" onclick="setDiff('Senang')" id="diff-senang" class="diff-btn py-2.5 px-3 rounded-2xl border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-game text-xs font-bold">🟢 Senang</button>
-                                <button type="button" onclick="setDiff('Sederhana')" id="diff-sederhana" class="diff-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">🟡 Sederhana</button>
-                                <button type="button" onclick="setDiff('Susah')" id="diff-susah" class="diff-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">🔴 Susah</button>
+                                <button type="button" onclick="setDiff('Senang')" id="diff-senang" class="diff-btn py-2.5 px-3 rounded-2xl border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-game text-xs font-bold">🟢 Easy</button>
+                                <button type="button" onclick="setDiff('Sederhana')" id="diff-sederhana" class="diff-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">🟡 Medium</button>
+                                <button type="button" onclick="setDiff('Susah')" id="diff-susah" class="diff-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">🔴 Hard</button>
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">2. Pilih Masa Setiap Soalan</label>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">2. Choose a Time Limit</label>
                             <div class="grid grid-cols-3 gap-2">
-                                <button type="button" onclick="setTimer(30)" id="timer-30" class="timer-btn py-2.5 px-3 rounded-2xl border-2 border-indigo-500 bg-indigo-50 text-indigo-800 font-game text-xs font-bold">⏱️ 30 Saat</button>
-                                <button type="button" onclick="setTimer(60)" id="timer-60" class="timer-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">⏱ 1 Minit</button>
-                                <button type="button" onclick="setTimer(0)" id="timer-0" class="timer-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">♾️ Tiada Had</button>
+                                <button type="button" onclick="setTimer(30)" id="timer-30" class="timer-btn py-2.5 px-3 rounded-2xl border-2 border-indigo-500 bg-indigo-50 text-indigo-800 font-game text-xs font-bold">⏱️ 30 Seconds</button>
+                                <button type="button" onclick="setTimer(60)" id="timer-60" class="timer-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">⏱ 1 Minute</button>
+                                <button type="button" onclick="setTimer(0)" id="timer-0" class="timer-btn py-2.5 px-3 rounded-2xl border-2 border-slate-200 bg-slate-50 text-slate-700 font-game text-xs font-bold">♾️ No Time Limit</button>
                             </div>
                         </div>
 
                         <div class="pt-3 flex gap-3">
-                            <button onclick="navigateTo('topics')" class="w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-game py-3 rounded-xl text-xs">Kembali</button>
-                            <button onclick="startQuizSession()" class="w-2/3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 text-white font-game py-3 rounded-xl shadow-lg text-xs">▶ MULA BERMAIN</button>
+                            <button onclick="navigateTo('topics')" class="w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-game py-3 rounded-xl text-xs">Back</button>
+                            <button onclick="startQuizSession()" class="w-2/3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 text-white font-game py-3 rounded-xl shadow-lg text-xs">▶ PLAY NOW</button>
                         </div>
                     </div>
                 </div>
@@ -868,14 +869,14 @@
                         <div class="flex items-center gap-2 text-xs font-bold">
                             <span class="bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-xl border border-indigo-200">⭐ <span id="live-score">${currentGameSession.score}</span></span>
                             ${currentGameSession.timerMode > 0 ? `<span id="live-timer-badge" class="bg-amber-50 text-amber-700 px-2.5 py-1 rounded-xl border border-amber-200"><i class="fa-solid fa-clock"></i> <span id="live-timer">${currentGameSession.timeLeft}</span>s</span>` : ''}
-                            <span class="bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-xl border border-emerald-200">Soalan ${currentGameSession.currentIndex + 1}/20</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-xl border border-emerald-200">Question ${currentGameSession.currentIndex + 1}/20</span>
                         </div>
                     </div>
 
                     <div class="py-4">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-700 px-2.5 py-0.5 rounded-full">${q.topic} • ${q.difficulty}</span>
-                            <span class="text-[10px] font-bold text-slate-400">Aras: ${q.cognitive} | ID: ${q.id}</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-700 px-2.5 py-0.5 rounded-full">${q.topic} • ${({ Senang: 'Easy', Sederhana: 'Medium', Susah: 'Hard' })[q.difficulty]}</span>
+                            <span class="text-[10px] font-bold text-slate-400">Level: ${q.cognitive} | ID: ${q.id}</span>
                         </div>
                         <h3 class="font-game font-bold text-base md:text-lg text-slate-800 mb-3 leading-snug">${q.question}</h3>
 
@@ -978,7 +979,7 @@
                 const d = q.visualData;
                 ctx.fillStyle = '#1e1b4b';
                 ctx.font = 'bold 12px Fredoka';
-                ctx.fillText(`Perbandingan Kuantiti: ${d.countA} ${d.labelA} & ${d.countB} ${d.labelB}`, 20, 30);
+                ctx.fillText(`Comparing Quantities: ${d.countA} ${d.labelA} & ${d.countB} ${d.labelB}`, 20, 30);
 
                 let startX = 30;
                 let startY = 60;
@@ -988,20 +989,20 @@
                 }
                 ctx.fillStyle = '#64748b';
                 ctx.font = 'bold 11px Fredoka';
-                ctx.fillText(`Bilangan ${d.labelA} = ${d.countA}`, startX, startY + 65);
+                ctx.fillText(`Number of ${d.labelA} = ${d.countA}`, startX, startY + 65);
 
                 for (let j = 0; j < d.countB; j++) {
                     ctx.fillText(d.iconB, startX + (j * 42), startY + 110);
                 }
                 ctx.fillStyle = '#64748b';
                 ctx.font = 'bold 11px Fredoka';
-                ctx.fillText(`Bilangan ${d.labelB} = ${d.countB}`, startX, startY + 145);
+                ctx.fillText(`Number of ${d.labelB} = ${d.countB}`, startX, startY + 145);
 
             } else if (q.visualType === 'proportion') {
                 const d = q.visualData;
                 ctx.fillStyle = '#1e1b4b';
                 ctx.font = 'bold 13px Fredoka';
-                ctx.fillText(`Kaedah Unitari & Kadaran Harga`, 20, 30);
+                ctx.fillText(`The Unitary Method`, 20, 30);
 
                 ctx.fillStyle = '#f59e0b';
                 ctx.font = '36px sans-serif';
@@ -1009,18 +1010,18 @@
 
                 ctx.fillStyle = '#1e293b';
                 ctx.font = 'bold 14px Fredoka';
-                ctx.fillText(`Harga 1 unit ${d.item} = RM${d.price}`, 100, 75);
+                ctx.fillText(`Price per item = RM${d.price}`, 100, 75);
                 ctx.fillStyle = '#64748b';
                 ctx.font = '12px Inter';
-                ctx.fillText(`Gunakan kaedah unitari untuk cari nilai perkadaran.`, 100, 95);
+                ctx.fillText(`Use the price per item to work out the total.`, 100, 95);
 
             } else {
                 ctx.fillStyle = '#4f46e5';
                 ctx.font = 'bold 14px Fredoka';
-                ctx.fillText('🧩 Situasi Matematik Harian KSSR', 30, 80);
+                ctx.fillText('🧩 Everyday Maths Problem', 30, 80);
                 ctx.fillStyle = '#64748b';
                 ctx.font = '12px Inter';
-                ctx.fillText('Fahami kehendak soalan dan pilih jawapan yang tepat.', 30, 110);
+                ctx.fillText('Read the question and choose the correct answer.', 30, 110);
             }
         }
 
@@ -1047,9 +1048,9 @@
         function handleTimeOut() {
             const q = currentGameSession.questions[currentGameSession.currentIndex];
             currentGameSession.wrongCount++;
-            currentGameSession.answersLog.push({ questionId: q.id, correct: false, userAns: 'MASA TAMAT', correctAns: q.correct });
+            currentGameSession.answersLog.push({ questionId: q.id, correct: false, userAns: 'TIME’S UP', correctAns: q.correct });
             
-            showModal('⏰ MASA TAMAT!', `Jawapan yang betul ialah: ${q.correct}\n\n${q.explanation}`, '⚠️');
+            showModal('⏰ TIME’S UP!', `The correct answer is: ${q.correct}\n\n${q.explanation}`, '⚠️');
             setTimeout(() => { closeModal(); nextQuestion(); }, 3000);
         }
 
@@ -1062,11 +1063,11 @@
                 currentGameSession.score += 5;
                 currentGameSession.correctCount++;
                 currentGameSession.answersLog.push({ questionId: q.id, correct: true, userAns, correctAns: q.correct });
-                showModal('🎉 TAHNIAH!', `Jawapan Anda Betul!\n\n+5 Markah\n\n${q.explanation}`, '✨');
+                showModal('🎉 WELL DONE!', `Your answer is correct!\n\n+5 marks\n\n${q.explanation}`, '✨');
             } else {
                 currentGameSession.wrongCount++;
                 currentGameSession.answersLog.push({ questionId: q.id, correct: false, userAns, correctAns: q.correct });
-                showModal('❌ CUBA LAGI!', `Jawapan yang betul ialah: ${q.correct}\n\n${q.explanation}`, '💡');
+                showModal('❌ INCORRECT ANSWER', `The correct answer is: ${q.correct}\n\n${q.explanation}`, '💡');
             }
 
             setTimeout(() => { closeModal(); nextQuestion(); }, 2500);
@@ -1109,40 +1110,40 @@
             return `
                 <div class="max-w-md mx-auto bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-indigo-100 text-center w-full">
                     <span class="text-5xl">🏆</span>
-                    <h2 class="font-game font-bold text-2xl text-indigo-900 mt-2">TAHNIAH ${currentUser.username.toUpperCase()}!</h2>
-                    <p class="text-xs text-slate-500 mb-5">Topik ${currentGameSession.topicName} Selesai</p>
+                    <h2 class="font-game font-bold text-2xl text-indigo-900 mt-2">WELL DONE ${currentUser.username.toUpperCase()}!</h2>
+                    <p class="text-xs text-slate-500 mb-5">${currentGameSession.topicName} Completed</p>
 
                     <div class="bg-indigo-50/70 rounded-2xl p-4 mb-5 space-y-2 text-xs md:text-sm">
                         <div class="flex justify-between font-bold">
-                            <span class="text-slate-600">Jumlah Markah:</span>
+                            <span class="text-slate-600">Total Marks:</span>
                             <span class="text-indigo-600 text-base">${currentGameSession.score} / 100</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-slate-600">Jawapan Betul:</span>
+                            <span class="text-slate-600">Correct Answers:</span>
                             <span class="text-emerald-600 font-bold">${currentGameSession.correctCount}</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-slate-600">Jawapan Salah:</span>
+                            <span class="text-slate-600">Incorrect Answers:</span>
                             <span class="text-rose-600 font-bold">${currentGameSession.wrongCount}</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-slate-600">Ketepatan:</span>
+                            <span class="text-slate-600">Accuracy:</span>
                             <span class="text-purple-600 font-bold">${accuracy}%</span>
                         </div>
                     </div>
 
                     <div class="space-y-2.5">
-                        <button onclick="navigateTo('game')" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-game py-3 rounded-xl shadow-lg text-xs flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-rotate-right"></i> Main Semula (Soalan Baru)
+                        <button onclick="startQuizSession()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-game py-3 rounded-xl shadow-lg text-xs flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-rotate-right"></i> Play Again
                         </button>
                         <button onclick="navigateTo('topics')" class="w-full bg-purple-100 text-purple-800 font-game py-3 rounded-xl text-xs flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-book-open"></i> Pilih Topik Lain
+                            <i class="fa-solid fa-book-open"></i> Choose Another Topic
                         </button>
                         <button onclick="navigateTo('leaderboard')" class="w-full bg-amber-100 text-amber-800 font-game py-3 rounded-xl text-xs flex items-center justify-center gap-2">
                             <i class="fa-solid fa-trophy"></i> Leaderboard
                         </button>
                         <button onclick="navigateTo('home')" class="w-full bg-slate-100 text-slate-700 font-game py-3 rounded-xl text-xs">
-                            Menu Utama
+                            Main Menu
                         </button>
                     </div>
                 </div>
@@ -1150,7 +1151,7 @@
         }
 
         function renderProgressView() {
-            const topics = ['Kenal dan Tentukan Koordinat', 'Tanda Titik Koordinat', 'Nisbah', 'Kadaran', 'Penyelesaian Masalah'];
+            const topics = ['Reading Coordinates', 'Plotting Coordinates', 'Ratio', 'Proportion', 'Problem Solving'];
             const stats = currentUser.stats || { totalAnswered: 0, totalCorrect: 0, totalWrong: 0 };
             const accuracy = stats.totalAnswered > 0 ? Math.round((stats.totalCorrect / stats.totalAnswered) * 100) : 0;
 
@@ -1158,40 +1159,40 @@
                 <div class="max-w-2xl mx-auto bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-indigo-100 w-full">
                     <div class="flex items-center justify-between mb-5">
                         <div>
-                            <h2 class="font-game font-bold text-xl md:text-2xl text-indigo-900">📊 PROGRESS SAYA</h2>
-                            <p class="text-xs text-slate-500">Statistik ${currentUser.username}</p>
+                            <h2 class="font-game font-bold text-xl md:text-2xl text-indigo-900">📊 MY PROGRESS</h2>
+                            <p class="text-xs text-slate-500">${currentUser.username}’s Statistics</p>
                         </div>
                         <button onclick="navigateTo('home')" class="text-xs bg-slate-100 text-slate-700 font-bold px-3 py-2 rounded-xl">Menu</button>
                     </div>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 mb-5">
                         <div class="bg-indigo-50 p-3 rounded-2xl text-center">
-                            <p class="text-[11px] text-indigo-600 font-bold">Markah</p>
+                            <p class="text-[11px] text-indigo-600 font-bold">Marks</p>
                             <p class="font-game font-bold text-xl text-indigo-900 mt-1">${currentUser.totalScore || 0}</p>
                         </div>
                         <div class="bg-emerald-50 p-3 rounded-2xl text-center">
-                            <p class="text-[11px] text-emerald-600 font-bold">Betul</p>
+                            <p class="text-[11px] text-emerald-600 font-bold">Correct</p>
                             <p class="font-game font-bold text-xl text-emerald-900 mt-1">${stats.totalCorrect}</p>
                         </div>
                         <div class="bg-rose-50 p-3 rounded-2xl text-center">
-                            <p class="text-[11px] text-rose-600 font-bold">Salah</p>
+                            <p class="text-[11px] text-rose-600 font-bold">Incorrect</p>
                             <p class="font-game font-bold text-xl text-rose-900 mt-1">${stats.totalWrong}</p>
                         </div>
                         <div class="bg-purple-50 p-3 rounded-2xl text-center">
-                            <p class="text-[11px] text-purple-600 font-bold">Ketepatan</p>
+                            <p class="text-[11px] text-purple-600 font-bold">Accuracy</p>
                             <p class="font-game font-bold text-xl text-purple-900 mt-1">${accuracy}%</p>
                         </div>
                     </div>
 
                     <div class="space-y-3">
-                        <h3 class="font-game font-bold text-slate-800 text-xs uppercase">Pencapaian Mengikut Topik</h3>
+                        <h3 class="font-game font-bold text-slate-800 text-xs uppercase">Progress by Topic</h3>
                         ${topics.map(t => {
                             const pct = currentUser.topicsCompleted?.[t] || 0;
                             return `
                                 <div>
                                     <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
                                         <span>${t}</span>
-                                        <span>${pct}% Selesai</span>
+                                        <span>${pct}% Complete</span>
                                     </div>
                                     <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
                                         <div class="bg-gradient-to-r from-indigo-500 to-pink-500 h-2.5 rounded-full" style="width: ${pct}%"></div>
@@ -1212,13 +1213,13 @@
                     <div class="flex items-center justify-between mb-5">
                         <div>
                             <h2 class="font-game font-bold text-xl md:text-2xl text-indigo-900">🏆 LEADERBOARD</h2>
-                            <p class="text-xs text-slate-500">Papan Kedudukan Pemain Terbaik</p>
+                            <p class="text-xs text-slate-500">Top Players</p>
                         </div>
                         <button onclick="navigateTo('home')" class="text-xs bg-slate-100 text-slate-700 font-bold px-3 py-2 rounded-xl">Menu</button>
                     </div>
 
                     <div class="space-y-2.5">
-                        ${sortedUsers.length === 0 ? `<p class="text-center text-slate-400 text-xs py-8">Belum ada pemain berdaftar.</p>` : ''}
+                        ${sortedUsers.length === 0 ? `<p class="text-center text-slate-400 text-xs py-8">There are no registered players yet.</p>` : ''}
                         ${sortedUsers.map((u, idx) => `
                             <div class="flex items-center justify-between p-3.5 rounded-2xl ${idx === 0 ? 'bg-amber-50 border-2 border-amber-300' : idx === 1 ? 'bg-slate-100' : 'bg-white border border-slate-100'}">
                                 <div class="flex items-center gap-3">
@@ -1230,8 +1231,8 @@
                                     </div>
                                 </div>
                                 <div class="text-right">
-                                    <p class="font-game font-bold text-indigo-600 text-sm">${u.totalScore || 0} Mata</p>
-                                    <p class="text-[10px] text-slate-400">Ketepatan: ${u.stats && u.stats.totalAnswered > 0 ? Math.round((u.stats.totalCorrect / u.stats.totalAnswered) * 100) : 0}%</p>
+                                    <p class="font-game font-bold text-indigo-600 text-sm">${u.totalScore || 0} marks</p>
+                                    <p class="text-[10px] text-slate-400">Accuracy: ${u.stats && u.stats.totalAnswered > 0 ? Math.round((u.stats.totalCorrect / u.stats.totalAnswered) * 100) : 0}%</p>
                                 </div>
                             </div>
                         `).join('')}
@@ -1245,8 +1246,8 @@
                 <div class="max-w-md mx-auto bg-white rounded-3xl p-6 md:p-8 shadow-2xl border border-indigo-100 w-full">
                     <div class="text-center mb-5">
                         <span class="text-3xl">⚙️</span>
-                        <h2 class="font-game font-bold text-2xl text-indigo-900 mt-1">Tetapan Akaun</h2>
-                        <p class="text-xs text-slate-500">Urus profil pemain semasa</p>
+                        <h2 class="font-game font-bold text-2xl text-indigo-900 mt-1">Account Settings</h2>
+                        <p class="text-xs text-slate-500">Manage your player profile</p>
                     </div>
 
                     <div class="space-y-4">
@@ -1259,10 +1260,10 @@
                         </div>
 
                         <button onclick="logoutUser()" class="w-full bg-rose-100 hover:bg-rose-200 text-rose-700 font-game py-3 rounded-xl text-xs flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-right-from-bracket"></i> Log Keluar
+                            <i class="fa-solid fa-right-from-bracket"></i> Log Out
                         </button>
                         <button onclick="navigateTo('home')" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-game py-3 rounded-xl text-xs">
-                            Kembali ke Menu Utama
+                            Back to the Main Menu
                         </button>
                     </div>
                 </div>

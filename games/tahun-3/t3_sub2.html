@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids Bernama Edu Kidz – Matematik Tahun 3</title>
+    <title>Math Kids Bernama Edu Kidz – Year 3 Mathematics</title>
     <!-- Tailwind CSS for modern responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font Inter -->
@@ -37,7 +37,7 @@
                 </div>
                 <div>
                     <h1 class="font-extrabold text-blue-900 text-lg leading-tight">Math Kids</h1>
-                    <p class="text-xs text-emerald-600 font-semibold">Bernama Edu Kidz • Tahun 3</p>
+                    <p class="text-xs text-emerald-600 font-semibold">Bernama Edu Kidz • Year 3</p>
                 </div>
             </div>
             
@@ -53,7 +53,7 @@
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
-        Math Kids Bernama Edu Kidz &copy; 2026 • Kurikulum Standard Sekolah Rendah (KSSR) KPM Malaysia
+        Math Kids Bernama Edu Kidz &copy; 2026 • Malaysian Primary School Standard Curriculum (KSSR)
     </footer>
 
     <!-- Notification Modal -->
@@ -62,24 +62,24 @@
             <div id="modal-icon" class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
                 <i class="fa-solid fa-info"></i>
             </div>
-            <h3 id="modal-title" class="text-xl font-bold text-slate-900 mb-2">Makluman</h3>
-            <p id="modal-message" class="text-slate-600 mb-6 text-sm">Mesej sistem...</p>
+            <h3 id="modal-title" class="text-xl font-bold text-slate-900 mb-2">Notice</h3>
+            <p id="modal-message" class="text-slate-600 mb-6 text-sm">System message...</p>
             <button onclick="app.closeModal()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-blue-200 cursor-pointer">
-                Faham & Teruskan
+                OK, Continue
             </button>
         </div>
     </div>
 
     <script>
         const TOPICS = [
-            { id: 1, code: "TAM2", name: "Topik 1: Tambah Dua Nombor", desc: "Penambahan dua nombor dalam lingkungan nilai ribu dengan/tanpa mengumpul semula." },
-            { id: 2, code: "TAM3", name: "Topik 2: Tambah Tiga Nombor", desc: "Penambahan tiga nombor bentuk lazim dalam lingkungan nilai ribu." },
-            { id: 3, code: "TOL2", name: "Topik 3: Tolak Dua Nombor", desc: "Penolakan dua nombor dalam lingkungan nilai ribu." },
-            { id: 4, code: "TOL3", name: "Topik 4: Tolak Tiga Nombor", desc: "Penolakan tiga nombor secara berperingkat dalam lingkungan ribu." },
-            { id: 5, code: "MST",  name: "Topik 5: Masalah Tambah & Tolak", desc: "Situasi jual beli, bilangan objek, baki dan perbandingan." },
-            { id: 6, code: "DAR",  name: "Topik 6: Darab", desc: "Fakta asas darab sifir dan pendaraban nombor satu digit." },
-            { id: 7, code: "BAH",  name: "Topik 7: Bahagi", desc: "Pembahagian sama rata, kumpulan sama banyak dan kaitan darab." },
-            { id: 8, code: "MSD",  name: "Topik 8: Masalah Darab & Bahagi", desc: "Penyelesaian masalah harian melibatkan darab dan bahagi." }
+            { id: 1, code: "TAM2", name: "Topic 1: Adding Two Numbers", desc: "Add two numbers in the thousands, with or without regrouping." },
+            { id: 2, code: "TAM3", name: "Topic 2: Adding Three Numbers", desc: "Add three numbers in the thousands using the column method." },
+            { id: 3, code: "TOL2", name: "Topic 3: Subtracting Two Numbers", desc: "Subtract two numbers in the thousands." },
+            { id: 4, code: "TOL3", name: "Topic 4: Subtracting Three Numbers", desc: "Subtract three numbers in the thousands in two steps." },
+            { id: 5, code: "MST",  name: "Topic 5: Addition and Subtraction Word Problems", desc: "Solve everyday addition and subtraction problems." },
+            { id: 6, code: "DAR",  name: "Topic 6: Multiplication", desc: "Use multiplication facts and multiply by a one-digit number." },
+            { id: 7, code: "BAH",  name: "Topic 7: Division", desc: "Share equally, form equal groups and use related multiplication facts." },
+            { id: 8, code: "MSD",  name: "Topic 8: Multiplication and Division Word Problems", desc: "Solve everyday multiplication and division problems." }
         ];
 
         class MathKidApp {
@@ -143,253 +143,255 @@
                 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
                 switch(topicId) {
-                    case 1: // Tambah Dua Nombor
-                        subtopic = "Bentuk Lazim & Nilai Tempat";
+                    case 1: // Adding Two Numbers
+                        subtopic = "Column Method and Place Value";
                         if (diff === 'S') {
                             num1 = 120 + (index * 15);
                             num2 = 210 + (index * 12);
                             ans = num1 + num2;
-                            cognitive = "Mengingat";
-                            questionText = `Hitung nilai hasil tambah bagi ${num1} + ${num2}.`;
-                            explanation = `Langkah demi langkah: Tambah sa dengan sa, puluh dengan puluh, dan ratus dengan ratus. Jumlahnya ialah ${ans}.`;
-                            steps = [`Tambah digit sa: ${num1%10} + ${num2%10}`, `Tambah digit puluh dan ratus seterusnya.`];
+                            cognitive = "Remembering";
+                            questionText = `Find the sum of ${num1} and ${num2}.`;
+                            explanation = `Add ones to ones, tens to tens and hundreds to hundreds. The sum is ${ans}.`;
+                            steps = [`Add the ones digits: ${num1%10} + ${num2%10}.`, `Continue with the tens and hundreds columns, regrouping where needed.`];
                         } else if (diff === 'M') {
                             num1 = 1400 + (index * 42);
                             num2 = 2300 + (index * 31);
                             ans = num1 + num2;
-                            cognitive = "Memahami";
-                            questionText = `Selesaikan operasi penambahan ${num1} + ${num2} dengan pengumpulan semula.`;
-                            explanation = `Proses pengumpulan semula nilai tempat dilaksanakan dengan tepat. Hasil tambah ialah ${ans}.`;
-                            steps = [`Pastikan susunan nilai tempat ribu, ratus, puluh dan sa betul.`, `Kumpul semula apabila hasil tambah mencapai 10.`];
+                            cognitive = "Understanding";
+                            questionText = `Work out ${num1} + ${num2}.`;
+                            explanation = `Add by place value and regroup where needed. The sum is ${ans}.`;
+                            steps = [`Line up the thousands, hundreds, tens and ones columns.`, `Regroup whenever a column adds up to 10 or more.`];
                         } else {
                             num1 = 3500 + (index * 88);
                             num2 = 2100 + (index * 64);
                             ans = num1 + num2;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Sebuah kilang mencetak ${num1} naskhah buku cerita pada sesi pagi dan ${num2} naskhah lagi pada sesi petang. Berapakah jumlah keseluruhan naskhah buku yang dicetak?`;
-                            explanation = `Jumlah keseluruhan = ${num1} + ${num2} = ${ans} naskhah buku.`;
-                            steps = [`Kenal pasti maklumat kuantiti sesi pagi dan petang.`, `Campurkan kedua-dua kuantiti untuk mendapatkan jumlah.`];
+                            cognitive = "Applying";
+                            questionText = `A factory prints ${num1} storybooks in the morning and another ${num2} in the afternoon. How many storybooks does it print altogether?`;
+                            explanation = `Total storybooks = ${num1} + ${num2} = ${ans}.`;
+                            steps = [`Find the number of books printed in the morning and in the afternoon.`, `Add the two quantities.`];
                         }
                         break;
 
-                    case 2: // Tambah Tiga Nombor
-                        subtopic = "Tambah Tiga Kuantiti";
+                    case 2: // Adding Three Numbers
+                        subtopic = "Adding Three Quantities";
                         if (diff === 'S') {
                             num1 = 100 + (index * 10);
                             num2 = 200 + (index * 14);
                             num3 = 150 + (index * 8);
                             ans = num1 + num2 + num3;
-                            cognitive = "Mengingat";
-                            questionText = `Cari hasil tambah bagi tiga nombor berikut: ${num1} + ${num2} + ${num3} = ?`;
-                            explanation = `Jumlah ketiga-tiga nombor tersebut ialah ${ans}.`;
-                            steps = [`Jumlahkan dua nombor pertama dahulu (${num1} + ${num2}).`, `Campurkan hasil tersebut dengan nombor ketiga (${num3}).`];
+                            cognitive = "Remembering";
+                            questionText = `Find the sum: ${num1} + ${num2} + ${num3} = ?`;
+                            explanation = `The sum of the three numbers is ${ans}.`;
+                            steps = [`Add the first two numbers (${num1} + ${num2}).`, `Add the third number (${num3}) to that sum.`];
                         } else if (diff === 'M') {
                             num1 = 1100 + (index * 25);
                             num2 = 1300 + (index * 20);
                             num3 = 1250 + (index * 30);
                             ans = num1 + num2 + num3;
-                            cognitive = "Memahami";
-                            questionText = `Hitung nilai bagi ${num1} + ${num2} + ${num3} dalam bentuk lazim.`;
-                            explanation = `Hasil pengiraan bentuk lazim memberikan nilai ${ans}.`;
-                            steps = [`Susun nombor secara menegak mengikut nilai tempat.`, `Jumlahkan dari kanan ke kiri.`];
+                            cognitive = "Understanding";
+                            questionText = `Use the column method to work out ${num1} + ${num2} + ${num3}.`;
+                            explanation = `The sum is ${ans}.`;
+                            steps = [`Write the numbers vertically, lining up the digits by place value.`, `Add from right to left, regrouping where needed.`];
                         } else {
                             num1 = 2100 + (index * 50);
                             num2 = 1800 + (index * 35);
                             num3 = 1400 + (index * 40);
                             ans = num1 + num2 + num3;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Encik Amir mengumpul ${num1} biji penutup botol pada bulan Januari, ${num2} biji pada Februari, dan ${num3} biji pada Mac. Berapakah jumlah kutipan penutup botol bagi tempoh 3 bulan itu?`;
-                            explanation = `Jumlah keseluruhan kutipan ialah ${ans} biji penutup botol.`;
-                            steps = [`Campurkan kutipan bulan Januari, Februari dan Mac.`];
+                            cognitive = "Applying";
+                            questionText = `Mr Amir collects ${num1} bottle caps in January, ${num2} in February and ${num3} in March. How many does he collect over the three months?`;
+                            explanation = `Mr Amir collects ${ans} bottle caps altogether.`;
+                            steps = [`Add the amounts collected in January, February and March.`];
                         }
                         break;
 
-                    case 3: // Tolak Dua Nombor
-                        subtopic = "Tolak Nilai Ribu";
+                    case 3: // Subtracting Two Numbers
+                        subtopic = "Subtracting Numbers in the Thousands";
                         if (diff === 'S') {
                             num1 = 800 + (index * 30);
                             num2 = 300 + (index * 15);
                             ans = num1 - num2;
-                            cognitive = "Mengingat";
-                            questionText = `Hitung baki bagi operasi ${num1} − ${num2}.`;
-                            explanation = `${num1} ditolak dengan ${num2} menghasilkan baki ${ans}.`;
-                            steps = [`Tolak nilai sa, puluh dan ratus secara berurutan.`];
+                            cognitive = "Remembering";
+                            questionText = `Work out ${num1} − ${num2}.`;
+                            explanation = `${num1} − ${num2} = ${ans}.`;
+                            steps = [`Subtract from right to left, starting with the ones. Regroup where needed.`];
                         } else if (diff === 'M') {
                             num1 = 4500 + (index * 75);
                             num2 = 1600 + (index * 25);
                             ans = num1 - num2;
-                            cognitive = "Memahami";
-                            questionText = `Selesaikan ${num1} − ${num2} melibatkan proses pinjaman nilai tempat.`;
-                            explanation = `Baki selepas pinjaman nilai tempat ialah ${ans}.`;
-                            steps = [`Laksanakan pinjaman dari nilai tempat sebelah jika digit atas lebih kecil.`];
+                            cognitive = "Understanding";
+                            questionText = `Work out ${num1} − ${num2}.`;
+                            explanation = `Subtract by place value and regroup where needed. The difference is ${ans}.`;
+                            steps = [`If the top digit is smaller, regroup one unit from the column to its left.`];
                         } else {
                             num1 = 8200 + (index * 45);
                             num2 = 3400 + (index * 20);
                             ans = num1 - num2;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Sebuah perpustakaan mempunyai ${num1} buah buku. Sebanyak ${num2} buah buku telah dipinjam oleh murid-murid. Berapakah baki buku yang masih berada di perpustakaan?`;
-                            explanation = `Baki buku = ${num1} − ${num2} = ${ans} buah buku.`;
-                            steps = [`Tolak bilangan buku yang dipinjam daripada jumlah asal buku perpustakaan.`];
+                            cognitive = "Applying";
+                            questionText = `A library has ${num1} books. Pupils borrow ${num2} of them. How many books are left in the library?`;
+                            explanation = `Books left = ${num1} − ${num2} = ${ans}.`;
+                            steps = [`Subtract the number of books borrowed from the original total.`];
                         }
                         break;
 
-                    case 4: // Tolak Tiga Nombor
-                        subtopic = "Tolak Berperingkat";
+                    case 4: // Subtracting Three Numbers
+                        subtopic = "Subtraction in Two Steps";
                         if (diff === 'S') {
                             num1 = 900 + (index * 20);
                             num2 = 200 + (index * 8);
                             num3 = 150 + (index * 5);
                             ans = num1 - num2 - num3;
-                            cognitive = "Mengingat";
-                            questionText = `Hitung nilai bagi ${num1} − ${num2} − ${num3}.`;
-                            explanation = `Hasil tolak berperingkat memberikan nilai ${ans}.`;
-                            steps = [`Tolak ${num2} daripada ${num1} dahulu, kemudian tolak ${num3} daripada baki.`];
+                            cognitive = "Remembering";
+                            questionText = `Work out ${num1} − ${num2} − ${num3}.`;
+                            explanation = `The final difference is ${ans}.`;
+                            steps = [`Subtract ${num2} from ${num1}, then subtract ${num3} from the result.`];
                         } else if (diff === 'M') {
                             num1 = 5000 + (index * 50);
                             num2 = 1200 + (index * 20);
                             num3 = 1100 + (index * 15);
                             ans = num1 - num2 - num3;
-                            cognitive = "Memahami";
-                            questionText = `Selesaikan operasi penolakan berturutan ${num1} − ${num2} − ${num3}.`;
-                            explanation = `Baki akhir pengiraan ialah ${ans}.`;
-                            steps = [`Lakukan penolakan dua langkah secara teliti.`];
+                            cognitive = "Understanding";
+                            questionText = `Work out ${num1} − ${num2} − ${num3}.`;
+                            explanation = `The final difference is ${ans}.`;
+                            steps = [`Subtract from left to right, one step at a time.`];
                         } else {
                             num1 = 7900 + (index * 60);
                             num2 = 2200 + (index * 25);
                             num3 = 1400 + (index * 15);
                             ans = num1 - num2 - num3;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Puan Suri mempunyai ${num1} biji manik. Dia menggunakan ${num2} biji untuk membuat kraf tangan dan memberikan ${num3} biji kepada rakan anaknya. Berapakah baki manik Puan Suri?`;
-                            explanation = `Baki manik = ${ans} biji.`;
-                            steps = [`Tolak kegunaan kraf tangan dan pemberian rakan daripada jumlah manik asal.`];
+                            cognitive = "Applying";
+                            questionText = `Mrs Suri has ${num1} beads. She uses ${num2} for crafts and gives ${num3} to her child’s friend. How many beads does she have left?`;
+                            explanation = `Mrs Suri has ${ans} beads left.`;
+                            steps = [`Subtract the beads she uses, then subtract the beads she gives away.`];
                         }
                         break;
 
-                    case 5: // Masalah Tambah & Tolak
-                        subtopic = "Situasi Harian";
+                    case 5: // Addition and Subtraction Word Problems
+                        subtopic = "Everyday Situations";
                         if (diff === 'S') {
                             num1 = 300 + (index * 20);
                             num2 = 250 + (index * 15);
                             ans = num1 + num2;
-                            cognitive = "Memahami";
-                            questionText = `Ali mempunyai ${num1} biji guli. Bapa memberi lagi ${num2} biji guli kepada Ali. Berapakah jumlah guli Ali sekarang?`;
-                            explanation = `Jumlah guli = ${num1} + ${num2} = ${ans} biji.`;
-                            steps = [`Gunakan operasi penambahan untuk mencari jumlah keseluruhan.`];
+                            cognitive = "Understanding";
+                            questionText = `Ali has ${num1} marbles. His father gives him ${num2} more. How many marbles does Ali have now?`;
+                            explanation = `Total marbles = ${num1} + ${num2} = ${ans}.`;
+                            steps = [`Add the original number of marbles and the number given to Ali.`];
                         } else if (diff === 'M') {
                             num1 = 2500 + (index * 40);
                             num2 = 800 + (index * 20);
                             num3 = 450 + (index * 10);
                             ans = num1 - num2 + num3;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Sebuah gudang menyimpan ${num1} kotak buah oren. Sebanyak ${num2} kotak telah dihantar ke pasar raya, kemudian ${num3} kotak baru diterima daripada ladang. Berapakah jumlah kotak buah oren di gudang sekarang?`;
-                            explanation = `Pengiraan: ${num1} − ${num2} + ${num3} = ${ans} kotak.`;
-                            steps = [`Tolak kuantiti yang dihantar, kemudian tambah kuantiti yang baru diterima.`];
+                            cognitive = "Applying";
+                            questionText = `A warehouse stores ${num1} boxes of oranges. It sends ${num2} boxes to a supermarket and then receives ${num3} boxes from a farm. How many boxes are there now?`;
+                            explanation = `${num1} − ${num2} + ${num3} = ${ans} boxes.`;
+                            steps = [`Subtract the boxes sent out, then add the boxes received.`];
                         } else {
                             num1 = 4500 + (index * 55);
                             num2 = 1800 + (index * 25);
                             num3 = 1200 + (index * 20);
                             ans = num1 - num2 - num3;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Sebuah kilang mainan menghasilkan ${num1} buah kereta mainan. Pada hari Isnin, ${num2} buah dijual dan pada hari Selasa ${num3} buah lagi dijual. Berapakah baki kereta mainan di kilang itu?`;
-                            explanation = `Baki kereta mainan = ${ans}.`;
-                            steps = [`Lakukan penolakan berturutan bagi jualan hari Isnin dan Selasa.`];
+                            cognitive = "Applying";
+                            questionText = `A toy factory makes ${num1} toy cars. It sells ${num2} on Monday and another ${num3} on Tuesday. How many toy cars are left?`;
+                            explanation = `The factory has ${ans} toy cars left.`;
+                            steps = [`Subtract Monday’s sales, then subtract Tuesday’s sales.`];
                         }
                         break;
 
-                    case 6: // Darab
-                        subtopic = "Fakta Asas Sifir";
+                    case 6: // Multiplication
+                        subtopic = "Multiplication Facts";
                         if (diff === 'S') {
                             num1 = (index % 7) + 2;
                             num2 = (index % 6) + 2;
                             ans = num1 * num2;
-                            cognitive = "Mengingat";
-                            questionText = `Apakah hasil darab bagi ${num1} × ${num2}?`;
-                            explanation = `${num1} × ${num2} = ${ans} berdasarkan fakta asas sifir.`;
-                            steps = [`Rujuk sifir ${num1} untuk mendapatkan hasil darab ${num2}.`];
+                            cognitive = "Remembering";
+                            questionText = `What is the product of ${num1} and ${num2}?`;
+                            explanation = `${num1} × ${num2} = ${ans}.`;
+                            steps = [`Use the ${num1} times table to find ${num1} × ${num2}.`];
                         } else if (diff === 'M') {
                             num1 = 120 + (index * 15);
                             num2 = 4;
                             ans = num1 * num2;
-                            cognitive = "Memahami";
-                            questionText = `Hitung hasil pendaraban bagi ${num1} × ${num2}.`;
+                            cognitive = "Understanding";
+                            questionText = `Work out ${num1} × ${num2}.`;
                             explanation = `${num1} × ${num2} = ${ans}.`;
-                            steps = [`Darabkan digit sa, puluh dan ratus dengan nombor ${num2} secara berasingan.`];
+                            steps = [`Multiply each place-value part by ${num2}, then add the partial products.`];
                         } else {
                             num1 = 340 + (index * 16);
                             num2 = 6;
                             ans = num1 * num2;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Sebuah kotak memuatkan ${num1} batang pensel warna. Berapakah jumlah keseluruhan pensel warna di dalam ${num2} buah kotak yang serupa?`;
-                            explanation = `Jumlah pensel = ${num1} × ${num2} = ${ans} batang.`;
-                            steps = [`Darabkan kuantiti pensel dalam satu kotak dengan bilangan kotak.`];
+                            cognitive = "Applying";
+                            questionText = `A box holds ${num1} coloured pencils. How many pencils are in ${num2} boxes of the same size?`;
+                            explanation = `Total pencils = ${num1} × ${num2} = ${ans}.`;
+                            steps = [`Multiply the number of pencils in one box by the number of boxes.`];
                         }
                         break;
 
-                    case 7: // Bahagi
-                        subtopic = "Pembahagian Sama Rata";
+                    case 7: // Division
+                        subtopic = "Sharing Equally";
                         if (diff === 'S') {
                             num2 = (index % 5) + 2;
                             ans = (index % 7) + 3;
                             num1 = num2 * ans;
-                            cognitive = "Mengingat";
-                            questionText = `Selesaikan operasi pembahagian ${num1} ÷ ${num2}.`;
+                            cognitive = "Remembering";
+                            questionText = `Work out ${num1} ÷ ${num2}.`;
                             explanation = `${num1} ÷ ${num2} = ${ans}.`;
-                            steps = [`Gunakan kaitan fakta darab ${num2} × ${ans} = ${num1}.`];
+                            steps = [`Use the related multiplication fact: ${num2} × ${ans} = ${num1}.`];
                         } else if (diff === 'M') {
                             num1 = 480 + (index * 24);
                             num2 = 4;
                             ans = num1 / num2;
-                            cognitive = "Memahami";
-                            questionText = `Hitung nilai bagi ${num1} ÷ ${num2}.`;
+                            cognitive = "Understanding";
+                            questionText = `Work out ${num1} ÷ ${num2}.`;
                             explanation = `${num1} ÷ ${num2} = ${ans}.`;
-                            steps = [`Bahagikan setiap nilai tempat bermula dari ratus secara berperingkat.`];
+                            steps = [`Divide from left to right, carrying any remainder to the next place as you go.`];
                         } else {
                             num1 = 910 + (index * 21);
                             num2 = 7;
                             ans = num1 / num2;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Sebanyak ${num1} biji oren diagihkan sama rata ke dalam ${num2} buah bakul. Berapakah bilangan oren di dalam setiap bakul?`;
-                            explanation = `Setiap bakul mengandungi ${ans} biji oren (${num1} ÷ ${num2}).`;
-                            steps = [`Bahagikan jumlah keseluruhan oren dengan bilangan bakul.`];
+                            cognitive = "Applying";
+                            questionText = `A total of ${num1} oranges are shared equally among ${num2} baskets. How many oranges are in each basket?`;
+                            explanation = `Each basket contains ${ans} oranges (${num1} ÷ ${num2}).`;
+                            steps = [`Divide the total number of oranges by the number of baskets.`];
                         }
                         break;
 
-                    case 8: // Masalah Darab & Bahagi
-                        subtopic = "Penyelesaian Masalah Harian";
+                    case 8: // Multiplication and Division Word Problems
+                        subtopic = "Everyday Word Problems";
                         if (diff === 'S') {
-                            const items = ["kotak pensel", "pek biskut", "helai baju", "buku cerita", "paket gula-gula"];
+                            const items = ["pencil cases", "biscuits", "shirts", "storybooks", "sweets"];
                             const item = items[index % items.length];
                             num1 = 3 + (index % 5);
                             num2 = 4 + (index % 4);
                             ans = num1 * num2;
-                            cognitive = "Memahami";
-                            questionText = `Ibu membeli ${num1} bungkus ${item}. Setiap bungkus mengandungi ${num2} unit. Berapakah jumlah keseluruhan ${item} tersebut?`;
-                            explanation = `Pengiraan darab: ${num1} × ${num2} = ${ans} unit.`;
-                            steps = [`Darabkan bilangan bungkus dengan kuantiti dalam setiap bungkus.`];
+                            cognitive = "Understanding";
+                            questionText = `Mum buys ${num1} packs of ${item}. Each pack contains ${num2}. How many ${item} does she buy altogether?`;
+                            explanation = `${num1} × ${num2} = ${ans} items.`;
+                            steps = [`Multiply the number of packs by the number of items in each pack.`];
                         } else if (diff === 'M') {
-                            const items = ["keping setem", "biji oren", "batang aiskrim", "biji guli", "helai kertas warna"];
+                            const items = ["stamps", "oranges", "ice lollies", "marbles", "sheets of coloured paper"];
                             const item = items[index % items.length];
                             num2 = 3 + (index % 5);
                             ans = 15 + (index * 6);
                             num1 = num2 * ans;
-                            cognitive = "Mengaplikasi";
-                            questionText = `Cikgu Lina mempunyai ${num1} ${item} dan membahagikannya sama rata kepada ${num2} orang murid. Berapakah ${item} yang diterima oleh setiap murid?`;
-                            explanation = `Pembahagian sama rata: ${num1} ÷ ${num2} = ${ans} unit.`;
-                            steps = [`Bahagikan jumlah keseluruhan item dengan bilangan penerima.`];
+                            cognitive = "Applying";
+                            questionText = `Miss Lina shares ${num1} ${item} equally among ${num2} pupils. How many ${item} does each pupil receive?`;
+                            explanation = `${num1} ÷ ${num2} = ${ans} items per pupil.`;
+                            steps = [`Divide the total number of items by the number of pupils.`];
                         } else {
                             const scenarios = [
-                                { q: (n1, n2, n3) => `Sebuah kilang menghasilkan ${n1} biji kek setiap hari. Dalam tempoh ${n2} hari, semua kek itu diagihkan sama rata kepada ${n3} buah kedai. Berapakah biji kek yang diterima oleh setiap kedai?`, calc: (n1, n2, n3) => Math.round((n1 * n2) / n3) },
-                                { q: (n1, n2, n3) => `Pak Cik Ali memetik ${n1} buah mangga. Dia memasukkan mangga itu ke dalam ${n2} bakul secara sama rata. Jika dia menjual ${n3} bakul kepada pelanggan, berapakah baki mangga di dalam bakul yang belum dijual? (Kira mangga per bakul dulu)`, calc: (n1, n2, n3) => Math.round((n1 / n2) * (n2 - n3)) }
+                                { q: (n1, n2, n3) => `A bakery makes ${n1} cakes each day. It shares the cakes it makes in ${n2} days equally among ${n3} shops. How many cakes does each shop receive?`, calc: (n1, n2, n3) => (n1 * n2) / n3 },
+                                { q: (n1, n2, n3) => `Mr Ali shares ${n1} mangoes equally among ${n2} baskets. He sells ${n3} of the baskets. How many mangoes are left in the unsold baskets?`, calc: (n1, n2, n3) => (n1 / n2) * (n2 - n3) }
                             ];
                             num1 = 120 + (index * 15);
                             num2 = 4;
-                            num3 = 1;
+                            num3 = index % 2 === 0 ? 3 : 1;
+                            const divisor = index % 2 === 0 ? num3 : num2;
+                            num1 = Math.ceil(num1 / divisor) * divisor;
                             const sc = scenarios[index % scenarios.length];
                             ans = sc.calc(num1, num2, num3);
-                            cognitive = "Mengaplikasi";
+                            cognitive = "Applying";
                             questionText = sc.q(num1, num2, num3);
-                            explanation = `Langkah penyelesaian berbilang peringkat memberikan hasil sebanyak ${ans}.`;
-                            steps = [`Selesaikan operasi darab atau bahagi peringkat pertama, kemudian teruskan ke peringkat seterusnya.`];
+                            explanation = `The final answer is ${ans}.`;
+                            steps = [`Find the total number of cakes first, or find the number of mangoes in one basket first. Then use that result in the next step.`];
                         }
                         break;
                 }
@@ -402,13 +404,16 @@
                 if (wrong3 === ans || wrong3 === wrong1 || wrong3 === wrong2) wrong3 += 3;
 
                 options = [String(ans), String(wrong1), String(wrong2), String(wrong3)];
-                options.sort(() => (index % 2 === 0 ? 1 : -1));
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = rand(0, i);
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
 
                 return {
                     id: id,
                     topik: TOPICS.find(t => t.id === topicId).name,
                     subtopik: subtopic,
-                    tahap: diff === 'S' ? 'Senang' : diff === 'M' ? 'Sederhana' : 'Susah',
+                    tahap: diff === 'S' ? 'Easy' : diff === 'M' ? 'Medium' : 'Hard',
                     aras_kognitif: cognitive,
                     jenis: "Objektif",
                     soalan: questionText,
@@ -427,12 +432,12 @@
                 const pass = document.getElementById('reg-pass').value;
 
                 if (!username || !displayname || !pass) {
-                    this.showModal('Perhatian', 'Sila isi semua medan pendaftaran.', 'fa-solid fa-triangle-exclamation');
+                    this.showModal('Notice', 'Please complete all registration fields.', 'fa-solid fa-triangle-exclamation');
                     return;
                 }
 
                 if (this.users.some(u => u.username === username)) {
-                    this.showModal('Ralat', 'Nama pengguna ini telah wujud. Sila pilih nama lain.', 'fa-solid fa-circle-xmark');
+                    this.showModal('Error', 'That username is already taken. Please choose another.', 'fa-solid fa-circle-xmark');
                     return;
                 }
 
@@ -448,7 +453,7 @@
                 this.currentUser = newUser;
                 localStorage.setItem('edu_current_user', JSON.stringify(this.currentUser));
 
-                this.showModal('Berjaya!', 'Akaun anda telah berjaya didaftarkan. Selamat belajar!', 'fa-solid fa-circle-check');
+                this.showModal('Success!', 'Your account is ready. Enjoy learning!', 'fa-solid fa-circle-check');
                 this.navigate('home');
             }
 
@@ -459,7 +464,7 @@
 
                 const user = this.users.find(u => u.username === username && u.pass === pass);
                 if (!user) {
-                    this.showModal('Ralat Log Masuk', 'Nama pengguna atau kata laluan tidak sah.', 'fa-solid fa-circle-xmark');
+                    this.showModal('Login Error', 'Invalid username or password.', 'fa-solid fa-circle-xmark');
                     return;
                 }
 
@@ -471,7 +476,7 @@
             loginGuest() {
                 this.currentUser = {
                     username: 'tetamu_' + Math.floor(Math.random() * 1000),
-                    displayname: 'Murid Tetamu',
+                    displayname: 'Murid Guest',
                     isGuest: true,
                     stats: { gamesPlayed: 0, totalQuestions: 0, correct: 0, incorrect: 0, score: 0, highscore: 0 }
                 };
@@ -532,8 +537,8 @@
                 } else {
                     optionsHTML = `
                         <div class="space-y-4">
-                            <input type="text" id="subjective-ans" placeholder="Taip jawapan angka di sini..." class="w-full p-4 border-2 border-slate-300 rounded-2xl text-lg font-bold focus:border-blue-500 focus:outline-none bg-white">
-                            <button onclick="app.submitSubjective()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg transition cursor-pointer">Hantar Jawapan</button>
+                            <input type="text" id="subjective-ans" placeholder="Type your numerical answer here..." class="w-full p-4 border-2 border-slate-300 rounded-2xl text-lg font-bold focus:border-blue-500 focus:outline-none bg-white">
+                            <button onclick="app.submitSubjective()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg transition cursor-pointer">Submit Answer</button>
                         </div>
                     `;
                 }
@@ -543,11 +548,11 @@
                         <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-100 text-sm font-bold text-slate-500">
                             <span><i class="fa-solid fa-book-open mr-2 text-blue-500"></i>${this.selectedTopic.name} (${q.tahap})</span>
                             <span id="timer-badge" class="bg-amber-100 text-amber-700 px-3 py-1.5 rounded-full flex items-center"><i class="fa-solid fa-clock mr-1.5"></i><span id="time-left-val">${this.selectedTime === 0 ? '∞' : this.selectedTime}</span>s</span>
-                            <span>Soalan ${this.currentQIndex + 1} / ${this.questions.length}</span>
+                            <span>Question ${this.currentQIndex + 1} / ${this.questions.length}</span>
                         </div>
 
                         <div class="mb-6">
-                            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-bold mb-3"><i class="fa-solid fa-brain mr-1"></i> Aras: ${q.aras_kognitif}</span>
+                            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-bold mb-3"><i class="fa-solid fa-brain mr-1"></i> Cognitive level: ${q.aras_kognitif}</span>
                             <h2 class="text-xl md:text-2xl font-extrabold text-slate-900 leading-snug">${q.soalan}</h2>
                         </div>
 
@@ -588,12 +593,12 @@
             handleTimeout() {
                 this.unansweredCount++;
                 const q = this.questions[this.currentQIndex];
-                this.testAnswers.push({ q: q.soalan, userAns: "Tiada (Masa Tamat)", correctAns: q.jawapan, isCorrect: false, explanation: q.penerangan });
+                this.testAnswers.push({ q: q.soalan, userAns: "Unanswered (Time’s Up)", correctAns: q.jawapan, isCorrect: false, explanation: q.penerangan });
                 
                 const fb = document.getElementById('feedback-box');
                 if (fb) {
                     fb.className = "rounded-2xl p-4 mb-4 bg-amber-50 border border-amber-200 text-amber-800";
-                    fb.innerHTML = `<h4 class="font-bold text-lg mb-1"><i class="fa-solid fa-hourglass-end mr-2"></i> Masa Tamat!</h4><p class="text-sm mb-2">Jawapan yang betul ialah: <strong>${q.jawapan}</strong></p><p class="text-xs text-amber-700">${q.penerangan}</p>`;
+                    fb.innerHTML = `<h4 class="font-bold text-lg mb-1"><i class="fa-solid fa-hourglass-end mr-2"></i> Time’s Up!</h4><p class="text-sm mb-2">The correct answer is: <strong>${q.jawapan}</strong></p><p class="text-xs text-amber-700">${q.penerangan}</p>`;
                     fb.classList.remove('hidden');
                 }
 
@@ -622,10 +627,10 @@
                 if (fb) {
                     if (isCorrect) {
                         fb.className = "rounded-2xl p-4 mb-4 bg-emerald-50 border border-emerald-200 text-emerald-800";
-                        fb.innerHTML = `<h4 class="font-bold text-lg mb-1"><i class="fa-solid fa-circle-check mr-2 text-emerald-600"></i> Tahniah! Jawapan Betul!</h4><p class="text-sm">+5 Markah dikumpul.</p>`;
+                        fb.innerHTML = `<h4 class="font-bold text-lg mb-1"><i class="fa-solid fa-circle-check mr-2 text-emerald-600"></i> Well done! Correct answer.</h4><p class="text-sm">You earned 5 marks.</p>`;
                     } else {
                         fb.className = "rounded-2xl p-4 mb-4 bg-rose-50 border border-rose-200 text-rose-800";
-                        fb.innerHTML = `<h4 class="font-bold text-lg mb-1"><i class="fa-solid fa-circle-xmark mr-2 text-rose-600"></i> Belum Tepat, Cuba Fahami Ini:</h4><p class="text-sm mb-1">Jawapan betul: <strong>${q.jawapan}</strong></p><p class="text-xs text-rose-700">${q.penerangan}</p>`;
+                        fb.innerHTML = `<h4 class="font-bold text-lg mb-1"><i class="fa-solid fa-circle-xmark mr-2 text-rose-600"></i> Incorrect. Review the solution below.</h4><p class="text-sm mb-1">Correct answer: <strong>${q.jawapan}</strong></p><p class="text-xs text-rose-700">${q.penerangan}</p>`;
                     }
                     fb.classList.remove('hidden');
                 }
@@ -641,7 +646,7 @@
                 if (!input) return;
                 const val = input.value.trim();
                 if (!val) {
-                    this.showModal('Perhatian', 'Sila masukkan jawapan angka.', 'fa-solid fa-triangle-exclamation');
+                    this.showModal('Notice', 'Please enter a numerical answer.', 'fa-solid fa-triangle-exclamation');
                     return;
                 }
                 this.submitAnswer(val);
@@ -693,14 +698,14 @@
                             <span class="text-xs font-bold text-blue-900 hidden sm:inline">${this.currentUser.displayname}</span>
                             <span class="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full font-extrabold">${this.currentUser.stats.score || 0} pts</span>
                         </div>
-                        <button onclick="app.logout()" class="text-slate-400 hover:text-rose-600 text-sm p-1.5 rounded-lg transition cursor-pointer" title="Log Keluar">
+                        <button onclick="app.logout()" class="text-slate-400 hover:text-rose-600 text-sm p-1.5 rounded-lg transition cursor-pointer" title="Log Out">
                             <i class="fa-solid fa-right-from-bracket"></i>
                         </button>
                     `;
                 } else {
                     navUser.innerHTML = `
-                        <button onclick="app.navigate('login')" class="text-xs md:text-sm font-bold text-blue-600 hover:text-blue-700 px-3 py-1.5 cursor-pointer">Log Masuk</button>
-                        <button onclick="app.navigate('register')" class="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-md transition cursor-pointer">Daftar</button>
+                        <button onclick="app.navigate('login')" class="text-xs md:text-sm font-bold text-blue-600 hover:text-blue-700 px-3 py-1.5 cursor-pointer">Log In</button>
+                        <button onclick="app.navigate('register')" class="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-md transition cursor-pointer">Register</button>
                     `;
                 }
 
@@ -745,13 +750,13 @@
                     <div class="flex-1 flex flex-col items-center justify-center text-center my-auto py-8">
                         <div class="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800 px-4 py-1.5 rounded-full text-xs font-bold mb-4 shadow-sm">
                             <i class="fa-solid fa-star text-amber-500"></i>
-                            <span>Kurikulum Standard Sekolah Rendah (KSSR) KPM Malaysia • 480 Soalan Pelbagai</span>
+                            <span>Malaysian Primary School Standard Curriculum (KSSR) • 480 Varied Questions</span>
                         </div>
                         <h1 class="text-3xl md:text-5xl font-extrabold text-blue-950 mb-4 tracking-tight">
                             Math Kids <span class="text-amber-500">Bernama Edu Kidz</span>
                         </h1>
                         <p class="text-slate-600 max-w-xl text-base md:text-lg mb-8">
-                            Semua 8 topik kini diperkaya dengan tepat 20 soalan unik setiap tahap (Senang, Sederhana, Susah). Mari tingkatkan penguasaan Matematik Tahun 3 anda!
+                            Each of the eight topics has 20 questions per difficulty level. Choose a topic to start practising.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-4xl mb-8">
@@ -759,16 +764,16 @@
                                 <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition">
                                     <i class="fa-solid fa-book-open"></i>
                                 </div>
-                                <h3 class="font-bold text-slate-900 text-base mb-1">Pilih Topik</h3>
-                                <p class="text-xs text-slate-500">8 Topik Lengkap (480 Soalan)</p>
+                                <h3 class="font-bold text-slate-900 text-base mb-1">Choose a Topic</h3>
+                                <p class="text-xs text-slate-500">8 Topics (480 Questions)</p>
                             </button>
 
                             <button onclick="app.navigate('progress')" class="bg-white hover:bg-emerald-50 border-2 border-emerald-100 hover:border-emerald-400 p-5 rounded-2xl shadow-md transition flex flex-col items-center text-center cursor-pointer group">
                                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition">
                                     <i class="fa-solid fa-chart-line"></i>
                                 </div>
-                                <h3 class="font-bold text-slate-900 text-base mb-1">Kemajuan Saya</h3>
-                                <p class="text-xs text-slate-500">Statistik & Rekod Prestasi</p>
+                                <h3 class="font-bold text-slate-900 text-base mb-1">My Progress</h3>
+                                <p class="text-xs text-slate-500">Statistics and Performance Records</p>
                             </button>
 
                             <button onclick="app.navigate('leaderboard')" class="bg-white hover:bg-purple-50 border-2 border-purple-100 hover:border-purple-400 p-5 rounded-2xl shadow-md transition flex flex-col items-center text-center cursor-pointer group">
@@ -776,22 +781,22 @@
                                     <i class="fa-solid fa-trophy"></i>
                                 </div>
                                 <h3 class="font-bold text-slate-900 text-base mb-1">Leaderboard</h3>
-                                <p class="text-xs text-slate-500">Kedudukan Murid Terbaik</p>
+                                <p class="text-xs text-slate-500">Top Pupils</p>
                             </button>
                         </div>
 
                         <div class="flex flex-wrap justify-center gap-4">
                             ${!this.currentUser ? `
                                 <button onclick="app.loginGuest()" class="bg-slate-800 hover:bg-slate-900 text-white font-bold px-6 py-3 rounded-xl shadow-md transition cursor-pointer">
-                                    <i class="fa-solid fa-user-shield mr-2"></i> Main Sebagai Tetamu
+                                    <i class="fa-solid fa-user-shield mr-2"></i> Play as a Guest
                                 </button>
                             ` : `
                                 <button onclick="app.navigate('topics')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-blue-200 transition text-lg cursor-pointer">
-                                    <i class="fa-solid fa-play mr-2"></i> Mula Bermain Sekarang
+                                    <i class="fa-solid fa-play mr-2"></i> Play Now
                                 </button>
                             `}
                             <button onclick="app.navigate('guide')" class="bg-white hover:bg-slate-50 border border-slate-200 font-bold text-slate-700 px-6 py-3 rounded-xl shadow-sm transition cursor-pointer">
-                                <i class="fa-solid fa-circle-question mr-2 text-blue-500"></i> Panduan Permainan
+                                <i class="fa-solid fa-circle-question mr-2 text-blue-500"></i> Game Guide
                             </button>
                         </div>
                     </div>
@@ -805,30 +810,30 @@
                             <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">
                                 <i class="fa-solid fa-user-plus"></i>
                             </div>
-                            <h2 class="text-2xl font-extrabold text-slate-900">Daftar Akaun Murid</h2>
-                            <p class="text-xs text-slate-500">Simpan markah dan rekod pembelajaran peribadi</p>
+                            <h2 class="text-2xl font-extrabold text-slate-900">Register a Pupil Account</h2>
+                            <p class="text-xs text-slate-500">Save your scores and track your progress</p>
                         </div>
 
                         <form onsubmit="app.registerUser(event)" class="space-y-4">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pengguna (ID)</label>
-                                <input type="text" id="reg-username" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="cth: amir_math3">
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Username (ID)</label>
+                                <input type="text" id="reg-username" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="e.g. amir_math3">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Nama Paparan</label>
-                                <input type="text" id="reg-displayname" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="cth: Amir Hakim">
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Display Name</label>
+                                <input type="text" id="reg-displayname" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="e.g. Amir Hakim">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Kata Laluan</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
                                 <input type="password" id="reg-pass" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="••••••••">
                             </div>
                             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-200 transition cursor-pointer">
-                                Daftar Akaun Sekarang
+                                Register Now
                             </button>
                         </form>
 
                         <div class="text-center mt-6 text-xs text-slate-500">
-                            Sudah ada akaun? <button onclick="app.navigate('login')" class="text-blue-600 font-bold hover:underline cursor-pointer">Log Masuk di sini</button>
+                            Sudah ada akaun? <button onclick="app.navigate('login')" class="text-blue-600 font-bold hover:underline cursor-pointer">Log in here</button>
                         </div>
                     </div>
                 `;
@@ -841,26 +846,26 @@
                             <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">
                                 <i class="fa-solid fa-right-to-bracket"></i>
                             </div>
-                            <h2 class="text-2xl font-extrabold text-slate-900">Log Masuk Murid</h2>
-                            <p class="text-xs text-slate-500">Teruskan pengembaraan Matematik anda</p>
+                            <h2 class="text-2xl font-extrabold text-slate-900">Pupil Login</h2>
+                            <p class="text-xs text-slate-500">Continue your maths adventure</p>
                         </div>
 
                         <form onsubmit="app.loginUser(event)" class="space-y-4">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pengguna</label>
-                                <input type="text" id="login-username" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="Masukkan ID anda">
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Username</label>
+                                <input type="text" id="login-username" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="Enter your username">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Kata Laluan</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
                                 <input type="password" id="login-pass" required class="w-full p-3.5 border-2 border-slate-200 rounded-xl font-bold focus:border-blue-500 focus:outline-none" placeholder="••••••••">
                             </div>
                             <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-emerald-200 transition cursor-pointer">
-                                Log Masuk
+                                Log In
                             </button>
                         </form>
 
                         <div class="text-center mt-6 text-xs text-slate-500">
-                            Belum ada akaun? <button onclick="app.navigate('register')" class="text-blue-600 font-bold hover:underline cursor-pointer">Daftar sekarang</button>
+                            Belum ada akaun? <button onclick="app.navigate('register')" class="text-blue-600 font-bold hover:underline cursor-pointer">Register now</button>
                         </div>
                     </div>
                 `;
@@ -879,7 +884,7 @@
                                 <p class="text-xs text-slate-500 mb-4">${t.desc}</p>
                             </div>
                             <div class="flex items-center text-xs font-bold text-blue-600">
-                                <span>Pilih Topik Ini (20 Soalan/Tahap)</span>
+                                <span>Choose This Topic (20 Questions per Level)</span>
                                 <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
                             </div>
                         </div>
@@ -890,11 +895,11 @@
                     <div class="max-w-6xl mx-auto w-full">
                         <div class="flex items-center justify-between mb-6">
                             <div>
-                                <h2 class="text-2xl font-extrabold text-slate-900">Pilih Topik Pembelajaran</h2>
-                                <p class="text-xs text-slate-500">8 Topik KSSR Matematik Tahun 3 • Kesemua bahagian mempunyai 20 soalan unik & pelbagai</p>
+                                <h2 class="text-2xl font-extrabold text-slate-900">Choose a Topic</h2>
+                                <p class="text-xs text-slate-500">8 Year 3 KSSR Mathematics topics • 20 questions per difficulty level</p>
                             </div>
                             <button onclick="app.navigate('home')" class="bg-white border border-slate-200 text-slate-700 font-bold px-4 py-2 rounded-xl text-xs hover:bg-slate-50 transition cursor-pointer">
-                                <i class="fa-solid fa-house mr-1"></i> Utama
+                                <i class="fa-solid fa-house mr-1"></i> Home
                             </button>
                         </div>
 
@@ -916,37 +921,37 @@
                         <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
-                        <h2 class="text-2xl font-extrabold text-slate-900 mb-1">${this.selectedTopic ? this.selectedTopic.name : 'Pilih Tahap'}</h2>
-                        <p class="text-xs text-slate-500 mb-8">Setiap tahap mengandungi 20 soalan pelbagai dan berkualiti tinggi</p>
+                        <h2 class="text-2xl font-extrabold text-slate-900 mb-1">${this.selectedTopic ? this.selectedTopic.name : 'Choose a Difficulty Level'}</h2>
+                        <p class="text-xs text-slate-500 mb-8">Each level contains 20 questions</p>
 
                         <div class="space-y-4 mb-8">
                             <button onclick="app.setupGameSettings('S')" class="w-full text-left bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-200 hover:border-emerald-500 p-5 rounded-2xl transition flex items-center justify-between cursor-pointer group">
                                 <div>
-                                    <h3 class="font-extrabold text-emerald-900 text-lg">Tahap 1: Senang</h3>
-                                    <p class="text-xs text-emerald-700">20 Soalan asas langsung, membina keyakinan dan kefahaman awal.</p>
+                                    <h3 class="font-extrabold text-emerald-900 text-lg">Level 1: Easy</h3>
+                                    <p class="text-xs text-emerald-700">20 questions to practise basic skills and build confidence.</p>
                                 </div>
                                 <i class="fa-solid fa-chevron-right text-emerald-400 group-hover:translate-x-1 transition"></i>
                             </button>
 
                             <button onclick="app.setupGameSettings('M')" class="w-full text-left bg-blue-50 hover:bg-blue-100 border-2 border-blue-200 hover:border-blue-500 p-5 rounded-2xl transition flex items-center justify-between cursor-pointer group">
                                 <div>
-                                    <h3 class="font-extrabold text-blue-900 text-lg">Tahap 2: Sederhana</h3>
-                                    <p class="text-xs text-blue-700">20 Soalan pengumpulan semula dan langkah pengiraan berperingkat.</p>
+                                    <h3 class="font-extrabold text-blue-900 text-lg">Level 2: Medium</h3>
+                                    <p class="text-xs text-blue-700">20 questions on regrouping and calculations in several steps.</p>
                                 </div>
                                 <i class="fa-solid fa-chevron-right text-blue-400 group-hover:translate-x-1 transition"></i>
                             </button>
 
                             <button onclick="app.setupGameSettings('H')" class="w-full text-left bg-rose-50 hover:bg-rose-100 border-2 border-rose-200 hover:border-rose-500 p-5 rounded-2xl transition flex items-center justify-between cursor-pointer group">
                                 <div>
-                                    <h3 class="font-extrabold text-rose-900 text-lg">Tahap 3: Susah</h3>
-                                    <p class="text-xs text-rose-700">20 Soalan penyelesaian masalah harian lanjutan dan pemikiran kritis.</p>
+                                    <h3 class="font-extrabold text-rose-900 text-lg">Level 3: Hard</h3>
+                                    <p class="text-xs text-rose-700">20 more challenging questions, including everyday word problems.</p>
                                 </div>
                                 <i class="fa-solid fa-chevron-right text-rose-400 group-hover:translate-x-1 transition"></i>
                             </button>
                         </div>
 
                         <button onclick="app.navigate('topics')" class="text-xs font-bold text-slate-500 hover:text-slate-700 cursor-pointer">
-                            <i class="fa-solid fa-arrow-left mr-1"></i> Kembali ke Senarai Topik
+                            <i class="fa-solid fa-arrow-left mr-1"></i> Back to Topics
                         </button>
                     </div>
                 `;
@@ -957,30 +962,30 @@
                 const container = document.getElementById('app-container');
                 container.innerHTML = `
                     <div class="max-w-md mx-auto w-full my-auto bg-white rounded-3xl p-8 shadow-xl border border-slate-100 text-center">
-                        <h2 class="text-2xl font-extrabold text-slate-900 mb-2">Tetapan Permainan</h2>
-                        <p class="text-xs text-slate-500 mb-6">Pilih masa dan mod menjawab anda</p>
+                        <h2 class="text-2xl font-extrabold text-slate-900 mb-2">Game Settings</h2>
+                        <p class="text-xs text-slate-500 mb-6">Choose a time limit and answer mode</p>
 
                         <div class="space-y-4 mb-6 text-left">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-2">Masa Setiap Soalan</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">Time per Question</label>
                                 <div class="grid grid-cols-3 gap-2">
-                                    <button onclick="app.setTimerOpt(30, this)" class="time-btn bg-blue-600 text-white p-3 rounded-xl font-bold text-xs transition cursor-pointer">30 Saat</button>
-                                    <button onclick="app.setTimerOpt(60, this)" class="time-btn bg-slate-100 text-slate-700 p-3 rounded-xl font-bold text-xs transition cursor-pointer">1 Minit</button>
-                                    <button onclick="app.setTimerOpt(0, this)" class="time-btn bg-slate-100 text-slate-700 p-3 rounded-xl font-bold text-xs transition cursor-pointer">Tiada Had</button>
+                                    <button onclick="app.setTimerOpt(30, this)" class="time-btn bg-blue-600 text-white p-3 rounded-xl font-bold text-xs transition cursor-pointer">30 Seconds</button>
+                                    <button onclick="app.setTimerOpt(60, this)" class="time-btn bg-slate-100 text-slate-700 p-3 rounded-xl font-bold text-xs transition cursor-pointer">1 Minute</button>
+                                    <button onclick="app.setTimerOpt(0, this)" class="time-btn bg-slate-100 text-slate-700 p-3 rounded-xl font-bold text-xs transition cursor-pointer">No Time Limit</button>
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-2">Mod Permainan</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-2">Game Mode</label>
                                 <div class="grid grid-cols-2 gap-2">
-                                    <button onclick="app.setModeOpt('Objektif', this)" class="mode-btn bg-blue-600 text-white p-3 rounded-xl font-bold text-xs transition cursor-pointer">Pilihan Objektif</button>
-                                    <button onclick="app.setModeOpt('Isi Tempat', this)" class="mode-btn bg-slate-100 text-slate-700 p-3 rounded-xl font-bold text-xs transition cursor-pointer">Isi Tempat Kosong</button>
+                                    <button onclick="app.setModeOpt('Objektif', this)" class="mode-btn bg-blue-600 text-white p-3 rounded-xl font-bold text-xs transition cursor-pointer">Multiple Choice</button>
+                                    <button onclick="app.setModeOpt('Isi Tempat', this)" class="mode-btn bg-slate-100 text-slate-700 p-3 rounded-xl font-bold text-xs transition cursor-pointer">Fill in the Blank</button>
                                 </div>
                             </div>
                         </div>
 
                         <button onclick="app.startQuiz(app.selectedTopic.id, app.tempDiff, app.tempMode || 'Objektif', app.tempTime !== undefined ? app.tempTime : 30)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-200 transition cursor-pointer">
-                            Mula Kuiz Sekarang (20 Soalan)
+                            Start Quiz (20 Questions)
                         </button>
                     </div>
                 `;
@@ -1020,12 +1025,12 @@
                     reviewHTML += `
                         <div class="p-4 rounded-2xl border ${ans.isCorrect ? 'bg-emerald-50 border-emerald-200' : 'bg-rose-50 border-rose-200'} mb-3">
                             <div class="flex justify-between items-start mb-2">
-                                <span class="font-bold text-sm text-slate-900">S.${idx + 1}: ${ans.q}</span>
+                                <span class="font-bold text-sm text-slate-900">Q.${idx + 1}: ${ans.q}</span>
                                 <span class="text-xs font-extrabold px-2.5 py-1 rounded-full ${ans.isCorrect ? 'bg-emerald-200 text-emerald-800' : 'bg-rose-200 text-rose-800'}">
-                                    ${ans.isCorrect ? '+5 Markah' : '0 Markah'}
+                                    ${ans.isCorrect ? '+5 Marks' : '0 Marks'}
                                 </span>
                             </div>
-                            <p class="text-xs text-slate-600 mb-1">Jawapan anda: <strong>${ans.userAns}</strong> | Jawapan Betul: <strong>${ans.correctAns}</strong></p>
+                            <p class="text-xs text-slate-600 mb-1">Your answer: <strong>${ans.userAns}</strong> | Correct answer: <strong>${ans.correctAns}</strong></p>
                             <p class="text-xs text-slate-500">${ans.explanation}</p>
                         </div>
                     `;
@@ -1037,40 +1042,40 @@
                             <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-3 shadow-md">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
-                            <h2 class="text-3xl font-extrabold text-slate-900 mb-1">Keputusan Kuiz</h2>
-                            <p class="text-slate-500 text-sm">Tahniah atas usaha cemerlang anda menyelesaikan set soalan pelbagai!</p>
+                            <h2 class="text-3xl font-extrabold text-slate-900 mb-1">Quiz Results</h2>
+                            <p class="text-slate-500 text-sm">Well done on completing the quiz!</p>
                         </div>
 
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-center">
                             <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100">
-                                <span class="text-xs text-blue-600 font-bold block mb-1">Markah</span>
+                                <span class="text-xs text-blue-600 font-bold block mb-1">Marks</span>
                                 <span class="text-2xl font-extrabold text-blue-900">${this.score} / ${maxScore}</span>
                             </div>
                             <div class="bg-emerald-50 p-4 rounded-2xl border border-emerald-100">
-                                <span class="text-xs text-emerald-600 font-bold block mb-1">Ketepatan</span>
+                                <span class="text-xs text-emerald-600 font-bold block mb-1">Accuracy</span>
                                 <span class="text-2xl font-extrabold text-emerald-900">${percentage}%</span>
                             </div>
                             <div class="bg-amber-50 p-4 rounded-2xl border border-amber-100">
-                                <span class="text-xs text-amber-600 font-bold block mb-1">Betul</span>
+                                <span class="text-xs text-amber-600 font-bold block mb-1">Correct</span>
                                 <span class="text-2xl font-extrabold text-amber-900">${this.correctCount}</span>
                             </div>
                             <div class="bg-rose-50 p-4 rounded-2xl border border-rose-100">
-                                <span class="text-xs text-rose-600 font-bold block mb-1">Salah</span>
+                                <span class="text-xs text-rose-600 font-bold block mb-1">Incorrect</span>
                                 <span class="text-2xl font-extrabold text-rose-900">${this.incorrectCount}</span>
                             </div>
                         </div>
 
-                        <h3 class="font-extrabold text-slate-900 mb-4 text-lg">Semakan Jawapan & Penyelesaian</h3>
+                        <h3 class="font-extrabold text-slate-900 mb-4 text-lg">Answer Review and Solutions</h3>
                         <div class="space-y-3 mb-8 max-h-96 overflow-y-auto pr-2">
                             ${reviewHTML}
                         </div>
 
                         <div class="flex flex-wrap gap-4 justify-center">
                             <button onclick="app.navigate('topics')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition cursor-pointer">
-                                Pilih Topik Lain
+                                Choose Another Topic
                             </button>
                             <button onclick="app.navigate('home')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-6 py-3 rounded-xl transition cursor-pointer">
-                                Halaman Utama
+                                Home
                             </button>
                         </div>
                     </div>
@@ -1089,34 +1094,34 @@
                                     <i class="fa-solid fa-chart-line"></i>
                                 </div>
                                 <div>
-                                    <h2 class="text-2xl font-extrabold text-slate-900">Kemajuan Pembelajaran</h2>
-                                    <p class="text-xs text-slate-500">Statistik Akaun: ${this.currentUser ? this.currentUser.displayname : 'Tetamu'}</p>
+                                    <h2 class="text-2xl font-extrabold text-slate-900">Learning Progress</h2>
+                                    <p class="text-xs text-slate-500">Account Statistics: ${this.currentUser ? this.currentUser.displayname : 'Guest'}</p>
                                 </div>
                             </div>
                             <button onclick="app.navigate('home')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition cursor-pointer">
-                                Utama
+                                Home
                             </button>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                             <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-center">
-                                <span class="text-xs font-bold text-blue-600 block mb-1">Jumlah Permainan</span>
+                                <span class="text-xs font-bold text-blue-600 block mb-1">Games Played</span>
                                 <span class="text-3xl font-extrabold text-blue-900">${stats.gamesPlayed}</span>
                             </div>
                             <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 text-center">
-                                <span class="text-xs font-bold text-emerald-600 block mb-1">Markah Tertinggi</span>
+                                <span class="text-xs font-bold text-emerald-600 block mb-1">Highest Score</span>
                                 <span class="text-3xl font-extrabold text-emerald-900">${stats.highscore}</span>
                             </div>
                             <div class="bg-purple-50 p-6 rounded-2xl border border-purple-100 text-center">
-                                <span class="text-xs font-bold text-purple-600 block mb-1">Ketepatan Purata</span>
+                                <span class="text-xs font-bold text-purple-600 block mb-1">Average Accuracy</span>
                                 <span class="text-3xl font-extrabold text-purple-900">${accuracy}%</span>
                             </div>
                         </div>
 
                         <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                            <h3 class="font-bold text-slate-900 mb-2">Nota Kemajuan</h3>
+                            <h3 class="font-bold text-slate-900 mb-2">Progress Note</h3>
                             <p class="text-xs text-slate-600 leading-relaxed">
-                                Kesemua 8 topik kini merangkumi sejumlah 480 soalan unik dan pelbagai (20 soalan penuh setiap tahap bagi setiap topik KSSR Tahun 3). Teruskan latihan harian anda!
+                                The question bank contains 480 questions, with 20 per difficulty level in each of the eight topics.
                             </p>
                         </div>
                     </div>
@@ -1144,7 +1149,7 @@
                             </div>
                             <div class="text-right">
                                 <span class="font-extrabold text-blue-600 text-base">${u.stats.score || 0} pts</span>
-                                <span class="block text-xs text-slate-500">${u.stats.gamesPlayed || 0} sesi</span>
+                                <span class="block text-xs text-slate-500">${u.stats.gamesPlayed || 0} sessions</span>
                             </div>
                         </div>
                     `;
@@ -1158,17 +1163,17 @@
                                     <i class="fa-solid fa-trophy"></i>
                                 </div>
                                 <div>
-                                    <h2 class="text-2xl font-extrabold text-slate-900">Leaderboard Murid</h2>
-                                    <p class="text-xs text-slate-500">Kedudukan markah tertinggi KSSR Tahun 3</p>
+                                    <h2 class="text-2xl font-extrabold text-slate-900">Pupil Leaderboard</h2>
+                                    <p class="text-xs text-slate-500">Year 3 KSSR pupil rankings by score</p>
                                 </div>
                             </div>
                             <button onclick="app.navigate('home')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition cursor-pointer">
-                                Utama
+                                Home
                             </button>
                         </div>
 
                         <div class="space-y-3 mb-6">
-                            ${listHTML.length > 0 ? listHTML : '<p class="text-center text-slate-500 py-6 text-sm">Belum ada rekod murid di dalam sistem.</p>'}
+                            ${listHTML.length > 0 ? listHTML : '<p class="text-center text-slate-500 py-6 text-sm">There are no pupil records yet.</p>'}
                         </div>
                     </div>
                 `;
@@ -1178,16 +1183,16 @@
                 container.innerHTML = `
                     <div class="max-w-3xl mx-auto w-full bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
                         <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
-                            <h2 class="text-2xl font-extrabold text-slate-900">Panduan Permainan</h2>
-                            <button onclick="app.navigate('home')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition cursor-pointer">Utama</button>
+                            <h2 class="text-2xl font-extrabold text-slate-900">Game Guide</h2>
+                            <button onclick="app.navigate('home')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2 rounded-xl transition cursor-pointer">Home</button>
                         </div>
                         <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
-                            <p><strong>Math Kids Bernama Edu Kidz</strong> direka khusus untuk murid Tahun 3 menguasai Matematik mengikut Kurikulum Standard Sekolah Rendah (KSSR) KPM.</p>
+                            <p><strong>Math Kids Bernama Edu Kidz</strong> helps Year 3 pupils practise mathematics in line with the Malaysian Primary School Standard Curriculum (KSSR).</p>
                             <ul class="list-disc pl-5 space-y-2">
-                                <li>Semua 8 topik mempunyai tepat <strong>20 soalan pelbagai dan unik</strong> bagi setiap tahap (Senang, Sederhana, Susah).</li>
-                                <li>Setiap sesi kuiz kini memuatkan penuh <strong>20 soalan</strong> untuk menguji ketahanan dan pemahaman murid.</li>
-                                <li>Jumlah keseluruhan sebanyak 480 soalan dalam bank soalan.</li>
-                                <li>Setiap jawapan betul memberi 5 markah dengan penerangan langkah demi langkah.</li>
+                                <li>All eight topics have <strong>20 varied questions</strong> at each difficulty level (Easy, Medium and Hard).</li>
+                                <li>Each quiz contains <strong>20 questions</strong> to help pupils practise and check their understanding.</li>
+                                <li>The question bank contains 480 questions.</li>
+                                <li>Each correct answer is worth 5 marks. Solutions include step-by-step explanations.</li>
                             </ul>
                         </div>
                     </div>

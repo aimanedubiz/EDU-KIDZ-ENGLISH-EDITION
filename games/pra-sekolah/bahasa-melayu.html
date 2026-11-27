@@ -717,6 +717,15 @@
             { id: 10, title: 'Cerita & Pemahaman', icon: '📚', desc: 'Soalan cerita pendek', color: 'bg-amber-100 text-amber-700 border-amber-300' }
         ];
 
+        function shuffleQuestionOptions(options) {
+            const shuffled = [...new Set(options)];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
         /* Generator function to create structured 300 unique questions dynamically with rich presets */
         function buildQuestionBank() {
             const bank = {};
@@ -747,7 +756,7 @@
                                 const p = pairs5[q-1];
                                 prompt = `Apakah huruf kecil bagi huruf besar '${p[0]}'?`;
                                 answer = p[1];
-                                options = [p[1], p[0], 'z'];
+                                options = [p[1], 'v', 'z'];
                                 visual = `${p[0]} ➔ ?`;
                                 explanation = `Huruf besar '${p[0]}' dipadankan dengan huruf kecil '${p[1]}'.`;
                             } else { 
@@ -766,20 +775,17 @@
                             }
                         } else if (cat === 2) { // Vokal & Konsonan
                             if (age === 4) {
-                                // Age 4: Cam Huruf Vokal Asas (Visual Emoji Vokal)
-                                const vowels4 = [
-                                    { v: 'a', pic: '🍎', name: 'Epal' }, { v: 'e', pic: '🐘', name: 'Gajah' }, 
-                                    { v: 'i', pic: '🐟', name: 'Ikan' }, { v: 'o', pic: '🔥', name: 'Obor' }, 
-                                    { v: 'u', pic: '🐍', name: 'Ular' }, { v: 'a', pic: '☁️', name: 'Awan' },
-                                    { v: 'e', pic: '🐒', name: 'Ekor' }, { v: 'i', pic: '🦆', name: 'Itik' },
-                                    { v: 'o', pic: '🧠', name: 'Otak' }, { v: 'u', pic: '🦐', name: 'Udang' }
-                                ];
-                                const item = vowels4[q-1];
-                                prompt = `Pilih huruf vokal '${item.v}' untuk gambar ini:`;
-                                answer = item.v;
-                                options = [item.v, 'b', 't'];
-                                visual = item.pic;
-                                explanation = `'${item.v}' ialah huruf vokal bagi gambar ini.`;
+                                // Umur 4: Kenal huruf vokal besar dan kecil.
+                                const vowels = 'aeiou';
+                                const vowel = vowels[(q - 1) % vowels.length];
+                                const isUpper = q <= vowels.length;
+                                answer = isUpper ? vowel.toUpperCase() : vowel;
+                                const consonants = isUpper ? 'BMTKP' : 'bmtkp';
+                                const index = (q - 1) % consonants.length;
+                                prompt = `Pilih huruf vokal ${isUpper ? 'besar' : 'kecil'} yang sama dengan '${answer}'.`;
+                                options = [answer, consonants[index], consonants[(index + 2) % consonants.length]];
+                                visual = answer;
+                                explanation = `'${answer}' ialah huruf vokal.`;
                             } else if (age === 5) {
                                 // Age 5: Pengecaman Vokal Dalam Perkataan Mudah
                                 const items5 = [
@@ -792,17 +798,17 @@
                                 const item = items5[q-1];
                                 prompt = `Apakah huruf vokal di awal perkataan "${item.p}"?`;
                                 answer = item.ans;
-                                options = ['a', 'i', 'u', 'e'].sort(() => 0.5 - Math.random());
+                                options = ['a', 'e', 'i', 'o', 'u'];
                                 visual = item.v;
                                 explanation = `Perkataan ${item.p} bermula dengan huruf vokal '${item.ans}'.`;
                             } else { 
                                 // Age 6: Klasifikasi Huruf Vokal vs Konsonan
                                 const items6 = [
-                                    { w: 'Buku', ans: 'Konsonan', vis: '📚' }, { w: 'Ayam', ans: 'Vokal', vis: '🐔' },
-                                    { w: 'Cawan', ans: 'Konsonan', vis: '☕' }, { w: 'Ikan', ans: 'Vokal', vis: '🐟' },
-                                    { w: 'Meja', ans: 'Konsonan', vis: '🪑' }, { w: 'Ular', ans: 'Vokal', vis: '🐍' },
-                                    { w: 'Rumah', ans: 'Konsonan', vis: '🏠' }, { w: 'Epal', ans: 'Vokal', vis: '🍎' },
-                                    { w: 'Pensel', ans: 'Konsonan', vis: '✏️' }, { w: 'Obor', ans: 'Vokal', vis: '🔥' }
+                                    { w: 'Buku', ans: 'Konsonan', vis: '📚' }, { w: 'Api', ans: 'Vokal', vis: '🔥' },
+                                    { w: 'Cawan', ans: 'Konsonan', vis: '☕' }, { w: 'Ibu', ans: 'Vokal', vis: '👩' },
+                                    { w: 'Meja', ans: 'Konsonan', vis: '🪑' }, { w: 'Ubat', ans: 'Vokal', vis: '💊' },
+                                    { w: 'Rumah', ans: 'Konsonan', vis: '🏠' }, { w: 'Emas', ans: 'Vokal', vis: '🏅' },
+                                    { w: 'Pensel', ans: 'Konsonan', vis: '✏️' }, { w: 'Ombak', ans: 'Vokal', vis: '🌊' }
                                 ];
                                 const item = items6[q-1];
                                 prompt = `Adakah huruf pertama perkataan "${item.w}" (${item.w[0]}) jenis Vokal atau Konsonan?`;
@@ -889,7 +895,7 @@
                                 const item = items5[q-1];
                                 prompt = `Pilih nama yang betul bagi gambar ini:`;
                                 answer = item.name;
-                                options = [item.name, 'Kucing', 'Epal', 'Lembu'].sort(() => 0.5 - Math.random()).slice(0, 3);
+                                options = [item.name, ...['Kucing', 'Epal', 'Lembu'].filter(option => option !== answer).slice(0, 2)];
                                 visual = item.vis;
                                 explanation = `Gambar ini menunjukkan ${item.name}.`;
                             } else {
@@ -904,7 +910,7 @@
                                 const item = items6[q-1];
                                 prompt = `Apakah nama pekerjaan / kenderaan ini?`;
                                 answer = item.name;
-                                options = [item.name, 'Pelukis', 'Basikal', 'Tentera', 'Pemandu'].sort(() => 0.5 - Math.random()).slice(0, 4);
+                                options = [item.name, ...['Pelukis', 'Basikal', 'Tentera', 'Pemandu'].filter(option => option !== answer).slice(0, 3)];
                                 visual = item.vis;
                                 explanation = `Gambar ini melambangkan ${item.name}.`;
                             }
@@ -926,7 +932,7 @@
                                 const item = items4[q-1];
                                 prompt = item.q;
                                 answer = item.ans;
-                                options = [item.ans, 'Hitam', 'Hidung'].sort(() => 0.5 - Math.random()).slice(0, 3);
+                                options = [item.ans, ...['Hitam', 'Hidung'].filter(option => option !== answer).slice(0, 2)];
                                 visual = item.vis;
                                 explanation = `Jawapan yang betul ialah ${item.ans}.`;
                             } else if (age === 5) {
@@ -946,7 +952,7 @@
                                 const item = items5[q-1];
                                 prompt = item.q;
                                 answer = item.ans;
-                                options = [item.ans, 'Pahit', 'Takut', 'Panjang'].sort(() => 0.5 - Math.random()).slice(0, 3);
+                                options = [item.ans, ...['Pahit', 'Takut', 'Panjang'].filter(option => option !== answer).slice(0, 2)];
                                 visual = item.vis;
                                 explanation = `Jawapan tepat bagi soalan ini ialah ${item.ans}.`;
                             } else {
@@ -966,7 +972,7 @@
                                 const item = items6[q-1];
                                 prompt = item.q;
                                 answer = item.ans;
-                                options = [item.ans, 'Tebal', 'Kemas', 'Wangi', 'Lari'].sort(() => 0.5 - Math.random()).slice(0, 4);
+                                options = [item.ans, ...['Tebal', 'Kemas', 'Wangi', 'Lari'].filter(option => option !== answer).slice(0, 3)];
                                 visual = item.vis;
                                 explanation = `Lawan atau maksud bagi kata ini ialah ${item.ans}.`;
                             }
@@ -995,13 +1001,13 @@
                                 // Age 5: Ayat 3-4 Perkataan Ringkas
                                 const items5 = [
                                     { s: 'Ini kucing comel saya.', ans: '🐱', opt: ['🐱','🐶','🐰'] },
-                                    { s: 'Saya ada lori merah.', ans: '🚛', opt: ['🚛','🚗','🚲'] },
+                                    { s: 'Kami naik bas sekolah.', ans: '🚌', opt: ['🚌','🚗','🚲'] },
                                     { s: 'Adik minum susu lembu.', ans: '🥛', opt: ['🥛','🧃','☕'] },
                                     { s: 'Ibu masak nasi goreng.', ans: '🍚', opt: ['🍚','🍞','🍕'] },
                                     { s: 'Kakak beli baju baharu.', ans: '👗', opt: ['👗','👕','🧢'] },
                                     { s: 'Bapa pandu kereta biru.', ans: '🚙', opt: ['🚙','✈️','🚢'] },
                                     { s: 'Burung terbang di udara.', ans: '🐦', opt: ['🐦','🐟','🐸'] },
-                                    { s: 'Ikan berenang di kolam.', ans: '🐟', opt: ['🐟','🐱','🐥'] },
+                                    { s: 'Katak melompat di kolam.', ans: '🐸', opt: ['🐸','🐱','🐥'] },
                                     { s: 'Kancil lari sangat laju.', ans: '🦊', opt: ['🦊','🐢','🐌'] },
                                     { s: 'Saya makan roti manis.', ans: '🍞', opt: ['🍞','🍎','🍌'] }
                                 ];
@@ -1018,7 +1024,7 @@
                                     { s: 'Angkasawan berlepas ke angkasa lepas.', ans: '👨‍🚀', opt: ['👨‍🚀','👩‍🚒','🧑‍🌾'] },
                                     { s: 'Petani menanam padi di sawah.', ans: '🧑‍🌾', opt: ['🧑‍🌾','👨‍🔧','👨‍🍳'] },
                                     { s: 'Doktor merawat pesakit di hospital.', ans: '👨‍⚕️', opt: ['👨‍⚕️','👩‍🏫','👨‍✈️'] },
-                                    { s: 'Tukang masak menyediak makanan sedap.', ans: '👨‍🍳', opt: ['👨‍🍳','👮','👩‍🚒'] },
+                                    { s: 'Tukang masak menyediakan makanan sedap.', ans: '👨‍🍳', opt: ['👨‍🍳','👮','👩‍🚒'] },
                                     { s: 'Polis menjaga keselamatan lalu lintas.', ans: '👮', opt: ['👮','👩‍🏫','👨‍⚕️'] },
                                     { s: 'Juruterbang memandu kapal terbang tinggi.', ans: '👨‍✈️', opt: ['👨‍✈️','🚗','🚢'] },
                                     { s: 'Abang menyiram pokok bunga ros.', ans: '🪴', opt: ['🪴','🧹','🧺'] },
@@ -1050,7 +1056,7 @@
                                 const item = blanks4[q-1];
                                 prompt = `Isi huruf awal yang hilang: ${item.q}`;
                                 answer = item.ans;
-                                options = [item.ans, 'Z', 'M', 'K'].sort(() => 0.5 - Math.random()).slice(0, 3);
+                                options = [item.ans, ...['Z', 'M', 'K'].filter(option => option !== answer).slice(0, 2)];
                                 visual = item.vis;
                                 explanation = `Huruf awal bagi perkataan ini ialah '${item.ans}'.`;
                             } else if (age === 5) {
@@ -1178,7 +1184,7 @@
                                 const item = audios4[q-1];
                                 prompt = `Dengar arahan: "${item.a}"`;
                                 answer = item.ans;
-                                options = [item.ans, '🐶', '🚚', '🍇'].sort(() => 0.5 - Math.random()).slice(0, 3);
+                                options = [item.ans, ...['🐶', '🚚', '🍇'].filter(option => option !== answer).slice(0, 2)];
                                 visual = '🔊';
                                 explanation = `Arahan suara meminta anda memilih ${item.ans}.`;
                             } else if (age === 5) {
@@ -1191,14 +1197,14 @@
                                     { a: 'Pilih gambar Gajah Besar', ans: '🐘' },
                                     { a: 'Pilih gambar Monyet Panjat', ans: '🐒' },
                                     { a: 'Pilih gambar Ular Panjang', ans: '🐍' },
-                                    { a: 'Pilih gambar Ikan Berenang', ans: '🐟' },
+                                    { a: 'Pilih gambar Arnab yang melompat', ans: '🐇' },
                                     { a: 'Pilih gambar Lori Panjang', ans: '🚛' },
                                     { a: 'Pilih gambar Buku Cerita', ans: '📖' }
                                 ];
                                 const item = audios5[q-1];
                                 prompt = `Dengar arahan: "${item.a}"`;
                                 answer = item.ans;
-                                options = [item.ans, '🐢', '🚗', '☕'].sort(() => 0.5 - Math.random()).slice(0, 3);
+                                options = [item.ans, ...['🐢', '🚗', '☕'].filter(option => option !== answer).slice(0, 2)];
                                 visual = '🔊';
                                 explanation = `Arahan menyebut mengenai ${item.ans}.`;
                             } else {
@@ -1206,10 +1212,10 @@
                                 const audios6 = [
                                     { a: 'Pilih gambar Doktor yang merawat pesakit', ans: '👨‍⚕️' },
                                     { a: 'Pilih gambar Bomba yang memadamkan api', ans: '👩‍🚒' },
-                                    { a: 'Pilih gambar Polisi yang menjaga laluan', ans: '👮' },
+                                    { a: 'Pilih gambar polis yang menjaga laluan', ans: '👮' },
                                     { a: 'Pilih gambar Kapal Terbang di udara', ans: '✈️' },
                                     { a: 'Pilih gambar Basikal yang dikayuh di taman', ans: '🚲' },
-                                    { a: 'Pilih gambar Jam Dinding tepat pukul lapan', ans: '🕒' },
+                                    { a: 'Pilih gambar jam yang menunjukkan pukul lapan', ans: '🕗' },
                                     { a: 'Pilih gambar Pelangi tujuh warna', ans: '🌈' },
                                     { a: 'Pilih gambar Hospital tempat doktor bertugas', ans: '🏥' },
                                     { a: 'Pilih gambar Sekolah tempat murid belajar', ans: '🏫' },
@@ -1218,7 +1224,7 @@
                                 const item = audios6[q-1];
                                 prompt = `Dengar arahan senario: "${item.a}"`;
                                 answer = item.ans;
-                                options = [item.ans, '🚒', '🚜', '🏪', '🎨'].sort(() => 0.5 - Math.random()).slice(0, 4);
+                                options = [item.ans, ...['🚒', '🚜', '🏪', '🎨'].filter(option => option !== answer).slice(0, 3)];
                                 visual = '🔊';
                                 explanation = `Maksud arahan tersebut padan dengan simbol ${item.ans}.`;
                             }
@@ -1300,7 +1306,7 @@
                             kategoriId: cat,
                             peringkat: age,
                             soalan: prompt,
-                            pilihan: options,
+                            pilihan: shuffleQuestionOptions(options),
                             jawapan: answer,
                             markah: 10,
                             penerangan: explanation,
@@ -1565,7 +1571,7 @@
 
             // Question Text & Visual
             document.getElementById('questionPrompt').innerText = q.soalan;
-            document.getElementById('questionVisual').innerHTML = typeof q.gambar === 'string' && q.gambar.length <= 4 ? q.gambar : '📝';
+            document.getElementById('questionVisual').textContent = q.gambar;
 
             // Auto Speak question text
             SoundFX.speak(q.soalan.replace('[CERITA]:', ''));

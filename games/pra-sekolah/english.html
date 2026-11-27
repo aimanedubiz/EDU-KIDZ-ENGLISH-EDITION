@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>EDU KIDZ PRA SEKOLAH - ENGLISH EDITION</title>
+    <title>EDU KIDZ PRESCHOOL - ENGLISH EDITION</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -136,7 +136,7 @@
                         <span id="home-mascot" class="text-6xl md:text-7xl">🦁</span>
                     </div>
                     <span class="bg-kid-pink text-white text-xs md:text-sm font-bold px-4 py-1 rounded-full uppercase tracking-widest shadow-sm mb-2">Pre-School KPM Standard</span>
-                    <h1 class="font-kids text-3xl md:text-5xl text-kid-blue drop-shadow-sm mb-1">EDU KIDZ PRA SEKOLAH</h1>
+                    <h1 class="font-kids text-3xl md:text-5xl text-kid-blue drop-shadow-sm mb-1">EDU KIDZ PRESCHOOL</h1>
                     <p class="font-kids text-lg md:text-2xl text-kid-purple">ENGLISH EDITION</p>
                     <p class="text-slate-600 font-semibold italic text-sm md:text-base mt-1">"Learn English, Play and Shine!"</p>
                 </div>
@@ -632,7 +632,7 @@
 
     <!-- Footer -->
     <footer class="relative z-10 bg-white border-t border-slate-200 py-3 text-center text-xs text-slate-500 font-medium">
-        <p>EDU KIDZ PRA SEKOLAH – ENGLISH EDITION &copy; 2026. Designed for Pre-School KPM Curriculum.</p>
+        <p>EDU KIDZ PRESCHOOL – ENGLISH EDITION &copy; 2026. Designed for Pre-School KPM Curriculum.</p>
     </footer>
 
     <!-- JS LOGIC & COMPLETE 300 QUESTION BANK -->
@@ -670,7 +670,7 @@
                                 .replace(/_/g, ' blank ');
 
             const utterance = new SpeechSynthesisUtterance(cleanText);
-            utterance.lang = 'en-US';
+            utterance.lang = 'en-GB';
             utterance.rate = 0.85; // Slightly slower for kids
             utterance.pitch = 1.1; // Friendly higher pitch
             
@@ -751,231 +751,390 @@
             { name: "My First Words", icon: "🧸", color: "from-green-400 to-teal-500" },
             { name: "Colours and Shapes", icon: "🎨", color: "from-yellow-400 to-orange-500" },
             { name: "Numbers & Counting", icon: "🔢", color: "from-pink-400 to-red-500" },
-            { name: "Animals World", icon: "🦁", color: "from-teal-400 to-emerald-600" },
+            { name: "Animal World", icon: "🦁", color: "from-teal-400 to-emerald-600" },
             { name: "Fruits and Food", icon: "🍎", color: "from-red-400 to-orange-400" },
             { name: "My Body & Family", icon: "🖐️", color: "from-indigo-400 to-purple-600" },
             { name: "Greetings & Expressions", icon: "👋", color: "from-sky-400 to-blue-600" },
             { name: "Words & Sentences", icon: "📖", color: "from-amber-400 to-yellow-600" }
         ];
 
-        // Generator helper for complete database of 300 unique questions
-        const QUESTION_DATABASE = {};
+        const QUESTION_DATABASE = {
+            4: [
+                [
+                    {"q": "Which lowercase letter matches A?", "visual": "A", "correct": "a", "options": ["a", "d", "h"]},
+                    {"q": "Which lowercase letter matches B?", "visual": "B", "correct": "b", "options": ["b", "e", "i"]},
+                    {"q": "Which lowercase letter matches C?", "visual": "C", "correct": "c", "options": ["c", "f", "j"]},
+                    {"q": "Which lowercase letter matches D?", "visual": "D", "correct": "d", "options": ["d", "g", "k"]},
+                    {"q": "Which lowercase letter matches E?", "visual": "E", "correct": "e", "options": ["e", "h", "l"]},
+                    {"q": "Which lowercase letter matches F?", "visual": "F", "correct": "f", "options": ["f", "i", "m"]},
+                    {"q": "Which lowercase letter matches G?", "visual": "G", "correct": "g", "options": ["g", "j", "n"]},
+                    {"q": "Which lowercase letter matches H?", "visual": "H", "correct": "h", "options": ["h", "k", "o"]},
+                    {"q": "Which lowercase letter matches I?", "visual": "I", "correct": "i", "options": ["i", "l", "p"]},
+                    {"q": "Which lowercase letter matches J?", "visual": "J", "correct": "j", "options": ["j", "m", "q"]},
+                ],
+                [
+                    {"q": "Which letter makes the sound that starts “cat”?", "visual": "🐱", "correct": "c", "options": ["c", "f", "j"]},
+                    {"q": "Which letter makes the sound that starts “dog”?", "visual": "🐶", "correct": "d", "options": ["d", "g", "k"]},
+                    {"q": "Which letter makes the sound that starts “fish”?", "visual": "🐟", "correct": "f", "options": ["f", "i", "m"]},
+                    {"q": "Which letter makes the sound that starts “hat”?", "visual": "🎩", "correct": "h", "options": ["h", "k", "o"]},
+                    {"q": "Which letter makes the sound that starts “lion”?", "visual": "🦁", "correct": "l", "options": ["l", "o", "s"]},
+                    {"q": "Which letter makes the sound that starts “moon”?", "visual": "🌙", "correct": "m", "options": ["m", "p", "t"]},
+                    {"q": "Which letter makes the sound that starts “pig”?", "visual": "🐷", "correct": "p", "options": ["p", "s", "w"]},
+                    {"q": "Which letter makes the sound that starts “sun”?", "visual": "☀️", "correct": "s", "options": ["s", "v", "z"]},
+                    {"q": "Which letter makes the sound that starts “tent”?", "visual": "🏕️", "correct": "t", "options": ["t", "w", "a"]},
+                    {"q": "Which letter makes the sound that starts “van”?", "visual": "🚐", "correct": "v", "options": ["v", "y", "c"]},
+                ],
+                [
+                    {"q": "What is this?", "visual": "📕", "correct": "Book", "options": ["Book", "Bag", "Box"]},
+                    {"q": "What is this?", "visual": "✏️", "correct": "Pencil", "options": ["Pencil", "Clock", "Shoe"]},
+                    {"q": "What is this?", "visual": "🪑", "correct": "Chair", "options": ["Chair", "Car", "Cap"]},
+                    {"q": "What is this?", "visual": "🎒", "correct": "Bag", "options": ["Bag", "Key", "Book"]},
+                    {"q": "What is this?", "visual": "⏰", "correct": "Clock", "options": ["Clock", "Box", "Pencil"]},
+                    {"q": "What is this?", "visual": "🚗", "correct": "Car", "options": ["Car", "Shoe", "Chair"]},
+                    {"q": "What is this?", "visual": "🔑", "correct": "Key", "options": ["Key", "Cap", "Bag"]},
+                    {"q": "What is this?", "visual": "📦", "correct": "Box", "options": ["Box", "Book", "Clock"]},
+                    {"q": "What is this?", "visual": "👟", "correct": "Shoe", "options": ["Shoe", "Pencil", "Car"]},
+                    {"q": "What is this?", "visual": "🧢", "correct": "Cap", "options": ["Cap", "Chair", "Key"]},
+                ],
+                [
+                    {"q": "What colour is the picture?", "visual": "🔴", "correct": "Red", "options": ["Red", "Green", "White"]},
+                    {"q": "What colour is the picture?", "visual": "🟦", "correct": "Blue", "options": ["Blue", "Orange", "Brown"]},
+                    {"q": "What colour is the picture?", "visual": "🟡", "correct": "Yellow", "options": ["Yellow", "Purple", "Pink"]},
+                    {"q": "What colour is the picture?", "visual": "🟩", "correct": "Green", "options": ["Green", "Black", "Red"]},
+                    {"q": "What colour is the picture?", "visual": "🟠", "correct": "Orange", "options": ["Orange", "White", "Blue"]},
+                    {"q": "What colour is the picture?", "visual": "🟪", "correct": "Purple", "options": ["Purple", "Brown", "Yellow"]},
+                    {"q": "What colour is the picture?", "visual": "⬛", "correct": "Black", "options": ["Black", "Pink", "Green"]},
+                    {"q": "What colour is the picture?", "visual": "⬜", "correct": "White", "options": ["White", "Red", "Orange"]},
+                    {"q": "What colour is the picture?", "visual": "🟫", "correct": "Brown", "options": ["Brown", "Blue", "Purple"]},
+                    {"q": "What colour is the picture?", "visual": "🩷", "correct": "Pink", "options": ["Pink", "Yellow", "Black"]},
+                ],
+                [
+                    {"q": "How many dots can you see?", "visual": "●", "correct": "1", "options": ["1", "2", "3"]},
+                    {"q": "How many dots can you see?", "visual": "●●", "correct": "2", "options": ["2", "3", "4"]},
+                    {"q": "How many dots can you see?", "visual": "●●●", "correct": "3", "options": ["3", "4", "5"]},
+                    {"q": "How many dots can you see?", "visual": "●●●●", "correct": "4", "options": ["4", "5", "6"]},
+                    {"q": "How many dots can you see?", "visual": "●●●●●", "correct": "5", "options": ["5", "6", "7"]},
+                    {"q": "How many dots can you see?", "visual": "●●●●● ●", "correct": "6", "options": ["6", "7", "8"]},
+                    {"q": "How many dots can you see?", "visual": "●●●●● ●●", "correct": "7", "options": ["7", "8", "9"]},
+                    {"q": "How many dots can you see?", "visual": "●●●●● ●●●", "correct": "8", "options": ["8", "9", "10"]},
+                    {"q": "How many dots can you see?", "visual": "●●●●● ●●●●", "correct": "9", "options": ["9", "10", "11"]},
+                    {"q": "How many dots can you see?", "visual": "●●●●● ●●●●●", "correct": "10", "options": ["10", "11", "12"]},
+                ],
+                [
+                    {"q": "Which animal is this?", "visual": "🦁", "correct": "Lion", "options": ["Lion", "Elephant", "Frog"]},
+                    {"q": "Which animal is this?", "visual": "🐰", "correct": "Rabbit", "options": ["Rabbit", "Monkey", "Tiger"]},
+                    {"q": "Which animal is this?", "visual": "🐻", "correct": "Bear", "options": ["Bear", "Duck", "Panda"]},
+                    {"q": "Which animal is this?", "visual": "🐘", "correct": "Elephant", "options": ["Elephant", "Cow", "Lion"]},
+                    {"q": "Which animal is this?", "visual": "🐒", "correct": "Monkey", "options": ["Monkey", "Frog", "Rabbit"]},
+                    {"q": "Which animal is this?", "visual": "🦆", "correct": "Duck", "options": ["Duck", "Tiger", "Bear"]},
+                    {"q": "Which animal is this?", "visual": "🐮", "correct": "Cow", "options": ["Cow", "Panda", "Elephant"]},
+                    {"q": "Which animal is this?", "visual": "🐸", "correct": "Frog", "options": ["Frog", "Lion", "Monkey"]},
+                    {"q": "Which animal is this?", "visual": "🐯", "correct": "Tiger", "options": ["Tiger", "Rabbit", "Duck"]},
+                    {"q": "Which animal is this?", "visual": "🐼", "correct": "Panda", "options": ["Panda", "Bear", "Cow"]},
+                ],
+                [
+                    {"q": "What food or drink is this?", "visual": "🍎", "correct": "Apple", "options": ["Apple", "Bread", "Cake"]},
+                    {"q": "What food or drink is this?", "visual": "🍌", "correct": "Banana", "options": ["Banana", "Pizza", "Egg"]},
+                    {"q": "What food or drink is this?", "visual": "🥛", "correct": "Milk", "options": ["Milk", "Orange", "Rice"]},
+                    {"q": "What food or drink is this?", "visual": "🍞", "correct": "Bread", "options": ["Bread", "Watermelon", "Apple"]},
+                    {"q": "What food or drink is this?", "visual": "🍕", "correct": "Pizza", "options": ["Pizza", "Cake", "Banana"]},
+                    {"q": "What food or drink is this?", "visual": "🍊", "correct": "Orange", "options": ["Orange", "Egg", "Milk"]},
+                    {"q": "What food or drink is this?", "visual": "🍉", "correct": "Watermelon", "options": ["Watermelon", "Rice", "Bread"]},
+                    {"q": "What food or drink is this?", "visual": "🎂", "correct": "Cake", "options": ["Cake", "Apple", "Pizza"]},
+                    {"q": "What food or drink is this?", "visual": "🥚", "correct": "Egg", "options": ["Egg", "Banana", "Orange"]},
+                    {"q": "What food or drink is this?", "visual": "🍚", "correct": "Rice", "options": ["Rice", "Milk", "Watermelon"]},
+                ],
+                [
+                    {"q": "Which body part is this?", "visual": "👁️", "correct": "Eye", "options": ["Eye", "Foot", "Tooth"]},
+                    {"q": "Which body part is this?", "visual": "👂", "correct": "Ear", "options": ["Ear", "Nose", "Leg"]},
+                    {"q": "Which body part is this?", "visual": "🖐️", "correct": "Hand", "options": ["Hand", "Mouth", "Arm"]},
+                    {"q": "Which body part is this?", "visual": "🦶", "correct": "Foot", "options": ["Foot", "Tongue", "Eye"]},
+                    {"q": "Which body part is this?", "visual": "👃", "correct": "Nose", "options": ["Nose", "Tooth", "Ear"]},
+                    {"q": "Which body part is this?", "visual": "👄", "correct": "Mouth", "options": ["Mouth", "Leg", "Hand"]},
+                    {"q": "Which body part is this?", "visual": "👅", "correct": "Tongue", "options": ["Tongue", "Arm", "Foot"]},
+                    {"q": "Which body part is this?", "visual": "🦷", "correct": "Tooth", "options": ["Tooth", "Eye", "Nose"]},
+                    {"q": "Which body part is this?", "visual": "🦵", "correct": "Leg", "options": ["Leg", "Ear", "Mouth"]},
+                    {"q": "Which body part is this?", "visual": "💪", "correct": "Arm", "options": ["Arm", "Hand", "Tongue"]},
+                ],
+                [
+                    {"q": "What can you say when you meet a friend?", "visual": "👋", "correct": "Hello", "options": ["Hello", "Good night", "No"]},
+                    {"q": "What can you say when you leave school?", "visual": "🏫", "correct": "Goodbye", "options": ["Goodbye", "Hello", "Please"]},
+                    {"q": "What can you say before you go to sleep?", "visual": "🌙", "correct": "Good night", "options": ["Good night", "Good morning", "Come in"]},
+                    {"q": "What can you say after you get a gift?", "visual": "🎁", "correct": "Thank you", "options": ["Thank you", "Sit down", "Go away"]},
+                    {"q": "Which word makes a request polite?", "visual": "🙏", "correct": "Please", "options": ["Please", "Now", "Mine"]},
+                    {"q": "What can you say if you hurt someone by accident?", "visual": "", "correct": "Sorry", "options": ["Sorry", "Goodbye", "Look"]},
+                    {"q": "What greeting fits the start of the day?", "visual": "🌅", "correct": "Good morning", "options": ["Good morning", "Good night", "See you later"]},
+                    {"q": "Which words can you say to someone on their birthday?", "visual": "🎂", "correct": "Happy birthday", "options": ["Happy birthday", "Good night", "Be careful"]},
+                    {"q": "Which words tell someone to bend their knees and use a chair?", "visual": "🪑", "correct": "Sit down", "options": ["Sit down", "Stand up", "Turn around"]},
+                    {"q": "What can a teacher say to ask you to get up from your chair?", "visual": "", "correct": "Stand up", "options": ["Stand up", "Close your eyes", "Sit down"]},
+                ],
+                [
+                    {"q": "Fill in the missing letter to make the word “cat”. C _ T", "visual": "🐱", "correct": "A", "options": ["A", "O", "U"]},
+                    {"q": "Fill in the missing letter for the animal in the picture. D _ G", "visual": "🐶", "correct": "O", "options": ["O", "E", "I"]},
+                    {"q": "Complete the word for the picture. S _ N", "visual": "☀️", "correct": "U", "options": ["U", "A", "E"]},
+                    {"q": "Complete the word for the picture. B _ S", "visual": "🚌", "correct": "U", "options": ["U", "I", "O"]},
+                    {"q": "Complete the word for the picture. C _ P", "visual": "🥤", "correct": "U", "options": ["U", "A", "O"]},
+                    {"q": "Complete the word for the picture. P _ G", "visual": "🐷", "correct": "I", "options": ["I", "A", "O"]},
+                    {"q": "Complete the word for the picture. R _ T", "visual": "🐀", "correct": "A", "options": ["A", "O", "U"]},
+                    {"q": "Complete the word for the picture. F _ X", "visual": "🦊", "correct": "O", "options": ["O", "I", "A"]},
+                    {"q": "Complete the word for the picture. B _ T", "visual": "🦇", "correct": "A", "options": ["A", "U", "E"]},
+                    {"q": "Complete the word for the picture. P _ N", "visual": "🍳", "correct": "A", "options": ["A", "E", "I"]},
+                ],
+            ],
+            5: [
+                [
+                    {"q": "Which capital letter matches k?", "visual": "k", "correct": "K", "options": ["K", "N", "R"]},
+                    {"q": "Which capital letter matches l?", "visual": "l", "correct": "L", "options": ["L", "O", "S"]},
+                    {"q": "Which capital letter matches m?", "visual": "m", "correct": "M", "options": ["M", "P", "T"]},
+                    {"q": "Which capital letter matches n?", "visual": "n", "correct": "N", "options": ["N", "Q", "U"]},
+                    {"q": "Which capital letter matches o?", "visual": "o", "correct": "O", "options": ["O", "R", "V"]},
+                    {"q": "Which capital letter matches p?", "visual": "p", "correct": "P", "options": ["P", "S", "W"]},
+                    {"q": "Which capital letter matches q?", "visual": "q", "correct": "Q", "options": ["Q", "T", "X"]},
+                    {"q": "Which capital letter matches r?", "visual": "r", "correct": "R", "options": ["R", "U", "Y"]},
+                    {"q": "Which capital letter matches s?", "visual": "s", "correct": "S", "options": ["S", "V", "Z"]},
+                    {"q": "Which capital letter matches t?", "visual": "t", "correct": "T", "options": ["T", "W", "A"]},
+                ],
+                [
+                    {"q": "Which letter makes the sound that ends “bed”?", "visual": "🛏️", "correct": "d", "options": ["d", "g", "k"]},
+                    {"q": "Which letter makes the sound that ends “bus”?", "visual": "🚌", "correct": "s", "options": ["s", "v", "z"]},
+                    {"q": "Which letter makes the sound that ends “hen”?", "visual": "🐔", "correct": "n", "options": ["n", "q", "u"]},
+                    {"q": "Which letter makes the sound that ends “map”?", "visual": "🗺️", "correct": "p", "options": ["p", "s", "w"]},
+                    {"q": "Which letter makes the sound that ends “fan”?", "visual": "🪭", "correct": "n", "options": ["n", "q", "u"]},
+                    {"q": "Which letter makes the sound that ends “pot”?", "visual": "", "correct": "t", "options": ["t", "w", "a"]},
+                    {"q": "Which letter makes the sound that ends “cap”?", "visual": "🧢", "correct": "p", "options": ["p", "s", "w"]},
+                    {"q": "Which letter makes the sound that ends “win”?", "visual": "", "correct": "n", "options": ["n", "q", "u"]},
+                    {"q": "Which letter makes the sound that ends “cab”?", "visual": "🚕", "correct": "b", "options": ["b", "e", "i"]},
+                    {"q": "Which letter makes the sound that ends “pen”?", "visual": "", "correct": "n", "options": ["n", "q", "u"]},
+                ],
+                [
+                    {"q": "Choose the word for the picture.", "visual": "✂️", "correct": "Scissors", "options": ["Scissors", "Broom", "Bell"]},
+                    {"q": "Choose the word for the picture.", "visual": "🪥", "correct": "Toothbrush", "options": ["Toothbrush", "Umbrella", "Magnet"]},
+                    {"q": "Choose the word for the picture.", "visual": "🪞", "correct": "Mirror", "options": ["Mirror", "Basket", "Torch"]},
+                    {"q": "Choose the word for the picture.", "visual": "🧹", "correct": "Broom", "options": ["Broom", "Ladder", "Scissors"]},
+                    {"q": "Choose the word for the picture.", "visual": "☂️", "correct": "Umbrella", "options": ["Umbrella", "Bell", "Toothbrush"]},
+                    {"q": "Choose the word for the picture.", "visual": "🧺", "correct": "Basket", "options": ["Basket", "Magnet", "Mirror"]},
+                    {"q": "Choose the word for the picture.", "visual": "🪜", "correct": "Ladder", "options": ["Ladder", "Torch", "Broom"]},
+                    {"q": "Choose the word for the picture.", "visual": "🔔", "correct": "Bell", "options": ["Bell", "Scissors", "Umbrella"]},
+                    {"q": "Choose the word for the picture.", "visual": "🧲", "correct": "Magnet", "options": ["Magnet", "Toothbrush", "Basket"]},
+                    {"q": "Choose the word for the picture.", "visual": "🔦", "correct": "Torch", "options": ["Torch", "Mirror", "Ladder"]},
+                ],
+                [
+                    {"q": "What shape is shown?", "visual": "●", "correct": "Circle", "options": ["Circle", "Parallelogram", "Heart"]},
+                    {"q": "What shape is shown?", "visual": "■", "correct": "Square", "options": ["Square", "Oval", "Rectangle"]},
+                    {"q": "What shape is shown?", "visual": "△", "correct": "Triangle", "options": ["Triangle", "Diamond", "Pentagon"]},
+                    {"q": "What shape is shown?", "visual": "▰", "correct": "Parallelogram", "options": ["Parallelogram", "Star", "Circle"]},
+                    {"q": "What shape is shown?", "visual": "⬭", "correct": "Oval", "options": ["Oval", "Heart", "Square"]},
+                    {"q": "What shape is shown?", "visual": "♦", "correct": "Diamond", "options": ["Diamond", "Rectangle", "Triangle"]},
+                    {"q": "What shape is shown?", "visual": "★", "correct": "Star", "options": ["Star", "Pentagon", "Parallelogram"]},
+                    {"q": "What shape is shown?", "visual": "♥", "correct": "Heart", "options": ["Heart", "Circle", "Oval"]},
+                    {"q": "What shape is shown?", "visual": "▭", "correct": "Rectangle", "options": ["Rectangle", "Square", "Diamond"]},
+                    {"q": "What shape is shown?", "visual": "⬟", "correct": "Pentagon", "options": ["Pentagon", "Triangle", "Star"]},
+                ],
+                [
+                    {"q": "Which word matches the number 1?", "visual": "", "correct": "one", "options": ["one", "two", "three"]},
+                    {"q": "Which word matches the number 2?", "visual": "", "correct": "two", "options": ["two", "three", "four"]},
+                    {"q": "Which word matches the number 3?", "visual": "", "correct": "three", "options": ["three", "four", "five"]},
+                    {"q": "Which word matches the number 4?", "visual": "", "correct": "four", "options": ["four", "five", "six"]},
+                    {"q": "Which word matches the number 5?", "visual": "", "correct": "five", "options": ["five", "six", "seven"]},
+                    {"q": "Which word matches the number 6?", "visual": "", "correct": "six", "options": ["six", "seven", "eight"]},
+                    {"q": "Which word matches the number 7?", "visual": "", "correct": "seven", "options": ["seven", "eight", "nine"]},
+                    {"q": "Which word matches the number 8?", "visual": "", "correct": "eight", "options": ["eight", "nine", "ten"]},
+                    {"q": "Which word matches the number 9?", "visual": "", "correct": "nine", "options": ["nine", "ten", "eleven"]},
+                    {"q": "Which word matches the number 10?", "visual": "", "correct": "ten", "options": ["ten", "eleven", "twelve"]},
+                ],
+                [
+                    {"q": "Choose the animal’s name.", "visual": "🦒", "correct": "Giraffe", "options": ["Giraffe", "Penguin", "Butterfly"]},
+                    {"q": "Choose the animal’s name.", "visual": "🦓", "correct": "Zebra", "options": ["Zebra", "Kangaroo", "Turtle"]},
+                    {"q": "Choose the animal’s name.", "visual": "🦉", "correct": "Owl", "options": ["Owl", "Crocodile", "Octopus"]},
+                    {"q": "Choose the animal’s name.", "visual": "🐧", "correct": "Penguin", "options": ["Penguin", "Dolphin", "Giraffe"]},
+                    {"q": "Choose the animal’s name.", "visual": "🦘", "correct": "Kangaroo", "options": ["Kangaroo", "Butterfly", "Zebra"]},
+                    {"q": "Choose the animal’s name.", "visual": "🐊", "correct": "Crocodile", "options": ["Crocodile", "Turtle", "Owl"]},
+                    {"q": "Choose the animal’s name.", "visual": "🐬", "correct": "Dolphin", "options": ["Dolphin", "Octopus", "Penguin"]},
+                    {"q": "Choose the animal’s name.", "visual": "🦋", "correct": "Butterfly", "options": ["Butterfly", "Giraffe", "Kangaroo"]},
+                    {"q": "Choose the animal’s name.", "visual": "🐢", "correct": "Turtle", "options": ["Turtle", "Zebra", "Crocodile"]},
+                    {"q": "Choose the animal’s name.", "visual": "🐙", "correct": "Octopus", "options": ["Octopus", "Owl", "Dolphin"]},
+                ],
+                [
+                    {"q": "Choose the correct name.", "visual": "🍐", "correct": "Pear", "options": ["Pear", "Pineapple", "Corn"]},
+                    {"q": "Choose the correct name.", "visual": "🍇", "correct": "Grapes", "options": ["Grapes", "Mango", "Cucumber"]},
+                    {"q": "Choose the correct name.", "visual": "🍓", "correct": "Strawberry", "options": ["Strawberry", "Carrot", "Mushroom"]},
+                    {"q": "Choose the correct name.", "visual": "🍍", "correct": "Pineapple", "options": ["Pineapple", "Broccoli", "Pear"]},
+                    {"q": "Choose the correct name.", "visual": "🥭", "correct": "Mango", "options": ["Mango", "Corn", "Grapes"]},
+                    {"q": "Choose the correct name.", "visual": "🥕", "correct": "Carrot", "options": ["Carrot", "Cucumber", "Strawberry"]},
+                    {"q": "Choose the correct name.", "visual": "🥦", "correct": "Broccoli", "options": ["Broccoli", "Mushroom", "Pineapple"]},
+                    {"q": "Choose the correct name.", "visual": "🌽", "correct": "Corn", "options": ["Corn", "Pear", "Mango"]},
+                    {"q": "Choose the correct name.", "visual": "🥒", "correct": "Cucumber", "options": ["Cucumber", "Grapes", "Carrot"]},
+                    {"q": "Choose the correct name.", "visual": "🍄", "correct": "Mushroom", "options": ["Mushroom", "Strawberry", "Broccoli"]},
+                ],
+                [
+                    {"q": "What do you use to smell a flower?", "visual": "🌷", "correct": "Nose", "options": ["Nose", "Knee", "Ear"]},
+                    {"q": "What do you use to see a rainbow?", "visual": "🌈", "correct": "Eyes", "options": ["Eyes", "Feet", "Elbows"]},
+                    {"q": "What do you use to hear music?", "visual": "🎵", "correct": "Ears", "options": ["Ears", "Teeth", "Toes"]},
+                    {"q": "What do you wear socks on?", "visual": "🧦", "correct": "Feet", "options": ["Feet", "Hands", "Shoulders"]},
+                    {"q": "What do you wash before eating with your fingers?", "visual": "🧼", "correct": "Hands", "options": ["Hands", "Hair", "Knees"]},
+                    {"q": "Where do you wear a hat?", "visual": "🎩", "correct": "Head", "options": ["Head", "Neck", "Arm"]},
+                    {"q": "What do you brush after breakfast?", "visual": "🪥", "correct": "Teeth", "options": ["Teeth", "Ears", "Feet"]},
+                    {"q": "What do you use to taste food?", "visual": "🍲", "correct": "Tongue", "options": ["Tongue", "Nose", "Eye"]},
+                    {"q": "What do you bend in the middle of your leg?", "visual": "🦵", "correct": "Knee", "options": ["Knee", "Wrist", "Elbow"]},
+                    {"q": "What is at the end of your foot?", "visual": "", "correct": "Toes", "options": ["Toes", "Fingers", "Teeth"]},
+                ],
+                [
+                    {"q": "A friend says “Thank you.” What could you reply?", "visual": "", "correct": "You’re welcome.", "options": ["You’re welcome.", "Good night.", "Happy birthday!"]},
+                    {"q": "Which greeting can you use just after lunch?", "visual": "", "correct": "Good afternoon.", "options": ["Good afternoon.", "Good morning.", "Good night."]},
+                    {"q": "You need to walk past someone. What can you say?", "visual": "", "correct": "Excuse me.", "options": ["Excuse me.", "I’m sleepy.", "Well done!"]},
+                    {"q": "Which words ask someone to repeat what they said?", "visual": "", "correct": "Can you say that again?", "options": ["Can you say that again?", "Can I sit here?", "What is your name?"]},
+                    {"q": "What can you say to ask for a drink?", "visual": "", "correct": "May I have some water, please?", "options": ["May I have some water, please?", "I have some water.", "I washed my cup."]},
+                    {"q": "Which words praise a friend who finished a puzzle?", "visual": "", "correct": "Well done!", "options": ["Well done!", "Watch out!", "Come in!"]},
+                    {"q": "Someone is at the door and you want them to enter. What can you say?", "visual": "", "correct": "Come in.", "options": ["Come in.", "Stand back.", "Look up."]},
+                    {"q": "Which question asks about someone’s name?", "visual": "", "correct": "What is your name?", "options": ["What is your name?", "How old are you?", "Where is your bag?"]},
+                    {"q": "How can you answer “How are you?”", "visual": "", "correct": "I’m fine, thank you.", "options": ["I’m fine, thank you.", "It’s on the table.", "It’s blue."]},
+                    {"q": "What can you say if you will see your friend tomorrow?", "visual": "", "correct": "See you tomorrow!", "options": ["See you tomorrow!", "Good morning!", "Happy birthday!"]},
+                ],
+                [
+                    {"q": "I can ___ a book.", "visual": "📖", "correct": "read", "options": ["read", "run", "jump"]},
+                    {"q": "I wear a ___ on my head.", "visual": "🎩", "correct": "hat", "options": ["hat", "sock", "shoe"]},
+                    {"q": "The fish can ___.", "visual": "🐟", "correct": "swim", "options": ["swim", "fly", "read"]},
+                    {"q": "The bee makes ___.", "visual": "🐝", "correct": "honey", "options": ["honey", "rice", "bread"]},
+                    {"q": "I use a ___ to eat soup.", "visual": "🥄", "correct": "spoon", "options": ["spoon", "hat", "pencil"]},
+                    {"q": "The grass is ___.", "visual": "🌱", "correct": "green", "options": ["green", "purple", "pink"]},
+                    {"q": "I open the ___ to enter the room.", "visual": "🚪", "correct": "door", "options": ["door", "plate", "book"]},
+                    {"q": "I use an ___ when it rains.", "visual": "☂️", "correct": "umbrella", "options": ["umbrella", "apple", "egg"]},
+                    {"q": "I sleep in a ___.", "visual": "🛏️", "correct": "bed", "options": ["bed", "box of crayons", "cup"]},
+                    {"q": "I use soap to ___ my hands.", "visual": "🧼", "correct": "wash", "options": ["wash", "draw", "count"]},
+                ],
+            ],
+            6: [
+                [
+                    {"q": "Which letter comes after P?", "visual": "", "correct": "Q", "options": ["Q", "P", "R"]},
+                    {"q": "Which letter comes after Q?", "visual": "", "correct": "R", "options": ["R", "Q", "S"]},
+                    {"q": "Which letter comes after R?", "visual": "", "correct": "S", "options": ["S", "R", "T"]},
+                    {"q": "Which letter comes after S?", "visual": "", "correct": "T", "options": ["T", "S", "U"]},
+                    {"q": "Which letter comes after T?", "visual": "", "correct": "U", "options": ["U", "T", "V"]},
+                    {"q": "Which letter comes after U?", "visual": "", "correct": "V", "options": ["V", "U", "W"]},
+                    {"q": "Which letter comes after V?", "visual": "", "correct": "W", "options": ["W", "V", "X"]},
+                    {"q": "Which letter comes after W?", "visual": "", "correct": "X", "options": ["X", "W", "Y"]},
+                    {"q": "Which letter comes after X?", "visual": "", "correct": "Y", "options": ["Y", "X", "Z"]},
+                    {"q": "Which letter comes after Y?", "visual": "", "correct": "Z", "options": ["Z", "Y", "A"]},
+                ],
+                [
+                    {"q": "Which word rhymes with “bat”?", "visual": "", "correct": "mat", "options": ["mat", "bed", "bus"]},
+                    {"q": "Which word rhymes with “log”?", "visual": "", "correct": "frog", "options": ["frog", "flag", "leg"]},
+                    {"q": "Which word rhymes with “cake”?", "visual": "", "correct": "lake", "options": ["lake", "lock", "look"]},
+                    {"q": "Which word rhymes with “bell”?", "visual": "", "correct": "shell", "options": ["shell", "ball", "bowl"]},
+                    {"q": "Which word rhymes with “rain”?", "visual": "", "correct": "train", "options": ["train", "tree", "truck"]},
+                    {"q": "Which word rhymes with “light”?", "visual": "", "correct": "kite", "options": ["kite", "coat", "cat"]},
+                    {"q": "Which word rhymes with “goat”?", "visual": "", "correct": "boat", "options": ["boat", "boot", "bat"]},
+                    {"q": "Which word rhymes with “bee”?", "visual": "", "correct": "tree", "options": ["tree", "tray", "toy"]},
+                    {"q": "Which word rhymes with “shop”?", "visual": "", "correct": "pop", "options": ["pop", "soap", "soup"]},
+                    {"q": "Which word rhymes with “moon”?", "visual": "", "correct": "spoon", "options": ["spoon", "spin", "span"]},
+                ],
+                [
+                    {"q": "What do you wear on your hands to keep them warm?", "visual": "", "correct": "Gloves", "options": ["Gloves", "Socks", "Boots"]},
+                    {"q": "What do you use to look at tiny things in science class?", "visual": "", "correct": "Microscope", "options": ["Microscope", "Calendar", "Whistle"]},
+                    {"q": "What do you sleep on at night?", "visual": "", "correct": "Bed", "options": ["Bed", "Desk", "Shelf"]},
+                    {"q": "What do you use to dig a hole?", "visual": "", "correct": "Spade", "options": ["Spade", "Ruler", "Comb"]},
+                    {"q": "What do you use to unlock a door?", "visual": "", "correct": "Key", "options": ["Key", "Button", "Spoon"]},
+                    {"q": "What keeps your head safe when you ride a bike?", "visual": "", "correct": "Helmet", "options": ["Helmet", "Scarf", "Belt"]},
+                    {"q": "What do you use to wipe yourself dry after a bath?", "visual": "", "correct": "Towel", "options": ["Towel", "Plate", "Chalk"]},
+                    {"q": "What do you use to tell the time on your wrist?", "visual": "", "correct": "Watch", "options": ["Watch", "Ring", "Glove"]},
+                    {"q": "What do you use to pour water into a small bottle?", "visual": "", "correct": "Funnel", "options": ["Funnel", "Fork", "Brush"]},
+                    {"q": "What do you use to see stars that are far away?", "visual": "", "correct": "Telescope", "options": ["Telescope", "Thermometer", "Stapler"]},
+                ],
+                [
+                    {"q": "Which shape has three straight sides?", "visual": "", "correct": "Triangle", "options": ["Triangle", "Circle", "Square"]},
+                    {"q": "Which shape has six straight sides?", "visual": "", "correct": "Hexagon", "options": ["Hexagon", "Pentagon", "Triangle"]},
+                    {"q": "Which shape looks like a stretched circle?", "visual": "", "correct": "Oval", "options": ["Oval", "Rectangle", "Star"]},
+                    {"q": "Which shape has five straight sides?", "visual": "", "correct": "Pentagon", "options": ["Pentagon", "Hexagon", "Square"]},
+                    {"q": "Which shape has four equal sides and four square corners?", "visual": "", "correct": "Square", "options": ["Square", "Circle", "Triangle"]},
+                    {"q": "Which shape is round and has no corners?", "visual": "", "correct": "Circle", "options": ["Circle", "Triangle", "Square"]},
+                    {"q": "Which shape has four square corners and is longer than it is wide?", "visual": "", "correct": "Rectangle", "options": ["Rectangle", "Circle", "Pentagon"]},
+                    {"q": "What colour do red and yellow paint make when mixed?", "visual": "", "correct": "Orange", "options": ["Orange", "Green", "Purple"]},
+                    {"q": "What colour do blue and yellow paint make when mixed?", "visual": "", "correct": "Green", "options": ["Green", "Orange", "Pink"]},
+                    {"q": "What colour do red and white paint make when mixed?", "visual": "", "correct": "Pink", "options": ["Pink", "Brown", "Green"]},
+                ],
+                [
+                    {"q": "Which number comes between 10 and 12?", "visual": "", "correct": "11", "options": ["11", "10", "12"]},
+                    {"q": "Which number comes between 11 and 13?", "visual": "", "correct": "12", "options": ["12", "11", "13"]},
+                    {"q": "Which number comes between 12 and 14?", "visual": "", "correct": "13", "options": ["13", "12", "14"]},
+                    {"q": "Which number comes between 13 and 15?", "visual": "", "correct": "14", "options": ["14", "13", "15"]},
+                    {"q": "Which number comes between 14 and 16?", "visual": "", "correct": "15", "options": ["15", "14", "16"]},
+                    {"q": "Which number comes between 15 and 17?", "visual": "", "correct": "16", "options": ["16", "15", "17"]},
+                    {"q": "Which number comes between 16 and 18?", "visual": "", "correct": "17", "options": ["17", "16", "18"]},
+                    {"q": "Which number comes between 17 and 19?", "visual": "", "correct": "18", "options": ["18", "17", "19"]},
+                    {"q": "Which number comes between 18 and 20?", "visual": "", "correct": "19", "options": ["19", "18", "20"]},
+                    {"q": "Which number comes between 19 and 21?", "visual": "", "correct": "20", "options": ["20", "19", "21"]},
+                ],
+                [
+                    {"q": "Which animal makes a buzzing sound?", "visual": "", "correct": "Bee", "options": ["Bee", "Goat", "Cat"]},
+                    {"q": "Which animal has black and white stripes?", "visual": "", "correct": "Zebra", "options": ["Zebra", "Lion", "Hippo"]},
+                    {"q": "Which animal carries its young in a pouch?", "visual": "", "correct": "Kangaroo", "options": ["Kangaroo", "Horse", "Sheep"]},
+                    {"q": "Which animal has a long trunk?", "visual": "", "correct": "Elephant", "options": ["Elephant", "Monkey", "Bear"]},
+                    {"q": "Which animal spins a web?", "visual": "", "correct": "Spider", "options": ["Spider", "Duck", "Deer"]},
+                    {"q": "Which animal has eight arms and lives in the sea?", "visual": "", "correct": "Octopus", "options": ["Octopus", "Shark", "Crab"]},
+                    {"q": "Which animal is a bird that cannot fly and swims well?", "visual": "", "correct": "Penguin", "options": ["Penguin", "Eagle", "Parrot"]},
+                    {"q": "Which animal says “moo”?", "visual": "", "correct": "Cow", "options": ["Cow", "Pig", "Frog"]},
+                    {"q": "Which animal is often called a chick when it is young?", "visual": "", "correct": "Chicken", "options": ["Chicken", "Cow", "Dog"]},
+                    {"q": "Which animal has a very long neck and eats leaves high in trees?", "visual": "", "correct": "Giraffe", "options": ["Giraffe", "Rabbit", "Turtle"]},
+                ],
+                [
+                    {"q": "Which food usually comes from a hen?", "visual": "", "correct": "Egg", "options": ["Egg", "Bread", "Rice"]},
+                    {"q": "Which fruit grows in bunches on a vine?", "visual": "", "correct": "Grapes", "options": ["Grapes", "Mango", "Pineapple"]},
+                    {"q": "Which fruit has a spiky skin and a crown of leaves?", "visual": "", "correct": "Pineapple", "options": ["Pineapple", "Pear", "Apple"]},
+                    {"q": "Which of these is a root vegetable?", "visual": "", "correct": "Carrot", "options": ["Carrot", "Cucumber", "Broccoli"]},
+                    {"q": "What do we call dried grapes?", "visual": "", "correct": "Raisins", "options": ["Raisins", "Peas", "Beans"]},
+                    {"q": "Which drink is used to make ice cubes?", "visual": "", "correct": "Water", "options": ["Water", "Milkshake", "Hot chocolate"]},
+                    {"q": "Which food is made by baking dough and is often sliced for sandwiches?", "visual": "", "correct": "Bread", "options": ["Bread", "Soup", "Rice"]},
+                    {"q": "Which fruit has a thin yellow peel and a curved shape?", "visual": "", "correct": "Banana", "options": ["Banana", "Orange", "Cherry"]},
+                    {"q": "Which food is usually a frozen dessert?", "visual": "", "correct": "Ice cream", "options": ["Ice cream", "Toast", "Omelette"]},
+                    {"q": "Which of these foods is yellow and grows on a cob?", "visual": "", "correct": "Corn", "options": ["Corn", "Lettuce", "Potato"]},
+                ],
+                [
+                    {"q": "Who is your mother’s mother?", "visual": "", "correct": "Grandmother", "options": ["Grandmother", "Sister", "Aunt"]},
+                    {"q": "Who is your father’s father?", "visual": "", "correct": "Grandfather", "options": ["Grandfather", "Brother", "Uncle"]},
+                    {"q": "Who is your mother’s sister?", "visual": "", "correct": "Aunt", "options": ["Aunt", "Cousin", "Grandfather"]},
+                    {"q": "Who is your father’s brother?", "visual": "", "correct": "Uncle", "options": ["Uncle", "Sister", "Grandmother"]},
+                    {"q": "Who is your aunt’s child?", "visual": "", "correct": "Cousin", "options": ["Cousin", "Mother", "Father"]},
+                    {"q": "What do you call a girl who shares your parents?", "visual": "", "correct": "Sister", "options": ["Sister", "Aunt", "Grandmother"]},
+                    {"q": "What do you call a boy who shares your parents?", "visual": "", "correct": "Brother", "options": ["Brother", "Uncle", "Grandfather"]},
+                    {"q": "What do you call a very young child who has just been born?", "visual": "", "correct": "Newborn", "options": ["Newborn", "Teenager", "Adult"]},
+                    {"q": "What can you call your mother and father together?", "visual": "", "correct": "Parents", "options": ["Parents", "Cousins", "Neighbours"]},
+                    {"q": "What do you call your grandmother and grandfather together?", "visual": "", "correct": "Grandparents", "options": ["Grandparents", "Friends", "Siblings"]},
+                ],
+                [
+                    {"q": "How can you ask to use a classmate’s pencil?", "visual": "", "correct": "May I borrow your pencil, please?", "options": ["May I borrow your pencil, please?", "May I sharpen my pencil?", "Do you have my book?"]},
+                    {"q": "A friend drops their books. How can you offer help?", "visual": "", "correct": "Can I help you pick them up?", "options": ["Can I help you pick them up?", "Did you read them?", "Can you lend me a book?"]},
+                    {"q": "Which words tell someone to take care near a wet floor?", "visual": "", "correct": "Be careful. The floor is wet.", "options": ["Be careful. The floor is wet.", "Your shoes are blue.", "The door is open."]},
+                    {"q": "What can you say to invite a friend to join your game?", "visual": "", "correct": "Would you like to play with us?", "options": ["Would you like to play with us?", "Where did you put your coat?", "Can you close the door?"]},
+                    {"q": "You do not understand the instructions. What can you ask?", "visual": "", "correct": "Could you show me what to do?", "options": ["Could you show me what to do?", "Could you open the window?", "Could you lend me a crayon?"]},
+                    {"q": "Your friend says they feel ill. Which reply shows you care?", "visual": "", "correct": "I hope you feel better soon.", "options": ["I hope you feel better soon.", "Have a nice birthday!", "Let’s race to the door."]},
+                    {"q": "How can you politely say you do not want more juice?", "visual": "", "correct": "No, thank you. I’ve had enough.", "options": ["No, thank you. I’ve had enough.", "Yes, please. I’d like some more.", "Please fill my cup again."]},
+                    {"q": "Your friend is about to take part in a race. What can you say?", "visual": "", "correct": "Good luck in your race!", "options": ["Good luck in your race!", "Sweet dreams!", "Thank you for the race!"]},
+                    {"q": "Which words ask permission to open a window?", "visual": "", "correct": "May I open the window?", "options": ["May I open the window?", "Is the window clean?", "Who closed the window?"]},
+                    {"q": "You are lost in school. How can you ask for directions?", "visual": "", "correct": "Could you tell me where the office is?", "options": ["Could you tell me where the office is?", "Could you close the office door?", "Could you bring me a chair?"]},
+                ],
+                [
+                    {"q": "There ___ three apples on the table.", "visual": "🍎🍎🍎", "correct": "are", "options": ["are", "is", "am"]},
+                    {"q": "My sister ___ a blue bag.", "visual": "", "correct": "has", "options": ["has", "have", "having"]},
+                    {"q": "One child is here. Two ___ are there.", "visual": "", "correct": "children", "options": ["children", "child", "childs"]},
+                    {"q": "I sat ___ the chair.", "visual": "🪑", "correct": "on", "options": ["on", "at", "from"]},
+                    {"q": "We ate lunch ___ we washed our hands.", "visual": "", "correct": "after", "options": ["after", "under", "next"]},
+                    {"q": "I put on a coat because it was ___ outside.", "visual": "", "correct": "cold", "options": ["cold", "square", "sweet"]},
+                    {"q": "Choose the correct sentence.", "visual": "", "correct": "The dog is running.", "options": ["The dog is running.", "The dog are running.", "The dog am running."]},
+                    {"q": "___ is my pencil? I cannot find it.", "visual": "", "correct": "Where", "options": ["Where", "Who", "When"]},
+                    {"q": "Yesterday we ___ to the park.", "visual": "", "correct": "went", "options": ["went", "go", "goes"]},
+                    {"q": "The bag is too heavy, ___ I need help.", "visual": "", "correct": "so", "options": ["so", "under", "or"]},
+                ],
+            ],
+        };
 
         function buildDatabase() {
-            for (let level of [4, 5, 6]) {
-                QUESTION_DATABASE[level] = {};
-                for (let catIdx = 0; catIdx < 10; catIdx++) {
-                    QUESTION_DATABASE[level][catIdx] = generateQuestionsFor(catIdx, level);
+            for (const categories of Object.values(QUESTION_DATABASE)) {
+                for (const questions of categories) {
+                    for (const question of questions) {
+                        question.options = shuffle(question.options);
+                    }
                 }
             }
-        }
-
-        function getAlphabetDistractors(correctChar, isUpper = false) {
-            const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            const distractors = [];
-            const target = correctChar.toUpperCase();
-            
-            while (distractors.length < 2) {
-                const randIndex = Math.floor(Math.random() * 26);
-                const letter = allLetters[randIndex];
-                if (letter !== target && !distractors.includes(letter)) {
-                    distractors.push(letter);
-                }
-            }
-            return isUpper ? distractors : distractors.map(d => d.toLowerCase());
-        }
-
-        function generateQuestionsFor(catIdx, level) {
-            const list = [];
-            
-            // Cat 0: Alphabet
-            if (catIdx === 0) {
-                const letters = level === 4 ? ['A','B','C','D','E','F','G','H','I','J'] : (level === 5 ? ['K','L','M','N','O','P','Q','R','S','T'] : ['U','V','W','X','Y','Z','A','B','C','D']);
-                letters.forEach((l) => {
-                    const lc = l.toLowerCase();
-                    const distractors = getAlphabetDistractors(lc, false);
-                    list.push({
-                        q: level === 4 ? `Which is the lowercase letter for '${l}'?` : `Find the lowercase letter for '${l}'`,
-                        visual: l,
-                        correct: lc,
-                        options: shuffle([lc, ...distractors])
-                    });
-                });
-            }
-            // Cat 1: Phonics
-            else if (catIdx === 1) {
-                const phonics = [
-                    { word: 'Apple', sound: 'A', icon: '🍎' }, { word: 'Ball', sound: 'B', icon: '⚽' },
-                    { word: 'Cat', sound: 'C', icon: '🐱' }, { word: 'Dog', sound: 'D', icon: '🐶' },
-                    { word: 'Elephant', sound: 'E', icon: '🐘' }, { word: 'Fish', sound: 'F', icon: '🐟' },
-                    { word: 'Giraffe', sound: 'G', icon: '🦒' }, { word: 'Hat', sound: 'H', icon: '🎩' },
-                    { word: 'Ice', sound: 'I', icon: '🧊' }, { word: 'Juice', sound: 'J', icon: '🧃' }
-                ];
-                phonics.forEach(p => {
-                    const distractors = getAlphabetDistractors(p.sound, true);
-                    list.push({
-                        q: `What is the beginning sound of "${p.word}"?`,
-                        visual: p.icon,
-                        correct: p.sound,
-                        options: shuffle([p.sound, ...distractors])
-                    });
-                });
-            }
-            // Cat 2: First Words
-            else if (catIdx === 2) {
-                const items = [
-                    { name: 'Book', icon: '📚' }, { name: 'Pencil', icon: '✏️' }, { name: 'Chair', icon: '🪑' },
-                    { name: 'Bag', icon: '🎒' }, { name: 'Clock', icon: '⏰' }, { name: 'Lamp', icon: '💡' },
-                    { name: 'Car', icon: '🚗' }, { name: 'Doll', icon: '🧸' }, { name: 'Key', icon: '🔑' }, { name: 'Box', icon: '📦' }
-                ];
-                items.forEach((item, idx) => {
-                    const otherItems = items.filter((_, i) => i !== idx).map(x => x.name);
-                    const chosenDistractors = shuffle(otherItems).slice(0, 2);
-                    list.push({
-                        q: `What object is shown in the picture?`,
-                        visual: item.icon,
-                        correct: item.name,
-                        options: shuffle([item.name, ...chosenDistractors])
-                    });
-                });
-            }
-            // Cat 3: Colours and Shapes
-            else if (catIdx === 3) {
-                const cs = [
-                    { name: 'Circle', icon: '🔴', ans: 'Red' }, { name: 'Square', icon: '🟦', ans: 'Blue' },
-                    { name: 'Star', icon: '⭐', ans: 'Yellow' }, { name: 'Triangle', icon: '🔺', ans: 'Green' },
-                    { name: 'Heart', icon: '🧡', ans: 'Orange' }, { name: 'Diamond', icon: '💎', ans: 'Purple' },
-                    { name: 'Oval', icon: '🖤', ans: 'Black' }, { name: 'Cloud', icon: '☁️', ans: 'White' },
-                    { name: 'Box', icon: '📦', ans: 'Brown' }, { name: 'Ribbon', icon: '🎀', ans: 'Pink' }
-                ];
-                const allColours = ['Red', 'Blue', 'Yellow', 'Green', 'Orange', 'Purple', 'Black', 'White', 'Brown', 'Pink'];
-                cs.forEach(c => {
-                    const otherColours = allColours.filter(col => col !== c.ans);
-                    const chosenDistractors = shuffle(otherColours).slice(0, 2);
-                    list.push({
-                        q: `What colour is shown here?`,
-                        visual: c.icon,
-                        correct: c.ans,
-                        options: shuffle([c.ans, ...chosenDistractors])
-                    });
-                });
-            }
-            // Cat 4: Numbers & Counting
-            else if (catIdx === 4) {
-                for (let i = 1; i <= 10; i++) {
-                    const stars = "⭐".repeat(i);
-                    const wrong1 = (i === 10) ? "8" : `${i + 1}`;
-                    const wrong2 = (i === 1) ? "3" : `${i - 1}`;
-                    list.push({
-                        q: `Count the stars! How many are there?`,
-                        visual: stars,
-                        correct: `${i}`,
-                        options: shuffle([`${i}`, wrong1, wrong2])
-                    });
-                }
-            }
-            // Cat 5: Animals
-            else if (catIdx === 5) {
-                const animals = [
-                    { name: 'Lion', icon: '🦁' }, { name: 'Rabbit', icon: '🐰' }, { name: 'Bear', icon: '🐻' },
-                    { name: 'Elephant', icon: '🐘' }, { name: 'Monkey', icon: '🐒' }, { name: 'Duck', icon: '🦆' },
-                    { name: 'Cow', icon: '🐮' }, { name: 'Frog', icon: '🐸' }, { name: 'Tiger', icon: '🐯' }, { name: 'Panda', icon: '🐼' }
-                ];
-                animals.forEach((a, idx) => {
-                    const otherAnimals = animals.filter((_, i) => i !== idx).map(x => x.name);
-                    const chosenDistractors = shuffle(otherAnimals).slice(0, 2);
-                    list.push({
-                        q: `Which animal is this?`,
-                        visual: a.icon,
-                        correct: a.name,
-                        options: shuffle([a.name, ...chosenDistractors])
-                    });
-                });
-            }
-            // Cat 6: Fruits & Food
-            else if (catIdx === 6) {
-                const foods = [
-                    { name: 'Apple', icon: '🍎' }, { name: 'Banana', icon: '🍌' }, { name: 'Milk', icon: '🥛' },
-                    { name: 'Bread', icon: '🍞' }, { name: 'Pizza', icon: '🍕' }, { name: 'Orange', icon: '🍊' },
-                    { name: 'Watermelon', icon: '🍉' }, { name: 'Cake', icon: '🎂' }, { name: 'Egg', icon: '🥚' }, { name: 'Rice', icon: '🍚' }
-                ];
-                foods.forEach((f, idx) => {
-                    const otherFoods = foods.filter((_, i) => i !== idx).map(x => x.name);
-                    const chosenDistractors = shuffle(otherFoods).slice(0, 2);
-                    list.push({
-                        q: `What food or fruit is this?`,
-                        visual: f.icon,
-                        correct: f.name,
-                        options: shuffle([f.name, ...chosenDistractors])
-                    });
-                });
-            }
-            // Cat 7: My Body & Family
-            else if (catIdx === 7) {
-                const body = [
-                    { name: 'Eye', icon: '👁️' }, { name: 'Ear', icon: '👂' }, { name: 'Hand', icon: '🖐️' },
-                    { name: 'Foot', icon: '🦶' }, { name: 'Nose', icon: '👃' }, { name: 'Mother', icon: '👩' },
-                    { name: 'Father', icon: '👨' }, { name: 'Baby', icon: '👶' }, { name: 'Brother', icon: '👦' }, { name: 'Sister', icon: '👧' }
-                ];
-                body.forEach((b, idx) => {
-                    const otherBody = body.filter((_, i) => i !== idx).map(x => x.name);
-                    const chosenDistractors = shuffle(otherBody).slice(0, 2);
-                    list.push({
-                        q: `Identify this body part or family member:`,
-                        visual: b.icon,
-                        correct: b.name,
-                        options: shuffle([b.name, ...chosenDistractors])
-                    });
-                });
-            }
-            // Cat 8: Greetings
-            else if (catIdx === 8) {
-                const greet = [
-                    { q: 'What do you say in the morning?', visual: '🌅', ans: 'Good Morning', opts: ['Good Morning', 'Good Night', 'Goodbye'] },
-                    { q: 'What do you say when receiving a gift?', visual: '🎁', ans: 'Thank You', opts: ['Thank You', 'Sorry', 'Hello'] },
-                    { q: 'What do you say when meeting a friend?', visual: '👋', ans: 'Hello', opts: ['Hello', 'Goodbye', 'Thank You'] },
-                    { q: 'What do you say when leaving?', visual: '🚶', ans: 'Goodbye', opts: ['Goodbye', 'Good Morning', 'Please'] },
-                    { q: 'When you want to sit down:', visual: '🪑', ans: 'Sit down', opts: ['Sit down', 'Stand up', 'Run'] },
-                    { q: 'When you are happy, you...', visual: '👏', ans: 'Clap hands', opts: ['Clap hands', 'Sleep', 'Cry'] },
-                    { q: 'What do you say politely when asking?', visual: '🙏', ans: 'Please', opts: ['Please', 'No', 'Goodbye'] },
-                    { q: 'What do you say before going to sleep?', visual: '🌙', ans: 'Good Night', opts: ['Good Night', 'Good Morning', 'Hello'] },
-                    { q: 'When someone says Thank You, say...', visual: '😊', ans: 'Welcome', opts: ['Welcome', 'Sorry', 'No'] },
-                    { q: 'Action: Stand up!', visual: '🧍', ans: 'Stand up', opts: ['Stand up', 'Sit down', 'Jump'] }
-                ];
-                greet.forEach(g => {
-                    list.push({
-                        q: g.q,
-                        visual: g.visual,
-                        correct: g.ans,
-                        options: shuffle(g.opts)
-                    });
-                });
-            }
-            // Cat 9: Words & Sentences
-            else if (catIdx === 9) {
-                const sent = [
-                    { q: 'Complete the word: C _ T', visual: '🐱', correct: 'A', opts: ['A','O','U'] },
-                    { q: 'Complete the word: D _ G', visual: '🐶', correct: 'O', opts: ['O','E','I'] },
-                    { q: 'Complete the sentence: "It is a red ___"', visual: '🍎', correct: 'apple', opts: ['apple','cat','car'] },
-                    { q: 'Complete the word: S _ N', visual: '☀️', correct: 'U', opts: ['U','A','E'] },
-                    { q: 'Complete: "I can ___ a book"', visual: '📖', correct: 'read', opts: ['read','eat','run'] },
-                    { q: 'Complete: "The bird can ___"', visual: '🐦', correct: 'fly', opts: ['fly','swim','sleep'] },
-                    { q: 'Complete the word: B _ S', visual: '🚌', correct: 'U', opts: ['U','I','O'] },
-                    { q: 'Complete: "Drink hot ___"', visual: '🥛', correct: 'milk', opts: ['milk','sand','stone'] },
-                    { q: 'Complete: "A big ___"', visual: '🐘', correct: 'elephant', opts: ['elephant','ant','bee'] },
-                    { q: 'Complete the sentence: "I love my ___"', visual: '❤️', correct: 'family', opts: ['family','pencil','shoe'] }
-                ];
-                sent.forEach(s => {
-                    list.push({
-                        q: s.q,
-                        visual: s.visual,
-                        correct: s.correct,
-                        options: shuffle(s.opts)
-                    });
-                });
-            }
-
-            return list;
         }
 
         function shuffle(array) {

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Kids – Edu Kidz | Belajar Matematik Tahun 2</title>
+    <title>Math Kids – Edu Kidz | Year 2 Mathematics</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Poppins & Fredoka for Kid-friendly UI -->
@@ -51,18 +51,18 @@
                     🤖
                 </div>
                 <div>
-                    <h2 class="kid-font text-lg font-bold text-sky-600" id="header-username">Kawan Cilik</h2>
-                    <p class="text-xs text-slate-500 font-medium">XP: <span id="header-xp" class="text-amber-500 font-bold">0</span> | Lencana: <span id="header-badges" class="text-purple-600 font-bold">0</span></p>
+                    <h2 class="kid-font text-lg font-bold text-sky-600" id="header-username">Young Player</h2>
+                    <p class="text-xs text-slate-500 font-medium">XP: <span id="header-xp" class="text-amber-500 font-bold">0</span> | Badges: <span id="header-badges" class="text-purple-600 font-bold">0</span></p>
                 </div>
             </div>
             <div class="flex items-center space-x-2">
                 <button onclick="router.navigateTo('profile')" class="bg-sky-100 hover:bg-sky-200 text-sky-700 px-3 py-2 rounded-xl text-sm font-semibold transition flex items-center space-x-1">
                     <i class="fa-solid fa-user"></i>
-                    <span class="hidden sm:inline">Profil</span>
+                    <span class="hidden sm:inline">Profile</span>
                 </button>
                 <button onclick="authSystem.logout()" class="bg-rose-100 hover:bg-rose-200 text-rose-700 px-3 py-2 rounded-xl text-sm font-semibold transition flex items-center space-x-1">
                     <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="hidden sm:inline">Keluar</span>
+                    <span class="hidden sm:inline">Log Out</span>
                 </button>
             </div>
         </header>
@@ -76,46 +76,46 @@
                     <div class="text-6xl mb-2 floating">🌟</div>
                     <h1 class="kid-font text-3xl font-bold text-sky-600 tracking-wide">MATH KIDS</h1>
                     <p class="kid-font text-xl text-amber-500 font-semibold">EDU KIDZ</p>
-                    <p class="text-sm text-slate-500 mt-1">Jom Jadi Juara Matematik Tahun 2! 🚀</p>
+                    <p class="text-sm text-slate-500 mt-1">Become a Year 2 Maths Champion! 🚀</p>
                 </div>
 
                 <!-- Tabs -->
                 <div class="flex bg-slate-100 p-1.5 rounded-2xl mb-6">
-                    <button id="tab-login-btn" onclick="authSystem.switchTab('login')" class="flex-1 py-2.5 rounded-xl text-sm font-bold transition bg-white text-sky-600 shadow-sm">Log Masuk</button>
-                    <button id="tab-register-btn" onclick="authSystem.switchTab('register')" class="flex-1 py-2.5 rounded-xl text-sm font-bold transition text-slate-500">Daftar Akaun</button>
+                    <button id="tab-login-btn" onclick="authSystem.switchTab('login')" class="flex-1 py-2.5 rounded-xl text-sm font-bold transition bg-white text-sky-600 shadow-sm">Log In</button>
+                    <button id="tab-register-btn" onclick="authSystem.switchTab('register')" class="flex-1 py-2.5 rounded-xl text-sm font-bold transition text-slate-500">Create an Account</button>
                 </div>
 
                 <!-- Login Form -->
                 <form id="form-login" onsubmit="authSystem.handleLogin(event)" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Pengguna</label>
-                        <input type="text" id="login-username" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="cth: ahmad202">
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Username</label>
+                        <input type="text" id="login-username" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="e.g. ahmad202">
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-1">Kata Laluan</label>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Password</label>
                         <input type="password" id="login-password" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="••••••••">
                     </div>
                     <button type="submit" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-3.5 rounded-xl shadow-lg hover:from-sky-600 hover:to-indigo-600 transition kid-font text-lg">
-                        Log Masuk 🎮
+                        Log In 🎮
                     </button>
                 </form>
 
                 <!-- Register Form -->
                 <form id="form-register" onsubmit="authSystem.handleRegister(event)" class="space-y-4 hidden">
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Penuh Murid</label>
-                        <input type="text" id="reg-name" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="cth: Siti Aisyah">
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Pupil’s Full Name</label>
+                        <input type="text" id="reg-name" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="e.g. Siti Aisyah">
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-1">Nama Pengguna</label>
-                        <input type="text" id="reg-username" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="cth: aisyah2">
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Username</label>
+                        <input type="text" id="reg-username" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="e.g. aisyah2">
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-1">Kata Laluan</label>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Password</label>
                         <input type="password" id="reg-password" required class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none transition font-medium text-slate-700" placeholder="••••••••">
                     </div>
                     <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold py-3.5 rounded-xl shadow-lg hover:from-emerald-600 hover:to-teal-600 transition kid-font text-lg">
-                        Daftar Akaun Baru ✨
+                        Create an Account Baru ✨
                     </button>
                 </form>
             </div>
@@ -123,24 +123,24 @@
             <!-- 2. HOME VIEW -->
             <div id="view-home" class="view-section hidden max-w-2xl mx-auto w-full text-center">
                 <div class="mb-6">
-                    <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tahun 2 KPM</span>
+                    <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">KPM Year 2</span>
                     <h1 class="kid-font text-4xl md:text-5xl font-extrabold text-sky-600 mt-2">🌟 MATH KIDS 🌟</h1>
                     <h2 class="kid-font text-2xl md:text-3xl font-bold text-amber-500">EDU KIDZ</h2>
-                    <p class="text-slate-600 font-medium mt-1">Jom Jadi Juara Matematik!</p>
+                    <p class="text-slate-600 font-medium mt-1">Become a Maths Champion!</p>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-xl mx-auto">
                     <button onclick="router.navigateTo('topics')" class="bg-white p-6 rounded-3xl card-shadow border-2 border-sky-100 hover:border-sky-400 transition bounce-hover flex flex-col items-center justify-center space-y-2 group">
                         <div class="text-4xl group-hover:scale-110 transition">▶️</div>
-                        <span class="kid-font font-bold text-sky-700 text-base">MULA BERMAIN</span>
+                        <span class="kid-font font-bold text-sky-700 text-base">START PLAYING</span>
                     </button>
                     <button onclick="router.navigateTo('topics')" class="bg-white p-6 rounded-3xl card-shadow border-2 border-indigo-100 hover:border-indigo-400 transition bounce-hover flex flex-col items-center justify-center space-y-2 group">
                         <div class="text-4xl group-hover:scale-110 transition">📚</div>
-                        <span class="kid-font font-bold text-indigo-700 text-base">TOPIK</span>
+                        <span class="kid-font font-bold text-indigo-700 text-base">TOPICS</span>
                     </button>
                     <button onclick="router.navigateTo('progress')" class="bg-white p-6 rounded-3xl card-shadow border-2 border-emerald-100 hover:border-emerald-400 transition bounce-hover flex flex-col items-center justify-center space-y-2 group">
                         <div class="text-4xl group-hover:scale-110 transition">📈</div>
-                        <span class="kid-font font-bold text-emerald-700 text-base">PROGRESS SAYA</span>
+                        <span class="kid-font font-bold text-emerald-700 text-base">MY PROGRESS</span>
                     </button>
                     <button onclick="router.navigateTo('leaderboard')" class="bg-white p-6 rounded-3xl card-shadow border-2 border-amber-100 hover:border-amber-400 transition bounce-hover flex flex-col items-center justify-center space-y-2 group">
                         <div class="text-4xl group-hover:scale-110 transition">🏆</div>
@@ -148,11 +148,11 @@
                     </button>
                     <button onclick="router.navigateTo('profile')" class="bg-white p-6 rounded-3xl card-shadow border-2 border-purple-100 hover:border-purple-400 transition bounce-hover flex flex-col items-center justify-center space-y-2 group">
                         <div class="text-4xl group-hover:scale-110 transition">👤</div>
-                        <span class="kid-font font-bold text-purple-700 text-base">PROFIL</span>
+                        <span class="kid-font font-bold text-purple-700 text-base">PROFILE</span>
                     </button>
                     <button onclick="authSystem.logout()" class="bg-rose-50 p-6 rounded-3xl card-shadow border-2 border-rose-100 hover:border-rose-400 transition bounce-hover flex flex-col items-center justify-center space-y-2 group">
                         <div class="text-4xl group-hover:scale-110 transition">🚪</div>
-                        <span class="kid-font font-bold text-rose-700 text-base">LOG KELUAR</span>
+                        <span class="kid-font font-bold text-rose-700 text-base">LOG OUT</span>
                     </button>
                 </div>
             </div>
@@ -162,9 +162,9 @@
                 <div class="flex items-center justify-between mb-6">
                     <button onclick="router.navigateTo('home')" class="bg-white px-4 py-2 rounded-2xl card-shadow font-bold text-slate-600 hover:bg-slate-50 transition flex items-center space-x-2">
                         <i class="fa-solid fa-arrow-left"></i>
-                        <span>Kembali</span>
+                        <span>Back</span>
                     </button>
-                    <h2 class="kid-font text-2xl font-bold text-sky-600">Pilih Topik Matematik</h2>
+                    <h2 class="kid-font text-2xl font-bold text-sky-600">Choose a Maths Topic</h2>
                     <div class="w-20"></div>
                 </div>
 
@@ -177,45 +177,45 @@
             <div id="view-config" class="view-section hidden max-w-lg mx-auto w-full bg-white rounded-3xl p-6 card-shadow border-2 border-sky-100">
                 <button onclick="router.navigateTo('topics')" class="mb-4 text-slate-500 font-semibold hover:text-sky-600 flex items-center space-x-2">
                     <i class="fa-solid fa-arrow-left"></i>
-                    <span>Pilih Topik Lain</span>
+                    <span>Choose Another Topic</span>
                 </button>
 
-                <h2 id="config-topic-title" class="kid-font text-2xl font-bold text-sky-600 text-center mb-6">Nilai Nombor</h2>
+                <h2 id="config-topic-title" class="kid-font text-2xl font-bold text-sky-600 text-center mb-6">Number Values</h2>
 
                 <div class="space-y-6">
                     <!-- Mode Selection -->
                     <div>
-                        <label class="block font-bold text-slate-700 mb-2 text-sm">Pilih Jenis Game:</label>
+                        <label class="block font-bold text-slate-700 mb-2 text-sm">Choose a Game Format:</label>
                         <div class="grid grid-cols-2 gap-3">
-                            <button onclick="gameSystem.selectMode('objective')" id="btn-mode-objective" class="mode-btn p-3 rounded-2xl border-2 border-sky-500 bg-sky-50 font-bold text-sky-700 text-sm transition">🎯 Objektif</button>
-                            <button onclick="gameSystem.selectMode('fill')" id="btn-mode-fill" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">✏️ Isi Tempat Kosong</button>
-                            <button onclick="gameSystem.selectMode('matching')" id="btn-mode-matching" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">🎴 Padanan</button>
+                            <button onclick="gameSystem.selectMode('objective')" id="btn-mode-objective" class="mode-btn p-3 rounded-2xl border-2 border-sky-500 bg-sky-50 font-bold text-sky-700 text-sm transition">🎯 Multiple Choice</button>
+                            <button onclick="gameSystem.selectMode('fill')" id="btn-mode-fill" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">✏️ Fill in the Blank</button>
+                            <button onclick="gameSystem.selectMode('matching')" id="btn-mode-matching" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">🎴 Matching</button>
                             <button onclick="gameSystem.selectMode('dragdrop')" id="btn-mode-dragdrop" class="mode-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">🖱️ Drag & Drop</button>
                         </div>
                     </div>
 
                     <!-- Level Selection -->
                     <div>
-                        <label class="block font-bold text-slate-700 mb-2 text-sm">Pilih Tahap Kesukaran:</label>
+                        <label class="block font-bold text-slate-700 mb-2 text-sm">Choose a Difficulty Level:</label>
                         <div class="grid grid-cols-3 gap-3">
-                            <button onclick="gameSystem.selectLevel('mudah')" id="btn-lvl-mudah" class="lvl-btn p-3 rounded-2xl border-2 border-emerald-500 bg-emerald-50 font-bold text-emerald-700 text-sm transition">🟢 Mudah</button>
-                            <button onclick="gameSystem.selectLevel('sederhana')" id="btn-lvl-sederhana" class="lvl-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">🟡 Sederhana</button>
-                            <button onclick="gameSystem.selectLevel('sukar')" id="btn-lvl-sukar" class="lvl-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">🔴 Sukar</button>
+                            <button onclick="gameSystem.selectLevel('mudah')" id="btn-lvl-mudah" class="lvl-btn p-3 rounded-2xl border-2 border-emerald-500 bg-emerald-50 font-bold text-emerald-700 text-sm transition">🟢 Easy</button>
+                            <button onclick="gameSystem.selectLevel('sederhana')" id="btn-lvl-sederhana" class="lvl-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">🟡 Medium</button>
+                            <button onclick="gameSystem.selectLevel('sukar')" id="btn-lvl-sukar" class="lvl-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">🔴 Hard</button>
                         </div>
                     </div>
 
                     <!-- Timer Selection -->
                     <div>
-                        <label class="block font-bold text-slate-700 mb-2 text-sm">Pilih Masa Permainan:</label>
+                        <label class="block font-bold text-slate-700 mb-2 text-sm">Choose a Time Limit:</label>
                         <div class="grid grid-cols-3 gap-3">
-                            <button onclick="gameSystem.selectTimer(30)" id="btn-time-30" class="time-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">⏱️ 30 Saat</button>
-                            <button onclick="gameSystem.selectTimer(60)" id="btn-time-60" class="time-btn p-3 rounded-2xl border-2 border-sky-500 bg-sky-50 font-bold text-sky-700 text-sm transition">⏱️ 1 Minit</button>
-                            <button onclick="gameSystem.selectTimer(0)" id="btn-time-0" class="time-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">♾️ Tiada Had</button>
+                            <button onclick="gameSystem.selectTimer(30)" id="btn-time-30" class="time-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">⏱️ 30 Seconds</button>
+                            <button onclick="gameSystem.selectTimer(60)" id="btn-time-60" class="time-btn p-3 rounded-2xl border-2 border-sky-500 bg-sky-50 font-bold text-sky-700 text-sm transition">⏱️ 1 Minute</button>
+                            <button onclick="gameSystem.selectTimer(0)" id="btn-time-0" class="time-btn p-3 rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-600 text-sm transition">♾️ No Time Limit</button>
                         </div>
                     </div>
 
                     <button onclick="gameSystem.startGameSession()" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-4 rounded-2xl shadow-xl hover:from-sky-600 hover:to-indigo-600 transition kid-font text-xl mt-4">
-                        🚀 MULA BERMAIN SEKARANG!
+                        🚀 START GAME!
                     </button>
                 </div>
             </div>
@@ -225,7 +225,7 @@
                 <!-- Status Top Bar -->
                 <div class="flex justify-between items-center bg-white p-4 rounded-2xl card-shadow mb-4 border border-sky-100">
                     <div>
-                        <span class="text-xs text-slate-400 font-bold block">SOALAN</span>
+                        <span class="text-xs text-slate-400 font-bold block">QUESTION</span>
                         <span id="game-q-counter" class="kid-font text-lg font-bold text-sky-600">1 / 20</span>
                     </div>
                     <div id="game-timer-box" class="bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 flex items-center space-x-2">
@@ -233,14 +233,14 @@
                         <span id="game-timer-display" class="kid-font font-bold text-amber-700 text-base">01:00</span>
                     </div>
                     <div>
-                        <span class="text-xs text-slate-400 font-bold block">MARKAH</span>
+                        <span class="text-xs text-slate-400 font-bold block">SCORE</span>
                         <span id="game-score-display" class="kid-font text-lg font-bold text-emerald-600">0 / 100</span>
                     </div>
                 </div>
 
                 <!-- Question Card -->
                 <div class="bg-white rounded-3xl p-6 md:p-8 card-shadow border-2 border-sky-100 mb-4 relative overflow-hidden">
-                    <div id="question-badge" class="inline-block bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full mb-3">Topik 7 • Mudah</div>
+                    <div id="question-badge" class="inline-block bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full mb-3">Topic 7 • Easy</div>
                     
                     <!-- Comparison Diagram Container -->
                     <div id="question-diagram" class="mb-4 hidden bg-sky-50/70 p-4 rounded-2xl border border-sky-200 text-center">
@@ -248,7 +248,7 @@
                     </div>
 
                     <h3 id="question-text" class="kid-font text-xl md:text-2xl font-bold text-slate-800 mb-6 leading-relaxed">
-                        Soalan matematik akan dipaparkan di sini...
+                        The maths question appears here…
                     </h3>
 
                     <!-- Answer Options Container (Dynamic based on game mode) -->
@@ -261,10 +261,10 @@
                 <div id="game-feedback" class="hidden absolute inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
                     <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center card-shadow animate-bounce">
                         <div id="feedback-icon" class="text-5xl mb-2">🎉</div>
-                        <h4 id="feedback-title" class="kid-font text-2xl font-bold text-emerald-600 mb-1">BETUL!</h4>
-                        <p id="feedback-msg" class="text-slate-600 font-medium mb-4">+5 Markah! Hebat!</p>
+                        <h4 id="feedback-title" class="kid-font text-2xl font-bold text-emerald-600 mb-1">CORRECT!</h4>
+                        <p id="feedback-msg" class="text-slate-600 font-medium mb-4">+5 points! Well done!</p>
                         <button onclick="gameSystem.nextQuestion()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 rounded-xl kid-font text-lg shadow-lg">
-                            Soalan Seterusnya ➡️
+                            Next Question ➡️
                         </button>
                     </div>
                 </div>
@@ -273,28 +273,28 @@
             <!-- 6. RESULT VIEW -->
             <div id="view-result" class="view-section hidden max-w-md mx-auto w-full bg-white rounded-3xl p-6 md:p-8 card-shadow border-4 border-sky-200 text-center">
                 <div class="text-6xl mb-2">🏆</div>
-                <h2 class="kid-font text-3xl font-bold text-sky-600 mb-1">PERMAINAN TAMAT!</h2>
-                <p id="result-congrats" class="text-amber-500 font-bold mb-6">Tahniah, Kawan Cilik!</p>
+                <h2 class="kid-font text-3xl font-bold text-sky-600 mb-1">GAME COMPLETE!</h2>
+                <p id="result-congrats" class="text-amber-500 font-bold mb-6">Well done, Young Player!</p>
 
                 <div class="bg-slate-50 p-6 rounded-2xl mb-6 space-y-3 border border-slate-100">
                     <div class="flex justify-between items-center text-sm font-semibold">
-                        <span class="text-slate-500">Jumlah Markah:</span>
+                        <span class="text-slate-500">Total Score:</span>
                         <span id="res-score" class="kid-font text-xl font-bold text-emerald-600">85 / 100</span>
                     </div>
                     <div class="flex justify-between items-center text-sm font-semibold">
-                        <span class="text-slate-500">Jawapan Betul:</span>
+                        <span class="text-slate-500">Correct Answers:</span>
                         <span id="res-correct" class="text-slate-700 font-bold">17 / 20</span>
                     </div>
                     <div class="flex justify-between items-center text-sm font-semibold">
-                        <span class="text-slate-500">Jawapan Salah:</span>
+                        <span class="text-slate-500">Incorrect Answers:</span>
                         <span id="res-wrong" class="text-slate-700 font-bold">3 / 20</span>
                     </div>
                     <div class="flex justify-between items-center text-sm font-semibold">
-                        <span class="text-slate-500">Peratus Ketepatan:</span>
+                        <span class="text-slate-500">Accuracy:</span>
                         <span id="res-accuracy" class="text-sky-600 font-bold">85%</span>
                     </div>
                     <div class="flex justify-between items-center text-sm font-semibold">
-                        <span class="text-slate-500">Masa Diambil:</span>
+                        <span class="text-slate-500">Time Taken:</span>
                         <span id="res-time" class="text-slate-700 font-bold">00:47</span>
                     </div>
                 </div>
@@ -302,17 +302,17 @@
                 <div class="space-y-3">
                     <button onclick="gameSystem.restartGame()" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-3.5 rounded-xl shadow-lg hover:from-sky-600 hover:to-indigo-600 transition kid-font text-lg flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-rotate-right"></i>
-                        <span>Main Lagi</span>
+                        <span>Play Again</span>
                     </button>
                     <button onclick="router.navigateTo('topics')" class="w-full bg-white border-2 border-sky-200 text-sky-700 font-bold py-3 rounded-xl hover:bg-sky-50 transition kid-font">
-                        📚 Pilih Topik Lain
+                        📚 Choose Another Topic
                     </button>
                     <div class="grid grid-cols-2 gap-3">
                         <button onclick="router.navigateTo('progress')" class="bg-emerald-50 text-emerald-700 font-bold py-2.5 rounded-xl hover:bg-emerald-100 transition text-sm">📈 Progress</button>
                         <button onclick="router.navigateTo('leaderboard')" class="bg-amber-50 text-amber-700 font-bold py-2.5 rounded-xl hover:bg-amber-100 transition text-sm">🏆 Leaderboard</button>
                     </div>
                     <button onclick="router.navigateTo('home')" class="w-full text-slate-400 hover:text-slate-600 text-sm font-semibold pt-2">
-                        🏠 Kembali ke Menu Utama
+                        🏠 Back ke Menu Utama
                     </button>
                 </div>
             </div>
@@ -324,38 +324,38 @@
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Menu</span>
                     </button>
-                    <h2 class="kid-font text-2xl font-bold text-emerald-600">📈 Progress Saya</h2>
+                    <h2 class="kid-font text-2xl font-bold text-emerald-600">📈 My Progress</h2>
                     <div class="w-16"></div>
                 </div>
 
                 <!-- Stats Summary Card -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
                     <div class="bg-sky-50 p-4 rounded-2xl text-center border border-sky-100">
-                        <span class="text-xs text-sky-600 font-bold block mb-1">JUMLAH XP</span>
+                        <span class="text-xs text-sky-600 font-bold block mb-1">TOTAL XP</span>
                         <span id="prog-xp" class="kid-font text-2xl font-bold text-sky-700">0</span>
                     </div>
                     <div class="bg-emerald-50 p-4 rounded-2xl text-center border border-emerald-100">
-                        <span class="text-xs text-emerald-600 font-bold block mb-1">PERMAINAN</span>
+                        <span class="text-xs text-emerald-600 font-bold block mb-1">GAMES</span>
                         <span id="prog-games" class="kid-font text-2xl font-bold text-emerald-700">0</span>
                     </div>
                     <div class="bg-amber-50 p-4 rounded-2xl text-center border border-amber-100">
-                        <span class="text-xs text-amber-600 font-bold block mb-1">KETEPATAN</span>
+                        <span class="text-xs text-amber-600 font-bold block mb-1">ACCURACY</span>
                         <span id="prog-accuracy" class="kid-font text-2xl font-bold text-amber-700">0%</span>
                     </div>
                     <div class="bg-purple-50 p-4 rounded-2xl text-center border border-purple-100">
-                        <span class="text-xs text-purple-600 font-bold block mb-1">LENCANA</span>
+                        <span class="text-xs text-purple-600 font-bold block mb-1">BADGES</span>
                         <span id="prog-badges-count" class="kid-font text-2xl font-bold text-purple-700">0</span>
                     </div>
                 </div>
 
                 <!-- Topic Progress Bars -->
-                <h3 class="kid-font text-lg font-bold text-slate-700 mb-3">Penguasaan Mengikut Topik</h3>
+                <h3 class="kid-font text-lg font-bold text-slate-700 mb-3">Progress by Topic</h3>
                 <div id="topic-progress-list" class="space-y-3 max-h-[35vh] overflow-y-auto pr-2 mb-6">
                     <!-- Dynamic topic progress bars -->
                 </div>
 
                 <!-- Badges Earned Section -->
-                <h3 class="kid-font text-lg font-bold text-slate-700 mb-3">Lencana Pencapaian 🏅</h3>
+                <h3 class="kid-font text-lg font-bold text-slate-700 mb-3">Achievement Badges 🏅</h3>
                 <div id="badges-list" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <!-- Dynamic badges -->
                 </div>
@@ -368,11 +368,11 @@
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Menu</span>
                     </button>
-                    <h2 class="kid-font text-2xl font-bold text-amber-600">🏆 Papan Pendahulu</h2>
+                    <h2 class="kid-font text-2xl font-bold text-amber-600">🏆 Leaderboard</h2>
                     <div class="w-16"></div>
                 </div>
 
-                <p class="text-sm text-slate-500 text-center mb-6">Juara-juara cilik Matematik Tahun 2 paling cemerlang!</p>
+                <p class="text-sm text-slate-500 text-center mb-6">Year 2 Maths Champions</p>
 
                 <div id="leaderboard-list" class="space-y-3 max-h-[50vh] overflow-y-auto pr-2">
                     <!-- Dynamic leaderboard rows -->
@@ -386,7 +386,7 @@
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Menu</span>
                     </button>
-                    <h2 class="kid-font text-xl font-bold text-purple-600">Profil Saya</h2>
+                    <h2 class="kid-font text-xl font-bold text-purple-600">My Profile</h2>
                     <div class="w-16"></div>
                 </div>
 
@@ -399,26 +399,26 @@
 
                 <div class="bg-purple-50 p-4 rounded-2xl space-y-2 mb-6 border border-purple-100 text-left">
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-600 font-semibold">Markah Tertinggi:</span>
+                        <span class="text-slate-600 font-semibold">Highest Score:</span>
                         <span id="profile-high-score" class="kid-font font-bold text-purple-700">0</span>
                     </div>
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-600 font-semibold">Jumlah Soalan Dijawab:</span>
+                        <span class="text-slate-600 font-semibold">Questions Answered:</span>
                         <span id="profile-total-q" class="font-bold text-slate-700">0</span>
                     </div>
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-600 font-semibold">Jawapan Betul:</span>
+                        <span class="text-slate-600 font-semibold">Correct Answers:</span>
                         <span id="profile-total-correct" class="font-bold text-emerald-600">0</span>
                     </div>
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-600 font-semibold">Jawapan Salah:</span>
+                        <span class="text-slate-600 font-semibold">Incorrect Answers:</span>
                         <span id="profile-total-wrong" class="font-bold text-rose-600">0</span>
                     </div>
                 </div>
 
                 <button onclick="authSystem.logout()" class="w-full bg-rose-100 hover:bg-rose-200 text-rose-700 font-bold py-3 rounded-xl transition kid-font flex items-center justify-center space-x-2">
                     <i class="fa-solid fa-right-from-bracket"></i>
-                    <span>Log Keluar Akaun</span>
+                    <span>Log Out</span>
                 </button>
             </div>
 
@@ -428,26 +428,26 @@
     <script>
         // Data Topik Rasmi KPM Tahun 2
         const TOPICS_DATA = [
-            { id: 1, title: "Kenali Nombor 0 hingga 1000", icon: "🔢", desc: "Kenali, baca, tulis angka & perkataan" },
-            { id: 2, title: "Nilai Nombor", icon: "💯", desc: "Menentukan nilai, perbandingan kuantiti & blok" },
-            { id: 3, title: "Nilai Tempat & Nilai Digit", icon: "🏠", desc: "Sa, Puluh, Ratus & Blok Base-Ten" },
-            { id: 4, title: "Cerakinan Nombor", icon: "🧩", desc: "Cerakin nilai digit & nilai tempat" },
-            { id: 5, title: "Bandingkan Nombor", icon: "⚖️", desc: "Lebih besar, lebih kecil, >, <, =" },
-            { id: 6, title: "Susunan Nombor", icon: "📊", desc: "Tertib menaik & tertib menurun" },
-            { id: 7, title: "Anggaran Nombor", icon: "🔍", desc: "Anggaran kuantiti dengan perbandingan visual" },
-            { id: 8, title: "Bundar Nombor", icon: "🎯", desc: "Bundar kepada puluh & ratus terdekat" },
-            { id: 9, title: "Pola Nombor", icon: "🔢", desc: "Pola menaik & menurun nilai tetap" },
-            { id: 10, title: "Penyelesaian Masalah", icon: "🧠", desc: "Situasi harian & cerita matematik" }
+            { id: 1, title: "Recognising Numbers from 0 to 1,000", icon: "🔢", desc: "Recognise, read and write numerals and number words" },
+            { id: 2, title: "Number Values", icon: "💯", desc: "Identify number values and compare quantities" },
+            { id: 3, title: "Place Value and Digit Value", icon: "🏠", desc: "Ones, tens, hundreds and base-ten blocks" },
+            { id: 4, title: "Partitioning Numbers", icon: "🧩", desc: "Partition numbers by place value" },
+            { id: 5, title: "Comparing Numbers", icon: "⚖️", desc: "Greater than, less than and equal to" },
+            { id: 6, title: "Ordering Numbers", icon: "📊", desc: "Ascending and descending order" },
+            { id: 7, title: "Estimating Numbers", icon: "🔍", desc: "Estimate quantities by comparison" },
+            { id: 8, title: "Rounding Numbers", icon: "🎯", desc: "Round to the nearest ten and hundred" },
+            { id: 9, title: "Number Patterns", icon: "🔢", desc: "Count up or down in equal steps" },
+            { id: 10, title: "Word Problems", icon: "🧠", desc: "Solve maths problems in everyday settings" }
         ];
 
         // Lencana Rasmi
         const BADGES_DATA = [
-            { id: 'b1', name: 'Pakar Nombor', icon: '🏅', desc: 'Selesaikan Topik 1', topicId: 1 },
-            { id: 'b2', name: 'Raja Nilai Nombor', icon: '🏅', desc: 'Selesaikan Topik 2', topicId: 2 },
-            { id: 'b3', name: 'Juara Cerakinan', icon: '🏅', desc: 'Selesaikan Topik 4', topicId: 4 },
-            { id: 'b4', name: 'Master Pembundaran', icon: '🏅', desc: 'Selesaikan Topik 8', topicId: 8 },
-            { id: 'b5', name: 'Pakar Pola', icon: '🏅', desc: 'Selesaikan Topik 9', topicId: 9 },
-            { id: 'b6', name: 'Juara Matematik', icon: '🏆', desc: 'Capai 500 Jumlah XP', xpNeeded: 500 }
+            { id: 'b1', name: 'Number Expert', icon: '🏅', desc: 'Complete Topic 1', topicId: 1 },
+            { id: 'b2', name: 'Number Value Champion', icon: '🏅', desc: 'Complete Topic 2', topicId: 2 },
+            { id: 'b3', name: 'Partitioning Champion', icon: '🏅', desc: 'Complete Topic 4', topicId: 4 },
+            { id: 'b4', name: 'Rounding Expert', icon: '🏅', desc: 'Complete Topic 8', topicId: 8 },
+            { id: 'b5', name: 'Pattern Expert', icon: '🏅', desc: 'Complete Topic 9', topicId: 9 },
+            { id: 'b6', name: 'Maths Champion', icon: '🏆', desc: 'Earn 500 XP', xpNeeded: 500 }
         ];
 
         // Router Sistem Navigasi Antaramuka
@@ -512,7 +512,7 @@
 
                 let users = JSON.parse(localStorage.getItem('mathkids_users')) || [];
                 if (users.find(u => u.username === username)) {
-                    alert('Nama pengguna telah wujud! Sila guna nama lain.');
+                    alert('That username is taken. Please choose another.');
                     return;
                 }
 
@@ -535,7 +535,7 @@
                 localStorage.setItem('mathkids_current_user', JSON.stringify(newUser));
                 this.currentUser = newUser;
 
-                alert('Pendaftaran berjaya! Selamat datang ke Math Kids.');
+                alert('Account created. Welcome to Math Kids!');
                 router.navigateTo('home');
             }
             handleLogin(e) {
@@ -547,7 +547,7 @@
                 const user = users.find(u => u.username === username && u.password === password);
 
                 if (!user) {
-                    alert('Nama pengguna atau kata laluan salah!');
+                    alert('Incorrect username or password!');
                     return;
                 }
 
@@ -584,8 +584,23 @@
             }
         });
 
-        // Dynamic Question Generator Engine (Refined Topik 10: Penyelesaian Masalah with diverse unique word problems and NO diagrams)
+        // Dynamic Question Generator Engine (Refined Topik 10: Word Problems with diverse unique word problems and NO diagrams)
         class QuestionGenerator {
+            static numberInWords(value) {
+                const small = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+                    'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+                const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+                if (value < 20) return small[value];
+                if (value < 100) {
+                    const ones = value % 10;
+                    return tens[Math.floor(value / 10)] + (ones ? '-' + small[ones] : '');
+                }
+                if (value === 1000) return 'one thousand';
+                const remainder = value % 100;
+                const hundreds = small[Math.floor(value / 100)] + ' hundred';
+                return hundreds + (remainder ? ' and ' + this.numberInWords(remainder) : '');
+            }
+
             static generateQuestions(topicId, level) {
                 let questions = [];
                 let usedSignatures = new Set();
@@ -628,9 +643,9 @@
             static topic1(level, idx) {
                 let num = level === 'mudah' ? Math.floor(Math.random() * 90) + 10 + idx : (level === 'sederhana' ? Math.floor(Math.random() * 800) + 100 + idx : Math.floor(Math.random() * 900) + 100 + idx);
                 if (num > 1000) num = 999;
-                let wrong1 = num + 12;
-                let wrong2 = num - 15;
-                let wrong3 = num + 100;
+                const wrong1 = num <= 988 ? num + 12 : num - 12;
+                const wrong2 = num >= 15 ? num - 15 : num + 15;
+                const wrong3 = num <= 900 ? num + 100 : num - 100;
 
                 let opts = [num.toString(), wrong1.toString(), wrong2.toString(), wrong3.toString()];
                 opts.sort(() => Math.random() - 0.5);
@@ -639,15 +654,15 @@
 
                 return {
                     type: 'objective',
-                    question: `Apakah angka bagi bilangan bernilai ${num}?`,
+                    question: `Which numeral represents ${this.numberInWords(num)}?`,
                     diagram: null,
                     options: opts.map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`),
                     answer: correctLetter,
-                    explanation: `Nilai yang betul ialah ${num}.`
+                    explanation: `The correct numeral is ${num}.`
                 };
             }
 
-            // TOPIK 2: Nilai Nombor
+            // TOPIK 2: Number Values
             static topic2(level, idx) {
                 let target = 150 + (idx * 20);
                 if (target > 900) target = 300 + idx;
@@ -656,15 +671,15 @@
 
                 return {
                     type: 'objective',
-                    question: `Nombor manakah yang mempunyai nilai ${target}?`,
+                    question: `Which number has a value of ${target}?`,
                     diagram: null,
                     options: opts.map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`),
                     answer: correctLetter,
-                    explanation: `Pilihan yang tepat ialah ${target}.`
+                    explanation: `The correct number is ${target}.`
                 };
             }
 
-            // TOPIK 3: Nilai Tempat & Nilai Digit
+            // TOPIK 3: Place Value and Digit Value
             static topic3(level, idx) {
                 let r = Math.floor(Math.random() * 8) + 1;
                 let p = Math.floor(Math.random() * 9);
@@ -674,14 +689,14 @@
 
                 return {
                     type: 'fill',
-                    question: `Dalam nombor ${num}, apakah nilai digit bagi tempat PULUH?`,
+                    question: `What is the value of the digit in the TENS place in ${num}?`,
                     diagram: null,
                     answer: placeVal,
-                    explanation: `Digit puluh ialah ${p}, maka nilai digitnya ialah ${placeVal}.`
+                    explanation: `The tens digit is ${p}, so its value is ${placeVal}.`
                 };
             }
 
-            // TOPIK 4: Cerakinan Nombor
+            // TOPIK 4: Partitioning Numbers
             static topic4(level, idx) {
                 let r = 3 + (idx % 5);
                 let p = 2 + (idx % 6);
@@ -691,14 +706,14 @@
 
                 return {
                     type: 'fill',
-                    question: `Cerakinkan nombor ${num} mengikut nilai digit (cth: 400 + 30 + 2):`,
+                    question: `Write ${num} in expanded form, for example 400 + 30 + 2.`,
                     diagram: null,
                     answer: ans,
-                    explanation: `Cerakinan yang tepat ialah ${ans}.`
+                    explanation: `The expanded form is ${ans}.`
                 };
             }
 
-            // TOPIK 5: Bandingkan Nombor
+            // TOPIK 5: Comparing Numbers
             static topic5(level, idx) {
                 let n1 = 200 + (idx * 12);
                 let n2 = 250 + (idx * 8);
@@ -707,15 +722,15 @@
 
                 return {
                     type: 'objective',
-                    question: `Pilih simbol perbandingan yang betul bagi: ${n1} ___ ${n2}`,
+                    question: `Choose the correct comparison symbol: ${n1} ___ ${n2}`,
                     diagram: null,
                     options: ['A. >', 'B. <', 'C. =', 'D. +'],
                     answer: n1 > n2 ? 'A' : 'B',
-                    explanation: `Oleh kerana ${n1} ${n1 > n2 ? 'lebih besar daripada' : 'kurang daripada'} ${n2}, jawapannya ialah ${symbol}.`
+                    explanation: `${n1} is ${n1 > n2 ? 'greater than' : 'less than'} ${n2}, so the correct symbol is ${symbol}.`
                 };
             }
 
-            // TOPIK 6: Susunan Nombor
+            // TOPIK 6: Ordering Numbers
             static topic6(level, idx) {
                 let base = 300 + (idx * 10);
                 let arr = [base + 40, base + 10, base + 30, base + 20].sort((a, b) => a - b);
@@ -723,14 +738,14 @@
 
                 return {
                     type: 'fill',
-                    question: `Susun nombor berikut mengikut tertib menaik: ${arr[2]}, ${arr[0]}, ${arr[3]}, ${arr[1]} (asingkan dengan koma)`,
+                    question: `Put these numbers in ascending order, separated by commas: ${arr[2]}, ${arr[0]}, ${arr[3]}, ${arr[1]}.`,
                     diagram: null,
                     answer: correctStr,
-                    explanation: `Tertib menaik disusun dari kecil ke besar: ${correctStr}.`
+                    explanation: `Ascending order means smallest to greatest: ${correctStr}.`
                 };
             }
 
-            // TOPIK 7: Anggaran Nombor
+            // TOPIK 7: Estimating Numbers
             static topic7(level, idx) {
                 let baseVal = 100 + (idx * 15);
                 let targetVal = baseVal * 2;
@@ -742,38 +757,38 @@
 
                 return {
                     type: 'objective',
-                    question: `Jika Kotak A memuatkan ${baseVal} biji guli dan saiz Kotak B adalah dua kali ganda lebih besar,anggarkan bilangan guli di dalam Kotak B:`,
+                    question: `Box A holds ${baseVal} marbles. Box B can hold about twice as many. About how many marbles can Box B hold?`,
                     diagram: null,
                     options: opts.map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`),
                     answer: correctLetter,
-                    explanation: `Dua kali ganda daripada ${baseVal} biji ialah ${targetVal}. Pilihan yang tepat ialah ${targetVal}.`
+                    explanation: `Twice ${baseVal} is ${targetVal}, so the estimate is ${targetVal} marbles.`
                 };
             }
 
-            // TOPIK 8: Bundar Nombor
+            // TOPIK 8: Rounding Numbers
             static topic8(level, idx) {
                 let num = 300 + (idx * 14);
                 let rounded = Math.round(num / 10) * 10;
                 return {
                     type: 'fill',
-                    question: `Bundarkan nombor ${num} kepada puluh terdekat:`,
+                    question: `Round ${num} to the nearest ten.`,
                     diagram: null,
                     answer: rounded.toString(),
-                    explanation: `Hasil pembundaran kepada puluh terdekat ialah ${rounded}.`
+                    explanation: `The answer to the nearest ten is ${rounded}.`
                 };
             }
 
-            // TOPIK 9: Pola Nombor
+            // TOPIK 9: Number Patterns
             static topic9(level, idx) {
                 let start = 120 + (idx * 15);
                 let step = 10;
                 let ans = (start + (step * 3)).toString();
                 return {
                     type: 'fill',
-                    question: `Lengkapkan pola nombor berikut:\n${start}, ${start+step}, ${start+(step*2)}, ___, ${start+(step*4)}`,
+                    question: `Complete the number pattern:\n${start}, ${start+step}, ${start+(step*2)}, ___, ${start+(step*4)}`,
                     diagram: null,
                     answer: ans,
-                    explanation: `Pola menambah ${step} setiap langkah. Nombor yang hilang ialah ${ans}.`
+                    explanation: `Add ${step} each time. The missing number is ${ans}.`
                 };
             }
 
@@ -794,11 +809,11 @@
 
                     return {
                         type: 'objective',
-                        question: `${name1} mempunyai ${p1} biji manik merah. Bapa memberi lagi ${p2} biji manik kepada ${name1}. Berapakah jumlah kesemua manik ${name1} sekarang?`,
+                        question: `${name1} has ${p1} red beads. Dad gives ${name1} ${p2} more beads. How many beads does ${name1} have altogether?`,
                         diagram: null,
                         options: opts.map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`),
                         answer: correctLetter,
-                        explanation: `Jumlah manik dikira dengan menambah ${p1} + ${p2} = ${ans}.`
+                        explanation: `Add the two groups: ${p1} + ${p2} = ${ans}.`
                     };
                 } else if (subType === 1) {
                     // Subtraction word problem (Menolak)
@@ -810,11 +825,11 @@
 
                     return {
                         type: 'objective',
-                        question: `Sebuah perpustakaan mempunyai ${total} buah buku cerita. Murid-murid telah meminjam ${given} buah buku. Berapakah baki buku cerita yang tinggal di perpustakaan itu?`,
+                        question: `A library has ${total} storybooks. Pupils borrow ${given} of them. How many storybooks are left?`,
                         diagram: null,
                         options: opts.map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`),
                         answer: correctLetter,
-                        explanation: `Baki buku dikira dengan menolak ${total} - ${given} = ${ans}.`
+                        explanation: `Subtract the books borrowed: ${total} − ${given} = ${ans}.`
                     };
                 } else if (subType === 2) {
                     // Combined total comparison (Gabungan & Perbezaan)
@@ -826,11 +841,11 @@
 
                     return {
                         type: 'objective',
-                        question: `Kilang A menghasilkan ${n1} pasang kasut sekolah dalam masa seminggu. Kilang B pula menghasilkan ${n2} pasang kasut. Berapakah jumlah kasut yang dihasilkan oleh kedua-dua kilang itu?`,
+                        question: `Factory A makes ${n1} pairs of school shoes in a week. Factory B makes ${n2} pairs. How many pairs do the two factories make altogether?`,
                         diagram: null,
                         options: opts.map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`),
                         answer: correctLetter,
-                        explanation: `Jumlah keseluruhan ialah ${n1} + ${n2} = ${ans}.`
+                        explanation: `Add the two amounts: ${n1} + ${n2} = ${ans}.`
                     };
                 } else if (subType === 3) {
                     // Difference word problem (Mencari Beza)
@@ -842,11 +857,11 @@
 
                     return {
                         type: 'objective',
-                        question: `${name1} mempunyai ${high} mata dalam permainan kuiz. ${name2} pula mendapat ${low} mata. Berapakah beza mata antara ${name1} dan ${name2}?`,
+                        question: `${name1} scores ${high} points in a quiz and ${name2} scores ${low}. What is the difference between their scores?`,
                         diagram: null,
                         options: opts.map((o, i) => `${['A', 'B', 'C', 'D'][i]}. ${o}`),
                         answer: correctLetter,
-                        explanation: `Beza mata dikira dengan ${high} - ${low} = ${ans}.`
+                        explanation: `Find the difference: ${high} − ${low} = ${ans}.`
                     };
                 } else {
                     // Missing part / Fill in blank word problem (Mencari nilai asal / belum diketahui)
@@ -856,10 +871,10 @@
 
                     return {
                         type: 'fill',
-                        question: `${name1} menyimpan wang sebanyak RM${awal} di dalam tabung. Selepas beberapa bulan, bapa memberikannya wang tambahan sebanyak RM${tambah}. Berapakah jumlah wang ${name1} sekarang? (Taip nombor sahaja)`,
+                        question: `${name1} has saved RM${awal}. Dad gives ${name1} another RM${tambah}. How much does ${name1} have now? Enter the number only.`,
                         diagram: null,
                         answer: ans.toString(),
-                        explanation: `Jumlah wang keseluruhan ialah RM${awal} + RM${tambah} = RM${ans}.`
+                        explanation: `The total is RM${awal} + RM${tambah} = RM${ans}.`
                     };
                 }
             }
@@ -937,7 +952,7 @@
             startTimer() {
                 clearInterval(this.timerInterval);
                 if (this.selectedTimerSec === 0) {
-                    document.getElementById('game-timer-display').textContent = "♾️ Tiada Had";
+                    document.getElementById('game-timer-display').textContent = "♾️ No Time Limit";
                     return;
                 }
 
@@ -971,7 +986,7 @@
                 document.getElementById('game-score-display').textContent = `${this.score} / 100`;
                 
                 let topicObj = TOPICS_DATA.find(t => t.id === this.selectedTopicId);
-                document.getElementById('question-badge').textContent = `${topicObj.title} • ${this.selectedLevel.toUpperCase()}`;
+                document.getElementById('question-badge').textContent = `${topicObj.title} • ${({mudah:'EASY',sederhana:'MEDIUM',sukar:'HARD'})[this.selectedLevel]}`;
                 document.getElementById('question-text').textContent = q.question;
 
                 let diagramBox = document.getElementById('question-diagram');
@@ -987,24 +1002,41 @@
                 container.innerHTML = '';
 
                 if (q.type === 'objective' || this.selectedMode === 'objective') {
-                    if (!q.options) {
-                        q.options = [`A. ${q.answer}`, `B. ${parseInt(q.answer)+5}`, `C. ${parseInt(q.answer)-3}`, `D. ${parseInt(q.answer)+10}`].sort(() => Math.random()-0.5);
-                        q.answer = q.options.find(o => o.includes(q.answer))[0];
+                    let choices = q.options;
+                    let correctChoice = q.answer;
+                    if (!choices) {
+                        const parts = q.answer.split(/[, +]+/).map(Number);
+                        const separator = q.answer.includes(',') ? ', ' : ' + ';
+                        const lastPart = parts.pop();
+                        const distractors = q.answer.includes(',')
+                            ? [0, 1, 2].map(position => {
+                                const reordered = [...parts];
+                                reordered.splice(position, 0, lastPart);
+                                return reordered.join(separator);
+                            })
+                            : [1, 2, 3].map(offset => [...parts, lastPart + offset].join(separator));
+                        const values = [q.answer, ...distractors].sort(() => Math.random() - 0.5);
+                        choices = values.map((value, index) => `${'ABCD'[index]}. ${value}`);
+                        correctChoice = 'ABCD'[values.indexOf(q.answer)];
                     }
-                    q.options.forEach(opt => {
+                    choices.forEach(opt => {
                         let btn = document.createElement('button');
                         btn.className = "w-full text-left p-4 rounded-2xl border-2 border-slate-200 hover:border-sky-500 hover:bg-sky-50 font-bold text-slate-700 transition flex items-center justify-between";
-                        btn.innerHTML = `<span>${opt}</span> <i class="fa-solid fa-chevron-right text-slate-300"></i>`;
+                        const label = document.createElement('span');
+                        label.textContent = opt;
+                        const icon = document.createElement('i');
+                        icon.className = 'fa-solid fa-chevron-right text-slate-300';
+                        btn.append(label, icon);
                         let chosenLetter = opt[0];
-                        btn.onclick = () => this.checkAnswer(chosenLetter === q.answer, q.answer, q.explanation);
+                        btn.onclick = () => this.checkAnswer(chosenLetter === correctChoice, q.answer, q.explanation);
                         container.appendChild(btn);
                     });
                 } else {
                     let wrapper = document.createElement('div');
                     wrapper.className = "space-y-3";
                     wrapper.innerHTML = `
-                        <input type="text" id="user-ans-input" placeholder="Taip jawapan anda di sini..." class="w-full px-4 py-4 rounded-2xl border-2 border-sky-300 focus:border-sky-500 focus:outline-none text-center kid-font text-2xl font-bold text-slate-700">
-                        <button onclick="gameSystem.submitFillAnswer()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3.5 rounded-2xl kid-font text-lg shadow-lg">Semak Jawapan ✨</button>
+                        <input type="text" id="user-ans-input" placeholder="Enter your answer…" class="w-full px-4 py-4 rounded-2xl border-2 border-sky-300 focus:border-sky-500 focus:outline-none text-center kid-font text-2xl font-bold text-slate-700">
+                        <button onclick="gameSystem.submitFillAnswer()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3.5 rounded-2xl kid-font text-lg shadow-lg">Check Answer ✨</button>
                     `;
                     container.appendChild(wrapper);
                 }
@@ -1013,7 +1045,7 @@
             submitFillAnswer() {
                 let val = document.getElementById('user-ans-input').value.trim();
                 let q = this.questions[this.currentIndex];
-                let isCorrect = val.toLowerCase() === q.answer.toLowerCase();
+                let isCorrect = val.replace(/\s+/g, '').toLowerCase() === q.answer.replace(/\s+/g, '').toLowerCase();
                 this.checkAnswer(isCorrect, q.answer, q.explanation);
             }
 
@@ -1028,18 +1060,18 @@
                     this.score += 5;
                     this.correctCount++;
                     icon.textContent = "🎉";
-                    title.textContent = "BETUL!";
+                    title.textContent = "CORRECT!";
                     title.className = "kid-font text-2xl font-bold text-emerald-600 mb-1";
-                    let motivasi = ["Hebat!", "Syabas!", "Pandainya!", "Terbaik!", "Teruskan!"];
+                    let motivasi = ["Great work!", "Well done!", "Brilliant!", "Excellent!", "Keep going!"];
                     let randM = motivasi[Math.floor(Math.random() * motivasi.length)];
-                    msg.textContent = `+5 Markah! ${randM}`;
+                    msg.textContent = `+5 points! ${randM}`;
                     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
                 } else {
                     this.wrongCount++;
                     icon.textContent = "❌";
-                    title.textContent = "CUBA LAGI!";
+                    title.textContent = "TRY AGAIN!";
                     title.className = "kid-font text-2xl font-bold text-rose-600 mb-1";
-                    msg.textContent = `Jawapan yang betul ialah: ${correctAnswer}. ${explanation}`;
+                    msg.textContent = `The correct answer is: ${correctAnswer}. ${explanation}`;
                 }
 
                 feedbackModal.classList.remove('hidden');
@@ -1093,7 +1125,7 @@
                 let acc = Math.round((this.correctCount / this.questions.length) * 100);
                 document.getElementById('res-accuracy').textContent = `${acc}%`;
                 document.getElementById('res-time').textContent = `${m}:${s}`;
-                document.getElementById('result-congrats').textContent = `Tahniah, ${authSystem.currentUser ? authSystem.currentUser.name : 'Kawan Cilik'}!`;
+                document.getElementById('result-congrats').textContent = `Well done, ${authSystem.currentUser ? authSystem.currentUser.name : 'Young Player'}!`;
 
                 router.navigateTo('result');
             }
@@ -1117,13 +1149,13 @@
                     <div>
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-3xl group-hover:scale-110 transition">${t.icon}</span>
-                            <span class="bg-sky-50 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-full">Topik ${t.id}</span>
+                            <span class="bg-sky-50 text-sky-700 text-xs font-bold px-2.5 py-1 rounded-full">Topic ${t.id}</span>
                         </div>
                         <h4 class="kid-font font-bold text-slate-800 text-base mb-1">${t.title}</h4>
                         <p class="text-xs text-slate-500 font-medium">${t.desc}</p>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
-                        <span>Penguasaan:</span>
+                        <span>Progress:</span>
                         <span class="text-emerald-600">${userProg}%</span>
                     </div>
                 `;
@@ -1149,7 +1181,7 @@
                 row.className = "bg-slate-50 p-3 rounded-2xl border border-slate-100";
                 row.innerHTML = `
                     <div class="flex justify-between items-center text-xs font-bold text-slate-700 mb-1.5">
-                        <span>${t.icon} Topik ${t.id}: ${t.title}</span>
+                        <span>${t.icon} Topic ${t.id}: ${t.title}</span>
                         <span class="text-sky-600">${p}%</span>
                     </div>
                     <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
@@ -1184,7 +1216,7 @@
             list.innerHTML = '';
 
             if (users.length === 0) {
-                list.innerHTML = `<p class="text-center text-slate-400 font-medium py-8">Belum ada pemain berdaftar.</p>`;
+                list.innerHTML = `<p class="text-center text-slate-400 font-medium py-8">No registered players yet.</p>`;
                 return;
             }
 
@@ -1203,7 +1235,7 @@
                     </div>
                     <div class="text-right">
                         <span class="kid-font font-bold text-emerald-600 text-base">${usr.xp || 0} XP</span>
-                        <span class="block text-[10px] text-slate-400 font-semibold">Markah Tinggi: ${usr.highScore || 0}</span>
+                        <span class="block text-[10px] text-slate-400 font-semibold">High Score: ${usr.highScore || 0}</span>
                     </div>
                 `;
                 list.appendChild(row);
